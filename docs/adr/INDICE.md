@@ -1,13 +1,13 @@
-# Índice ADR
+# Indice ADR
 
-Los ADR registran decisiones arquitectónicas de largo plazo.
+Los ADR registran decisiones arquitectonicas de largo plazo.
 
-## Cuándo crear un ADR
+## Cuando crear un ADR
 
 Crear ADR solo para decisiones estructurales, por ejemplo:
 
 - gobernanza y trazabilidad del repositorio
-- política de persistencia y caché
+- politica de persistencia y cache
 - contrato de datos y migraciones de layout
 - cambios de arquitectura con impacto transversal
 
@@ -25,3 +25,4 @@ Crear ADR solo para decisiones estructurales, por ejemplo:
 - `docs/adr/0003-contrato-importacion-respaldo.md`
 - `docs/adr/0004-biblioteca-fuente-verdad-cache-temporal.md`
 - `docs/adr/0005-contrato-library-inbox-nnmd.md`
+- `docs/adr/0006-parser-ia-asistida-gate-critico.md`
