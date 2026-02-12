@@ -1,68 +1,69 @@
-﻿# Lista priorizada de cambios (Bloques 1-3)
+# Lista priorizada de cambios Bloques 1-3
 
 ## Alcance y criterio
 
-- Contraste realizado entre `L01P01.md`, `L01P02.md`, `L01P03.md` y sus fuentes canónicas `L01P01.pdf`, `L01P02.pdf`, `L01P03.pdf`.
-- Enfoque: coherencia de eventos y reglas del mundo, no equivalencia literal.
-- Esta lista propone cambios; no aplica reemplazos automáticos en narrativa.
+- Revisi?n comparada entre `L01P01.md`, `L01P02.md`, `L01P03.md` y sus PDF.
+- Enfoque en coherencia de hechos y reglas del mundo.
+- No se busca equivalencia literal palabra por palabra.
 
 ## Resumen ejecutivo
 
-- `L01P01`: mayor concentración de ajustes en reglas alománticas y precisión de hechos iniciales.
-- `L01P02`: mayor riesgo en reglas (uso de cobre, número de inquisidores, capacidades de Sazed).
-- `L01P03`: ajustes de continuidad (causa de la derrota del ejército) y precisión terminológica.
-- Oportunidades de normalización terminológica detectadas en los tres bloques, sin mezclar categorías alománticas.
+- `L01P01`: ajustes en reglas alom?nticas y precisi?n de hechos iniciales.
+- `L01P02`: mayor riesgo en reglas y continuidad de escenas clave.
+- `L01P03`: ajustes de continuidad t?ctica y precisi?n terminol?gica.
 
-## Estado de la matriz
+## Estado
 
-- Fase 1 (revisión y cierre de decisiones): completada.
-- Filas con `Alta` y `Media`: `Decisión=Aprobar` por defecto.
-- Filas con `Baja`: revisadas una a una y cerradas con `Aprobar` o `Parcial`.
-- Todas las filas con decisión cerrada quedan en `Estado=Listo para aplicar`.
+- Fase de revisi?n completada.
+- Prioridades alta y media cerradas por defecto.
+- Prioridades bajas cerradas caso por caso.
+- Pendientes actuales: `0`.
 
-## Tabla de cambios (Top 30)
+## Cambios por bloque
 
-Pendientes: **0**
+### L01P01
 
-| ID  | Bloque | Página MD | Tipo        | Hallazgo                                                                                              | Evidencia canónica (PDF pág.)    | Cambio sugerido                                                                                            | Prioridad | Decisión | Estado   | Nota de implementación                                                                       |
-| --- | ------ | --------- | ----------- | ----------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------- | --------- | -------- | -------- | -------------------------------------------------------------------------------------------- |
-| C01 | L01P01 | P03       | evento      | Se afirma liberación inmediata de todos los trabajadores de la plantación.                            | `L01P01.pdf:12-22`               | Reescribir como golpe inicial de Kelsier que siembra rebelión, sin resolver toda la opresión en una noche. | Alta      | Aprobar  | Aplicado | Se mantiene que derrota guardias, pero la huida pasa a parcial y detonante de resistencia.   |
-| C02 | L01P01 | P08       | personaje   | El inquisidor queda descrito como cazador de “niños con magia”.                                       | `L01P01.pdf:63-64`               | Cambiar a “buscaba alománticos/rebeldes”, evitando restringirlo a niños.                                   | Alta      | Aprobar  | Aplicado | Se ajusta a caza de usuarios de magia de metales, adultos o niños.                           |
-| C03 | L01P01 | P10       | regla       | Se usa magia emocional sin nombrar el metal correspondiente.                                          | `L01P01.pdf:64`                  | Mencionar explícitamente `latón` al calmar la sala.                                                        | Media     | Aprobar  | Aplicado | Se nombra latón y su función calmante en la escena.                                          |
-| C04 | L01P01 | P11       | regla       | “Zumo especial” diluye la mecánica alomántica.                                                        | `L01P01.pdf:64`                  | Ajustar a “frasco con solución y limaduras/metales”.                                                       | Media     | Aprobar  | Aplicado | Se reemplaza “zumo” por mezcla de limaduras y líquido para alomancia.                        |
-| C05 | L01P01 | P14       | regla       | La “nube invisible” se presenta como ocultación total frente a cualquier guardia.                     | `L01P01.pdf:48,64,126`           | Precisar que el cobre oculta pulsos alománticos, no vuelve invisibles a los personajes.                    | Alta      | Aprobar  | Aplicado | Se elimina la invisibilidad; se mantiene explicación simplificada para 7 años.               |
-| C06 | L01P01 | P15       | término     | Inconsistencia de estilo en `Undécimo Metal`.                                                         | `L01P01.pdf:46`                  | Normalizar a `Undécimo metal` (mismo criterio del glosario).                                               | Baja      | Rechazar | Validado | Se mantiene “Undécimo Metal” por preferencia de estilo en la narrativa.                      |
-| C07 | L01P01 | P17       | término     | `atium` aparece como “perlas mágicas” sin anclaje al sistema de metales.                              | `L01P02.pdf:100-102`             | Cambiar a “esferas/perlas de atium, metal rarísimo”.                                                       | Baja      | Aprobar  | Aplicado | Se cambia a “esferas de atium, un metal muy raro”.                                           |
-| C08 | L01P01 | P18       | regla       | El estaño queda hiperbolizado (“susurro de hormigas”).                                                | `L01P01.pdf:136-137`             | Bajar la exageración y mantener percepción agudizada plausible.                                            | Baja      | Parcial  | Aplicado | Se ajusta a “murmullos muy bajitos en la noche” para reducir hipérbole.                      |
-| C09 | L01P01 | P22       | regla       | Se explica salto solo con acero.                                                                      | `L01P01.pdf:41,64,132`           | Añadir relación `acero` (empujar) y `hierro` (atraer) para coherencia.                                     | Media     | Aprobar  | Aplicado | Se añade par acero/hierro con función empujar/atraer.                                        |
-| C10 | L01P01 | P29       | regla       | Uso emocional de alomancia sin diferenciar metales.                                                   | `L01P02.pdf:24-27,32-33`         | Separar funciones de `latón` (calmar) y `zinc` (avivar).                                                   | Media     | Aprobar  | Aplicado | Se diferencia latón (tranquilizar) y zinc (encender emociones).                              |
-| C11 | L01P01 | P16       | término     | Repetición de “de la bruma” donde cabe variación de estilo.                                           | `L01P01.pdf:47-48`               | Proponer variante ambiental no categorial: “capa brumosa”, manteniendo “nacido de la bruma” para personas. | Baja      | Rechazar | Validado | Se mantiene “Nacido de la bruma” por preferencia de identidad canónica.                      |
-| C12 | L01P01 | P21       | término     | “espectro de la bruma” y “animales de la niebla” sin criterio fijo de denominación.                   | `L01P01.pdf:95,217`              | Mantener fórmula canónica estable para la criatura: “espectro de la bruma”.                                | Baja      | Aprobar  | Aplicado | Se unifica la mención como “espectros de la bruma” en la explicación de Kelsier.             |
-| C13 | L01P01 | P23       | término     | Acumulación de “bruma(s)” en una sola escena de vuelo.                                                | `L01P01.pdf:47,76`               | Reescribir para fluidez con sinónimos de ambiente, sin imponer `brumoso/a` como norma.                     | Baja      | Rechazar | Validado | Se mantiene “entre las brumas” por preferencia de ambientación y estilo.                     |
-| C14 | L01P01 | P32       | término     | Cierre con repetición de “brumas mágicas”.                                                            | `L01P01.pdf:83`                  | Sustituir una repetición por “cielo brumoso” como uso ambiental opcional (no categorial).                  | Baja      | Parcial  | Aplicado | Se reemplaza por “cielo gris” para mantener coherencia ambiental (bruma al nivel del suelo). |
-| C15 | L01P02 | P14       | término     | “Inquisidor de acero” no queda claro como categoría canónica.                                         | `L01P02.pdf:9,13,50`             | Usar “Inquisidor” (o “inquisidor del Ministerio”) de forma estable.                                        | Media     | Rechazar | Validado | Se mantiene “Inquisidor de acero” por preferencia de término canónico para público infantil. |
-| C16 | L01P02 | P18       | continuidad | En baile se prioriza “sacerdotes” en vez de terminología del Ministerio.                              | `L01P02.pdf:62-63,82-85`         | Cambiar a “obligadores del Ministerio” cuando toque vigilancia institucional.                              | Baja      | Aprobar  | Aplicado | Se ajusta a “obligadores del Ministerio” en la escena de vigilancia del baile.               |
-| C17 | L01P02 | P23       | regla       | Se usa cobre para bloquear tristeza del entorno.                                                      | `L01P02.pdf:3,31`                | Corregir: cobre oculta alomancia; no protege de emociones ambientales.                                     | Alta      | Aprobar  | Aplicado | Cobre queda como ocultación alomántica; emoción se trata como ambiente narrativo.            |
-| C18 | L01P02 | P24       | evento      | Aparición de tres inquisidores en la cámara clave.                                                    | `L01P02.pdf:111-112`             | Ajustar a un inquisidor en el encuentro inicial para mayor fidelidad.                                      | Alta      | Aprobar  | Aplicado | Se corrige a un inquisidor en el primer encuentro de cámara.                                 |
-| C19 | L01P02 | P28-P29   | regla       | Sazed “llega/lleva volando” a Vin.                                                                    | `L01P03.pdf:146-148`             | Reescribir como rescate por fuerza y velocidad feruquímica, sin vuelo.                                     | Alta      | Aprobar  | Aplicado | Se cambia “volando” por rescate físico con velocidad extraordinaria.                         |
-| C20 | L01P02 | P30       | regla       | Recuperación de Vin atribuida a “zumos de metales” de Sazed.                                          | `L01P03.pdf:146-148`             | Sustituir por cuidados, descanso y uso propio de metales por Vin.                                          | Media     | Aprobar  | Aplicado | Se reemplaza la causa por descanso, cuidados y uso propio de metales por Vin.                |
-| C21 | L01P02 | P31       | continuidad | “Libro misterioso para vencer al Emperador” queda genérico.                                           | `L01P02.pdf:24,58`               | Precisar que es un texto antiguo clave para contexto histórico, no solución instantánea.                   | Media     | Aprobar  | Aplicado | Se redefine como fuente de contexto histórico y pistas para el plan.                         |
-| C22 | L01P02 | P01       | término     | Repetición de “brumas” en apertura de acción.                                                         | `L01P02.pdf:2,97`                | Variar la redacción ambiental sin obligación de introducir `brumoso/a`.                                    | Baja      | Rechazar | Validado | Se mantiene la mención a brumas por preferencia narrativa y de ambientación del mundo.       |
-| C23 | L01P02 | P04       | término     | “maestro de la bruma” con giro repetitivo.                                                            | `L01P02.pdf:2-5`                 | Cambiar una ocurrencia por alternativa neutra y no categorial.                                             | Baja      | Aprobar  | Aplicado | Se reemplaza por “gran maestro Kelsier” para evitar repetición del giro.                     |
-| C24 | L01P02 | P09       | término     | “mirando las brumas” reiterado respecto a otras páginas.                                              | `L01P02.pdf:18`                  | Alternar con “horizonte brumoso” como uso ambiental opcional.                                              | Baja      | Rechazar | Validado | Se mantiene “brumas” por coherencia de ambientación y preferencia de estilo.                 |
-| C25 | L01P02 | P23       | término     | “capas de bruma” repite patrón nominal en escena de infiltración.                                     | `L01P02.pdf:97`                  | Mantener “capas de bruma” u otra opción neutra; no forzar “capas brumosas”.                                | Baja      | Aprobar  | Aplicado | Se mantiene la frase original “capas de bruma” por coherencia y naturalidad.                 |
-| C26 | L01P03 | P04       | continuidad | Jardines con colores muy vivos (rojo/naranja/amarillo) desentonan con atmósfera cenicienta dominante. | `L01P03.pdf:98`; `L01P01.pdf:12` | Ajustar paleta a tonos más apagados (rojizo/marrón/ceniza).                                                | Media     | Rechazar | Validado | Se mantiene la redacción original por preferencia estética en la escena.                     |
-| C27 | L01P03 | P06-P07   | regla       | Feruquimia simplificada como “guardar cosas” sin restricción por atributo/metal.                      | `L01P03.pdf:146-147`             | Añadir una frase breve: cada metal guarda atributos concretos.                                             | Media     | Aprobar  | Aplicado | Se añade que cada metal guarda un atributo distinto.                                         |
-| C28 | L01P03 | P10       | término     | “heroína de la bruma” se cruza con propuestas de normalización ambiguas.                              | `L01P03.pdf:93,99-100`           | Mantener “heroína de la bruma” para no confundir categorías alománticas.                                   | Baja      | Parcial  | Aplicado | Se adapta a “nacida de la bruma” por preferencia de identidad alomántica en la escena.       |
-| C29 | L01P03 | P27       | evento      | Derrota del ejército se presenta como “los encontraron” sin causa interna.                            | `L01P03.pdf:118-123,218-219`     | Matizar que hubo decisión táctica fallida de liderazgo rebelde, no solo descubrimiento externo.            | Alta      | Aprobar  | Aplicado | Se explicita salida prematura y trampa para reflejar causa táctica.                          |
-| C30 | L01P03 | P29       | término     | Frase “a través de la bruma” repite patrón en secuencia de viaje.                                     | `L01P03.pdf:195`                 | Reescribir una ocurrencia a “noche brumosa” solo como uso ambiental opcional, no de identidad.             | Baja      | Rechazar | Validado | Se mantiene “a través de la bruma” por coherencia de ambientación y preferencia de estilo.   |
+- C01 (Alta, aplicado): huida parcial en plantaci?n, no liberaci?n total.
+- C02 (Alta, aplicado): inquisidor caza alom?nticos, no solo ni?os.
+- C03 (Media, aplicado): se explicita uso de `lat?n`.
+- C04 (Media, aplicado): se reemplaza "zumo" por limaduras de metal.
+- C05 (Alta, aplicado): el cobre oculta pulsos, no vuelve invisible.
+- C06 (Baja, validado): se mantiene "Und?cimo Metal" por estilo.
+- C07 (Baja, aplicado): se ancla `atium` como metal raro.
+- C08 (Baja, parcial): se reduce hip?rbole del `esta?o`.
+- C09 (Media, aplicado): se diferencia `acero` y `hierro`.
+- C10 (Media, aplicado): se separa `lat?n` de `zinc`.
+- C11 (Baja, validado): se mantiene identidad "nacido de la bruma".
+- C12 (Baja, aplicado): se unifica "espectro de la bruma".
+- C13 (Baja, validado): se conserva ambientaci?n con "brumas".
+- C14 (Baja, parcial): se reduce repetici?n en cierre.
 
-## Cambios rápidos recomendados
+### L01P02
 
-1. Corregir reglas alománticas críticas: `cobre`, `latón/zinc`, `acero/hierro`.
-2. Corregir el rescate de Sazed en `L01P02` para que no implique vuelo.
-3. Ajustar en `L01P02` el encuentro de cámara clave a un inquisidor inicial.
-4. Revisar en `L01P03` la causa de la derrota del ejército rebelde.
-5. Normalizar `Undécimo metal` y nomenclatura técnica en los tres bloques.
-6. Aplicar terminología sin confundir categorías alománticas (`brumoso/a` técnico; uso ambiental solo opcional).
-7. Mantener la simplificación infantil, pero evitando cambios que alteren reglas base del mundo.
+- C15 (Media, validado): se mantiene "Inquisidor de acero" por estilo.
+- C16 (Baja, aplicado): se usa "obligadores del Ministerio".
+- C17 (Alta, aplicado): cobre no bloquea tristeza ambiental.
+- C18 (Alta, aplicado): encuentro inicial con un inquisidor.
+- C19 (Alta, aplicado): rescate de Sazed sin vuelo.
+- C20 (Media, aplicado): recuperaci?n por cuidados y metales de Vin.
+- C21 (Media, aplicado): libro como contexto hist?rico, no soluci?n m?gica.
+- C22 (Baja, validado): se mantiene apertura con "brumas".
+- C23 (Baja, aplicado): se reduce repetici?n "maestro de la bruma".
+- C24 (Baja, validado): se conserva uso ambiental de "brumas".
+- C25 (Baja, aplicado): se mantiene "capas de bruma".
+
+### L01P03
+
+- C26 (Media, validado): se mantiene paleta por preferencia est?tica.
+- C27 (Media, aplicado): se aclara feruquimia por atributo y metal.
+- C28 (Baja, parcial): se prioriza "nacida de la bruma".
+- C29 (Alta, aplicado): derrota rebelde con causa t?ctica expl?cita.
+- C30 (Baja, validado): se mantiene "a trav?s de la bruma".
+
+## Cambios r?pidos recomendados
+
+1. Consolidar reglas cr?ticas: `cobre`, `lat?n/zinc`, `acero/hierro`.
+2. Mantener rescate de Sazed sin implicar vuelo.
+3. Mantener encuentro inicial de c?mara con un inquisidor.
+4. Preservar causa t?ctica en derrota del ej?rcito rebelde.
+5. Evitar confundir categor?as alom?nticas con descripciones ambientales.

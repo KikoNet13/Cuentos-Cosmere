@@ -1,26 +1,27 @@
-﻿# Flujo de revisiÃ³n (Cosmere)
+# Flujo de revisi?n Cosmere
 
 ## Objetivo
 
-Mantener cuentos infantiles coherentes con el canon base, con lenguaje seguro para 7-9 aÃ±os y formato Markdown estable.
+Mantener cuentos infantiles coherentes con el canon base, con lenguaje seguro
+para 7-9 a?os y formato Markdown estable.
 
 ## Entrada esperada
 
-- Texto fuente por bloque en archivos `origen_md.md` por cuento.
-- Estructura por pÃ¡ginas (ideal: 32 pÃ¡ginas).
-- Referencia factual local (PDF del mismo bloque) cuando se necesite validar nombres o tÃ©rminos.
+- Texto fuente en `origen_md.md` por cuento.
+- Estructura por p?ginas con objetivo de 32 p?ginas.
+- Referencia factual local (`referencia_pdf.pdf`) cuando aplique.
 
 ## Proceso
 
-1. Convertir el archivo a Markdown (`.md`).
-2. AÃ±adir `#` (tÃ­tulo del bloque) y `## PÃ¡gina N` para cada pÃ¡gina.
-3. Quitar preÃ¡mbulos de generaciÃ³n y separadores no narrativos.
-4. Corregir consistencia de nombres, tÃ©rminos y reglas (sin reescritura total).
-5. Suavizar lenguaje violento para pÃºblico infantil sin romper los hechos base.
-6. Validar que hay 32 secciones `## PÃ¡gina N` y codificaciÃ³n UTF-8.
+1. Convertir o normalizar el texto fuente a Markdown.
+2. A?adir `#` de t?tulo y `## P?gina N` para cada p?gina.
+3. Retirar pre?mbulos de generaci?n y separadores no narrativos.
+4. Corregir consistencia de nombres, t?rminos y reglas.
+5. Suavizar lenguaje violento sin romper hechos can?nicos.
+6. Verificar estructura de 32 p?ginas y codificaci?n UTF-8 sin BOM.
 
 ## Salida esperada
 
 - Archivo `.md` limpio y legible.
-- Estructura estable para iterar (revisiÃ³n textual primero, prompts de imagen despuÃ©s).
-
+- Estructura estable para iteraci?n.
+- Base lista para prompts de imagen por p?gina.

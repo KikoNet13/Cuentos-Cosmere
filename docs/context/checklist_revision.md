@@ -1,29 +1,30 @@
-# Checklist de revisión por bloque
+# Checklist de revisi?n por bloque
 
 ## Formato
 
-- [ ] El archivo final usa extensión `.md`.
-- [ ] Hay un `#` de título al inicio.
-- [ ] Hay 32 encabezados `## Página N`.
-- [ ] No quedan separadores no narrativos (`***`) ni preámbulos de IA.
-- [ ] Codificación UTF-8 correcta (sin caracteres rotos).
+- [ ] El archivo final usa extensi?n `.md`.
+- [ ] Existe un t?tulo `#` al inicio.
+- [ ] Hay 32 encabezados `## P?gina N`.
+- [ ] No quedan separadores no narrativos (`***`).
+- [ ] No quedan pre?mbulos de generaci?n autom?tica.
+- [ ] El archivo est? en UTF-8 sin BOM.
 
 ## Coherencia
 
 - [ ] Nombres propios consistentes en todo el bloque.
-- [ ] Términos del glosario usados de forma estable.
+- [ ] T?rminos del glosario usados de forma estable.
 - [ ] Reglas de magia sin contradicciones internas.
-- [ ] Tono infantil 7-9, claro y seguro.
+- [ ] Tono infantil 7-9 a?os, claro y seguro.
 
 ## Calidad editorial
 
-- [ ] Ortografía y puntuación revisadas.
-- [ ] Frases demasiado largas simplificadas.
-- [ ] Violencia descrita sin detalle gráfico.
-- [ ] Cierre de página claro para lectura continua.
+- [ ] Ortograf?a y puntuaci?n revisadas.
+- [ ] Frases largas simplificadas sin perder sentido.
+- [ ] Violencia descrita sin detalle gr?fico.
+- [ ] Cierre de p?gina claro para lectura continua.
 
-## Cierre técnico
+## Cierre t?cnico
 
 - [ ] El archivo abre bien en el editor.
-- [ ] No se tocan bloques fuera del alcance acordado.
-- [ ] Si hay dudas de canon, se dejan anotadas para la siguiente ronda.
+- [ ] No se tocaron bloques fuera del alcance acordado.
+- [ ] Si hay dudas de canon, quedan anotadas para seguimiento.

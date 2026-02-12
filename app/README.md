@@ -1,63 +1,69 @@
-﻿# Cuentos Cosmere
+# Cuentos Cosmere
 
-Tecnologias:
+## Tecnolog?as
 
 - Flask
 - Peewee
 - SQLite
 - HTMX
 
-## Inicio rapido (Pipenv)
+## Inicio r?pido con Pipenv
 
-1. Instalar dependencias:
+1. Instalar dependencias.
 
 ```powershell
 pipenv install
 ```
 
-2. Crear el esquema de base de datos:
+1. Crear el esquema de base de datos.
 
 ```powershell
 pipenv run python manage.py init-db
 ```
 
-3. Si vienes del esquema anterior de textos, migrar a paginas:
+1. Migrar textos heredados a p?ginas, si aplica.
 
 ```powershell
 pipenv run python manage.py migrate-texto-pages
 ```
 
-4. Importar dataset desde la biblioteca canonica:
+1. Importar el dataset can?nico desde `biblioteca/`.
 
 ```powershell
 pipenv run python manage.py import
 ```
 
-5. Ejecutar servidor de desarrollo:
+1. Validar el comando del servidor sin dejar procesos abiertos.
+
+```powershell
+pipenv run python manage.py runserver --help
+```
+
+1. Iniciar servidor solo cuando se necesite trabajar interfaz.
 
 ```powershell
 pipenv run python manage.py runserver --debug
 ```
 
-6. Abrir en navegador:
+1. Abrir en navegador.
 
 `http://127.0.0.1:5000`
 
 ## Respaldo de prompts
 
-- Exportar prompts desde SQLite a JSON:
+- Exportar prompts desde SQLite a JSON.
 
 ```powershell
 pipenv run python manage.py export-prompts
 ```
 
-- Importar prompts desde JSON a SQLite:
+- Importar prompts desde JSON a SQLite.
 
 ```powershell
 pipenv run python manage.py import-prompts
 ```
 
-## Convencion de codigos de cuento
+## Convenci?n de c?digos de cuento
 
-- Codigo por libro: `2` digitos numericos (`01`, `02`, `03`, ...).
-- El codigo no incluye el numero de libro.
+- C?digo por libro: `2` d?gitos num?ricos (`01`, `02`, `03`, ...).
+- El c?digo no incluye el n?mero del libro.

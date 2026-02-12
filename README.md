@@ -1,33 +1,38 @@
 # Cuentos Cosmere
 
-Small personal project with professional repository governance.
+Proyecto personal con estándares de trabajo profesionales.
 
-## Stack
+## Tecnolog?as
+
 - Flask
 - Peewee
 - SQLite
 - HTMX
 - Pipenv
 
-## Quick Start
+## Inicio rápido
+
 1. `pipenv install`
 2. `pipenv run python manage.py init-db`
 3. `pipenv run python manage.py migrate-texto-pages`
 4. `pipenv run python manage.py import`
 5. `pipenv run python manage.py runserver --help`
 
-## Repository Conventions
-- Operational contract: `AGENTS.md`
-- Task tracking: `docs/tasks/`
-- Architecture decisions: `docs/adr/`
-- Process standards: `docs/project_standards.md`
-- Operations safety: `docs/operations.md`
-- Git workflow: `docs/git_workflow.md`
+## Convenciones del repositorio
 
-## Data and Content
-- Canonical story assets: `biblioteca/`
-- Local DB state: `db/` (not versioned)
-- Prompt backup JSON: `biblioteca/.../prompts/era1_prompts_data.json`
+- Contrato operativo: `AGENTS.md`
+- Trazabilidad de tareas: `docs/tasks/`
+- Decisiones arquitectónicas: `docs/adr/`
+- Estándares de proyecto: `docs/estandares_proyecto.md`
+- Operación segura: `docs/operacion_segura.md`
+- Flujo de Git: `docs/flujo_git.md`
 
-## Current App Reference
-App-specific onboarding remains in `app/README.md`.
+## Datos y contenido
+
+- Contenido canónico de cuentos: `biblioteca/`
+- Estado local de base de datos: `db/` (no versionado)
+- Referencia de prompts: `biblioteca/.../prompts/era1_prompts_data.json`
+
+## Referencia de la app
+
+La guía específica de la aplicación está en `app/README.md`.

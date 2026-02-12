@@ -1,13 +1,14 @@
-# Changelog
+# Registro de cambios
 
-All notable changes are tracked in a brief format.
-Detailed planning/execution notes are in `docs/tasks/`.
+Registro breve de cambios relevantes.
+El detalle operativo vive en `docs/tasks/`.
 
-## [Unreleased]
+## [Sin publicar]
 
-## [2026-02-12] - Governance foundation
-- Added repository governance baseline (`AGENTS.md`, docs standards, ADR system, task system).
-- Introduced `docs/tasks/INDEX.md` and task templates for scalable traceability.
-- Curated legacy `contexto/` and `ejemplos/` into `docs/` canonical locations.
-- Added `.gitignore` policy for local SQLite files in `db/`.
-- Reference task: `docs/tasks/TASK-20260212-1105-proyecto-profesional-contexto.md`.
+## [2026-02-12] - Base de gobernanza
+
+- Se defini? la base de gobernanza del repositorio y su trazabilidad.
+- Se incorpor? el sistema de ADR y tareas con ?ndice dedicado.
+- Se curaron activos heredados en rutas can?nicas dentro de `docs/`.
+- Se formaliz? la pol?tica de SQLite local en `.gitignore`.
+- Tarea: `docs/tasks/TAREA-20260212-1105-proyecto-profesional-contexto.md`.
