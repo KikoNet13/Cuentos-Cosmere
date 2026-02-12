@@ -2,7 +2,7 @@
 
 Proyecto personal con estándares de trabajo profesionales.
 
-## Tecnolog?as
+## Tecnologías
 
 - Flask
 - Peewee
@@ -20,12 +20,16 @@ Proyecto personal con estándares de trabajo profesionales.
 
 ## Convenciones del repositorio
 
-- Contrato operativo: `AGENTS.md`
+- Contrato operativo y flujo de trabajo: `AGENTS.md`
 - Trazabilidad de tareas: `docs/tasks/`
 - Decisiones arquitectónicas: `docs/adr/`
-- Estándares de proyecto: `docs/estandares_proyecto.md`
-- Operación segura: `docs/operacion_segura.md`
-- Flujo de Git: `docs/flujo_git.md`
+- Contexto operativo: `docs/context/`
+
+## Contrato de paginación
+
+- La cantidad de páginas depende del archivo importado.
+- Si quieres cuentos de 16 páginas, debes preparar el archivo con 16.
+- El sistema mantiene compatibilidad con archivos legacy de más páginas.
 
 ## Datos y contenido
 

@@ -28,7 +28,6 @@ from .models import (
     Saga,
     Texto,
 )
-from .text_pages import EXPECTED_PAGE_COUNT
 from .utils import slugify
 
 web_bp = Blueprint("web", __name__)
@@ -138,12 +137,16 @@ def text_state(cuento: Cuento, selected_raw: str | None) -> dict:
     )
     by_page = {row.numero_pagina: row for row in text_rows}
     detected_pages = sorted(by_page.keys())
-    page_options = sorted(set(range(1, EXPECTED_PAGE_COUNT + 1)).union(detected_pages))
-    default_page = detected_pages[0] if detected_pages else 1
+    page_options = detected_pages if detected_pages else [1]
+    default_page = page_options[0]
     selected_page = parse_page_value(selected_raw, default_page)
     if selected_page not in page_options:
         selected_page = default_page
-    missing_pages = [page for page in range(1, EXPECTED_PAGE_COUNT + 1) if page not in by_page]
+    if detected_pages:
+        max_page = detected_pages[-1]
+        missing_pages = [page for page in range(1, max_page + 1) if page not in by_page]
+    else:
+        missing_pages = []
     selected_text = by_page.get(selected_page)
     return {
         "page_options": page_options,

@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import re
 
-EXPECTED_PAGE_COUNT = 32
 PAGE_HEADER_RE = re.compile(
     r"^\s*##\s*P(?:a|\u00e1)gina\s+(\d+)\s*$",
     re.IGNORECASE | re.MULTILINE,

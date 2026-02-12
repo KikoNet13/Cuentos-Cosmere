@@ -1,13 +1,14 @@
-# ?ndice de contexto
+# Índice de contexto
 
-Esta carpeta guarda referencias curadas de proceso y contenido.
+Esta carpeta conserva solo contexto operativo vigente.
 
-## Archivos disponibles
+## Archivos activos
 
-- `checklist_revision.md`
-- `flujo_revision.md`
-- `glosario_simplificado_mistborn.md`
-- `lista_cambios_bloques_1_3.md`
+- `canon_cuento_objetivo_16_paginas.md`
 - `prompts_imagenes_master_era1.md`
 
-Las exportaciones HTML heredadas se eliminaron porque los `.md` son can?nicos.
+## Política
+
+1. Evitar duplicidades con `AGENTS.md` y `docs/tasks/`.
+2. Mantener solo documentos necesarios para ejecución actual.
+3. Eliminar material histórico que no se use de forma directa.

@@ -1,14 +1,14 @@
-# 0002 - Pol?tica local de persistencia SQLite
+# 0002 - Política local de persistencia SQLite
 
 - Estado: aceptado
-- Fecha: 2026-02-12
+- Fecha: 12/02/26
 
 ## Contexto
 
-La aplicaci?n usa SQLite local para estado de ejecuci?n.
+La aplicación usa SQLite local para estado de ejecución.
 Ese estado depende del entorno y no debe contaminar el historial Git.
 
-## Decisi?n
+## Decisión
 
 Mantener SQLite en `db/` y excluir de versionado:
 

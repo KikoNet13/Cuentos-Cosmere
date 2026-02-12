@@ -1,15 +1,15 @@
 # Plantilla ADR
 
 - Estado: propuesto
-- Fecha: AAAA-MM-DD
+- Fecha: dd/mm/aa
 
 ## Contexto
 
 Describir problema, alcance y restricciones.
 
-## Decisi?n
+## Decisión
 
-Describir la opci?n elegida y por qu?.
+Describir la opción elegida y por qué.
 
 ## Consecuencias
 

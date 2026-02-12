@@ -1,13 +1,13 @@
 # Cuentos Cosmere
 
-## Tecnolog?as
+## Tecnologías
 
 - Flask
 - Peewee
 - SQLite
 - HTMX
 
-## Inicio r?pido con Pipenv
+## Inicio rápido con Pipenv
 
 1. Instalar dependencias.
 
@@ -21,13 +21,13 @@ pipenv install
 pipenv run python manage.py init-db
 ```
 
-1. Migrar textos heredados a p?ginas, si aplica.
+1. Migrar textos heredados a páginas, si aplica.
 
 ```powershell
 pipenv run python manage.py migrate-texto-pages
 ```
 
-1. Importar el dataset can?nico desde `biblioteca/`.
+1. Importar el dataset canónico desde `biblioteca/`.
 
 ```powershell
 pipenv run python manage.py import
@@ -49,6 +49,12 @@ pipenv run python manage.py runserver --debug
 
 `http://127.0.0.1:5000`
 
+## Paginación de textos
+
+- El importador toma las páginas detectadas en `origen_md.md`.
+- No hay objetivo fijo forzado de 16 o 32 páginas.
+- Para usar 16 páginas, prepara el archivo fuente con ese total.
+
 ## Respaldo de prompts
 
 - Exportar prompts desde SQLite a JSON.
@@ -63,7 +69,7 @@ pipenv run python manage.py export-prompts
 pipenv run python manage.py import-prompts
 ```
 
-## Convenci?n de c?digos de cuento
+## Convención de códigos de cuento
 
-- C?digo por libro: `2` d?gitos num?ricos (`01`, `02`, `03`, ...).
-- El c?digo no incluye el n?mero del libro.
+- Código por libro: `2` dígitos numéricos (`01`, `02`, `03`, ...).
+- El código no incluye el número del libro.

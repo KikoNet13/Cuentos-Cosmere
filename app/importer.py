@@ -9,7 +9,7 @@ from uuid import uuid4
 from .config import BASE_DIR, BIBLIOTECA_DIR, PROMPTS_BACKUP_JSON
 from .db import db, init_schema
 from .models import Cuento, ImagenPrompt, Libro, Prompt, ReferenciaPDF, Saga, Texto
-from .text_pages import EXPECTED_PAGE_COUNT, parse_markdown_pages
+from .text_pages import parse_markdown_pages
 from .utils import read_text_with_fallback, slugify
 
 SAGA_SLUG = "nacidos-de-la-bruma-era-1"
@@ -136,10 +136,6 @@ def _replace_story_pages(cuento: Cuento, src_md: Path, warnings: list[str]) -> i
     markdown = read_text_with_fallback(src_md)
     pages, parse_warnings = parse_markdown_pages(markdown)
     warnings.extend(f"[{cuento.codigo}] {msg}" for msg in parse_warnings)
-    if len(pages) != EXPECTED_PAGE_COUNT:
-        warnings.append(
-            f"[{cuento.codigo}] Se detectaron {len(pages)} paginas; esperado {EXPECTED_PAGE_COUNT}."
-        )
 
     now = _now_dt()
     for numero_pagina in sorted(pages):
@@ -326,10 +322,6 @@ def migrate_texto_pages() -> dict[str, Any]:
     for cuento_id, (markdown, created_at, updated_at) in md_by_cuento.items():
         pages, parse_warnings = parse_markdown_pages(markdown)
         warnings.extend(f"[{cuento_id}] {msg}" for msg in parse_warnings)
-        if len(pages) != EXPECTED_PAGE_COUNT:
-            warnings.append(
-                f"[{cuento_id}] Se detectaron {len(pages)} paginas; esperado {EXPECTED_PAGE_COUNT}."
-            )
         for numero_pagina in sorted(pages):
             inserts.append(
                 (

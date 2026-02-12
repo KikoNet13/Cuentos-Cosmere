@@ -2,8 +2,8 @@
 
 ## Metadatos
 
-- ID de tarea: TAREA-YYYYMMDD-HHMM-<slug>
-- Fecha: AAAA-MM-DD HH:MM
+- ID de tarea: `TAREA-001-<slug>`
+- Fecha: dd/mm/aa HH:MM
 - Estado: planificada|en-progreso|cerrada|bloqueada
 - Responsable: local
 - ADR relacionadas: (lista)
@@ -24,14 +24,14 @@ Estado inicial y restricciones relevantes.
 
 ## Decisiones
 
-- Decisi?n A y justificaci?n.
-- Decisi?n B y justificaci?n.
+- Decisión A y justificación.
+- Decisión B y justificación.
 
 ## Cambios aplicados
 
 Listar archivos modificados y motivo breve.
 
-## Validaci?n ejecutada
+## Validación ejecutada
 
 Listar comandos finitos y resultado observado.
 
@@ -41,9 +41,9 @@ Riesgos abiertos tras el cierre.
 
 ## Seguimiento
 
-Pr?ximas tareas, si aplica.
+Próximas tareas, si aplica.
 
 ## Commit asociado
 
-- Mensaje de commit:
+- Mensaje de commit: `Tarea 001: <resumen>`
 - Hash de commit:

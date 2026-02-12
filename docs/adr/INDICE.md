@@ -1,16 +1,16 @@
-# ?ndice ADR
+# Índice ADR
 
-Los Architecture Decision Records (ADR) documentan decisiones t?cnicas de
-larga duraci?n.
+Los Registros de Decisiones Arquitectónicas documentan decisiones técnicas
+ de larga duración.
 
-## Cu?ndo crear un ADR
+## Cuándo crear un ADR
 
-Crear ADR solo para decisiones arquitect?nicas, por ejemplo:
+Crear ADR solo para decisiones arquitectónicas, por ejemplo:
 
 - gobernanza y contratos de proceso del repositorio
-- pol?tica de persistencia y ubicaci?n de datos
-- contratos de importaci?n y respaldo
-- direcci?n de modelos o esquemas de largo plazo
+- política de persistencia y ubicación de datos
+- contratos de importación y respaldo
+- dirección de modelos o esquemas de largo plazo
 
 ## Estados permitidos
 
@@ -19,18 +19,18 @@ Crear ADR solo para decisiones arquitect?nicas, por ejemplo:
 - reemplazado
 - obsoleto
 
-## Convenci?n de nombres
+## Convención de nombres
 
 `NNNN-slug-kebab.md`.
 
 Ejemplo: `0001-gobernanza-repositorio.md`.
 
-## Secciones m?nimas
+## Secciones mínimas
 
 - Estado
 - Fecha
 - Contexto
-- Decisi?n
+- Decisión
 - Consecuencias
 
 Usar `docs/adr/PLANTILLA.md` como base.
