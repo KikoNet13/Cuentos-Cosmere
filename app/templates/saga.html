@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Saga {{ saga.nombre }}{% endblock %}
+{% block content %}
+<nav class="breadcrumbs">
+  <a href="{{ url_for('web.dashboard') }}">Panel</a>
+  <span>/</span>
+  <span>{{ saga.nombre }}</span>
+</nav>
+
+<section class="panel">
+  <h1>{{ saga.nombre }}</h1>
+  <form method="post" action="{{ url_for('web.update_saga', saga_id=saga.id) }}" class="form-grid">
+    <label>Nombre<input name="nombre" value="{{ saga.nombre }}"></label>
+    <label>Slug<input name="slug" value="{{ saga.slug }}"></label>
+    <label class="full">Descripción<textarea name="descripcion" rows="2">{{ saga.descripcion }}</textarea></label>
+    <div class="row gap">
+      <button type="submit">Guardar saga</button>
+      <button type="submit" formaction="{{ url_for('web.delete_saga', saga_id=saga.id) }}" class="danger">Eliminar saga</button>
+    </div>
+  </form>
+</section>
+
+<section class="panel">
+  <h2>Crear libro</h2>
+  <form method="post" action="{{ url_for('web.create_libro', saga_slug=saga.slug) }}" class="form-grid">
+    <label>Título<input name="titulo" required></label>
+    <label>Slug (opcional)<input name="slug"></label>
+    <label>Orden<input name="orden" type="number" value="0"></label>
+    <button type="submit">Crear libro</button>
+  </form>
+</section>
+
+<section class="panel">
+  <h2>Libros</h2>
+  {% if libros %}
+    <div class="list-grid">
+      {% for libro in libros %}
+        <article class="item-card">
+          <h3><a href="{{ url_for('web.libro_detail', saga_slug=saga.slug, libro_slug=libro.slug) }}">{{ libro.titulo }}</a></h3>
+          <p class="muted"><code>{{ libro.slug }}</code></p>
+          <form method="post" action="{{ url_for('web.update_libro', libro_id=libro.id) }}" class="mini-form">
+            <input name="titulo" value="{{ libro.titulo }}">
+            <input name="slug" value="{{ libro.slug }}">
+            <input name="orden" type="number" value="{{ libro.orden }}">
+            <div class="row gap">
+              <button type="submit">Guardar</button>
+              <button type="submit" formaction="{{ url_for('web.delete_libro', libro_id=libro.id) }}" class="danger">Eliminar</button>
+            </div>
+          </form>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="muted">No hay libros en esta saga.</p>
+  {% endif %}
+</section>
+{% endblock %}

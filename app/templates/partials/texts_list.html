@@ -1,0 +1,10 @@
+﻿{% if missing_pages %}
+  <p class="muted">Faltan paginas: {{ missing_pages | join(', ') }}</p>
+{% endif %}
+
+{% if text_item %}
+  {% set item = text_item %}
+  {% include "partials/text_card.html" %}
+{% else %}
+  <p class="muted">No hay texto importado para la pagina {{ selected_page }}.</p>
+{% endif %}

@@ -1,0 +1,15 @@
+﻿<article class="card text-card">
+  <div class="card-head">
+    <strong>Pagina {{ item.numero_pagina }}</strong>
+  </div>
+  <div class="card-body">
+    <form
+      class="mini-form"
+      hx-post="{{ url_for('web.update_texto', texto_id=item.id) }}"
+      hx-target="closest .text-card"
+      hx-swap="outerHTML">
+      <label>Contenido<textarea name="contenido" rows="14">{{ item.contenido }}</textarea></label>
+      <button type="submit">Guardar texto</button>
+    </form>
+  </div>
+</article>

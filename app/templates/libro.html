@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Libro {{ libro.titulo }}{% endblock %}
+{% block content %}
+<nav class="breadcrumbs">
+  <a href="{{ url_for('web.dashboard') }}">Panel</a>
+  <span>/</span>
+  <a href="{{ url_for('web.saga_detail', saga_slug=saga.slug) }}">{{ saga.nombre }}</a>
+  <span>/</span>
+  <span>{{ libro.titulo }}</span>
+</nav>
+
+<section class="panel">
+  <h1>{{ libro.titulo }}</h1>
+  <form method="post" action="{{ url_for('web.update_libro', libro_id=libro.id) }}" class="form-grid">
+    <label>Título<input name="titulo" value="{{ libro.titulo }}"></label>
+    <label>Slug<input name="slug" value="{{ libro.slug }}"></label>
+    <label>Orden<input name="orden" type="number" value="{{ libro.orden }}"></label>
+    <div class="row gap">
+      <button type="submit">Guardar libro</button>
+      <button type="submit" formaction="{{ url_for('web.delete_libro', libro_id=libro.id) }}" class="danger">Eliminar libro</button>
+    </div>
+  </form>
+</section>
+
+<section class="panel">
+  <h2>Crear cuento</h2>
+  <form method="post" action="{{ url_for('web.create_cuento', saga_slug=saga.slug, libro_slug=libro.slug) }}" class="form-grid">
+    <label>Código<input name="codigo" placeholder="01" required></label>
+    <label>Título<input name="titulo" placeholder="01"></label>
+    <label>Slug (opcional)<input name="slug"></label>
+    <label>Orden<input name="orden" type="number" value="0"></label>
+    <button type="submit">Crear cuento</button>
+  </form>
+</section>
+
+<section class="panel">
+  <h2>Cuentos</h2>
+  {% if cuentos %}
+    <div class="list-grid">
+      {% for cuento in cuentos %}
+        <article class="item-card">
+          <h3>
+            <a href="{{ url_for('web.cuento_detail', saga_slug=saga.slug, libro_slug=libro.slug, cuento_slug=cuento.slug) }}">
+              {{ cuento.codigo }} - {{ cuento.titulo }}
+            </a>
+          </h3>
+          <p class="muted"><code>{{ cuento.slug }}</code></p>
+          <form method="post" action="{{ url_for('web.update_cuento', cuento_id=cuento.id) }}" class="mini-form">
+            <input name="codigo" value="{{ cuento.codigo }}" aria-label="Código">
+            <input name="titulo" value="{{ cuento.titulo }}" aria-label="Título">
+            <input name="slug" value="{{ cuento.slug }}">
+            <input name="estado" value="{{ cuento.estado }}">
+            <input name="orden" type="number" value="{{ cuento.orden }}">
+            <div class="row gap">
+              <button type="submit">Guardar</button>
+              <button type="submit" formaction="{{ url_for('web.delete_cuento', cuento_id=cuento.id) }}" class="danger">Eliminar</button>
+            </div>
+          </form>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="muted">No hay cuentos en este libro.</p>
+  {% endif %}
+</section>
+{% endblock %}

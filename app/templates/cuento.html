@@ -1,0 +1,108 @@
+﻿{% extends "base.html" %}
+{% block title %}Cuento {{ cuento.codigo }}{% endblock %}
+{% block content %}
+<nav class="breadcrumbs">
+  <a href="{{ url_for('web.dashboard') }}">Panel</a>
+  <span>/</span>
+  <a href="{{ url_for('web.saga_detail', saga_slug=saga.slug) }}">{{ saga.nombre }}</a>
+  <span>/</span>
+  <a href="{{ url_for('web.libro_detail', saga_slug=saga.slug, libro_slug=libro.slug) }}">{{ libro.titulo }}</a>
+  <span>/</span>
+  <span>{{ cuento.codigo }}</span>
+</nav>
+
+<section class="panel">
+  <h1>{{ cuento.codigo }} - {{ cuento.titulo }}</h1>
+  <form method="post" action="{{ url_for('web.update_cuento', cuento_id=cuento.id) }}" class="form-grid">
+    <label>Codigo<input name="codigo" value="{{ cuento.codigo }}"></label>
+    <label>Titulo<input name="titulo" value="{{ cuento.titulo }}"></label>
+    <label>Slug<input name="slug" value="{{ cuento.slug }}"></label>
+    <label>Estado<input name="estado" value="{{ cuento.estado }}"></label>
+    <label>Orden<input name="orden" type="number" value="{{ cuento.orden }}"></label>
+    <div class="row gap">
+      <button type="submit">Guardar cuento</button>
+      <button type="submit" formaction="{{ url_for('web.delete_cuento', cuento_id=cuento.id) }}" class="danger">Eliminar cuento</button>
+    </div>
+  </form>
+</section>
+
+<section class="two-col">
+  <div class="panel">
+    <h2>Prompts</h2>
+
+    <form
+      id="prompt-filters"
+      class="filters"
+      hx-get="{{ url_for('web.htmx_prompts') }}"
+      hx-target="#prompts-container"
+      hx-swap="innerHTML"
+      hx-trigger="keyup changed delay:250ms from:input, change from:select">
+      <input type="hidden" name="cuento_id" value="{{ cuento.id }}">
+      <label>Buscar<input name="q" placeholder="ID, descripcion, texto..."></label>
+      <label>Tipo
+        <select name="tipo">
+          <option value="">Todos</option>
+          {% for t in prompt_tipos %}
+            <option value="{{ t }}">{{ t }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>Grupo
+        <select name="grupo">
+          <option value="">Todos</option>
+          {% for g in prompt_grupos %}
+            <option value="{{ g }}">{{ g }}</option>
+          {% endfor %}
+        </select>
+      </label>
+    </form>
+
+    <details class="create-block">
+      <summary>Crear prompt</summary>
+      <form method="post" action="{{ url_for('web.create_prompt', cuento_id=cuento.id) }}" class="form-grid">
+        <label>ID del prompt<input name="id_prompt" required></label>
+        <label>Bloque<input name="bloque" value="{{ cuento.codigo }}"></label>
+        <label>Pagina<input name="pagina"></label>
+        <label>Tipo de imagen<input name="tipo_imagen" value="principal"></label>
+        <label>Grupo<input name="grupo" value="otro"></label>
+        <label>Orden<input name="orden" type="number" value="0"></label>
+        <label class="full">Generar una imagen de<input name="generar_una_imagen_de"></label>
+        <label class="full">Descripcion<textarea name="descripcion" rows="2"></textarea></label>
+        <label class="full">Detalles importantes (una linea por detalle)<textarea name="detalles_importantes_text" rows="4"></textarea></label>
+        <label class="full">Prompt final literal<textarea name="prompt_final_literal" rows="4"></textarea></label>
+        <label class="full">Bloque para copiar/pegar<textarea name="bloque_copy_paste" rows="4"></textarea></label>
+        <button type="submit">Crear prompt</button>
+      </form>
+    </details>
+
+    <div id="prompts-container">
+      {% include "partials/prompts_list.html" %}
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Textos por pagina</h2>
+
+    <form
+      id="text-page-selector"
+      class="filters"
+      hx-get="{{ url_for('web.htmx_textos') }}"
+      hx-target="#texts-container"
+      hx-swap="innerHTML"
+      hx-trigger="change from:select">
+      <input type="hidden" name="cuento_id" value="{{ cuento.id }}">
+      <label>Pagina
+        <select name="pagina">
+          {% for page in page_options %}
+            <option value="{{ page }}" {% if page == selected_page %}selected{% endif %}>{{ page }}</option>
+          {% endfor %}
+        </select>
+      </label>
+    </form>
+
+    <div id="texts-container">
+      {% include "partials/texts_list.html" %}
+    </div>
+  </div>
+</section>
+{% endblock %}

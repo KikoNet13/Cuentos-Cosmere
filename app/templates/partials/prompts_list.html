@@ -1,0 +1,10 @@
+{% if prompt_items %}
+  <div class="cards">
+    {% for item in prompt_items %}
+      {% include "partials/prompt_card.html" %}
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="muted">No hay prompts para los filtros actuales.</p>
+{% endif %}
+

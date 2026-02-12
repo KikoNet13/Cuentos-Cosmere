@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Cuentos Cosmere{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container row between center">
+      <a class="brand" href="{{ url_for('web.dashboard') }}">Cuentos Cosmere</a>
+      <small class="muted">Flask + Peewee + SQLite + HTMX</small>
+    </div>
+  </header>
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <section class="flash-stack">
+          {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+        </section>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <script>
+    async function copyTextFromElement(id, feedbackId) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const text = el.innerText || el.value || "";
+      const feedback = document.getElementById(feedbackId);
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const ta = document.createElement("textarea");
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          ta.remove();
+        }
+        if (feedback) {
+          feedback.textContent = "Copiado";
+          setTimeout(() => { feedback.textContent = ""; }, 1200);
+        }
+      } catch (err) {
+        if (feedback) {
+          feedback.textContent = "Error al copiar";
+          setTimeout(() => { feedback.textContent = ""; }, 1600);
+        }
+      }
+    }
+  </script>
+</body>
+</html>

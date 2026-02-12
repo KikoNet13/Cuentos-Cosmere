@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Panel | Cuentos Cosmere{% endblock %}
+{% block content %}
+<section class="panel">
+  <h1>Panel</h1>
+  <div class="stats-grid">
+    <div class="stat"><strong>{{ stats.sagas }}</strong><span>Sagas</span></div>
+    <div class="stat"><strong>{{ stats.libros }}</strong><span>Libros</span></div>
+    <div class="stat"><strong>{{ stats.cuentos }}</strong><span>Cuentos</span></div>
+    <div class="stat"><strong>{{ stats.textos }}</strong><span>Textos</span></div>
+    <div class="stat"><strong>{{ stats.prompts }}</strong><span>Prompts</span></div>
+    <div class="stat"><strong>{{ stats.imagenes }}</strong><span>Imágenes de prompt</span></div>
+    <div class="stat"><strong>{{ stats.pdf_refs }}</strong><span>Referencias PDF</span></div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Crear saga</h2>
+  <form method="post" action="{{ url_for('web.create_saga') }}" class="form-grid">
+    <label>Nombre<input name="nombre" required></label>
+    <label>Slug (opcional)<input name="slug" placeholder="nacidos-de-la-bruma-era-1"></label>
+    <label class="full">Descripción<textarea name="descripcion" rows="2"></textarea></label>
+    <button type="submit">Crear saga</button>
+  </form>
+</section>
+
+<section class="panel">
+  <h2>Sagas</h2>
+  {% if sagas %}
+    <div class="list-grid">
+      {% for saga in sagas %}
+        <article class="item-card">
+          <h3><a href="{{ url_for('web.saga_detail', saga_slug=saga.slug) }}">{{ saga.nombre }}</a></h3>
+          <p class="muted"><code>{{ saga.slug }}</code></p>
+          <form method="post" action="{{ url_for('web.update_saga', saga_id=saga.id) }}" class="mini-form">
+            <input name="nombre" value="{{ saga.nombre }}">
+            <input name="slug" value="{{ saga.slug }}">
+            <textarea name="descripcion" rows="2">{{ saga.descripcion }}</textarea>
+            <div class="row gap">
+              <button type="submit">Guardar</button>
+              <button type="submit" formaction="{{ url_for('web.delete_saga', saga_id=saga.id) }}" class="danger">Eliminar</button>
+            </div>
+          </form>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="muted">No hay sagas todavía.</p>
+  {% endif %}
+</section>
+{% endblock %}

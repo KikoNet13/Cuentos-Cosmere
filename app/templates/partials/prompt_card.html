@@ -1,0 +1,71 @@
+<article class="card prompt-card">
+  <div class="card-head">
+    <div>
+      <strong>{{ item.id_prompt }}</strong>
+      <span class="chip">{{ item.grupo }}</span>
+      <span class="chip">{{ item.tipo_imagen }}</span>
+    </div>
+    <small class="muted">Bloque {{ item.bloque }} · Página {{ item.pagina }}</small>
+  </div>
+
+  <div class="card-body">
+    <div class="media-box">
+      <p><strong>Imagen activa:</strong> <code>{{ item.image_rel }}</code></p>
+      <p class="{{ 'ok' if item.image_exists else 'warn' }}">{{ 'Encontrada' if item.image_exists else 'No encontrada' }}</p>
+      {% if item.image_exists %}
+        <a class="inline-link" href="{{ item.image_url }}" target="_blank" rel="noopener">Abrir imagen</a>
+        <img src="{{ item.image_url }}" alt="{{ item.id_prompt }}">
+      {% endif %}
+    </div>
+
+    <form
+      class="mini-form"
+      hx-post="{{ url_for('web.update_prompt_image', id_prompt=item.id_prompt) }}"
+      hx-target="closest .prompt-card"
+      hx-swap="outerHTML">
+      <label>Ruta de imagen relativa
+        <input name="ruta_relativa" value="{{ item.image_rel }}">
+      </label>
+      <button type="submit">Guardar imagen activa</button>
+    </form>
+
+    <form
+      class="mini-form"
+      hx-post="{{ url_for('web.update_prompt', id_prompt=item.id_prompt) }}"
+      hx-target="closest .prompt-card"
+      hx-swap="outerHTML">
+      <div class="grid-2">
+        <label>Bloque<input name="bloque" value="{{ item.bloque }}"></label>
+        <label>Página<input name="pagina" value="{{ item.pagina }}"></label>
+        <label>Tipo de imagen<input name="tipo_imagen" value="{{ item.tipo_imagen }}"></label>
+        <label>Grupo<input name="grupo" value="{{ item.grupo }}"></label>
+        <label>Orden<input name="orden" type="number" value="{{ item.orden }}"></label>
+        <label>Estado<input name="estado" value="{{ item.estado }}"></label>
+      </div>
+      <label>Generar una imagen de<input name="generar_una_imagen_de" value="{{ item.generar_una_imagen_de }}"></label>
+      <label>Descripción<textarea name="descripcion" rows="2">{{ item.descripcion }}</textarea></label>
+      <label>Detalles importantes (una línea por detalle)<textarea name="detalles_importantes_text" rows="4">{{ item.detalles_texto }}</textarea></label>
+      <label>Prompt final literal<textarea name="prompt_final_literal" rows="5">{{ item.prompt_final_literal }}</textarea></label>
+      <label>Bloque para copiar/pegar<textarea name="bloque_copy_paste" rows="5">{{ item.bloque_copy_paste }}</textarea></label>
+      <button type="submit">Guardar prompt</button>
+    </form>
+
+    <div class="copy-block">
+      <h4>Prompt final literal</h4>
+      <pre id="final-{{ item.id_prompt }}">{{ item.prompt_final_literal }}</pre>
+      <div class="row gap">
+        <button type="button" onclick="copyTextFromElement('final-{{ item.id_prompt }}','fb-final-{{ item.id_prompt }}')">Copiar prompt final literal</button>
+        <span class="copy-feedback" id="fb-final-{{ item.id_prompt }}"></span>
+      </div>
+    </div>
+
+    <div class="copy-block">
+      <h4>Bloque para copiar/pegar</h4>
+      <pre id="copy-{{ item.id_prompt }}">{{ item.bloque_copy_paste }}</pre>
+      <div class="row gap">
+        <button type="button" onclick="copyTextFromElement('copy-{{ item.id_prompt }}','fb-copy-{{ item.id_prompt }}')">Copiar bloque para copiar/pegar</button>
+        <span class="copy-feedback" id="fb-copy-{{ item.id_prompt }}"></span>
+      </div>
+    </div>
+  </div>
+</article>
