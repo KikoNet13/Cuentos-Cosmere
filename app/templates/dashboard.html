@@ -7,9 +7,11 @@
     <div class="stat"><strong>{{ stats.sagas }}</strong><span>Sagas</span></div>
     <div class="stat"><strong>{{ stats.libros }}</strong><span>Libros</span></div>
     <div class="stat"><strong>{{ stats.cuentos }}</strong><span>Cuentos</span></div>
-    <div class="stat"><strong>{{ stats.textos }}</strong><span>Textos</span></div>
-    <div class="stat"><strong>{{ stats.prompts }}</strong><span>Prompts</span></div>
-    <div class="stat"><strong>{{ stats.imagenes }}</strong><span>Imágenes de prompt</span></div>
+    <div class="stat"><strong>{{ stats.paginas }}</strong><span>Paginas</span></div>
+    <div class="stat"><strong>{{ stats.anclas }}</strong><span>Anclas</span></div>
+    <div class="stat"><strong>{{ stats.versiones_ancla }}</strong><span>Versiones ancla</span></div>
+    <div class="stat"><strong>{{ stats.imagenes }}</strong><span>Imagenes</span></div>
+    <div class="stat"><strong>{{ stats.requisitos }}</strong><span>Requisitos</span></div>
     <div class="stat"><strong>{{ stats.pdf_refs }}</strong><span>Referencias PDF</span></div>
   </div>
 </section>
@@ -19,7 +21,7 @@
   <form method="post" action="{{ url_for('web.create_saga') }}" class="form-grid">
     <label>Nombre<input name="nombre" required></label>
     <label>Slug (opcional)<input name="slug" placeholder="nacidos-de-la-bruma-era-1"></label>
-    <label class="full">Descripción<textarea name="descripcion" rows="2"></textarea></label>
+    <label class="full">Descripcion<textarea name="descripcion" rows="2"></textarea></label>
     <button type="submit">Crear saga</button>
   </form>
 </section>
@@ -32,20 +34,12 @@
         <article class="item-card">
           <h3><a href="{{ url_for('web.saga_detail', saga_slug=saga.slug) }}">{{ saga.nombre }}</a></h3>
           <p class="muted"><code>{{ saga.slug }}</code></p>
-          <form method="post" action="{{ url_for('web.update_saga', saga_id=saga.id) }}" class="mini-form">
-            <input name="nombre" value="{{ saga.nombre }}">
-            <input name="slug" value="{{ saga.slug }}">
-            <textarea name="descripcion" rows="2">{{ saga.descripcion }}</textarea>
-            <div class="row gap">
-              <button type="submit">Guardar</button>
-              <button type="submit" formaction="{{ url_for('web.delete_saga', saga_id=saga.id) }}" class="danger">Eliminar</button>
-            </div>
-          </form>
+          <a href="{{ url_for('web.anclas_saga', saga_slug=saga.slug) }}">Gestionar anclas</a>
         </article>
       {% endfor %}
     </div>
   {% else %}
-    <p class="muted">No hay sagas todavía.</p>
+    <p class="muted">No hay sagas todavia.</p>
   {% endif %}
 </section>
 {% endblock %}

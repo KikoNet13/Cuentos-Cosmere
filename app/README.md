@@ -1,75 +1,39 @@
-# Cuentos Cosmere
+# Cuentos Cosmere (App)
 
-## Tecnologías
+## Tecnologias
 
 - Flask
 - Peewee
 - SQLite
-- HTMX
 
-## Inicio rápido con Pipenv
+## Flujo local con Pipenv
 
-1. Instalar dependencias.
+1. `pipenv install`
+2. `pipenv run python manage.py init-db`
+3. `pipenv run python manage.py migrate-models-v3`
+4. `pipenv run python manage.py import`
+5. `pipenv run python manage.py runserver --help`
 
-```powershell
-pipenv install
-```
+## Modelo v3
 
-1. Crear el esquema de base de datos.
+- `Pagina`: texto por numero dentro de un cuento.
+- `Ancla` y `AnclaVersion`: referencias versionables por saga.
+- `Imagen`: pertenece a `Pagina` o `AnclaVersion`.
+- `ImagenRequisito`: requisitos mixtos (`ancla_version` o `imagen`).
 
-```powershell
-pipenv run python manage.py init-db
-```
+## Contrato de importacion
 
-1. Migrar textos heredados a páginas, si aplica.
+- El importador toma paginas desde `biblioteca/**/origen_md.md`.
+- Actualiza paginas por `(cuento, numero)`.
+- Elimina paginas no presentes en el archivo importado.
+- No importa prompts legacy.
 
-```powershell
-pipenv run python manage.py migrate-texto-pages
-```
+## Respaldos
 
-1. Importar el dataset canónico desde `biblioteca/`.
+- `pipenv run python manage.py export-imagenes`
+- `pipenv run python manage.py import-imagenes`
 
-```powershell
-pipenv run python manage.py import
-```
+Alias deprecados (compatibilidad):
 
-1. Validar el comando del servidor sin dejar procesos abiertos.
-
-```powershell
-pipenv run python manage.py runserver --help
-```
-
-1. Iniciar servidor solo cuando se necesite trabajar interfaz.
-
-```powershell
-pipenv run python manage.py runserver --debug
-```
-
-1. Abrir en navegador.
-
-`http://127.0.0.1:5000`
-
-## Paginación de textos
-
-- El importador toma las páginas detectadas en `origen_md.md`.
-- No hay objetivo fijo forzado de 16 o 32 páginas.
-- Para usar 16 páginas, prepara el archivo fuente con ese total.
-
-## Respaldo de prompts
-
-- Exportar prompts desde SQLite a JSON.
-
-```powershell
-pipenv run python manage.py export-prompts
-```
-
-- Importar prompts desde JSON a SQLite.
-
-```powershell
-pipenv run python manage.py import-prompts
-```
-
-## Convención de códigos de cuento
-
-- Código por libro: `2` dígitos numéricos (`01`, `02`, `03`, ...).
-- El código no incluye el número del libro.
+- `pipenv run python manage.py export-prompts`
+- `pipenv run python manage.py import-prompts`

@@ -18,14 +18,16 @@ db = SqliteDatabase(
 
 def init_schema() -> None:
     from .models import (
+        Ancla,
+        AnclaVersion,
         Cuento,
         HistorialEdicion,
-        ImagenPrompt,
+        Imagen,
+        ImagenRequisito,
         Libro,
-        Prompt,
+        Pagina,
         ReferenciaPDF,
         Saga,
-        Texto,
     )
 
     db.connect(reuse_if_open=True)
@@ -34,12 +36,18 @@ def init_schema() -> None:
             Saga,
             Libro,
             Cuento,
-            Texto,
-            Prompt,
-            ImagenPrompt,
+            Pagina,
+            Ancla,
+            AnclaVersion,
+            Imagen,
+            ImagenRequisito,
             ReferenciaPDF,
             HistorialEdicion,
         ],
         safe=True,
     )
-
+    db.execute_sql(
+        'CREATE UNIQUE INDEX IF NOT EXISTS "imagen_pagina_principal_activa_uq" '
+        'ON "imagen" ("pagina_id") '
+        "WHERE pagina_id IS NOT NULL AND rol='principal' AND principal_activa=1"
+    )

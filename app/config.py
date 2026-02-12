@@ -12,3 +12,11 @@ PROMPTS_BACKUP_JSON = (
     / "prompts"
     / "era1_prompts_data.json"
 )
+
+IMAGENES_BACKUP_JSON = (
+    BIBLIOTECA_DIR
+    / "nacidos-de-la-bruma-era-1"
+    / "el-imperio-final"
+    / "prompts"
+    / "imagenes_data.json"
+)

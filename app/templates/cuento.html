@@ -1,4 +1,4 @@
-﻿{% extends "base.html" %}
+{% extends "base.html" %}
 {% block title %}Cuento {{ cuento.codigo }}{% endblock %}
 {% block content %}
 <nav class="breadcrumbs">
@@ -13,96 +13,167 @@
 
 <section class="panel">
   <h1>{{ cuento.codigo }} - {{ cuento.titulo }}</h1>
-  <form method="post" action="{{ url_for('web.update_cuento', cuento_id=cuento.id) }}" class="form-grid">
-    <label>Codigo<input name="codigo" value="{{ cuento.codigo }}"></label>
-    <label>Titulo<input name="titulo" value="{{ cuento.titulo }}"></label>
-    <label>Slug<input name="slug" value="{{ cuento.slug }}"></label>
-    <label>Estado<input name="estado" value="{{ cuento.estado }}"></label>
-    <label>Orden<input name="orden" type="number" value="{{ cuento.orden }}"></label>
-    <div class="row gap">
-      <button type="submit">Guardar cuento</button>
-      <button type="submit" formaction="{{ url_for('web.delete_cuento', cuento_id=cuento.id) }}" class="danger">Eliminar cuento</button>
+  {% if page_numbers %}
+    <div class="row gap center">
+      {% if prev_page %}
+        <a class="inline-link" href="{{ url_for('web.cuento_detail', saga_slug=saga.slug, libro_slug=libro.slug, cuento_slug=cuento.slug, pagina=prev_page) }}">&larr; Pagina {{ prev_page }}</a>
+      {% endif %}
+      <form method="get" action="{{ url_for('web.cuento_detail', saga_slug=saga.slug, libro_slug=libro.slug, cuento_slug=cuento.slug) }}">
+        <label>Pagina
+          <select name="pagina" onchange="this.form.submit()">
+            {% for num in page_numbers %}
+              <option value="{{ num }}" {% if num == selected_page %}selected{% endif %}>{{ num }}</option>
+            {% endfor %}
+          </select>
+        </label>
+      </form>
+      {% if next_page %}
+        <a class="inline-link" href="{{ url_for('web.cuento_detail', saga_slug=saga.slug, libro_slug=libro.slug, cuento_slug=cuento.slug, pagina=next_page) }}">Pagina {{ next_page }} &rarr;</a>
+      {% endif %}
     </div>
+  {% else %}
+    <p class="muted">No hay paginas importadas para este cuento.</p>
+  {% endif %}
+</section>
+
+{% if page %}
+<section class="panel">
+  <h2>Texto de pagina {{ page.numero }}</h2>
+  <form method="post" action="{{ url_for('web.update_pagina', pagina_id=page.id) }}" class="form-grid">
+    <label class="full">Contenido<textarea name="contenido" rows="14">{{ page.contenido }}</textarea></label>
+    <button type="submit">Guardar pagina</button>
   </form>
 </section>
 
-<section class="two-col">
-  <div class="panel">
-    <h2>Prompts</h2>
-
-    <form
-      id="prompt-filters"
-      class="filters"
-      hx-get="{{ url_for('web.htmx_prompts') }}"
-      hx-target="#prompts-container"
-      hx-swap="innerHTML"
-      hx-trigger="keyup changed delay:250ms from:input, change from:select">
-      <input type="hidden" name="cuento_id" value="{{ cuento.id }}">
-      <label>Buscar<input name="q" placeholder="ID, descripcion, texto..."></label>
-      <label>Tipo
-        <select name="tipo">
-          <option value="">Todos</option>
-          {% for t in prompt_tipos %}
-            <option value="{{ t }}">{{ t }}</option>
-          {% endfor %}
-        </select>
-      </label>
-      <label>Grupo
-        <select name="grupo">
-          <option value="">Todos</option>
-          {% for g in prompt_grupos %}
-            <option value="{{ g }}">{{ g }}</option>
-          {% endfor %}
-        </select>
-      </label>
-    </form>
-
-    <details class="create-block">
-      <summary>Crear prompt</summary>
-      <form method="post" action="{{ url_for('web.create_prompt', cuento_id=cuento.id) }}" class="form-grid">
-        <label>ID del prompt<input name="id_prompt" required></label>
-        <label>Bloque<input name="bloque" value="{{ cuento.codigo }}"></label>
-        <label>Pagina<input name="pagina"></label>
-        <label>Tipo de imagen<input name="tipo_imagen" value="principal"></label>
-        <label>Grupo<input name="grupo" value="otro"></label>
-        <label>Orden<input name="orden" type="number" value="0"></label>
-        <label class="full">Generar una imagen de<input name="generar_una_imagen_de"></label>
-        <label class="full">Descripcion<textarea name="descripcion" rows="2"></textarea></label>
-        <label class="full">Detalles importantes (una linea por detalle)<textarea name="detalles_importantes_text" rows="4"></textarea></label>
-        <label class="full">Prompt final literal<textarea name="prompt_final_literal" rows="4"></textarea></label>
-        <label class="full">Bloque para copiar/pegar<textarea name="bloque_copy_paste" rows="4"></textarea></label>
-        <button type="submit">Crear prompt</button>
-      </form>
-    </details>
-
-    <div id="prompts-container">
-      {% include "partials/prompts_list.html" %}
-    </div>
-  </div>
-
-  <div class="panel">
-    <h2>Textos por pagina detectada</h2>
-
-    <form
-      id="text-page-selector"
-      class="filters"
-      hx-get="{{ url_for('web.htmx_textos') }}"
-      hx-target="#texts-container"
-      hx-swap="innerHTML"
-      hx-trigger="change from:select">
-      <input type="hidden" name="cuento_id" value="{{ cuento.id }}">
-      <label>Pagina
-        <select name="pagina">
-          {% for page in page_options %}
-            <option value="{{ page }}" {% if page == selected_page %}selected{% endif %}>{{ page }}</option>
-          {% endfor %}
-        </select>
-      </label>
-    </form>
-
-    <div id="texts-container">
-      {% include "partials/texts_list.html" %}
-    </div>
-  </div>
+<section class="panel">
+  <h2>Crear imagen de pagina</h2>
+  <form method="post" action="{{ url_for('web.create_imagen_pagina', pagina_id=page.id) }}" class="form-grid">
+    <label>Rol
+      <select name="rol">
+        <option value="principal">principal</option>
+        <option value="secundaria">secundaria</option>
+      </select>
+    </label>
+    <label>Orden<input name="orden" type="number" value="0"></label>
+    <label>Estado<input name="estado" value="activo"></label>
+    <label>Principal activa<input name="principal_activa" type="checkbox"></label>
+    <label class="full">Ruta relativa de imagen<input name="ruta_relativa" placeholder="biblioteca/.../imagen.png"></label>
+    <label class="full">Prompt completo<textarea name="prompt_texto" rows="5"></textarea></label>
+    <label class="full">Requisitos libres (una linea por item)<textarea name="requisitos_libres_text" rows="4"></textarea></label>
+    <button type="submit">Crear imagen</button>
+  </form>
 </section>
+
+<section class="panel">
+  <h2>Imagenes de la pagina</h2>
+  {% if image_items %}
+    <div class="cards">
+      {% for item in image_items %}
+        <article class="card">
+          <div class="card-head">
+            <div>
+              <strong>{{ item.id }}</strong>
+              <span class="chip">{{ item.rol }}</span>
+              {% if item.principal_activa %}<span class="chip">activa</span>{% endif %}
+            </div>
+            <small class="muted">Orden {{ item.orden }} | Estado {{ item.estado }}</small>
+          </div>
+          <div class="card-body">
+            <p><strong>Ruta:</strong> <code>{{ item.ruta_relativa }}</code></p>
+            {% if item.exists %}
+              <img src="{{ item.url }}" alt="{{ item.id }}">
+              <div class="row gap">
+                <button type="button" onclick="copyImageFromUrl('{{ item.url }}','img-copy-{{ item.id }}')">Copiar imagen al portapapeles</button>
+                <span class="copy-feedback" id="img-copy-{{ item.id }}"></span>
+              </div>
+            {% else %}
+              <p class="warn">Archivo no encontrado.</p>
+            {% endif %}
+
+            <form method="post" action="{{ url_for('web.update_imagen', imagen_id=item.id) }}" class="form-grid">
+              <label>Rol
+                <select name="rol">
+                  <option value="principal" {% if item.rol == 'principal' %}selected{% endif %}>principal</option>
+                  <option value="secundaria" {% if item.rol == 'secundaria' %}selected{% endif %}>secundaria</option>
+                  <option value="referencia" {% if item.rol == 'referencia' %}selected{% endif %}>referencia</option>
+                </select>
+              </label>
+              <label>Orden<input name="orden" type="number" value="{{ item.orden }}"></label>
+              <label>Estado<input name="estado" value="{{ item.estado }}"></label>
+              <label>Principal activa<input name="principal_activa" type="checkbox" {% if item.principal_activa %}checked{% endif %}></label>
+              <label class="full">Ruta relativa<input name="ruta_relativa" value="{{ item.ruta_relativa }}"></label>
+              <label class="full">Prompt completo<textarea name="prompt_texto" rows="5">{{ item.prompt_texto }}</textarea></label>
+              <label class="full">Requisitos libres<textarea name="requisitos_libres_text" rows="4">{{ item.requisitos_libres }}</textarea></label>
+              <div class="row gap">
+                <button type="submit">Guardar imagen</button>
+                {% if item.rol == 'principal' %}
+                  <button type="submit" formaction="{{ url_for('web.activate_principal', imagen_id=item.id) }}">Activar principal</button>
+                {% endif %}
+                <button type="submit" formaction="{{ url_for('web.delete_imagen', imagen_id=item.id) }}" class="danger">Eliminar imagen</button>
+              </div>
+            </form>
+
+            <div class="panel">
+              <h4>Requisitos estructurados</h4>
+              {% if item.requisitos %}
+                {% for req in item.requisitos %}
+                  <div class="item-card">
+                    <p><strong>{{ req.origen_tipo }}</strong> - {{ req.etiqueta }}</p>
+                    {% if req.nota %}<p class="muted">{{ req.nota }}</p>{% endif %}
+                    {% for ref in req.refs %}
+                      <p><code>{{ ref.ruta_relativa }}</code></p>
+                      {% if ref.exists %}
+                        <img src="{{ ref.url }}" alt="{{ ref.id }}">
+                        <div class="row gap">
+                          <button type="button" onclick="copyImageFromUrl('{{ ref.url }}','req-copy-{{ req.id }}-{{ ref.id }}')">Copiar imagen al portapapeles</button>
+                          <span class="copy-feedback" id="req-copy-{{ req.id }}-{{ ref.id }}"></span>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                    <form method="post" action="{{ url_for('web.delete_requisito', requisito_id=req.id) }}">
+                      <button type="submit" class="danger">Eliminar requisito</button>
+                    </form>
+                  </div>
+                {% endfor %}
+              {% else %}
+                <p class="muted">Sin requisitos.</p>
+              {% endif %}
+
+              <form method="post" action="{{ url_for('web.create_requisito', imagen_id=item.id) }}" class="form-grid">
+                <label>Tipo
+                  <select name="origen_tipo">
+                    <option value="ancla_version">ancla_version</option>
+                    <option value="imagen">imagen</option>
+                  </select>
+                </label>
+                <label>Orden<input name="orden" type="number" value="0"></label>
+                <label class="full">Ancla version
+                  <select name="ancla_version_id">
+                    <option value="">(elige version)</option>
+                    {% for v in ancla_versions %}
+                      <option value="{{ v.id }}">{{ v.ancla.nombre }} / {{ v.nombre_version }}</option>
+                    {% endfor %}
+                  </select>
+                </label>
+                <label class="full">Imagen referencia
+                  <select name="imagen_referencia_id">
+                    <option value="">(elige imagen)</option>
+                    {% for im in all_page_images %}
+                      <option value="{{ im.id }}">{{ im.id[:8] }} | cuento {{ im.pagina.cuento.codigo }} | pagina {{ im.pagina.numero }}</option>
+                    {% endfor %}
+                  </select>
+                </label>
+                <label class="full">Nota<textarea name="nota" rows="2"></textarea></label>
+                <button type="submit">Anadir requisito</button>
+              </form>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="muted">No hay imagenes para esta pagina.</p>
+  {% endif %}
+</section>
+{% endif %}
 {% endblock %}

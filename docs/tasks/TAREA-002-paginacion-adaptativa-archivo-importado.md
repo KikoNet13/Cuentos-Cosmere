@@ -76,4 +76,4 @@ sin truncado ni warnings por conteo esperado.
 ## Commit asociado
 
 - Mensaje de commit: `Tarea 002: paginación adaptativa por archivo importado`
-- Hash de commit: `pendiente`
+- Hash de commit: `70c556a`

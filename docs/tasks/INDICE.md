@@ -1,6 +1,6 @@
 # Índice de tareas
 
-- Próximo ID: `003`
+- Próximo ID: `004`
 
 ## TAREA-001-proyecto-profesional-contexto
 
@@ -18,6 +18,16 @@
 - Estado: cerrada
 - Resumen: paginación adaptativa por archivo importado y ajuste de canon.
 - Versión: 0.2.0
-- Commit: `pendiente`
+- Commit: `70c556a`
 - ADR relacionadas: `0003`
 - Archivo: `docs/tasks/TAREA-002-paginacion-adaptativa-archivo-importado.md`
+
+## TAREA-003-reestructuracion-pagina-ancla-imagen-ui
+
+- Fecha: 12/02/26 14:41
+- Estado: cerrada
+- Resumen: modelo v3 con Página/Ancla/Imagen y UI centrada en generación.
+- Versión: 0.3.0
+- Commit: `pendiente`
+- ADR relacionadas: `0003`
+- Archivo: `docs/tasks/TAREA-003-reestructuracion-pagina-ancla-imagen-ui.md`

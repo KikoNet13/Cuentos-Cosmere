@@ -56,6 +56,30 @@
         }
       }
     }
+
+    async function copyImageFromUrl(url, feedbackId) {
+      const feedback = document.getElementById(feedbackId);
+      try {
+        const res = await fetch(url, { cache: "no-store" });
+        const blob = await res.blob();
+        if (!blob.type.startsWith("image/")) {
+          throw new Error("El archivo no es una imagen");
+        }
+        if (!navigator.clipboard || !window.ClipboardItem) {
+          throw new Error("Portapapeles de imagen no disponible");
+        }
+        await navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
+        if (feedback) {
+          feedback.textContent = "Imagen copiada";
+          setTimeout(() => { feedback.textContent = ""; }, 1200);
+        }
+      } catch (err) {
+        if (feedback) {
+          feedback.textContent = "No se pudo copiar; abre la imagen y copia manualmente";
+          setTimeout(() => { feedback.textContent = ""; }, 2500);
+        }
+      }
+    }
   </script>
 </body>
 </html>

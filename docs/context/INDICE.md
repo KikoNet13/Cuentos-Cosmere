@@ -1,14 +1,16 @@
-# Índice de contexto
+# Indice de contexto
 
-Esta carpeta conserva solo contexto operativo vigente.
+## Objetivo
+
+Contexto minimo vigente para producir cuentos e imagenes en el modelo v3.
 
 ## Archivos activos
 
-- `canon_cuento_objetivo_16_paginas.md`
-- `prompts_imagenes_master_era1.md`
+- `docs/context/prompts_imagenes_master_era1.md`
+- `docs/context/canon_cuento_objetivo_16_paginas.md`
 
-## Política
+## Nota de alcance
 
-1. Evitar duplicidades con `AGENTS.md` y `docs/tasks/`.
-2. Mantener solo documentos necesarios para ejecución actual.
-3. Eliminar material histórico que no se use de forma directa.
+- El perfil de 16 paginas es editorial recomendado, no restriccion tecnica.
+- La cantidad real de paginas depende del archivo `origen_md.md` importado.
+- La generacion visual opera por `Pagina`, `AnclaVersion` e `Imagen`.

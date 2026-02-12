@@ -1,24 +1,26 @@
-# 0003 - Contrato de importación y respaldo
+# 0003 - Contrato de importacion y respaldo
 
 - Estado: aceptado
 - Fecha: 12/02/26
 
 ## Contexto
 
-Los textos narrativos y metadatos de prompts requieren importación y
-respaldo predecibles.
+Los cuentos requieren una estructura estable para texto por pagina,
+referencias versionables y generacion de imagenes con trazabilidad.
 
-## Decisión
+## Decision
 
-Adoptar el siguiente contrato:
+Adoptar el contrato v3:
 
-- Los textos se modelan por página (`numero_pagina`).
-- La cantidad de páginas depende del archivo importado.
-- `manage.py import` sincroniza el contenido canónico.
-- Los prompts se respaldan con exportación e importación JSON explícitas.
+- La narrativa se modela en `Pagina` (por `numero` dentro de `Cuento`).
+- La referencia semantica se modela con `Ancla` + `AnclaVersion` por saga.
+- La generacion visual se modela con `Imagen` e `ImagenRequisito`.
+- `manage.py import` sincroniza solo paginas y referencias PDF.
+- El backup oficial de visuales usa `export-imagenes` / `import-imagenes`.
 
 ## Consecuencias
 
-- Se separan entradas canónicas y estado de ejecución.
-- Existe ruta de recuperación repetible para prompts.
-- Requiere disciplina en comandos de importación y respaldo.
+- Se elimina el dominio activo legacy `Prompt` + `ImagenPrompt`.
+- La UI se centra en navegacion por pagina e imagenes asociadas.
+- Se conserva compatibilidad operativa con alias de comandos legacy
+  marcados como deprecados.
