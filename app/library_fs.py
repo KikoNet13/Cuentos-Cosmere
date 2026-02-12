@@ -7,35 +7,35 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from .config import BASE_DIR, DATA_ROOT
+from .config import LIBRARY_ROOT, ROOT_DIR
 
-PAGE_FILE_RE = re.compile(r"^(\d{3})\.md$")
-IMAGE_EXTS = (".png", ".jpg", ".jpeg", ".webp")
-RELEVANT_EXTS = (".md", ".png", ".jpg", ".jpeg", ".webp", ".pdf", ".json")
+PAGE_FILE_PATTERN = re.compile(r"^(\d{3})\.md$")
+IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg", ".webp")
+RELEVANT_EXTENSIONS = (".md", ".png", ".jpg", ".jpeg", ".webp", ".pdf", ".json")
 
 
 @dataclass
 class RequirementSpec:
-    tipo: str
+    kind: str
     ref: str
-    orden: int = 0
+    order: int = 0
 
 
 @dataclass
 class ImageSlotSpec:
-    slot: str
-    rol: str
-    prompt: str
-    requisitos: list[RequirementSpec] = field(default_factory=list)
-    orden: int = 0
+    slot_name: str
+    role: str
+    prompt_text: str
+    requirements: list[RequirementSpec] = field(default_factory=list)
+    display_order: int = 0
     image_rel_path: str = ""
 
 
 @dataclass
 class StoryPage:
-    numero: int
-    file_rel: str
-    contenido: str
+    page_number: int
+    file_rel_path: str
+    content: str
     raw_frontmatter_json: str
     image_slots: list[ImageSlotSpec]
     warnings: list[str] = field(default_factory=list)
@@ -43,19 +43,19 @@ class StoryPage:
 
 @dataclass
 class StoryMeta:
-    titulo: str
+    title: str
     slug: str
-    prompt_portada: str
-    prompt_contraportada: str
-    estado: str
-    notas: str
+    cover_prompt: str
+    back_cover_prompt: str
+    status: str
+    notes: str
     raw_frontmatter_json: str
 
 
 @dataclass
 class StoryData:
-    story_path_rel: str
-    meta_file_rel: str
+    story_rel_path: str
+    meta_rel_path: str
     meta: StoryMeta
     pages: list[StoryPage]
     warnings: list[str] = field(default_factory=list)
@@ -65,7 +65,7 @@ class StoryData:
 class NodeData:
     path_rel: str
     parent_path_rel: str | None
-    nombre: str
+    name: str
     is_story_leaf: bool
 
 
@@ -75,7 +75,7 @@ class AssetInfo:
     kind: str
     size: int
     mtime_ns: int
-    exists: bool
+    is_present: bool
 
 
 @dataclass
@@ -86,378 +86,473 @@ class LibrarySnapshot:
     warnings: list[str]
 
 
-def relevant_files(root: Path | None = None) -> list[Path]:
-    root_dir = (root or DATA_ROOT).resolve()
-    files: list[Path] = []
-    for p in root_dir.rglob("*"):
-        if p.is_file() and p.suffix.lower() in RELEVANT_EXTS:
-            files.append(p)
-    files.sort(key=lambda x: x.as_posix())
-    return files
+def list_relevant_files(root: Path | None = None) -> list[Path]:
+    base_root = (root or LIBRARY_ROOT).resolve()
+    matches: list[Path] = []
+    for entry in base_root.rglob("*"):
+        if entry.is_file() and entry.suffix.lower() in RELEVANT_EXTENSIONS:
+            matches.append(entry)
+    matches.sort(key=lambda item: item.as_posix())
+    return matches
 
 
-def _to_rel_from_data_root(path: Path) -> str:
-    return path.resolve().relative_to(DATA_ROOT.resolve()).as_posix()
+def _to_project_rel_path(path: Path) -> str:
+    return path.resolve().relative_to(ROOT_DIR.resolve()).as_posix()
 
 
-def _to_rel_from_base(path: Path) -> str:
-    return path.resolve().relative_to(BASE_DIR.resolve()).as_posix()
-
-
-def _slug_slot(slot: str) -> str:
-    slug = re.sub(r"[^a-z0-9-]+", "-", slot.lower().strip()).strip("-")
+def _slot_slug(slot_name: str) -> str:
+    slug = re.sub(r"[^a-z0-9-]+", "-", slot_name.lower().strip())
+    slug = slug.strip("-")
     return slug or "slot"
 
 
-def _normalize_role(raw: str) -> str:
-    value = raw.strip().lower()
+def _normalize_role(raw_value: str) -> str:
+    value = raw_value.strip().lower()
     if value in {"principal", "secundaria", "referencia"}:
         return value
     return "secundaria"
 
 
-def _parse_kv(text: str) -> tuple[str, str] | None:
-    if ":" not in text:
+def _parse_key_value(line: str) -> tuple[str, str] | None:
+    if ":" not in line:
         return None
-    key, value = text.split(":", 1)
+    key, value = line.split(":", 1)
     key = key.strip()
     if not key:
         return None
     return key, value.strip()
 
 
-def _parse_scalar(value: str) -> str:
-    raw = value.strip()
-    if raw == "":
+def _parse_scalar(raw_value: str) -> str:
+    value = raw_value.strip()
+    if value == "":
         return ""
-    if raw.startswith('"') and raw.endswith('"') and len(raw) >= 2:
-        return raw[1:-1].replace('\\"', '"')
-    if raw.startswith("'") and raw.endswith("'") and len(raw) >= 2:
-        return raw[1:-1].replace("\\'", "'")
-    return raw
+    if value.startswith('"') and value.endswith('"') and len(value) >= 2:
+        return value[1:-1].replace('\\"', '"')
+    if value.startswith("'") and value.endswith("'") and len(value) >= 2:
+        return value[1:-1].replace("\\'", "'")
+    return value
 
 
-def _split_frontmatter(raw: str) -> tuple[list[str], str, list[str]]:
+def _split_frontmatter(raw_text: str) -> tuple[list[str], str, list[str]]:
     warnings: list[str] = []
-    lines = raw.splitlines()
+    lines = raw_text.splitlines()
     if not lines or lines[0].strip() != "---":
-        return [], raw, warnings
-    end_idx = None
-    for idx in range(1, len(lines)):
-        if lines[idx].strip() == "---":
-            end_idx = idx
+        return [], raw_text, warnings
+
+    end_index = None
+    for index in range(1, len(lines)):
+        if lines[index].strip() == "---":
+            end_index = index
             break
-    if end_idx is None:
+
+    if end_index is None:
         warnings.append("Frontmatter sin cierre '---'.")
-        return [], raw, warnings
-    fm_lines = lines[1:end_idx]
-    body = "\n".join(lines[end_idx + 1 :]).lstrip("\n")
-    return fm_lines, body, warnings
+        return [], raw_text, warnings
+
+    frontmatter_lines = lines[1:end_index]
+    body = "\n".join(lines[end_index + 1 :]).lstrip("\n")
+    return frontmatter_lines, body, warnings
 
 
-def _parse_meta_frontmatter(fm_lines: list[str]) -> tuple[dict[str, Any], list[str]]:
-    data: dict[str, Any] = {}
+def _parse_meta_frontmatter(lines: list[str]) -> tuple[dict[str, Any], list[str]]:
     warnings: list[str] = []
-    for line in fm_lines:
-        stripped = line.strip()
-        if not stripped:
+    raw_meta: dict[str, Any] = {}
+
+    for line in lines:
+        clean_line = line.strip()
+        if not clean_line:
             continue
-        parsed = _parse_kv(stripped)
+        parsed = _parse_key_value(clean_line)
         if not parsed:
-            warnings.append(f"Linea invalida en frontmatter meta: {line}")
+            warnings.append(f"Línea inválida en frontmatter de meta: {line}")
             continue
         key, value = parsed
-        data[key] = _parse_scalar(value)
-    return data, warnings
+        raw_meta[key] = _parse_scalar(value)
+
+    mapped = {
+        "title": str(raw_meta.get("titulo", "")),
+        "slug": str(raw_meta.get("slug", "")),
+        "cover_prompt": str(raw_meta.get("prompt_portada", "")),
+        "back_cover_prompt": str(raw_meta.get("prompt_contraportada", "")),
+        "status": str(raw_meta.get("estado", "activo")),
+    }
+    return mapped, warnings
 
 
-def _parse_page_frontmatter(fm_lines: list[str]) -> tuple[dict[str, Any], list[str]]:
+def _parse_page_frontmatter(lines: list[str]) -> tuple[dict[str, Any], list[str]]:
     warnings: list[str] = []
-    data: dict[str, Any] = {"pagina": None, "imagenes": []}
-    idx = 0
-    total = len(fm_lines)
-    while idx < total:
-        line = fm_lines[idx]
-        stripped = line.strip()
+    mapped: dict[str, Any] = {
+        "page_number": None,
+        "image_slots": [],
+    }
+
+    index = 0
+    total = len(lines)
+    while index < total:
+        raw_line = lines[index]
+        stripped = raw_line.strip()
         if not stripped:
-            idx += 1
+            index += 1
             continue
-        parsed = _parse_kv(stripped)
+
+        parsed = _parse_key_value(stripped)
         if not parsed:
-            warnings.append(f"Linea invalida en frontmatter pagina: {line}")
-            idx += 1
+            warnings.append(f"Línea inválida en frontmatter de página: {raw_line}")
+            index += 1
             continue
+
         key, value = parsed
         if key != "imagenes":
-            data[key] = _parse_scalar(value)
-            idx += 1
+            if key == "pagina":
+                mapped["page_number"] = _parse_scalar(value)
+            index += 1
             continue
 
         if value and value != "[]":
-            warnings.append("Campo imagenes debe usar bloque de lista o []")
+            warnings.append("El campo 'imagenes' debe usar lista en bloque o [].")
         if value == "[]":
-            idx += 1
+            index += 1
             continue
-        idx += 1
+
+        index += 1
         slot_order = 0
-        while idx < total and fm_lines[idx].startswith("  - "):
-            slot_data: dict[str, Any] = {"slot": "", "rol": "secundaria", "prompt": "", "requisitos": []}
-            first_item = fm_lines[idx][4:].strip()
-            if first_item:
-                item_kv = _parse_kv(first_item)
-                if item_kv:
-                    slot_data[item_kv[0]] = _parse_scalar(item_kv[1])
-            idx += 1
-            while idx < total and fm_lines[idx].startswith("    "):
-                field = fm_lines[idx][4:].strip()
-                if not field:
-                    idx += 1
+        while index < total and lines[index].startswith("  - "):
+            slot_item: dict[str, Any] = {
+                "slot_name": "",
+                "role": "secundaria",
+                "prompt_text": "",
+                "requirements": [],
+                "display_order": slot_order,
+            }
+            first_inline = lines[index][4:].strip()
+            if first_inline:
+                kv = _parse_key_value(first_inline)
+                if kv:
+                    k, v = kv
+                    scalar = _parse_scalar(v)
+                    if k == "slot":
+                        slot_item["slot_name"] = scalar
+                    elif k == "rol":
+                        slot_item["role"] = scalar
+                    elif k == "prompt":
+                        slot_item["prompt_text"] = scalar
+            index += 1
+
+            while index < total and lines[index].startswith("    "):
+                field_line = lines[index][4:].strip()
+                if not field_line:
+                    index += 1
                     continue
-                if field.startswith("requisitos:"):
-                    req_value = field.split(":", 1)[1].strip()
-                    if req_value == "[]":
-                        idx += 1
+
+                if field_line.startswith("requisitos:"):
+                    requirement_value = field_line.split(":", 1)[1].strip()
+                    if requirement_value == "[]":
+                        index += 1
                         continue
-                    if req_value not in {"", "[]"}:
-                        warnings.append(f"Formato de requisitos no soportado: {field}")
-                        idx += 1
+                    if requirement_value not in {"", "[]"}:
+                        warnings.append(
+                            f"Formato de requisitos no soportado: {field_line}"
+                        )
+                        index += 1
                         continue
-                    idx += 1
-                    req_order = 0
-                    while idx < total and fm_lines[idx].startswith("      - "):
-                        req_data = {"tipo": "", "ref": "", "orden": req_order}
-                        first_req = fm_lines[idx][8:].strip()
-                        if first_req:
-                            req_kv = _parse_kv(first_req)
+
+                    index += 1
+                    requirement_order = 0
+                    while index < total and lines[index].startswith("      - "):
+                        requirement_item: dict[str, Any] = {
+                            "kind": "",
+                            "ref": "",
+                            "order": requirement_order,
+                        }
+                        first_requirement = lines[index][8:].strip()
+                        if first_requirement:
+                            req_kv = _parse_key_value(first_requirement)
                             if req_kv:
-                                req_data[req_kv[0]] = _parse_scalar(req_kv[1])
-                        idx += 1
-                        while idx < total and fm_lines[idx].startswith("        "):
-                            sub_line = fm_lines[idx][8:].strip()
-                            sub_kv = _parse_kv(sub_line) if sub_line else None
+                                req_key, req_value = req_kv
+                                scalar = _parse_scalar(req_value)
+                                if req_key == "tipo":
+                                    requirement_item["kind"] = scalar
+                                elif req_key == "ref":
+                                    requirement_item["ref"] = scalar
+                        index += 1
+
+                        while index < total and lines[index].startswith("        "):
+                            sub_line = lines[index][8:].strip()
+                            sub_kv = _parse_key_value(sub_line) if sub_line else None
                             if sub_kv:
-                                req_data[sub_kv[0]] = _parse_scalar(sub_kv[1])
-                            idx += 1
-                        if req_data.get("tipo") and req_data.get("ref"):
-                            slot_data["requisitos"].append(req_data)
-                            req_order += 1
+                                sub_key, sub_value = sub_kv
+                                scalar = _parse_scalar(sub_value)
+                                if sub_key == "tipo":
+                                    requirement_item["kind"] = scalar
+                                elif sub_key == "ref":
+                                    requirement_item["ref"] = scalar
+                            index += 1
+
+                        if requirement_item["kind"] and requirement_item["ref"]:
+                            slot_item["requirements"].append(requirement_item)
+                            requirement_order += 1
                     continue
-                field_kv = _parse_kv(field)
+
+                field_kv = _parse_key_value(field_line)
                 if field_kv:
-                    slot_data[field_kv[0]] = _parse_scalar(field_kv[1])
+                    field_key, field_value = field_kv
+                    scalar = _parse_scalar(field_value)
+                    if field_key == "slot":
+                        slot_item["slot_name"] = scalar
+                    elif field_key == "rol":
+                        slot_item["role"] = scalar
+                    elif field_key == "prompt":
+                        slot_item["prompt_text"] = scalar
                 else:
-                    warnings.append(f"Campo de imagen invalido: {field}")
-                idx += 1
-            slot_name = str(slot_data.get("slot", "")).strip()
-            if slot_name:
-                slot_data["rol"] = _normalize_role(str(slot_data.get("rol", "")))
-                slot_data["orden"] = slot_order
-                data["imagenes"].append(slot_data)
-                slot_order += 1
-            else:
-                warnings.append("Imagen sin slot en frontmatter de pagina.")
-        continue
-    return data, warnings
+                    warnings.append(f"Campo de imagen inválido: {field_line}")
+                index += 1
+
+            slot_name = str(slot_item.get("slot_name", "")).strip()
+            if not slot_name:
+                warnings.append("Imagen sin slot en frontmatter de página.")
+                continue
+
+            slot_item["slot_name"] = slot_name
+            slot_item["role"] = _normalize_role(str(slot_item.get("role", "")))
+            mapped["image_slots"].append(slot_item)
+            slot_order += 1
+
+    return mapped, warnings
 
 
-def _resolve_slot_image_rel(story_path_rel: str, page_num: int, slot: str) -> str:
-    story_abs = DATA_ROOT / story_path_rel
-    images_dir = story_abs / "assets" / "imagenes"
-    base_name = f"pagina-{page_num:03d}-{_slug_slot(slot)}"
-    for ext in IMAGE_EXTS:
+def _resolve_slot_image_rel_path(story_rel_path: str, page_number: int, slot_name: str) -> str:
+    story_dir = LIBRARY_ROOT / story_rel_path
+    images_dir = story_dir / "assets" / "imagenes"
+    base_name = f"pagina-{page_number:03d}-{_slot_slug(slot_name)}"
+
+    for ext in IMAGE_EXTENSIONS:
         candidate = images_dir / f"{base_name}{ext}"
         if candidate.exists():
-            return _to_rel_from_base(candidate)
-    fallback = images_dir / f"{base_name}.png"
-    return _to_rel_from_base(fallback)
+            return _to_project_rel_path(candidate)
+
+    return _to_project_rel_path(images_dir / f"{base_name}.png")
 
 
-def _story_is_leaf(story_dir: Path) -> bool:
-    meta = story_dir / "meta.md"
-    page_files = [p for p in story_dir.iterdir() if p.is_file() and PAGE_FILE_RE.fullmatch(p.name)]
-    return meta.exists() and bool(page_files)
-
-
-def load_story(story_path_rel: str) -> StoryData:
-    story_abs = DATA_ROOT / story_path_rel
+def load_story(story_rel_path: str) -> StoryData:
+    story_dir = LIBRARY_ROOT / story_rel_path
     story_warnings: list[str] = []
 
-    raw_meta = (story_abs / "meta.md").read_text(encoding="utf-8", errors="replace")
-    meta_fm_lines, meta_body, meta_split_warn = _split_frontmatter(raw_meta)
-    story_warnings.extend(meta_split_warn)
-    meta_fm, meta_parse_warn = _parse_meta_frontmatter(meta_fm_lines)
-    story_warnings.extend(meta_parse_warn)
+    raw_meta = (story_dir / "meta.md").read_text(encoding="utf-8", errors="replace")
+    meta_lines, meta_body, split_warnings = _split_frontmatter(raw_meta)
+    story_warnings.extend(split_warnings)
 
-    meta = StoryMeta(
-        titulo=str(meta_fm.get("titulo", story_abs.name)),
-        slug=str(meta_fm.get("slug", story_abs.name)),
-        prompt_portada=str(meta_fm.get("prompt_portada", "")),
-        prompt_contraportada=str(meta_fm.get("prompt_contraportada", "")),
-        estado=str(meta_fm.get("estado", "activo")),
-        notas=meta_body.strip(),
-        raw_frontmatter_json=json.dumps(meta_fm, ensure_ascii=False),
+    meta_data, meta_warnings = _parse_meta_frontmatter(meta_lines)
+    story_warnings.extend(meta_warnings)
+
+    story_meta = StoryMeta(
+        title=meta_data["title"] or story_dir.name,
+        slug=meta_data["slug"] or story_dir.name,
+        cover_prompt=meta_data["cover_prompt"],
+        back_cover_prompt=meta_data["back_cover_prompt"],
+        status=meta_data["status"] or "activo",
+        notes=meta_body.strip(),
+        raw_frontmatter_json=json.dumps(meta_data, ensure_ascii=False),
     )
 
     pages: list[StoryPage] = []
-    for page_file in sorted(story_abs.iterdir(), key=lambda p: p.name):
+    for page_file in sorted(story_dir.iterdir(), key=lambda item: item.name):
         if not page_file.is_file():
             continue
-        m = PAGE_FILE_RE.fullmatch(page_file.name)
-        if not m:
+        match = PAGE_FILE_PATTERN.fullmatch(page_file.name)
+        if not match:
             continue
-        file_num = int(m.group(1))
+
+        file_page_number = int(match.group(1))
         raw_page = page_file.read_text(encoding="utf-8", errors="replace")
-        fm_lines, body, page_split_warn = _split_frontmatter(raw_page)
-        page_frontmatter, page_parse_warn = _parse_page_frontmatter(fm_lines)
-        page_warnings = list(page_split_warn) + list(page_parse_warn)
-        page_num = file_num
-        try:
-            fm_num = int(str(page_frontmatter.get("pagina", "")).strip())
-            if fm_num > 0 and fm_num != file_num:
+        page_lines, page_body, page_split_warnings = _split_frontmatter(raw_page)
+        page_frontmatter, page_parse_warnings = _parse_page_frontmatter(page_lines)
+
+        page_warnings = list(page_split_warnings) + list(page_parse_warnings)
+        declared_raw = str(page_frontmatter.get("page_number", "")).strip()
+        if declared_raw:
+            try:
+                declared_page_number = int(declared_raw)
+                if declared_page_number > 0 and declared_page_number != file_page_number:
+                    page_warnings.append(
+                        (
+                            "La página declarada "
+                            f"{declared_page_number} no coincide con el archivo "
+                            f"{file_page_number:03d}; se usa {file_page_number:03d}."
+                        )
+                    )
+            except ValueError:
                 page_warnings.append(
-                    f"Pagina declarada {fm_num} no coincide con archivo {file_num:03d}. Se usa {file_num:03d}."
+                    f"Valor de página inválido en frontmatter: '{declared_raw}'."
                 )
-        except ValueError:
-            pass
 
         slots: list[ImageSlotSpec] = []
-        for item in page_frontmatter.get("imagenes", []):
-            reqs = [
-                RequirementSpec(
-                    tipo=str(req.get("tipo", "")).strip(),
-                    ref=str(req.get("ref", "")).strip(),
-                    orden=int(req.get("orden", 0)),
-                )
-                for req in item.get("requisitos", [])
-                if str(req.get("tipo", "")).strip() and str(req.get("ref", "")).strip()
-            ]
-            slot_name = str(item.get("slot", "")).strip()
+        for slot_item in page_frontmatter.get("image_slots", []):
+            slot_name = str(slot_item.get("slot_name", "")).strip()
             if not slot_name:
                 continue
+
+            requirements: list[RequirementSpec] = []
+            for requirement in slot_item.get("requirements", []):
+                kind = str(requirement.get("kind", "")).strip()
+                ref = str(requirement.get("ref", "")).strip()
+                if not kind or not ref:
+                    continue
+                requirements.append(
+                    RequirementSpec(
+                        kind=kind,
+                        ref=ref,
+                        order=int(requirement.get("order", 0)),
+                    )
+                )
+
             slots.append(
                 ImageSlotSpec(
-                    slot=slot_name,
-                    rol=_normalize_role(str(item.get("rol", ""))),
-                    prompt=str(item.get("prompt", "")),
-                    requisitos=reqs,
-                    orden=int(item.get("orden", 0)),
-                    image_rel_path=_resolve_slot_image_rel(story_path_rel, page_num, slot_name),
+                    slot_name=slot_name,
+                    role=_normalize_role(str(slot_item.get("role", ""))),
+                    prompt_text=str(slot_item.get("prompt_text", "")),
+                    requirements=requirements,
+                    display_order=int(slot_item.get("display_order", 0)),
+                    image_rel_path=_resolve_slot_image_rel_path(
+                        story_rel_path,
+                        file_page_number,
+                        slot_name,
+                    ),
                 )
             )
 
         pages.append(
             StoryPage(
-                numero=page_num,
-                file_rel=_to_rel_from_base(page_file),
-                contenido=body.strip(),
+                page_number=file_page_number,
+                file_rel_path=_to_project_rel_path(page_file),
+                content=page_body.strip(),
                 raw_frontmatter_json=json.dumps(page_frontmatter, ensure_ascii=False),
                 image_slots=slots,
                 warnings=page_warnings,
             )
         )
 
+    pages.sort(key=lambda item: item.page_number)
     return StoryData(
-        story_path_rel=story_path_rel,
-        meta_file_rel=_to_rel_from_base(story_abs / "meta.md"),
-        meta=meta,
-        pages=sorted(pages, key=lambda p: p.numero),
+        story_rel_path=story_rel_path,
+        meta_rel_path=_to_project_rel_path(story_dir / "meta.md"),
+        meta=story_meta,
+        pages=pages,
         warnings=story_warnings,
     )
 
 
 def scan_library() -> LibrarySnapshot:
-    root = DATA_ROOT.resolve()
+    root = LIBRARY_ROOT.resolve()
     nodes: list[NodeData] = []
     stories: list[StoryData] = []
     warnings: list[str] = []
 
-    for dirpath, dirnames, filenames in os.walk(root):
-        dirnames.sort()
-        filenames.sort()
-        path = Path(dirpath)
-        rel = path.relative_to(root).as_posix()
+    for dir_path, dir_names, file_names in os.walk(root):
+        dir_names.sort()
+        file_names.sort()
+
+        absolute_dir = Path(dir_path)
+        rel = absolute_dir.relative_to(root).as_posix()
         rel = "" if rel == "." else rel
-        parent = Path(rel).parent.as_posix() if rel else None
-        if parent == ".":
-            parent = ""
-        is_leaf = ("meta.md" in filenames) and any(PAGE_FILE_RE.fullmatch(name) for name in filenames)
+
+        parent_rel = Path(rel).parent.as_posix() if rel else None
+        if parent_rel == ".":
+            parent_rel = ""
+
+        is_story_leaf = (
+            "meta.md" in file_names
+            and any(PAGE_FILE_PATTERN.fullmatch(file_name) for file_name in file_names)
+        )
+
         nodes.append(
             NodeData(
                 path_rel=rel,
-                parent_path_rel=parent,
-                nombre=path.name if rel else "biblioteca",
-                is_story_leaf=is_leaf,
+                parent_path_rel=parent_rel,
+                name=absolute_dir.name if rel else "biblioteca",
+                is_story_leaf=is_story_leaf,
             )
         )
-        if is_leaf:
+
+        if is_story_leaf:
             story = load_story(rel)
-            warnings.extend(f"[{rel}] {w}" for w in story.warnings)
-            for page in story.pages:
-                warnings.extend(f"[{rel}/{page.numero:03d}] {w}" for w in page.warnings)
             stories.append(story)
+            warnings.extend(f"[{rel}] {item}" for item in story.warnings)
+            for page in story.pages:
+                warnings.extend(
+                    f"[{rel}/{page.page_number:03d}] {item}" for item in page.warnings
+                )
 
     assets: list[AssetInfo] = []
-    for file_path in relevant_files(root):
+    for file_path in list_relevant_files(root):
         stat = file_path.stat()
-        rel = _to_rel_from_base(file_path)
         ext = file_path.suffix.lower()
         kind = "other"
         if ext == ".md":
             kind = "md"
         elif ext == ".pdf":
             kind = "pdf"
-        elif ext in IMAGE_EXTS:
+        elif ext in IMAGE_EXTENSIONS:
             kind = "image"
         elif ext == ".json":
             kind = "json"
+
         assets.append(
             AssetInfo(
-                rel_path=rel,
+                rel_path=_to_project_rel_path(file_path),
                 kind=kind,
-                size=stat.st_size,
-                mtime_ns=stat.st_mtime_ns,
-                exists=True,
+                size=int(stat.st_size),
+                mtime_ns=int(stat.st_mtime_ns),
+                is_present=True,
             )
         )
 
-    nodes.sort(key=lambda n: (n.path_rel.count("/"), n.path_rel))
-    stories.sort(key=lambda s: s.story_path_rel)
-    assets.sort(key=lambda a: a.rel_path)
+    nodes.sort(key=lambda item: (item.path_rel.count("/"), item.path_rel))
+    stories.sort(key=lambda item: item.story_rel_path)
+    assets.sort(key=lambda item: item.rel_path)
     return LibrarySnapshot(nodes=nodes, stories=stories, assets=assets, warnings=warnings)
 
 
-def resolve_requirement_paths(story_path_rel: str, ref_value: str) -> list[str]:
+def resolve_requirement_paths(story_rel_path: str, ref_value: str) -> list[str]:
     ref = ref_value.strip().replace("\\", "/")
     if not ref:
         return []
 
-    story_abs = (DATA_ROOT / story_path_rel).resolve()
+    story_dir = (LIBRARY_ROOT / story_rel_path).resolve()
     candidates: list[Path] = []
 
-    p_ref = Path(ref)
-    if p_ref.is_absolute():
-        candidates.append(p_ref)
+    ref_path = Path(ref)
+    if ref_path.is_absolute():
+        candidates.append(ref_path)
     else:
-        candidates.append((story_abs / ref).resolve())
-        candidates.append((DATA_ROOT / ref).resolve())
-        candidates.append((BASE_DIR / ref).resolve())
-        candidates.append((BASE_DIR / "biblioteca" / ref).resolve())
+        candidates.append((story_dir / ref).resolve())
+        candidates.append((LIBRARY_ROOT / ref).resolve())
+        candidates.append((ROOT_DIR / ref).resolve())
+        candidates.append((ROOT_DIR / "biblioteca" / ref).resolve())
 
-    root = BASE_DIR.resolve()
+    project_root = ROOT_DIR.resolve()
     resolved: list[str] = []
-    for cand in candidates:
-        if not cand.exists():
+    for candidate in candidates:
+        if not candidate.exists():
             continue
-        if cand.is_file():
-            if cand.suffix.lower() in IMAGE_EXTS and root in cand.parents:
-                rel = cand.relative_to(root).as_posix()
-                if rel not in resolved:
-                    resolved.append(rel)
+
+        if candidate.is_file():
+            if candidate.suffix.lower() in IMAGE_EXTENSIONS and project_root in candidate.parents:
+                rel_path = candidate.relative_to(project_root).as_posix()
+                if rel_path not in resolved:
+                    resolved.append(rel_path)
             continue
-        if cand.is_dir():
-            for item in sorted(cand.iterdir()):
-                if item.is_file() and item.suffix.lower() in IMAGE_EXTS and root in item.parents:
-                    rel = item.relative_to(root).as_posix()
-                    if rel not in resolved:
-                        resolved.append(rel)
+
+        if candidate.is_dir():
+            for item in sorted(candidate.iterdir()):
+                if not item.is_file():
+                    continue
+                if item.suffix.lower() not in IMAGE_EXTENSIONS:
+                    continue
+                if project_root not in item.parents:
+                    continue
+                rel_path = item.relative_to(project_root).as_posix()
+                if rel_path not in resolved:
+                    resolved.append(rel_path)
+
     return resolved

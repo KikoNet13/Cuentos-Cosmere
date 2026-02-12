@@ -5,9 +5,20 @@ import re
 from pathlib import Path
 from typing import Any
 
-from flask import Blueprint, abort, flash, g, jsonify, redirect, render_template, request, send_file, url_for
+from flask import (
+    Blueprint,
+    abort,
+    flash,
+    g,
+    jsonify,
+    redirect,
+    render_template,
+    request,
+    send_file,
+    url_for,
+)
 
-from .config import BASE_DIR, DATA_ROOT
+from .config import LIBRARY_ROOT, ROOT_DIR
 from .library_cache import (
     accept_live_fingerprint,
     cache_counts,
@@ -28,39 +39,39 @@ from .library_fs import resolve_requirement_paths
 
 web_bp = Blueprint("web", __name__)
 
-_SLOT_SLUG_RE = re.compile(r"[^a-z0-9-]+")
+SLOT_SLUG_PATTERN = re.compile(r"[^a-z0-9-]+")
 
 
-def _normalize_rel(path_rel: str) -> str:
+def _normalize_rel_path(path_rel: str) -> str:
     return path_rel.strip().replace("\\", "/").strip("/")
 
 
 def _slot_slug(slot_name: str) -> str:
-    normalized = _SLOT_SLUG_RE.sub("-", slot_name.strip().lower())
-    normalized = normalized.strip("-")
-    return normalized or "slot"
+    slug = SLOT_SLUG_PATTERN.sub("-", slot_name.strip().lower()).strip("-")
+    return slug or "slot"
 
 
-def _safe_next_url(raw: str | None, fallback: str) -> str:
-    value = (raw or "").strip()
+def _safe_next_url(raw_value: str | None, fallback_url: str) -> str:
+    value = (raw_value or "").strip()
     if not value.startswith("/") or value.startswith("//"):
-        return fallback
+        return fallback_url
     return value
 
 
-def _parse_int(raw: str | None, default: int) -> int:
+def _parse_positive_int(raw_value: str | None, default: int) -> int:
     try:
-        value = int(str(raw))
+        value = int(str(raw_value))
     except (TypeError, ValueError):
         return default
     return value if value > 0 else default
 
 
-def _breadcrumbs(path_rel: str) -> list[dict[str, str]]:
-    path_norm = _normalize_rel(path_rel)
-    if not path_norm:
+def _build_breadcrumbs(path_rel: str) -> list[dict[str, str]]:
+    normalized = _normalize_rel_path(path_rel)
+    if not normalized:
         return [{"name": "biblioteca", "path": ""}]
-    parts = [part for part in path_norm.split("/") if part]
+
+    parts = [part for part in normalized.split("/") if part]
     crumbs = [{"name": "biblioteca", "path": ""}]
     current: list[str] = []
     for part in parts:
@@ -69,62 +80,73 @@ def _breadcrumbs(path_rel: str) -> list[dict[str, str]]:
     return crumbs
 
 
-def _story_view_model(story_path_rel: str, selected_raw: str | None) -> dict[str, Any] | None:
-    story = get_story(story_path_rel)
+def _build_story_view_model(story_rel_path: str, selected_raw: str | None) -> dict[str, Any] | None:
+    story = get_story(story_rel_path)
     if not story:
         return None
 
-    pages = list_story_pages(story_path_rel)
-    page_numbers = [int(p["numero"]) for p in pages]
-    if page_numbers:
-        default_page = page_numbers[0]
-    else:
-        default_page = 1
-    selected_page = _parse_int(selected_raw, default_page)
-    if page_numbers and selected_page not in page_numbers:
-        selected_page = default_page
+    pages = list_story_pages(story_rel_path)
+    page_numbers = [int(page["page_number"]) for page in pages]
+    default_page_number = page_numbers[0] if page_numbers else 1
 
-    page = get_story_page(story_path_rel, selected_page) if page_numbers else None
+    selected_page_number = _parse_positive_int(selected_raw, default_page_number)
+    if page_numbers and selected_page_number not in page_numbers:
+        selected_page_number = default_page_number
+
+    page = get_story_page(story_rel_path, selected_page_number) if page_numbers else None
+
     slot_items: list[dict[str, Any]] = []
     if page:
-        for slot in list_page_slots(story_path_rel, selected_page):
-            rel_path = str(slot["image_rel_path"] or "")
-            image_abs = (BASE_DIR / rel_path).resolve() if rel_path else None
-            exists = bool(image_abs and image_abs.exists() and image_abs.is_file())
+        for slot in list_page_slots(story_rel_path, selected_page_number):
+            image_rel_path = str(slot["image_rel_path"] or "")
+            image_abs_path = (ROOT_DIR / image_rel_path).resolve() if image_rel_path else None
+            image_exists = bool(image_abs_path and image_abs_path.exists() and image_abs_path.is_file())
 
-            req_items = []
-            for req in list_slot_requirements(story_path_rel, selected_page, str(slot["slot"])):
-                refs: list[dict[str, Any]] = []
-                for rel in resolve_requirement_paths(story_path_rel, str(req["ref"])):
+            requirement_items: list[dict[str, Any]] = []
+            for requirement in list_slot_requirements(
+                story_rel_path,
+                selected_page_number,
+                str(slot["slot_name"]),
+            ):
+                resolved_refs: list[dict[str, Any]] = []
+                for rel in resolve_requirement_paths(
+                    story_rel_path,
+                    str(requirement["ref_value"]),
+                ):
                     rel_norm = rel.replace("\\", "/")
-                    abs_file = (BASE_DIR / rel_norm).resolve()
-                    refs.append(
+                    abs_file = (ROOT_DIR / rel_norm).resolve()
+                    resolved_refs.append(
                         {
                             "rel_path": rel_norm,
                             "exists": abs_file.exists() and abs_file.is_file(),
                             "url": url_for("web.media_file", rel_path=rel_norm),
                         }
                     )
-                req_items.append(
+
+                requirement_items.append(
                     {
-                        "id": int(req["id"]),
-                        "tipo": str(req["tipo"]),
-                        "ref": str(req["ref"]),
-                        "orden": int(req["orden"]),
-                        "refs": refs,
+                        "id": int(requirement["id"]),
+                        "kind": str(requirement["requirement_kind"]),
+                        "ref": str(requirement["ref_value"]),
+                        "display_order": int(requirement["display_order"]),
+                        "refs": resolved_refs,
                     }
                 )
 
             slot_items.append(
                 {
-                    "slot": str(slot["slot"]),
-                    "rol": str(slot["rol"]),
-                    "prompt": str(slot["prompt"]),
-                    "orden": int(slot["orden"]),
-                    "image_rel_path": rel_path,
-                    "image_exists": exists,
-                    "image_url": url_for("web.media_file", rel_path=rel_path) if rel_path else "",
-                    "requirements": req_items,
+                    "slot_name": str(slot["slot_name"]),
+                    "role": str(slot["role"]),
+                    "prompt_text": str(slot["prompt_text"]),
+                    "display_order": int(slot["display_order"]),
+                    "image_rel_path": image_rel_path,
+                    "image_exists": image_exists,
+                    "image_url": (
+                        url_for("web.media_file", rel_path=image_rel_path)
+                        if image_rel_path
+                        else ""
+                    ),
+                    "requirements": requirement_items,
                 }
             )
 
@@ -132,25 +154,25 @@ def _story_view_model(story_path_rel: str, selected_raw: str | None) -> dict[str
     if page_numbers:
         max_page = max(page_numbers)
         present = set(page_numbers)
-        missing_pages = [num for num in range(1, max_page + 1) if num not in present]
+        missing_pages = [value for value in range(1, max_page + 1) if value not in present]
 
     prev_page = None
     next_page = None
-    if page_numbers and selected_page in page_numbers:
-        idx = page_numbers.index(selected_page)
-        prev_page = page_numbers[idx - 1] if idx > 0 else None
-        next_page = page_numbers[idx + 1] if idx + 1 < len(page_numbers) else None
+    if page_numbers and selected_page_number in page_numbers:
+        index = page_numbers.index(selected_page_number)
+        prev_page = page_numbers[index - 1] if index > 0 else None
+        next_page = page_numbers[index + 1] if index + 1 < len(page_numbers) else None
 
     return {
         "story": story,
         "page_numbers": page_numbers,
-        "selected_page": selected_page,
+        "selected_page": selected_page_number,
         "page": page,
         "prev_page": prev_page,
         "next_page": next_page,
         "missing_pages": missing_pages,
         "slots": slot_items,
-        "breadcrumbs": _breadcrumbs(story_path_rel),
+        "breadcrumbs": _build_breadcrumbs(story_rel_path),
     }
 
 
@@ -163,7 +185,7 @@ def _extract_image_bytes() -> tuple[bytes | None, str | None]:
 
     pasted = request.form.get("pasted_image_data", "").strip()
     if not pasted:
-        return None, "No se recibió imagen."
+        return None, "No se recibió ninguna imagen."
 
     if pasted.startswith("data:"):
         if "," not in pasted:
@@ -173,35 +195,42 @@ def _extract_image_bytes() -> tuple[bytes | None, str | None]:
         encoded = pasted
 
     try:
-        data = base64.b64decode(encoded, validate=True)
-    except (ValueError, TypeError):
+        decoded = base64.b64decode(encoded, validate=True)
+    except (TypeError, ValueError):
         return None, "No se pudo decodificar la imagen pegada."
-    if not data:
+
+    if not decoded:
         return None, "La imagen pegada está vacía."
-    return data, None
+    return decoded, None
 
 
-def _ensure_slot_path(story_path_rel: str, page_num: int, slot_name: str, slot_rel_path: str) -> str:
-    rel = slot_rel_path.strip().replace("\\", "/")
+def _resolve_slot_target_path(
+    story_rel_path: str,
+    page_number: int,
+    slot_name: str,
+    cached_rel_path: str,
+) -> str:
+    rel = cached_rel_path.strip().replace("\\", "/")
     if rel:
         return rel
+
     slot_slug = _slot_slug(slot_name)
-    story = _normalize_rel(story_path_rel)
-    return f"biblioteca/{story}/assets/imagenes/pagina-{page_num:03d}-{slot_slug}.png"
+    story = _normalize_rel_path(story_rel_path)
+    return f"biblioteca/{story}/assets/imagenes/pagina-{page_number:03d}-{slot_slug}.png"
 
 
 @web_bp.before_app_request
-def prepare_cache_state() -> None:
+def _prepare_cache_state() -> None:
     if request.endpoint and request.endpoint.startswith("web."):
-        g.cache_status = ensure_cache_ready()
+        g.cache_state = ensure_cache_ready()
 
 
 @web_bp.app_context_processor
-def inject_cache_state() -> dict[str, Any]:
-    status = getattr(g, "cache_status", None)
-    if status is None:
-        status = refresh_stale_flag()
-    return {"cache_status": status}
+def _inject_cache_state() -> dict[str, Any]:
+    state = getattr(g, "cache_state", None)
+    if state is None:
+        state = refresh_stale_flag()
+    return {"cache_status": state}
 
 
 @web_bp.get("/")
@@ -220,36 +249,38 @@ def dashboard():
 
 @web_bp.get("/n/<path:node_path>")
 def node_detail(node_path: str):
-    normalized = _normalize_rel(node_path)
+    normalized = _normalize_rel_path(node_path)
     node = get_node(normalized)
     if not node:
         abort(404)
+
     if bool(node["is_story_leaf"]):
         return redirect(url_for("web.story_detail", story_path=normalized))
 
     children = list_children(normalized)
     return render_template(
         "node.html",
-        node_name=str(node["nombre"]),
+        node_name=str(node["name"]),
         node_path=normalized,
-        breadcrumbs=_breadcrumbs(normalized),
+        breadcrumbs=_build_breadcrumbs(normalized),
         children=children,
     )
 
 
 @web_bp.get("/story/<path:story_path>")
 def story_detail(story_path: str):
-    story_path_rel = _normalize_rel(story_path)
-    vm = _story_view_model(story_path_rel, request.args.get("p"))
-    if not vm:
+    story_rel_path = _normalize_rel_path(story_path)
+    view_model = _build_story_view_model(story_rel_path, request.args.get("p"))
+    if not view_model:
         abort(404)
-    return render_template("cuento.html", **vm)
+    return render_template("cuento.html", **view_model)
 
 
 @web_bp.post("/cache/refresh")
 def cache_refresh():
     stats = rebuild_cache()
-    g.cache_status = refresh_stale_flag()
+    g.cache_state = refresh_stale_flag()
+
     flash(
         (
             "Caché actualizada. "
@@ -259,70 +290,83 @@ def cache_refresh():
         ),
         "success",
     )
-    if stats["warnings"]:
+    if stats.get("warnings"):
         flash(f"Avisos de escaneo: {len(stats['warnings'])}", "error")
+
     fallback = url_for("web.dashboard")
     return redirect(_safe_next_url(request.form.get("next"), fallback))
 
 
 @web_bp.get("/cache/status")
 def cache_status():
-    status = refresh_stale_flag()
+    state = refresh_stale_flag()
     payload = {
-        "stale": bool(status.get("stale", True)),
-        "has_cache": bool(status.get("has_cache", False)),
-        "last_refresh_at": status.get("last_refresh_at", ""),
-        "scanned_files": int(status.get("scanned_files", 0)),
-        "live_scanned_files": int(status.get("live_scanned_files", 0)),
+        "stale": bool(state.get("stale", True)),
+        "has_cache": bool(state.get("has_cache", False)),
+        "last_refresh_at": state.get("last_refresh_at", ""),
+        "scanned_files": int(state.get("scanned_files", 0)),
+        "live_scanned_files": int(state.get("live_scanned_files", 0)),
+        "cache_backend": state.get("cache_backend", ""),
     }
     return jsonify(payload)
 
 
-@web_bp.post("/story/<path:story_path>/page/<int:page_num>/slot/<slot_name>/upload")
-def upload_slot_image(story_path: str, page_num: int, slot_name: str):
-    story_path_rel = _normalize_rel(story_path)
-    status = refresh_stale_flag()
-    if status.get("stale", True):
-        flash("La caché está desactualizada. Actualiza caché antes de guardar imágenes.", "error")
-        return redirect(url_for("web.story_detail", story_path=story_path_rel, p=page_num))
+@web_bp.post("/story/<path:story_path>/page/<int:page_number>/slot/<slot_name>/upload")
+def upload_slot_image(story_path: str, page_number: int, slot_name: str):
+    story_rel_path = _normalize_rel_path(story_path)
+    state = refresh_stale_flag()
+    if state.get("stale", True):
+        flash("La caché está desactualizada. Actualiza la caché antes de guardar imágenes.", "error")
+        return redirect(url_for("web.story_detail", story_path=story_rel_path, p=page_number))
 
-    story = get_story(story_path_rel)
+    story = get_story(story_rel_path)
     if not story:
         abort(404)
-    page = get_story_page(story_path_rel, page_num)
+
+    page = get_story_page(story_rel_path, page_number)
     if not page:
         abort(404)
-    slot = get_page_slot(story_path_rel, page_num, slot_name)
+
+    slot = get_page_slot(story_rel_path, page_number, slot_name)
     if not slot:
         abort(404)
 
-    data, error = _extract_image_bytes()
+    image_bytes, error = _extract_image_bytes()
     if error:
         flash(error, "error")
-        return redirect(url_for("web.story_detail", story_path=story_path_rel, p=page_num))
+        return redirect(url_for("web.story_detail", story_path=story_rel_path, p=page_number))
 
-    target_rel = _ensure_slot_path(story_path_rel, page_num, slot_name, str(slot["image_rel_path"] or ""))
-    target_abs = (BASE_DIR / target_rel).resolve()
-    base_abs = BASE_DIR.resolve()
-    if base_abs not in target_abs.parents:
+    target_rel_path = _resolve_slot_target_path(
+        story_rel_path=story_rel_path,
+        page_number=page_number,
+        slot_name=slot_name,
+        cached_rel_path=str(slot["image_rel_path"] or ""),
+    )
+    target_abs_path = (ROOT_DIR / target_rel_path).resolve()
+
+    root_abs_path = ROOT_DIR.resolve()
+    if root_abs_path not in target_abs_path.parents:
         abort(403)
 
-    target_abs.parent.mkdir(parents=True, exist_ok=True)
-    target_abs.write_bytes(data)
-    upsert_asset_index(target_rel)
+    target_abs_path.parent.mkdir(parents=True, exist_ok=True)
+    target_abs_path.write_bytes(image_bytes or b"")
+
+    upsert_asset_index(target_rel_path)
     accept_live_fingerprint()
 
-    flash(f"Imagen guardada en {target_rel}", "success")
-    return redirect(url_for("web.story_detail", story_path=story_path_rel, p=page_num))
+    flash(f"Imagen guardada en {target_rel_path}", "success")
+    return redirect(url_for("web.story_detail", story_path=story_rel_path, p=page_number))
 
 
 @web_bp.get("/media/<path:rel_path>")
 def media_file(rel_path: str):
-    rel = rel_path.strip().replace("\\", "/")
-    target = (BASE_DIR / rel).resolve()
-    base = BASE_DIR.resolve()
-    if base not in target.parents and target != base:
+    normalized = rel_path.strip().replace("\\", "/")
+    target = (ROOT_DIR / normalized).resolve()
+
+    root_abs = ROOT_DIR.resolve()
+    if root_abs not in target.parents and target != root_abs:
         abort(403)
+
     if not target.exists() or not target.is_file():
         abort(404)
     return send_file(target)
@@ -330,6 +374,10 @@ def media_file(rel_path: str):
 
 @web_bp.get("/health")
 def healthcheck():
-    root_ok = DATA_ROOT.exists()
-    cache_ok = Path(BASE_DIR / "db" / "library_cache.sqlite").exists()
-    return jsonify({"ok": root_ok, "data_root": str(DATA_ROOT), "cache_exists": cache_ok})
+    return jsonify(
+        {
+            "ok": LIBRARY_ROOT.exists(),
+            "library_root": str(LIBRARY_ROOT),
+            "cache_db": str((ROOT_DIR / "db" / "library_cache.sqlite")),
+        }
+    )

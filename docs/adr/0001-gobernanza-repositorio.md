@@ -5,20 +5,20 @@
 
 ## Contexto
 
-El proyecto es personal, pero requiere disciplina operativa profesional.
-Las notas sueltas y el flujo ad hoc dificultan mantenimiento y trazabilidad.
+El proyecto es personal, pero requiere disciplina operativa para mantener
+calidad, repetibilidad y trazabilidad.
 
 ## Decisión
 
 Adoptar una base de gobernanza con:
 
-- `AGENTS.md` como contrato de ejecución
-- archivos de tarea en `docs/tasks/`
-- `CHANGELOG.md` breve con enlace a tareas
-- un commit por tarea planificada sobre `main`
+- `AGENTS.md` como contrato operativo.
+- registro de tareas por archivo en `docs/tasks/`.
+- `CHANGELOG.md` breve enlazado a tareas.
+- un commit por tarea planificada sobre `main`.
 
 ## Consecuencias
 
-- Mejora la trazabilidad y la repetibilidad.
+- Mejora trazabilidad y mantenimiento.
 - Aumenta el coste mínimo de documentación por tarea.
-- Fortalece el mantenimiento a largo plazo.
+- Reduce ambigüedad operativa en cambios futuros.

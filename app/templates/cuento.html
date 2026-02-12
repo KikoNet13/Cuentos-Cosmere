@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{{ story.titulo }}{% endblock %}
+{% block title %}{{ story.title }}{% endblock %}
 {% block content %}
 <nav class="breadcrumbs">
   {% for crumb in breadcrumbs %}
@@ -13,15 +13,17 @@
 </nav>
 
 <section class="panel">
-  <h1>{{ story.titulo }}</h1>
-  <p class="muted">Ruta del cuento: <code>{{ story.story_path_rel }}</code></p>
-  <p class="muted">Estado: {{ story.estado }}</p>
+  <h1>{{ story.title }}</h1>
+  <p class="muted">Ruta del cuento: <code>{{ story.story_rel_path }}</code></p>
+  <p class="muted">Estado: {{ story.status }}</p>
+
   {% if page_numbers %}
     <div class="row gap center wrap">
       {% if prev_page %}
-        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_path_rel, p=prev_page) }}">&larr; Página {{ prev_page }}</a>
+        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=prev_page) }}">&larr; Página {{ prev_page }}</a>
       {% endif %}
-      <form method="get" action="{{ url_for('web.story_detail', story_path=story.story_path_rel) }}" class="inline-form">
+
+      <form method="get" action="{{ url_for('web.story_detail', story_path=story.story_rel_path) }}" class="inline-form">
         <label>Página
           <select name="p" onchange="this.form.submit()">
             {% for num in page_numbers %}
@@ -30,8 +32,9 @@
           </select>
         </label>
       </form>
+
       {% if next_page %}
-        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_path_rel, p=next_page) }}">Página {{ next_page }} &rarr;</a>
+        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=next_page) }}">Página {{ next_page }} &rarr;</a>
       {% endif %}
     </div>
   {% else %}
@@ -45,8 +48,8 @@
 
 {% if page %}
 <section class="panel">
-  <h2>Texto de página {{ page.numero }}</h2>
-  <pre id="page-text">{{ page.contenido }}</pre>
+  <h2>Texto de página {{ page.page_number }}</h2>
+  <pre id="page-text">{{ page.content }}</pre>
   <div class="row gap top-gap">
     <button type="button" onclick="copyTextFromElement('page-text','copy-page-text')">Copiar texto</button>
     <span id="copy-page-text" class="copy-feedback"></span>
@@ -54,24 +57,26 @@
 </section>
 
 <section class="panel">
-  <h2>Prompts e imágenes de página {{ page.numero }}</h2>
+  <h2>Prompts e imágenes de página {{ page.page_number }}</h2>
   {% if slots %}
     <div class="cards">
-      {% for item in slots %}
+      {% for slot in slots %}
         <article class="card">
           <div class="card-head">
             <div>
-              <strong>Slot: {{ item.slot }}</strong>
-              <span class="chip">{{ item.rol }}</span>
+              <strong>Slot: {{ slot.slot_name }}</strong>
+              <span class="chip">{{ slot.role }}</span>
             </div>
-            <small class="muted">Orden {{ item.orden }}</small>
+            <small class="muted">Orden {{ slot.display_order }}</small>
           </div>
+
           <div class="card-body">
-            <p><strong>Ruta de imagen:</strong> <code>{{ item.image_rel_path }}</code></p>
-            {% if item.image_exists %}
-              <img src="{{ item.image_url }}" alt="{{ item.slot }}">
+            <p><strong>Ruta de imagen:</strong> <code>{{ slot.image_rel_path }}</code></p>
+
+            {% if slot.image_exists %}
+              <img src="{{ slot.image_url }}" alt="{{ slot.slot_name }}">
               <div class="row gap wrap">
-                <button type="button" onclick="copyImageFromUrl('{{ item.image_url }}','copy-slot-image-{{ loop.index }}')">Copiar imagen al portapapeles</button>
+                <button type="button" onclick="copyImageFromUrl('{{ slot.image_url }}','copy-slot-image-{{ loop.index }}')">Copiar imagen al portapapeles</button>
                 <span id="copy-slot-image-{{ loop.index }}" class="copy-feedback"></span>
               </div>
             {% else %}
@@ -79,25 +84,26 @@
             {% endif %}
 
             <h4>Prompt</h4>
-            <pre id="prompt-{{ loop.index }}">{{ item.prompt }}</pre>
+            <pre id="prompt-{{ loop.index }}">{{ slot.prompt_text }}</pre>
             <div class="row gap top-gap wrap">
               <button type="button" onclick="copyTextFromElement('prompt-{{ loop.index }}','copy-prompt-{{ loop.index }}')">Copiar prompt</button>
               <span id="copy-prompt-{{ loop.index }}" class="copy-feedback"></span>
             </div>
 
             <h4>Requisitos</h4>
-            {% if item.requirements %}
-              {% for req in item.requirements %}
+            {% if slot.requirements %}
+              {% for req in slot.requirements %}
                 <div class="item-card">
-                  <p><strong>{{ req.tipo }}</strong> <code>{{ req.ref }}</code></p>
+                  <p><strong>{{ req.kind }}</strong> <code>{{ req.ref }}</code></p>
+
                   {% if req.refs %}
                     {% for ref in req.refs %}
                       <p><code>{{ ref.rel_path }}</code></p>
                       {% if ref.exists %}
                         <img src="{{ ref.url }}" alt="{{ ref.rel_path }}">
                         <div class="row gap wrap">
-                          <button type="button" onclick="copyImageFromUrl('{{ ref.url }}','copy-req-{{ loop.index0 }}-{{ loop.index }}')">Copiar imagen</button>
-                          <span id="copy-req-{{ loop.index0 }}-{{ loop.index }}" class="copy-feedback"></span>
+                          <button type="button" onclick="copyImageFromUrl('{{ ref.url }}','copy-req-{{ loop.index }}-{{ loop.index0 }}')">Copiar imagen</button>
+                          <span id="copy-req-{{ loop.index }}-{{ loop.index0 }}" class="copy-feedback"></span>
                         </div>
                       {% else %}
                         <p class="warn">Referencia no encontrada en disco.</p>
@@ -113,8 +119,10 @@
             {% endif %}
 
             <h4>Guardar imagen generada</h4>
-            <form method="post" action="{{ url_for('web.upload_slot_image', story_path=story.story_path_rel, page_num=page.numero, slot_name=item.slot) }}" enctype="multipart/form-data" class="form-grid">
-              <label>Subir archivo<input type="file" name="image_file" accept="image/png,image/jpeg,image/webp"></label>
+            <form method="post" action="{{ url_for('web.upload_slot_image', story_path=story.story_rel_path, page_number=page.page_number, slot_name=slot.slot_name) }}" enctype="multipart/form-data" class="form-grid">
+              <label>Subir archivo
+                <input type="file" name="image_file" accept="image/png,image/jpeg,image/webp">
+              </label>
               <label class="full">Pegar desde portapapeles
                 <div class="row gap wrap">
                   <button type="button" class="secondary" onclick="pasteImageToHidden('pasted-{{ loop.index }}','paste-feedback-{{ loop.index }}')">Pegar imagen</button>
@@ -122,9 +130,11 @@
                 </div>
               </label>
               <input id="pasted-{{ loop.index }}" type="hidden" name="pasted_image_data" value="">
+
               {% if cache_status and cache_status.stale %}
-                <p class="warn full">Primero actualiza caché para habilitar guardado.</p>
+                <p class="warn full">Primero actualiza caché para habilitar el guardado.</p>
               {% endif %}
+
               <button type="submit" {% if cache_status and cache_status.stale %}disabled{% endif %}>Guardar imagen del slot</button>
             </form>
           </div>

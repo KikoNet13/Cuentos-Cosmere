@@ -9,7 +9,7 @@ Describir problema, alcance y restricciones.
 
 ## Decisión
 
-Describir la opción elegida y por qué.
+Describir la opción elegida y su justificación.
 
 ## Consecuencias
 

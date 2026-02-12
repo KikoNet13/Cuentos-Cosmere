@@ -5,22 +5,21 @@
 
 ## Contexto
 
-Los cuentos requieren una estructura estable para texto por página,
-referencias versionables y generación de imágenes con trazabilidad.
+El sistema necesita un contrato estable para narrativa por página, prompts de
+imagen y referencias visuales con trazabilidad.
 
-## Decision
+## Decisión
 
-Adoptar el contrato v3:
+Adoptar el contrato canónico de archivos:
 
-- La narrativa se organiza por página (`NNN.md`) en `biblioteca/`.
-- La referencia semántica puede modelarse con anclas/versiones de apoyo.
-- La generación visual se define por slots de imagen por página.
-- El refresco operativo usa caché temporal (`rebuild-cache`).
-- El respaldo legacy de visuales sigue disponible para transición.
+- narrativa y prompts en `biblioteca/`.
+- cuento canónico: `meta.md` + páginas `NNN.md`.
+- frontmatter en castellano para contenido (`pagina`, `imagenes`, `requisitos`).
+- referencia PDF canónica: `referencia.pdf`.
+- reconstrucción de caché con `python manage.py rebuild-cache`.
 
 ## Consecuencias
 
-- Se elimina el dominio activo legacy `Prompt` + `ImagenPrompt`.
-- La UI se centra en navegación por página e imágenes asociadas.
-- Se conserva compatibilidad operativa con alias de comandos legacy
-  marcados como deprecados.
+- Se simplifica edición manual del contenido.
+- Se elimina dependencia de modelos relacionales como fuente de verdad.
+- El flujo operativo depende de migración de layout y refresco de caché.

@@ -5,8 +5,8 @@
 
 ## Contexto
 
-La aplicación usa SQLite local para estado de ejecución.
-Ese estado depende del entorno y no debe contaminar el historial Git.
+SQLite se usa localmente para estado temporal. Ese estado depende del entorno
+y no debe versionarse en Git.
 
 ## Decisión
 
@@ -20,4 +20,4 @@ Mantener SQLite en `db/` y excluir de versionado:
 
 - El repositorio se mantiene limpio y portable.
 - El estado local no queda preservado por Git.
-- Los respaldos y exportaciones pasan a ser obligatorios.
+- Los respaldos de datos deben gestionarse fuera de SQLite.

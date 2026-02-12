@@ -1,16 +1,16 @@
 # Índice de contexto
 
-## Objetivo
+## Alcance vigente
 
-Contexto mínimo vigente para producir cuentos e imágenes.
+`docs/context/` queda mínimo y solo documenta dónde vive el contexto canónico.
 
-## Archivos activos
+## Contexto canónico
 
-- `docs/context/prompts_imagenes_master_era1.md`
-- `docs/context/canon_cuento_objetivo_16_paginas.md`
+1. Guías de anclas por saga: `biblioteca/<saga>/anclas.md`.
+2. Prompt y narrativa por página: `biblioteca/.../<cuento>/NNN.md`.
+3. Referencias visuales editoriales: `docs/assets/style_refs/`.
 
-## Notas clave
+## Nota
 
-- La estructura técnica depende del archivo canónico importado.
-- El perfil editorial de 16 páginas es recomendado, no obligatorio.
-- La fuente de verdad es `biblioteca/`.
+No se mantienen documentos de prompts o canon editorial redundantes en
+`docs/context/`.

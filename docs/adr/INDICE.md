@@ -1,16 +1,15 @@
 # Índice ADR
 
-Los Registros de Decisiones Arquitectónicas documentan decisiones técnicas de
-larga duración.
+Los ADR registran decisiones arquitectónicas de largo plazo.
 
 ## Cuándo crear un ADR
 
-Crear ADR solo para decisiones arquitectónicas, por ejemplo:
+Crear ADR solo para decisiones estructurales, por ejemplo:
 
-- gobernanza y contratos de proceso
-- política de persistencia y ubicación de datos
-- contratos de importación y respaldo
-- cambios estructurales de largo plazo
+- gobernanza y trazabilidad del repositorio
+- política de persistencia y caché
+- contrato de datos y migraciones de layout
+- cambios de arquitectura con impacto transversal
 
 ## Estados permitidos
 

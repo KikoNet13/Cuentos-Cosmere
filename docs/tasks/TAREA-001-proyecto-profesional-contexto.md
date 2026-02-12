@@ -2,66 +2,53 @@
 
 ## Metadatos
 
-- ID de tarea: TAREA-001-proyecto-profesional-contexto
+- ID de tarea: `TAREA-001-proyecto-profesional-contexto`
 - Fecha: 12/02/26 11:05
 - Estado: cerrada
 - Responsable: local
-- ADR relacionadas: 0001, 0002, 0003
+- ADR relacionadas: `0001`, `0002`, `0003`
 
 ## Objetivo
 
 Formalizar gobernanza del repositorio y trazabilidad escalable con
-`AGENTS.md`, ADR, tareas por archivo, registro breve de cambios y
-curación de contexto.
+`AGENTS.md`, ADR y tareas por archivo.
 
 ## Contexto
 
-El repositorio tenía código y datos de ejecución, pero faltaban:
-
-- contrato operativo en raíz
-- decisiones arquitectónicas registradas
-- estructura escalable de tareas
-- base Git y política de ignore
-- ubicación canónica para contexto y referencias visuales
+El repositorio tenía código y datos, pero sin un sistema documental
+consistente para decisiones y ejecución.
 
 ## Plan
 
 1. Crear documentos y plantillas de gobernanza.
-2. Crear ADR base para proceso, datos e importación y respaldo.
-3. Introducir sistema de tareas con índice y una tarea inicial.
-4. Curar `contexto/` y `ejemplos/` hacia estructura `docs/`.
-5. Inicializar Git en `main` y ajustar ignore.
+2. Crear ADR base para proceso, datos e importación.
+3. Introducir sistema de tareas con índice.
+4. Curar activos heredados hacia `docs/`.
 
 ## Decisiones
 
-- Usar tareas detalladas y registro breve de cambios por cierre.
-- Mantener SQLite en `db/` y excluir archivos de estado local.
-- Limitar ADR a decisiones arquitectónicas.
-- Prohibir comandos persistentes por defecto.
+- Usar tareas detalladas y changelog breve por cierre.
+- Mantener SQLite local fuera de versionado.
+- Reservar ADR para decisiones arquitectónicas.
 
 ## Cambios aplicados
 
-- Archivos raíz: `AGENTS.md`, `README.md`, `CHANGELOG.md`, `.gitignore`.
-- Contrato operativo consolidado en `AGENTS.md`.
-- Sistema ADR inicial en `docs/adr/`.
-- Sistema de tareas en `docs/tasks/`.
-- Curación de activos heredados hacia `docs/context/`.
-- Curación de activos heredados hacia `docs/assets/style_refs/`.
+- `AGENTS.md`, `README.md`, `CHANGELOG.md`, `.gitignore`.
+- `docs/adr/` con ADR iniciales.
+- `docs/tasks/` con índice y plantilla.
 
 ## Validación ejecutada
 
 - Verificación de estructura y presencia de archivos obligatorios.
-- Búsqueda de referencias obsoletas a exportaciones HTML eliminadas.
-- Respeto de política de comandos finitos.
+- Revisión de referencias obsoletas en documentación.
 
 ## Riesgos
 
-- Parte del contexto histórico puede requerir limpieza editorial adicional.
+- Parte del contexto histórico requería limpieza adicional.
 
 ## Seguimiento
 
-- Configurar remoto GitHub y publicar `main`.
-- Continuar con normalización de documentación en castellano.
+- Continuar normalización documental en castellano.
 
 ## Commit asociado
 

@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Cuentos Cosmere{% endblock %}</title>
+  <title>{% block title %}Generador de cuentos ilustrados{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
 </head>
 <body>
   <header class="site-header">
     <div class="container row between center">
-      <a class="brand" href="{{ url_for('web.dashboard') }}">Cuentos Cosmere</a>
-      <small class="muted">Biblioteca canónica + caché SQLite temporal</small>
+      <a class="brand" href="{{ url_for('web.dashboard') }}">Generador de cuentos ilustrados</a>
+      <small class="muted">Biblioteca canónica + caché temporal</small>
     </div>
   </header>
+
   <main class="container">
     {% if cache_status and cache_status.stale %}
       <section class="flash-stack">

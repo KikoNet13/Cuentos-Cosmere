@@ -2,23 +2,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parents[1]
-DB_PATH = BASE_DIR / "db" / "cosmere_stories.sqlite"
-BIBLIOTECA_DIR = BASE_DIR / "biblioteca"
-DATA_ROOT = BIBLIOTECA_DIR
-LIBRARY_CACHE_DB_PATH = BASE_DIR / "db" / "library_cache.sqlite"
-PROMPTS_BACKUP_JSON = (
-    BIBLIOTECA_DIR
-    / "nacidos-de-la-bruma-era-1"
-    / "el-imperio-final"
-    / "prompts"
-    / "era1_prompts_data.json"
-)
+ROOT_DIR = Path(__file__).resolve().parents[1]
+LIBRARY_ROOT = ROOT_DIR / "biblioteca"
+CACHE_DB_PATH = ROOT_DIR / "db" / "library_cache.sqlite"
 
-IMAGENES_BACKUP_JSON = (
-    BIBLIOTECA_DIR
-    / "nacidos-de-la-bruma-era-1"
-    / "el-imperio-final"
-    / "prompts"
-    / "imagenes_data.json"
-)
+APP_TITLE = "Generador de cuentos ilustrados"
+APP_SECRET_KEY = "story-generator-local-dev"

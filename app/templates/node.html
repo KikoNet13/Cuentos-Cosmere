@@ -25,12 +25,12 @@
         <article class="item-card">
           {% if item.is_story_leaf %}
             <h3>
-              <a href="{{ url_for('web.story_detail', story_path=item.path_rel) }}">{{ item.nombre }}</a>
+              <a href="{{ url_for('web.story_detail', story_path=item.path_rel) }}">{{ item.name }}</a>
             </h3>
             <p class="muted">Cuento</p>
           {% else %}
             <h3>
-              <a href="{{ url_for('web.node_detail', node_path=item.path_rel) }}">{{ item.nombre }}</a>
+              <a href="{{ url_for('web.node_detail', node_path=item.path_rel) }}">{{ item.name }}</a>
             </h3>
             <p class="muted">Nodo</p>
           {% endif %}

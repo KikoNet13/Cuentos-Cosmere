@@ -1,6 +1,6 @@
 # Índice de tareas
 
-- Próximo ID: `005`
+- Próximo ID: `006`
 
 ## TAREA-001-proyecto-profesional-contexto
 
@@ -16,7 +16,7 @@
 
 - Fecha: 12/02/26 14:00
 - Estado: cerrada
-- Resumen: paginación adaptativa por archivo importado y ajuste de canon.
+- Resumen: paginación adaptativa por archivo importado.
 - Versión: 0.2.0
 - Commit: `70c556a`
 - ADR relacionadas: `0003`
@@ -26,7 +26,7 @@
 
 - Fecha: 12/02/26 14:41
 - Estado: cerrada
-- Resumen: modelo v3 con Página/Ancla/Imagen y UI centrada en generación.
+- Resumen: reestructuración de dominio/UI orientada a generación visual.
 - Versión: 0.3.0
 - Commit: `pendiente`
 - ADR relacionadas: `0003`
@@ -36,8 +36,18 @@
 
 - Fecha: 12/02/26 17:20
 - Estado: cerrada
-- Resumen: biblioteca como fuente canónica y SQLite temporal de caché.
+- Resumen: biblioteca como fuente canónica y caché SQLite temporal.
 - Versión: 0.4.0
 - Commit: `pendiente`
 - ADR relacionadas: `0003`, `0004`
 - Archivo: `docs/tasks/TAREA-004-refactor-db-biblioteca-canonica-cache-sqlite.md`
+
+## TAREA-005-ingles-tecnico-contexto-biblioteca-rebranding
+
+- Fecha: 12/02/26 19:15
+- Estado: cerrada
+- Resumen: inglés técnico, contexto canónico en biblioteca y rebranding total.
+- Versión: 0.5.0
+- Commit: `pendiente`
+- ADR relacionadas: `0003`, `0004`
+- Archivo: `docs/tasks/TAREA-005-ingles-tecnico-contexto-biblioteca-rebranding.md`

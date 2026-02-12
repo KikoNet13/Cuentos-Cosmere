@@ -1,13 +1,14 @@
 # Índice de referencias visuales
 
-Esta carpeta contiene referencias de estilo y estructura editorial.
+Esta carpeta contiene referencias de estilo y composición editorial.
 No son datos de ejecución de la aplicación.
 
-## Referencia canónica vigente
+## Referencia principal
 
-- `Hansel y Gretel/` (ejemplo principal para estilo, ritmo y composición)
+- `Hansel y Gretel/`
 
 ## Nota editorial
 
-- La página de actividades del ejemplo se ignora en el producto objetivo.
-- La contraportada se diseñará de forma común para toda la saga.
+- El ejemplo sirve para estilo y ritmo visual, no para copiar giros argumentales.
+- No se usan dobles páginas unificadas; cada página lógica se trata de forma
+  independiente en los datos.

@@ -1,28 +1,25 @@
-# Cuentos Cosmere (App)
+# App del Generador de cuentos ilustrados
 
 ## Contrato de datos
 
-- La biblioteca es canónica (`biblioteca/`).
-- Cada cuento se identifica por carpeta con `meta.md` y páginas `NNN.md`.
-- Cada página define texto y slots de imagen en frontmatter.
-- El modelo relacional legacy queda solo para transición.
+- `biblioteca/` es la fuente de verdad.
+- Un cuento se identifica por carpeta con `meta.md` y páginas `NNN.md`.
+- Cada página define su texto y slots de imagen en frontmatter.
+- La base SQLite es caché temporal, no verdad de negocio.
 
 ## Caché temporal
 
-- Archivo objetivo: `db/library_cache.sqlite`.
+- Archivo: `db/library_cache.sqlite`.
 - Uso: índice de navegación y lectura rápida.
-- Estado stale: se detecta por fingerprint global de `biblioteca/`.
-- Si la caché está stale, se bloquea guardado de imágenes hasta refrescar.
+- Estado stale: fingerprint global de `biblioteca/`.
+- Escritura de imágenes bloqueada cuando la caché está stale.
 
-## CLI
+## Comandos
 
 - `python manage.py migrate-library-layout --dry-run`
 - `python manage.py migrate-library-layout --apply`
 - `python manage.py rebuild-cache`
-
-Alias legacy:
-
-- `python manage.py import` (deprecado)
+- `python manage.py runserver`
 
 ## UI
 

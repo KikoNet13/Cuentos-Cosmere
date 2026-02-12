@@ -1,14 +1,15 @@
-# Cuentos Cosmere
+# Generador de cuentos ilustrados
 
-Proyecto personal de cuentos ilustrados con flujo profesional.
+Proyecto local para preparar cuentos ilustrados con fuente de verdad en
+archivos y caché SQLite temporal para navegación rápida.
 
-## Arquitectura actual
+## Arquitectura vigente
 
-- Fuente de verdad: archivos en `biblioteca/`.
+- Fuente de verdad: `biblioteca/`.
 - Contrato de cuento: `meta.md` + páginas `NNN.md`.
-- Prompt y narrativa: solo edición en Markdown.
-- Caché temporal: SQLite de lectura rápida (`db/library_cache.sqlite`).
-- UI: navegación, copia de texto/prompt/referencias y guardado de imágenes por slot.
+- Frontmatter de contenido en castellano (`pagina`, `imagenes`, `requisitos`).
+- Caché temporal: `db/library_cache.sqlite`.
+- UI: lectura/copia de texto y prompts, subida o pegado de imágenes por slot.
 
 ## Estructura canónica de cuento
 
@@ -22,30 +23,28 @@ biblioteca/<ruta-nodos>/.../<cuento>/
     imagenes/
       pagina-001-principal.png
   referencias/
-    referencia_pdf.pdf
+    referencia.pdf
 ```
+
+## Comandos CLI vigentes
+
+- `python manage.py rebuild-cache`
+- `python manage.py migrate-library-layout --dry-run`
+- `python manage.py migrate-library-layout --apply`
+- `python manage.py runserver`
 
 ## Flujo recomendado
 
-1. Migrar layout legacy (si aplica):
+1. Ejecutar migración de layout si hay material legacy:
    `python manage.py migrate-library-layout --apply`
 2. Reconstruir caché:
    `python manage.py rebuild-cache`
-3. Abrir servidor cuando lo pidas explícitamente:
+3. Levantar servidor solo cuando se solicite explícitamente:
    `python manage.py runserver`
 
-## Comandos clave
-
-- `python manage.py migrate-library-layout --dry-run`
-- `python manage.py migrate-library-layout --apply`
-- `python manage.py rebuild-cache`
-- `python manage.py import`
-
-`import` queda como alias deprecado para migrar layout legacy y refrescar caché.
-
-## Convenciones del repositorio
+## Trazabilidad
 
 - Operación: `AGENTS.md`
 - Tareas: `docs/tasks/`
 - ADR: `docs/adr/`
-- Contexto mínimo: `docs/context/`
+- Historial breve: `CHANGELOG.md`
