@@ -3,183 +3,63 @@ from __future__ import annotations
 import json
 import re
 import shutil
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
 from .config import LIBRARY_ROOT
 from .text_pages import parse_markdown_pages
-from .utils import read_text_with_fallback, slugify
+from .utils import read_text_with_fallback
 
-LEGACY_SOURCE_MD_NAME = "origen_md.md"
-LEGACY_BACKUP_MD_NAME = "origen_md.legacy.md"
-LEGACY_TEXTS_DIR_NAME = "textos"
-LEGACY_PROMPT_JSON_NAME = "era1_prompts_data.json"
-LEGACY_PROMPT_BACKUP_SUFFIX = ".legacy.json"
-
-CANON_PDF_NAME = "referencia.pdf"
-
-PAGE_RAW_PATTERN = re.compile(r"^\s*(\d+)\s*$")
-STORY_CODE_PATTERN = re.compile(r"^\d{2}$")
-ANCHOR_MARKER_START = "<!-- AUTO-ANCHORS:BEGIN -->"
-ANCHOR_MARKER_END = "<!-- AUTO-ANCHORS:END -->"
+LEGACY_TEXTS_DIR = "textos"
+LEGACY_SOURCE_MD = "origen_md.md"
+LEGACY_PDF_NAMES = ("referencia.pdf", "referencia_pdf.pdf")
+LEGACY_PAGE_FILE_RE = re.compile(r"^(\d{3})\.md$", re.IGNORECASE)
+STORY_DIR_RE = re.compile(r"^\d{2}$")
+LEGACY_IMAGE_NAME_RE = re.compile(
+    r"(?i)^(?:pagina[-_])?(\d{1,3})[-_](principal|secundaria(?:[-_]\d{1,2})?|referencia(?:[-_]\d{1,2})?)\.(png|jpg|jpeg|webp)$"
+)
 
 
-def _yaml_quote(text: str) -> str:
-    return json.dumps(text, ensure_ascii=False)
+@dataclass
+class LegacySlot:
+    slot_name: str
+    role: str
+    prompt_text: str
+    requirements: list[dict[str, str]] = field(default_factory=list)
 
 
-def _render_meta(title: str, slug: str, status: str = "activo") -> str:
-    lines = [
-        "---",
-        f"titulo: {_yaml_quote(title)}",
-        f"slug: {_yaml_quote(slug)}",
-        'prompt_portada: ""',
-        'prompt_contraportada: ""',
-        f"estado: {_yaml_quote(status)}",
-        "---",
-        "",
-    ]
-    return "\n".join(lines)
+@dataclass
+class LegacyPage:
+    page_number: int
+    content: str
+    slots: list[LegacySlot]
 
 
-def _slot_role(image_type: str) -> str:
-    normalized = image_type.strip().lower()
-    if normalized == "principal":
-        return "principal"
-    if normalized in {"ancla", "referencia"}:
-        return "referencia"
-    return "secundaria"
+@dataclass
+class StoryMetaData:
+    title: str
+    status: str
+    cover_prompt: str
+    back_cover_prompt: str
+    notes: str
 
 
-def _slot_name(role: str, index: int) -> str:
-    if role == "principal" and index == 1:
-        return "principal"
-    if role == "principal":
-        return f"principal-{index:02d}"
-    if role == "referencia":
-        return f"referencia-{index:02d}"
-    return f"secundaria-{index:02d}"
+def _slot_slug(raw_value: str) -> str:
+    slug = re.sub(r"[^a-z0-9-]+", "-", raw_value.strip().lower())
+    slug = slug.strip("-")
+    return slug or "principal"
 
 
-def _normalize_prompt_text(entry: dict[str, Any]) -> str:
-    value = (
-        str(entry.get("prompt_final_literal", "")).strip()
-        or str(entry.get("bloque_copy_paste", "")).strip()
-        or str(entry.get("descripcion", "")).strip()
-    )
-    return " ".join(value.split())
+def _normalize_notes(notes: str) -> str:
+    value = " ".join(notes.split())
+    return value
 
 
-def _parse_page_number(raw_value: str) -> int | None:
-    match = PAGE_RAW_PATTERN.fullmatch(raw_value.strip())
-    if not match:
-        return None
-    value = int(match.group(1))
-    return value if value > 0 else None
-
-
-def _load_legacy_prompt_bundle(
-    book_dir: Path,
-    warnings: list[str],
-) -> tuple[dict[str, dict[int, list[dict[str, str]]]], list[dict[str, str]], Path | None]:
-    prompt_file = book_dir / "prompts" / LEGACY_PROMPT_JSON_NAME
-    if not prompt_file.exists():
-        return {}, [], None
-
-    try:
-        payload = json.loads(read_text_with_fallback(prompt_file))
-    except json.JSONDecodeError as exc:
-        warnings.append(f"[{prompt_file}] JSON inválido: {exc}")
-        return {}, [], prompt_file
-
-    entries = payload.get("entries", [])
-    if not isinstance(entries, list):
-        warnings.append(f"[{prompt_file}] Campo 'entries' inválido.")
-        return {}, [], prompt_file
-
-    story_page_slots: dict[str, dict[int, list[dict[str, str]]]] = {}
-    role_counter: dict[tuple[str, int, str], int] = {}
-    anchor_entries: dict[str, dict[str, str]] = {}
-
-    for entry in entries:
-        if not isinstance(entry, dict):
-            continue
-
-        story_code = str(entry.get("bloque", "")).strip()
-        if not STORY_CODE_PATTERN.fullmatch(story_code):
-            continue
-
-        page_raw = str(entry.get("pagina", "")).strip()
-        page_number = _parse_page_number(page_raw)
-        image_type = str(entry.get("tipo_imagen", "")).strip()
-        role = _slot_role(image_type)
-        prompt_text = _normalize_prompt_text(entry)
-
-        if page_number is not None:
-            counter_key = (story_code, page_number, role)
-            role_counter[counter_key] = role_counter.get(counter_key, 0) + 1
-            slot = _slot_name(role, role_counter[counter_key])
-            story_page_slots.setdefault(story_code, {}).setdefault(page_number, []).append(
-                {
-                    "slot": slot,
-                    "rol": role,
-                    "prompt": prompt_text,
-                }
-            )
-            continue
-
-        if role != "referencia" and image_type.strip().lower() != "ancla":
-            continue
-
-        anchor_id = str(entry.get("id_prompt", "")).strip()
-        if not anchor_id:
-            continue
-
-        anchor_entries[anchor_id] = {
-            "id": anchor_id,
-            "nombre": str(entry.get("generar_una_imagen_de", "")).strip() or anchor_id,
-            "descripcion": str(entry.get("descripcion", "")).strip(),
-            "prompt": prompt_text,
-            "imagen": str(entry.get("imagen_rel_path", "")).strip().replace("\\", "/"),
-            "estado": str(entry.get("estado", "activo")).strip() or "activo",
-        }
-
-    return story_page_slots, list(anchor_entries.values()), prompt_file
-
-
-def _render_slots_block(slots: list[dict[str, str]]) -> list[str]:
-    lines = ["imagenes:"]
-    for slot in slots:
-        lines.append(f"  - slot: {slot['slot']}")
-        lines.append(f"    rol: {slot['rol']}")
-        lines.append(f"    prompt: {_yaml_quote(slot['prompt'])}")
-        lines.append("    requisitos: []")
-    return lines
-
-
-def _render_page(page_number: int, content: str, slots: list[dict[str, str]]) -> str:
-    lines = ["---", f"pagina: {page_number}"]
-    if slots:
-        lines.extend(_render_slots_block(slots))
-    else:
-        lines.append("imagenes: []")
-    lines.append("---")
-    lines.append("")
-
-    body = content.rstrip()
-    if body:
-        lines.append(body)
-    lines.append("")
-    return "\n".join(lines)
-
-
-def _inject_slots_if_placeholder(existing_text: str, slots: list[dict[str, str]]) -> tuple[str, bool]:
-    if not slots:
-        return existing_text, False
-
-    lines = existing_text.splitlines()
+def _split_frontmatter(raw_text: str) -> tuple[str, str]:
+    lines = raw_text.splitlines()
     if not lines or lines[0].strip() != "---":
-        return existing_text, False
+        return "", raw_text
 
     end_index = None
     for index in range(1, len(lines)):
@@ -188,287 +68,400 @@ def _inject_slots_if_placeholder(existing_text: str, slots: list[dict[str, str]]
             break
 
     if end_index is None:
-        return existing_text, False
+        return "", raw_text
 
-    fm_lines = lines[1:end_index]
-    placeholder_index = None
-    for i, line in enumerate(fm_lines):
-        if line.strip().startswith("imagenes:") and line.strip() != "imagenes: []":
-            return existing_text, False
-        if line.strip() == "imagenes: []":
-            placeholder_index = i
-
-    if placeholder_index is None:
-        return existing_text, False
-
-    new_frontmatter = list(fm_lines[:placeholder_index])
-    new_frontmatter.extend(_render_slots_block(slots))
-    new_frontmatter.extend(fm_lines[placeholder_index + 1 :])
-
-    rebuilt_lines = ["---"] + new_frontmatter + ["---"] + lines[end_index + 1 :]
-    return "\n".join(rebuilt_lines).rstrip("\n") + "\n", True
+    frontmatter = "\n".join(lines[1:end_index])
+    body = "\n".join(lines[end_index + 1 :]).lstrip("\n")
+    return frontmatter, body
 
 
-def _legacy_story_dirs(root: Path) -> list[Path]:
-    story_dirs: list[Path] = []
-    for source_md in root.rglob(LEGACY_SOURCE_MD_NAME):
-        if source_md.parent.name != LEGACY_TEXTS_DIR_NAME:
+def _parse_scalar(raw_value: str) -> str:
+    value = raw_value.strip()
+    if len(value) >= 2 and value.startswith('"') and value.endswith('"'):
+        return value[1:-1]
+    if len(value) >= 2 and value.startswith("'") and value.endswith("'"):
+        return value[1:-1]
+    return value
+
+
+def _parse_legacy_meta(story_dir: Path, story_id: str) -> StoryMetaData:
+    meta_path = story_dir / "meta.md"
+    if not meta_path.exists():
+        return StoryMetaData(
+            title=f"Cuento {story_id}",
+            status="activo",
+            cover_prompt="",
+            back_cover_prompt="",
+            notes="",
+        )
+
+    raw_meta = read_text_with_fallback(meta_path)
+    frontmatter, body = _split_frontmatter(raw_meta)
+
+    values: dict[str, str] = {}
+    for line in frontmatter.splitlines():
+        stripped = line.strip()
+        if not stripped or ":" not in stripped:
             continue
-        story_dir = source_md.parent.parent
-        if story_dir not in story_dirs:
-            story_dirs.append(story_dir)
-    story_dirs.sort(key=lambda item: item.as_posix())
-    return story_dirs
+        key, value = stripped.split(":", 1)
+        values[key.strip().lower()] = _parse_scalar(value)
+
+    return StoryMetaData(
+        title=values.get("titulo", f"Cuento {story_id}"),
+        status=values.get("estado", "activo") or "activo",
+        cover_prompt=values.get("prompt_portada", ""),
+        back_cover_prompt=values.get("prompt_contraportada", ""),
+        notes=body.strip(),
+    )
 
 
-def _find_obsolete_reference_pdfs(texts_dir: Path) -> list[Path]:
-    obsolete_files: list[Path] = []
-    for candidate in texts_dir.glob("referencia*.pdf"):
-        if candidate.name == CANON_PDF_NAME:
+def _parse_legacy_requirements(raw_text: str) -> list[dict[str, str]]:
+    text = raw_text.strip()
+    if not text or text == "[]":
+        return []
+
+    requirements: list[dict[str, str]] = []
+    current: dict[str, str] = {}
+
+    def _commit() -> None:
+        tipo = current.get("tipo", "").strip()
+        ref = current.get("ref", "").strip()
+        if tipo and ref:
+            requirements.append({"tipo": tipo, "ref": ref})
+
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped:
             continue
-        obsolete_files.append(candidate)
-    obsolete_files.sort(key=lambda item: item.name)
-    return obsolete_files
+
+        if stripped.startswith("- "):
+            if current:
+                _commit()
+            current = {}
+            stripped = stripped[2:].strip()
+
+        if ":" not in stripped:
+            continue
+
+        key, value = stripped.split(":", 1)
+        current[key.strip().lower()] = value.strip()
+
+    if current:
+        _commit()
+
+    return requirements
 
 
-def _render_anchor_guide(anchor_items: list[dict[str, str]]) -> str:
-    lines = [
-        "# Referencias de anclas de la saga",
-        "",
-        "Documento canónico de referencia visual de anclas.",
-        "",
-        ANCHOR_MARKER_START,
-    ]
+def _parse_legacy_page(page_file: Path) -> LegacyPage:
+    raw_page = read_text_with_fallback(page_file)
+    frontmatter, body = _split_frontmatter(raw_page)
 
-    if not anchor_items:
-        lines.extend(["", "Sin anclas definidas."])
-    else:
-        for item in sorted(anchor_items, key=lambda value: value["id"]):
-            lines.extend(
-                [
-                    "",
-                    f"## {item['id']}",
-                    f"- Nombre: {item['nombre']}",
-                    f"- Estado: {item['estado']}",
-                ]
+    page_number = int(page_file.stem)
+    slots: list[LegacySlot] = []
+
+    lines = frontmatter.splitlines()
+    index = 0
+    total = len(lines)
+    while index < total:
+        line = lines[index].strip()
+        if line.startswith("pagina:"):
+            value = line.split(":", 1)[1].strip()
+            if value.isdigit():
+                page_number = int(value)
+            index += 1
+            continue
+
+        if line.startswith("- slot:"):
+            slot_name = _parse_scalar(line.split(":", 1)[1])
+            role = "secundaria"
+            prompt_text = ""
+            requirements: list[dict[str, str]] = []
+            index += 1
+
+            while index < total and lines[index].startswith("    "):
+                field_line = lines[index].strip()
+                if field_line.startswith("rol:"):
+                    role = _parse_scalar(field_line.split(":", 1)[1])
+                elif field_line.startswith("prompt:"):
+                    prompt_text = _parse_scalar(field_line.split(":", 1)[1])
+                elif field_line.startswith("requisitos:"):
+                    value = field_line.split(":", 1)[1].strip()
+                    if value == "[]":
+                        requirements = []
+                        index += 1
+                        continue
+
+                    req_lines: list[str] = []
+                    index += 1
+                    while index < total and lines[index].startswith("      "):
+                        req_lines.append(lines[index].strip())
+                        index += 1
+                    requirements = _parse_legacy_requirements("\n".join(req_lines))
+                    continue
+                index += 1
+
+            slots.append(
+                LegacySlot(
+                    slot_name=slot_name,
+                    role=role,
+                    prompt_text=prompt_text,
+                    requirements=requirements,
+                )
             )
-            if item["descripcion"]:
-                lines.append(f"- Descripción: {item['descripcion']}")
-            if item["prompt"]:
-                lines.append(f"- Prompt: {item['prompt']}")
-            if item["imagen"]:
-                lines.append(f"- Imagen de referencia: `{item['imagen']}`")
+            continue
 
-    lines.extend(["", ANCHOR_MARKER_END, ""])
+        index += 1
+
+    return LegacyPage(
+        page_number=page_number,
+        content=body.strip(),
+        slots=slots,
+    )
+
+
+def _render_requirements_yaml(requirements: list[dict[str, str]]) -> str:
+    if not requirements:
+        return "[]"
+    lines: list[str] = []
+    for req in requirements:
+        lines.append(f"- tipo: {req['tipo']}")
+        lines.append(f"  ref: {req['ref']}")
     return "\n".join(lines)
 
 
-def _upsert_anchor_guide(
-    saga_dir: Path,
-    anchor_items: list[dict[str, str]],
-    apply_changes: bool,
-) -> bool:
-    guide_path = saga_dir / "anclas.md"
-    generated = _render_anchor_guide(anchor_items)
+def _render_story_markdown(meta: StoryMetaData, pages: list[LegacyPage]) -> str:
+    lines: list[str] = [
+        f"# {meta.title}",
+        "",
+        "## Meta",
+        f"- estado: {meta.status}",
+        f"- prompt_portada: {meta.cover_prompt}",
+        f"- prompt_contraportada: {meta.back_cover_prompt}",
+        f"- notas: {_normalize_notes(meta.notes)}",
+        "",
+    ]
 
-    if not guide_path.exists():
-        if apply_changes:
-            guide_path.write_text(generated, encoding="utf-8")
-        return True
+    for page in sorted(pages, key=lambda item: item.page_number):
+        page_slots = page.slots or [
+            LegacySlot(
+                slot_name="principal",
+                role="principal",
+                prompt_text="",
+                requirements=[],
+            )
+        ]
 
-    existing = read_text_with_fallback(guide_path)
-    if ANCHOR_MARKER_START in existing and ANCHOR_MARKER_END in existing:
-        before = existing.split(ANCHOR_MARKER_START, 1)[0].rstrip()
-        after = existing.split(ANCHOR_MARKER_END, 1)[1].lstrip("\n")
-        managed = generated.split(ANCHOR_MARKER_START, 1)[1]
-        merged = f"{before}\n\n{ANCHOR_MARKER_START}{managed}"
-        if after:
-            merged = merged.rstrip("\n") + "\n\n" + after
-        merged = merged.rstrip("\n") + "\n"
-        if apply_changes and merged != existing:
-            guide_path.write_text(merged, encoding="utf-8")
-            return True
-        return False
+        lines.extend(
+            [
+                f"## Página {page.page_number:02d}",
+                "",
+                "### Texto",
+                page.content,
+                "",
+                "### Prompts",
+                "",
+            ]
+        )
 
-    merged = existing.rstrip("\n") + "\n\n" + generated
-    if apply_changes and merged != existing:
-        guide_path.write_text(merged, encoding="utf-8")
-        return True
-    return False
+        for slot in page_slots:
+            lines.extend(
+                [
+                    f"#### {slot.slot_name}",
+                    "```text",
+                    slot.prompt_text,
+                    "```",
+                    "",
+                    "##### Requisitos",
+                    "```yaml",
+                    _render_requirements_yaml(slot.requirements),
+                    "```",
+                    "",
+                ]
+            )
+
+    return "\n".join(lines).rstrip() + "\n"
 
 
-def _retire_prompt_json(
-    prompt_file: Path,
-    create_backup: bool,
-    apply_changes: bool,
-    warnings: list[str],
-) -> bool:
-    if not prompt_file.exists():
-        return False
+def _story_pdf_source(story_dir: Path) -> Path | None:
+    for base in ((story_dir / "referencias"), (story_dir / LEGACY_TEXTS_DIR)):
+        for name in LEGACY_PDF_NAMES:
+            candidate = base / name
+            if candidate.exists():
+                return candidate
+    return None
 
-    if not apply_changes:
-        return True
 
-    try:
-        if create_backup:
-            backup_name = prompt_file.name.replace(".json", LEGACY_PROMPT_BACKUP_SUFFIX)
-            backup_path = prompt_file.with_name(backup_name)
-            if backup_path.exists():
-                prompt_file.unlink()
-            else:
-                shutil.move(prompt_file, backup_path)
-        else:
-            prompt_file.unlink()
-        return True
-    except OSError as exc:
-        warnings.append(f"[{prompt_file}] No se pudo retirar JSON legacy: {exc}")
-        return False
+def _target_image_name(story_id: str, source_name: str, fallback_index: int) -> tuple[str, str | None]:
+    match = LEGACY_IMAGE_NAME_RE.fullmatch(source_name)
+    if not match:
+        extension = Path(source_name).suffix.lower() or ".png"
+        return f"{story_id}-asset-{fallback_index:02d}{extension}", (
+            f"Nombre de imagen legacy no reconocible: {source_name}. "
+            "Se conserva como asset genérico."
+        )
+
+    page_number = max(1, int(match.group(1)))
+    slot_slug = _slot_slug(match.group(2).replace("_", "-"))
+    extension = f".{match.group(3).lower()}"
+    return f"{story_id}-p{page_number:02d}-{slot_slug}{extension}", None
+
+
+def _collect_legacy_pages(story_dir: Path, warnings: list[str]) -> list[LegacyPage]:
+    page_files = sorted(
+        file for file in story_dir.iterdir() if file.is_file() and LEGACY_PAGE_FILE_RE.fullmatch(file.name)
+    )
+    if page_files:
+        return [_parse_legacy_page(page_file) for page_file in page_files]
+
+    source_md = story_dir / LEGACY_TEXTS_DIR / LEGACY_SOURCE_MD
+    if source_md.exists():
+        markdown = read_text_with_fallback(source_md)
+        pages_map, parse_warnings = parse_markdown_pages(markdown)
+        warnings.extend(f"[{story_dir}] {item}" for item in parse_warnings)
+        return [
+            LegacyPage(
+                page_number=page_number,
+                content=content,
+                slots=[
+                    LegacySlot(
+                        slot_name="principal",
+                        role="principal",
+                        prompt_text="",
+                        requirements=[],
+                    )
+                ],
+            )
+            for page_number, content in sorted(pages_map.items())
+        ]
+
+    warnings.append(f"[{story_dir}] No se detectaron páginas legacy para migrar.")
+    return []
+
+
+def _legacy_book_dirs(root: Path) -> list[Path]:
+    book_dirs: set[Path] = set()
+
+    for source_md in root.rglob(LEGACY_SOURCE_MD):
+        if "_legacy_story_dirs" in source_md.parts:
+            continue
+        story_dir = source_md.parent.parent
+        if STORY_DIR_RE.fullmatch(story_dir.name):
+            book_dirs.add(story_dir.parent)
+
+    for meta_file in root.rglob("meta.md"):
+        if "_legacy_story_dirs" in meta_file.parts:
+            continue
+        story_dir = meta_file.parent
+        if not STORY_DIR_RE.fullmatch(story_dir.name):
+            continue
+        if any(LEGACY_PAGE_FILE_RE.fullmatch(item.name) for item in story_dir.iterdir() if item.is_file()):
+            book_dirs.add(story_dir.parent)
+
+    filtered = [item for item in book_dirs if "_legacy_story_dirs" not in item.parts]
+    return sorted(filtered, key=lambda item: item.as_posix())
 
 
 def migrate_library_layout(*, apply_changes: bool, create_backup: bool = True) -> dict[str, Any]:
     root = LIBRARY_ROOT.resolve()
     warnings: list[str] = []
-    stats = {
+    stats: dict[str, Any] = {
+        "book_nodes_detected": 0,
         "stories_detected": 0,
         "stories_migrated": 0,
-        "meta_created": 0,
-        "pages_created": 0,
-        "pages_updated": 0,
-        "pages_skipped": 0,
-        "md_backups_created": 0,
+        "story_files_created": 0,
+        "story_files_updated": 0,
         "pdf_copied": 0,
-        "anchors_guide_updated": 0,
-        "anchor_entries": 0,
-        "legacy_prompt_retired": 0,
+        "images_copied": 0,
+        "legacy_dirs_archived": 0,
         "warnings": warnings,
     }
 
-    prompt_cache: dict[Path, tuple[dict[str, dict[int, list[dict[str, str]]]], list[dict[str, str]], Path | None]] = {}
-    saga_anchor_map: dict[Path, dict[str, dict[str, str]]] = {}
-    prompt_files_seen: set[Path] = set()
+    for book_dir in _legacy_book_dirs(root):
+        stats["book_nodes_detected"] += 1
 
-    for story_dir in _legacy_story_dirs(root):
-        stats["stories_detected"] += 1
-        story_code = story_dir.name.strip()
-        legacy_texts_dir = story_dir / LEGACY_TEXTS_DIR_NAME
-
-        source_md = legacy_texts_dir / LEGACY_SOURCE_MD_NAME
-        source_pdf = legacy_texts_dir / CANON_PDF_NAME
-        obsolete_pdfs = _find_obsolete_reference_pdfs(legacy_texts_dir)
-
-        if obsolete_pdfs:
-            for obsolete_pdf in obsolete_pdfs:
-                warnings.append(
-                    f"[{story_dir}] Archivo obsoleto detectado: {obsolete_pdf.name}."
-                )
-            if source_pdf.exists():
-                warnings.append(f"[{story_dir}] Conflicto de PDF; se usa {CANON_PDF_NAME}.")
-
-        if not source_md.exists():
-            warnings.append(f"[{story_dir}] Falta {LEGACY_SOURCE_MD_NAME}.")
-            continue
-
-        markdown = read_text_with_fallback(source_md)
-        pages, parse_warnings = parse_markdown_pages(markdown)
-        warnings.extend(
-            f"[{story_dir.relative_to(root).as_posix()}] {item}" for item in parse_warnings
+        story_dirs = sorted(
+            child
+            for child in book_dir.iterdir()
+            if child.is_dir() and STORY_DIR_RE.fullmatch(child.name)
         )
-        if not pages:
-            warnings.append(
-                f"[{story_dir}] Sin páginas parseables en {LEGACY_SOURCE_MD_NAME}."
-            )
-            continue
 
-        book_dir = story_dir.parent
-        if book_dir not in prompt_cache:
-            prompt_cache[book_dir] = _load_legacy_prompt_bundle(book_dir, warnings)
-        page_slot_map, book_anchor_entries, prompt_file = prompt_cache[book_dir]
-        if prompt_file:
-            prompt_files_seen.add(prompt_file)
-
-        saga_dir = book_dir.parent
-        saga_anchor_map.setdefault(saga_dir, {})
-        for anchor_entry in book_anchor_entries:
-            saga_anchor_map[saga_dir][anchor_entry["id"]] = anchor_entry
-
-        story_slots = page_slot_map.get(story_code, {}) if STORY_CODE_PATTERN.fullmatch(story_code) else {}
-
-        meta_path = story_dir / "meta.md"
-        created_meta = False
-        if not meta_path.exists():
-            story_title = f"Cuento {story_code}" if STORY_CODE_PATTERN.fullmatch(story_code) else story_dir.name
-            story_slug = slugify(story_dir.name)
-            if apply_changes:
-                meta_path.write_text(
-                    _render_meta(title=story_title, slug=story_slug),
-                    encoding="utf-8",
-                )
-            stats["meta_created"] += 1
-            created_meta = True
-
-        created_pages = 0
-        updated_pages = 0
-        for page_number, content in sorted(pages.items()):
-            page_path = story_dir / f"{page_number:03d}.md"
-            generated_slots = story_slots.get(page_number, [])
-
-            if page_path.exists():
-                if generated_slots:
-                    existing = read_text_with_fallback(page_path)
-                    injected_text, changed = _inject_slots_if_placeholder(existing, generated_slots)
-                    if changed:
-                        if apply_changes:
-                            page_path.write_text(injected_text, encoding="utf-8")
-                        stats["pages_updated"] += 1
-                        updated_pages += 1
-                    else:
-                        stats["pages_skipped"] += 1
-                else:
-                    stats["pages_skipped"] += 1
+        processed_story_dirs: list[Path] = []
+        for story_dir in story_dirs:
+            story_id = story_dir.name
+            pages = _collect_legacy_pages(story_dir, warnings)
+            if not pages:
                 continue
 
-            page_text = _render_page(page_number=page_number, content=content, slots=generated_slots)
-            if apply_changes:
-                page_path.write_text(page_text, encoding="utf-8")
-            stats["pages_created"] += 1
-            created_pages += 1
+            stats["stories_detected"] += 1
+            meta = _parse_legacy_meta(story_dir, story_id)
+            rendered_story = _render_story_markdown(meta, pages)
 
-        if source_pdf.exists():
-            destination_pdf = story_dir / "referencias" / CANON_PDF_NAME
-            if not destination_pdf.exists():
+            target_story_file = book_dir / f"{story_id}.md"
+            existing_story = ""
+            if target_story_file.exists():
+                existing_story = read_text_with_fallback(target_story_file)
+
+            if not target_story_file.exists():
+                stats["story_files_created"] += 1
+                stats["stories_migrated"] += 1
                 if apply_changes:
-                    destination_pdf.parent.mkdir(parents=True, exist_ok=True)
-                    shutil.copy2(source_pdf, destination_pdf)
-                stats["pdf_copied"] += 1
+                    target_story_file.write_text(rendered_story, encoding="utf-8")
+            elif existing_story != rendered_story:
+                stats["story_files_updated"] += 1
+                stats["stories_migrated"] += 1
+                if apply_changes:
+                    target_story_file.write_text(rendered_story, encoding="utf-8")
 
-        backup_md = source_md.with_name(LEGACY_BACKUP_MD_NAME)
-        if create_backup and not backup_md.exists():
-            if apply_changes:
-                shutil.copy2(source_md, backup_md)
-            stats["md_backups_created"] += 1
+            source_pdf = _story_pdf_source(story_dir)
+            if source_pdf:
+                target_pdf = book_dir / f"{story_id}.pdf"
+                if not target_pdf.exists():
+                    stats["pdf_copied"] += 1
+                    if apply_changes:
+                        shutil.copy2(source_pdf, target_pdf)
 
-        if created_meta or created_pages > 0 or updated_pages > 0:
-            stats["stories_migrated"] += 1
+            image_dir = story_dir / "imagenes"
+            if image_dir.exists() and image_dir.is_dir():
+                fallback_index = 1
+                for image_file in sorted(image_dir.iterdir(), key=lambda item: item.name.lower()):
+                    if not image_file.is_file():
+                        continue
+                    if image_file.suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp"}:
+                        continue
+                    target_image_name, warning = _target_image_name(
+                        story_id=story_id,
+                        source_name=image_file.name,
+                        fallback_index=fallback_index,
+                    )
+                    fallback_index += 1
+                    if warning:
+                        warnings.append(f"[{story_dir}] {warning}")
 
-    for saga_dir, anchor_items in saga_anchor_map.items():
-        changed = _upsert_anchor_guide(
-            saga_dir=saga_dir,
-            anchor_items=list(anchor_items.values()),
-            apply_changes=apply_changes,
-        )
-        if changed:
-            stats["anchors_guide_updated"] += 1
-        stats["anchor_entries"] += len(anchor_items)
+                    target_image = book_dir / target_image_name
+                    if target_image.exists():
+                        continue
+                    stats["images_copied"] += 1
+                    if apply_changes:
+                        shutil.copy2(image_file, target_image)
 
-    for prompt_file in sorted(prompt_files_seen):
-        retired = _retire_prompt_json(
-            prompt_file=prompt_file,
-            create_backup=create_backup,
-            apply_changes=apply_changes,
-            warnings=warnings,
-        )
-        if retired:
-            stats["legacy_prompt_retired"] += 1
+            processed_story_dirs.append(story_dir)
+
+        if not apply_changes or not create_backup:
+            continue
+
+        legacy_root = book_dir / "_legacy_story_dirs"
+        legacy_root.mkdir(parents=True, exist_ok=True)
+        for story_dir in processed_story_dirs:
+            destination = legacy_root / story_dir.name
+            if destination.exists():
+                continue
+            try:
+                shutil.move(str(story_dir), str(destination))
+                stats["legacy_dirs_archived"] += 1
+            except PermissionError:
+                warnings.append(
+                    f"[{story_dir}] No se pudo archivar el directorio legacy por permisos."
+                )
 
     stats["mode"] = "apply" if apply_changes else "dry-run"
     return stats

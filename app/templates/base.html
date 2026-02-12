@@ -10,7 +10,7 @@
   <header class="site-header">
     <div class="container row between center">
       <a class="brand" href="{{ url_for('web.dashboard') }}">Generador de cuentos ilustrados</a>
-      <small class="muted">Biblioteca canónica + caché temporal</small>
+      <small class="muted">Biblioteca canónica (`library`) + caché temporal</small>
     </div>
   </header>
 
@@ -19,7 +19,7 @@
       <section class="flash-stack">
         <div class="flash error">
           <strong>Caché desactualizada.</strong>
-          Cambió `biblioteca/` desde el último refresco.
+          Cambió `library/` desde el último refresco.
           <form method="post" action="{{ url_for('web.cache_refresh') }}" class="inline-form">
             <input type="hidden" name="next" value="{{ request.full_path if request else '/' }}">
             <button type="submit">Actualizar caché</button>

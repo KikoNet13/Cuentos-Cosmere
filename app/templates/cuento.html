@@ -102,8 +102,8 @@
                       {% if ref.exists %}
                         <img src="{{ ref.url }}" alt="{{ ref.rel_path }}">
                         <div class="row gap wrap">
-                          <button type="button" onclick="copyImageFromUrl('{{ ref.url }}','copy-req-{{ loop.index }}-{{ loop.index0 }}')">Copiar imagen</button>
-                          <span id="copy-req-{{ loop.index }}-{{ loop.index0 }}" class="copy-feedback"></span>
+                          <button type="button" onclick="copyImageFromUrl('{{ ref.url }}','copy-req-{{ slot.slot_name | replace(' ', '-') | lower }}-{{ req.id }}-{{ loop.index }}')">Copiar imagen</button>
+                          <span id="copy-req-{{ slot.slot_name | replace(' ', '-') | lower }}-{{ req.id }}-{{ loop.index }}" class="copy-feedback"></span>
                         </div>
                       {% else %}
                         <p class="warn">Referencia no encontrada en disco.</p>

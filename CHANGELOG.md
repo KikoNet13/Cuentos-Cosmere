@@ -5,6 +5,18 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [12/02/26] - Library + inbox + cuento `NN.md`
+
+- Se completó el renombre canónico de datos a `library/`.
+- Se implementó ingestión por lotes en `library/_inbox` con comandos:
+  - `inbox-parse`
+  - `inbox-apply --approve`
+- Se consolidó el contrato de cuento en archivo único `NN.md` con cabeceras de `Meta`, `Texto`, `Prompts` y `Requisitos`.
+- Se aplicó migración de layout legacy a formato plano de libro (`NN.md` + `NN.pdf`).
+- Se añadió ADR `0005` para formalizar el nuevo contrato.
+- Se creó skill global `notebooklm-ingest` para flujo parsear/revisar/aplicar.
+- Tarea: `docs/tasks/TAREA-006-library-inbox-nnmd-skill-ingesta.md`.
+
 ## [12/02/26] - Inglés técnico + contexto en biblioteca + rebranding
 
 - Se consolidó el código activo con identificadores técnicos en inglés.

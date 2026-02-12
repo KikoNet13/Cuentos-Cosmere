@@ -45,17 +45,14 @@ def cmd_migrate_library_layout(apply: bool, create_backup: bool) -> None:
 
     labels = {
         "mode": "Modo",
-        "stories_detected": "Cuentos legacy detectados",
+        "book_nodes_detected": "Nodos libro detectados",
+        "stories_detected": "Cuentos detectados",
         "stories_migrated": "Cuentos migrados",
-        "meta_created": "Meta creados",
-        "pages_created": "Páginas creadas",
-        "pages_updated": "Páginas actualizadas",
-        "pages_skipped": "Páginas omitidas",
-        "md_backups_created": "Backups MD creados",
+        "story_files_created": "Archivos NN.md creados",
+        "story_files_updated": "Archivos NN.md actualizados",
         "pdf_copied": "PDF copiados",
-        "anchors_guide_updated": "Guías de anclas actualizadas",
-        "anchor_entries": "Entradas de anclas",
-        "legacy_prompt_retired": "JSON legacy retirados",
+        "images_copied": "Imágenes copiadas",
+        "legacy_dirs_archived": "Directorios legacy archivados",
     }
     _print_stats(stats, labels)
 
@@ -75,6 +72,53 @@ def cmd_migrate_library_layout(apply: bool, create_backup: bool) -> None:
         _print_stats(cache_stats, cache_labels)
 
 
+def cmd_inbox_parse(input_path: str, book_rel_path: str, story_id: str) -> None:
+    from app.notebooklm_ingest import inbox_parse
+
+    stats = inbox_parse(input_path=input_path, book_rel_path=book_rel_path, story_id=story_id)
+    print("Propuesta de inbox generada.")
+    labels = {
+        "batch_id": "Batch",
+        "book_rel_path": "Libro",
+        "story_id": "Cuento",
+        "title": "Título",
+        "pages_detected": "Páginas detectadas",
+        "manifest": "Manifest",
+        "proposal": "Propuesta",
+    }
+    _print_stats(stats, labels)
+
+
+def cmd_inbox_apply(batch_id: str, approve: bool, force: bool) -> None:
+    from app.library_cache import rebuild_cache
+    from app.notebooklm_ingest import inbox_apply
+
+    stats = inbox_apply(batch_id=batch_id, approve=approve, force=force)
+    print("Propuesta aplicada a canónico.")
+    labels = {
+        "batch_id": "Batch",
+        "story_id": "Cuento",
+        "book_rel_path": "Libro",
+        "target": "Destino",
+        "backup_created": "Backup previo",
+    }
+    _print_stats(stats, labels)
+
+    cache_stats = rebuild_cache()
+    print("Caché reconstruida tras aplicar propuesta.")
+    cache_labels = {
+        "nodes": "Nodos",
+        "stories": "Cuentos",
+        "pages": "Páginas",
+        "slots": "Slots de imagen",
+        "assets": "Assets indexados",
+        "scanned_files": "Archivos escaneados",
+        "cache_db": "DB de caché",
+        "fingerprint": "Fingerprint",
+    }
+    _print_stats(cache_stats, cache_labels)
+
+
 def cmd_runserver(host: str, port: int, debug: bool) -> None:
     from app import create_app
 
@@ -88,12 +132,12 @@ def main() -> None:
 
     sub.add_parser(
         "rebuild-cache",
-        help="Reconstruir caché temporal desde biblioteca",
+        help="Reconstruir caché temporal desde library",
     )
 
     migrate_layout = sub.add_parser(
         "migrate-library-layout",
-        help="Migrar layout legacy (origen_md.md) a meta.md + NNN.md",
+        help="Migrar layout legacy a libro plano con cuentos NN.md",
     )
     mode = migrate_layout.add_mutually_exclusive_group()
     mode.add_argument("--apply", action="store_true", help="Aplicar cambios en disco")
@@ -105,8 +149,24 @@ def main() -> None:
     migrate_layout.add_argument(
         "--no-backup",
         action="store_true",
-        help="No crear archivos *.legacy.*",
+        help="No archivar directorios legacy",
     )
+
+    inbox_parse = sub.add_parser(
+        "inbox-parse",
+        help="Parsear un markdown de entrada y generar propuesta en library/_inbox",
+    )
+    inbox_parse.add_argument("--input", required=True, help="Ruta del markdown de entrada")
+    inbox_parse.add_argument("--book", required=True, help="Ruta relativa del nodo libro dentro de library")
+    inbox_parse.add_argument("--story-id", required=True, help="ID de cuento de 2 dígitos (NN)")
+
+    inbox_apply = sub.add_parser(
+        "inbox-apply",
+        help="Aplicar una propuesta desde library/_inbox al canónico",
+    )
+    inbox_apply.add_argument("--batch-id", required=True, help="ID del batch a aplicar")
+    inbox_apply.add_argument("--approve", action="store_true", help="Confirmar aplicación")
+    inbox_apply.add_argument("--force", action="store_true", help="Forzar aplicación aunque status no sea proposed")
 
     run = sub.add_parser("runserver", help="Ejecutar servidor de desarrollo Flask")
     run.add_argument("--host", default="127.0.0.1", help="Host de escucha")
@@ -119,6 +179,10 @@ def main() -> None:
         cmd_rebuild_cache()
     elif args.command == "migrate-library-layout":
         cmd_migrate_library_layout(apply=bool(args.apply), create_backup=not bool(args.no_backup))
+    elif args.command == "inbox-parse":
+        cmd_inbox_parse(input_path=args.input, book_rel_path=args.book, story_id=args.story_id)
+    elif args.command == "inbox-apply":
+        cmd_inbox_apply(batch_id=args.batch_id, approve=bool(args.approve), force=bool(args.force))
     elif args.command == "runserver":
         cmd_runserver(host=args.host, port=args.port, debug=args.debug)
     else:

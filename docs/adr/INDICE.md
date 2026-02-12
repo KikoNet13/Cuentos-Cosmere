@@ -24,3 +24,4 @@ Crear ADR solo para decisiones estructurales, por ejemplo:
 - `docs/adr/0002-politica-sqlite-local.md`
 - `docs/adr/0003-contrato-importacion-respaldo.md`
 - `docs/adr/0004-biblioteca-fuente-verdad-cache-temporal.md`
+- `docs/adr/0005-contrato-library-inbox-nnmd.md`

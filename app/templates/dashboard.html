@@ -14,7 +14,7 @@
 
 <section class="panel">
   <h1>Navegación de biblioteca</h1>
-  <p class="muted">Ruta actual: <code>{{ node_path or 'biblioteca' }}</code></p>
+  <p class="muted">Ruta actual: <code>{{ node_path or 'library' }}</code></p>
   {% if cache_status %}
     <p class="muted">
       Último refresco: {{ cache_status.last_refresh_at or 'sin caché' }}
@@ -51,6 +51,11 @@
               <a href="{{ url_for('web.story_detail', story_path=item.path_rel) }}">{{ item.name }}</a>
             </h3>
             <p class="muted">Cuento</p>
+          {% elif item.is_book_node %}
+            <h3>
+              <a href="{{ url_for('web.node_detail', node_path=item.path_rel) }}">{{ item.name }}</a>
+            </h3>
+            <p class="muted">Libro</p>
           {% else %}
             <h3>
               <a href="{{ url_for('web.node_detail', node_path=item.path_rel) }}">{{ item.name }}</a>

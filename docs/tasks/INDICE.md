@@ -1,6 +1,6 @@
 # Índice de tareas
 
-- Próximo ID: `006`
+- Próximo ID: `007`
 
 ## TAREA-001-proyecto-profesional-contexto
 
@@ -51,3 +51,13 @@
 - Commit: `pendiente`
 - ADR relacionadas: `0003`, `0004`
 - Archivo: `docs/tasks/TAREA-005-ingles-tecnico-contexto-biblioteca-rebranding.md`
+
+## TAREA-006-library-inbox-nnmd-skill-ingesta
+
+- Fecha: 12/02/26 20:30
+- Estado: cerrada
+- Resumen: contrato `library/_inbox` + `NN.md`, migración de layout y skill de ingestión.
+- Versión: 0.6.0
+- Commit: `pendiente`
+- ADR relacionadas: `0004`, `0005`
+- Archivo: `docs/tasks/TAREA-006-library-inbox-nnmd-skill-ingesta.md`

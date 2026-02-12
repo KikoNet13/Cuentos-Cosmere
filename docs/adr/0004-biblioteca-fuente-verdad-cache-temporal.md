@@ -6,17 +6,17 @@
 ## Contexto
 
 El modelo relacional duplicaba información que ya existía en archivos de
-`biblioteca/`, complicando edición y sincronización.
+`library/`, complicando edición y sincronización.
 
 ## Decisión
 
 Adoptar arquitectura híbrida con prioridad de archivos:
 
-- fuente de verdad canónica: `biblioteca/`.
-- contrato de cuento: `meta.md` + `NNN.md`.
+- fuente de verdad canónica: `library/`.
+- contrato de cuento: definido por ADR posteriores (actualmente `NN.md`).
 - narrativa y prompts se editan solo en Markdown.
 - SQLite se mantiene únicamente como caché temporal de lectura rápida.
-- desactualización detectada por fingerprint global de `biblioteca/`.
+- desactualización detectada por fingerprint global de `library/`.
 - la UI bloquea guardado de imágenes cuando la caché está stale.
 
 ## Consecuencias

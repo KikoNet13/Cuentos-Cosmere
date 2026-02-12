@@ -35,7 +35,7 @@ from .library_cache import (
     refresh_stale_flag,
     upsert_asset_index,
 )
-from .library_fs import resolve_requirement_paths
+from .library_fs import resolve_requirement_paths, story_rel_to_book_and_id
 
 web_bp = Blueprint("web", __name__)
 
@@ -214,9 +214,11 @@ def _resolve_slot_target_path(
     if rel:
         return rel
 
+    book_rel_path, story_id = story_rel_to_book_and_id(story_rel_path)
     slot_slug = _slot_slug(slot_name)
-    story = _normalize_rel_path(story_rel_path)
-    return f"biblioteca/{story}/assets/imagenes/pagina-{page_number:03d}-{slot_slug}.png"
+    if book_rel_path:
+        return f"library/{book_rel_path}/{story_id}-p{page_number:02d}-{slot_slug}.png"
+    return f"library/{story_id}-p{page_number:02d}-{slot_slug}.png"
 
 
 @web_bp.before_app_request

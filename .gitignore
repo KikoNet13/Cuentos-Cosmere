@@ -15,6 +15,7 @@ venv/
 # Editors
 .vscode/
 .idea/
+.codex/
 
 # OS files
 .DS_Store
@@ -35,3 +36,8 @@ db/*.sqlite-journal
 # Local probes/tests
 cache_write_probe_root.txt
 db/cache_write_probe.txt
+
+# Library local workflow artifacts
+library/_inbox/
+library/_backups/
+library/**/_legacy_story_dirs/

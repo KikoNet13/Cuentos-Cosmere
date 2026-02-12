@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
-LIBRARY_ROOT = ROOT_DIR / "biblioteca"
+LIBRARY_ROOT = ROOT_DIR / "library"
 CACHE_DB_PATH = ROOT_DIR / "db" / "library_cache.sqlite"
 
 APP_TITLE = "Generador de cuentos ilustrados"

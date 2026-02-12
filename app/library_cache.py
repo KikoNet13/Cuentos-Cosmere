@@ -85,13 +85,16 @@ def _ensure_schema(conn: sqlite3.Connection) -> None:
             path_rel TEXT PRIMARY KEY,
             parent_path_rel TEXT,
             name TEXT NOT NULL,
-            is_story_leaf INTEGER NOT NULL DEFAULT 0
+            is_story_leaf INTEGER NOT NULL DEFAULT 0,
+            is_book_node INTEGER NOT NULL DEFAULT 0
         );
         CREATE INDEX IF NOT EXISTS cache_node_parent_idx
         ON cache_node(parent_path_rel);
 
         CREATE TABLE IF NOT EXISTS cache_story (
             story_rel_path TEXT PRIMARY KEY,
+            story_id TEXT NOT NULL DEFAULT '',
+            story_file_rel_path TEXT NOT NULL DEFAULT '',
             title TEXT NOT NULL,
             status TEXT NOT NULL,
             meta_rel_path TEXT NOT NULL,
@@ -150,6 +153,24 @@ def _ensure_schema(conn: sqlite3.Connection) -> None:
         );
         """
     )
+    _ensure_optional_columns(conn)
+
+
+def _table_columns(conn: sqlite3.Connection, table_name: str) -> set[str]:
+    rows = conn.execute(f"PRAGMA table_info({table_name})").fetchall()
+    return {str(row[1]) for row in rows}
+
+
+def _ensure_optional_columns(conn: sqlite3.Connection) -> None:
+    node_columns = _table_columns(conn, "cache_node")
+    if "is_book_node" not in node_columns:
+        conn.execute("ALTER TABLE cache_node ADD COLUMN is_book_node INTEGER NOT NULL DEFAULT 0")
+
+    story_columns = _table_columns(conn, "cache_story")
+    if "story_id" not in story_columns:
+        conn.execute("ALTER TABLE cache_story ADD COLUMN story_id TEXT NOT NULL DEFAULT ''")
+    if "story_file_rel_path" not in story_columns:
+        conn.execute("ALTER TABLE cache_story ADD COLUMN story_file_rel_path TEXT NOT NULL DEFAULT ''")
 
 
 def _normalize_rel_path(path_rel: str) -> str:
@@ -308,14 +329,15 @@ def rebuild_cache() -> dict[str, Any]:
             for node in snapshot.nodes:
                 conn.execute(
                     """
-                    INSERT INTO cache_node(path_rel, parent_path_rel, name, is_story_leaf)
-                    VALUES (?, ?, ?, ?)
+                    INSERT INTO cache_node(path_rel, parent_path_rel, name, is_story_leaf, is_book_node)
+                    VALUES (?, ?, ?, ?, ?)
                     """,
                     (
                         node.path_rel,
                         node.parent_path_rel,
                         node.name,
                         1 if node.is_story_leaf else 0,
+                        1 if node.is_book_node else 0,
                     ),
                 )
 
@@ -323,13 +345,15 @@ def rebuild_cache() -> dict[str, Any]:
                 conn.execute(
                     """
                     INSERT INTO cache_story(
-                        story_rel_path, title, status, meta_rel_path,
+                        story_rel_path, story_id, story_file_rel_path, title, status, meta_rel_path,
                         cover_prompt, back_cover_prompt, notes, last_parsed_at
                     )
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     """,
                     (
                         story.story_rel_path,
+                        story.story_id,
+                        story.story_file_rel_path,
                         story.meta.title,
                         story.meta.status,
                         story.meta_rel_path,
@@ -477,7 +501,7 @@ def list_children(parent_path_rel: str) -> list[dict[str, Any]]:
         _ensure_schema(conn)
         rows = conn.execute(
             """
-            SELECT path_rel, parent_path_rel, name, is_story_leaf
+            SELECT path_rel, parent_path_rel, name, is_story_leaf, is_book_node
             FROM cache_node
             WHERE parent_path_rel=?
             ORDER BY name COLLATE NOCASE ASC
@@ -495,13 +519,14 @@ def get_node(path_rel: str) -> dict[str, Any] | None:
             "parent_path_rel": None,
             "name": "biblioteca",
             "is_story_leaf": 0,
+            "is_book_node": 0,
         }
 
     with _connect() as conn:
         _ensure_schema(conn)
         row = conn.execute(
             """
-            SELECT path_rel, parent_path_rel, name, is_story_leaf
+            SELECT path_rel, parent_path_rel, name, is_story_leaf, is_book_node
             FROM cache_node
             WHERE path_rel=?
             """,
@@ -516,7 +541,7 @@ def get_story(story_rel_path: str) -> dict[str, Any] | None:
         _ensure_schema(conn)
         row = conn.execute(
             """
-            SELECT story_rel_path, title, status, meta_rel_path,
+            SELECT story_rel_path, story_id, story_file_rel_path, title, status, meta_rel_path,
                    cover_prompt, back_cover_prompt, notes, last_parsed_at
             FROM cache_story
             WHERE story_rel_path=?
