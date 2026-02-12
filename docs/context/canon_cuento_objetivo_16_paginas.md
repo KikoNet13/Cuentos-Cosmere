@@ -9,35 +9,16 @@
 ## Alcance del canon
 
 1. Este documento define una estructura editorial recomendada.
-2. No impone un límite fijo técnico de páginas en la app.
-3. La cantidad real depende del archivo importado (`origen_md.md`).
+2. No impone un límite técnico fijo de páginas.
+3. La cantidad real depende del archivo canónico del cuento (`NNN.md`).
 
-## Estructura editorial objetivo
+## Estructura editorial sugerida
 
 1. Portada.
 2. Página de título.
-3. Páginas narrativas mixtas (texto + imagen pequeña, cuando aplique).
+3. Páginas narrativas mixtas.
 4. Páginas de imagen completa en momentos clave.
-5. Contraportada común para toda la saga.
-
-## Matriz recomendada de 16 páginas
-
-- Página 1: Portada (imagen completa).
-- Página 2: Título y créditos mínimos.
-- Página 3: Inicio narrativo (texto dominante + apoyo visual).
-- Página 4: Desarrollo 1 (mixta).
-- Página 5: Desarrollo 2 (mixta).
-- Página 6: Escena visual destacada (imagen completa).
-- Página 7: Desarrollo 3 (mixta).
-- Página 8: Desarrollo 4 (mixta).
-- Página 9: Escena de giro (imagen completa o mixta amplia).
-- Página 10: Desarrollo 5 (mixta).
-- Página 11: Desarrollo 6 (mixta).
-- Página 12: Escena visual de clímax (imagen completa).
-- Página 13: Resolución 1 (mixta).
-- Página 14: Resolución 2 (mixta).
-- Página 15: Cierre emocional (imagen dominante).
-- Página 16: Contraportada común de saga.
+5. Contraportada común para la saga.
 
 ## Criterios visuales
 

@@ -1,26 +1,21 @@
-# Prompts e imagenes master (Era 1)
+# Prompts e imágenes master (Era 1)
 
-## Contrato operativo v3
+## Contrato operativo actual
 
-- Cada pagina del cuento tiene su texto en `Pagina`.
-- Las imagenes se gestionan en `Imagen` por pagina.
-- Las referencias canonicas viven en `AnclaVersion`.
-- Los requisitos de una imagen pueden apuntar a `AnclaVersion` o `Imagen`.
+1. La narrativa y prompts viven en archivos Markdown de `biblioteca/`.
+2. Cada página (`NNN.md`) contiene texto y slots de imagen en frontmatter.
+3. La UI solo consume ese contenido para lectura/copia y guardado de imagen.
+4. Las referencias visuales se resuelven desde rutas de requisitos.
 
 ## Flujo recomendado
 
-1. Importar paginas desde `origen_md.md`.
-2. Navegar cuento pagina a pagina.
-3. Redactar `prompt_texto` por imagen.
-4. Adjuntar requisitos con referencias visuales.
-5. Copiar imagenes de referencia desde la UI al portapapeles.
+1. Editar narrativa/prompts en `biblioteca/.../<cuento>/NNN.md`.
+2. Ejecutar `python manage.py rebuild-cache`.
+3. Navegar a la página del cuento en la UI.
+4. Copiar texto/prompt/referencias y generar imagen fuera de la app.
+5. Subir o pegar imagen generada en el slot correspondiente.
 
-## Referencia visual
+## Referencias
 
-- Canon editorial: `docs/context/canon_cuento_objetivo_16_paginas.md`
-- Muestras de estilo: `docs/assets/style_refs/Hansel y Gretel/`
-
-## Nota
-
-El sistema no impone un total fijo de paginas. El archivo importado define
-el numero real de paginas del cuento.
+- Canon editorial recomendado: `docs/context/canon_cuento_objetivo_16_paginas.md`
+- Referencia visual: `docs/assets/style_refs/Hansel y Gretel/`

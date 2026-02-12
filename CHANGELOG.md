@@ -5,6 +5,14 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [12/02/26] - Biblioteca canónica + caché temporal
+
+- Se adoptó `biblioteca/` como fuente de verdad de narrativa y prompts.
+- Se añadió caché SQLite temporal con detección stale por fingerprint global.
+- Se incorporaron comandos `migrate-library-layout` y `rebuild-cache`.
+- Se rehízo la UI a navegación por árbol genérico y vista por página.
+- Tarea: `docs/tasks/TAREA-004-refactor-db-biblioteca-canonica-cache-sqlite.md`.
+
 ## [12/02/26] - Reestructuración Página/Ancla/Imagen
 
 - Se introdujo el modelo v3: `Pagina`, `Ancla`, `AnclaVersion`, `Imagen`
@@ -19,7 +27,7 @@ El detalle operativo vive en `docs/tasks/`.
 ## [12/02/26] - Paginación adaptativa por archivo importado
 
 - Se eliminó la expectativa fija de páginas en importación y UI.
-- El total de páginas ahora depende del archivo `origen_md.md` importado.
+- El total de páginas depende del archivo `origen_md.md` importado.
 - Se actualizó el canon documental para tratar 16 páginas como perfil
   recomendado, no obligatorio.
 - Tarea: `docs/tasks/TAREA-002-paginacion-adaptativa-archivo-importado.md`.

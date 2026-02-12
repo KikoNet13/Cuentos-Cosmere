@@ -1,45 +1,67 @@
 {% extends "base.html" %}
-{% block title %}Panel | Cuentos Cosmere{% endblock %}
+{% block title %}Biblioteca | Cuentos Cosmere{% endblock %}
 {% block content %}
+<nav class="breadcrumbs">
+  {% for crumb in breadcrumbs %}
+    {% if loop.last %}
+      <span>{{ crumb.name }}</span>
+    {% else %}
+      <a href="{{ url_for('web.dashboard') if crumb.path == '' else url_for('web.node_detail', node_path=crumb.path) }}">{{ crumb.name }}</a>
+      <span>/</span>
+    {% endif %}
+  {% endfor %}
+</nav>
+
 <section class="panel">
-  <h1>Panel</h1>
-  <div class="stats-grid">
-    <div class="stat"><strong>{{ stats.sagas }}</strong><span>Sagas</span></div>
-    <div class="stat"><strong>{{ stats.libros }}</strong><span>Libros</span></div>
-    <div class="stat"><strong>{{ stats.cuentos }}</strong><span>Cuentos</span></div>
-    <div class="stat"><strong>{{ stats.paginas }}</strong><span>Paginas</span></div>
-    <div class="stat"><strong>{{ stats.anclas }}</strong><span>Anclas</span></div>
-    <div class="stat"><strong>{{ stats.versiones_ancla }}</strong><span>Versiones ancla</span></div>
-    <div class="stat"><strong>{{ stats.imagenes }}</strong><span>Imagenes</span></div>
-    <div class="stat"><strong>{{ stats.requisitos }}</strong><span>Requisitos</span></div>
-    <div class="stat"><strong>{{ stats.pdf_refs }}</strong><span>Referencias PDF</span></div>
-  </div>
+  <h1>Navegación de biblioteca</h1>
+  <p class="muted">Ruta actual: <code>{{ node_path or 'biblioteca' }}</code></p>
+  {% if cache_status %}
+    <p class="muted">
+      Último refresco: {{ cache_status.last_refresh_at or 'sin caché' }}
+      | Archivos: {{ cache_status.scanned_files }}
+    </p>
+  {% endif %}
 </section>
 
 <section class="panel">
-  <h2>Crear saga</h2>
-  <form method="post" action="{{ url_for('web.create_saga') }}" class="form-grid">
-    <label>Nombre<input name="nombre" required></label>
-    <label>Slug (opcional)<input name="slug" placeholder="nacidos-de-la-bruma-era-1"></label>
-    <label class="full">Descripcion<textarea name="descripcion" rows="2"></textarea></label>
-    <button type="submit">Crear saga</button>
+  <h2>Estado de caché</h2>
+  <div class="stats-grid">
+    <div class="stat"><strong>{{ counts.nodes }}</strong><span>Nodos</span></div>
+    <div class="stat"><strong>{{ counts.stories }}</strong><span>Cuentos</span></div>
+    <div class="stat"><strong>{{ counts.pages }}</strong><span>Páginas</span></div>
+    <div class="stat"><strong>{{ counts.slots }}</strong><span>Slots</span></div>
+    <div class="stat"><strong>{{ counts.requirements }}</strong><span>Requisitos</span></div>
+    <div class="stat"><strong>{{ counts.assets }}</strong><span>Assets</span></div>
+  </div>
+  <form method="post" action="{{ url_for('web.cache_refresh') }}" class="inline-form top-gap">
+    <input type="hidden" name="next" value="{{ request.full_path }}">
+    <button type="submit">Reconstruir caché ahora</button>
   </form>
 </section>
 
 <section class="panel">
-  <h2>Sagas</h2>
-  {% if sagas %}
+  <h2>Contenido</h2>
+  {% if children %}
     <div class="list-grid">
-      {% for saga in sagas %}
+      {% for item in children %}
         <article class="item-card">
-          <h3><a href="{{ url_for('web.saga_detail', saga_slug=saga.slug) }}">{{ saga.nombre }}</a></h3>
-          <p class="muted"><code>{{ saga.slug }}</code></p>
-          <a href="{{ url_for('web.anclas_saga', saga_slug=saga.slug) }}">Gestionar anclas</a>
+          {% if item.is_story_leaf %}
+            <h3>
+              <a href="{{ url_for('web.story_detail', story_path=item.path_rel) }}">{{ item.nombre }}</a>
+            </h3>
+            <p class="muted">Cuento</p>
+          {% else %}
+            <h3>
+              <a href="{{ url_for('web.node_detail', node_path=item.path_rel) }}">{{ item.nombre }}</a>
+            </h3>
+            <p class="muted">Nodo</p>
+          {% endif %}
+          <p><code>{{ item.path_rel }}</code></p>
         </article>
       {% endfor %}
     </div>
   {% else %}
-    <p class="muted">No hay sagas todavia.</p>
+    <p class="muted">No hay nodos hijos en esta ruta.</p>
   {% endif %}
 </section>
 {% endblock %}

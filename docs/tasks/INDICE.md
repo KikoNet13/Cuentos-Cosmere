@@ -1,6 +1,6 @@
 # Índice de tareas
 
-- Próximo ID: `004`
+- Próximo ID: `005`
 
 ## TAREA-001-proyecto-profesional-contexto
 
@@ -31,3 +31,13 @@
 - Commit: `pendiente`
 - ADR relacionadas: `0003`
 - Archivo: `docs/tasks/TAREA-003-reestructuracion-pagina-ancla-imagen-ui.md`
+
+## TAREA-004-refactor-db-biblioteca-canonica-cache-sqlite
+
+- Fecha: 12/02/26 17:20
+- Estado: cerrada
+- Resumen: biblioteca como fuente canónica y SQLite temporal de caché.
+- Versión: 0.4.0
+- Commit: `pendiente`
+- ADR relacionadas: `0003`, `0004`
+- Archivo: `docs/tasks/TAREA-004-refactor-db-biblioteca-canonica-cache-sqlite.md`

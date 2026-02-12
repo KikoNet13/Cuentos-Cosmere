@@ -1,39 +1,32 @@
 # Cuentos Cosmere (App)
 
-## Tecnologias
+## Contrato de datos
 
-- Flask
-- Peewee
-- SQLite
+- La biblioteca es canónica (`biblioteca/`).
+- Cada cuento se identifica por carpeta con `meta.md` y páginas `NNN.md`.
+- Cada página define texto y slots de imagen en frontmatter.
+- El modelo relacional legacy queda solo para transición.
 
-## Flujo local con Pipenv
+## Caché temporal
 
-1. `pipenv install`
-2. `pipenv run python manage.py init-db`
-3. `pipenv run python manage.py migrate-models-v3`
-4. `pipenv run python manage.py import`
-5. `pipenv run python manage.py runserver --help`
+- Archivo objetivo: `db/library_cache.sqlite`.
+- Uso: índice de navegación y lectura rápida.
+- Estado stale: se detecta por fingerprint global de `biblioteca/`.
+- Si la caché está stale, se bloquea guardado de imágenes hasta refrescar.
 
-## Modelo v3
+## CLI
 
-- `Pagina`: texto por numero dentro de un cuento.
-- `Ancla` y `AnclaVersion`: referencias versionables por saga.
-- `Imagen`: pertenece a `Pagina` o `AnclaVersion`.
-- `ImagenRequisito`: requisitos mixtos (`ancla_version` o `imagen`).
+- `python manage.py migrate-library-layout --dry-run`
+- `python manage.py migrate-library-layout --apply`
+- `python manage.py rebuild-cache`
 
-## Contrato de importacion
+Alias legacy:
 
-- El importador toma paginas desde `biblioteca/**/origen_md.md`.
-- Actualiza paginas por `(cuento, numero)`.
-- Elimina paginas no presentes en el archivo importado.
-- No importa prompts legacy.
+- `python manage.py import` (deprecado)
 
-## Respaldos
+## UI
 
-- `pipenv run python manage.py export-imagenes`
-- `pipenv run python manage.py import-imagenes`
-
-Alias deprecados (compatibilidad):
-
-- `pipenv run python manage.py export-prompts`
-- `pipenv run python manage.py import-prompts`
+- Navegación por árbol genérico de nodos.
+- Vista de cuento por página (`/story/<path>?p=N`).
+- Texto y prompts en modo lectura/copia.
+- Subida o pegado de imagen por slot.

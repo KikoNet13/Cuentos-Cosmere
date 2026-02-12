@@ -5,16 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Cuentos Cosmere{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
-  <script src="https://unpkg.com/htmx.org@1.9.12"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container row between center">
       <a class="brand" href="{{ url_for('web.dashboard') }}">Cuentos Cosmere</a>
-      <small class="muted">Flask + Peewee + SQLite + HTMX</small>
+      <small class="muted">Biblioteca canónica + caché SQLite temporal</small>
     </div>
   </header>
   <main class="container">
+    {% if cache_status and cache_status.stale %}
+      <section class="flash-stack">
+        <div class="flash error">
+          <strong>Caché desactualizada.</strong>
+          Cambió `biblioteca/` desde el último refresco.
+          <form method="post" action="{{ url_for('web.cache_refresh') }}" class="inline-form">
+            <input type="hidden" name="next" value="{{ request.full_path if request else '/' }}">
+            <button type="submit">Actualizar caché</button>
+          </form>
+        </div>
+      </section>
+    {% endif %}
+
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
         <section class="flash-stack">
@@ -77,6 +89,45 @@
         if (feedback) {
           feedback.textContent = "No se pudo copiar; abre la imagen y copia manualmente";
           setTimeout(() => { feedback.textContent = ""; }, 2500);
+        }
+      }
+    }
+
+    async function pasteImageToHidden(inputId, feedbackId) {
+      const input = document.getElementById(inputId);
+      const feedback = document.getElementById(feedbackId);
+      if (!input) return;
+      if (!navigator.clipboard || !navigator.clipboard.read) {
+        if (feedback) {
+          feedback.textContent = "El navegador no soporta pegar imagen";
+        }
+        return;
+      }
+      try {
+        const items = await navigator.clipboard.read();
+        for (const item of items) {
+          const type = item.types.find(t => t.startsWith("image/"));
+          if (!type) continue;
+          const blob = await item.getType(type);
+          const reader = new FileReader();
+          reader.onload = () => {
+            input.value = String(reader.result || "");
+            if (feedback) {
+              feedback.textContent = "Imagen pegada y lista para guardar";
+              setTimeout(() => { feedback.textContent = ""; }, 1600);
+            }
+          };
+          reader.readAsDataURL(blob);
+          return;
+        }
+        if (feedback) {
+          feedback.textContent = "No se detectó imagen en el portapapeles";
+          setTimeout(() => { feedback.textContent = ""; }, 1800);
+        }
+      } catch (err) {
+        if (feedback) {
+          feedback.textContent = "No se pudo leer el portapapeles";
+          setTimeout(() => { feedback.textContent = ""; }, 1800);
         }
       }
     }

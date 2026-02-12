@@ -39,6 +39,9 @@ body {
 .row {
   display: flex;
 }
+.wrap {
+  flex-wrap: wrap;
+}
 .between {
   justify-content: space-between;
 }
@@ -294,6 +297,15 @@ pre {
   border: 1px solid var(--line);
   background: #fff;
 }
+.inline-form {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.top-gap {
+  margin-top: 10px;
+}
 
 .flash.success {
   border-color: #93d5cb;
@@ -314,3 +326,7 @@ pre {
   }
 }
 
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

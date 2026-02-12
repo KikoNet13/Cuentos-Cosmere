@@ -2,39 +2,50 @@
 
 Proyecto personal de cuentos ilustrados con flujo profesional.
 
-## Tecnologias
+## Arquitectura actual
 
-- Flask
-- Peewee
-- SQLite
-- HTMX (opcional)
-- Pipenv
+- Fuente de verdad: archivos en `biblioteca/`.
+- Contrato de cuento: `meta.md` + páginas `NNN.md`.
+- Prompt y narrativa: solo edición en Markdown.
+- Caché temporal: SQLite de lectura rápida (`db/library_cache.sqlite`).
+- UI: navegación, copia de texto/prompt/referencias y guardado de imágenes por slot.
 
-## Inicio rapido
+## Estructura canónica de cuento
 
-1. `pipenv install`
-2. `pipenv run python manage.py init-db`
-3. `pipenv run python manage.py migrate-models-v3`
-4. `pipenv run python manage.py import`
-5. `pipenv run python manage.py runserver --help`
+```text
+biblioteca/<ruta-nodos>/.../<cuento>/
+  meta.md
+  001.md
+  002.md
+  ...
+  assets/
+    imagenes/
+      pagina-001-principal.png
+  referencias/
+    referencia_pdf.pdf
+```
 
-## Contrato funcional
+## Flujo recomendado
 
-- La pagina es la unidad narrativa editable del cuento.
-- La imagen pertenece a una pagina o a una version de ancla.
-- Las anclas se versionan por saga (`Ancla` + `AnclaVersion`).
-- La paginacion depende del archivo `origen_md.md` importado.
-- `import` sincroniza solo paginas y referencias PDF.
+1. Migrar layout legacy (si aplica):
+   `python manage.py migrate-library-layout --apply`
+2. Reconstruir caché:
+   `python manage.py rebuild-cache`
+3. Abrir servidor cuando lo pidas explícitamente:
+   `python manage.py runserver`
 
-## Respaldo de imagenes
+## Comandos clave
 
-- Exportar: `pipenv run python manage.py export-imagenes`
-- Importar: `pipenv run python manage.py import-imagenes`
-- `export-prompts` e `import-prompts` quedan como alias deprecados.
+- `python manage.py migrate-library-layout --dry-run`
+- `python manage.py migrate-library-layout --apply`
+- `python manage.py rebuild-cache`
+- `python manage.py import`
+
+`import` queda como alias deprecado para migrar layout legacy y refrescar caché.
 
 ## Convenciones del repositorio
 
-- Operacion: `AGENTS.md`
+- Operación: `AGENTS.md`
 - Tareas: `docs/tasks/`
 - ADR: `docs/adr/`
-- Contexto: `docs/context/`
+- Contexto mínimo: `docs/context/`

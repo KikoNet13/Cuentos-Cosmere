@@ -5,6 +5,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parents[1]
 DB_PATH = BASE_DIR / "db" / "cosmere_stories.sqlite"
 BIBLIOTECA_DIR = BASE_DIR / "biblioteca"
+DATA_ROOT = BIBLIOTECA_DIR
+LIBRARY_CACHE_DB_PATH = BASE_DIR / "db" / "library_cache.sqlite"
 PROMPTS_BACKUP_JSON = (
     BIBLIOTECA_DIR
     / "nacidos-de-la-bruma-era-1"

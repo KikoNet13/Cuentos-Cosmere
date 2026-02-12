@@ -2,88 +2,58 @@
 
 ## Propósito
 
-Este repositorio es personal, pero se gestiona con criterios
-profesionales. Cada cambio debe priorizar claridad, trazabilidad,
-seguridad y repetibilidad.
+Este repositorio es personal, pero se mantiene con estándares profesionales:
+claridad, trazabilidad, seguridad y repetibilidad.
 
 ## Reglas operativas
 
 1. No ejecutar comandos persistentes sin petición explícita del usuario.
 2. `runserver` y bucles interactivos están prohibidos por defecto.
-3. Preferir validaciones finitas (`--help`, scripts acotados y límites).
-4. Evitar acciones destructivas fuera del alcance de la tarea en curso.
-5. Mantener una sola tarea planificada activa a la vez.
-6. Tras cada plan aprobado, registrar la tarea y cerrar con commit.
+3. Preferir validaciones finitas (`--help`, scripts acotados y timeouts).
+4. Evitar acciones destructivas fuera del alcance de la tarea activa.
+5. Tras cada plan aprobado, registrar tarea y cerrar con commit único.
 
-## Reglas de contenido y paginación
+## Contrato de datos vigente
 
-1. La paginación de textos es adaptativa al archivo importado.
-2. No existe un objetivo fijo obligatorio de 16 o 32 páginas.
-3. El archivo `origen_md.md` define la cantidad real de páginas.
-4. En `biblioteca/**/origen_md.md` no se fuerzan cortes de línea.
+1. Fuente de verdad: `biblioteca/`.
+2. Cuento canónico: carpeta con `meta.md` y páginas `NNN.md`.
+3. Prompt y narrativa se editan solo en `.md`.
+4. La UI no edita texto ni prompt; solo lee/copia y guarda imágenes.
+5. La paginación depende del archivo importado, sin objetivo fijo 16/32.
 
-## Reglas de validación
+## Caché y sincronización
 
-1. Ejecutar comprobaciones finitas y reproducibles.
-2. Registrar la validación en el archivo de tarea correspondiente.
-3. Documentar límites o comprobaciones no ejecutadas, con su motivo.
+1. SQLite se usa como caché temporal de lectura rápida.
+2. La caché se marca stale por fingerprint global de `biblioteca/`.
+3. Si está stale, se bloquean escrituras de imagen en UI.
+4. El refresco de caché se hace con `python manage.py rebuild-cache`.
 
 ## Sistema documental
 
-1. Este archivo es la fuente operativa única del repositorio.
-2. El detalle de ejecución vive en `docs/tasks/TAREA-*.md`.
-3. El índice de tareas vive en `docs/tasks/INDICE.md`.
-4. Las decisiones arquitectónicas viven en `docs/adr/`.
-5. El contexto operativo mínimo vive en `docs/context/`.
-6. `CHANGELOG.md` se mantiene breve y enlaza cada tarea cerrada.
+1. Este archivo es la guía operativa principal.
+2. Tareas: `docs/tasks/TAREA-*.md`.
+3. Índice de tareas: `docs/tasks/INDICE.md`.
+4. Decisiones arquitectónicas: `docs/adr/`.
+5. `CHANGELOG.md` se mantiene breve con referencia a tarea.
 
 ## Convención de tareas
 
-1. ID y nombre estándar: `TAREA-001-<slug>`.
-2. La numeración es global y continua en todo el repositorio.
-3. Fechas en tareas e índice: `dd/mm/aa HH:MM`.
-4. Formato de commit: `Tarea 001: <resumen>`.
-
-## Política ADR
-
-Crear ADR solo para decisiones arquitectónicas, por ejemplo:
-
-- gobernanza y contratos de proceso
-- políticas de persistencia y datos
-- contratos de importación y respaldo
-- cambios estructurales de largo plazo
-
-Estados permitidos:
-
-- propuesto
-- aceptado
-- reemplazado
-- obsoleto
+1. Formato: `TAREA-001-<slug>`.
+2. Numeración global continua del repositorio.
+3. Fecha en documentos: `dd/mm/aa HH:MM`.
+4. Mensaje de commit: `Tarea 001: <resumen>`.
 
 ## Flujo Git
 
 1. Rama única: `main`.
 2. Un commit por tarea planificada.
-3. No usar ramas de funcionalidad salvo necesidad excepcional.
+3. No usar ramas funcionales salvo necesidad excepcional.
 
-## Criterio de cierre de tarea
+## Cierre de tarea
 
-Una tarea se considera cerrada cuando:
+Una tarea se cierra cuando:
 
-1. El alcance acordado está implementado.
-2. Se ejecutó validación finita y reproducible.
-3. Se actualizó archivo de tarea e índice.
-4. Se añadió entrada breve en `CHANGELOG.md`.
-5. Se creó el commit final de la tarea.
-
-## Política de datos
-
-1. SQLite se mantiene en `db/`.
-2. Los archivos de base de datos no se versionan.
-3. Los flujos de importación y respaldo deben ser repetibles.
-
-## Higiene de contexto
-
-1. Mantener en `docs/context/` solo material operativo vigente.
-2. Eliminar exportaciones redundantes con `.md` canónico.
-3. Guardar referencias visuales en `docs/assets/style_refs/`.
+1. El alcance pactado está implementado.
+2. Se ejecutó validación finita reproducible.
+3. Se actualizaron archivo de tarea, índice y changelog breve.
+4. Se creó el commit final de la tarea.

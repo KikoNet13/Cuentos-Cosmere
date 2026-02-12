@@ -28,3 +28,10 @@ dist/
 db/*.sqlite
 db/*.sqlite-shm
 db/*.sqlite-wal
+db/*.sqlite-journal
+*.sqlite
+*.sqlite-*
+
+# Local probes/tests
+cache_write_probe_root.txt
+db/cache_write_probe.txt
