@@ -5,6 +5,13 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [13/02/26] - Limpieza de library para reinicio editorial
+
+- Se eliminaron de `library/nacidos-de-la-bruma-era-1/el-imperio-final` los archivos legacy `NN.md` y `NN.pdf`.
+- Se elimino `library/nacidos-de-la-bruma-era-1/anclas.md` como parte de la limpieza inicial.
+- La ingesta/editorial posterior queda delegada a la skill `revision-adaptacion-editorial`.
+- Tarea: `docs/tasks/TAREA-009-limpieza-library-el-imperio-final.md`.
+
 ## [13/02/26] - Skill editorial + runtime JSON sin SQLite
 
 - Se adopto `library/.../NN.json` como contrato canonico de runtime.

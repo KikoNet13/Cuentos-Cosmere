@@ -1,6 +1,6 @@
 # Indice de tareas
 
-- Proximo ID: `009`
+- Proximo ID: `010`
 
 ## TAREA-001-proyecto-profesional-contexto
 
@@ -81,3 +81,13 @@
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-008-skill-revision-adaptacion-json-sin-sqlite.md`
+
+## TAREA-009-limpieza-library-el-imperio-final
+
+- Fecha: 13/02/26 13:44
+- Estado: cerrada
+- Resumen: limpieza de `library/.../el-imperio-final` en remoto para reinicio editorial desde cero.
+- Version: 0.8.1
+- Commit: `pendiente`
+- ADR relacionadas: (ninguna)
+- Archivo: `docs/tasks/TAREA-009-limpieza-library-el-imperio-final.md`
