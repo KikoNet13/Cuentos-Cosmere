@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "story_id": "05",
+  "title": "Vin y el Fin del Invierno de Ceniza",
+  "status": "draft",
+  "book_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final",
+  "created_at": "2026-02-13T12:49:09.963763+00:00",
+  "updated_at": "2026-02-13T12:49:09.963763+00:00",
+  "pages": [
+    {
+      "page_number": 1,
+      "status": "draft",
+      "text": {
+        "original": "Tras la partida de Kelsier, la ciudad de Luthadel cambió para siempre. Aunque el cielo seguía siendo gris, miles de trabajadores encendieron antorchas en la noche. Ya no tenían miedo de las brumas porque recordaban que Kelsier les había dicho que la niebla era su amiga. Vin miraba desde los tejados cómo las luces de las antorchas parecían pequeñas estrellas bajadas a la tierra. Sentía una gran esperanza en su corazón, porque sabía que su maestro había dejado una chispa de valentía en cada persona.",
+        "current": "Tras la partida de Kelsier, la ciudad de Luthadel cambió para siempre. Aunque el cielo seguía siendo gris, miles de trabajadores encendieron antorchas en la noche. Ya no tenían miedo de las brumas porque recordaban que Kelsier les había dicho que la niebla era su amiga. Vin miraba desde los tejados cómo las luces de las antorchas parecían pequeñas estrellas bajadas a la tierra. Sentía una gran esperanza en su corazón, porque sabía que su maestro había dejado una chispa de valentía en cada persona."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Una vista panorámica de la ciudad de Luthadel de noche. Miles de puntitos de luz (antorchas) brillan en las calles oscuras, mientras Vin observa desde lo alto de una torre con una sonrisa tranquila.",
+            "current": "Una vista panorámica de la ciudad de Luthadel de noche. Miles de puntitos de luz (antorchas) brillan en las calles oscuras, mientras Vin observa desde lo alto de una torre con una sonrisa tranquila."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "status": "draft",
+      "text": {
+        "original": "Vin se reunió con sus amigos en un almacén secreto que Kelsier les había dejado. Al abrir las grandes puertas de madera, se quedaron con la boca abierta. ¡Estaba lleno de escudos, espadas y cascos brillantes! Kelsier había planeado todo para que los trabajadores pudieran protegerse y construir un mundo más justo. Dockson, el amigo de Kelsier, empezó a organizar a todos. Vin comprendió que Kelsier no solo era un héroe, sino también un gran arquitecto de sueños que quería que todos fueran felices.",
+        "current": "Vin se reunió con sus amigos en un almacén secreto que Kelsier les había dejado. Al abrir las grandes puertas de madera, se quedaron con la boca abierta. ¡Estaba lleno de escudos, espadas y cascos brillantes! Kelsier había planeado todo para que los trabajadores pudieran protegerse y construir un mundo más justo. Dockson, el amigo de Kelsier, empezó a organizar a todos. Vin comprendió que Kelsier no solo era un héroe, sino también un gran arquitecto de sueños que quería que todos fueran felices."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "El interior de un almacén iluminado por linternas. Hay montones de armaduras y herramientas brillantes. Vin, Dockson y Ham miran el tesoro con asombro y alegría.",
+            "current": "El interior de un almacén iluminado por linternas. Hay montones de armaduras y herramientas brillantes. Vin, Dockson y Ham miran el tesoro con asombro y alegría."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "status": "draft",
+      "text": {
+        "original": "De repente, apareció una criatura misteriosa que tenía la cara de Kelsier, pero sus ojos eran diferentes. Era un kandra, un ser mágico que podía cambiar su forma. El kandra les entregó un mapa con las últimas instrucciones de Kelsier. «Él quería que cuidarais este mundo», dijo la criatura con voz pausada. Vin sintió un poco de miedo al principio, pero luego supo que el kandra estaba allí para ayudarlos a terminar el gran plan de la libertad. ¡Kelsier seguía cuidándolos a través de sus amigos!.",
+        "current": "De repente, apareció una criatura misteriosa que tenía la cara de Kelsier, pero sus ojos eran diferentes. Era un kandra, un ser mágico que podía cambiar su forma. El kandra les entregó un mapa con las últimas instrucciones de Kelsier. «Él quería que cuidarais este mundo», dijo la criatura con voz pausada. Vin sintió un poco de miedo al principio, pero luego supo que el kandra estaba allí para ayudarlos a terminar el gran plan de la libertad. ¡Kelsier seguía cuidándolos a través de sus amigos!."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Una figura que se parece a Kelsier, pero con una piel un poco transparente y gelatinosa, entregando un pergamino enrollado a Vin. Sus amigos observan con respeto desde atrás.",
+            "current": "Una figura que se parece a Kelsier, pero con una piel un poco transparente y gelatinosa, entregando un pergamino enrollado a Vin. Sus amigos observan con respeto desde atrás."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "status": "draft",
+      "text": {
+        "original": "El mapa de Kelsier decía que cada amigo tenía una tarea importante. Brisa debía animar a la gente, Ham debía entrenar a los nuevos guardias y Dockson debía organizar la ciudad. Vin buscó su nombre en el mapa, pero no estaba. Entonces comprendió que su misión era la más especial: ella debía ir al Palacio Negro para hablar con el emperador y convencerlo de que dejara de ser un rey mandón. Vin se puso su capa de bruma y se preparó para su gran viaje final.",
+        "current": "El mapa de Kelsier decía que cada amigo tenía una tarea importante. Brisa debía animar a la gente, Ham debía entrenar a los nuevos guardias y Dockson debía organizar la ciudad. Vin buscó su nombre en el mapa, pero no estaba. Entonces comprendió que su misión era la más especial: ella debía ir al Palacio Negro para hablar con el emperador y convencerlo de que dejara de ser un rey mandón. Vin se puso su capa de bruma y se preparó para su gran viaje final."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin mirando un mapa grande extendido sobre una mesa de madera. Sus amigos ya están trabajando con brújulas y libros, mientras ella señala hacia la torre más alta del palacio imperial.",
+            "current": "Vin mirando un mapa grande extendido sobre una mesa de madera. Sus amigos ya están trabajando con brújulas y libros, mientras ella señala hacia la torre más alta del palacio imperial."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "status": "draft",
+      "text": {
+        "original": "Vin llegó al palacio volando entre las torres negras. Al entrar, no necesitó usar su fuerza. Habló con los guardias y les explicó que el mundo estaba cambiando. Muchos guardias, cansados de ser malos, decidieron dejar sus lanzas y unirse a la fiesta de la libertad. Vin avanzó por pasillos de mármol negro hasta llegar a una sala gigante. Allí, en un trono de oro, la esperaba el emperador. Parecía muy poderoso y serio, pero Vin ya no era la niña asustada de antes.",
+        "current": "Vin llegó al palacio volando entre las torres negras. Al entrar, no necesitó usar su fuerza. Habló con los guardias y les explicó que el mundo estaba cambiando. Muchos guardias, cansados de ser malos, decidieron dejar sus lanzas y unirse a la fiesta de la libertad. Vin avanzó por pasillos de mármol negro hasta llegar a una sala gigante. Allí, en un trono de oro, la esperaba el emperador. Parecía muy poderoso y serio, pero Vin ya no era la niña asustada de antes."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin caminando por un pasillo inmenso y elegante del palacio. Los guardias reales se apartan y la saludan con respeto mientras ella avanza hacia una luz brillante al fondo del salón.",
+            "current": "Vin caminando por un pasillo inmenso y elegante del palacio. Los guardias reales se apartan y la saludan con respeto mientras ella avanza hacia una luz brillante al fondo del salón."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "status": "draft",
+      "text": {
+        "original": "El emperador intentó asustar a Vin con su magia pesada, pero ella usó su metal número once. De pronto, Vin vio algo increíble: el emperador no era un dios, sino que hace mucho tiempo había sido un hombre normal llamado Rashek. Vin descubrió que el secreto de su poder estaba en unos brazaletes de metal que llevaba clavados en sus brazos. Sin esos brazaletes, el emperador perdería toda su fuerza mágica. Vin se dio cuenta de que incluso los reyes más grandes tienen secretos que los hacen humanos.",
+        "current": "El emperador intentó asustar a Vin con su magia pesada, pero ella usó su metal número once. De pronto, Vin vio algo increíble: el emperador no era un dios, sino que hace mucho tiempo había sido un hombre normal llamado Rashek. Vin descubrió que el secreto de su poder estaba en unos brazaletes de metal que llevaba clavados en sus brazos. Sin esos brazaletes, el emperador perdería toda su fuerza mágica. Vin se dio cuenta de que incluso los reyes más grandes tienen secretos que los hacen humanos."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin frente al trono del emperador. Ella está rodeada de una bruma azulada y ve una imagen transparente del pasado del rey: un hombre joven con ropas de pastor de ovejas.",
+            "current": "Vin frente al trono del emperador. Ella está rodeada de una bruma azulada y ve una imagen transparente del pasado del rey: un hombre joven con ropas de pastor de ovejas."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "status": "draft",
+      "text": {
+        "original": "¡Era una trampa! Los Inquisidores malvados atraparon a Vin y la encerraron en una jaula. En la jaula de al lado estaba su amigo Sazed, que había ido a rescatarla. Sazed estaba muy herido, pero le sonrió a Vin. «No te preocupes», le susurró. Sazed usó un secreto de su pueblo: se había tragado sus anillos de metal antes de que lo atraparan. De repente, el cuerpo de Sazed empezó a crecer y a volverse superfuerte. ¡Parecía un gigante de los cuentos que podía romper cualquier cosa!",
+        "current": "¡Era una trampa! Los Inquisidores malvados atraparon a Vin y la encerraron en una jaula. En la jaula de al lado estaba su amigo Sazed, que había ido a rescatarla. Sazed estaba muy herido, pero le sonrió a Vin. «No te preocupes», le susurró. Sazed usó un secreto de su pueblo: se había tragado sus anillos de metal antes de que lo atraparan. De repente, el cuerpo de Sazed empezó a crecer y a volverse superfuerte. ¡Parecía un gigante de los cuentos que podía romper cualquier cosa!"
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin y Sazed en dos jaulas de hierro. Sazed empieza a brillar y sus músculos crecen mucho, mientras los barrotes de su celda empiezan a doblarse como si fueran de papel.",
+            "current": "Vin y Sazed en dos jaulas de hierro. Sazed empieza a brillar y sus músculos crecen mucho, mientras los barrotes de su celda empiezan a doblarse como si fueran de papel."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "status": "draft",
+      "text": {
+        "original": "Sazed rompió los candados y liberó a Vin. Justo en ese momento, apareció Elend con un grupo de soldados valientes. Elend le entregó a Vin una bolsita con sus metales mágicos. «He venido a por ti, Valette», dijo Elend con mucha valentía. Vin bebió su jugo de metales y sintió que toda su energía regresaba. Estaba lista para la batalla final. Le dio un abrazo rápido a Elend y, con un salto gigante, volvió a la sala del trono para terminar su misión.",
+        "current": "Sazed rompió los candados y liberó a Vin. Justo en ese momento, apareció Elend con un grupo de soldados valientes. Elend le entregó a Vin una bolsita con sus metales mágicos. «He venido a por ti, Valette», dijo Elend con mucha valentía. Vin bebió su jugo de metales y sintió que toda su energía regresaba. Estaba lista para la batalla final. Le dio un abrazo rápido a Elend y, con un salto gigante, volvió a la sala del trono para terminar su misión."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Elend dándole la mano a Vin para ayudarla a salir de la zona de las jaulas. Sazed, ahora gigante, protege la puerta mientras los soldados de Elend vigilan el pasillo.",
+            "current": "Elend dándole la mano a Vin para ayudarla a salir de la zona de las jaulas. Sazed, ahora gigante, protege la puerta mientras los soldados de Elend vigilan el pasillo."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "status": "draft",
+      "text": {
+        "original": "Vin regresó ante el emperador. Él estaba muy enfadado y usó su magia para lanzar monedas y piedras contra ella. Pero Vin sintió que las brumas de la noche entraban por la ventana para ayudarla. La niebla se enroscó en sus brazos y le dio una fuerza que nunca había sentido. Vin comprendió que las brumas eran la magia de la naturaleza que quería que el mundo fuera libre. Con un grito de valentía, Vin se lanzó hacia el emperador para quitarle sus brazaletes mágicos.",
+        "current": "Vin regresó ante el emperador. Él estaba muy enfadado y usó su magia para lanzar monedas y piedras contra ella. Pero Vin sintió que las brumas de la noche entraban por la ventana para ayudarla. La niebla se enroscó en sus brazos y le dio una fuerza que nunca había sentido. Vin comprendió que las brumas eran la magia de la naturaleza que quería que el mundo fuera libre. Con un grito de valentía, Vin se lanzó hacia el emperador para quitarle sus brazaletes mágicos."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Una escena de mucha acción. Vin vuela por el aire rodeada de cintas de bruma blanca que la impulsan. El emperador intenta detenerla con ondas de choque rojas, pero ella es imparable.",
+            "current": "Una escena de mucha acción. Vin vuela por el aire rodeada de cintas de bruma blanca que la impulsan. El emperador intenta detenerla con ondas de choque rojas, pero ella es imparable."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "status": "draft",
+      "text": {
+        "original": "Vin logró agarrar los brazaletes y tiró de ellos con todas sus fuerzas. ¡Clinc! Los brazaletes cayeron al suelo y rodaron lejos. En ese instante, el emperador empezó a cambiar. Ya no era un joven fuerte, sino que se convirtió en un anciano muy, muy viejecito. Sin su magia de metales, el rey malo ya no podía hacer daño a nadie. Vin lo miró con un poco de pena, dándose cuenta de que el miedo solo dura mientras nosotros lo permitimos. ¡La ciudad era libre!.",
+        "current": "Vin logró agarrar los brazaletes y tiró de ellos con todas sus fuerzas. ¡Clinc! Los brazaletes cayeron al suelo y rodaron lejos. En ese instante, el emperador empezó a cambiar. Ya no era un joven fuerte, sino que se convirtió en un anciano muy, muy viejecito. Sin su magia de metales, el rey malo ya no podía hacer daño a nadie. Vin lo miró con un poco de pena, dándose cuenta de que el miedo solo dura mientras nosotros lo permitimos. ¡La ciudad era libre!."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin de pie, victoriosa, con los brazaletes en su mano. Frente a ella, el emperador se ha encogido y ahora es un anciano con el pelo blanco y ropas que le quedan muy grandes.",
+            "current": "Vin de pie, victoriosa, con los brazaletes en su mano. Frente a ella, el emperador se ha encogido y ahora es un anciano con el pelo blanco y ropas que le quedan muy grandes."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "status": "draft",
+      "text": {
+        "original": "Marsh, el hermano de Kelsier, apareció en la sala. Él también se había vuelto un héroe secreto y ayudó a Vin a poner orden en el palacio. El emperador, antes de quedarse dormido para siempre, le dijo a Vin: «No sabéis lo que hacéis». Pero Vin sabía que lo que estaban haciendo era traer la luz. Marsh prometió cuidar el palacio y asegurarse de que los guardias malvados no volvieran nunca más. La larga noche de mil años del Imperio Final por fin había terminado.",
+        "current": "Marsh, el hermano de Kelsier, apareció en la sala. Él también se había vuelto un héroe secreto y ayudó a Vin a poner orden en el palacio. El emperador, antes de quedarse dormido para siempre, le dijo a Vin: «No sabéis lo que hacéis». Pero Vin sabía que lo que estaban haciendo era traer la luz. Marsh prometió cuidar el palacio y asegurarse de que los guardias malvados no volvieran nunca más. La larga noche de mil años del Imperio Final por fin había terminado."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Marsh, con sus ropas oscuras, hablando con Vin en la sala del trono. El sol empieza a entrar por las ventanas, iluminando el mármol negro y convirtiéndolo en un lugar brillante.",
+            "current": "Marsh, con sus ropas oscuras, hablando con Vin en la sala del trono. El sol empieza a entrar por las ventanas, iluminando el mármol negro y convirtiéndolo en un lugar brillante."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "status": "draft",
+      "text": {
+        "original": "Sazed y Vin salieron al balcón del palacio. El sol estaba saliendo y, por primera vez en mucho tiempo, ¡era de color amarillo brillante! La ceniza gris dejó de caer y el cielo empezó a volverse de un azul precioso. La gente en las calles saltaba de alegría y cantaba canciones de libertad. Vin miró sus manos y vio que ya no estaban manchadas de ceniza. El mundo estaba despertando de un sueño muy largo y todo iba a empezar a florecer de nuevo.",
+        "current": "Sazed y Vin salieron al balcón del palacio. El sol estaba saliendo y, por primera vez en mucho tiempo, ¡era de color amarillo brillante! La ceniza gris dejó de caer y el cielo empezó a volverse de un azul precioso. La gente en las calles saltaba de alegría y cantaba canciones de libertad. Vin miró sus manos y vio que ya no estaban manchadas de ceniza. El mundo estaba despertando de un sueño muy largo y todo iba a empezar a florecer de nuevo."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin y Sazed en un balcón alto. El cielo sobre ellos es azul claro con un sol amarillo radiante. Abajo, en la ciudad, se ve a la gente bailando y celebrando.",
+            "current": "Vin y Sazed en un balcón alto. El cielo sobre ellos es azul claro con un sol amarillo radiante. Abajo, en la ciudad, se ve a la gente bailando y celebrando."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "status": "draft",
+      "text": {
+        "original": "Elend Venture se convirtió en el nuevo rey de la ciudad. Pero no era un rey mandón, sino un rey amable que escuchaba a todos. Elend escribió leyes nuevas en un librito para que todos los niños pudieran ir a la escuela y todas las familias tuvieran comida y casas bonitas. Vin lo ayudaba siempre, asegurándose de que nadie volviera a tratar mal a los skaa. Juntos, empezaron a limpiar la ciudad y a plantar semillas para que el verde volviera a los campos.",
+        "current": "Elend Venture se convirtió en el nuevo rey de la ciudad. Pero no era un rey mandón, sino un rey amable que escuchaba a todos. Elend escribió leyes nuevas en un librito para que todos los niños pudieran ir a la escuela y todas las familias tuvieran comida y casas bonitas. Vin lo ayudaba siempre, asegurándose de que nadie volviera a tratar mal a los skaa. Juntos, empezaron a limpiar la ciudad y a plantar semillas para que el verde volviera a los campos."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Elend sentado a una mesa con un grupo de trabajadores skaa, todos discutiendo y escribiendo en papeles. Vin está a su lado, sonriendo y apoyando su mano en el hombro de Elend.",
+            "current": "Elend sentado a una mesa con un grupo de trabajadores skaa, todos discutiendo y escribiendo en papeles. Vin está a su lado, sonriendo y apoyando su mano en el hombro de Elend."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "status": "draft",
+      "text": {
+        "original": "Sazed decidió viajar por todo el mundo para contar las historias de Kelsier y Vin. Quería que todos los niños supieran que, con valentía y buenos amigos, se puede vencer cualquier miedo. Sazed abrió sus libros antiguos y empezó a enseñar a la gente los nombres de las flores y de los animales que habían desaparecido. Vin le regaló una moneda de plata como recuerdo de su amistad. Sazed se despidió con una reverencia, feliz de ser el guardián de los recuerdos del mundo.",
+        "current": "Sazed decidió viajar por todo el mundo para contar las historias de Kelsier y Vin. Quería que todos los niños supieran que, con valentía y buenos amigos, se puede vencer cualquier miedo. Sazed abrió sus libros antiguos y empezó a enseñar a la gente los nombres de las flores y de los animales que habían desaparecido. Vin le regaló una moneda de plata como recuerdo de su amistad. Sazed se despidió con una reverencia, feliz de ser el guardián de los recuerdos del mundo."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Sazed con una mochila llena de libros, caminando por un sendero hacia el horizonte. Se detiene un momento para saludar con la mano a Vin, que lo despide desde lejos.",
+            "current": "Sazed con una mochila llena de libros, caminando por un sendero hacia el horizonte. Se detiene un momento para saludar con la mano a Vin, que lo despide desde lejos."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "status": "draft",
+      "text": {
+        "original": "Vin se sentó en el tejado del palacio una noche más. Pero esta vez no estaba sola. Elend subió con ella para mirar las estrellas. «Mira, Elend», dijo Vin señalando al cielo, «ahora las estrellas brillan de verdad». Vin recordó a su hermano Reen y comprendió que él la había querido a su manera. También pensó en Kelsier y supo que su sonrisa siempre viviría en las brumas. Vin ya no era la niña que se escondía; era la protectora de un reino lleno de luz.",
+        "current": "Vin se sentó en el tejado del palacio una noche más. Pero esta vez no estaba sola. Elend subió con ella para mirar las estrellas. «Mira, Elend», dijo Vin señalando al cielo, «ahora las estrellas brillan de verdad». Vin recordó a su hermano Reen y comprendió que él la había querido a su manera. También pensó en Kelsier y supo que su sonrisa siempre viviría en las brumas. Vin ya no era la niña que se escondía; era la protectora de un reino lleno de luz."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin y Elend sentados en el borde de un tejado, mirando un cielo nocturno lleno de estrellas brillantes y nítidas. Las brumas bailan suavemente alrededor de ellos de forma juguetona.",
+            "current": "Vin y Elend sentados en el borde de un tejado, mirando un cielo nocturno lleno de estrellas brillantes y nítidas. Las brumas bailan suavemente alrededor de ellos de forma juguetona."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "status": "draft",
+      "text": {
+        "original": "Vin sacó de su bolsillo el dibujo de la flor que Kelsier le había dado. Miró hacia abajo y vio que, entre las piedras del patio, ¡estaba brotando una pequeña planta verde! Era la primera flor de verdad en mil años. Vin sonrió y supo que el futuro sería hermoso. Cerró los ojos y sintió el abrazo de sus amigos y el calor del nuevo sol. La aventura de la bruma había terminado, pero la historia de un mundo lleno de colores acababa de empezar para siempre.",
+        "current": "Vin sacó de su bolsillo el dibujo de la flor que Kelsier le había dado. Miró hacia abajo y vio que, entre las piedras del patio, ¡estaba brotando una pequeña planta verde! Era la primera flor de verdad en mil años. Vin sonrió y supo que el futuro sería hermoso. Cerró los ojos y sintió el abrazo de sus amigos y el calor del nuevo sol. La aventura de la bruma había terminado, pero la historia de un mundo lleno de colores acababa de empezar para siempre."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Un primer plano de una pequeña flor de color amarillo brotando entre la ceniza vieja. Al fondo, se ve el reflejo de Vin y Elend dándose un abrazo bajo la luz del amanecer.",
+            "current": "Un primer plano de una pequeña flor de color amarillo brotando entre la ceniza vieja. Al fondo, se ve el reflejo de Vin y Elend dándose un abrazo bajo la luz del amanecer."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    }
+  ]
+}

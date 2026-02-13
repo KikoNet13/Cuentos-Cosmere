@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "story_id": "04",
+  "title": "Vin y la Chispa de la Esperanza",
+  "status": "draft",
+  "book_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final",
+  "created_at": "2026-02-13T12:49:09.959362+00:00",
+  "updated_at": "2026-02-13T12:49:09.959362+00:00",
+  "pages": [
+    {
+      "page_number": 1,
+      "status": "draft",
+      "text": {
+        "original": "Vin se despertó en su camita del taller de Clubs. Todavía le latía un poquito la cabeza porque había corrido muy rápido para ayudar a sus amigos. Al abrir los ojos, vio a su amigo Lestibournes cuidándola. Él le contó un secreto: Kelsier le había dado un nombre nuevo y más divertido, ¡ahora se llamaba Fantasma! Vin se sintió feliz de estar en casa, rodeada de sus amigos, quienes eran como una gran familia que siempre se cuidaba entre sí.",
+        "current": "Vin se despertó en su camita del taller de Clubs. Todavía le latía un poquito la cabeza porque había corrido muy rápido para ayudar a sus amigos. Al abrir los ojos, vio a su amigo Lestibournes cuidándola. Él le contó un secreto: Kelsier le había dado un nombre nuevo y más divertido, ¡ahora se llamaba Fantasma! Vin se sintió feliz de estar en casa, rodeada de sus amigos, quienes eran como una gran familia que siempre se cuidaba entre sí."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin despertando en una cama con mantas suaves, mientras Fantasma (un chico flaco con una gorra) le ofrece un vaso de agua. Kelsier asoma por la puerta con una sonrisa cariñosa.",
+            "current": "Vin despertando en una cama con mantas suaves, mientras Fantasma (un chico flaco con una gorra) le ofrece un vaso de agua. Kelsier asoma por la puerta con una sonrisa cariñosa."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "status": "draft",
+      "text": {
+        "original": "Kelsier llevó a todo el equipo a la gran plaza de la ciudad. El cielo estaba lleno de ceniza gris que caía como nieve oscura. De pronto, apareció un carruaje negro tirado por caballos blancos. ¡Era el Lord Legislador! Al verlo, todo el mundo se sintió muy triste y asustado porque el emperador usaba su magia para quitarles la alegría. Pero Kelsier, con su gran corazón, usó su propio poder para que sus amigos volvieran a sentirse valientes y fuertes.",
+        "current": "Kelsier llevó a todo el equipo a la gran plaza de la ciudad. El cielo estaba lleno de ceniza gris que caía como nieve oscura. De pronto, apareció un carruaje negro tirado por caballos blancos. ¡Era el Lord Legislador! Al verlo, todo el mundo se sintió muy triste y asustado porque el emperador usaba su magia para quitarles la alegría. Pero Kelsier, con su gran corazón, usó su propio poder para que sus amigos volvieran a sentirse valientes y fuertes."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Una plaza inmensa llena de gente skaa con ropas sencillas. En el centro, un carruaje negro muy elegante y brillante. Kelsier, oculto con una capa, brilla con una luz dorada que anima a sus amigos.",
+            "current": "Una plaza inmensa llena de gente skaa con ropas sencillas. En el centro, un carruaje negro muy elegante y brillante. Kelsier, oculto con una capa, brilla con una luz dorada que anima a sus amigos."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "status": "draft",
+      "text": {
+        "original": "Vin volvió a vestirse como una princesa para ir a un baile en el Torreón de Lekal. El salón tenía forma de pirámide y estaba lleno de vidrieras de colores que brillaban como joyas mágicas. Vin llevaba un vestido de color blanco puro, tan limpio que parecía brillar entre la multitud. Su misión era muy importante: debía escuchar los secretos de los nobles para ayudar al plan de libertad de Kelsier, mientras disfrutaba de la música suave y los dulces.",
+        "current": "Vin volvió a vestirse como una princesa para ir a un baile en el Torreón de Lekal. El salón tenía forma de pirámide y estaba lleno de vidrieras de colores que brillaban como joyas mágicas. Vin llevaba un vestido de color blanco puro, tan limpio que parecía brillar entre la multitud. Su misión era muy importante: debía escuchar los secretos de los nobles para ayudar al plan de libertad de Kelsier, mientras disfrutaba de la música suave y los dulces."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin con un vestido blanco precioso, caminando por un balcón con vidrieras de colores que proyectan luces rojas y azules en el suelo. Abajo, muchos nobles bailan en una pista circular.",
+            "current": "Vin con un vestido blanco precioso, caminando por un balcón con vidrieras de colores que proyectan luces rojas y azules en el suelo. Abajo, muchos nobles bailan en una pista circular."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "status": "draft",
+      "text": {
+        "original": "En la fiesta, Vin encontró a su amigo Elend Venture. Él estaba en un rincón leyendo un libro, como siempre. Elend le contó un gran secreto sobre las minas de atium, el tesoro más grande del emperador. Pero también estaba muy preocupado. «Vete de la ciudad, Valette», le susurró Elend, «se está volviendo un lugar muy peligroso para una niña como tú». Vin se sintió triste porque no quería dejar a su amigo solo en medio de tantos problemas.",
+        "current": "En la fiesta, Vin encontró a su amigo Elend Venture. Él estaba en un rincón leyendo un libro, como siempre. Elend le contó un gran secreto sobre las minas de atium, el tesoro más grande del emperador. Pero también estaba muy preocupado. «Vete de la ciudad, Valette», le susurró Elend, «se está volviendo un lugar muy peligroso para una niña como tú». Vin se sintió triste porque no quería dejar a su amigo solo en medio de tantos problemas."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin y Elend hablando en un balcón bajo la luz de la luna. Elend sostiene un libro gordo y parece muy serio, mientras Vin le coge la mano con cariño.",
+            "current": "Vin y Elend hablando en un balcón bajo la luz de la luna. Elend sostiene un libro gordo y parece muy serio, mientras Vin le coge la mano con cariño."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "status": "draft",
+      "text": {
+        "original": "De pronto, Vin descubrió que una dama malvada llamada Shan Elariel quería hacerle daño a Elend esa misma noche. ¡Vin tenía que salvarlo! Se quitó sus zapatos de cristal y corrió por los pasillos oscuros del castillo. Como no encontraba el camino, decidió saltar por una ventana gigante. Usó su magia de acero para salir volando hacia el tejado de bronce, mientras el viento soplaba fuerte y la bruma la envolvía como una manta de seda protectora.",
+        "current": "De pronto, Vin descubrió que una dama malvada llamada Shan Elariel quería hacerle daño a Elend esa misma noche. ¡Vin tenía que salvarlo! Se quitó sus zapatos de cristal y corrió por los pasillos oscuros del castillo. Como no encontraba el camino, decidió saltar por una ventana gigante. Usó su magia de acero para salir volando hacia el tejado de bronce, mientras el viento soplaba fuerte y la bruma la envolvía como una manta de seda protectora."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin rompiendo una ventana de cristal lavanda y saliendo despedida hacia el cielo nocturno. Su vestido blanco se agita y ella mira hacia el tejado con mucha determinación.",
+            "current": "Vin rompiendo una ventana de cristal lavanda y saliendo despedida hacia el cielo nocturno. Su vestido blanco se agita y ella mira hacia el tejado con mucha determinación."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "status": "draft",
+      "text": {
+        "original": "En el tejado, Vin se encontró con Shan y sus guardias. ¡Shan también tenía magia! Vin tuvo que ser muy valiente y rápida. Se quitó su vestido blanco para poder moverse mejor y se quedó con su ropa de heroína. Los guardias le lanzaban monedas mágicas, pero Vin las esquivaba saltando de un lado a otro. «¡No dejaré que le hagas daño a Elend!», gritó Vin. La batalla era difícil, pero Vin recordaba todos los trucos que Kelsier le había enseñado.",
+        "current": "En el tejado, Vin se encontró con Shan y sus guardias. ¡Shan también tenía magia! Vin tuvo que ser muy valiente y rápida. Se quitó su vestido blanco para poder moverse mejor y se quedó con su ropa de heroína. Los guardias le lanzaban monedas mágicas, pero Vin las esquivaba saltando de un lado a otro. «¡No dejaré que le hagas daño a Elend!», gritó Vin. La batalla era difícil, pero Vin recordaba todos los trucos que Kelsier le había enseñado."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin, en camisa y pantalones blancos, luchando contra Shan Elariel en un tejado de metal frío. Hay monedas volando por todas partes y líneas azules mágicas cruzando el aire.",
+            "current": "Vin, en camisa y pantalones blancos, luchando contra Shan Elariel en un tejado de metal frío. Hay monedas volando por todas partes y líneas azules mágicas cruzando el aire."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "status": "draft",
+      "text": {
+        "original": "Vin usó una perla mágica de atium para ver el futuro. ¡Ahora podía saber lo que Shan iba a hacer antes de que ocurriera! Shan intentó atacarla con sus dagas, pero Vin fue más lista. En el último momento, Vin atrapó una flecha que volaba por el aire y logró vencer a la dama malvada. Elend estaba a salvo gracias a su guardiana secreta. Vin miró hacia el castillo una última vez y desapareció entre las brumas, feliz de haber protegido a su amigo.",
+        "current": "Vin usó una perla mágica de atium para ver el futuro. ¡Ahora podía saber lo que Shan iba a hacer antes de que ocurriera! Shan intentó atacarla con sus dagas, pero Vin fue más lista. En el último momento, Vin atrapó una flecha que volaba por el aire y logró vencer a la dama malvada. Elend estaba a salvo gracias a su guardiana secreta. Vin miró hacia el castillo una última vez y desapareció entre las brumas, feliz de haber protegido a su amigo."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin girando en el aire con mucha agilidad, rodeada de sombras transparentes que le muestran el camino. Shan parece sorprendida mientras Vin se prepara para el movimiento final.",
+            "current": "Vin girando en el aire con mucha agilidad, rodeada de sombras transparentes que le muestran el camino. Shan parece sorprendida mientras Vin se prepara para el movimiento final."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "status": "draft",
+      "text": {
+        "original": "Kelsier también trabajaba mucho. Por las noches, se quitaba sus ropas de héroe y se ponía una capa vieja para visitar a las familias pobres en sus casitas. Les llevaba comida y les contaba historias para que no tuvieran miedo. «Caminad erguidos», les decía con una sonrisa, «porque sois personas valiosas». La gente lo miraba con mucho amor y lo llamaban el Señor de las Brumas. Kelsier les regalaba esperanza, que es la magia más poderosa de todas.",
+        "current": "Kelsier también trabajaba mucho. Por las noches, se quitaba sus ropas de héroe y se ponía una capa vieja para visitar a las familias pobres en sus casitas. Les llevaba comida y les contaba historias para que no tuvieran miedo. «Caminad erguidos», les decía con una sonrisa, «porque sois personas valiosas». La gente lo miraba con mucho amor y lo llamaban el Señor de las Brumas. Kelsier les regalaba esperanza, que es la magia más poderosa de todas."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Kelsier dentro de una casita humilde, rodeado de niños y padres skaa que lo miran con ojos brillantes. Él tiene las mangas subidas, mostrando sus cicatrices con orgullo.",
+            "current": "Kelsier dentro de una casita humilde, rodeado de niños y padres skaa que lo miran con ojos brillantes. Él tiene las mangas subidas, mostrando sus cicatrices con orgullo."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "status": "draft",
+      "text": {
+        "original": "Un día, Kelsier recibió una noticia muy triste: los guardias malvados se habían llevado a su hermano Marsh. Kelsier fue a buscarlo a un edificio oscuro, pero Marsh ya no estaba allí. Kelsier se sintió muy apenado y su mirada se volvió seria. Comprendió que el Lord Legislador era muy cruel y que tenía que hacer algo muy grande para detenerlo. «Me han golpeado donde más me duele», dijo Kelsier, «ahora yo haré lo mismo para salvar a mi pueblo».",
+        "current": "Un día, Kelsier recibió una noticia muy triste: los guardias malvados se habían llevado a su hermano Marsh. Kelsier fue a buscarlo a un edificio oscuro, pero Marsh ya no estaba allí. Kelsier se sintió muy apenado y su mirada se volvió seria. Comprendió que el Lord Legislador era muy cruel y que tenía que hacer algo muy grande para detenerlo. «Me han golpeado donde más me duele», dijo Kelsier, «ahora yo haré lo mismo para salvar a mi pueblo»."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Kelsier arrodillado en una habitación oscura con paredes de piedra. Vin está detrás de él, poniéndole una mano en el hombro para consolarlo, mientras la luz de una vela tiembla.",
+            "current": "Kelsier arrodillado en una habitación oscura con paredes de piedra. Vin está detrás de él, poniéndole una mano en el hombro para consolarlo, mientras la luz de una vela tiembla."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "status": "draft",
+      "text": {
+        "original": "Kelsier viajó hasta los Pozos de Hathsin, unas grietas profundas donde crecía el metal mágico del emperador. Usando su magia de hierro, Kelsier rompió todos los cristales mágicos de las cuevas. ¡Pum! ¡Chas! Al romperlos, el emperador ya no tendría más tesoros durante cientos de años. Kelsier salió de las cuevas muy cansado pero contento. Le había quitado al Lord Legislador su juguete favorito y ahora los trabajadores de las minas por fin eran libres para volver a casa.",
+        "current": "Kelsier viajó hasta los Pozos de Hathsin, unas grietas profundas donde crecía el metal mágico del emperador. Usando su magia de hierro, Kelsier rompió todos los cristales mágicos de las cuevas. ¡Pum! ¡Chas! Al romperlos, el emperador ya no tendría más tesoros durante cientos de años. Kelsier salió de las cuevas muy cansado pero contento. Le había quitado al Lord Legislador su juguete favorito y ahora los trabajadores de las minas por fin eran libres para volver a casa."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Kelsier dentro de una grieta de cristal brillante, tirando de líneas azules que rompen los cristales plateados. Un minero skaa lo mira asombrado desde las sombras de la cueva.",
+            "current": "Kelsier dentro de una grieta de cristal brillante, tirando de líneas azules que rompen los cristales plateados. Un minero skaa lo mira asombrado desde las sombras de la cueva."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "status": "draft",
+      "text": {
+        "original": "El Ministerio se enfadó mucho y atrapó a lord Renoux y al joven Fantasma para llevarlos a la plaza. Vin quería ayudarlos de inmediato, pero Kelsier le dijo que esperara. «Esta vez yo me encargaré», prometió él. Kelsier se preparó para el rescate más grande de su vida. Sabía que era una trampa, pero no podía dejar que sus amigos sufrieran. Reunió todas sus fuerzas y se puso su capa de bruma, listo para enfrentarse a cualquier peligro por su familia.",
+        "current": "El Ministerio se enfadó mucho y atrapó a lord Renoux y al joven Fantasma para llevarlos a la plaza. Vin quería ayudarlos de inmediato, pero Kelsier le dijo que esperara. «Esta vez yo me encargaré», prometió él. Kelsier se preparó para el rescate más grande de su vida. Sabía que era una trampa, pero no podía dejar que sus amigos sufrieran. Reunió todas sus fuerzas y se puso su capa de bruma, listo para enfrentarse a cualquier peligro por su familia."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Unos carros de madera con barrotes de hierro transportan a gente triste por la calle. Fantasma mira por los barrotes con esperanza, buscando a Kelsier entre la multitud.",
+            "current": "Unos carros de madera con barrotes de hierro transportan a gente triste por la calle. Fantasma mira por los barrotes con esperanza, buscando a Kelsier entre la multitud."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "status": "draft",
+      "text": {
+        "original": "Kelsier saltó desde un tejado y aterrizó justo delante de los carros. Con un gran empujón de su magia, lanzó a los guardias por los aires. «¡Salid! ¡Corred!», gritó Kelsier mientras rompía los candados de las jaulas. Sus amigos rebeldes llegaron para ayudar, y pronto la plaza se llenó de gritos de alegría. La gente, al ver que Kelsier luchaba por ellos, empezó a animarlo. ¡El Superviviente estaba ganando la batalla contra los soldados del emperador y salvando a todos!",
+        "current": "Kelsier saltó desde un tejado y aterrizó justo delante de los carros. Con un gran empujón de su magia, lanzó a los guardias por los aires. «¡Salid! ¡Corred!», gritó Kelsier mientras rompía los candados de las jaulas. Sus amigos rebeldes llegaron para ayudar, y pronto la plaza se llenó de gritos de alegría. La gente, al ver que Kelsier luchaba por ellos, empezó a animarlo. ¡El Superviviente estaba ganando la batalla contra los soldados del emperador y salvando a todos!"
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Kelsier en el centro de la acción, usando su magia para apartar a los soldados mientras la gente sale de los carros y corre hacia la libertad. Hay mucha luz y movimiento.",
+            "current": "Kelsier en el centro de la acción, usando su magia para apartar a los soldados mientras la gente sale de los carros y corre hacia la libertad. Hay mucha luz y movimiento."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "status": "draft",
+      "text": {
+        "original": "De pronto, apareció un Inquisidor gigante con hachas de piedra. ¡Era un monstruo muy fuerte! Kelsier y el Inquisidor empezaron a luchar de una forma increíble. Saltaban por los aires y se lanzaban trozos de metal como si fueran pelotas. Kelsier se movía tan rápido que parecía un rayo de plata. La gente se quedó muy callada mirando la pelea. Vin observaba desde lejos, asombrada de lo valiente y habilidoso que era su maestro. ¡Era la batalla de magia más grande jamás vista!",
+        "current": "De pronto, apareció un Inquisidor gigante con hachas de piedra. ¡Era un monstruo muy fuerte! Kelsier y el Inquisidor empezaron a luchar de una forma increíble. Saltaban por los aires y se lanzaban trozos de metal como si fueran pelotas. Kelsier se movía tan rápido que parecía un rayo de plata. La gente se quedó muy callada mirando la pelea. Vin observaba desde lejos, asombrada de lo valiente y habilidoso que era su maestro. ¡Era la batalla de magia más grande jamás vista!"
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Kelsier volando en el aire rodeado de espadas y cascos de metal que giran a su alrededor. El Inquisidor intenta atraparlo con sus grandes hachas negras en medio de la plaza.",
+            "current": "Kelsier volando en el aire rodeado de espadas y cascos de metal que giran a su alrededor. El Inquisidor intenta atraparlo con sus grandes hachas negras en medio de la plaza."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "status": "draft",
+      "text": {
+        "original": "Kelsier usó una piedra muy pesada y, con un golpe certero, logró atrapar la cabeza del Inquisidor contra la madera de un carro. ¡Lo había derrotado! La plaza entera estalló en gritos de felicidad: «¡Kelsier! ¡Kelsier!». Los trabajadores ya no tenían miedo y se abrazaban unos a otros. Kelsier, aunque estaba muy cansado y herido, sonrió a la multitud. Les había demostrado que incluso los monstruos más grandes podían ser vencidos si se luchaba con valor y esperanza.",
+        "current": "Kelsier usó una piedra muy pesada y, con un golpe certero, logró atrapar la cabeza del Inquisidor contra la madera de un carro. ¡Lo había derrotado! La plaza entera estalló en gritos de felicidad: «¡Kelsier! ¡Kelsier!». Los trabajadores ya no tenían miedo y se abrazaban unos a otros. Kelsier, aunque estaba muy cansado y herido, sonrió a la multitud. Les había demostrado que incluso los monstruos más grandes podían ser vencidos si se luchaba con valor y esperanza."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Kelsier de pie frente al carro volcado, con los brazos en alto. La gente a su alrededor tira sus gorras al aire y sonríe, celebrando la gran victoria del héroe.",
+            "current": "Kelsier de pie frente al carro volcado, con los brazos en alto. La gente a su alrededor tira sus gorras al aire y sonríe, celebrando la gran victoria del héroe."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "status": "draft",
+      "text": {
+        "original": "Pero entonces, el cielo se volvió más oscuro y llegó el Lord Legislador en persona. Bajó de su carruaje y caminó hacia Kelsier. Todo el mundo se quedó en silencio. Kelsier se puso frente a él y no se inclinó. «No puedes matarme», dijo Kelsier con voz firme, «porque yo soy la esperanza que siempre vivirá en el corazón de la gente». El emperador, muy enfadado, golpeó a Kelsier con su fuerza mágica. Kelsier cayó al suelo, pero su sonrisa seguía allí, brillando como una pequeña estrella.",
+        "current": "Pero entonces, el cielo se volvió más oscuro y llegó el Lord Legislador en persona. Bajó de su carruaje y caminó hacia Kelsier. Todo el mundo se quedó en silencio. Kelsier se puso frente a él y no se inclinó. «No puedes matarme», dijo Kelsier con voz firme, «porque yo soy la esperanza que siempre vivirá en el corazón de la gente». El emperador, muy enfadado, golpeó a Kelsier con su fuerza mágica. Kelsier cayó al suelo, pero su sonrisa seguía allí, brillando como una pequeña estrella."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Kelsier y el Lord Legislador frente a frente. El emperador viste de blanco y negro y tiene muchos anillos. Kelsier lo mira a los ojos sin miedo, bajo la ceniza que cae.",
+            "current": "Kelsier y el Lord Legislador frente a frente. El emperador viste de blanco y negro y tiene muchos anillos. Kelsier lo mira a los ojos sin miedo, bajo la ceniza que cae."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "status": "draft",
+      "text": {
+        "original": "Vin corrió hacia la plaza y abrazó a su amigo. Estaba muy triste, pero entonces recordó lo que Kelsier le había enseñado: la magia más importante no está en los metales, sino en creer que el mundo puede ser mejor. Aunque Kelsier tuviera que marcharse, su luz se quedó dentro de Vin y de toda la gente de la ciudad. Vin miró al cielo y prometió que seguiría luchando. Algún día, el sol volvería a ser amarillo y las flores crecerían de nuevo por fin.",
+        "current": "Vin corrió hacia la plaza y abrazó a su amigo. Estaba muy triste, pero entonces recordó lo que Kelsier le había enseñado: la magia más importante no está en los metales, sino en creer que el mundo puede ser mejor. Aunque Kelsier tuviera que marcharse, su luz se quedó dentro de Vin y de toda la gente de la ciudad. Vin miró al cielo y prometió que seguiría luchando. Algún día, el sol volvería a ser amarillo y las flores crecerían de nuevo por fin."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin sentada en el suelo de la plaza, mirando hacia el cielo rojo con una expresión valiente. A su alrededor, la gente empieza a encender antorchas, creando un mar de luces de esperanza.",
+            "current": "Vin sentada en el suelo de la plaza, mirando hacia el cielo rojo con una expresión valiente. A su alrededor, la gente empieza a encender antorchas, creando un mar de luces de esperanza."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    }
+  ]
+}

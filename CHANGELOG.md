@@ -5,6 +5,13 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [13/02/26] - Ingesta editorial de El imperio final a JSON canonico
+
+- Se procesaron las propuestas `01-05.md` de `library/_inbox/El imperio final` (incluyendo `_future`).
+- Se crearon `01.json` a `05.json` en `library/cosmere/nacidos-de-la-bruma-era-1/el-imperio-final`.
+- Cada cuento quedo con 16 paginas en contrato canónico: `text.original/current`, `images.main.prompt.original/current`, `active_id`, `alternatives`.
+- Tarea: `docs/tasks/TAREA-010-ingesta-editorial-el-imperio-final-json.md`.
+
 ## [13/02/26] - Limpieza de library para reinicio editorial
 
 - Se eliminaron de `library/nacidos-de-la-bruma-era-1/el-imperio-final` los archivos legacy `NN.md` y `NN.pdf`.

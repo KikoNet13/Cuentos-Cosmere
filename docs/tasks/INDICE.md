@@ -1,6 +1,6 @@
 # Indice de tareas
 
-- Proximo ID: `010`
+- Proximo ID: `011`
 
 ## TAREA-001-proyecto-profesional-contexto
 
@@ -91,3 +91,13 @@
 - Commit: `pendiente`
 - ADR relacionadas: (ninguna)
 - Archivo: `docs/tasks/TAREA-009-limpieza-library-el-imperio-final.md`
+
+## TAREA-010-ingesta-editorial-el-imperio-final-json
+
+- Fecha: 13/02/26 13:49
+- Estado: cerrada
+- Resumen: ingesta editorial de `El imperio final` a `NN.json` en `library/cosmere/.../el-imperio-final`.
+- Version: 0.9.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`
+- Archivo: `docs/tasks/TAREA-010-ingesta-editorial-el-imperio-final-json.md`

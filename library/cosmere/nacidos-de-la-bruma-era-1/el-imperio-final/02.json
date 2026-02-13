@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "story_id": "02",
+  "title": "Vin y el Misterio del Palacio Negro",
+  "status": "draft",
+  "book_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final",
+  "created_at": "2026-02-13T12:49:09.951807+00:00",
+  "updated_at": "2026-02-13T12:49:09.951807+00:00",
+  "pages": [
+    {
+      "page_number": 1,
+      "status": "draft",
+      "text": {
+        "original": "Vin se sentía cada vez más valiente. Ahora, cuando saltaba entre las brumas, ya no tenía miedo de caer. Kelsier le enseñó un truco increíble: podía ver unas líneas azules mágicas que salían de su pecho y apuntaban a todos los metales de la ciudad. Al empujar esas líneas, Vin salía disparada por los aires como si tuviera alas invisibles. Era una sensación de libertad maravillosa. Kelsier estaba muy orgulloso de ella porque Vin aprendía mucho más rápido que cualquier otro aprendiz.",
+        "current": "Vin se sentía cada vez más valiente. Ahora, cuando saltaba entre las brumas, ya no tenía miedo de caer. Kelsier le enseñó un truco increíble: podía ver unas líneas azules mágicas que salían de su pecho y apuntaban a todos los metales de la ciudad. Al empujar esas líneas, Vin salía disparada por los aires como si tuviera alas invisibles. Era una sensación de libertad maravillosa. Kelsier estaba muy orgulloso de ella porque Vin aprendía mucho más rápido que cualquier otro aprendiz."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin saltando entre dos chimeneas de piedra en una noche de niebla. De su pecho salen líneas azules brillantes que tocan las veletas de metal de los tejados, impulsándola hacia arriba con mucha gracia.",
+            "current": "Vin saltando entre dos chimeneas de piedra en una noche de niebla. De su pecho salen líneas azules brillantes que tocan las veletas de metal de los tejados, impulsándola hacia arriba con mucha gracia."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "status": "draft",
+      "text": {
+        "original": "Un día, Kelsier llevó a Vin a una zona muy humilde de la ciudad para conocer a otros trabajadores. Allí, Vin se puso una capucha para que nadie la reconociera. Entraron en un comedor secreto donde Brisa, el maestro de los sentimientos, la estaba esperando. Brisa siempre iba muy elegante y tenía un bastón brillante. Él quería enseñarle a Vin que la magia no solo servía para saltar, sino también para ayudar a que la gente se sintiera mejor y perdiera el miedo.",
+        "current": "Un día, Kelsier llevó a Vin a una zona muy humilde de la ciudad para conocer a otros trabajadores. Allí, Vin se puso una capucha para que nadie la reconociera. Entraron en un comedor secreto donde Brisa, el maestro de los sentimientos, la estaba esperando. Brisa siempre iba muy elegante y tenía un bastón brillante. Él quería enseñarle a Vin que la magia no solo servía para saltar, sino también para ayudar a que la gente se sintiera mejor y perdiera el miedo."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin y Kelsier entrando en una habitación acogedora iluminada por linternas. Brisa está sentado a una mesa, sonriendo y sosteniendo su bastón de madera oscura, mientras varios trabajadores descansan en silencio a su alrededor.",
+            "current": "Vin y Kelsier entrando en una habitación acogedora iluminada por linternas. Brisa está sentado a una mesa, sonriendo y sosteniendo su bastón de madera oscura, mientras varios trabajadores descansan en silencio a su alrededor."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "status": "draft",
+      "text": {
+        "original": "Brisa le enseñó a Vin un secreto muy importante: para ayudar a los demás, primero hay que saber cómo se sienten. «No puedes usar la magia a lo bruto», le dijo Brisa con una sonrisa. Le enseñó a dar \"empujoncitos\" suaves a las emociones de las personas. Vin practicó intentando que los trabajadores, que estaban muy tristes y cansados, se sintieran un poquito más valientes. Aprendió que la magia emocional era como una caricia invisible que podía dar mucha fuerza al corazón de la gente.",
+        "current": "Brisa le enseñó a Vin un secreto muy importante: para ayudar a los demás, primero hay que saber cómo se sienten. «No puedes usar la magia a lo bruto», le dijo Brisa con una sonrisa. Le enseñó a dar \"empujoncitos\" suaves a las emociones de las personas. Vin practicó intentando que los trabajadores, que estaban muy tristes y cansados, se sintieran un poquito más valientes. Aprendió que la magia emocional era como una caricia invisible que podía dar mucha fuerza al corazón de la gente."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Brisa señala a un grupo de personas. De sus manos salen unas ondas de luz de colores muy suaves que envuelven a los trabajadores, quienes empiezan a levantar la cabeza y a sonreír con esperanza.",
+            "current": "Brisa señala a un grupo de personas. De sus manos salen unas ondas de luz de colores muy suaves que envuelven a los trabajadores, quienes empiezan a levantar la cabeza y a sonreír con esperanza."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "status": "draft",
+      "text": {
+        "original": "De repente, Kelsier se levantó para hablar delante de todos. No llevaba sus ropas de héroe, sino una casaca sencilla de trabajador. Les habló de un futuro donde todos podrían ser libres y felices. Los trabajadores lo escuchaban con los ojos muy abiertos. Al final, Kelsier les mostró las cicatrices de sus brazos para demostrarles que, aunque el camino fuera difícil, siempre se podía sobrevivir. Todos sintieron que, con Kelsier y Vin a su lado, nada era imposible.",
+        "current": "De repente, Kelsier se levantó para hablar delante de todos. No llevaba sus ropas de héroe, sino una casaca sencilla de trabajador. Les habló de un futuro donde todos podrían ser libres y felices. Los trabajadores lo escuchaban con los ojos muy abiertos. Al final, Kelsier les mostró las cicatrices de sus brazos para demostrarles que, aunque el camino fuera difícil, siempre se podía sobrevivir. Todos sintieron que, con Kelsier y Vin a su lado, nada era imposible."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Kelsier de pie ante una multitud de trabajadores skaa. Tiene las mangas subidas mostrando sus cicatrices y una expresión de mucha determinación, mientras la gente lo mira con admiración bajo la luz de las antorchas.",
+            "current": "Kelsier de pie ante una multitud de trabajadores skaa. Tiene las mangas subidas mostrando sus cicatrices y una expresión de mucha determinación, mientras la gente lo mira con admiración bajo la luz de las antorchas."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "status": "draft",
+      "text": {
+        "original": "Pero no todo era felicidad. Kelsier y Vin descubrieron que los guardias malvados del emperador habían encontrado su antiguo escondite. Cuando llegaron allí, todo estaba desordenado y en silencio. Vin se sintió muy triste porque comprendió que el Inquisidor de ojos de acero todavía la estaba buscando. Kelsier le puso una mano en el hombro para consolarla y le prometió que estarían a salvo si seguían trabajando juntos. Vin juró que sería muy cuidadosa para no ser descubierta.",
+        "current": "Pero no todo era felicidad. Kelsier y Vin descubrieron que los guardias malvados del emperador habían encontrado su antiguo escondite. Cuando llegaron allí, todo estaba desordenado y en silencio. Vin se sintió muy triste porque comprendió que el Inquisidor de ojos de acero todavía la estaba buscando. Kelsier le puso una mano en el hombro para consolarla y le prometió que estarían a salvo si seguían trabajando juntos. Vin juró que sería muy cuidadosa para no ser descubierta."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin y Kelsier frente a una puerta de madera astillada y rota. El interior de la habitación está a oscuras y se ve un poco de ceniza entrando por la ventana, creando un ambiente de mucho misterio.",
+            "current": "Vin y Kelsier frente a una puerta de madera astillada y rota. El interior de la habitación está a oscuras y se ve un poco de ceniza entrando por la ventana, creando un ambiente de mucho misterio."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "status": "draft",
+      "text": {
+        "original": "Kelsier encontró un mensaje que los guardias habían dejado para asustarlos. Era una señal de que el emperador sabía que el \"Superviviente\" había regresado. Pero Kelsier no tuvo miedo. «Quieren que estemos asustados, pero nosotros seremos más listos», le dijo a Vin. Decidieron que era el momento de que Vin empezara su misión secreta en los castillos de los nobles. Vin tendría que ser muy astuta para descubrir los planes del emperador sin que nadie sospechara de ella.",
+        "current": "Kelsier encontró un mensaje que los guardias habían dejado para asustarlos. Era una señal de que el emperador sabía que el \"Superviviente\" había regresado. Pero Kelsier no tuvo miedo. «Quieren que estemos asustados, pero nosotros seremos más listos», le dijo a Vin. Decidieron que era el momento de que Vin empezara su misión secreta en los castillos de los nobles. Vin tendría que ser muy astuta para descubrir los planes del emperador sin que nadie sospechara de ella."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Kelsier mirando una pared con una marca extraña grabada en la piedra. Vin está a su lado, sujetando con fuerza su capa de bruma, mientras las sombras de la habitación parecen bailar a su alrededor.",
+            "current": "Kelsier mirando una pared con una marca extraña grabada en la piedra. Vin está a su lado, sujetando con fuerza su capa de bruma, mientras las sombras de la habitación parecen bailar a su alrededor."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "status": "draft",
+      "text": {
+        "original": "¡Llegó el día del primer baile real! Sazed ayudó a Vin a prepararse. Le cortaron el pelo para que luciera muy elegante y le pusieron un vestido celeste precioso con lazos blancos. También llevaba joyas brillantes de color azul que hacían juego con sus ojos. Vin se miró en el espejo y parecía una verdadera princesa. Estaba muy nerviosa, pero Sazed le recordó que lady Valette era su mejor disfraz. Con un suspiro valiente, Vin subió al carruaje para ir al castillo.",
+        "current": "¡Llegó el día del primer baile real! Sazed ayudó a Vin a prepararse. Le cortaron el pelo para que luciera muy elegante y le pusieron un vestido celeste precioso con lazos blancos. También llevaba joyas brillantes de color azul que hacían juego con sus ojos. Vin se miró en el espejo y parecía una verdadera princesa. Estaba muy nerviosa, pero Sazed le recordó que lady Valette era su mejor disfraz. Con un suspiro valiente, Vin subió al carruaje para ir al castillo."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin mirándose en un gran espejo dorado. Lleva un vestido de seda azul muy pomposo y pasadores brillantes en su pelo corto. Sazed, muy alto y serio, está detrás de ella ajustándole un collar.",
+            "current": "Vin mirándose en un gran espejo dorado. Lleva un vestido de seda azul muy pomposo y pasadores brillantes en su pelo corto. Sazed, muy alto y serio, está detrás de ella ajustándole un collar."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "status": "draft",
+      "text": {
+        "original": "El castillo del emperador, llamado el Torreón Venture, era gigantesco y estaba lleno de luces mágicas que brillaban como pequeñas hogueras. Al entrar, Vin se quedó asombrada por el tamaño del salón. Las paredes tenían vidrieras de colores que contaban historias antiguas. Vin caminó con mucho cuidado para no tropezar con su vestido largo. Había cientos de nobles bailando y riendo, pero Vin se sentó en una mesita apartada para observar a todo el mundo sin ser vista.",
+        "current": "El castillo del emperador, llamado el Torreón Venture, era gigantesco y estaba lleno de luces mágicas que brillaban como pequeñas hogueras. Al entrar, Vin se quedó asombrada por el tamaño del salón. Las paredes tenían vidrieras de colores que contaban historias antiguas. Vin caminó con mucho cuidado para no tropezar con su vestido largo. Había cientos de nobles bailando y riendo, pero Vin se sentó en una mesita apartada para observar a todo el mundo sin ser vista."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Una vista gran angular del salón de baile, con techos altísimos y vidrieras de colores. Hay cientos de personas vestidas de gala bailando en el centro, y Vin se ve pequeña en una mesa lateral.",
+            "current": "Una vista gran angular del salón de baile, con techos altísimos y vidrieras de colores. Hay cientos de personas vestidas de gala bailando en el centro, y Vin se ve pequeña en una mesa lateral."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "status": "draft",
+      "text": {
+        "original": "Para descansar un poco del ruido de la fiesta, Vin subió a un balcón muy alto. Allí, en la tranquilidad de la noche, encontró a un chico joven leyendo un libro. Se llamaba Elend. Elend no era como los otros nobles presumidos; él prefería leer historias que bailar. Se pusieron a charlar sobre libros y Vin se sintió muy cómoda con él. Elend no sabía que Vin era una heroína secreta, y Vin no sabía que Elend era un príncipe muy importante.",
+        "current": "Para descansar un poco del ruido de la fiesta, Vin subió a un balcón muy alto. Allí, en la tranquilidad de la noche, encontró a un chico joven leyendo un libro. Se llamaba Elend. Elend no era como los otros nobles presumidos; él prefería leer historias que bailar. Se pusieron a charlar sobre libros y Vin se sintió muy cómoda con él. Elend no sabía que Vin era una heroína secreta, y Vin no sabía que Elend era un príncipe muy importante."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin y Elend en un balcón de piedra bajo la luz de la luna. Elend sostiene un libro gordo y Vin sonríe mientras conversan, con la fiesta brillando a través de las ventanas detrás de ellos.",
+            "current": "Vin y Elend en un balcón de piedra bajo la luz de la luna. Elend sostiene un libro gordo y Vin sonríe mientras conversan, con la fiesta brillando a través de las ventanas detrás de ellos."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "status": "draft",
+      "text": {
+        "original": "Kelsier decidió que debían entrar en el Palacio Negro, el lugar donde vivía el emperador, para buscar un secreto. Vin insistió en acompañarlo. Era una misión muy peligrosa porque el palacio tenía mil torres negras acabadas en punta. Se movieron en silencio bajo la lluvia, saltando de torre en torre. Vin sentía que el palacio era un sitio muy triste y oscuro, pero usó su magia de cobre para proteger su mente y seguir adelante con mucha valentía.",
+        "current": "Kelsier decidió que debían entrar en el Palacio Negro, el lugar donde vivía el emperador, para buscar un secreto. Vin insistió en acompañarlo. Era una misión muy peligrosa porque el palacio tenía mil torres negras acabadas en punta. Se movieron en silencio bajo la lluvia, saltando de torre en torre. Vin sentía que el palacio era un sitio muy triste y oscuro, pero usó su magia de cobre para proteger su mente y seguir adelante con mucha valentía."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin y Kelsier agazapados en la punta de una torre negra muy afilada. Está lloviendo y el palacio se ve inmenso y tenebroso, con muchas luces rojas en las ventanas inferiores.",
+            "current": "Vin y Kelsier agazapados en la punta de una torre negra muy afilada. Está lloviendo y el palacio se ve inmenso y tenebroso, con muchas luces rojas en las ventanas inferiores."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "status": "draft",
+      "text": {
+        "original": "¡Era una trampa! Tres Inquisidores con clavos en los ojos aparecieron de repente para atraparlos. Kelsier le gritó a Vin: «¡Corre, vete de aquí!». Kelsier se enfrentó a los monstruos para que Vin pudiera escapar. Vin tuvo que usar toda su velocidad para correr por los pasillos de mármol negro. Un Inquisidor muy rápido empezó a perseguirla, lanzándole trozos de metal. Vin se asustó mucho, pero recordó que tenía un metal especial que Kelsier le había dado para las emergencias.",
+        "current": "¡Era una trampa! Tres Inquisidores con clavos en los ojos aparecieron de repente para atraparlos. Kelsier le gritó a Vin: «¡Corre, vete de aquí!». Kelsier se enfrentó a los monstruos para que Vin pudiera escapar. Vin tuvo que usar toda su velocidad para correr por los pasillos de mármol negro. Un Inquisidor muy rápido empezó a perseguirla, lanzándole trozos de metal. Vin se asustó mucho, pero recordó que tenía un metal especial que Kelsier le había dado para las emergencias."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Kelsier luchando contra dos figuras altas con túnicas negras en una sala de mármol. Al fondo, Vin corre hacia un pasillo oscuro mientras un tercer Inquisidor la persigue de cerca.",
+            "current": "Kelsier luchando contra dos figuras altas con túnicas negras en una sala de mármol. Al fondo, Vin corre hacia un pasillo oscuro mientras un tercer Inquisidor la persigue de cerca."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "status": "draft",
+      "text": {
+        "original": "Vin se tragó la pequeña perla de plata llamada atium. ¡De repente, pudo ver el futuro! Veía sombras de lo que el Inquisidor iba a hacer antes de que ocurriera. Gracias a esta magia, Vin pudo esquivar todos los ataques y saltar por una ventana hacia la noche lluviosa. Se lanzó al vacío y usó las torres de metal para impulsarse lejos del palacio. Aunque estaba herida y cansada, no se rindió y buscó un lugar oscuro donde esconderse entre la lluvia y la niebla.",
+        "current": "Vin se tragó la pequeña perla de plata llamada atium. ¡De repente, pudo ver el futuro! Veía sombras de lo que el Inquisidor iba a hacer antes de que ocurriera. Gracias a esta magia, Vin pudo esquivar todos los ataques y saltar por una ventana hacia la noche lluviosa. Se lanzó al vacío y usó las torres de metal para impulsarse lejos del palacio. Aunque estaba herida y cansada, no se rindió y buscó un lugar oscuro donde esconderse entre la lluvia y la niebla."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin en el aire, rodeada de sombras transparentes que le muestran dónde van a caer las flechas del enemigo. Ella gira en el aire con mucha agilidad para esquivarlas todas.",
+            "current": "Vin en el aire, rodeada de sombras transparentes que le muestran dónde van a caer las flechas del enemigo. Ella gira en el aire con mucha agilidad para esquivarlas todas."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "status": "draft",
+      "text": {
+        "original": "La persecución entre las torres fue muy emocionante. El Inquisidor saltaba tras ella como una sombra malvada. Vin tuvo una idea brillante: lanzó su libro de metal hacia un lado para engañar al monstruo. El Inquisidor pensó que era Vin y saltó hacia allí. Vin aprovechó ese momento para esconderse en un rincón muy oscuro de un tejado alto. Allí se quedó tiritando de frío, intentando no hacer ningún ruido mientras la lluvia limpiaba sus heridas mágicas.",
+        "current": "La persecución entre las torres fue muy emocionante. El Inquisidor saltaba tras ella como una sombra malvada. Vin tuvo una idea brillante: lanzó su libro de metal hacia un lado para engañar al monstruo. El Inquisidor pensó que era Vin y saltó hacia allí. Vin aprovechó ese momento para esconderse en un rincón muy oscuro de un tejado alto. Allí se quedó tiritando de frío, intentando no hacer ningún ruido mientras la lluvia limpiaba sus heridas mágicas."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin escondida en el hueco de una torre, abrazada a sus rodillas. Por encima de ella, se ve la silueta del Inquisidor saltando hacia otra dirección, engañado por el truco del libro.",
+            "current": "Vin escondida en el hueco de una torre, abrazada a sus rodillas. Por encima de ella, se ve la silueta del Inquisidor saltando hacia otra dirección, engañado por el truco del libro."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "status": "draft",
+      "text": {
+        "original": "Vin sentía que ya no podía más y cerró los ojos. Pero entonces, unos brazos muy fuertes y amables la levantaron del suelo. ¡Era Sazed! Él había ido a buscarla porque estaba muy preocupado. Sazed la abrazó con mucho cariño y la llevó volando hacia un lugar seguro. Vin se sintió a salvo por fin. Sazed era como un hermano mayor que siempre aparecía cuando más lo necesitaba, y la llevó de vuelta al taller de Clubs para que sus amigos la curaran.",
+        "current": "Vin sentía que ya no podía más y cerró los ojos. Pero entonces, unos brazos muy fuertes y amables la levantaron del suelo. ¡Era Sazed! Él había ido a buscarla porque estaba muy preocupado. Sazed la abrazó con mucho cariño y la llevó volando hacia un lugar seguro. Vin se sintió a salvo por fin. Sazed era como un hermano mayor que siempre aparecía cuando más lo necesitaba, y la llevó de vuelta al taller de Clubs para que sus amigos la curaran."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Sazed, el hombre alto de Terris, llevando a Vin en brazos a través de la lluvia. Vin está envuelta en su capa y parece dormir tranquilamente mientras Sazed camina con mucha decisión.",
+            "current": "Sazed, el hombre alto de Terris, llevando a Vin en brazos a través de la lluvia. Vin está envuelta en su capa y parece dormir tranquilamente mientras Sazed camina con mucha decisión."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "status": "draft",
+      "text": {
+        "original": "Vin pasó varios días descansando. Sus amigos Ham, Brisa y Clubs se turnaban para cuidarla y darle zumos de metales para que recuperara su fuerza. Kelsier se sentía un poco culpable por haberla llevado al palacio, pero Vin le sonrió y le dijo que ahora era mucho más fuerte. Sazed le curó las heridas con sus medicinas especiales y pronto Vin pudo volver a levantarse. Comprendió que su banda era una familia de verdad que nunca la abandonaría en los momentos difíciles.",
+        "current": "Vin pasó varios días descansando. Sus amigos Ham, Brisa y Clubs se turnaban para cuidarla y darle zumos de metales para que recuperara su fuerza. Kelsier se sentía un poco culpable por haberla llevado al palacio, pero Vin le sonrió y le dijo que ahora era mucho más fuerte. Sazed le curó las heridas con sus medicinas especiales y pronto Vin pudo volver a levantarse. Comprendió que su banda era una familia de verdad que nunca la abandonaría en los momentos difíciles."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin sentada en su cama, rodeada de todos sus amigos. Kelsier le ofrece un vaso, Ham le cuenta un chiste y Sazed le pone una venda limpia. Todos se ven muy unidos y felices.",
+            "current": "Vin sentada en su cama, rodeada de todos sus amigos. Kelsier le ofrece un vaso, Ham le cuenta un chiste y Sazed le pone una venda limpia. Todos se ven muy unidos y felices."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "status": "draft",
+      "text": {
+        "original": "Sazed encontró un libro muy misterioso en el palacio que Vin había usado para protegerse. Estaba escrito en un idioma antiguo que casi nadie recordaba. «Este libro tiene el secreto para traer la paz», dijo Sazed con mucha esperanza. Vin miró por la ventana y vio que, aunque el mundo seguía siendo gris, ella ahora tenía amigos y un secreto mágico para luchar por un futuro mejor. Con una sonrisa valiente, guardó el libro y se preparó para su próxima gran aventura.",
+        "current": "Sazed encontró un libro muy misterioso en el palacio que Vin había usado para protegerse. Estaba escrito en un idioma antiguo que casi nadie recordaba. «Este libro tiene el secreto para traer la paz», dijo Sazed con mucha esperanza. Vin miró por la ventana y vio que, aunque el mundo seguía siendo gris, ella ahora tenía amigos y un secreto mágico para luchar por un futuro mejor. Con una sonrisa valiente, guardó el libro y se preparó para su próxima gran aventura."
+      },
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": {
+            "original": "Vin y Sazed sentados a la luz de una vela, mirando las páginas de un libro antiguo con dibujos extraños. A través de la ventana, se ve la bruma bailando y la silueta de la ciudad.",
+            "current": "Vin y Sazed sentados a la luz de una vela, mirando las páginas de un libro antiguo con dibujos extraños. A través de la ventana, se ve la bruma bailando y la silueta de la ciudad."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    }
+  ]
+}
