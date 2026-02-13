@@ -25,12 +25,12 @@
   {% if page_numbers %}
     <div class="row gap center wrap">
       {% if prev_page %}
-        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=prev_page, editor=1) }}">&larr; Pagina {{ prev_page }}</a>
+        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=prev_page, editor=1) }}">&larr; Página {{ prev_page }}</a>
       {% endif %}
 
       <form method="get" action="{{ url_for('web.story_detail', story_path=story.story_rel_path) }}" class="inline-form">
         <input type="hidden" name="editor" value="1">
-        <label>Pagina
+        <label>Página
           <select name="p" onchange="this.form.submit()">
             {% for num in page_numbers %}
               <option value="{{ num }}" {% if num == selected_page %}selected{% endif %}>{{ num }}</option>
@@ -40,21 +40,21 @@
       </form>
 
       {% if next_page %}
-        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=next_page, editor=1) }}">Pagina {{ next_page }} &rarr;</a>
+        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=next_page, editor=1) }}">Página {{ next_page }} &rarr;</a>
       {% endif %}
     </div>
   {% else %}
-    <p class="muted">No hay paginas en este cuento.</p>
+    <p class="muted">No hay páginas en este cuento.</p>
   {% endif %}
 
   {% if missing_pages %}
-    <p class="warn">Faltan paginas en secuencia: {{ missing_pages | join(', ') }}</p>
+    <p class="warn">Faltan páginas en secuencia: {{ missing_pages | join(', ') }}</p>
   {% endif %}
 </section>
 
 {% if page %}
 <section class="panel">
-  <h2>Edicion de pagina {{ page.page_number }}</h2>
+  <h2>Edición de página {{ page.page_number }}</h2>
   <form method="post" action="{{ url_for('web.save_story_page', story_path=story.story_rel_path, page_number=page.page_number) }}" class="form-grid">
     <input type="hidden" name="next" value="{{ request.full_path }}">
 
@@ -97,12 +97,12 @@
       </div>
     </div>
 
-    <button type="submit">Guardar pagina</button>
+    <button type="submit">Guardar página</button>
   </form>
 </section>
 
 <section class="panel">
-  <h2>Alternativas de imagen - pagina {{ page.page_number }}</h2>
+  <h2>Alternativas de imagen - página {{ page.page_number }}</h2>
   {% if slots %}
     <div class="cards">
       {% for slot in slots %}
@@ -205,7 +205,7 @@
       {% endfor %}
     </div>
   {% else %}
-    <p class="muted">Esta pagina no tiene slots de imagen.</p>
+      <p class="muted">Esta página no tiene slots de imagen.</p>
   {% endif %}
 </section>
 {% endif %}

@@ -1,4 +1,4 @@
-# TAREA-008-skill-revision-adaptacion-json-sin-sqlite
+﻿# TAREA-008-skill-revision-adaptacion-json-sin-sqlite
 
 ## Metadatos
 
@@ -10,7 +10,7 @@
 
 ## Objetivo
 
-Refactorizar la app para usar `NN.json` como fuente de verdad sin SQLite ni CLI de ingesta, y reemplazar la skill operativa por `revision-adaptacion-editorial`.
+Refactorizar la app para usar `NN.json` como fuente de verdad sin SQLite ni CLI de ingesta, y reemplazar la skill operativa por `revision-orquestador-editorial`.
 
 ## Contexto
 
@@ -21,7 +21,7 @@ El flujo anterior dependia de `NN.md`, cache SQLite y comandos por batch (`inbox
 1. Implementar dominio JSON (`story_store`) y catalogo por escaneo directo (`catalog_provider`).
 2. Refactorizar rutas/UI a lectura y escritura sobre `NN.json`.
 3. Retirar CLI de ingesta/cache y dejar `manage.py` solo con `runserver`.
-4. Reemplazar skill global legacy por `revision-adaptacion-editorial` y versionar skill en `.codex/skills`.
+4. Reemplazar skill global legacy por `revision-orquestador-editorial` y versionar skill en `.codex/skills`.
 5. Actualizar ADR, documentacion operativa y trazabilidad repo.
 
 ## Decisiones
@@ -52,11 +52,11 @@ El flujo anterior dependia de `NN.md`, cache SQLite y comandos por batch (`inbox
   - `app/library_cache.py` (stub de modulo retirado)
   - `app/notebooklm_ingest.py` (stub de modulo retirado)
 - Skill:
-  - `.codex/skills/revision-adaptacion-editorial/SKILL.md`
-  - `.codex/skills/revision-adaptacion-editorial/references/checklist.md`
-  - `.codex/skills/revision-adaptacion-editorial/references/esquema-json.md`
-  - `.codex/skills/revision-adaptacion-editorial/references/revision-editorial.md`
-  - instalacion global aplicada en `C:/Users/Kiko/.codex/skills/revision-adaptacion-editorial`
+  - `.codex/skills/revision-orquestador-editorial/SKILL.md`
+  - `.codex/skills/revision-orquestador-editorial/references/checklist.md`
+  - `.codex/skills/revision-orquestador-editorial/references/esquema-json.md`
+  - `.codex/skills/revision-orquestador-editorial/references/revision-editorial.md`
+  - instalacion global aplicada en `C:/Users/Kiko/.codex/skills/revision-orquestador-editorial`
   - skill legacy `notebooklm-ingest` retirada del scope global
 - Documentacion:
   - `AGENTS.md`
@@ -90,5 +90,6 @@ El flujo anterior dependia de `NN.md`, cache SQLite y comandos por batch (`inbox
 
 ## Commit asociado
 
-- Mensaje de commit: `Tarea 008: skill revision-adaptacion-editorial y runtime JSON sin SQLite`
+- Mensaje de commit: `Tarea 008: skill revision-orquestador-editorial y runtime JSON sin SQLite`
 - Hash de commit: pendiente
+

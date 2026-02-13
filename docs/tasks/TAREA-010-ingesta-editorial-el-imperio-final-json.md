@@ -1,4 +1,4 @@
-# TAREA-010-ingesta-editorial-el-imperio-final-json
+﻿# TAREA-010-ingesta-editorial-el-imperio-final-json
 
 ## Metadatos
 
@@ -10,7 +10,7 @@
 
 ## Objetivo
 
-Procesar editorialmente `library/_inbox/El imperio final` con la skill `revision-adaptacion-editorial` y publicar los cuentos en formato canonico `NN.json` en `library/cosmere/nacidos-de-la-bruma-era-1/el-imperio-final`.
+Procesar editorialmente `library/_inbox/El imperio final` con la skill `revision-orquestador-editorial` y publicar los cuentos en formato canonico `NN.json` en `library/cosmere/nacidos-de-la-bruma-era-1/el-imperio-final`.
 
 ## Contexto
 
@@ -69,3 +69,4 @@ El libro habia sido limpiado para reiniciar desde cero. Las propuestas disponibl
 
 - Mensaje de commit: `Tarea 010: ingesta editorial de El imperio final a JSON canonico`
 - Hash de commit: pendiente
+

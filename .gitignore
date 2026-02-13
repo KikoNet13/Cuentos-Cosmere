@@ -1,4 +1,4 @@
-# Python
+﻿# Python
 __pycache__/
 *.py[cod]
 *.pyo
@@ -20,8 +20,7 @@ venv/
 .codex/*
 !.codex/config.toml
 !.codex/skills/
-!.codex/skills/revision-adaptacion-editorial/
-!.codex/skills/revision-adaptacion-editorial/**
+!.codex/skills/**
 
 # OS files
 .DS_Store
@@ -43,3 +42,4 @@ db/cache_write_probe.txt
 library/_inbox/
 library/_backups/
 library/**/_legacy_story_dirs/
+

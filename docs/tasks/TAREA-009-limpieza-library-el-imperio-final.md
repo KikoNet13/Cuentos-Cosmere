@@ -1,4 +1,4 @@
-# TAREA-009-limpieza-library-el-imperio-final
+﻿# TAREA-009-limpieza-library-el-imperio-final
 
 ## Metadatos
 
@@ -58,9 +58,10 @@ El usuario elimino localmente archivos `NN.md` y `NN.pdf` legacy de `library/...
 
 ## Seguimiento
 
-1. Ejecutar la skill `revision-adaptacion-editorial` sobre `library/_inbox/El imperio final` hacia `cosmere/nacidos-de-la-bruma-era-1/el-imperio-final`.
+1. Ejecutar la skill `revision-orquestador-editorial` sobre `library/_inbox/El imperio final` hacia `cosmere/nacidos-de-la-bruma-era-1/el-imperio-final`.
 
 ## Commit asociado
 
 - Mensaje de commit: `Tarea 009: limpieza library de El imperio final`
 - Hash de commit: pendiente
+

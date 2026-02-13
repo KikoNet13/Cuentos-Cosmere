@@ -3,19 +3,19 @@
 ## Contrato de datos
 
 - `library/` es la fuente de verdad.
-- Un libro se detecta por uno o mas archivos `NN.json`.
+- Un libro se detecta por uno o más archivos `NN.json`.
 - Cada `NN.json` representa un cuento completo con:
-  - metadata de cuento
-  - paginas (`text.original`, `text.current`)
+  - metadatos de cuento
+  - páginas (`text.original`, `text.current`)
   - slots de imagen (`main` obligatorio, `secondary` opcional)
-  - alternativas de imagen por slot + `active_id`
+  - alternativas de imagen por slot y `active_id`
 - Los assets de imagen viven en el mismo directorio del libro con nombre opaco `img_<uuid>_<slug>.<ext>`.
 
 ## Runtime
 
-- Sin SQLite de cache.
-- Catalogo por escaneo directo de `library/`.
-- Endpoints de navegacion:
+- Sin SQLite de caché.
+- Catálogo por escaneo directo de `library/`.
+- Endpoints principales:
   - `/`
   - `/n/<path>`
   - `/story/<path>?p=N` (modo lectura por defecto)
@@ -25,24 +25,36 @@
 
 ## Operaciones web
 
-- Visualizar comparativa `original/current` de texto y prompts.
-- Guardar edicion por pagina (`current`).
-- Subir alternativas de imagen por slot.
-- Marcar alternativa activa por slot.
-- Mostrar vista de lectura minimal sin formularios cuando `editor` no esta activo.
+- En lectura: render limpio de `text.current` + imagen activa.
+- En editorial: comparativa `original/current`, guardado por página, gestión de alternativas por slot.
+- Activación editorial solo por query `editor=1`.
+
+## Pipeline editorial
+
+- Entrada pública en código: `app/editorial_orquestador.py`.
+- Función principal: `run_orquestador_editorial(...)`.
+- Ciclo por severidad en cada etapa:
+  - `critical -> major -> minor -> info`
+- Ciclo interno por severidad:
+  - detección
+  - decisión interactiva
+  - contraste con canon
+- Etapas:
+  - `text` primero
+  - `prompt` después, solo si texto converge en `critical|major`
+
+## Sidecars
+
+`library/<book_rel_path>/_reviews/`:
+
+- `context_chain.json`
+- `glossary_merged.json`
+- `pipeline_state.json`
+- `NN.findings.json`
+- `NN.choices.json`
+- `NN.contrast.json`
+- `NN.passes.json`
 
 ## CLI
 
 - `python manage.py runserver`
-
-## Skill operativa
-
-- Skill canonica: `revision-osmosis-orquestador`.
-- Alias compatible: `revision-adaptacion-editorial`.
-- Sub-skills por fase:
-  - `revision-ingesta-json`
-  - `revision-auditoria-texto`
-  - `revision-correccion-texto`
-  - `revision-auditoria-prompts`
-  - `revision-correccion-prompts`
-- El flujo editorial usa `app/editorial_osmosis.py` y sidecars `_reviews`.

@@ -25,11 +25,11 @@
   {% if page_numbers %}
     <div class="row gap center wrap">
       {% if prev_page %}
-        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=prev_page) }}">&larr; Pagina {{ prev_page }}</a>
+        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=prev_page) }}">&larr; Página {{ prev_page }}</a>
       {% endif %}
 
       <form method="get" action="{{ url_for('web.story_detail', story_path=story.story_rel_path) }}" class="inline-form">
-        <label>Pagina
+        <label>Página
           <select name="p" onchange="this.form.submit()">
             {% for num in page_numbers %}
               <option value="{{ num }}" {% if num == selected_page %}selected{% endif %}>{{ num }}</option>
@@ -39,13 +39,13 @@
       </form>
 
       {% if next_page %}
-        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=next_page) }}">Pagina {{ next_page }} &rarr;</a>
+        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=next_page) }}">Página {{ next_page }} &rarr;</a>
       {% endif %}
     </div>
   {% endif %}
 
   {% if missing_pages %}
-    <p class="warn">Faltan paginas en secuencia: {{ missing_pages | join(', ') }}</p>
+    <p class="warn">Faltan páginas en secuencia: {{ missing_pages | join(', ') }}</p>
   {% endif %}
 </section>
 
@@ -53,18 +53,18 @@
   {% set main_slot = (slots | selectattr('slot_name', 'equalto', 'main') | list | first) %}
 
   <section class="panel">
-    <h2>Pagina {{ page.page_number }}</h2>
+    <h2>Página {{ page.page_number }}</h2>
     <pre>{{ page.text_current }}</pre>
   </section>
 
   <section class="panel">
-    <h2>Ilustracion principal</h2>
+    <h2>Ilustración principal</h2>
     {% if main_slot and main_slot.active_item and main_slot.active_item.image_exists %}
-      <img class="reader-image" src="{{ main_slot.active_item.image_url }}" alt="Imagen principal pagina {{ page.page_number }}">
+      <img class="reader-image" src="{{ main_slot.active_item.image_url }}" alt="Imagen principal página {{ page.page_number }}">
     {% elif main_slot and main_slot.alternatives and (main_slot.alternatives | first).image_exists %}
-      <img class="reader-image" src="{{ (main_slot.alternatives | first).image_url }}" alt="Imagen alternativa pagina {{ page.page_number }}">
+      <img class="reader-image" src="{{ (main_slot.alternatives | first).image_url }}" alt="Imagen alternativa página {{ page.page_number }}">
     {% else %}
-      <p class="muted">Sin imagen activa disponible para esta pagina.</p>
+      <p class="muted">Sin imagen activa disponible para esta página.</p>
     {% endif %}
   </section>
 {% endif %}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0",
+  "generated_at": "2026-02-13T17:19:50.155349+00:00",
+  "book_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final",
+  "inbox_book_title": "El imperio final",
+  "context_chain": [],
+  "canonical_pdfs": {
+    "source_root_rel": "library/_inbox/El imperio final",
+    "canonical_pdf_rel_paths": [
+      "library/_inbox/El imperio final/01.pdf",
+      "library/_inbox/El imperio final/02.pdf",
+      "library/_inbox/El imperio final/03.pdf"
+    ],
+    "story_pdf_by_id": {
+      "01": "library/_inbox/El imperio final/01.pdf",
+      "02": "library/_inbox/El imperio final/02.pdf",
+      "03": "library/_inbox/El imperio final/03.pdf"
+    }
+  },
+  "glossary_merged": []
+}

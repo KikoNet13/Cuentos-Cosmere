@@ -1,17 +1,20 @@
-# Indice de contexto
+# Índice de contexto
 
 ## Alcance vigente
 
-`docs/context/` queda minimo y solo documenta donde vive el contexto canonico.
+`docs/context/` queda mínimo y solo documenta dónde vive el contexto canónico.
 
-## Contexto canonico
+## Contexto canónico
 
 1. Cuentos finales por libro: `library/.../<book-node>/NN.json`.
 2. Propuestas de entrada: `library/_inbox/<titulo-libro>/NN.md`.
-3. Referencias visuales editoriales: `docs/assets/style_refs/`.
-4. Skill operativa: `.codex/skills/revision-osmosis-orquestador/` (alias compatible: `.codex/skills/revision-adaptacion-editorial/`).
+3. Canon de referencia: PDFs dentro de `library/_inbox/<titulo-libro>/`.
+4. Contexto jerárquico por nodos: `meta.md`, `anclas.md`, `glosario.md`, `canon.md`, `contexto.md`.
+5. Sidecars consolidados por libro:
+   - `_reviews/context_chain.json`
+   - `_reviews/glossary_merged.json`
+6. Skill operativa principal: `revision-orquestador-editorial`.
 
 ## Nota
 
-No se mantienen documentos de prompts o canon editorial redundantes en
-`docs/context/`.
+No se mantienen documentos de prompts o canon editorial redundantes en `docs/context/`.
