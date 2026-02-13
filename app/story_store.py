@@ -11,6 +11,14 @@ from .config import LIBRARY_ROOT, ROOT_DIR
 
 STORY_JSON_RE = re.compile(r"^(\d{2})\.json$", re.IGNORECASE)
 SLOT_NAMES = ("main", "secondary")
+STORY_STATUS_VALUES = {
+    "draft",
+    "text_reviewed",
+    "text_blocked",
+    "prompt_reviewed",
+    "prompt_blocked",
+    "ready",
+}
 
 
 class StoryStoreError(ValueError):
@@ -528,3 +536,33 @@ def resolve_media_rel_path(rel_path: str) -> Path:
         raise StoryStoreError("Ruta fuera del proyecto.")
 
     return target
+
+
+def save_story_payload(
+    *,
+    story_rel_path: str,
+    payload: dict[str, Any],
+    touch_updated_at: bool = True,
+) -> dict[str, Any]:
+    story_file = story_rel_to_json_path(story_rel_path)
+    story_id_hint = story_file.stem
+    book_rel_hint = (
+        story_file.parent.resolve().relative_to(LIBRARY_ROOT.resolve()).as_posix()
+        if story_file.parent.resolve() != LIBRARY_ROOT.resolve()
+        else ""
+    )
+    normalized = _coerce_story_payload(payload, story_id_hint=story_id_hint, book_rel_path_hint=book_rel_hint)
+    if touch_updated_at:
+        normalized["updated_at"] = _utc_now_iso()
+    _write_story_file(story_file, normalized)
+    return normalized
+
+
+def set_story_status(*, story_rel_path: str, status: str) -> dict[str, Any]:
+    normalized_status = status.strip().lower()
+    if normalized_status not in STORY_STATUS_VALUES:
+        raise StoryStoreError(f"status invalido: {status}")
+
+    payload = load_story(story_rel_path)
+    payload["status"] = normalized_status
+    return save_story_payload(story_rel_path=story_rel_path, payload=payload, touch_updated_at=True)

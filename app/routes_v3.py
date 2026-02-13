@@ -42,6 +42,11 @@ def _parse_positive_int(raw_value: str | None, default: int) -> int:
     return value if value > 0 else default
 
 
+def _is_editor_mode(raw_value: str | None) -> bool:
+    value = (raw_value or "").strip().lower()
+    return value in {"1", "true", "yes", "on"}
+
+
 def _build_breadcrumbs(path_rel: str) -> list[dict[str, str]]:
     normalized = _normalize_rel_path(path_rel)
     if not normalized:
@@ -84,7 +89,12 @@ def _build_alternative_view(alternative: dict[str, Any], active_id: str) -> dict
     }
 
 
-def _build_story_view_model(story_rel_path: str, selected_raw: str | None) -> dict[str, Any] | None:
+def _build_story_view_model(
+    story_rel_path: str,
+    selected_raw: str | None,
+    *,
+    editor_mode: bool,
+) -> dict[str, Any] | None:
     story = get_story_summary(story_rel_path)
     if not story:
         return None
@@ -141,6 +151,7 @@ def _build_story_view_model(story_rel_path: str, selected_raw: str | None) -> di
         "missing_pages": missing_pages,
         "slots": slot_items,
         "breadcrumbs": _build_breadcrumbs(story_rel_path),
+        "editor_mode": editor_mode,
     }
 
 
@@ -215,16 +226,18 @@ def node_detail(node_path: str):
 @web_bp.get("/story/<path:story_path>")
 def story_detail(story_path: str):
     story_rel_path = _normalize_rel_path(story_path)
-    view_model = _build_story_view_model(story_rel_path, request.args.get("p"))
+    editor_mode = _is_editor_mode(request.args.get("editor"))
+    view_model = _build_story_view_model(story_rel_path, request.args.get("p"), editor_mode=editor_mode)
     if not view_model:
         abort(404)
-    return render_template("cuento.html", **view_model)
+    template_name = "cuento_editor.html" if editor_mode else "cuento_read.html"
+    return render_template(template_name, **view_model)
 
 
 @web_bp.post("/story/<path:story_path>/page/<int:page_number>/save")
 def save_story_page(story_path: str, page_number: int):
     story_rel_path = _normalize_rel_path(story_path)
-    fallback = url_for("web.story_detail", story_path=story_rel_path, p=page_number)
+    fallback = url_for("web.story_detail", story_path=story_rel_path, p=page_number, editor=1)
 
     try:
         save_page_edits(
@@ -244,7 +257,7 @@ def save_story_page(story_path: str, page_number: int):
 @web_bp.post("/story/<path:story_path>/page/<int:page_number>/slot/<slot_name>/upload")
 def upload_slot_image(story_path: str, page_number: int, slot_name: str):
     story_rel_path = _normalize_rel_path(story_path)
-    fallback = url_for("web.story_detail", story_path=story_rel_path, p=page_number)
+    fallback = url_for("web.story_detail", story_path=story_rel_path, p=page_number, editor=1)
 
     image_bytes, mime_type, error = _extract_image_payload()
     if error:
@@ -271,7 +284,7 @@ def upload_slot_image(story_path: str, page_number: int, slot_name: str):
 @web_bp.post("/story/<path:story_path>/page/<int:page_number>/slot/<slot_name>/activate")
 def activate_slot_image(story_path: str, page_number: int, slot_name: str):
     story_rel_path = _normalize_rel_path(story_path)
-    fallback = url_for("web.story_detail", story_path=story_rel_path, p=page_number)
+    fallback = url_for("web.story_detail", story_path=story_rel_path, p=page_number, editor=1)
 
     alternative_id = request.form.get("alternative_id", "").strip()
     if not alternative_id:

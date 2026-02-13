@@ -12,7 +12,7 @@ Proyecto local para revisar, adaptar y publicar cuentos ilustrados con fuente de
   - imagenes por slot (`main` obligatorio, `secondary` opcional)
   - alternativas de imagen con `active_id`
 - Runtime sin SQLite: la app navega por escaneo directo de disco.
-- Flujo editorial oficial: skill `revision-adaptacion-editorial`.
+- Flujo editorial oficial: skill `revision-osmosis-orquestador` (alias compatible: `revision-adaptacion-editorial`).
 
 ## Estructura canonica de libro
 
@@ -33,9 +33,24 @@ library/_backups/         # opcional
 ## Flujo recomendado
 
 1. Dejar propuestas en `library/_inbox/<titulo-libro>/`.
-2. Ejecutar trabajo editorial guiado con la skill `revision-adaptacion-editorial`.
+2. Ejecutar ingesta/revision con el pipeline de skills:
+   - `revision-ingesta-json`
+   - `revision-auditoria-texto` + `revision-correccion-texto`
+   - `revision-auditoria-prompts` + `revision-correccion-prompts`
+   - o `revision-osmosis-orquestador` para encadenado completo.
 3. Publicar/actualizar `NN.json` en `library/<nodos>/`.
-4. Revisar en webapp la comparativa original/current y alternativas activas.
+4. Revisar en webapp:
+   - lectura minimal por defecto (`/story/...`)
+   - modo editorial con `?editor=1`.
+
+## Sidecars de revision
+
+Por libro, el pipeline guarda artefactos en `library/<book_rel_path>/_reviews/`:
+
+- `pipeline_state.json`
+- `NN.review.json`
+- `NN.review.md`
+- `NN.decisions.json`
 
 ## Trazabilidad
 

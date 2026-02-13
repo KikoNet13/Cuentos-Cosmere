@@ -1,6 +1,6 @@
 # Indice de tareas
 
-- Proximo ID: `011`
+- Proximo ID: `012`
 
 ## TAREA-001-proyecto-profesional-contexto
 
@@ -101,3 +101,13 @@
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-010-ingesta-editorial-el-imperio-final-json.md`
+
+## TAREA-011-pipeline-osmosis-skills-ui-minimal
+
+- Fecha: 13/02/26 16:24
+- Estado: cerrada
+- Resumen: pipeline osmosis por skills encadenadas, sidecars `_reviews` y UI lectura/editor por modo.
+- Version: 1.0.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`
+- Archivo: `docs/tasks/TAREA-011-pipeline-osmosis-skills-ui-minimal.md`

@@ -28,6 +28,15 @@
 - `active_id`
 - `alternatives[]`
 
+## Estado de cuento recomendado
+
+- `draft`
+- `text_reviewed`
+- `text_blocked`
+- `prompt_reviewed`
+- `prompt_blocked`
+- `ready`
+
 ## Alternativa
 
 - `id`

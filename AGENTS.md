@@ -27,16 +27,20 @@ Este repositorio aplica un flujo profesional para el
 7. Los assets de imagen se nombran con formato opaco `img_<uuid>_<slug>.<ext>` y la relacion pagina/slot vive en JSON.
 8. `library/_inbox/` se usa como bandeja de propuestas editoriales `.md` y referencias `.pdf`.
 9. `library/_backups/` es opcional para respaldos manuales.
+10. Sidecars de revision viven en `library/<book>/_reviews/` (`NN.review.json|md`, `NN.decisions.json`, `pipeline_state.json`).
+11. Ciclo de `status` de cuento: `draft -> text_reviewed|text_blocked -> prompt_reviewed|prompt_blocked -> ready`.
 
 ## Flujo editorial oficial
 
-1. Flujo principal: skill `revision-adaptacion-editorial`.
-2. La skill detecta libros en `library/_inbox/`.
-3. La skill pide nodos destino una sola vez por libro.
-4. La skill revisa/adapta cada cuento y escribe/actualiza `NN.json` en `library/...`.
-5. Se conserva comparativa editorial en `text.original/current` y `prompt.original/current`.
-6. La gestion de alternativas de imagen y activa se hace sobre el JSON del cuento.
-7. En TAREA-008 no se ejecuta migracion real de `_inbox`; solo queda el procedimiento listo en skill y app.
+1. Flujo principal: skill `revision-osmosis-orquestador`.
+2. `revision-adaptacion-editorial` se mantiene como alias compatible hacia el pipeline osmosis.
+3. La ingesta (`revision-ingesta-json`) escanea recursivo en `library/_inbox/<libro>` ignorando carpetas `_ignore`.
+4. Si hay duplicados `NN.md`, se prioriza archivo en raiz del libro.
+5. La revision de texto usa `revision-auditoria-texto` + `revision-correccion-texto`.
+6. La revision de prompts usa `revision-auditoria-prompts` + `revision-correccion-prompts`.
+7. Gate por cuento: bloquear si quedan hallazgos `critical` o `major`.
+8. Gate por libro: detener el pipeline en el primer cuento bloqueado.
+9. No usar CLI de ingesta en `manage.py`; el flujo vive en skills + modulo `app/editorial_osmosis.py`.
 
 ## Runtime de app
 

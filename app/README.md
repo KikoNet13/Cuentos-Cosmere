@@ -18,7 +18,8 @@
 - Endpoints de navegacion:
   - `/`
   - `/n/<path>`
-  - `/story/<path>?p=N`
+  - `/story/<path>?p=N` (modo lectura por defecto)
+  - `/story/<path>?p=N&editor=1` (modo editorial)
   - `/media/<path>`
   - `/health`
 
@@ -28,6 +29,7 @@
 - Guardar edicion por pagina (`current`).
 - Subir alternativas de imagen por slot.
 - Marcar alternativa activa por slot.
+- Mostrar vista de lectura minimal sin formularios cuando `editor` no esta activo.
 
 ## CLI
 
@@ -35,5 +37,12 @@
 
 ## Skill operativa
 
-- Skill canonica: `revision-adaptacion-editorial`.
-- El flujo de ingesta/editorial no usa comandos CLI dedicados.
+- Skill canonica: `revision-osmosis-orquestador`.
+- Alias compatible: `revision-adaptacion-editorial`.
+- Sub-skills por fase:
+  - `revision-ingesta-json`
+  - `revision-auditoria-texto`
+  - `revision-correccion-texto`
+  - `revision-auditoria-prompts`
+  - `revision-correccion-prompts`
+- El flujo editorial usa `app/editorial_osmosis.py` y sidecars `_reviews`.

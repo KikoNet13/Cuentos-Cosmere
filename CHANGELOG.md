@@ -5,6 +5,26 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [13/02/26] - Pipeline osmosis por skills + UI de lectura minimal
+
+- Se implemento `app/editorial_osmosis.py` con:
+  - descubrimiento de inbox recursivo con exclusion `_ignore`
+  - prioridad de duplicados `NN.md` por raiz
+  - ingesta a `NN.json`
+  - auditoria/correccion de texto y prompts con gate por `critical|major`
+  - sidecars de revision en `_reviews` (`NN.review.json|md`, `NN.decisions.json`, `pipeline_state.json`)
+  - ciclo de estado editorial: `draft`, `text_reviewed|text_blocked`, `prompt_reviewed|prompt_blocked`, `ready`.
+- La webapp ahora usa vista de lectura por defecto y modo editorial con `?editor=1`.
+- Se agrego set de skills encadenadas:
+  - `revision-ingesta-json`
+  - `revision-auditoria-texto`
+  - `revision-correccion-texto`
+  - `revision-auditoria-prompts`
+  - `revision-correccion-prompts`
+  - `revision-osmosis-orquestador`
+- `revision-adaptacion-editorial` queda como alias compatible al flujo orquestado.
+- Tarea: `docs/tasks/TAREA-011-pipeline-osmosis-skills-ui-minimal.md`.
+
 ## [13/02/26] - Ingesta editorial de El imperio final a JSON canonico
 
 - Se procesaron las propuestas `01-05.md` de `library/_inbox/El imperio final` (incluyendo `_future`).

@@ -340,3 +340,21 @@ button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+.subtle-toggle {
+  font-size: 0.82rem;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.subtle-toggle:hover {
+  opacity: 1;
+}
+
+.reader-image {
+  display: block;
+  max-width: min(760px, 100%);
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}

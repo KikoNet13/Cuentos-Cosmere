@@ -9,7 +9,7 @@
 1. Cuentos finales por libro: `library/.../<book-node>/NN.json`.
 2. Propuestas de entrada: `library/_inbox/<titulo-libro>/NN.md`.
 3. Referencias visuales editoriales: `docs/assets/style_refs/`.
-4. Skill operativa: `.codex/skills/revision-adaptacion-editorial/`.
+4. Skill operativa: `.codex/skills/revision-osmosis-orquestador/` (alias compatible: `.codex/skills/revision-adaptacion-editorial/`).
 
 ## Nota
 

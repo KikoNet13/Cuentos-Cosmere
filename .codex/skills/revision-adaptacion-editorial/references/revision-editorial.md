@@ -17,6 +17,14 @@
 - `main` representa la lectura principal de la pagina.
 - `secondary` solo si agrega valor (detalle, atmosfera o contexto).
 - Alternativas se guardan como candidatas; una queda activa por slot.
+- Prompts finales deben converger a plantilla estructurada v1:
+  - `SUJETO`
+  - `ESCENA`
+  - `ESTILO`
+  - `COMPOSICION`
+  - `ILUMINACION_COLOR`
+  - `CONTINUIDAD`
+  - `RESTRICCIONES`
 
 ## Resultado esperado
 
