@@ -15,7 +15,13 @@ venv/
 # Editors
 .vscode/
 .idea/
-.codex/
+
+# Codex local data (permitir skill versionada en repo)
+.codex/*
+!.codex/config.toml
+!.codex/skills/
+!.codex/skills/revision-adaptacion-editorial/
+!.codex/skills/revision-adaptacion-editorial/**
 
 # OS files
 .DS_Store
@@ -25,11 +31,7 @@ Thumbs.db
 build/
 dist/
 
-# Local SQLite state
-db/*.sqlite
-db/*.sqlite-shm
-db/*.sqlite-wal
-db/*.sqlite-journal
+# Optional local sqlite leftovers
 *.sqlite
 *.sqlite-*
 

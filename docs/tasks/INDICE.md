@@ -1,6 +1,6 @@
 # Indice de tareas
 
-- Proximo ID: `008`
+- Proximo ID: `009`
 
 ## TAREA-001-proyecto-profesional-contexto
 
@@ -71,3 +71,13 @@
 - Commit: `pendiente`
 - ADR relacionadas: `0005`, `0006`
 - Archivo: `docs/tasks/TAREA-007-parser-ia-auditoria-terminologia.md`
+
+## TAREA-008-skill-revision-adaptacion-json-sin-sqlite
+
+- Fecha: 13/02/26 13:20
+- Estado: cerrada
+- Resumen: skill `revision-adaptacion-editorial` y runtime JSON sin SQLite ni CLI de ingesta.
+- Version: 0.8.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`
+- Archivo: `docs/tasks/TAREA-008-skill-revision-adaptacion-json-sin-sqlite.md`

@@ -15,16 +15,16 @@
 <section class="panel">
   <h1>{{ story.title }}</h1>
   <p class="muted">Ruta del cuento: <code>{{ story.story_rel_path }}</code></p>
-  <p class="muted">Estado: {{ story.status }}</p>
+  <p class="muted">Estado: {{ story.status }} | Esquema: {{ story.schema_version }}</p>
 
   {% if page_numbers %}
     <div class="row gap center wrap">
       {% if prev_page %}
-        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=prev_page) }}">&larr; Página {{ prev_page }}</a>
+        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=prev_page) }}">&larr; Pagina {{ prev_page }}</a>
       {% endif %}
 
       <form method="get" action="{{ url_for('web.story_detail', story_path=story.story_rel_path) }}" class="inline-form">
-        <label>Página
+        <label>Pagina
           <select name="p" onchange="this.form.submit()">
             {% for num in page_numbers %}
               <option value="{{ num }}" {% if num == selected_page %}selected{% endif %}>{{ num }}</option>
@@ -34,30 +34,69 @@
       </form>
 
       {% if next_page %}
-        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=next_page) }}">Página {{ next_page }} &rarr;</a>
+        <a class="inline-link" href="{{ url_for('web.story_detail', story_path=story.story_rel_path, p=next_page) }}">Pagina {{ next_page }} &rarr;</a>
       {% endif %}
     </div>
   {% else %}
-    <p class="muted">No hay páginas indexadas en caché para este cuento.</p>
+    <p class="muted">No hay paginas en este cuento.</p>
   {% endif %}
 
   {% if missing_pages %}
-    <p class="warn">Faltan páginas en secuencia: {{ missing_pages | join(', ') }}</p>
+    <p class="warn">Faltan paginas en secuencia: {{ missing_pages | join(', ') }}</p>
   {% endif %}
 </section>
 
 {% if page %}
 <section class="panel">
-  <h2>Texto de página {{ page.page_number }}</h2>
-  <pre id="page-text">{{ page.content }}</pre>
-  <div class="row gap top-gap">
-    <button type="button" onclick="copyTextFromElement('page-text','copy-page-text')">Copiar texto</button>
-    <span id="copy-page-text" class="copy-feedback"></span>
-  </div>
+  <h2>Edicion de pagina {{ page.page_number }}</h2>
+  <form method="post" action="{{ url_for('web.save_story_page', story_path=story.story_rel_path, page_number=page.page_number) }}" class="form-grid">
+    <input type="hidden" name="next" value="{{ request.full_path }}">
+
+    <label class="full">Texto actual
+      <textarea name="text_current" rows="8">{{ page.text_current }}</textarea>
+    </label>
+
+    <div class="item-card full">
+      <h3>Texto original</h3>
+      <pre id="text-original">{{ page.text_original }}</pre>
+      <div class="row gap top-gap">
+        <button type="button" onclick="copyTextFromElement('text-original','copy-text-original')">Copiar original</button>
+        <span id="copy-text-original" class="copy-feedback"></span>
+      </div>
+    </div>
+
+    <label class="full">Prompt main actual
+      <textarea name="main_prompt_current" rows="4">{{ (slots | selectattr('slot_name', 'equalto', 'main') | map(attribute='prompt_current') | list | first) or '' }}</textarea>
+    </label>
+
+    <div class="item-card full">
+      <h3>Prompt main original</h3>
+      <pre id="prompt-main-original">{{ (slots | selectattr('slot_name', 'equalto', 'main') | map(attribute='prompt_original') | list | first) or '' }}</pre>
+      <div class="row gap top-gap">
+        <button type="button" onclick="copyTextFromElement('prompt-main-original','copy-prompt-main-original')">Copiar original</button>
+        <span id="copy-prompt-main-original" class="copy-feedback"></span>
+      </div>
+    </div>
+
+    <label class="full">Prompt secondary actual (opcional)
+      <textarea name="secondary_prompt_current" rows="4">{{ (slots | selectattr('slot_name', 'equalto', 'secondary') | map(attribute='prompt_current') | list | first) or '' }}</textarea>
+    </label>
+
+    <div class="item-card full">
+      <h3>Prompt secondary original</h3>
+      <pre id="prompt-secondary-original">{{ (slots | selectattr('slot_name', 'equalto', 'secondary') | map(attribute='prompt_original') | list | first) or '' }}</pre>
+      <div class="row gap top-gap">
+        <button type="button" onclick="copyTextFromElement('prompt-secondary-original','copy-prompt-secondary-original')">Copiar original</button>
+        <span id="copy-prompt-secondary-original" class="copy-feedback"></span>
+      </div>
+    </div>
+
+    <button type="submit">Guardar pagina</button>
+  </form>
 </section>
 
 <section class="panel">
-  <h2>Prompts e imágenes de página {{ page.page_number }}</h2>
+  <h2>Alternativas de imagen - pagina {{ page.page_number }}</h2>
   {% if slots %}
     <div class="cards">
       {% for slot in slots %}
@@ -65,84 +104,102 @@
           <div class="card-head">
             <div>
               <strong>Slot: {{ slot.slot_name }}</strong>
-              <span class="chip">{{ slot.role }}</span>
+              <span class="chip">{{ slot.status }}</span>
             </div>
-            <small class="muted">Orden {{ slot.display_order }}</small>
+            <small class="muted">Activa: {{ slot.active_id or 'sin activa' }}</small>
           </div>
 
           <div class="card-body">
-            <p><strong>Ruta de imagen:</strong> <code>{{ slot.image_rel_path }}</code></p>
-
-            {% if slot.image_exists %}
-              <img src="{{ slot.image_url }}" alt="{{ slot.slot_name }}">
-              <div class="row gap wrap">
-                <button type="button" onclick="copyImageFromUrl('{{ slot.image_url }}','copy-slot-image-{{ loop.index }}')">Copiar imagen al portapapeles</button>
-                <span id="copy-slot-image-{{ loop.index }}" class="copy-feedback"></span>
-              </div>
-            {% else %}
-              <p class="warn">No hay imagen guardada para este slot.</p>
-            {% endif %}
-
-            <h4>Prompt</h4>
-            <pre id="prompt-{{ loop.index }}">{{ slot.prompt_text }}</pre>
+            <h4>Prompt current</h4>
+            <pre id="prompt-current-{{ loop.index }}">{{ slot.prompt_current }}</pre>
             <div class="row gap top-gap wrap">
-              <button type="button" onclick="copyTextFromElement('prompt-{{ loop.index }}','copy-prompt-{{ loop.index }}')">Copiar prompt</button>
-              <span id="copy-prompt-{{ loop.index }}" class="copy-feedback"></span>
+              <button type="button" onclick="copyTextFromElement('prompt-current-{{ loop.index }}','copy-prompt-current-{{ loop.index }}')">Copiar prompt</button>
+              <span id="copy-prompt-current-{{ loop.index }}" class="copy-feedback"></span>
             </div>
 
-            <h4>Requisitos</h4>
-            {% if slot.requirements %}
-              {% for req in slot.requirements %}
-                <div class="item-card">
-                  <p><strong>{{ req.kind }}</strong> <code>{{ req.ref }}</code></p>
-
-                  {% if req.refs %}
-                    {% for ref in req.refs %}
-                      <p><code>{{ ref.rel_path }}</code></p>
-                      {% if ref.exists %}
-                        <img src="{{ ref.url }}" alt="{{ ref.rel_path }}">
-                        <div class="row gap wrap">
-                          <button type="button" onclick="copyImageFromUrl('{{ ref.url }}','copy-req-{{ slot.slot_name | replace(' ', '-') | lower }}-{{ req.id }}-{{ loop.index }}')">Copiar imagen</button>
-                          <span id="copy-req-{{ slot.slot_name | replace(' ', '-') | lower }}-{{ req.id }}-{{ loop.index }}" class="copy-feedback"></span>
-                        </div>
-                      {% else %}
-                        <p class="warn">Referencia no encontrada en disco.</p>
-                      {% endif %}
-                    {% endfor %}
-                  {% else %}
-                    <p class="muted">Sin referencias visuales resolubles.</p>
-                  {% endif %}
-                </div>
-              {% endfor %}
+            {% if slot.active_item and slot.active_item.image_exists %}
+              <h4>Imagen activa</h4>
+              <p><code>{{ slot.active_item.asset_rel_path }}</code></p>
+              <img src="{{ slot.active_item.image_url }}" alt="activa {{ slot.slot_name }}">
+              <div class="row gap wrap">
+                <button type="button" onclick="copyImageFromUrl('{{ slot.active_item.image_url }}','copy-active-{{ loop.index }}')">Copiar imagen activa</button>
+                <span id="copy-active-{{ loop.index }}" class="copy-feedback"></span>
+              </div>
             {% else %}
-              <p class="muted">Sin requisitos para este slot.</p>
+              <p class="warn">No hay imagen activa disponible.</p>
             {% endif %}
 
-            <h4>Guardar imagen generada</h4>
+            <h4>Alternativas</h4>
+            {% if slot.alternatives %}
+              <div class="list-grid">
+                {% for alternative in slot.alternatives %}
+                  <div class="item-card">
+                    <p><strong>ID:</strong> <code>{{ alternative.id }}</code></p>
+                    <p><strong>Slug:</strong> {{ alternative.slug }}</p>
+                    <p><strong>Estado:</strong> {{ alternative.status }}</p>
+                    <p><code>{{ alternative.asset_rel_path }}</code></p>
+                    {% if alternative.image_exists %}
+                      <img src="{{ alternative.image_url }}" alt="{{ alternative.id }}">
+                      <div class="row gap wrap top-gap">
+                        <button type="button" onclick="copyImageFromUrl('{{ alternative.image_url }}','copy-alt-{{ slot.slot_name }}-{{ loop.index }}')">Copiar imagen</button>
+                        <span id="copy-alt-{{ slot.slot_name }}-{{ loop.index }}" class="copy-feedback"></span>
+                      </div>
+                    {% else %}
+                      <p class="warn">Archivo de imagen no encontrado.</p>
+                    {% endif %}
+
+                    {% if alternative.notes %}
+                      <p class="muted">{{ alternative.notes }}</p>
+                    {% endif %}
+
+                    {% if alternative.is_active %}
+                      <p class="ok">Activa</p>
+                    {% else %}
+                      <form method="post" action="{{ url_for('web.activate_slot_image', story_path=story.story_rel_path, page_number=page.page_number, slot_name=slot.slot_name) }}" class="mini-form">
+                        <input type="hidden" name="next" value="{{ request.full_path }}">
+                        <input type="hidden" name="alternative_id" value="{{ alternative.id }}">
+                        <button type="submit">Usar como activa</button>
+                      </form>
+                    {% endif %}
+                  </div>
+                {% endfor %}
+              </div>
+            {% else %}
+              <p class="muted">Sin alternativas registradas para este slot.</p>
+            {% endif %}
+
+            <h4>Subir nueva alternativa</h4>
             <form method="post" action="{{ url_for('web.upload_slot_image', story_path=story.story_rel_path, page_number=page.page_number, slot_name=slot.slot_name) }}" enctype="multipart/form-data" class="form-grid">
+              <input type="hidden" name="next" value="{{ request.full_path }}">
+
               <label>Subir archivo
-                <input type="file" name="image_file" accept="image/png,image/jpeg,image/webp">
+                <input type="file" name="image_file" accept="image/png,image/jpeg,image/webp,image/gif">
               </label>
+
+              <label>Slug alternativa
+                <input type="text" name="alt_slug" placeholder="{{ slot.slot_name }}-editorial">
+              </label>
+
+              <label class="full">Notas
+                <textarea name="alt_notes" rows="2" placeholder="Observaciones editoriales"></textarea>
+              </label>
+
               <label class="full">Pegar desde portapapeles
                 <div class="row gap wrap">
-                  <button type="button" class="secondary" onclick="pasteImageToHidden('pasted-{{ loop.index }}','paste-feedback-{{ loop.index }}')">Pegar imagen</button>
-                  <span id="paste-feedback-{{ loop.index }}" class="copy-feedback"></span>
+                  <button type="button" class="secondary" onclick="pasteImageToHidden('pasted-{{ slot.slot_name }}-{{ loop.index }}','paste-feedback-{{ slot.slot_name }}-{{ loop.index }}')">Pegar imagen</button>
+                  <span id="paste-feedback-{{ slot.slot_name }}-{{ loop.index }}" class="copy-feedback"></span>
                 </div>
               </label>
-              <input id="pasted-{{ loop.index }}" type="hidden" name="pasted_image_data" value="">
+              <input id="pasted-{{ slot.slot_name }}-{{ loop.index }}" type="hidden" name="pasted_image_data" value="">
 
-              {% if cache_status and cache_status.stale %}
-                <p class="warn full">Primero actualiza caché para habilitar el guardado.</p>
-              {% endif %}
-
-              <button type="submit" {% if cache_status and cache_status.stale %}disabled{% endif %}>Guardar imagen del slot</button>
+              <button type="submit">Agregar alternativa</button>
             </form>
           </div>
         </article>
       {% endfor %}
     </div>
   {% else %}
-    <p class="muted">Esta página no define slots de imagen en su frontmatter.</p>
+    <p class="muted">Esta pagina no tiene slots de imagen.</p>
   {% endif %}
 </section>
 {% endif %}

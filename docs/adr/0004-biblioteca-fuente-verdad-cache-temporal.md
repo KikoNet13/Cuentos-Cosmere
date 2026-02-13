@@ -1,26 +1,18 @@
-# 0004 - Biblioteca como fuente de verdad y caché temporal
+# 0004 - Biblioteca como fuente de verdad y cache temporal
 
-- Estado: aceptado
+- Estado: reemplazado por `0007`
 - Fecha: 12/02/26
 
 ## Contexto
 
-El modelo relacional duplicaba información que ya existía en archivos de
-`library/`, complicando edición y sincronización.
+Se adopto inicialmente una arquitectura hibrida: `library/` como fuente de verdad y SQLite como cache temporal.
 
-## Decisión
+## Decision (historica)
 
-Adoptar arquitectura híbrida con prioridad de archivos:
+- fuente de verdad canonica: `library/`
+- SQLite como cache de lectura rapida
+- deteccion stale por fingerprint
 
-- fuente de verdad canónica: `library/`.
-- contrato de cuento: definido por ADR posteriores (actualmente `NN.md`).
-- narrativa y prompts se editan solo en Markdown.
-- SQLite se mantiene únicamente como caché temporal de lectura rápida.
-- desactualización detectada por fingerprint global de `library/`.
-- la UI bloquea guardado de imágenes cuando la caché está stale.
+## Estado actual
 
-## Consecuencias
-
-- navegación por árbol genérico, sin jerarquías fijas de dominio.
-- comandos operativos centrados en migración de layout y caché.
-- mayor transparencia para revisión y control del contenido canónico.
+Este ADR queda reemplazado por `0007`: la navegacion pasa a lectura directa de `NN.json`, sin cache SQLite en runtime.

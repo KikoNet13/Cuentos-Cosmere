@@ -10,24 +10,11 @@
   <header class="site-header">
     <div class="container row between center">
       <a class="brand" href="{{ url_for('web.dashboard') }}">Generador de cuentos ilustrados</a>
-      <small class="muted">Biblioteca canónica (`library`) + caché temporal</small>
+      <small class="muted">Fuente de verdad en JSON (`library/.../NN.json`)</small>
     </div>
   </header>
 
   <main class="container">
-    {% if cache_status and cache_status.stale %}
-      <section class="flash-stack">
-        <div class="flash error">
-          <strong>Caché desactualizada.</strong>
-          Cambió `library/` desde el último refresco.
-          <form method="post" action="{{ url_for('web.cache_refresh') }}" class="inline-form">
-            <input type="hidden" name="next" value="{{ request.full_path if request else '/' }}">
-            <button type="submit">Actualizar caché</button>
-          </form>
-        </div>
-      </section>
-    {% endif %}
-
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
         <section class="flash-stack">
@@ -122,7 +109,7 @@
           return;
         }
         if (feedback) {
-          feedback.textContent = "No se detectó imagen en el portapapeles";
+          feedback.textContent = "No se detecto imagen en el portapapeles";
           setTimeout(() => { feedback.textContent = ""; }, 1800);
         }
       } catch (err) {

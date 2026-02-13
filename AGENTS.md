@@ -16,32 +16,38 @@ Este repositorio aplica un flujo profesional para el
 ## Contrato de datos vigente
 
 1. Fuente de verdad: `library/`.
-2. Un libro se detecta por presencia de uno o mas archivos `NN.md` en su carpeta.
-3. Cada cuento es un unico archivo `NN.md` (2 digitos) dentro del libro.
-4. Estructura canonica de `NN.md`: `## Meta`, `## Pagina NN`, `### Texto`, `### Prompts`, `#### <slot>`, `##### Requisitos`.
-5. Los requisitos se expresan con lista tipada `tipo/ref` en bloque YAML.
-6. Los PDFs de referencia viven junto al cuento con nombre `NN.pdf`.
-7. `anclas.md` por libro es opcional pero recomendado.
-8. `meta.md` es opcional por nodo; cuando existe, puede incluir `## Glosario` en tabla Markdown con columnas `termino|canonico|permitidas|prohibidas|notas`.
-9. El glosario se resuelve de forma jerarquica (raiz -> nodo libro), y el nodo mas especifico sobrescribe terminos repetidos.
+2. Un libro se detecta por presencia de uno o mas archivos `NN.json` en su carpeta.
+3. Cada cuento se guarda en un unico archivo `NN.json` (2 digitos).
+4. Estructura canonica de `NN.json`:
+   - top-level: `schema_version`, `story_id`, `title`, `status`, `book_rel_path`, `created_at`, `updated_at`, `pages`.
+   - por pagina: `page_number`, `status`, `text.original`, `text.current`, `images`.
+   - `images.main` obligatorio, `images.secondary` opcional.
+5. Cada slot de imagen define `status`, `prompt.original`, `prompt.current`, `active_id` y `alternatives[]`.
+6. Cada alternativa define `id`, `slug`, `asset_rel_path`, `mime_type`, `status`, `created_at`, `notes`.
+7. Los assets de imagen se nombran con formato opaco `img_<uuid>_<slug>.<ext>` y la relacion pagina/slot vive en JSON.
+8. `library/_inbox/` se usa como bandeja de propuestas editoriales `.md` y referencias `.pdf`.
+9. `library/_backups/` es opcional para respaldos manuales.
 
-## Flujo de ingestion
+## Flujo editorial oficial
 
-1. Entrada manual pendiente en `library/_pending/` (archivos fuente `.md`).
-2. Normalizacion/propuesta con `python manage.py inbox-parse --input <ruta> --book <book_rel_path> --story-id <NN>`.
-3. Artefactos de trabajo generados en `library/_inbox/<batch_id>/`.
-4. Revisar `review.md`, `ai_context.json`, `review_ai.md`, `review_ai.json` y `manifest.json`.
-5. Validar `review_ai.json` con `python manage.py inbox-review-validate --batch-id <id>`.
-6. Aplicar con `python manage.py inbox-apply --batch-id <id> --approve`.
-7. Si se fuerza la aplicacion, exigir `--force --force-reason "..."`; el override queda trazado en `manifest.json`.
-8. Toda aplicacion reconstruye cache automaticamente.
+1. Flujo principal: skill `revision-adaptacion-editorial`.
+2. La skill detecta libros en `library/_inbox/`.
+3. La skill pide nodos destino una sola vez por libro.
+4. La skill revisa/adapta cada cuento y escribe/actualiza `NN.json` en `library/...`.
+5. Se conserva comparativa editorial en `text.original/current` y `prompt.original/current`.
+6. La gestion de alternativas de imagen y activa se hace sobre el JSON del cuento.
+7. En TAREA-008 no se ejecuta migracion real de `_inbox`; solo queda el procedimiento listo en skill y app.
 
-## Cache y sincronizacion
+## Runtime de app
 
-1. SQLite se usa solo como cache temporal (`db/library_cache.sqlite`).
-2. La desactualizacion se detecta por fingerprint global de `library/`.
-3. Si la cache esta stale, se bloquean escrituras de imagenes en UI.
-4. El refresco manual se ejecuta con `python manage.py rebuild-cache`.
+1. La webapp lee `NN.json` directo desde disco.
+2. No se usa SQLite para navegacion ni lectura.
+3. No hay cache stale por fingerprint en este contrato.
+
+## CLI vigente
+
+1. `python manage.py runserver`
+2. No existen comandos CLI de ingesta en el flujo oficial.
 
 ## Sistema documental
 

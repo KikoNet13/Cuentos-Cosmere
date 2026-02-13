@@ -1,54 +1,30 @@
 from __future__ import annotations
 
 import base64
+import mimetypes
 import re
-from pathlib import Path
 from typing import Any
 
-from flask import (
-    Blueprint,
-    abort,
-    flash,
-    g,
-    jsonify,
-    redirect,
-    render_template,
-    request,
-    send_file,
-    url_for,
-)
+from flask import Blueprint, abort, flash, jsonify, redirect, render_template, request, send_file, url_for
 
-from .config import LIBRARY_ROOT, ROOT_DIR
-from .library_cache import (
-    accept_live_fingerprint,
-    cache_counts,
-    ensure_cache_ready,
-    get_node,
-    get_page_slot,
-    get_story,
+from .catalog_provider import catalog_counts, get_node, get_story_summary, list_children
+from .config import LIBRARY_ROOT
+from .story_store import (
+    StoryStoreError,
+    add_slot_alternative,
     get_story_page,
-    list_children,
     list_page_slots,
-    list_slot_requirements,
     list_story_pages,
-    rebuild_cache,
-    refresh_stale_flag,
-    upsert_asset_index,
+    resolve_media_rel_path,
+    save_page_edits,
+    set_slot_active,
 )
-from .library_fs import resolve_requirement_paths, story_rel_to_book_and_id
 
 web_bp = Blueprint("web", __name__)
-
-SLOT_SLUG_PATTERN = re.compile(r"[^a-z0-9-]+")
 
 
 def _normalize_rel_path(path_rel: str) -> str:
     return path_rel.strip().replace("\\", "/").strip("/")
-
-
-def _slot_slug(slot_name: str) -> str:
-    slug = SLOT_SLUG_PATTERN.sub("-", slot_name.strip().lower()).strip("-")
-    return slug or "slot"
 
 
 def _safe_next_url(raw_value: str | None, fallback_url: str) -> str:
@@ -80,8 +56,36 @@ def _build_breadcrumbs(path_rel: str) -> list[dict[str, str]]:
     return crumbs
 
 
+def _build_alternative_view(alternative: dict[str, Any], active_id: str) -> dict[str, Any]:
+    rel_path = str(alternative.get("asset_rel_path", "")).strip().replace("\\", "/")
+
+    image_exists = False
+    image_url = ""
+    if rel_path:
+        try:
+            target = resolve_media_rel_path(rel_path)
+            image_exists = target.exists() and target.is_file()
+            if image_exists:
+                image_url = url_for("web.media_file", rel_path=rel_path)
+        except StoryStoreError:
+            image_exists = False
+
+    return {
+        "id": str(alternative.get("id", "")),
+        "slug": str(alternative.get("slug", "")),
+        "asset_rel_path": rel_path,
+        "mime_type": str(alternative.get("mime_type", "")),
+        "status": str(alternative.get("status", "candidate")),
+        "created_at": str(alternative.get("created_at", "")),
+        "notes": str(alternative.get("notes", "")),
+        "is_active": str(alternative.get("id", "")) == active_id,
+        "image_exists": image_exists,
+        "image_url": image_url,
+    }
+
+
 def _build_story_view_model(story_rel_path: str, selected_raw: str | None) -> dict[str, Any] | None:
-    story = get_story(story_rel_path)
+    story = get_story_summary(story_rel_path)
     if not story:
         return None
 
@@ -98,55 +102,19 @@ def _build_story_view_model(story_rel_path: str, selected_raw: str | None) -> di
     slot_items: list[dict[str, Any]] = []
     if page:
         for slot in list_page_slots(story_rel_path, selected_page_number):
-            image_rel_path = str(slot["image_rel_path"] or "")
-            image_abs_path = (ROOT_DIR / image_rel_path).resolve() if image_rel_path else None
-            image_exists = bool(image_abs_path and image_abs_path.exists() and image_abs_path.is_file())
-
-            requirement_items: list[dict[str, Any]] = []
-            for requirement in list_slot_requirements(
-                story_rel_path,
-                selected_page_number,
-                str(slot["slot_name"]),
-            ):
-                resolved_refs: list[dict[str, Any]] = []
-                for rel in resolve_requirement_paths(
-                    story_rel_path,
-                    str(requirement["ref_value"]),
-                ):
-                    rel_norm = rel.replace("\\", "/")
-                    abs_file = (ROOT_DIR / rel_norm).resolve()
-                    resolved_refs.append(
-                        {
-                            "rel_path": rel_norm,
-                            "exists": abs_file.exists() and abs_file.is_file(),
-                            "url": url_for("web.media_file", rel_path=rel_norm),
-                        }
-                    )
-
-                requirement_items.append(
-                    {
-                        "id": int(requirement["id"]),
-                        "kind": str(requirement["requirement_kind"]),
-                        "ref": str(requirement["ref_value"]),
-                        "display_order": int(requirement["display_order"]),
-                        "refs": resolved_refs,
-                    }
-                )
+            active_id = str(slot.get("active_id", ""))
+            alternatives = [_build_alternative_view(item, active_id) for item in slot.get("alternatives", [])]
+            active_item = next((item for item in alternatives if item["is_active"]), None)
 
             slot_items.append(
                 {
-                    "slot_name": str(slot["slot_name"]),
-                    "role": str(slot["role"]),
-                    "prompt_text": str(slot["prompt_text"]),
-                    "display_order": int(slot["display_order"]),
-                    "image_rel_path": image_rel_path,
-                    "image_exists": image_exists,
-                    "image_url": (
-                        url_for("web.media_file", rel_path=image_rel_path)
-                        if image_rel_path
-                        else ""
-                    ),
-                    "requirements": requirement_items,
+                    "slot_name": str(slot.get("slot_name", "main")),
+                    "status": str(slot.get("status", "draft")),
+                    "prompt_current": str(slot.get("prompt_current", "")),
+                    "prompt_original": str(slot.get("prompt_original", "")),
+                    "active_id": active_id,
+                    "active_item": active_item,
+                    "alternatives": alternatives,
                 }
             )
 
@@ -176,68 +144,43 @@ def _build_story_view_model(story_rel_path: str, selected_raw: str | None) -> di
     }
 
 
-def _extract_image_bytes() -> tuple[bytes | None, str | None]:
+def _extract_image_payload() -> tuple[bytes | None, str, str | None]:
     uploaded = request.files.get("image_file")
     if uploaded and uploaded.filename:
         payload = uploaded.read()
+        mime_type = (uploaded.mimetype or "").strip()
+        if not mime_type:
+            mime_type = mimetypes.guess_type(uploaded.filename)[0] or "image/png"
         if payload:
-            return payload, None
+            return payload, mime_type, None
 
     pasted = request.form.get("pasted_image_data", "").strip()
     if not pasted:
-        return None, "No se recibió ninguna imagen."
+        return None, "image/png", "No se recibio ninguna imagen."
 
+    mime_type = "image/png"
+    encoded = pasted
     if pasted.startswith("data:"):
-        if "," not in pasted:
-            return None, "Formato de imagen pegada inválido."
-        _, encoded = pasted.split(",", 1)
-    else:
-        encoded = pasted
+        match = re.match(r"^data:([^;]+);base64,(.*)$", pasted, flags=re.IGNORECASE | re.DOTALL)
+        if not match:
+            return None, "image/png", "Formato de imagen pegada invalido."
+        mime_type = match.group(1).strip() or "image/png"
+        encoded = match.group(2)
 
     try:
         decoded = base64.b64decode(encoded, validate=True)
     except (TypeError, ValueError):
-        return None, "No se pudo decodificar la imagen pegada."
+        return None, "image/png", "No se pudo decodificar la imagen pegada."
 
     if not decoded:
-        return None, "La imagen pegada está vacía."
-    return decoded, None
+        return None, "image/png", "La imagen pegada esta vacia."
 
-
-def _resolve_slot_target_path(
-    story_rel_path: str,
-    page_number: int,
-    slot_name: str,
-    cached_rel_path: str,
-) -> str:
-    rel = cached_rel_path.strip().replace("\\", "/")
-    if rel:
-        return rel
-
-    book_rel_path, story_id = story_rel_to_book_and_id(story_rel_path)
-    slot_slug = _slot_slug(slot_name)
-    if book_rel_path:
-        return f"library/{book_rel_path}/{story_id}-p{page_number:02d}-{slot_slug}.png"
-    return f"library/{story_id}-p{page_number:02d}-{slot_slug}.png"
-
-
-@web_bp.before_app_request
-def _prepare_cache_state() -> None:
-    if request.endpoint and request.endpoint.startswith("web."):
-        g.cache_state = ensure_cache_ready()
-
-
-@web_bp.app_context_processor
-def _inject_cache_state() -> dict[str, Any]:
-    state = getattr(g, "cache_state", None)
-    if state is None:
-        state = refresh_stale_flag()
-    return {"cache_status": state}
+    return decoded, mime_type, None
 
 
 @web_bp.get("/")
 def dashboard():
-    counts = cache_counts()
+    counts = catalog_counts()
     children = list_children("")
     return render_template(
         "dashboard.html",
@@ -278,95 +221,82 @@ def story_detail(story_path: str):
     return render_template("cuento.html", **view_model)
 
 
-@web_bp.post("/cache/refresh")
-def cache_refresh():
-    stats = rebuild_cache()
-    g.cache_state = refresh_stale_flag()
+@web_bp.post("/story/<path:story_path>/page/<int:page_number>/save")
+def save_story_page(story_path: str, page_number: int):
+    story_rel_path = _normalize_rel_path(story_path)
+    fallback = url_for("web.story_detail", story_path=story_rel_path, p=page_number)
 
-    flash(
-        (
-            "Caché actualizada. "
-            f"Cuentos: {stats['stories']} | "
-            f"Páginas: {stats['pages']} | "
-            f"Slots: {stats['slots']}"
-        ),
-        "success",
-    )
-    if stats.get("warnings"):
-        flash(f"Avisos de escaneo: {len(stats['warnings'])}", "error")
+    try:
+        save_page_edits(
+            story_rel_path=story_rel_path,
+            page_number=page_number,
+            text_current=request.form.get("text_current", ""),
+            main_prompt_current=request.form.get("main_prompt_current", ""),
+            secondary_prompt_current=request.form.get("secondary_prompt_current", None),
+        )
+        flash("Pagina guardada en JSON.", "success")
+    except StoryStoreError as exc:
+        flash(str(exc), "error")
 
-    fallback = url_for("web.dashboard")
     return redirect(_safe_next_url(request.form.get("next"), fallback))
-
-
-@web_bp.get("/cache/status")
-def cache_status():
-    state = refresh_stale_flag()
-    payload = {
-        "stale": bool(state.get("stale", True)),
-        "has_cache": bool(state.get("has_cache", False)),
-        "last_refresh_at": state.get("last_refresh_at", ""),
-        "scanned_files": int(state.get("scanned_files", 0)),
-        "live_scanned_files": int(state.get("live_scanned_files", 0)),
-        "cache_backend": state.get("cache_backend", ""),
-    }
-    return jsonify(payload)
 
 
 @web_bp.post("/story/<path:story_path>/page/<int:page_number>/slot/<slot_name>/upload")
 def upload_slot_image(story_path: str, page_number: int, slot_name: str):
     story_rel_path = _normalize_rel_path(story_path)
-    state = refresh_stale_flag()
-    if state.get("stale", True):
-        flash("La caché está desactualizada. Actualiza la caché antes de guardar imágenes.", "error")
-        return redirect(url_for("web.story_detail", story_path=story_rel_path, p=page_number))
+    fallback = url_for("web.story_detail", story_path=story_rel_path, p=page_number)
 
-    story = get_story(story_rel_path)
-    if not story:
-        abort(404)
-
-    page = get_story_page(story_rel_path, page_number)
-    if not page:
-        abort(404)
-
-    slot = get_page_slot(story_rel_path, page_number, slot_name)
-    if not slot:
-        abort(404)
-
-    image_bytes, error = _extract_image_bytes()
+    image_bytes, mime_type, error = _extract_image_payload()
     if error:
         flash(error, "error")
-        return redirect(url_for("web.story_detail", story_path=story_rel_path, p=page_number))
+        return redirect(_safe_next_url(request.form.get("next"), fallback))
 
-    target_rel_path = _resolve_slot_target_path(
-        story_rel_path=story_rel_path,
-        page_number=page_number,
-        slot_name=slot_name,
-        cached_rel_path=str(slot["image_rel_path"] or ""),
-    )
-    target_abs_path = (ROOT_DIR / target_rel_path).resolve()
+    try:
+        alternative = add_slot_alternative(
+            story_rel_path=story_rel_path,
+            page_number=page_number,
+            slot_name=slot_name,
+            image_bytes=image_bytes or b"",
+            mime_type=mime_type,
+            slug=request.form.get("alt_slug", ""),
+            notes=request.form.get("alt_notes", ""),
+        )
+        flash(f"Alternativa creada: {alternative['id']}", "success")
+    except StoryStoreError as exc:
+        flash(str(exc), "error")
 
-    root_abs_path = ROOT_DIR.resolve()
-    if root_abs_path not in target_abs_path.parents:
-        abort(403)
+    return redirect(_safe_next_url(request.form.get("next"), fallback))
 
-    target_abs_path.parent.mkdir(parents=True, exist_ok=True)
-    target_abs_path.write_bytes(image_bytes or b"")
 
-    upsert_asset_index(target_rel_path)
-    accept_live_fingerprint()
+@web_bp.post("/story/<path:story_path>/page/<int:page_number>/slot/<slot_name>/activate")
+def activate_slot_image(story_path: str, page_number: int, slot_name: str):
+    story_rel_path = _normalize_rel_path(story_path)
+    fallback = url_for("web.story_detail", story_path=story_rel_path, p=page_number)
 
-    flash(f"Imagen guardada en {target_rel_path}", "success")
-    return redirect(url_for("web.story_detail", story_path=story_rel_path, p=page_number))
+    alternative_id = request.form.get("alternative_id", "").strip()
+    if not alternative_id:
+        flash("Debe indicar alternative_id.", "error")
+        return redirect(_safe_next_url(request.form.get("next"), fallback))
+
+    try:
+        set_slot_active(
+            story_rel_path=story_rel_path,
+            page_number=page_number,
+            slot_name=slot_name,
+            alternative_id=alternative_id,
+        )
+        flash("Alternativa activa actualizada.", "success")
+    except StoryStoreError as exc:
+        flash(str(exc), "error")
+
+    return redirect(_safe_next_url(request.form.get("next"), fallback))
 
 
 @web_bp.get("/media/<path:rel_path>")
 def media_file(rel_path: str):
-    normalized = rel_path.strip().replace("\\", "/")
-    target = (ROOT_DIR / normalized).resolve()
-
-    root_abs = ROOT_DIR.resolve()
-    if root_abs not in target.parents and target != root_abs:
+    try:
+        target = resolve_media_rel_path(rel_path)
+    except StoryStoreError:
         abort(403)
 
     if not target.exists() or not target.is_file():
@@ -380,6 +310,6 @@ def healthcheck():
         {
             "ok": LIBRARY_ROOT.exists(),
             "library_root": str(LIBRARY_ROOT),
-            "cache_db": str((ROOT_DIR / "db" / "library_cache.sqlite")),
+            "storage_mode": "json_fs",
         }
     )

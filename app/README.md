@@ -3,50 +3,37 @@
 ## Contrato de datos
 
 - `library/` es la fuente de verdad.
-- Un libro se detecta por uno o mas archivos `NN.md`.
-- Cada `NN.md` representa un cuento e incluye:
-  - `## Meta`
-  - `## Pagina NN`
-  - `### Texto`
-  - `### Prompts`
-  - slots `#### <slot>` y `##### Requisitos` (YAML `tipo/ref`)
-- El glosario semantico puede declararse en `meta.md` por nodo con seccion `## Glosario` (tabla `termino|canonico|permitidas|prohibidas|notas`).
-- El merge del glosario es jerarquico (`library/` -> nodo libro) y el nodo mas especifico pisa terminos repetidos.
-- La base SQLite es cache temporal, no verdad de negocio.
+- Un libro se detecta por uno o mas archivos `NN.json`.
+- Cada `NN.json` representa un cuento completo con:
+  - metadata de cuento
+  - paginas (`text.original`, `text.current`)
+  - slots de imagen (`main` obligatorio, `secondary` opcional)
+  - alternativas de imagen por slot + `active_id`
+- Los assets de imagen viven en el mismo directorio del libro con nombre opaco `img_<uuid>_<slug>.<ext>`.
 
-## Cache temporal
+## Runtime
 
-- Archivo: `db/library_cache.sqlite`.
-- Uso: indice de navegacion y lectura rapida.
-- Estado stale: fingerprint global de `library/`.
-- Escritura de imagenes bloqueada cuando la cache esta stale.
+- Sin SQLite de cache.
+- Catalogo por escaneo directo de `library/`.
+- Endpoints de navegacion:
+  - `/`
+  - `/n/<path>`
+  - `/story/<path>?p=N`
+  - `/media/<path>`
+  - `/health`
 
-## Comandos
+## Operaciones web
 
-- `python manage.py migrate-library-layout --dry-run`
-- `python manage.py migrate-library-layout --apply`
-- `python manage.py rebuild-cache`
-- `python manage.py inbox-parse --input <path> --book <book_rel_path> --story-id <NN>`
-- `python manage.py inbox-review-validate --batch-id <id>`
-- `python manage.py inbox-apply --batch-id <id> --approve`
-- `python manage.py inbox-apply --batch-id <id> --approve --force --force-reason "<motivo>"`
+- Visualizar comparativa `original/current` de texto y prompts.
+- Guardar edicion por pagina (`current`).
+- Subir alternativas de imagen por slot.
+- Marcar alternativa activa por slot.
+
+## CLI
+
 - `python manage.py runserver`
 
-## Carpetas de ingestion
+## Skill operativa
 
-- Entrada pendiente manual: `library/_pending/` (tus `.md` sin procesar).
-- Salida parser/revision: `library/_inbox/<batch_id>/`.
-- Artefactos IA por batch: `ai_context.json`, `review_ai.md`, `review_ai.json`.
-
-## Gate IA en apply
-
-- `inbox-apply` bloquea si falta `review_ai.json`, si es invalido, si `status` es `pending|blocked` o si `critical_open > 0`.
-- `--force` exige `--force-reason` y deja trazabilidad en `manifest.json`.
-
-## UI
-
-- Navegacion por arbol generico de nodos.
-- Deteccion de libro por presencia de `NN.md`.
-- Vista de cuento por pagina (`/story/<path>?p=N`).
-- Texto y prompts en modo lectura/copia.
-- Subida o pegado de imagen por slot.
+- Skill canonica: `revision-adaptacion-editorial`.
+- El flujo de ingesta/editorial no usa comandos CLI dedicados.

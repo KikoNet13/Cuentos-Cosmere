@@ -5,6 +5,19 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [13/02/26] - Skill editorial + runtime JSON sin SQLite
+
+- Se adopto `library/.../NN.json` como contrato canonico de runtime.
+- Se retiro SQLite de navegacion/lectura y se elimino flujo CLI de ingesta por batch.
+- La webapp ahora opera por escaneo directo de disco con:
+  - comparativa `original/current`
+  - guardado por pagina
+  - alternativas de imagen por slot y `active_id`.
+- `manage.py` queda solo con `runserver`.
+- Se reemplazo la skill global legacy por `revision-adaptacion-editorial`.
+- ADR: `docs/adr/0007-canon-json-sin-sqlite-skill-editorial.md`.
+- Tarea: `docs/tasks/TAREA-008-skill-revision-adaptacion-json-sin-sqlite.md`.
+
 ## [12/02/26] - Parser IA asistida + gate critico mixto
 
 - `inbox-parse` ahora genera `ai_context.json`, `review_ai.md` y `review_ai.json` por batch.

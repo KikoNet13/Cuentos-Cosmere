@@ -1,23 +1,16 @@
-# 0002 - Política local de persistencia SQLite
+# 0002 - Politica local de persistencia SQLite
 
-- Estado: aceptado
+- Estado: reemplazado por `0007`
 - Fecha: 12/02/26
 
 ## Contexto
 
-SQLite se usa localmente para estado temporal. Ese estado depende del entorno
-y no debe versionarse en Git.
+SQLite se usaba localmente para estado temporal no versionado.
 
-## Decisión
+## Decision (historica)
 
-Mantener SQLite en `db/` y excluir de versionado:
+Mantener SQLite en `db/` y excluir de versionado.
 
-- `db/*.sqlite`
-- `db/*.sqlite-shm`
-- `db/*.sqlite-wal`
+## Estado actual
 
-## Consecuencias
-
-- El repositorio se mantiene limpio y portable.
-- El estado local no queda preservado por Git.
-- Los respaldos de datos deben gestionarse fuera de SQLite.
+Este ADR queda reemplazado por `0007`, que elimina SQLite del runtime de navegacion y adopta lectura directa desde `NN.json`.
