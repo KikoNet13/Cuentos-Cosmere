@@ -1,9 +1,36 @@
-﻿---
+---
 name: revision-prompts-deteccion
-description: Detectar hallazgos de prompts por severidad y pasada.
+description: Detectar hallazgos en prompts por severidad, validando estructura y coherencia visual con el texto revisado.
 ---
 
-# Prompts Detección
+# Skill: Prompts Detección
 
-Comando:
-python -c "from app.editorial_orquestador import run_prompt_detection as f; r=f(inbox_book_title='El imperio final', book_rel_path='cosmere/nacidos-de-la-bruma-era-1/el-imperio-final', story_id='01', severity_band='major', pass_index=1); print(r['findings_json_rel']); print(r['alerts_open'])"
+## Propósito
+
+Detectar incoherencias en `images.main.prompt.current` y preparar la toma de decisiones.
+
+## Inputs requeridos
+
+- `inbox_book_title`
+- `book_rel_path`
+- `story_id`
+- `severity_band`
+- `pass_index` (opcional, por defecto `1`)
+
+## Protocolo conversacional obligatorio
+
+1. Confirmar que texto no está bloqueado en `critical|major`.
+2. Validar inputs (`story_id`, `severity_band`, `pass_index`).
+3. Ejecutar detección de prompts para la banda activa.
+4. Presentar hallazgos por página con evidencia y prioridad.
+5. Preparar transición a decisión interactiva.
+
+## Criterios de salida
+
+- Se actualiza `NN.findings.json` para etapa `prompt`.
+- Se entrega listado priorizado para decisión.
+
+## Errores y recuperación
+
+- Si texto está bloqueado: no permitir iniciar prompts.
+- Si la plantilla estructurada v1 falta: registrar como hallazgo `major`.

@@ -5,6 +5,18 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [14/02/26] - Revisión ligera de glosario en contexto canon
+
+- Se añadió sidecar opcional `context_review.json` en `library/<book_rel_path>/_reviews/` para decisiones editoriales de terminología.
+- Se incorporó `run_contexto_revision_glosario(...)` en `app/editorial_orquestador.py` para persistir decisiones y recalcular `glossary_merged.json` efectivo.
+- `run_contexto_canon(...)` ahora aplica automáticamente `context_review.json` cuando existe y conserva comportamiento previo cuando no existe.
+- Los hallazgos `glossary_forbidden_term` ahora proponen sustitución usando `replacement_target` (alias preferido o canónico).
+- Se actualizó la documentación de skills y guías para explicitar:
+  - revisión ligera manual desde `revision-contexto-canon`
+  - consumo pasivo por `revision-orquestador-editorial` (sin disparo automático).
+- Se incluyen cambios de preparación de entorno en `library/.../el-imperio-final` para pruebas desde cero.
+- Tarea: `docs/tasks/TAREA-013-contexto-review-ligera-glosario.md`.
+
 ## [13/02/26] - Cascada editorial por severidad con ciclo de 3 skills
 
 - Se amplió `app/editorial_orquestador.py` con cascada por severidad (`critical -> major -> minor -> info`) para etapas de texto y prompts.

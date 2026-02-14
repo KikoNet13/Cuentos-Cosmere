@@ -1,9 +1,44 @@
-﻿---
+---
 name: revision-texto-decision-interactiva
-description: Aplicar decisiones por finding en texto.
+description: Guiar decisiones por hallazgo de texto en modo interactivo (opciones A/B/C), aplicando cambios aceptados con trazabilidad.
 ---
 
-# Texto Decisión Interactiva
+# Skill: Texto Decisión Interactiva
 
-Comando:
-python -c "from app.editorial_orquestador import run_text_decision_interactiva as f; r=f(inbox_book_title='El imperio final', book_rel_path='cosmere/nacidos-de-la-bruma-era-1/el-imperio-final', story_id='01', severity_band='critical', pass_index=1); print(r['choices_json_rel']); print(r['applied_changes'])"
+## Propósito
+
+Convertir hallazgos de texto en decisiones editoriales aplicadas y registradas.
+
+## Inputs requeridos
+
+- `inbox_book_title`
+- `book_rel_path`
+- `story_id`
+- `severity_band`
+- `pass_index` (opcional, por defecto `1`)
+
+## Protocolo conversacional obligatorio
+
+1. Cargar hallazgos de la banda/pasada activa.
+2. Recorrer hallazgos uno a uno, mostrando:
+   - evidencia
+   - impacto narrativo estimado
+   - opciones propuestas.
+3. Solicitar decisión explícita por hallazgo:
+   - `accepted`
+   - `rejected`
+   - `defer` (solo en `minor|info`).
+4. Aplicar cambios aceptados sobre `text.current`.
+5. Confirmar resumen de decisiones y cambios aplicados.
+
+## Criterios de salida
+
+- Se actualiza `NN.choices.json`.
+- Si hubo aceptaciones, se actualiza `NN.json` en `text.current`.
+- Queda trazabilidad lista para contraste.
+
+## Errores y recuperación
+
+- En `critical|major`, `defer` no es válido: forzar resolución.
+- Si falta opción seleccionada en `accepted`: pedir selección antes de continuar.
+- Si no hay hallazgos activos: avisar y proponer pasar a contraste.

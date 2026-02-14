@@ -21,6 +21,7 @@ STAGE_PROMPT = "prompt"
 REVIEW_SCHEMA_VERSION = "1.0"
 PIPELINE_SCHEMA_VERSION = "1.0"
 CASCADE_SCHEMA_VERSION = "2.0"
+CONTEXT_REVIEW_SCHEMA_VERSION = "1.0"
 SEVERITY_ORDER = ("critical", "major", "minor", "info")
 BLOCKING_SEVERITIES = {"critical", "major"}
 MAX_PASSES_BY_SEVERITY = {
@@ -29,6 +30,7 @@ MAX_PASSES_BY_SEVERITY = {
     "minor": 3,
     "info": 2,
 }
+VALID_SEVERITY_BANDS = set(SEVERITY_ORDER)
 
 PROMPT_STRUCTURED_LABELS = (
     "SUJETO",
@@ -41,6 +43,11 @@ PROMPT_STRUCTURED_LABELS = (
 )
 
 OPEN_FINDING_DECISIONS = {"pending", "rejected"}
+CONTEXT_REVIEW_DECISIONS = {"accepted", "rejected", "defer", "pending"}
+CONTEXT_REVIEW_MODE = "light"
+CONTEXT_REVIEW_BLOCKING = False
+CONTEXT_REVIEW_REPLACEMENT_POLICY = "preferred_alias_else_canonical"
+CONTEXT_REVIEW_PENDING_POLICY = "no_impact"
 
 
 class EditorialOrquestadorError(ValueError):
@@ -53,6 +60,59 @@ def _utc_now_iso() -> str:
 
 def _normalize_rel_path(path_rel: str) -> str:
     return path_rel.strip().replace("\\", "/").strip("/")
+
+
+def _validate_book_rel_path(book_rel_path: str) -> str:
+    normalized = _normalize_rel_path(book_rel_path)
+    if not normalized:
+        raise EditorialOrquestadorError("`book_rel_path` no puede estar vacío.")
+    return normalized
+
+
+def _validate_inbox_book_title(inbox_book_title: str) -> str:
+    value = str(inbox_book_title).strip()
+    if not value:
+        raise EditorialOrquestadorError("`inbox_book_title` no puede estar vacío.")
+    return value
+
+
+def _validate_story_id(story_id: str) -> str:
+    value = str(story_id).strip()
+    if not re.fullmatch(r"\d{2}", value):
+        raise EditorialOrquestadorError("`story_id` debe tener formato `NN` (dos dígitos).")
+    return value
+
+
+def _validate_story_exists(book_rel_path: str, story_id: str) -> tuple[str, str]:
+    normalized_book = _validate_book_rel_path(book_rel_path)
+    normalized_story = _validate_story_id(story_id)
+    story_rel_path = f"{normalized_book}/{normalized_story}"
+    story_abs_path = (LIBRARY_ROOT / normalized_book / f"{normalized_story}.json").resolve()
+    if not story_abs_path.exists() or not story_abs_path.is_file():
+        raise EditorialOrquestadorError(
+            f"No existe `story_id={normalized_story}` en `book_rel_path={normalized_book}`."
+        )
+    return normalized_book, story_rel_path
+
+
+def _validate_severity_band(severity_band: str) -> str:
+    normalized = str(severity_band).strip().lower()
+    if normalized not in VALID_SEVERITY_BANDS:
+        allowed = ", ".join(SEVERITY_ORDER)
+        raise EditorialOrquestadorError(
+            f"`severity_band` inválido: '{severity_band}'. Valores permitidos: {allowed}."
+        )
+    return normalized
+
+
+def _validate_pass_index(pass_index: int) -> int:
+    try:
+        normalized = int(pass_index)
+    except (TypeError, ValueError) as exc:
+        raise EditorialOrquestadorError("`pass_index` debe ser un entero >= 1.") from exc
+    if normalized < 1:
+        raise EditorialOrquestadorError("`pass_index` debe ser >= 1.")
+    return normalized
 
 
 def _to_project_rel(path_abs: Path) -> str:
@@ -87,6 +147,7 @@ def _review_paths(book_rel_path: str, story_id: str) -> dict[str, Path]:
         "pipeline_state_json": reviews_dir / "pipeline_state.json",
         "context_chain_json": reviews_dir / "context_chain.json",
         "glossary_merged_json": reviews_dir / "glossary_merged.json",
+        "context_review_json": reviews_dir / "context_review.json",
     }
 
 
@@ -104,6 +165,210 @@ def _read_json(path_obj: Path) -> dict[str, Any] | None:
     except json.JSONDecodeError:
         return None
     return data if isinstance(data, dict) else None
+
+
+def _dedupe_case_insensitive(values: list[str]) -> list[str]:
+    output: list[str] = []
+    seen: set[str] = set()
+    for raw in values:
+        token = str(raw).strip()
+        if not token:
+            continue
+        key = token.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        output.append(token)
+    return output
+
+
+def _normalize_context_term_key(term_key: str, term: str) -> str:
+    candidate = str(term_key).strip().lower()
+    if candidate:
+        return candidate
+    return str(term).strip().lower()
+
+
+def _normalize_context_decision(value: str) -> str:
+    normalized = str(value).strip().lower()
+    if normalized in CONTEXT_REVIEW_DECISIONS:
+        return normalized
+    return "pending"
+
+
+def _normalize_context_list(value: Any) -> list[str]:
+    if isinstance(value, list):
+        values = [str(item).strip() for item in value]
+        return _dedupe_case_insensitive(values)
+    if value is None:
+        return []
+    text = str(value).strip()
+    if not text:
+        return []
+    values = [item.strip() for item in re.split(r"[;,]", text) if item.strip()]
+    return _dedupe_case_insensitive(values)
+
+
+def _normalize_context_review_row(row: Any, now_iso: str) -> dict[str, Any] | None:
+    if not isinstance(row, dict):
+        return None
+    term = str(row.get("term", "")).strip()
+    term_key = _normalize_context_term_key(str(row.get("term_key", "")), term)
+    if not term_key:
+        return None
+    if not term:
+        term = term_key
+    return {
+        "term_key": term_key,
+        "term": term,
+        "decision": _normalize_context_decision(str(row.get("decision", "pending"))),
+        "preferred_alias": str(row.get("preferred_alias", "")).strip(),
+        "allowed_add": _normalize_context_list(row.get("allowed_add", [])),
+        "forbidden_add": _normalize_context_list(row.get("forbidden_add", [])),
+        "notes": str(row.get("notes", "")).strip(),
+        "updated_at": str(row.get("updated_at", "")).strip() or now_iso,
+    }
+
+
+def _merge_context_review_decisions(
+    existing_rows: list[dict[str, Any]],
+    incoming_rows: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    now_iso = _utc_now_iso()
+    merged: dict[str, dict[str, Any]] = {}
+
+    for row in existing_rows:
+        normalized = _normalize_context_review_row(row, now_iso)
+        if not normalized:
+            continue
+        merged[normalized["term_key"]] = normalized
+
+    for row in incoming_rows:
+        normalized = _normalize_context_review_row(row, now_iso)
+        if not normalized:
+            continue
+        normalized["updated_at"] = now_iso
+        merged[normalized["term_key"]] = normalized
+
+    return sorted(merged.values(), key=lambda item: str(item.get("term_key", "")))
+
+
+def _apply_context_review_to_glossary(
+    *,
+    glossary_base: list[dict[str, Any]],
+    review_decisions: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], int]:
+    glossary_map: dict[str, dict[str, Any]] = {}
+    for row in glossary_base:
+        term = str(row.get("term", "")).strip()
+        if not term:
+            continue
+        term_key = term.lower()
+        normalized = dict(row)
+        canonical = str(normalized.get("canonical", "")).strip() or term
+        normalized["canonical"] = canonical
+        normalized["allowed"] = _dedupe_case_insensitive(
+            [str(item).strip() for item in normalized.get("allowed", [])]
+        )
+        normalized["forbidden"] = _dedupe_case_insensitive(
+            [str(item).strip() for item in normalized.get("forbidden", [])]
+        )
+        normalized["replacement_target"] = canonical
+        glossary_map[term_key] = normalized
+
+    ignored_missing_term = 0
+    for decision in review_decisions:
+        term_key = str(decision.get("term_key", "")).strip().lower()
+        if not term_key:
+            continue
+        target = glossary_map.get(term_key)
+        if not target:
+            ignored_missing_term += 1
+            continue
+        if str(decision.get("decision", "pending")).strip().lower() != "accepted":
+            continue
+
+        preferred_alias = str(decision.get("preferred_alias", "")).strip()
+        replacement_target = preferred_alias or str(target.get("canonical", "")).strip() or str(
+            target.get("term", "")
+        ).strip()
+        target["replacement_target"] = replacement_target
+        target["allowed"] = _dedupe_case_insensitive(
+            [str(item).strip() for item in target.get("allowed", [])]
+            + [str(item).strip() for item in decision.get("allowed_add", [])]
+        )
+        target["forbidden"] = _dedupe_case_insensitive(
+            [str(item).strip() for item in target.get("forbidden", [])]
+            + [str(item).strip() for item in decision.get("forbidden_add", [])]
+        )
+        notes = str(decision.get("notes", "")).strip()
+        if notes:
+            base_notes = str(target.get("notes", "")).strip()
+            target["notes"] = notes if not base_notes else f"{base_notes}\n{notes}"
+
+    merged = sorted(glossary_map.values(), key=lambda item: str(item.get("term", "")).lower())
+    return merged, ignored_missing_term
+
+
+def _build_context_review_metrics(
+    *,
+    review_decisions: list[dict[str, Any]],
+    ignored_missing_term: int,
+) -> dict[str, int]:
+    metrics = {
+        "total": len(review_decisions),
+        "accepted": 0,
+        "rejected": 0,
+        "defer": 0,
+        "pending": 0,
+        "ignored_missing_term": int(ignored_missing_term),
+    }
+    for row in review_decisions:
+        decision = _normalize_context_decision(str(row.get("decision", "pending")))
+        metrics[decision] += 1
+    return metrics
+
+
+def _context_review_payload_base(*, book_rel_path: str, inbox_book_title: str, generated_at: str) -> dict[str, Any]:
+    now_iso = _utc_now_iso()
+    return {
+        "schema_version": CONTEXT_REVIEW_SCHEMA_VERSION,
+        "generated_at": generated_at,
+        "updated_at": now_iso,
+        "book_rel_path": book_rel_path,
+        "inbox_book_title": inbox_book_title,
+        "mode": CONTEXT_REVIEW_MODE,
+        "blocking": CONTEXT_REVIEW_BLOCKING,
+        "replacement_policy": CONTEXT_REVIEW_REPLACEMENT_POLICY,
+        "pending_policy": CONTEXT_REVIEW_PENDING_POLICY,
+        "decisions": [],
+        "metrics": {
+            "total": 0,
+            "accepted": 0,
+            "rejected": 0,
+            "defer": 0,
+            "pending": 0,
+            "ignored_missing_term": 0,
+        },
+    }
+
+
+def _read_context_review_payload(*, book_rel_path: str, inbox_book_title: str) -> dict[str, Any]:
+    normalized_book = _validate_book_rel_path(book_rel_path)
+    inbox_title = _validate_inbox_book_title(inbox_book_title)
+    paths = _review_paths(normalized_book, "00")
+    existing = _read_json(paths["context_review_json"]) or {}
+    generated_at = str(existing.get("generated_at", "")).strip() or _utc_now_iso()
+    payload = _context_review_payload_base(
+        book_rel_path=normalized_book,
+        inbox_book_title=inbox_title,
+        generated_at=generated_at,
+    )
+    payload["updated_at"] = str(existing.get("updated_at", "")).strip() or payload["updated_at"]
+    raw_rows = existing.get("decisions", [])
+    if isinstance(raw_rows, list):
+        payload["decisions"] = _merge_context_review_decisions([], [row for row in raw_rows if isinstance(row, dict)])
+    return payload
 
 
 def _status_from_metrics(metrics: dict[str, int]) -> str:
@@ -191,14 +456,14 @@ def _extract_page_sections(markdown: str) -> list[tuple[int, str]]:
 
 def _extract_field_block(section: str, label: str) -> str:
     pattern = re.compile(
-        rf"{re.escape(label)}\s*:\s*```(?:text)?\s*\r?\n(.*?)\r?\n```",
+        rf"{re.escape(label)}\s*:\s*```(?:text)?[ \t]*\r?\n(.*?)\r?\n```",
         flags=re.IGNORECASE | re.DOTALL,
     )
     match = pattern.search(section)
     if match:
         return match.group(1).strip()
     fallback_pattern = re.compile(
-        rf"{re.escape(label)}\s*:\s*(.*)",
+        rf"^\s*{re.escape(label)}\s*:\s*(.*)$",
         flags=re.IGNORECASE,
     )
     fallback = fallback_pattern.search(section)
@@ -254,6 +519,8 @@ def _parse_story_markdown(md_path: Path) -> dict[str, Any]:
 
 
 def discover_inbox_stories(*, inbox_book_title: str, book_rel_path: str) -> dict[str, Any]:
+    inbox_book_title = _validate_inbox_book_title(inbox_book_title)
+    book_rel_path = _validate_book_rel_path(book_rel_path)
     inbox_root = (LIBRARY_ROOT / "_inbox" / inbox_book_title).resolve()
     if not inbox_root.exists() or not inbox_root.is_dir():
         raise EditorialOrquestadorError(f"No existe el libro en inbox: {inbox_root}")
@@ -342,7 +609,7 @@ def discover_inbox_stories(*, inbox_book_title: str, book_rel_path: str) -> dict
     selected.sort(key=lambda row: row["story_id"])
     return {
         "inbox_book_title": inbox_book_title,
-        "book_rel_path": _normalize_rel_path(book_rel_path),
+        "book_rel_path": book_rel_path,
         "source_root_rel": _to_project_rel(inbox_root),
         "selected_stories": selected,
         "ignored_items": ignored_items,
@@ -382,6 +649,8 @@ def _write_pipeline_state(book_rel_path: str, state_payload: dict[str, Any]) -> 
 
 
 def run_ingesta_json(*, inbox_book_title: str, book_rel_path: str) -> dict[str, Any]:
+    inbox_book_title = _validate_inbox_book_title(inbox_book_title)
+    book_rel_path = _validate_book_rel_path(book_rel_path)
     discovery = discover_inbox_stories(inbox_book_title=inbox_book_title, book_rel_path=book_rel_path)
     selected = discovery["selected_stories"]
     ingestion_rows: list[dict[str, Any]] = []
@@ -1094,7 +1363,8 @@ def _discover_canonical_pdfs(inbox_book_title: str) -> dict[str, Any]:
 
 
 def run_contexto_canon(*, inbox_book_title: str, book_rel_path: str) -> dict[str, Any]:
-    normalized_book = _normalize_rel_path(book_rel_path)
+    inbox_book_title = _validate_inbox_book_title(inbox_book_title)
+    normalized_book = _validate_book_rel_path(book_rel_path)
     parts = [part for part in normalized_book.split("/") if part]
     node_chain = ["/".join(parts[:idx]) for idx in range(1, len(parts) + 1)]
 
@@ -1122,7 +1392,20 @@ def run_contexto_canon(*, inbox_book_title: str, book_rel_path: str) -> dict[str
             )
 
     canonical = _discover_canonical_pdfs(inbox_book_title)
-    glossary_merged = sorted(glossary_map.values(), key=lambda item: str(item.get("term", "")).lower())
+    glossary_base = sorted(glossary_map.values(), key=lambda item: str(item.get("term", "")).lower())
+    context_review_payload = _read_context_review_payload(
+        book_rel_path=normalized_book,
+        inbox_book_title=inbox_book_title,
+    )
+    context_review_decisions = context_review_payload.get("decisions", [])
+    glossary_merged, ignored_missing_term = _apply_context_review_to_glossary(
+        glossary_base=glossary_base,
+        review_decisions=context_review_decisions if isinstance(context_review_decisions, list) else [],
+    )
+    context_review_payload["metrics"] = _build_context_review_metrics(
+        review_decisions=context_review_decisions if isinstance(context_review_decisions, list) else [],
+        ignored_missing_term=ignored_missing_term,
+    )
     payload = {
         "schema_version": CASCADE_SCHEMA_VERSION,
         "generated_at": _utc_now_iso(),
@@ -1144,9 +1427,60 @@ def run_contexto_canon(*, inbox_book_title: str, book_rel_path: str) -> dict[str
             "glossary_merged": glossary_merged,
         },
     )
+    payload["context_review"] = context_review_payload
     payload["context_chain_rel"] = _to_project_rel(paths["context_chain_json"])
     payload["glossary_merged_rel"] = _to_project_rel(paths["glossary_merged_json"])
+    payload["context_review_rel"] = (
+        _to_project_rel(paths["context_review_json"]) if paths["context_review_json"].exists() else ""
+    )
     return payload
+
+
+def run_contexto_revision_glosario(
+    *,
+    inbox_book_title: str,
+    book_rel_path: str,
+    decisions: list[dict[str, Any]],
+) -> dict[str, Any]:
+    inbox_title = _validate_inbox_book_title(inbox_book_title)
+    normalized_book = _validate_book_rel_path(book_rel_path)
+    if not isinstance(decisions, list):
+        raise EditorialOrquestadorError("`decisions` debe ser una lista de objetos de revisión.")
+
+    current_context = run_contexto_canon(inbox_book_title=inbox_title, book_rel_path=normalized_book)
+    existing_review = _read_context_review_payload(book_rel_path=normalized_book, inbox_book_title=inbox_title)
+    existing_decisions = existing_review.get("decisions", [])
+    merged_decisions = _merge_context_review_decisions(
+        existing_decisions if isinstance(existing_decisions, list) else [],
+        [row for row in decisions if isinstance(row, dict)],
+    )
+
+    glossary_rows = current_context.get("glossary_merged", [])
+    glossary_keys = {
+        str(item.get("term", "")).strip().lower()
+        for item in glossary_rows
+        if isinstance(item, dict) and str(item.get("term", "")).strip()
+    }
+    ignored_missing_term = sum(
+        1 for row in merged_decisions if str(row.get("term_key", "")).strip().lower() not in glossary_keys
+    )
+    payload = _context_review_payload_base(
+        book_rel_path=normalized_book,
+        inbox_book_title=inbox_title,
+        generated_at=str(existing_review.get("generated_at", "")).strip() or _utc_now_iso(),
+    )
+    payload["decisions"] = merged_decisions
+    payload["metrics"] = _build_context_review_metrics(
+        review_decisions=merged_decisions,
+        ignored_missing_term=ignored_missing_term,
+    )
+
+    paths = _review_paths(normalized_book, "00")
+    _write_json(paths["context_review_json"], payload)
+    refreshed = run_contexto_canon(inbox_book_title=inbox_title, book_rel_path=normalized_book)
+    refreshed["context_review"] = payload
+    refreshed["context_review_rel"] = _to_project_rel(paths["context_review_json"])
+    return refreshed
 
 
 def _reference_rows(*, canonical_story_pdf_rel: str, context_payload: dict[str, Any]) -> list[dict[str, str]]:
@@ -1219,9 +1553,15 @@ def _findings_for_stage(
                                 suggestions=[
                                     {
                                         "id": "A",
-                                        "label": "Sustituir por canónico",
+                                        "label": "Sustituir por término preferido",
                                         "proposed_value": text_current.replace(
-                                            forbidden, str(entry.get("canonical", forbidden))
+                                            forbidden,
+                                            str(
+                                                entry.get(
+                                                    "replacement_target",
+                                                    entry.get("canonical", forbidden),
+                                                )
+                                            ),
                                         ),
                                     },
                                     {"id": "B", "label": "Revertir a original", "proposed_value": text_original},
@@ -1757,10 +2097,16 @@ def run_text_detection(
     severity_band: str,
     pass_index: int = 1,
 ) -> dict[str, Any]:
-    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=book_rel_path)
+    inbox_book_title = _validate_inbox_book_title(inbox_book_title)
+    normalized_book, _ = _validate_story_exists(book_rel_path, story_id)
+    story_id = _validate_story_id(story_id)
+    severity_band = _validate_severity_band(severity_band)
+    pass_index = _validate_pass_index(pass_index)
+
+    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
     canonical_story_pdf_rel = str(context.get("canonical_pdfs", {}).get("story_pdf_by_id", {}).get(story_id, ""))
     return _run_stage_cycle_pass(
-        book_rel_path=book_rel_path,
+        book_rel_path=normalized_book,
         story_id=story_id,
         stage=STAGE_TEXT,
         severity_band=severity_band,
@@ -1780,10 +2126,16 @@ def run_text_decision_interactiva(
     severity_band: str,
     pass_index: int = 1,
 ) -> dict[str, Any]:
-    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=book_rel_path)
+    inbox_book_title = _validate_inbox_book_title(inbox_book_title)
+    normalized_book, _ = _validate_story_exists(book_rel_path, story_id)
+    story_id = _validate_story_id(story_id)
+    severity_band = _validate_severity_band(severity_band)
+    pass_index = _validate_pass_index(pass_index)
+
+    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
     canonical_story_pdf_rel = str(context.get("canonical_pdfs", {}).get("story_pdf_by_id", {}).get(story_id, ""))
     return _run_stage_cycle_pass(
-        book_rel_path=book_rel_path,
+        book_rel_path=normalized_book,
         story_id=story_id,
         stage=STAGE_TEXT,
         severity_band=severity_band,
@@ -1802,8 +2154,12 @@ def run_text_contrast_canon(
     story_id: str,
     severity_band: str,
 ) -> dict[str, Any]:
-    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=book_rel_path)
-    story_rel_path = f"{_normalize_rel_path(book_rel_path)}/{story_id}"
+    inbox_book_title = _validate_inbox_book_title(inbox_book_title)
+    normalized_book, story_rel_path = _validate_story_exists(book_rel_path, story_id)
+    story_id = _validate_story_id(story_id)
+    severity_band = _validate_severity_band(severity_band)
+
+    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
     story_payload = load_story(story_rel_path)
     canonical_story_pdf_rel = str(context.get("canonical_pdfs", {}).get("story_pdf_by_id", {}).get(story_id, ""))
     alerts = _contrast_alerts_for_stage(
@@ -1812,7 +2168,7 @@ def run_text_contrast_canon(
         story_payload=story_payload,
         canonical_story_pdf_rel=canonical_story_pdf_rel,
     )
-    paths = _review_paths(book_rel_path, story_id)
+    paths = _review_paths(normalized_book, story_id)
     _write_json(
         paths["contrast_json"],
         {
@@ -1844,10 +2200,16 @@ def run_prompt_detection(
     severity_band: str,
     pass_index: int = 1,
 ) -> dict[str, Any]:
-    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=book_rel_path)
+    inbox_book_title = _validate_inbox_book_title(inbox_book_title)
+    normalized_book, _ = _validate_story_exists(book_rel_path, story_id)
+    story_id = _validate_story_id(story_id)
+    severity_band = _validate_severity_band(severity_band)
+    pass_index = _validate_pass_index(pass_index)
+
+    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
     canonical_story_pdf_rel = str(context.get("canonical_pdfs", {}).get("story_pdf_by_id", {}).get(story_id, ""))
     return _run_stage_cycle_pass(
-        book_rel_path=book_rel_path,
+        book_rel_path=normalized_book,
         story_id=story_id,
         stage=STAGE_PROMPT,
         severity_band=severity_band,
@@ -1867,10 +2229,16 @@ def run_prompt_decision_interactiva(
     severity_band: str,
     pass_index: int = 1,
 ) -> dict[str, Any]:
-    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=book_rel_path)
+    inbox_book_title = _validate_inbox_book_title(inbox_book_title)
+    normalized_book, _ = _validate_story_exists(book_rel_path, story_id)
+    story_id = _validate_story_id(story_id)
+    severity_band = _validate_severity_band(severity_band)
+    pass_index = _validate_pass_index(pass_index)
+
+    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
     canonical_story_pdf_rel = str(context.get("canonical_pdfs", {}).get("story_pdf_by_id", {}).get(story_id, ""))
     return _run_stage_cycle_pass(
-        book_rel_path=book_rel_path,
+        book_rel_path=normalized_book,
         story_id=story_id,
         stage=STAGE_PROMPT,
         severity_band=severity_band,
@@ -1889,8 +2257,12 @@ def run_prompt_contrast_canon(
     story_id: str,
     severity_band: str,
 ) -> dict[str, Any]:
-    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=book_rel_path)
-    story_rel_path = f"{_normalize_rel_path(book_rel_path)}/{story_id}"
+    inbox_book_title = _validate_inbox_book_title(inbox_book_title)
+    normalized_book, story_rel_path = _validate_story_exists(book_rel_path, story_id)
+    story_id = _validate_story_id(story_id)
+    severity_band = _validate_severity_band(severity_band)
+
+    context = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
     story_payload = load_story(story_rel_path)
     canonical_story_pdf_rel = str(context.get("canonical_pdfs", {}).get("story_pdf_by_id", {}).get(story_id, ""))
     alerts = _contrast_alerts_for_stage(
@@ -1899,7 +2271,7 @@ def run_prompt_contrast_canon(
         story_payload=story_payload,
         canonical_story_pdf_rel=canonical_story_pdf_rel,
     )
-    paths = _review_paths(book_rel_path, story_id)
+    paths = _review_paths(normalized_book, story_id)
     _write_json(
         paths["contrast_json"],
         {
@@ -1924,8 +2296,10 @@ def run_prompt_contrast_canon(
 
 
 def run_orquestador_editorial(*, inbox_book_title: str, book_rel_path: str) -> dict[str, Any]:
-    context_payload = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=book_rel_path)
-    state = run_ingesta_json(inbox_book_title=inbox_book_title, book_rel_path=book_rel_path)
+    inbox_book_title = _validate_inbox_book_title(inbox_book_title)
+    normalized_book = _validate_book_rel_path(book_rel_path)
+    context_payload = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
+    state = run_ingesta_json(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
     stories = state.get("stories", [])
     canonical_pdf_map = context_payload.get("canonical_pdfs", {}).get("story_pdf_by_id", {})
 
@@ -1940,14 +2314,14 @@ def run_orquestador_editorial(*, inbox_book_title: str, book_rel_path: str) -> d
     state["alerts_open"] = {key: 0 for key in SEVERITY_ORDER}
     state["context_chain_rel"] = context_payload.get("context_chain_rel", "")
     state["glossary_merged_rel"] = context_payload.get("glossary_merged_rel", "")
-    _write_pipeline_state(book_rel_path, state)
+    _write_pipeline_state(normalized_book, state)
 
     for row in stories:
         story_id = str(row.get("story_id", ""))
         canonical_story_pdf_rel = str(canonical_pdf_map.get(story_id, ""))
 
         text_summary = _run_stage_cascade_for_story(
-            book_rel_path=book_rel_path,
+            book_rel_path=normalized_book,
             story_id=story_id,
             stage=STAGE_TEXT,
             context_payload=context_payload,
@@ -1971,9 +2345,9 @@ def run_orquestador_editorial(*, inbox_book_title: str, book_rel_path: str) -> d
 
         state["phase"] = "cascade_prompt"
         state["stage"] = STAGE_PROMPT
-        _write_pipeline_state(book_rel_path, state)
+        _write_pipeline_state(normalized_book, state)
         prompt_summary = _run_stage_cascade_for_story(
-            book_rel_path=book_rel_path,
+            book_rel_path=normalized_book,
             story_id=story_id,
             stage=STAGE_PROMPT,
             context_payload=context_payload,
@@ -2006,6 +2380,6 @@ def run_orquestador_editorial(*, inbox_book_title: str, book_rel_path: str) -> d
         state["phase"] = "completed"
         state["blocked_story"] = None
         state["convergence_status"] = "converged"
-    pipeline_state_path = _write_pipeline_state(book_rel_path, state)
+    pipeline_state_path = _write_pipeline_state(normalized_book, state)
     state["pipeline_state_rel"] = _to_project_rel(pipeline_state_path)
     return state

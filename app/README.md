@@ -33,6 +33,7 @@
 
 - Entrada pública en código: `app/editorial_orquestador.py`.
 - Función principal: `run_orquestador_editorial(...)`.
+- Revisión ligera de glosario (manual): `run_contexto_revision_glosario(...)`.
 - Ciclo por severidad en cada etapa:
   - `critical -> major -> minor -> info`
 - Ciclo interno por severidad:
@@ -49,6 +50,7 @@
 
 - `context_chain.json`
 - `glossary_merged.json`
+- `context_review.json` (opcional, no bloqueante)
 - `pipeline_state.json`
 - `NN.findings.json`
 - `NN.choices.json`

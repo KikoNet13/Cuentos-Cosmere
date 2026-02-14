@@ -29,6 +29,7 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 10. Sidecars de revisión en `library/<book>/_reviews/`:
     - `context_chain.json`
     - `glossary_merged.json`
+    - `context_review.json`
     - `pipeline_state.json`
     - `NN.findings.json`
     - `NN.choices.json`
@@ -60,7 +61,7 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
    - `critical|major` sin convergencia bloquea cuento y detiene libro.
    - `minor|info` no bloquean si quedan aceptados/rechazados/defer con nota.
 
-## Skills editoriales
+## Skills editoriales (modo conversacional)
 
 1. `revision-contexto-canon`
 2. `revision-texto-deteccion`
@@ -70,6 +71,8 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 6. `revision-prompts-decision-interactiva`
 7. `revision-prompts-contraste-canon`
 8. `revision-orquestador-editorial`
+
+Regla: las skills son de agente y se usan en diálogo interactivo, sin comandos hardcodeados.
 
 ## Runtime de app
 

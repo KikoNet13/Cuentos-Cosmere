@@ -1,6 +1,16 @@
 # Índice de tareas
 
-- Próximo ID: `013`
+- Próximo ID: `014`
+
+## TAREA-013-contexto-review-ligera-glosario
+
+- Fecha: 14/02/26 15:15
+- Estado: cerrada
+- Resumen: revisión interactiva ligera de glosario con `context_review.json` y aplicación real en runtime editorial.
+- Versión: 1.2.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`
+- Archivo: `docs/tasks/TAREA-013-contexto-review-ligera-glosario.md`
 
 ## TAREA-001-proyecto-profesional-contexto
 
