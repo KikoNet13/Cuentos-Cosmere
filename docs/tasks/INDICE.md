@@ -1,6 +1,16 @@
 # Índice de tareas
 
-- Próximo ID: `015`
+- Próximo ID: `016`
+
+## TAREA-015-rediseno-spa-biblioteca-cuento-museo-interactivo
+
+- Fecha: 14/02/26 16:50
+- Estado: cerrada
+- Resumen: migracion completa a SPA Vue+Vite con rutas `/biblioteca|/cuento`, API `v1` y edicion integrada.
+- Versión: 1.4.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`
+- Archivo: `docs/tasks/TAREA-015-rediseno-spa-biblioteca-cuento-museo-interactivo.md`
 
 ## TAREA-014-edad-objetivo-dinamica-inicio-adaptacion
 

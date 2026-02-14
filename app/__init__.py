@@ -5,9 +5,10 @@ def create_app():
     from flask import Flask
 
     from .config import APP_SECRET_KEY
-    from .routes import web_bp
+    from .routes import registered_blueprints
 
     app = Flask(__name__, template_folder="templates", static_folder="static")
     app.config["SECRET_KEY"] = APP_SECRET_KEY
-    app.register_blueprint(web_bp)
+    for blueprint in registered_blueprints:
+        app.register_blueprint(blueprint)
     return app

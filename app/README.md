@@ -3,65 +3,52 @@
 ## Contrato de datos
 
 - `library/` es la fuente de verdad.
-- Un libro se detecta por uno o más archivos `NN.json`.
+- Un libro se detecta por uno o mas archivos `NN.json`.
 - Cada `NN.json` representa un cuento completo con:
   - metadatos de cuento
-  - páginas (`text.original`, `text.current`)
+  - paginas (`text.original`, `text.current`)
   - slots de imagen (`main` obligatorio, `secondary` opcional)
   - alternativas de imagen por slot y `active_id`
 - Los assets de imagen viven en el mismo directorio del libro con nombre opaco `img_<uuid>_<slug>.<ext>`.
 
-## Runtime
+## Runtime web
 
-- Sin SQLite de caché.
-- Catálogo por escaneo directo de `library/`.
-- Endpoints principales:
-  - `/`
-  - `/n/<path>`
-  - `/story/<path>?p=N` (modo lectura por defecto)
-  - `/story/<path>?p=N&editor=1` (modo editorial)
+- Shell SPA (Flask + template minimo):
+  - `/` -> redirige a `/biblioteca`
+  - `/biblioteca`
+  - `/biblioteca/<path>`
+  - `/cuento/<path>`
+- Media:
   - `/media/<path>`
-  - `/health`
 
-## Operaciones web
+## API v1
 
-- En lectura: render limpio de `text.current` + imagen activa.
-- En editorial: comparativa `original/current`, guardado por página, gestión de alternativas por slot.
-- Activación editorial solo por query `editor=1`.
+- `GET /api/v1/library/node`
+- `GET /api/v1/stories/<path>`
+- `PATCH /api/v1/stories/<path>/pages/<int:page_number>`
+- `POST /api/v1/stories/<path>/pages/<int:page_number>/slots/<slot_name>/alternatives`
+- `PUT /api/v1/stories/<path>/pages/<int:page_number>/slots/<slot_name>/active`
+- `GET /api/v1/health`
 
-## Pipeline editorial
+Todas las respuestas usan envoltura uniforme:
 
-- Entrada pública en código: `app/editorial_orquestador.py`.
-- Función principal: `run_orquestador_editorial(..., target_age=None)`.
-- Reanudación explícita: `run_orquestador_editorial_resume(..., target_age=None)`.
-- Revisión ligera de glosario (manual): `run_contexto_revision_glosario(...)`.
-- Perfil editorial por edad: `run_contexto_adaptation_profile(...)`.
-- Ciclo por severidad en cada etapa:
-  - `critical -> major -> minor -> info`
-- Ciclo interno por severidad:
-  - detección
-  - decisión interactiva
-  - contraste con canon
-- Etapas:
-  - `text` primero
-  - `prompt` después, solo si texto converge en `critical|major`
-- Si falta edad objetivo (`target_age`) en input y perfil guardado:
-  - estado `phase=awaiting_target_age`
-  - no se ejecuta cascada.
+```json
+{
+  "ok": true,
+  "data": {},
+  "error": null
+}
+```
 
-## Sidecars
+## Frontend
 
-`library/<book_rel_path>/_reviews/`:
+- Codigo fuente: `frontend/`
+- Build de Vite a `app/static/spa/` con assets fijos `app.js` y `app.css`.
+- El directorio compilado se ignora en git.
 
-- `context_chain.json`
-- `glossary_merged.json`
-- `adaptation_profile.json`
-- `context_review.json` (opcional, no bloqueante)
-- `pipeline_state.json`
-- `NN.findings.json`
-- `NN.choices.json`
-- `NN.contrast.json`
-- `NN.passes.json`
+## Tests
+
+- `python -m unittest discover -s tests`
 
 ## CLI
 
