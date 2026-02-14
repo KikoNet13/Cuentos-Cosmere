@@ -21,19 +21,22 @@ Detectar hallazgos en `text.current` para una historia y una banda de severidad.
 
 1. Confirmar inputs y validar formato (`story_id=NN`, severidad válida).
 2. Asegurar contexto canónico actualizado para el libro.
-3. Ejecutar detección de texto en la banda indicada.
-4. Presentar resultados ordenados por:
+3. Cargar `target_age` desde `adaptation_profile.json` y derivar umbrales activos para la banda.
+4. Ejecutar detección de texto en la banda indicada.
+5. Presentar resultados ordenados por:
    - severidad
    - página
    - categoría.
-5. Para cada hallazgo mostrar:
+6. Para cada hallazgo mostrar:
    - evidencia
    - campo afectado
    - referencia canónica usada.
+   - umbral de edad aplicado cuando corresponda.
 
 ## Criterios de salida
 
 - Se genera o actualiza `NN.findings.json`.
+- Los hallazgos de legibilidad/adaptación se calculan con el perfil de edad objetivo activo.
 - El usuario recibe un listado priorizado de hallazgos listo para decidir.
 
 ## Errores y recuperación

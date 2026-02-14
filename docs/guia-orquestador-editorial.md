@@ -23,6 +23,7 @@ Aplicar una cadena de filtros editoriales con trazabilidad total:
 ## Skills y propósito (sin comandos embebidos)
 
 1. `revision-contexto-canon`
+   - Solicita `target_age` al inicio y lo persiste en `adaptation_profile.json`.
    - Construye `context_chain.json` y `glossary_merged.json`.
    - Opcional: revisión ligera no bloqueante de terminología con `context_review.json`.
 2. `revision-texto-deteccion`
@@ -90,6 +91,7 @@ Archivos:
 
 - `context_chain.json`
 - `glossary_merged.json`
+- `adaptation_profile.json` (edad objetivo y umbrales)
 - `context_review.json` (manual, no bloqueante)
 - `pipeline_state.json`
 - `NN.findings.json`
@@ -105,6 +107,7 @@ Archivos:
 
 1. El usuario elige libro destino.
 2. El agente construye contexto y confirma inventario.
+   - Si falta `target_age`, el orquestador se detiene en `awaiting_target_age`.
    - Si existe `context_review.json`, se aplica al glosario efectivo.
    - La revisión ligera se dispara solo desde `revision-contexto-canon`, no automáticamente en el orquestador.
 3. Por cada banda:

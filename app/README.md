@@ -32,8 +32,10 @@
 ## Pipeline editorial
 
 - Entrada pública en código: `app/editorial_orquestador.py`.
-- Función principal: `run_orquestador_editorial(...)`.
+- Función principal: `run_orquestador_editorial(..., target_age=None)`.
+- Reanudación explícita: `run_orquestador_editorial_resume(..., target_age=None)`.
 - Revisión ligera de glosario (manual): `run_contexto_revision_glosario(...)`.
+- Perfil editorial por edad: `run_contexto_adaptation_profile(...)`.
 - Ciclo por severidad en cada etapa:
   - `critical -> major -> minor -> info`
 - Ciclo interno por severidad:
@@ -43,6 +45,9 @@
 - Etapas:
   - `text` primero
   - `prompt` después, solo si texto converge en `critical|major`
+- Si falta edad objetivo (`target_age`) en input y perfil guardado:
+  - estado `phase=awaiting_target_age`
+  - no se ejecuta cascada.
 
 ## Sidecars
 
@@ -50,6 +55,7 @@
 
 - `context_chain.json`
 - `glossary_merged.json`
+- `adaptation_profile.json`
 - `context_review.json` (opcional, no bloqueante)
 - `pipeline_state.json`
 - `NN.findings.json`

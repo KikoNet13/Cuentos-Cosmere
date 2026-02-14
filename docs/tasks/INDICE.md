@@ -1,6 +1,16 @@
 # Índice de tareas
 
-- Próximo ID: `014`
+- Próximo ID: `015`
+
+## TAREA-014-edad-objetivo-dinamica-inicio-adaptacion
+
+- Fecha: 14/02/26 16:13
+- Estado: cerrada
+- Resumen: `target_age` pasa a ser obligatorio al inicio y persistido en `adaptation_profile.json`.
+- Versión: 1.3.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`
+- Archivo: `docs/tasks/TAREA-014-edad-objetivo-dinamica-inicio-adaptacion.md`
 
 ## TAREA-013-contexto-review-ligera-glosario
 

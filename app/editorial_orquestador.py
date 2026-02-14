@@ -22,6 +22,7 @@ REVIEW_SCHEMA_VERSION = "1.0"
 PIPELINE_SCHEMA_VERSION = "1.0"
 CASCADE_SCHEMA_VERSION = "2.0"
 CONTEXT_REVIEW_SCHEMA_VERSION = "1.0"
+ADAPTATION_PROFILE_SCHEMA_VERSION = "1.0"
 SEVERITY_ORDER = ("critical", "major", "minor", "info")
 BLOCKING_SEVERITIES = {"critical", "major"}
 MAX_PASSES_BY_SEVERITY = {
@@ -48,6 +49,7 @@ CONTEXT_REVIEW_MODE = "light"
 CONTEXT_REVIEW_BLOCKING = False
 CONTEXT_REVIEW_REPLACEMENT_POLICY = "preferred_alias_else_canonical"
 CONTEXT_REVIEW_PENDING_POLICY = "no_impact"
+PIPELINE_PHASE_AWAITING_TARGET_AGE = "awaiting_target_age"
 
 
 class EditorialOrquestadorError(ValueError):
@@ -115,6 +117,20 @@ def _validate_pass_index(pass_index: int) -> int:
     return normalized
 
 
+def _validate_target_age(target_age: Any, *, allow_none: bool = True) -> int | None:
+    if target_age is None and allow_none:
+        return None
+    if allow_none and str(target_age).strip() == "":
+        return None
+    try:
+        normalized = int(target_age)
+    except (TypeError, ValueError) as exc:
+        raise EditorialOrquestadorError("`target_age` debe ser un entero positivo.") from exc
+    if normalized <= 0:
+        raise EditorialOrquestadorError("`target_age` debe ser un entero positivo.")
+    return normalized
+
+
 def _to_project_rel(path_abs: Path) -> str:
     return path_abs.resolve().relative_to(ROOT_DIR.resolve()).as_posix()
 
@@ -148,6 +164,7 @@ def _review_paths(book_rel_path: str, story_id: str) -> dict[str, Path]:
         "context_chain_json": reviews_dir / "context_chain.json",
         "glossary_merged_json": reviews_dir / "glossary_merged.json",
         "context_review_json": reviews_dir / "context_review.json",
+        "adaptation_profile_json": reviews_dir / "adaptation_profile.json",
     }
 
 
@@ -369,6 +386,104 @@ def _read_context_review_payload(*, book_rel_path: str, inbox_book_title: str) -
     if isinstance(raw_rows, list):
         payload["decisions"] = _merge_context_review_decisions([], [row for row in raw_rows if isinstance(row, dict)])
     return payload
+
+
+def _adaptation_thresholds_for_age(target_age: int) -> dict[str, Any]:
+    # Reglas base deterministas. Se pueden sobrescribir vía profile_patch.
+    if target_age <= 6:
+        return {
+            "max_words_per_sentence": 12,
+            "max_chars_per_page": 320,
+            "complex_vocab_max_per_page": 4,
+        }
+    if target_age <= 8:
+        return {
+            "max_words_per_sentence": 16,
+            "max_chars_per_page": 420,
+            "complex_vocab_max_per_page": 6,
+        }
+    return {
+        "max_words_per_sentence": 20,
+        "max_chars_per_page": 520,
+        "complex_vocab_max_per_page": 8,
+    }
+
+
+def _adaptation_profile_payload_base(
+    *,
+    book_rel_path: str,
+    inbox_book_title: str,
+    generated_at: str,
+    target_age: int | None,
+) -> dict[str, Any]:
+    now_iso = _utc_now_iso()
+    return {
+        "schema_version": ADAPTATION_PROFILE_SCHEMA_VERSION,
+        "generated_at": generated_at,
+        "updated_at": now_iso,
+        "book_rel_path": book_rel_path,
+        "inbox_book_title": inbox_book_title,
+        "target_age": target_age,
+        "thresholds": _adaptation_thresholds_for_age(target_age) if target_age is not None else {},
+    }
+
+
+def _read_adaptation_profile_payload(*, book_rel_path: str, inbox_book_title: str) -> dict[str, Any]:
+    normalized_book = _validate_book_rel_path(book_rel_path)
+    inbox_title = _validate_inbox_book_title(inbox_book_title)
+    paths = _review_paths(normalized_book, "00")
+    existing = _read_json(paths["adaptation_profile_json"]) or {}
+    generated_at = str(existing.get("generated_at", "")).strip() or _utc_now_iso()
+    target_age = _validate_target_age(existing.get("target_age"), allow_none=True)
+    payload = _adaptation_profile_payload_base(
+        book_rel_path=normalized_book,
+        inbox_book_title=inbox_title,
+        generated_at=generated_at,
+        target_age=target_age,
+    )
+    payload["updated_at"] = str(existing.get("updated_at", "")).strip() or payload["updated_at"]
+
+    # Merge de claves opcionales editables por editorial.
+    for key in ("readability", "vocabulary", "safety", "canon", "notes"):
+        if key in existing:
+            payload[key] = existing[key]
+    if isinstance(existing.get("thresholds"), dict):
+        payload["thresholds"] = existing["thresholds"]
+    return payload
+
+
+def run_contexto_adaptation_profile(
+    *,
+    inbox_book_title: str,
+    book_rel_path: str,
+    profile_patch: dict[str, Any],
+) -> dict[str, Any]:
+    inbox_title = _validate_inbox_book_title(inbox_book_title)
+    normalized_book = _validate_book_rel_path(book_rel_path)
+    if not isinstance(profile_patch, dict):
+        raise EditorialOrquestadorError("`profile_patch` debe ser un objeto JSON.")
+
+    current = _read_adaptation_profile_payload(book_rel_path=normalized_book, inbox_book_title=inbox_title)
+    payload = dict(current)
+    payload["updated_at"] = _utc_now_iso()
+
+    if "target_age" in profile_patch:
+        target_age = _validate_target_age(profile_patch.get("target_age"), allow_none=True)
+        payload["target_age"] = target_age
+        payload["thresholds"] = _adaptation_thresholds_for_age(target_age) if target_age is not None else {}
+
+    for key in ("readability", "vocabulary", "safety", "canon", "notes"):
+        if key in profile_patch:
+            payload[key] = profile_patch[key]
+
+    paths = _review_paths(normalized_book, "00")
+    _write_json(paths["adaptation_profile_json"], payload)
+    return {
+        "book_rel_path": normalized_book,
+        "inbox_book_title": inbox_title,
+        "adaptation_profile": payload,
+        "adaptation_profile_rel": _to_project_rel(paths["adaptation_profile_json"]),
+    }
 
 
 def _status_from_metrics(metrics: dict[str, int]) -> str:
@@ -1406,6 +1521,10 @@ def run_contexto_canon(*, inbox_book_title: str, book_rel_path: str) -> dict[str
         review_decisions=context_review_decisions if isinstance(context_review_decisions, list) else [],
         ignored_missing_term=ignored_missing_term,
     )
+    adaptation_profile_payload = _read_adaptation_profile_payload(
+        book_rel_path=normalized_book,
+        inbox_book_title=inbox_book_title,
+    )
     payload = {
         "schema_version": CASCADE_SCHEMA_VERSION,
         "generated_at": _utc_now_iso(),
@@ -1428,10 +1547,14 @@ def run_contexto_canon(*, inbox_book_title: str, book_rel_path: str) -> dict[str
         },
     )
     payload["context_review"] = context_review_payload
+    payload["adaptation_profile"] = adaptation_profile_payload
     payload["context_chain_rel"] = _to_project_rel(paths["context_chain_json"])
     payload["glossary_merged_rel"] = _to_project_rel(paths["glossary_merged_json"])
     payload["context_review_rel"] = (
         _to_project_rel(paths["context_review_json"]) if paths["context_review_json"].exists() else ""
+    )
+    payload["adaptation_profile_rel"] = (
+        _to_project_rel(paths["adaptation_profile_json"]) if paths["adaptation_profile_json"].exists() else ""
     )
     return payload
 
@@ -2295,10 +2418,96 @@ def run_prompt_contrast_canon(
     }
 
 
-def run_orquestador_editorial(*, inbox_book_title: str, book_rel_path: str) -> dict[str, Any]:
+def _build_awaiting_target_age_state(
+    *,
+    inbox_book_title: str,
+    book_rel_path: str,
+    context_payload: dict[str, Any],
+    discovery_payload: dict[str, Any],
+    adaptation_profile_rel: str,
+) -> dict[str, Any]:
+    selected = discovery_payload.get("selected_stories", []) if isinstance(discovery_payload, dict) else []
+    ignored = discovery_payload.get("ignored_items", []) if isinstance(discovery_payload, dict) else []
+    no_touch_existing = (
+        discovery_payload.get("no_touch_existing", []) if isinstance(discovery_payload, dict) else []
+    )
+    state = {
+        "schema_version": PIPELINE_SCHEMA_VERSION,
+        "pipeline": "editorial_orquestador",
+        "phase": PIPELINE_PHASE_AWAITING_TARGET_AGE,
+        "generated_at": _utc_now_iso(),
+        "book_rel_path": _normalize_rel_path(book_rel_path),
+        "inbox_book_title": inbox_book_title,
+        "target_age": None,
+        "convergence_status": "awaiting_target_age",
+        "context_chain_rel": context_payload.get("context_chain_rel", ""),
+        "glossary_merged_rel": context_payload.get("glossary_merged_rel", ""),
+        "adaptation_profile_rel": adaptation_profile_rel,
+        "source_inventory": {
+            "selected_stories": selected,
+            "ignored_items": ignored,
+            "no_touch_existing": no_touch_existing,
+        },
+        "stories": [
+            {
+                "story_id": str(item.get("story_id", "")),
+                "story_rel_path": f"{_normalize_rel_path(book_rel_path)}/{str(item.get('story_id', ''))}",
+                "status": "pending_target_age",
+                "text_stage": None,
+                "prompt_stage": None,
+            }
+            for item in selected
+        ],
+        "totals": {
+            "selected": len(selected),
+            "ingested": 0,
+            "critical_open": 0,
+            "major_open": 0,
+            "minor_open": 0,
+            "info_open": 0,
+        },
+    }
+    pipeline_state_path = _write_pipeline_state(book_rel_path, state)
+    state["pipeline_state_rel"] = _to_project_rel(pipeline_state_path)
+    return state
+
+
+def run_orquestador_editorial(
+    *,
+    inbox_book_title: str,
+    book_rel_path: str,
+    target_age: int | None = None,
+) -> dict[str, Any]:
     inbox_book_title = _validate_inbox_book_title(inbox_book_title)
     normalized_book = _validate_book_rel_path(book_rel_path)
     context_payload = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
+    discovery = discover_inbox_stories(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
+
+    if target_age is not None:
+        profile_update = run_contexto_adaptation_profile(
+            inbox_book_title=inbox_book_title,
+            book_rel_path=normalized_book,
+            profile_patch={"target_age": target_age},
+        )
+        adaptation_profile = profile_update.get("adaptation_profile", {})
+        adaptation_profile_rel = str(profile_update.get("adaptation_profile_rel", ""))
+    else:
+        adaptation_profile = context_payload.get("adaptation_profile", {})
+        adaptation_profile_rel = str(context_payload.get("adaptation_profile_rel", ""))
+
+    resolved_target_age = _validate_target_age(
+        adaptation_profile.get("target_age") if isinstance(adaptation_profile, dict) else None,
+        allow_none=True,
+    )
+    if resolved_target_age is None:
+        return _build_awaiting_target_age_state(
+            inbox_book_title=inbox_book_title,
+            book_rel_path=normalized_book,
+            context_payload=context_payload,
+            discovery_payload=discovery,
+            adaptation_profile_rel=adaptation_profile_rel,
+        )
+
     state = run_ingesta_json(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
     stories = state.get("stories", [])
     canonical_pdf_map = context_payload.get("canonical_pdfs", {}).get("story_pdf_by_id", {})
@@ -2314,6 +2523,8 @@ def run_orquestador_editorial(*, inbox_book_title: str, book_rel_path: str) -> d
     state["alerts_open"] = {key: 0 for key in SEVERITY_ORDER}
     state["context_chain_rel"] = context_payload.get("context_chain_rel", "")
     state["glossary_merged_rel"] = context_payload.get("glossary_merged_rel", "")
+    state["adaptation_profile_rel"] = adaptation_profile_rel
+    state["target_age"] = int(resolved_target_age)
     _write_pipeline_state(normalized_book, state)
 
     for row in stories:
@@ -2383,3 +2594,45 @@ def run_orquestador_editorial(*, inbox_book_title: str, book_rel_path: str) -> d
     pipeline_state_path = _write_pipeline_state(normalized_book, state)
     state["pipeline_state_rel"] = _to_project_rel(pipeline_state_path)
     return state
+
+
+def run_orquestador_editorial_resume(
+    *,
+    inbox_book_title: str,
+    book_rel_path: str,
+    target_age: int | None = None,
+) -> dict[str, Any]:
+    inbox_book_title = _validate_inbox_book_title(inbox_book_title)
+    normalized_book = _validate_book_rel_path(book_rel_path)
+    context_payload = run_contexto_canon(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
+    discovery = discover_inbox_stories(inbox_book_title=inbox_book_title, book_rel_path=normalized_book)
+
+    if target_age is not None:
+        profile_update = run_contexto_adaptation_profile(
+            inbox_book_title=inbox_book_title,
+            book_rel_path=normalized_book,
+            profile_patch={"target_age": target_age},
+        )
+        adaptation_profile = profile_update.get("adaptation_profile", {})
+        adaptation_profile_rel = str(profile_update.get("adaptation_profile_rel", ""))
+    else:
+        adaptation_profile = context_payload.get("adaptation_profile", {})
+        adaptation_profile_rel = str(context_payload.get("adaptation_profile_rel", ""))
+
+    resolved_target_age = _validate_target_age(
+        adaptation_profile.get("target_age") if isinstance(adaptation_profile, dict) else None,
+        allow_none=True,
+    )
+    if resolved_target_age is None:
+        return _build_awaiting_target_age_state(
+            inbox_book_title=inbox_book_title,
+            book_rel_path=normalized_book,
+            context_payload=context_payload,
+            discovery_payload=discovery,
+            adaptation_profile_rel=adaptation_profile_rel,
+        )
+    return run_orquestador_editorial(
+        inbox_book_title=inbox_book_title,
+        book_rel_path=normalized_book,
+        target_age=int(resolved_target_age),
+    )

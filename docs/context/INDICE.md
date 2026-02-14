@@ -13,6 +13,7 @@
 5. Sidecars consolidados por libro:
    - `_reviews/context_chain.json`
    - `_reviews/glossary_merged.json`
+   - `_reviews/adaptation_profile.json`
    - `_reviews/context_review.json` (opcional, revisión ligera manual)
 6. Skill operativa principal: `revision-orquestador-editorial`.
 

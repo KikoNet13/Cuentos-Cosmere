@@ -13,17 +13,20 @@ Construir el contexto canónico de un libro para iniciar el flujo editorial inte
 
 - `inbox_book_title`
 - `book_rel_path`
+- `target_age` (obligatorio para iniciar adaptación)
 
 ## Protocolo conversacional obligatorio
 
 1. Pedir o confirmar `inbox_book_title` y `book_rel_path`.
-2. Validar que el libro existe en `library/_inbox/<inbox_book_title>/`.
-3. Ejecutar internamente la construcción de contexto.
-4. Resumir al usuario:
+2. Pedir y confirmar `target_age` antes de iniciar la adaptación.
+3. Validar que el libro existe en `library/_inbox/<inbox_book_title>/`.
+4. Persistir `target_age` en `adaptation_profile.json`.
+5. Ejecutar internamente la construcción de contexto.
+6. Resumir al usuario:
    - PDFs canónicos detectados
    - archivos de contexto jerárquico usados
    - tamaño del glosario consolidado.
-5. Ejecutar subfase opcional de revisión interactiva ligera del glosario:
+7. Ejecutar subfase opcional de revisión interactiva ligera del glosario:
    - Mostrar por término: `term`, `canonical`, `allowed`, `forbidden`, `source_rel`.
    - Solicitar decisión explícita: `accepted`, `rejected`, `defer`, `pending`.
    - Si `accepted`, permitir:
@@ -33,13 +36,14 @@ Construir el contexto canónico de un libro para iniciar el flujo editorial inte
      - `notes`.
    - Persistir decisiones en `context_review.json`.
    - Regenerar `glossary_merged.json` efectivo aplicando solo decisiones `accepted`.
-6. Confirmar que se puede pasar a detección de texto.
+8. Confirmar que se puede pasar a detección de texto.
 
 ## Criterios de salida
 
 - Se generan o actualizan:
   - `context_chain.json`
   - `glossary_merged.json`
+  - `adaptation_profile.json`
   - `context_review.json` (solo si se ejecuta revisión ligera)
 - Se entrega un resumen legible para revisión editorial.
 

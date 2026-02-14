@@ -33,6 +33,7 @@ Las skills son de agente: se usan en diálogo interactivo contigo, sin comandos 
 ### Secuencia recomendada
 
 1. `revision-contexto-canon`
+   - obligatorio al inicio: confirmar `target_age` y persistirlo en `adaptation_profile.json`.
    - opcional: revisión ligera de terminología y sidecar `context_review.json`.
 2. `revision-texto-deteccion`
 3. `revision-texto-decision-interactiva`
@@ -41,6 +42,7 @@ Las skills son de agente: se usan en diálogo interactivo contigo, sin comandos 
 6. `revision-prompts-decision-interactiva`
 7. `revision-prompts-contraste-canon`
 8. `revision-orquestador-editorial` (flujo integral por libro)
+   - si no hay edad objetivo definida, el flujo queda en `awaiting_target_age`.
 
 ## Sidecars de revisión
 
@@ -49,6 +51,7 @@ Por libro, el pipeline guarda artefactos en `library/<book_rel_path>/_reviews/`:
 - `pipeline_state.json`
 - `context_chain.json`
 - `glossary_merged.json`
+- `adaptation_profile.json` (edad objetivo y umbrales activos por libro)
 - `context_review.json` (opcional, generado por revisión ligera manual)
 - `NN.findings.json`
 - `NN.choices.json`

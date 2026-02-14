@@ -5,6 +5,16 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [14/02/26] - Edad objetivo dinámica al iniciar adaptación
+
+- Se añadió sidecar por libro `adaptation_profile.json` en `library/<book_rel_path>/_reviews/`.
+- Nueva API `run_contexto_adaptation_profile(...)` para persistir/actualizar `target_age` y umbrales base.
+- `run_orquestador_editorial(...)` ahora acepta `target_age` opcional y detiene en `phase=awaiting_target_age` si no existe edad en input ni en perfil.
+- Se añadió `run_orquestador_editorial_resume(...)` con el mismo gate de edad.
+- `run_contexto_canon(...)` ahora expone `adaptation_profile` y `adaptation_profile_rel`.
+- Skills y documentación actualizadas para exigir confirmación de edad objetivo al inicio.
+- Tarea: `docs/tasks/TAREA-014-edad-objetivo-dinamica-inicio-adaptacion.md`.
+
 ## [14/02/26] - Revisión ligera de glosario en contexto canon
 
 - Se añadió sidecar opcional `context_review.json` en `library/<book_rel_path>/_reviews/` para decisiones editoriales de terminología.

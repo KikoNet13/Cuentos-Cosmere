@@ -30,6 +30,7 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
     - `context_chain.json`
     - `glossary_merged.json`
     - `context_review.json`
+    - `adaptation_profile.json`
     - `pipeline_state.json`
     - `NN.findings.json`
     - `NN.choices.json`
@@ -45,19 +46,20 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 ## Flujo editorial oficial
 
 1. Flujo principal: skill `revision-orquestador-editorial`.
-2. El orquestador ejecuta contexto + ingesta + cascada por severidad.
-3. Orden de severidad por etapa: `critical -> major -> minor -> info`.
-4. Cada severidad ejecuta ciclo de 3 skills:
+2. El orquestador exige `target_age` al iniciar (input o `adaptation_profile.json`).
+3. Con edad resuelta, ejecuta contexto + ingesta + cascada por severidad.
+4. Orden de severidad por etapa: `critical -> major -> minor -> info`.
+5. Cada severidad ejecuta ciclo de 3 skills:
    - detección
    - decisión interactiva
    - contraste con canon.
-5. Etapa texto primero; etapa prompts solo si texto converge en `critical|major`.
-6. Topes por severidad:
+6. Etapa texto primero; etapa prompts solo si texto converge en `critical|major`.
+7. Topes por severidad:
    - `critical`: 5
    - `major`: 4
    - `minor`: 3
    - `info`: 2
-7. Gate:
+8. Gate:
    - `critical|major` sin convergencia bloquea cuento y detiene libro.
    - `minor|info` no bloquean si quedan aceptados/rechazados/defer con nota.
 
