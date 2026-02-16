@@ -5,6 +5,14 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [16/02/26] - Limpieza minima de runtime y repositorio
+
+- Eliminados modulos legacy/no usados de `app/` (migracion, stubs retirados y plantilla sin ruta activa).
+- Simplificado `app/__init__.py` para importar blueprint directo desde `routes_v3`.
+- Dependencias reducidas en `Pipfile` (se retiran `peewee` y `pypdf`) y lock regenerado.
+- Documentacion operativa actualizada (`AGENTS.md`, `README.md`, `app/README.md`).
+- Tarea: `docs/tasks/TAREA-017-limpieza-minima-runtime-repo.md`.
+
 ## [16/02/26] - Reset editorial con skills `adaptacion-*` fuera de `app`
 
 - Se eliminaron skills legacy `revision-*` y la skill local `revision-adaptacion-editorial`.
@@ -90,4 +98,3 @@ El detalle operativo vive en `docs/tasks/`.
 
 - Sistema inicial de operación, ADR y tareas.
 - Tarea: `docs/tasks/TAREA-001-proyecto-profesional-contexto.md`.
-

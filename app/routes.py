@@ -1,1 +1,0 @@
-from .routes_v3 import web_bp

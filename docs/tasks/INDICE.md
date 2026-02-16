@@ -1,6 +1,16 @@
 # Índice de tareas
 
-- Próximo ID: `016`
+- Próximo ID: `018`
+
+## TAREA-017-limpieza-minima-runtime-repo
+
+- Fecha: 16/02/26 11:31
+- Estado: cerrada
+- Resumen: limpieza de runtime al mínimo (sin módulos legacy ni stubs retirados), dependencias reducidas y artefactos locales eliminados.
+- Versión: 1.4.1
+- Commit: `pendiente`
+- ADR relacionadas: `0007`
+- Archivo: `docs/tasks/TAREA-017-limpieza-minima-runtime-repo.md`
 
 ## TAREA-015-reset-editorial-con-skills-sin-app
 
@@ -151,4 +161,3 @@
 - Commit: `52243f6`
 - ADR relacionadas: `0001`, `0002`, `0003`
 - Archivo: `docs/tasks/TAREA-001-proyecto-profesional-contexto.md`
-
