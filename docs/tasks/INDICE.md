@@ -1,6 +1,16 @@
 # Índice de tareas
 
-- Próximo ID: `020`
+- Próximo ID: `021`
+
+## TAREA-020-contraste-canonico-obligatorio-pdf
+
+- Fecha: 16/02/26 14:35
+- Estado: cerrada
+- Resumen: endurecida la skill de ingesta inicial con contraste canonico obligatorio contra PDF, gate de bloqueo por lote y contratos enriquecidos de contexto/issues/preguntas.
+- Versión: 1.7.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`
+- Archivo: `docs/tasks/TAREA-020-contraste-canonico-obligatorio-pdf.md`
 
 ## TAREA-019-ui-biblioteca-bulma-htmx-rutas-rest
 

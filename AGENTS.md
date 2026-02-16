@@ -26,6 +26,7 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 6. Cada alternativa define `id`, `slug`, `asset_rel_path`, `mime_type`, `status`, `created_at`, `notes`.
 7. Los assets de imagen se nombran con formato opaco `img_<uuid>_<slug>.<ext>` y la relacion pagina/slot vive en JSON.
 8. `library/_inbox/` se usa como bandeja de propuestas editoriales `.md` y referencias `.pdf`.
+   - Para la skill `adaptacion-ingesta-inicial`, el contraste con `NN.pdf` es obligatorio por lote: si un cuento no tiene cobertura PDF util, la ejecucion falla.
 9. `library/_backups/` es opcional para respaldos manuales.
 10. Sidecars de revision vigentes en `library/<book>/_reviews/`:
     - `adaptation_context.json` (contexto y glosario por libro)

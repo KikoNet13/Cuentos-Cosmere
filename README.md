@@ -36,8 +36,14 @@ library/_backups/         # opcional
 ## Skills versionadas
 
 - `.codex/skills/adaptacion-ingesta-inicial/`
-  - Ingesta inicial interactiva de `_inbox` a `NN.json` + sidecars.
+  - Ingesta inicial interactiva de `_inbox` a `NN.json` + sidecars con contraste canonico obligatorio contra `NN.pdf`.
+  - Si falta PDF util (parser/OCR), la skill devuelve `phase=failed` y bloquea el lote.
   - Script: `python .codex/skills/adaptacion-ingesta-inicial/scripts/ingesta_inicial.py run --help`
+
+Dependencias recomendadas para la skill de ingesta:
+- `pdfplumber`
+- `pypdf`
+- `pdf2image` + `pytesseract` + binario `tesseract` (OCR opcional)
 
 ## UI
 

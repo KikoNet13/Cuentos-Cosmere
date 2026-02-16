@@ -1,6 +1,6 @@
 ---
 name: adaptacion-ingesta-inicial
-description: Skill para ingesta inicial interactiva de propuestas en library/_inbox (NN.md + NN.pdf) hacia NN.json y sidecars de contexto/issues, con preguntas de target_age, book_rel_path y glosario ambiguo.
+description: Skill para ingesta inicial interactiva de propuestas en library/_inbox (NN.md + NN.pdf) hacia NN.json y sidecars de contexto/issues con contraste canonico obligatorio.
 ---
 
 # Adaptacion Ingesta Inicial
@@ -18,7 +18,9 @@ Sin llamadas API desde scripts. La interaccion ocurre en chat Codex.
 ```bash
 python .codex/skills/adaptacion-ingesta-inicial/scripts/ingesta_inicial.py run --inbox-book-title "<titulo>"
 ```
-2. Si `phase=awaiting_user`, pregunta al usuario todo `pending_questions[]`.
+2. Interpreta salida:
+   - `phase=failed`: no hay contraste canonico suficiente. Corregir PDF/dependencias y relanzar.
+   - `phase=awaiting_user`: preguntar al usuario todo `pending_questions[]`.
 3. Construye un JSON de respuestas y vuelve a ejecutar:
 ```bash
 python .codex/skills/adaptacion-ingesta-inicial/scripts/ingesta_inicial.py run --inbox-book-title "<titulo>" --answers-json "<ruta-json>"
@@ -28,12 +30,22 @@ python .codex/skills/adaptacion-ingesta-inicial/scripts/ingesta_inicial.py run -
 ## Reglas operativas
 - Procesa batch de todos los `NN.md` del libro.
 - Excluye rutas con `_ignore`.
-- Si falta `NN.pdf`, no bloquea el libro: abre issue `critical`.
-- Si falta parser PDF, abre issue `major` y continua.
+- Gate PDF obligatorio por lote:
+  - Si falta `NN.pdf`: `phase=failed` con `input.missing_pdf`.
+  - Si no hay parser (`pdfplumber`/`pypdf`): `phase=failed` con `pdf.parser_unavailable`.
+  - Si no se puede extraer texto: `phase=failed` con `pdf.unreadable`.
+  - Si hay paginas sin texto util y OCR no lo resuelve: `phase=failed` con `pdf.page_unreadable`.
+- OCR es opcional. Solo se intenta cuando existen `pdf2image`, `pytesseract` y binario `tesseract`.
 - No usar `input()` ni prompts bloqueantes en script.
+- Para revision visual puntual de PDF, usar la skill `pdf` del sistema.
 
 ## Formato de respuestas
 Ver `references/contracts.md`.
+
+## Dependencias recomendadas
+```bash
+python -m pip install pdfplumber pypdf pdf2image pytesseract
+```
 
 ## Validaciones recomendadas
 ```bash

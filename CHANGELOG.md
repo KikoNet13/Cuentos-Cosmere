@@ -5,6 +5,18 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [16/02/26] - Ingesta inicial con contraste canonico obligatorio PDF
+
+- `adaptacion-ingesta-inicial` ahora bloquea por lote cuando falta cobertura canonica PDF (`input.missing_pdf`, `pdf.parser_unavailable`, `pdf.unreadable`, `pdf.page_unreadable`).
+- Nuevo preflight multi-backend de PDF (`pdfplumber` -> `pypdf`) con OCR opcional por pagina.
+- Nuevos detectores por pagina: overlap canonico, entidades faltantes/sobrantes, diferencias numericas, perdida de citas y desajuste por edad (`age.too_complex|age.too_childish`).
+- Contrato enriquecido:
+  - `pending_questions[]` con `reason` y `evidence_pages`.
+  - `NN.issues.json` con `review_mode`, `canon_source`, `metrics`, `source/detector/confidence`.
+  - `adaptation_context.json` con `analysis_policy`, `canon_sources` y glosario extendido (`variants`, `source_presence`, `evidence_pages`).
+- Documentacion operativa alineada en `AGENTS.md`, `README.md`, `app/README.md`.
+- Tarea: `docs/tasks/TAREA-020-contraste-canonico-obligatorio-pdf.md`.
+
 ## [16/02/26] - UI biblioteca Bulma + HTMX y rutas REST por pagina
 
 - Rediseño UI de biblioteca con navegación por tarjetas tipo catálogo y miniaturas por cuento.
