@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ingesta Inicial Adaptacion"
+  short_description: "Ingesta interactiva de inbox a JSON"
+  default_prompt: "Usa $adaptacion-ingesta-inicial para convertir propuestas NN.md + NN.pdf en NN.json con contexto e issues."

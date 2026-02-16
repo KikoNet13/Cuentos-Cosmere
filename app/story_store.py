@@ -18,6 +18,8 @@ STORY_STATUS_VALUES = {
     "prompt_reviewed",
     "prompt_blocked",
     "ready",
+    "in_review",
+    "definitive",
 }
 
 
@@ -156,6 +158,54 @@ def _coerce_page(raw_value: Any, fallback_number: int) -> dict[str, Any]:
     return page
 
 
+def _coerce_cover(raw_value: Any) -> dict[str, Any]:
+    if not isinstance(raw_value, dict):
+        raw_value = {}
+
+    prompt_raw = raw_value.get("prompt", {})
+    if not isinstance(prompt_raw, dict):
+        prompt_raw = {}
+
+    status = str(raw_value.get("status", "")).strip() or "pending"
+    return {
+        "status": status,
+        "prompt": {
+            "original": str(prompt_raw.get("original", "")),
+            "current": str(prompt_raw.get("current", "")),
+        },
+        "asset_rel_path": str(raw_value.get("asset_rel_path", "")).strip().replace("\\", "/"),
+        "notes": str(raw_value.get("notes", "")).strip(),
+    }
+
+
+def _coerce_source_refs(raw_value: Any) -> dict[str, Any]:
+    if not isinstance(raw_value, dict):
+        raw_value = {}
+    return {
+        "proposal_md_rel_path": str(raw_value.get("proposal_md_rel_path", "")).strip().replace("\\", "/"),
+        "reference_pdf_rel_path": str(raw_value.get("reference_pdf_rel_path", "")).strip().replace("\\", "/"),
+        "inbox_book_title": str(raw_value.get("inbox_book_title", "")).strip(),
+    }
+
+
+def _coerce_ingest_meta(raw_value: Any, *, updated_at: str) -> dict[str, Any]:
+    if not isinstance(raw_value, dict):
+        raw_value = {}
+    target_age_raw = raw_value.get("target_age", None)
+    try:
+        target_age = int(target_age_raw) if target_age_raw is not None else None
+    except (TypeError, ValueError):
+        target_age = None
+
+    return {
+        "phase": str(raw_value.get("phase", "")).strip() or "initial_ingest",
+        "target_age": target_age,
+        "generated_at": str(raw_value.get("generated_at", "")).strip() or updated_at,
+        "generated_by": str(raw_value.get("generated_by", "")).strip(),
+        "semantic_mode": str(raw_value.get("semantic_mode", "")).strip() or "codex_chat",
+    }
+
+
 def _coerce_story_payload(payload: Any, *, story_id_hint: str, book_rel_path_hint: str) -> dict[str, Any]:
     if not isinstance(payload, dict):
         raise StoryStoreError("El contenido del cuento debe ser un objeto JSON.")
@@ -165,6 +215,7 @@ def _coerce_story_payload(payload: Any, *, story_id_hint: str, book_rel_path_hin
         raise StoryStoreError("story_id invalido en JSON.")
 
     title = str(payload.get("title", "")).strip() or f"Cuento {story_id}"
+    story_title = str(payload.get("story_title", "")).strip() or title
     book_rel_path = _normalize_rel_path(str(payload.get("book_rel_path", "")).strip() or book_rel_path_hint)
 
     pages_raw = payload.get("pages", [])
@@ -179,15 +230,22 @@ def _coerce_story_payload(payload: Any, *, story_id_hint: str, book_rel_path_hin
 
     created_at = str(payload.get("created_at", "")).strip() or _utc_now_iso()
     updated_at = str(payload.get("updated_at", "")).strip() or created_at
+    cover = _coerce_cover(payload.get("cover", {}))
+    source_refs = _coerce_source_refs(payload.get("source_refs", {}))
+    ingest_meta = _coerce_ingest_meta(payload.get("ingest_meta", {}), updated_at=updated_at)
 
     return {
         "schema_version": str(payload.get("schema_version", "")).strip() or "1.0",
         "story_id": story_id,
         "title": title,
+        "story_title": story_title,
         "status": str(payload.get("status", "")).strip() or "draft",
         "book_rel_path": book_rel_path,
         "created_at": created_at,
         "updated_at": updated_at,
+        "cover": cover,
+        "source_refs": source_refs,
+        "ingest_meta": ingest_meta,
         "pages": pages,
     }
 
@@ -298,6 +356,7 @@ def get_story(story_rel_path: str) -> dict[str, Any] | None:
         "story_rel_path": story_rel,
         "story_id": payload["story_id"],
         "title": payload["title"],
+        "story_title": payload.get("story_title", payload["title"]),
         "status": payload["status"],
         "book_rel_path": payload["book_rel_path"],
         "schema_version": payload["schema_version"],

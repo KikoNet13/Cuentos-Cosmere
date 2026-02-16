@@ -1,6 +1,16 @@
 # Índice de tareas
 
-- Próximo ID: `018`
+- Próximo ID: `019`
+
+## TAREA-018-skill-ingesta-inicial-interactiva
+
+- Fecha: 16/02/26 12:49
+- Estado: cerrada
+- Resumen: skill de ingesta inicial interactiva para `_inbox` con salida `NN.json`, `adaptation_context.json` y `NN.issues.json`.
+- Versión: 1.5.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`
+- Archivo: `docs/tasks/TAREA-018-skill-ingesta-inicial-interactiva.md`
 
 ## TAREA-017-limpieza-minima-runtime-repo
 

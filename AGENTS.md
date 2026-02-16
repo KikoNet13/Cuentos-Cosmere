@@ -18,7 +18,8 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 2. Un libro se detecta por presencia de uno o mas archivos `NN.json` en su carpeta.
 3. Cada cuento se guarda en un unico archivo `NN.json` (2 digitos).
 4. Estructura canonica de `NN.json`:
-   - top-level: `schema_version`, `story_id`, `title`, `status`, `book_rel_path`, `created_at`, `updated_at`, `pages`.
+   - top-level base: `schema_version`, `story_id`, `title`, `status`, `book_rel_path`, `created_at`, `updated_at`, `pages`.
+   - top-level extension inicial de ingesta: `story_title`, `cover`, `source_refs`, `ingest_meta`.
    - por pagina: `page_number`, `status`, `text.original`, `text.current`, `images`.
    - `images.main` obligatorio, `images.secondary` opcional.
 5. Cada slot de imagen define `status`, `prompt.original`, `prompt.current`, `active_id` y `alternatives[]`.
@@ -27,13 +28,15 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 8. `library/_inbox/` se usa como bandeja de propuestas editoriales `.md` y referencias `.pdf`.
 9. `library/_backups/` es opcional para respaldos manuales.
 10. Sidecars de revision vigentes en `library/<book>/_reviews/`:
+    - `adaptation_context.json` (contexto y glosario por libro)
+    - `NN.issues.json` (incoherencias/errores por cuento)
     - `NN.review.json` (maestro por cuento)
     - `NN.decisions.log.jsonl` (log final por hallazgo resuelto)
 11. Sidecars legacy (`context_chain`, `glossary_merged`, `pipeline_state`, `NN.findings`, etc.) quedan fuera de contrato.
 
 ## Pipeline editorial
 
-1. No hay skills de adaptacion versionadas en este repositorio.
+1. Las skills de adaptacion versionadas en este repositorio viven en `.codex/skills/`.
 2. `app/` no ejecuta pipeline editorial.
 3. Cualquier flujo editorial externo debe respetar este contrato de datos.
 

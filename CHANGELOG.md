@@ -5,6 +5,16 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [16/02/26] - Skill de ingesta inicial interactiva
+
+- Nueva skill versionada en `.codex/skills/adaptacion-ingesta-inicial/` con CLI `run` para convertir `_inbox` a `NN.json` + sidecars de contexto/issues.
+- Nuevo contrato de salida inicial:
+  - `library/<book>/_reviews/adaptation_context.json`
+  - `library/<book>/_reviews/NN.issues.json`
+- Extendido `NN.json` con metadatos top-level de ingesta (`story_title`, `cover`, `source_refs`, `ingest_meta`).
+- `app/story_store.py` actualizado para preservar esos metadatos y aceptar estados `in_review|definitive`.
+- Tarea: `docs/tasks/TAREA-018-skill-ingesta-inicial-interactiva.md`.
+
 ## [16/02/26] - Limpieza minima de runtime y repositorio
 
 - Eliminados modulos legacy/no usados de `app/` (migracion, stubs retirados y plantilla sin ruta activa).

@@ -8,6 +8,7 @@ Proyecto local para revisar y publicar cuentos ilustrados con fuente de verdad e
 - Contrato canonico: un cuento por archivo `NN.json` dentro de un nodo libro.
 - `NN.json` guarda:
   - metadatos de cuento
+  - metadatos de ingesta inicial (`story_title`, `cover`, `source_refs`, `ingest_meta`)
   - paginas con `text.original` y `text.current`
   - imagenes por slot (`main` obligatorio, `secondary` opcional)
   - alternativas de imagen con `active_id`
@@ -24,11 +25,19 @@ library/<ruta-nodos>/.../<book-node>/
   img_<uuid>_<slug>.png   # alternativas de imagen
   02.json
   _reviews/
+    adaptation_context.json
+    01.issues.json
     01.review.json
     01.decisions.log.jsonl
 library/_inbox/           # propuestas de entrada (NN.md, NN.pdf)
 library/_backups/         # opcional
 ```
+
+## Skills versionadas
+
+- `.codex/skills/adaptacion-ingesta-inicial/`
+  - Ingesta inicial interactiva de `_inbox` a `NN.json` + sidecars.
+  - Script: `python .codex/skills/adaptacion-ingesta-inicial/scripts/ingesta_inicial.py run --help`
 
 ## UI
 
