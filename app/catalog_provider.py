@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
+from .config import ROOT_DIR
 from .story_store import StoryStoreError, json_path_to_story_rel, list_story_json_files, load_story
 
 
@@ -34,6 +35,67 @@ def _new_node(path_rel: str) -> dict[str, Any]:
         "is_story_leaf": False,
         "is_book_node": False,
     }
+
+
+def _normalize_asset_rel_path(asset_rel_path: str) -> str:
+    return asset_rel_path.strip().replace("\\", "/")
+
+
+def _asset_exists(asset_rel_path: str) -> bool:
+    normalized = _normalize_asset_rel_path(asset_rel_path)
+    if not normalized:
+        return False
+
+    target = (ROOT_DIR / normalized).resolve()
+    root_abs = ROOT_DIR.resolve()
+    if root_abs not in target.parents and target != root_abs:
+        return False
+    return target.exists() and target.is_file()
+
+
+def _resolve_main_slot_thumbnail(images: dict[str, Any]) -> tuple[str, str]:
+    main_slot = images.get("main")
+    if not isinstance(main_slot, dict):
+        return "", ""
+
+    alternatives = [item for item in main_slot.get("alternatives", []) if isinstance(item, dict)]
+    if not alternatives:
+        return "", ""
+
+    active_id = str(main_slot.get("active_id", "")).strip()
+    if active_id:
+        active_candidate = next((item for item in alternatives if str(item.get("id", "")).strip() == active_id), None)
+        if active_candidate:
+            rel_path = _normalize_asset_rel_path(str(active_candidate.get("asset_rel_path", "")))
+            if _asset_exists(rel_path):
+                return rel_path, "main_active"
+
+    for candidate in alternatives:
+        rel_path = _normalize_asset_rel_path(str(candidate.get("asset_rel_path", "")))
+        if _asset_exists(rel_path):
+            return rel_path, "main_fallback"
+
+    return "", ""
+
+
+def _resolve_story_thumbnail(story_payload: dict[str, Any]) -> tuple[str, str]:
+    cover = story_payload.get("cover", {})
+    if isinstance(cover, dict):
+        cover_rel = _normalize_asset_rel_path(str(cover.get("asset_rel_path", "")))
+        if _asset_exists(cover_rel):
+            return cover_rel, "cover"
+
+    pages = [item for item in story_payload.get("pages", []) if isinstance(item, dict)]
+    pages.sort(key=lambda item: int(item.get("page_number", 0)))
+    for page in pages:
+        images = page.get("images", {})
+        if not isinstance(images, dict):
+            continue
+        rel_path, source = _resolve_main_slot_thumbnail(images)
+        if rel_path:
+            return rel_path, source
+
+    return "", "placeholder"
 
 
 def _ensure_node(nodes: dict[str, dict[str, Any]], path_rel: str) -> dict[str, Any]:
@@ -86,6 +148,7 @@ def _build_catalog() -> dict[str, Any]:
         pages_total += pages_count
         slots_total += slots_count
         alternatives_total += alternatives_count
+        thumb_rel_path, thumb_source = _resolve_story_thumbnail(story_payload)
 
         stories[story_rel_path] = {
             "story_rel_path": story_rel_path,
@@ -96,6 +159,9 @@ def _build_catalog() -> dict[str, Any]:
             "pages": pages_count,
             "slots": slots_count,
             "alternatives": alternatives_count,
+            "thumb_rel_path": thumb_rel_path,
+            "thumb_source": thumb_source,
+            "thumb_exists": bool(thumb_rel_path),
         }
 
         if book_rel_path:
@@ -140,11 +206,18 @@ def list_children(parent_path_rel: str) -> list[dict[str, Any]]:
     catalog = _build_catalog()
     parent = _normalize_rel_path(parent_path_rel)
 
-    rows = [
-        node
-        for node in catalog["nodes"].values()
-        if (node.get("parent_path_rel") or "") == parent and node.get("path_rel") != parent
-    ]
+    rows: list[dict[str, Any]] = []
+    for node in catalog["nodes"].values():
+        if (node.get("parent_path_rel") or "") != parent or node.get("path_rel") == parent:
+            continue
+
+        item = dict(node)
+        if item.get("is_story_leaf"):
+            summary = catalog["stories"].get(item["path_rel"])
+            if summary:
+                item["story_summary"] = summary
+        rows.append(item)
+
     rows.sort(key=lambda item: (0 if not item["is_story_leaf"] else 1, item["name"].lower()))
     return rows
 

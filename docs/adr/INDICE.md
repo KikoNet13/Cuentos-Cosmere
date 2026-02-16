@@ -25,6 +25,7 @@ Crear ADR solo para decisiones estructurales, por ejemplo:
 - `docs/adr/0005-contrato-library-inbox-nnmd.md`
 - `docs/adr/0006-parser-ia-asistida-gate-critico.md`
 - `docs/adr/0007-canon-json-sin-sqlite-skill-editorial.md`
+- `docs/adr/0008-ui-bulma-htmx-rutas-rest-pagina.md`
 
 ## ADR reemplazados
 

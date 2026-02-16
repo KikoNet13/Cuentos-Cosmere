@@ -41,8 +41,16 @@ library/_backups/         # opcional
 
 ## UI
 
-- Lectura: `/story/<ruta>?p=N`
-- Edicion de pagina: `/story/<ruta>?p=N&editor=1`
+- Stack: Jinja + Bulma + HTMX.
+- Home biblioteca: `/`
+- Navegacion de nodos: `/browse/<ruta>`
+- Lectura por pagina: `/story/<ruta>/page/<N>`
+- Edicion por pagina: `/editor/story/<ruta>/page/<N>`
+- Fragmentos HTMX de lectura: `/fragments/story/<ruta>/page/<N>/...`
+- Compatibilidad legacy con redirect:
+  - `/n/<ruta>`
+  - `/story/<ruta>?p=N`
+  - `/story/<ruta>?p=N&editor=1`
 
 ## CLI de app
 

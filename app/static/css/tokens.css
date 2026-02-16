@@ -1,0 +1,48 @@
+:root {
+  --bg-top: #f2f6ff;
+  --bg-main: #eef3f9;
+  --surface: #ffffff;
+  --surface-2: #f7f9fc;
+  --ink: #13253b;
+  --muted: #5b6b80;
+  --line: #d2dde9;
+  --accent: #1d4ed8;
+  --accent-soft: #dce8ff;
+  --success: #0f766e;
+  --danger: #b42318;
+  --warning: #b45309;
+  --radius-l: 20px;
+  --radius-m: 14px;
+  --radius-s: 10px;
+  --shadow-soft: 0 16px 34px rgba(19, 37, 59, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  color: var(--ink);
+  font-family: "Source Sans 3", "Avenir Next", "Trebuchet MS", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Fraunces", Georgia, serif;
+  letter-spacing: 0.01em;
+}
+
+code,
+pre {
+  font-family: "IBM Plex Mono", "Cascadia Mono", Consolas, monospace;
+}
+

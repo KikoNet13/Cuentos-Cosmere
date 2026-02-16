@@ -1,0 +1,68 @@
+.app-shell {
+  background:
+    radial-gradient(1200px 400px at 85% -10%, #d9e8ff 0%, transparent 65%),
+    radial-gradient(900px 340px at -10% 6%, #e2eefc 0%, transparent 58%),
+    linear-gradient(180deg, var(--bg-top) 0, var(--bg-main) 260px);
+}
+
+.app-container {
+  width: min(1480px, 96vw);
+}
+
+.app-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.app-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #c8d7ef;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  background: #f3f7ff;
+  font-size: 0.75rem;
+  color: #284f94;
+}
+
+.hero-surface,
+.page-nav,
+.story-media-box,
+.editor-slot-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-soft);
+}
+
+.cluster-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .app-container {
+    width: min(1520px, 94vw);
+  }
+}

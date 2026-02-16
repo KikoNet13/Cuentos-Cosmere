@@ -5,7 +5,7 @@ def create_app():
     from flask import Flask
 
     from .config import APP_SECRET_KEY
-    from .routes_v3 import web_bp
+    from .web import web_bp
 
     app = Flask(__name__, template_folder="templates", static_folder="static")
     app.config["SECRET_KEY"] = APP_SECRET_KEY

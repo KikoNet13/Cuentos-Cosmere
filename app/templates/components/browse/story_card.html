@@ -1,0 +1,25 @@
+<article class="catalog-card">
+  <a class="catalog-card-link" href="{{ item.href }}">
+    <div class="catalog-thumb">
+      {% if item.thumb_url %}
+        <img src="{{ item.thumb_url }}" alt="Miniatura de {{ item.card_title }}">
+      {% else %}
+        <div class="catalog-placeholder">
+          <span>Sin portada</span>
+        </div>
+      {% endif %}
+    </div>
+    <div class="catalog-meta">
+      <p class="catalog-kicker">{{ item.card_subtitle }}</p>
+      <h3 class="catalog-title">{{ item.card_title }}</h3>
+      <div class="catalog-tags">
+        <span class="tag is-rounded is-light">Estado: {{ item.story_status }}</span>
+        <span class="tag is-rounded is-light">{{ item.story_pages }} pág.</span>
+        <span class="tag is-rounded is-light">{{ item.story_slots }} slots</span>
+        <span class="tag is-rounded is-light">{{ item.story_alternatives }} alternativas</span>
+      </div>
+      <p class="catalog-path"><code>{{ item.path_rel }}</code></p>
+    </div>
+  </a>
+</article>
+

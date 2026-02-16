@@ -1,0 +1,93 @@
+{% if panel_message %}
+  <article class="message {% if panel_kind == 'success' %}is-success{% elif panel_kind == 'danger' %}is-danger{% else %}is-info{% endif %} is-small mb-4">
+    <div class="message-body">{{ panel_message }}</div>
+  </article>
+{% endif %}
+
+<section class="advanced-grid">
+  <article class="box">
+    <h3 class="title is-6">Texto</h3>
+    <p class="panel-label">Versión actual</p>
+    <pre class="story-prose mb-3">{{ page.text_current }}</pre>
+    <p class="panel-label">Versión original</p>
+    <pre id="advanced-text-original" class="story-prose">{{ page.text_original }}</pre>
+    <div class="is-flex is-align-items-center gap-2 mt-2">
+      <button class="button is-small is-light" type="button" onclick="copyTextFromElement('advanced-text-original','copy-advanced-text')">Copiar original</button>
+      <span id="copy-advanced-text" class="copy-feedback"></span>
+    </div>
+  </article>
+
+  {% for slot in slots %}
+    {% set slot_index = loop.index %}
+    <article class="box">
+      <div class="is-flex is-justify-content-space-between is-align-items-center is-flex-wrap-wrap gap-2 mb-3">
+        <h3 class="title is-6 mb-0">Slot {{ slot.slot_name }}</h3>
+        <span class="tag is-rounded">Estado: {{ slot.status }}</span>
+      </div>
+
+      <p class="panel-label">Prompt actual</p>
+      <pre id="advanced-prompt-current-{{ slot_index }}" class="story-prose">{{ slot.prompt_current }}</pre>
+      <div class="is-flex is-align-items-center gap-2 mt-2 mb-3">
+        <button class="button is-small is-light" type="button" onclick="copyTextFromElement('advanced-prompt-current-{{ slot_index }}','copy-prompt-current-{{ slot_index }}')">Copiar prompt</button>
+        <span id="copy-prompt-current-{{ slot_index }}" class="copy-feedback"></span>
+      </div>
+
+      <p class="panel-label">Prompt original</p>
+      <pre id="advanced-prompt-original-{{ slot_index }}" class="story-prose">{{ slot.prompt_original }}</pre>
+      <div class="is-flex is-align-items-center gap-2 mt-2 mb-4">
+        <button class="button is-small is-light" type="button" onclick="copyTextFromElement('advanced-prompt-original-{{ slot_index }}','copy-prompt-original-{{ slot_index }}')">Copiar original</button>
+        <span id="copy-prompt-original-{{ slot_index }}" class="copy-feedback"></span>
+      </div>
+
+      <p class="panel-label">Alternativas</p>
+      {% if slot.alternatives %}
+        <div class="advanced-alt-grid">
+          {% for alternative in slot.alternatives %}
+            {% set alternative_index = loop.index %}
+            <article class="alt-card {% if alternative.is_active %}is-active{% endif %}">
+              <p class="is-size-7 mb-1"><strong>ID:</strong> <code>{{ alternative.id }}</code></p>
+              <p class="is-size-7 mb-2"><strong>Estado:</strong> {{ alternative.status }}</p>
+
+              {% if alternative.image_exists %}
+                <img src="{{ alternative.image_url }}" alt="Alternativa {{ alternative.id }}">
+                <div class="is-flex is-align-items-center gap-2 mt-2">
+                  <button
+                    class="button is-small is-light"
+                    type="button"
+                    onclick="copyImageFromUrl('{{ alternative.image_url }}','copy-alt-read-{{ slot_index }}-{{ alternative_index }}')"
+                  >Copiar imagen</button>
+                  <span id="copy-alt-read-{{ slot_index }}-{{ alternative_index }}" class="copy-feedback"></span>
+                </div>
+              {% else %}
+                <p class="has-text-grey is-size-7">Archivo de imagen no encontrado.</p>
+              {% endif %}
+
+              {% if alternative.notes %}
+                <p class="is-size-7 has-text-grey mt-2">{{ alternative.notes }}</p>
+              {% endif %}
+
+              {% if alternative.is_active %}
+                <span class="tag is-success is-light mt-3">Activa</span>
+              {% else %}
+                <form
+                  method="post"
+                  action="{{ url_for('web.story_advanced_activate_fragment', story_path=story.story_rel_path, page_number=page.page_number, slot_name=slot.slot_name) }}"
+                  hx-post="{{ url_for('web.story_advanced_activate_fragment', story_path=story.story_rel_path, page_number=page.page_number, slot_name=slot.slot_name) }}"
+                  hx-target="#advanced-panel"
+                  hx-swap="innerHTML"
+                  class="mt-3"
+                >
+                  <input type="hidden" name="alternative_id" value="{{ alternative.id }}">
+                  <button class="button is-small is-primary is-light" type="submit">Usar como activa</button>
+                </form>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="has-text-grey is-size-7">No hay alternativas en este slot.</p>
+      {% endif %}
+    </article>
+  {% endfor %}
+</section>
+

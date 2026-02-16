@@ -1,6 +1,16 @@
 # Índice de tareas
 
-- Próximo ID: `019`
+- Próximo ID: `020`
+
+## TAREA-019-ui-biblioteca-bulma-htmx-rutas-rest
+
+- Fecha: 16/02/26 13:44
+- Estado: cerrada
+- Resumen: UI modular Jinja + Bulma + HTMX con navegacion por tarjetas, lectura/editor por rutas REST de pagina y compatibilidad legacy por redirect.
+- Versión: 1.6.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`, `0008`
+- Archivo: `docs/tasks/TAREA-019-ui-biblioteca-bulma-htmx-rutas-rest.md`
 
 ## TAREA-018-skill-ingesta-inicial-interactiva
 

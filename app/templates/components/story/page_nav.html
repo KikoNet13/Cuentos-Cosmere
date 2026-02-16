@@ -1,0 +1,57 @@
+{% if page_numbers %}
+  <nav class="box page-nav">
+    <div class="is-flex is-justify-content-space-between is-align-items-center is-flex-wrap-wrap gap-3">
+      <div class="buttons are-small mb-0">
+        {% if prev_page %}
+          {% if editor_mode %}
+            <a class="button is-light" href="{{ url_for('web.story_editor_page', story_path=story.story_rel_path, page_number=prev_page) }}">&larr; Página {{ prev_page }}</a>
+          {% else %}
+            <a
+              class="button is-light"
+              href="{{ url_for('web.story_read_page', story_path=story.story_rel_path, page_number=prev_page) }}"
+              hx-get="{{ url_for('web.story_shell_fragment', story_path=story.story_rel_path, page_number=prev_page) }}"
+              hx-target="#story-shell"
+              hx-swap="outerHTML"
+              hx-push-url="true"
+            >&larr; Página {{ prev_page }}</a>
+          {% endif %}
+        {% endif %}
+        {% if next_page %}
+          {% if editor_mode %}
+            <a class="button is-light" href="{{ url_for('web.story_editor_page', story_path=story.story_rel_path, page_number=next_page) }}">Página {{ next_page }} &rarr;</a>
+          {% else %}
+            <a
+              class="button is-light"
+              href="{{ url_for('web.story_read_page', story_path=story.story_rel_path, page_number=next_page) }}"
+              hx-get="{{ url_for('web.story_shell_fragment', story_path=story.story_rel_path, page_number=next_page) }}"
+              hx-target="#story-shell"
+              hx-swap="outerHTML"
+              hx-push-url="true"
+            >Página {{ next_page }} &rarr;</a>
+          {% endif %}
+        {% endif %}
+      </div>
+
+      <div class="page-chip-row">
+        {% for num in page_numbers %}
+          {% if editor_mode %}
+            <a
+              class="tag page-chip {% if num == selected_page %}is-selected{% endif %}"
+              href="{{ url_for('web.story_editor_page', story_path=story.story_rel_path, page_number=num) }}"
+            >{{ num }}</a>
+          {% else %}
+            <a
+              class="tag page-chip {% if num == selected_page %}is-selected{% endif %}"
+              href="{{ url_for('web.story_read_page', story_path=story.story_rel_path, page_number=num) }}"
+              hx-get="{{ url_for('web.story_shell_fragment', story_path=story.story_rel_path, page_number=num) }}"
+              hx-target="#story-shell"
+              hx-swap="outerHTML"
+              hx-push-url="true"
+            >{{ num }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </nav>
+{% endif %}
+

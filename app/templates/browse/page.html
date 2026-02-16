@@ -1,0 +1,38 @@
+{% extends "layouts/base.html" %}
+{% block title %}{{ node_name }} | Biblioteca{% endblock %}
+{% block content %}
+  {% include "components/breadcrumbs.html" %}
+
+  <section class="box hero-surface">
+    <div class="is-flex is-justify-content-space-between is-align-items-flex-start is-flex-wrap-wrap gap-3">
+      <div>
+        <h1 class="title is-3 mb-2">{{ node_name }}</h1>
+        <p class="has-text-grey mb-1">Ruta actual: <code>{{ node_path or "library" }}</code></p>
+        <p class="has-text-grey-light">Navegación tipo catálogo con tarjetas visuales.</p>
+      </div>
+      <div class="cluster-tags">
+        <span class="tag is-rounded">{{ counts.nodes }} nodos</span>
+        <span class="tag is-rounded">{{ counts.stories }} cuentos</span>
+        <span class="tag is-rounded">{{ counts.pages }} páginas</span>
+        <span class="tag is-rounded">{{ counts.alternatives }} alternativas</span>
+      </div>
+    </div>
+  </section>
+
+  {% if children %}
+    <section class="catalog-grid">
+      {% for item in children %}
+        {% if item.is_story_leaf %}
+          {% include "components/browse/story_card.html" %}
+        {% else %}
+          {% include "components/browse/node_card.html" %}
+        {% endif %}
+      {% endfor %}
+    </section>
+  {% else %}
+    <article class="message is-light">
+      <div class="message-body">No hay elementos disponibles en este nodo.</div>
+    </article>
+  {% endif %}
+{% endblock %}
+

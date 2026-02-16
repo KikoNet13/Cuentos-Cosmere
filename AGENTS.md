@@ -44,8 +44,12 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 
 1. La webapp lee `NN.json` directo desde disco.
 2. No se usa SQLite para navegacion ni lectura.
-3. Modo lectura por defecto: `/story/<path>?p=N`.
-4. Modo editorial: `/story/<path>?p=N&editor=1`.
+3. Home de biblioteca: `/`.
+4. Navegacion de nodos: `/browse/<path>`.
+5. Lectura por pagina: `/story/<path>/page/<int:page_number>`.
+6. Modo editorial por pagina: `/editor/story/<path>/page/<int:page_number>`.
+7. Fragmentos HTMX de lectura: `/fragments/story/<path>/page/<int:page_number>/*`.
+8. Rutas legacy (`/n/<path>` y `/story/<path>?p=N[&editor=1]`) quedan como compatibilidad temporal con redirect.
 
 ## CLI vigente
 

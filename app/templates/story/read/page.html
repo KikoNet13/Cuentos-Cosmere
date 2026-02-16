@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+{% block title %}{{ story.title }}{% endblock %}
+{% block content %}
+  {% include "components/breadcrumbs.html" %}
+
+  <section class="box hero-surface">
+    <div class="is-flex is-justify-content-space-between is-align-items-flex-start is-flex-wrap-wrap gap-3">
+      <div>
+        <h1 class="title is-3 mb-2">{{ story.title }}</h1>
+        <p class="has-text-grey mb-1">Ruta: <code>{{ story.story_rel_path }}</code></p>
+        <p class="has-text-grey">Estado: <strong>{{ story.status }}</strong></p>
+      </div>
+      <a
+        class="button is-light is-small"
+        href="{{ url_for('web.story_editor_page', story_path=story.story_rel_path, page_number=selected_page) }}"
+      >Modo editorial</a>
+    </div>
+  </section>
+
+  {% include "story/read/_shell.html" %}
+{% endblock %}
+

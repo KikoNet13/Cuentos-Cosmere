@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Generador de cuentos ilustrados{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+    id="bulma-cdn"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    onerror="document.getElementById('bulma-local').disabled=false;"
+  >
+  <link
+    id="bulma-local"
+    rel="stylesheet"
+    href="{{ url_for('static', filename='vendor/bulma.min.css') }}"
+    disabled
+  >
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+  {% block head_extra %}{% endblock %}
+</head>
+<body class="app-shell">
+  {% include "components/topbar.html" %}
+
+  <main class="section py-5">
+    <div class="container is-fluid app-container">
+      {% include "components/flash_stack.html" %}
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      const probe = document.createElement("div");
+      probe.className = "is-hidden";
+      document.body.appendChild(probe);
+      const bulmaIsActive = window.getComputedStyle(probe).display === "none";
+      probe.remove();
+      if (!bulmaIsActive) {
+        const bulmaLocal = document.getElementById("bulma-local");
+        if (bulmaLocal) bulmaLocal.disabled = false;
+      }
+
+      if (window.htmx) return;
+      const localHtmx = document.createElement("script");
+      localHtmx.src = "{{ url_for('static', filename='vendor/htmx.min.js') }}";
+      localHtmx.defer = true;
+      document.body.appendChild(localHtmx);
+    });
+  </script>
+  <script src="{{ url_for('static', filename='js/clipboard.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/story_read.js') }}" defer></script>
+</body>
+</html>

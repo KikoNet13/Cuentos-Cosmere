@@ -1,0 +1,37 @@
+<div id="story-shell">
+  {% include "components/story/page_nav.html" %}
+
+  {% if missing_pages %}
+    <article class="message is-warning is-small mb-4">
+      <div class="message-body">Faltan páginas en secuencia: {{ missing_pages | join(", ") }}.</div>
+    </article>
+  {% endif %}
+
+  {% if page %}
+    <section class="story-reading-grid">
+      {% include "components/story/media_block.html" %}
+      <article class="box">
+        <h2 class="title is-5">Página {{ page.page_number }}</h2>
+        <pre class="story-prose">{{ page.text_current }}</pre>
+      </article>
+    </section>
+
+    <details class="box story-advanced-details mt-4">
+      <summary
+        class="story-advanced-summary"
+        hx-get="{{ url_for('web.story_advanced_fragment', story_path=story.story_rel_path, page_number=selected_page) }}"
+        hx-target="#advanced-panel"
+        hx-swap="innerHTML"
+        hx-trigger="click once"
+      >Opciones avanzadas</summary>
+      <div id="advanced-panel" class="mt-4">
+        <p class="is-size-7 has-text-grey">Expande para cargar variantes, prompts y texto original.</p>
+      </div>
+    </details>
+  {% else %}
+    <article class="message is-light">
+      <div class="message-body">Este cuento no contiene páginas.</div>
+    </article>
+  {% endif %}
+</div>
+

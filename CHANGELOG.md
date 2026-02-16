@@ -5,6 +5,21 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [16/02/26] - UI biblioteca Bulma + HTMX y rutas REST por pagina
+
+- Rediseño UI de biblioteca con navegación por tarjetas tipo catálogo y miniaturas por cuento.
+- Refactor backend web en módulos (`app/web/*`) y view-models compartidos.
+- Nuevo contrato de rutas:
+  - `/`
+  - `/browse/<path>`
+  - `/story/<path>/page/<int:page_number>`
+  - `/editor/story/<path>/page/<int:page_number>`
+  - `/fragments/story/<path>/page/<int:page_number>/*`
+- HTMX en lectura para paginación parcial (`hx-push-url`) y panel avanzado ocultable.
+- Activación de alternativas desde modo lectura con actualización parcial de panel y media.
+- Integración Bulma y HTMX por CDN con fallback local en `app/static/vendor/`.
+- Tarea: `docs/tasks/TAREA-019-ui-biblioteca-bulma-htmx-rutas-rest.md`.
+
 ## [16/02/26] - Skill de ingesta inicial interactiva
 
 - Nueva skill versionada en `.codex/skills/adaptacion-ingesta-inicial/` con CLI `run` para convertir `_inbox` a `NN.json` + sidecars de contexto/issues.

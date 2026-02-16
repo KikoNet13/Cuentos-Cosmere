@@ -1,0 +1,90 @@
+{% extends "layouts/base.html" %}
+{% block title %}{{ story.title }} | Editor{% endblock %}
+{% block content %}
+  {% include "components/breadcrumbs.html" %}
+
+  <section class="box hero-surface">
+    <div class="is-flex is-justify-content-space-between is-align-items-flex-start is-flex-wrap-wrap gap-3">
+      <div>
+        <h1 class="title is-3 mb-2">{{ story.title }}</h1>
+        <p class="has-text-grey mb-1">Ruta: <code>{{ story.story_rel_path }}</code></p>
+        <p class="has-text-grey">Estado: <strong>{{ story.status }}</strong></p>
+      </div>
+      <a
+        class="button is-light is-small"
+        href="{{ url_for('web.story_read_page', story_path=story.story_rel_path, page_number=selected_page) }}"
+      >Modo lectura</a>
+    </div>
+  </section>
+
+  {% include "components/story/page_nav.html" %}
+
+  {% if missing_pages %}
+    <article class="message is-warning is-small mb-4">
+      <div class="message-body">Faltan páginas en secuencia: {{ missing_pages | join(", ") }}.</div>
+    </article>
+  {% endif %}
+
+  {% if page %}
+    <section class="box">
+      <h2 class="title is-5">Edición de página {{ page.page_number }}</h2>
+      <form method="post" action="{{ url_for('web.save_story_page', story_path=story.story_rel_path, page_number=page.page_number) }}" class="is-flex is-flex-direction-column gap-3">
+        <input type="hidden" name="next" value="{{ request.full_path }}">
+
+        <div>
+          <label class="label">Texto actual</label>
+          <textarea class="textarea" name="text_current" rows="8">{{ page.text_current }}</textarea>
+        </div>
+
+        <div class="box is-shadowless has-background-light">
+          <h3 class="title is-6">Texto original</h3>
+          <pre id="editor-text-original" class="story-prose">{{ page.text_original }}</pre>
+          <div class="is-flex is-align-items-center gap-2 mt-2">
+            <button class="button is-small is-light" type="button" onclick="copyTextFromElement('editor-text-original','copy-editor-text-original')">Copiar original</button>
+            <span id="copy-editor-text-original" class="copy-feedback"></span>
+          </div>
+        </div>
+
+        <div>
+          <label class="label">Prompt main actual</label>
+          <textarea class="textarea" name="main_prompt_current" rows="4">{{ (slot_map.main.prompt_current if slot_map.main else "") }}</textarea>
+        </div>
+        <div class="box is-shadowless has-background-light">
+          <h3 class="title is-6">Prompt main original</h3>
+          <pre id="editor-main-original" class="story-prose">{{ (slot_map.main.prompt_original if slot_map.main else "") }}</pre>
+          <div class="is-flex is-align-items-center gap-2 mt-2">
+            <button class="button is-small is-light" type="button" onclick="copyTextFromElement('editor-main-original','copy-editor-main-original')">Copiar original</button>
+            <span id="copy-editor-main-original" class="copy-feedback"></span>
+          </div>
+        </div>
+
+        <div>
+          <label class="label">Prompt secondary actual (opcional)</label>
+          <textarea class="textarea" name="secondary_prompt_current" rows="4">{{ (slot_map.secondary.prompt_current if slot_map.secondary else "") }}</textarea>
+        </div>
+        <div class="box is-shadowless has-background-light">
+          <h3 class="title is-6">Prompt secondary original</h3>
+          <pre id="editor-secondary-original" class="story-prose">{{ (slot_map.secondary.prompt_original if slot_map.secondary else "") }}</pre>
+          <div class="is-flex is-align-items-center gap-2 mt-2">
+            <button class="button is-small is-light" type="button" onclick="copyTextFromElement('editor-secondary-original','copy-editor-secondary-original')">Copiar original</button>
+            <span id="copy-editor-secondary-original" class="copy-feedback"></span>
+          </div>
+        </div>
+
+        <button class="button is-link" type="submit">Guardar página</button>
+      </form>
+    </section>
+
+    <section class="editor-slot-grid">
+      {% for slot in slots %}
+        {% set slot_index = loop.index %}
+        {% include "components/story/editor_slot_card.html" %}
+      {% endfor %}
+    </section>
+  {% else %}
+    <article class="message is-light">
+      <div class="message-body">Este cuento no contiene páginas.</div>
+    </article>
+  {% endif %}
+{% endblock %}
+
