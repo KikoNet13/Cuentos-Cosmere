@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Biblioteca | Generador de cuentos ilustrados{% endblock %}
+{% block content %}
+<nav class="breadcrumbs">
+  {% for crumb in breadcrumbs %}
+    {% if loop.last %}
+      <span>{{ crumb.name }}</span>
+    {% else %}
+      <a href="{{ url_for('web.dashboard') if crumb.path == '' else url_for('web.node_detail', node_path=crumb.path) }}">{{ crumb.name }}</a>
+      <span>/</span>
+    {% endif %}
+  {% endfor %}
+</nav>
+
+<section class="panel">
+  <h1>Navegacion de biblioteca</h1>
+  <p class="muted">Ruta actual: <code>{{ node_path or 'library' }}</code></p>
+  <p class="muted">Catalogo en runtime por escaneo directo de archivos JSON.</p>
+</section>
+
+<section class="panel">
+  <h2>Estado del catalogo</h2>
+  <div class="stats-grid">
+    <div class="stat"><strong>{{ counts.nodes }}</strong><span>Nodos</span></div>
+    <div class="stat"><strong>{{ counts.stories }}</strong><span>Cuentos</span></div>
+    <div class="stat"><strong>{{ counts.pages }}</strong><span>Paginas</span></div>
+    <div class="stat"><strong>{{ counts.slots }}</strong><span>Slots</span></div>
+    <div class="stat"><strong>{{ counts.alternatives }}</strong><span>Alternativas</span></div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Contenido</h2>
+  {% if children %}
+    <div class="list-grid">
+      {% for item in children %}
+        <article class="item-card">
+          {% if item.is_story_leaf %}
+            <h3>
+              <a href="{{ url_for('web.story_detail', story_path=item.path_rel) }}">{{ item.name }}</a>
+            </h3>
+            <p class="muted">Cuento JSON</p>
+          {% elif item.is_book_node %}
+            <h3>
+              <a href="{{ url_for('web.node_detail', node_path=item.path_rel) }}">{{ item.name }}</a>
+            </h3>
+            <p class="muted">Libro</p>
+          {% else %}
+            <h3>
+              <a href="{{ url_for('web.node_detail', node_path=item.path_rel) }}">{{ item.name }}</a>
+            </h3>
+            <p class="muted">Nodo</p>
+          {% endif %}
+          <p><code>{{ item.path_rel }}</code></p>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="muted">No hay nodos hijos en esta ruta.</p>
+  {% endif %}
+</section>
+{% endblock %}

@@ -5,23 +5,6 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
-## [14/02/26] - Rediseño SPA biblioteca-cuento museo interactivo
-
-- Se reemplazó la UI server-rendered por una SPA `Vue + Vite` con rutas públicas:
-  - `/biblioteca/...`
-  - `/cuento/...`
-- Se eliminaron rutas y vistas legacy de navegación/lectura/editor.
-- Se incorporó API JSON versionada en Flask:
-  - `GET /api/v1/library/node`
-  - `GET /api/v1/stories/<path>`
-  - `PATCH /api/v1/stories/<path>/pages/<int>`
-  - `POST /api/v1/stories/<path>/pages/<int>/slots/<slot>/alternatives`
-  - `PUT /api/v1/stories/<path>/pages/<int>/slots/<slot>/active`
-  - `GET /api/v1/health`
-- Se integró modo editor en la misma vista de cuento (guardado de texto/prompts, subida y activación de alternativas).
-- Se añadieron tests backend `unittest` para los casos API críticos (`tests/test_api_v1.py`).
-- Tarea: `docs/tasks/TAREA-015-rediseno-spa-biblioteca-cuento-museo-interactivo.md`.
-
 ## [14/02/26] - Edad objetivo dinámica al iniciar adaptación
 
 - Se añadió sidecar por libro `adaptation_profile.json` en `library/<book_rel_path>/_reviews/`.

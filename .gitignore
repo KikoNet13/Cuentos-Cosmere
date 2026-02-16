@@ -29,8 +29,6 @@ Thumbs.db
 # Build artifacts
 build/
 dist/
-frontend/node_modules/
-app/static/spa/
 
 # Optional local sqlite leftovers
 *.sqlite
@@ -41,7 +39,6 @@ cache_write_probe_root.txt
 db/cache_write_probe.txt
 
 # Library local workflow artifacts
-library/
 library/_inbox/
 library/_backups/
 library/**/_legacy_story_dirs/

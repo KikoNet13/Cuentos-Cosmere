@@ -5,12 +5,16 @@ Proyecto local para revisar, adaptar y publicar cuentos ilustrados con fuente de
 ## Arquitectura vigente
 
 - Fuente de verdad: `library/`.
-- Contrato canonico: un cuento por archivo `NN.json` dentro de un nodo libro.
+- Contrato canónico: un cuento por archivo `NN.json` dentro de un nodo libro.
+- `NN.json` guarda:
+  - metadatos de cuento
+  - páginas con `text.original` y `text.current`
+  - imágenes por slot (`main` obligatorio, `secondary` opcional)
+  - alternativas de imagen con `active_id`
 - Runtime sin SQLite: la app navega por escaneo directo de disco.
-- Frontend actual: SPA `Vue + Vite` servida por Flask.
 - Flujo editorial oficial: `revision-orquestador-editorial`.
 
-## Estructura canonica de libro
+## Estructura canónica de libro
 
 ```text
 library/<ruta-nodos>/.../<book-node>/
@@ -22,30 +26,46 @@ library/_inbox/           # propuestas de entrada (NN.md, NN.pdf)
 library/_backups/         # opcional
 ```
 
-## UI y rutas
+## Uso editorial (modo conversacional)
 
-- Shell SPA:
-  - `/` redirige a `/biblioteca`
-  - `/biblioteca`
-  - `/biblioteca/<path>`
-  - `/cuento/<path>`
-- API JSON versionada:
-  - `/api/v1/library/node`
-  - `/api/v1/stories/<path>`
-  - `/api/v1/stories/<path>/pages/<int>`
-  - `/api/v1/stories/<path>/pages/<int>/slots/<slot>/alternatives`
-  - `/api/v1/stories/<path>/pages/<int>/slots/<slot>/active`
-  - `/api/v1/health`
-- Media:
-  - `/media/<path>`
+Las skills son de agente: se usan en diálogo interactivo contigo, sin comandos embebidos.
 
-## Frontend local
+### Secuencia recomendada
 
-- Codigo fuente SPA: `frontend/`
-- Build: salida a `app/static/spa/` (ignorada por git)
-- Comandos:
-  - `npm --prefix frontend ci`
-  - `npm --prefix frontend run build`
+1. `revision-contexto-canon`
+   - obligatorio al inicio: confirmar `target_age` y persistirlo en `adaptation_profile.json`.
+   - opcional: revisión ligera de terminología y sidecar `context_review.json`.
+2. `revision-texto-deteccion`
+3. `revision-texto-decision-interactiva`
+4. `revision-texto-contraste-canon`
+5. `revision-prompts-deteccion`
+6. `revision-prompts-decision-interactiva`
+7. `revision-prompts-contraste-canon`
+8. `revision-orquestador-editorial` (flujo integral por libro)
+   - si no hay edad objetivo definida, el flujo queda en `awaiting_target_age`.
+
+## Sidecars de revisión
+
+Por libro, el pipeline guarda artefactos en `library/<book_rel_path>/_reviews/`:
+
+- `pipeline_state.json`
+- `context_chain.json`
+- `glossary_merged.json`
+- `adaptation_profile.json` (edad objetivo y umbrales activos por libro)
+- `context_review.json` (opcional, generado por revisión ligera manual)
+- `NN.findings.json`
+- `NN.choices.json`
+- `NN.contrast.json`
+- `NN.passes.json`
+- derivados opcionales para UI/editor:
+  - `NN.review.json`
+  - `NN.review.md`
+  - `NN.decisions.json`
+
+## UI
+
+- Lectura: `/story/<ruta>?p=N`
+- Editorial (solo ajustes puntuales): `/story/<ruta>?p=N&editor=1`
 
 ## CLI vigente
 
@@ -53,7 +73,7 @@ library/_backups/         # opcional
 
 ## Trazabilidad
 
-- Operacion: `AGENTS.md`
+- Operación: `AGENTS.md`
 - Tareas: `docs/tasks/`
 - ADR: `docs/adr/`
 - Historial breve: `CHANGELOG.md`
