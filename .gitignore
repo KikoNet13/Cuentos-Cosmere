@@ -21,6 +21,8 @@ venv/
 !.codex/config.toml
 !.codex/skills/
 !.codex/skills/**
+.codex/skills/**/__pycache__/
+.codex/skills/**/*.py[cod]
 
 # OS files
 .DS_Store
@@ -39,6 +41,7 @@ cache_write_probe_root.txt
 db/cache_write_probe.txt
 
 # Library local workflow artifacts
+library/
 library/_inbox/
 library/_backups/
 library/**/_legacy_story_dirs/

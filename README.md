@@ -11,63 +11,60 @@ Proyecto local para revisar, adaptar y publicar cuentos ilustrados con fuente de
   - páginas con `text.original` y `text.current`
   - imágenes por slot (`main` obligatorio, `secondary` opcional)
   - alternativas de imagen con `active_id`
-- Runtime sin SQLite: la app navega por escaneo directo de disco.
-- Flujo editorial oficial: `revision-orquestador-editorial`.
+- Runtime de app sin SQLite: navegación por escaneo directo de disco.
+- Frontera obligatoria:
+  - `app/` solo webapp Flask de visualización/edición.
+  - la adaptación editorial vive en skills `adaptacion-*` y sus scripts.
 
-## Estructura canónica de libro
+## Estructura canónica
 
 ```text
 library/<ruta-nodos>/.../<book-node>/
   01.json
-  01.pdf                  # opcional referencia
   img_<uuid>_<slug>.png   # alternativas de imagen
   02.json
+  _reviews/
+    01.review.json
+    01.decisions.log.jsonl
 library/_inbox/           # propuestas de entrada (NN.md, NN.pdf)
 library/_backups/         # opcional
 ```
 
-## Uso editorial (modo conversacional)
+## Flujo editorial oficial (skills)
 
-Las skills son de agente: se usan en diálogo interactivo contigo, sin comandos embebidos.
+Skills conversacionales:
 
-### Secuencia recomendada
+1. `adaptacion-contexto`
+2. `adaptacion-texto`
+3. `adaptacion-prompts`
+4. `adaptacion-cierre`
+5. `adaptacion-orquestador`
 
-1. `revision-contexto-canon`
-   - obligatorio al inicio: confirmar `target_age` y persistirlo en `adaptation_profile.json`.
-   - opcional: revisión ligera de terminología y sidecar `context_review.json`.
-2. `revision-texto-deteccion`
-3. `revision-texto-decision-interactiva`
-4. `revision-texto-contraste-canon`
-5. `revision-prompts-deteccion`
-6. `revision-prompts-decision-interactiva`
-7. `revision-prompts-contraste-canon`
-8. `revision-orquestador-editorial` (flujo integral por libro)
-   - si no hay edad objetivo definida, el flujo queda en `awaiting_target_age`.
+Secuencia:
+
+1. Resolver `target_age` (obligatorio).
+2. `contexto` para inventario y perfil editorial.
+3. `texto` por severidad (`critical -> major -> minor -> info`).
+4. `prompts` por severidad (gate visual sobre `prompt.main`).
+5. `cierre`:
+   - `definitive` con cero hallazgos abiertos.
+   - `in_review` si queda cualquiera abierto.
+
+Cada hallazgo ofrece 1-3 propuestas IA y opción `D` libre humana.
 
 ## Sidecars de revisión
 
-Por libro, el pipeline guarda artefactos en `library/<book_rel_path>/_reviews/`:
+Por cuento en `library/<book_rel_path>/_reviews/`:
 
-- `pipeline_state.json`
-- `context_chain.json`
-- `glossary_merged.json`
-- `adaptation_profile.json` (edad objetivo y umbrales activos por libro)
-- `context_review.json` (opcional, generado por revisión ligera manual)
-- `NN.findings.json`
-- `NN.choices.json`
-- `NN.contrast.json`
-- `NN.passes.json`
-- derivados opcionales para UI/editor:
-  - `NN.review.json`
-  - `NN.review.md`
-  - `NN.decisions.json`
+- `NN.review.json` (estado maestro del ciclo)
+- `NN.decisions.log.jsonl` (una línea por hallazgo resuelto)
 
 ## UI
 
 - Lectura: `/story/<ruta>?p=N`
-- Editorial (solo ajustes puntuales): `/story/<ruta>?p=N&editor=1`
+- Editorial de página: `/story/<ruta>?p=N&editor=1`
 
-## CLI vigente
+## CLI de app
 
 - `python manage.py runserver`
 
@@ -77,3 +74,4 @@ Por libro, el pipeline guarda artefactos en `library/<book_rel_path>/_reviews/`:
 - Tareas: `docs/tasks/`
 - ADR: `docs/adr/`
 - Historial breve: `CHANGELOG.md`
+

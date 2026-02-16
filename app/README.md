@@ -1,8 +1,14 @@
-# App del Generador de cuentos ilustrados
+# App Flask de biblioteca
+
+## Alcance de `app/`
+
+- `app/` solo contiene la webapp Flask para navegación y edición puntual de cuentos en `library/`.
+- `app/` no contiene ni ejecuta pipeline editorial de adaptación.
+- Toda lógica de adaptación propuesta -> definitiva vive en skills `adaptacion-*`.
 
 ## Contrato de datos
 
-- `library/` es la fuente de verdad.
+- Fuente de verdad: `library/`.
 - Un libro se detecta por uno o más archivos `NN.json`.
 - Cada `NN.json` representa un cuento completo con:
   - metadatos de cuento
@@ -11,58 +17,25 @@
   - alternativas de imagen por slot y `active_id`
 - Los assets de imagen viven en el mismo directorio del libro con nombre opaco `img_<uuid>_<slug>.<ext>`.
 
-## Runtime
+## Runtime web
 
 - Sin SQLite de caché.
 - Catálogo por escaneo directo de `library/`.
 - Endpoints principales:
   - `/`
   - `/n/<path>`
-  - `/story/<path>?p=N` (modo lectura por defecto)
-  - `/story/<path>?p=N&editor=1` (modo editorial)
+  - `/story/<path>?p=N` (lectura)
+  - `/story/<path>?p=N&editor=1` (edición puntual)
   - `/media/<path>`
   - `/health`
 
-## Operaciones web
+## Sidecars editoriales consumidos
 
-- En lectura: render limpio de `text.current` + imagen activa.
-- En editorial: comparativa `original/current`, guardado por página, gestión de alternativas por slot.
-- Activación editorial solo por query `editor=1`.
+- La app puede mostrar estado derivado de:
+  - `library/<book>/_reviews/NN.review.json`
+  - `library/<book>/_reviews/NN.decisions.log.jsonl`
 
-## Pipeline editorial
-
-- Entrada pública en código: `app/editorial_orquestador.py`.
-- Función principal: `run_orquestador_editorial(..., target_age=None)`.
-- Reanudación explícita: `run_orquestador_editorial_resume(..., target_age=None)`.
-- Revisión ligera de glosario (manual): `run_contexto_revision_glosario(...)`.
-- Perfil editorial por edad: `run_contexto_adaptation_profile(...)`.
-- Ciclo por severidad en cada etapa:
-  - `critical -> major -> minor -> info`
-- Ciclo interno por severidad:
-  - detección
-  - decisión interactiva
-  - contraste con canon
-- Etapas:
-  - `text` primero
-  - `prompt` después, solo si texto converge en `critical|major`
-- Si falta edad objetivo (`target_age`) en input y perfil guardado:
-  - estado `phase=awaiting_target_age`
-  - no se ejecuta cascada.
-
-## Sidecars
-
-`library/<book_rel_path>/_reviews/`:
-
-- `context_chain.json`
-- `glossary_merged.json`
-- `adaptation_profile.json`
-- `context_review.json` (opcional, no bloqueante)
-- `pipeline_state.json`
-- `NN.findings.json`
-- `NN.choices.json`
-- `NN.contrast.json`
-- `NN.passes.json`
-
-## CLI
+## CLI de app
 
 - `python manage.py runserver`
+

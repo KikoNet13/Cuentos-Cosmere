@@ -26,55 +26,44 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 7. Los assets de imagen se nombran con formato opaco `img_<uuid>_<slug>.<ext>` y la relación página/slot vive en JSON.
 8. `library/_inbox/` se usa como bandeja de propuestas editoriales `.md` y referencias `.pdf`.
 9. `library/_backups/` es opcional para respaldos manuales.
-10. Sidecars de revisión en `library/<book>/_reviews/`:
-    - `context_chain.json`
-    - `glossary_merged.json`
-    - `context_review.json`
-    - `adaptation_profile.json`
-    - `pipeline_state.json`
-    - `NN.findings.json`
-    - `NN.choices.json`
-    - `NN.contrast.json`
-    - `NN.passes.json`
-    - derivados opcionales para UI: `NN.review.json|md`, `NN.decisions.json`.
-11. Ciclo de estado de cuento:
+10. Sidecars de revisión vigentes en `library/<book>/_reviews/`:
+    - `NN.review.json` (maestro por cuento)
+    - `NN.decisions.log.jsonl` (log final por hallazgo resuelto)
+11. Sidecars legacy (`context_chain`, `glossary_merged`, `pipeline_state`, `NN.findings`, etc.) quedan fuera de contrato y se eliminan al ejecutar el nuevo flujo.
+12. Ciclo de estado de cuento:
     - `draft`
-    - `text_reviewed` o `text_blocked`
-    - `prompt_reviewed` o `prompt_blocked`
-    - `ready`
+    - `in_review`
+    - `definitive`
 
 ## Flujo editorial oficial
 
-1. Flujo principal: skill `revision-orquestador-editorial`.
-2. El orquestador exige `target_age` al iniciar (input o `adaptation_profile.json`).
-3. Con edad resuelta, ejecuta contexto + ingesta + cascada por severidad.
-4. Orden de severidad por etapa: `critical -> major -> minor -> info`.
-5. Cada severidad ejecuta ciclo de 3 skills:
-   - detección
-   - decisión interactiva
-   - contraste con canon.
-6. Etapa texto primero; etapa prompts solo si texto converge en `critical|major`.
-7. Topes por severidad:
-   - `critical`: 5
-   - `major`: 4
-   - `minor`: 3
-   - `info`: 2
-8. Gate:
-   - `critical|major` sin convergencia bloquea cuento y detiene libro.
-   - `minor|info` no bloquean si quedan aceptados/rechazados/defer con nota.
+1. Flujo principal: skill `adaptacion-orquestador`.
+2. `target_age` es obligatorio al iniciar.
+3. Secuencia fija:
+   - contexto
+   - texto
+   - prompts
+   - cierre
+4. Orden de severidad por etapa:
+   - `critical -> major -> minor -> info`
+5. Las decisiones se resuelven por bloques de severidad.
+6. Cada hallazgo ofrece 1-3 propuestas IA y opción humana libre `D`.
+7. Texto siempre antes de prompts.
+8. Gate visual de cierre: `prompt.main`.
+9. Cierre solo si `open_counts` queda en cero para todas las severidades.
 
 ## Skills editoriales (modo conversacional)
 
-1. `revision-contexto-canon`
-2. `revision-texto-deteccion`
-3. `revision-texto-decision-interactiva`
-4. `revision-texto-contraste-canon`
-5. `revision-prompts-deteccion`
-6. `revision-prompts-decision-interactiva`
-7. `revision-prompts-contraste-canon`
-8. `revision-orquestador-editorial`
+1. `adaptacion-contexto`
+2. `adaptacion-texto`
+3. `adaptacion-prompts`
+4. `adaptacion-cierre`
+5. `adaptacion-orquestador`
 
-Regla: las skills son de agente y se usan en diálogo interactivo, sin comandos hardcodeados.
+Reglas:
+- Las skills se usan en diálogo interactivo.
+- Si una skill necesita ejecutar lógica, el script vive dentro de esa skill (`<skill>/scripts/...`).
+- `app/` no ejecuta pipeline editorial.
 
 ## Runtime de app
 
@@ -86,7 +75,7 @@ Regla: las skills son de agente y se usan en diálogo interactivo, sin comandos 
 ## CLI vigente
 
 1. `python manage.py runserver`
-2. No existen comandos CLI de ingesta en el flujo oficial.
+2. No existen comandos CLI de ingesta/adaptación en `app/`.
 
 ## Sistema documental
 
@@ -116,3 +105,4 @@ Una tarea queda cerrada cuando:
 2. Se ejecutaron validaciones finitas reproducibles.
 3. Se actualizaron archivo de tarea, índice y changelog breve.
 4. Se creó el commit final de la tarea.
+
