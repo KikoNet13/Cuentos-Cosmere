@@ -1,6 +1,16 @@
 # Índice de tareas
 
-- Próximo ID: `022`
+- Próximo ID: `023`
+
+## TAREA-022-experimento-adaptacion-completa-pdf-unico-codex
+
+- Fecha: 17/02/26 13:09
+- Estado: cerrada
+- Resumen: experimento editorial completo desde `El imperio final.pdf` (fuente canonica unica) a `el-imperio-final-codex`, con 8 cuentos de 16 paginas, sidecars de revision y biblia visual para imagegen.
+- Versión: 1.9.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`
+- Archivo: `docs/tasks/TAREA-022-experimento-adaptacion-completa-pdf-unico-codex.md`
 
 ## TAREA-021-refactor-skill-ingesta-conversacional-sin-scripts
 

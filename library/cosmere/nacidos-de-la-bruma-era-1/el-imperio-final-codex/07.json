@@ -1,0 +1,353 @@
+{
+  "schema_version": "1.1",
+  "story_id": "07",
+  "title": "La ciudad al borde",
+  "story_title": "La ciudad al borde",
+  "status": "definitive",
+  "book_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final-codex",
+  "created_at": "2026-02-17T12:08:42.846937+00:00",
+  "updated_at": "2026-02-17T12:08:42.846937+00:00",
+  "cover": {
+    "status": "draft",
+    "prompt": {
+      "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nPortada del cuento 'La ciudad al borde'.\nIdea central: Fue necesario volver al salón de baile Venture para que Vin recordara qué era la auténtica majestad. Había visitado tantas fortalezas que empezaba a ser insensible al esplendor. Sin embargo, había algo especial en el Torreón de Venture: algo que las otras torres ansiaban, pero no conseguían del todo.\nEscena icónica con protagonistas en movimiento sobre un fondo reconocible del Imperio Final.\nComposición de portada: personaje principal en primer plano, secundario de apoyo, paisaje de bruma al fondo.\nColor: base gris ceniza, acentos rojo oscuro y azul metálico para elementos de magia.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+      "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nPortada del cuento 'La ciudad al borde'.\nIdea central: Fue necesario volver al salón de baile Venture para que Vin recordara qué era la auténtica majestad. Había visitado tantas fortalezas que empezaba a ser insensible al esplendor. Sin embargo, había algo especial en el Torreón de Venture: algo que las otras torres ansiaban, pero no conseguían del todo.\nEscena icónica con protagonistas en movimiento sobre un fondo reconocible del Imperio Final.\nComposición de portada: personaje principal en primer plano, secundario de apoyo, paisaje de bruma al fondo.\nColor: base gris ceniza, acentos rojo oscuro y azul metálico para elementos de magia.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+    },
+    "asset_rel_path": "",
+    "notes": "Portada pendiente de generación con imagegen."
+  },
+  "source_refs": {
+    "proposal_md_rel_path": "",
+    "reference_pdf_rel_path": "library/_inbox/El imperio final.pdf",
+    "inbox_book_title": "El imperio final"
+  },
+  "ingest_meta": {
+    "phase": "initial_ingest",
+    "target_age": 9,
+    "generated_at": "2026-02-17T12:08:42.846937+00:00",
+    "generated_by": "adaptacion-ingesta-inicial",
+    "semantic_mode": "codex_chat"
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "status": "definitive",
+      "text": {
+        "original": "Fue necesario volver al salón de baile Venture para que Vin recordara qué era la auténtica majestad. Había visitado tantas fortalezas que empezaba a ser insensible al esplendor. Sin embargo, había algo especial en el Torreón de Venture: algo que las otras torres ansiaban, pero no conseguían del todo.",
+        "current": "Fue necesario volver al salón de baile Venture para que Vin recordara qué era la auténtica majestad. Había visitado tantas fortalezas que empezaba a ser insensible al esplendor. Sin embargo, había algo especial en el Torreón de Venture: algo que las otras torres ansiaban, pero no conseguían del todo."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 1.\nAcción narrativa: Fue necesario volver al salón de baile Venture para que Vin recordara qué era la auténtica majestad. Había visitado tantas fortalezas que empezaba a ser insensible al esplendor. Sin embargo, había algo especial en el Torreón de Venture: algo que las otras torres ansiaban, pero no conseguían del todo.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 1.\nAcción narrativa: Fue necesario volver al salón de baile Venture para que Vin recordara qué era la auténtica majestad. Había visitado tantas fortalezas que empezaba a ser insensible al esplendor. Sin embargo, había algo especial en el Torreón de Venture: algo que las otras torres ansiaban, pero no conseguían del todo.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "status": "definitive",
+      "text": {
+        "original": "Casi con toda seguridad no habría tiempo para grandes bailes en el nuevo reino de Kelsier, y tal vez no fuera mala cosa: ¿qué derecho tenía ella a bailar mientras los otros skaa morían de hambre? el mundo perdería algo hermoso sin las mansiones y los bailarines, los vestidos y las fiestas. Suspiró, se apartó de la barandilla y se miró el vestido.",
+        "current": "Casi con toda seguridad no habría tiempo para grandes bailes en el nuevo reino de Kelsier, y tal vez no fuera mala cosa: ¿qué derecho tenía ella a bailar mientras los otros skaa (clase trabajadora) morían de hambre? el mundo perdería algo hermoso sin las mansiones y los bailarines, los vestidos y las fiestas. Suspiró, se apartó de la barandilla y se miró el vestido."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 2.\nAcción narrativa: Casi con toda seguridad no habría tiempo para grandes bailes en el nuevo reino de Kelsier, y tal vez no fuera mala cosa: ¿qué derecho tenía ella a bailar mientras los otros skaa (clase trabajadora) morían de hambre? el mundo perdería algo hermoso sin las mansiones y los bailarines, los vestidos y las fiestas. Suspiró, se apartó de la barandilla y se miró el vestido.\nPersonajes visibles: Kelsier, Ham.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 2.\nAcción narrativa: Casi con toda seguridad no habría tiempo para grandes bailes en el nuevo reino de Kelsier, y tal vez no fuera mala cosa: ¿qué derecho tenía ella a bailar mientras los otros skaa (clase trabajadora) morían de hambre? el mundo perdería algo hermoso sin las mansiones y los bailarines, los vestidos y las fiestas. Suspiró, se apartó de la barandilla y se miró el vestido.\nPersonajes visibles: Kelsier, Ham.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "status": "definitive",
+      "text": {
+        "original": "El de Venture es un torreón muy antiguo, y los pasadizos que conducen a las habitaciones de los lores son todo un laberinto. Entró en el pasillo y se internó en los oscuros pasadizos. Sin embargo, las palabras de Kliss pronto se revelaron ciertas: los oscuros corredores de piedra eran extraños y sin adornos.",
+        "current": "El de Venture es un torreón muy antiguo, y los pasadizos que conducen a las habitaciones de los lores son todo un laberinto. Entró en el pasillo y se internó en los oscuros pasadizos. Sin embargo, las palabras de Kliss pronto se revelaron ciertas: los oscuros corredores de piedra eran extraños y sin adornos."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 3.\nAcción narrativa: El de Venture es un torreón muy antiguo, y los pasadizos que conducen a las habitaciones de los lores son todo un laberinto. Entró en el pasillo y se internó en los oscuros pasadizos. Sin embargo, las palabras de Kliss pronto se revelaron ciertas: los oscuros corredores de piedra eran extraños y sin adornos.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 3.\nAcción narrativa: El de Venture es un torreón muy antiguo, y los pasadizos que conducen a las habitaciones de los lores son todo un laberinto. Entró en el pasillo y se internó en los oscuros pasadizos. Sin embargo, las palabras de Kliss pronto se revelaron ciertas: los oscuros corredores de piedra eran extraños y sin adornos.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "status": "definitive",
+      "text": {
+        "original": "Se lanzó hacia abajo: la muralla del Torreón de Venture apareció como una sombra oscura. Su anclaje era el peto de un desafortunado guardia de la muralla que se agarraba frenético a una de las almenas para no ser arrastrado hacia Vin. Esta chocó contra el hombre con los pies, luego giró en el aire brumoso, volviéndose para aterrizar en la fría piedra.",
+        "current": "Se lanzó hacia abajo: la muralla del Torreón de Venture apareció como una sombra oscura. Su anclaje era el peto de un desafortunado guardia de la muralla que se agarraba frenético a una de las almenas para no ser arrastrado hacia Vin. Esta chocó contra el hombre con los pies, luego giró en el aire brumoso, volviéndose para aterrizar en la fría piedra."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 4.\nAcción narrativa: Se lanzó hacia abajo: la muralla del Torreón de Venture apareció como una sombra oscura. Su anclaje era el peto de un desafortunado guardia de la muralla que se agarraba frenético a una de las almenas para no ser arrastrado hacia Vin. Esta chocó contra el hombre con los pies, luego giró en el aire brumoso, volviéndose para aterrizar en la fría piedra.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 4.\nAcción narrativa: Se lanzó hacia abajo: la muralla del Torreón de Venture apareció como una sombra oscura. Su anclaje era el peto de un desafortunado guardia de la muralla que se agarraba frenético a una de las almenas para no ser arrastrado hacia Vin. Esta chocó contra el hombre con los pies, luego giró en el aire brumoso, volviéndose para aterrizar en la fría piedra.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "status": "definitive",
+      "text": {
+        "original": "—Puede que quieras traerle también algo que ponerse —sugirió Kelsier—. Creo que al pobre Fantasma está a punto de darle un ataque al corazón. No es que enseñe mucho más que con alguna de la ropa de ladrona que he usado.",
+        "current": "—Puede que quieras traerle también algo que ponerse —sugirió Kelsier—. Creo que al pobre Fantasma está a punto de darle un ataque al corazón. No es que enseñe mucho más que con alguna de la ropa de ladrona que he usado."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 5.\nAcción narrativa: —Puede que quieras traerle también algo que ponerse —sugirió Kelsier—. Creo que al pobre Fantasma está a punto de darle un ataque al corazón. No es que enseñe mucho más que con alguna de la ropa de ladrona que he usado.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 5.\nAcción narrativa: —Puede que quieras traerle también algo que ponerse —sugirió Kelsier—. Creo que al pobre Fantasma está a punto de darle un ataque al corazón. No es que enseñe mucho más que con alguna de la ropa de ladrona que he usado.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "status": "definitive",
+      "text": {
+        "original": "Curiosamente, que mencionara la casa pareció molestar a Kelsier más que a ella. Los inquisidores os estaban esperando cuando llegasteis al centro del palacio, ¿no? —Tú y yo luchamos contra algunos guardias, hicimos algo de ruido.",
+        "current": "Curiosamente, que mencionara la casa pareció molestar a Kelsier más que a ella. Los inquisidores os estaban esperando cuando llegasteis al centro del palacio, ¿no? —Tú y yo luchamos contra algunos guardias, hicimos algo de ruido."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 6.\nAcción narrativa: Curiosamente, que mencionara la casa pareció molestar a Kelsier más que a ella. Los inquisidores os estaban esperando cuando llegasteis al centro del palacio, ¿no? —Tú y yo luchamos contra algunos guardias, hicimos algo de ruido.\nPersonajes visibles: Kelsier, Ham, Inquisidor.\nEntorno principal: Palacio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 6.\nAcción narrativa: Curiosamente, que mencionara la casa pareció molestar a Kelsier más que a ella. Los inquisidores os estaban esperando cuando llegasteis al centro del palacio, ¿no? —Tú y yo luchamos contra algunos guardias, hicimos algo de ruido.\nPersonajes visibles: Kelsier, Ham, Inquisidor.\nEntorno principal: Palacio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "status": "definitive",
+      "text": {
+        "original": "¿Por qué enviarían a uno de sus miembros a los bailes? Tengo suficientes hombres para enfrentarme a la banda entera. Llama a tus hombres y no cuentes a nadie lo que has visto esta noche.",
+        "current": "¿Por qué enviarían a uno de sus miembros a los bailes? Tengo suficientes hombres para enfrentarme a la banda entera. Llama a tus hombres y no cuentes a nadie lo que has visto esta noche."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 7.\nAcción narrativa: ¿Por qué enviarían a uno de sus miembros a los bailes? Tengo suficientes hombres para enfrentarme a la banda entera. Llama a tus hombres y no cuentes a nadie lo que has visto esta noche.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 7.\nAcción narrativa: ¿Por qué enviarían a uno de sus miembros a los bailes? Tengo suficientes hombres para enfrentarme a la banda entera. Llama a tus hombres y no cuentes a nadie lo que has visto esta noche.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "status": "definitive",
+      "text": {
+        "original": "Se dispuso a acostarse, pensando en la conversación. Quizá su padre tuviera razón en lo concerniente al tercer nacido de la bruma. Pero su padre gozaba de buena salud y era joven para tratarse de un lord con tanto poder.",
+        "current": "Se dispuso a acostarse, pensando en la conversación. Quizá su padre tuviera razón en lo concerniente al tercer nacido de la bruma. Pero su padre gozaba de buena salud y era joven para tratarse de un lord con tanto poder."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 8.\nAcción narrativa: Se dispuso a acostarse, pensando en la conversación. Quizá su padre tuviera razón en lo concerniente al tercer nacido de la bruma. Pero su padre gozaba de buena salud y era joven para tratarse de un lord con tanto poder.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 8.\nAcción narrativa: Se dispuso a acostarse, pensando en la conversación. Quizá su padre tuviera razón en lo concerniente al tercer nacido de la bruma. Pero su padre gozaba de buena salud y era joven para tratarse de un lord con tanto poder.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "status": "definitive",
+      "text": {
+        "original": "Sin embargo, a pesar del vacío de la noche en la ciudad, Vin se sentía cómoda. Ella se volvió hacia él, una figura alta y orgullosa vestida con una majestuosa capa de bruma. No sé si tu habilidad para ver a través de las nubes de cobre lo explica todo, pero...",
+        "current": "Sin embargo, a pesar del vacío de la noche en la ciudad, Vin se sentía cómoda. Ella se volvió hacia él, una figura alta y orgullosa vestida con una majestuosa capa de bruma. No sé si tu habilidad para ver a través de las nubes de cobre lo explica todo, pero..."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 9.\nAcción narrativa: Sin embargo, a pesar del vacío de la noche en la ciudad, Vin se sentía cómoda. Ella se volvió hacia él, una figura alta y orgullosa vestida con una majestuosa capa de bruma. No sé si tu habilidad para ver a través de las nubes de cobre lo explica todo, pero...\nPersonajes visibles: Vin.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 9.\nAcción narrativa: Sin embargo, a pesar del vacío de la noche en la ciudad, Vin se sentía cómoda. Ella se volvió hacia él, una figura alta y orgullosa vestida con una majestuosa capa de bruma. No sé si tu habilidad para ver a través de las nubes de cobre lo explica todo, pero...\nPersonajes visibles: Vin.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "status": "definitive",
+      "text": {
+        "original": "Vin la recogió mientras Kelsier llegaba a la ventana. Él se dio la vuelta, contempló la habitación una vez más y saltó a la noche. —Creo que los inquisidores sospechan de mí —leyó Dockson.",
+        "current": "Vin la recogió mientras Kelsier llegaba a la ventana. Él se dio la vuelta, miró la habitación una vez más y saltó a la noche. —Creo que los inquisidores sospechan de mí —leyó Dockson."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 10.\nAcción narrativa: Vin la recogió mientras Kelsier llegaba a la ventana. Él se dio la vuelta, miró la habitación una vez más y saltó a la noche. —Creo que los inquisidores sospechan de mí —leyó Dockson.\nPersonajes visibles: Vin, Kelsier, Dockson, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 10.\nAcción narrativa: Vin la recogió mientras Kelsier llegaba a la ventana. Él se dio la vuelta, miró la habitación una vez más y saltó a la noche. —Creo que los inquisidores sospechan de mí —leyó Dockson.\nPersonajes visibles: Vin, Kelsier, Dockson, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "status": "definitive",
+      "text": {
+        "original": "Los lazos de su envolvente capa negra revoloteaban a su alrededor mezclándose con las brumas mientras se volvía hacia Walin—. Kelsier estudió la oscura cicatriz en la roca mientras escuchaba cómo el prisionero se perdía en la distancia. Le ardían las cicatrices y los recuerdos regresaron.",
+        "current": "Los lazos de su envolvente capa negra revoloteaban a su alrededor mezclándose con las brumas mientras se volvía hacia Walin—. Kelsier estudió la oscura cicatriz en la roca mientras escuchaba cómo el prisionero se perdía en la distancia. Le ardían las cicatrices y los recuerdos regresaron."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 11.\nAcción narrativa: Los lazos de su envolvente capa negra revoloteaban a su alrededor mezclándose con las brumas mientras se volvía hacia Walin—. Kelsier estudió la oscura cicatriz en la roca mientras escuchaba cómo el prisionero se perdía en la distancia. Le ardían las cicatrices y los recuerdos regresaron.\nPersonajes visibles: Kelsier.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 11.\nAcción narrativa: Los lazos de su envolvente capa negra revoloteaban a su alrededor mezclándose con las brumas mientras se volvía hacia Walin—. Kelsier estudió la oscura cicatriz en la roca mientras escuchaba cómo el prisionero se perdía en la distancia. Le ardían las cicatrices y los recuerdos regresaron.\nPersonajes visibles: Kelsier.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "status": "definitive",
+      "text": {
+        "original": "Rompí los cristales que producen las geodas de atium. Fue mucho más fácil moverme por allí abajo, ahora que domino la alomancia. Producen las geodas (no creo que nadie sepa cómo) que tienen perlas de atium en su interior.",
+        "current": "Rompí los cristales que producen las geodas de atium. Fue mucho más fácil moverme por allí abajo, ahora que domino la alomancia (magia de metales). Producen las geodas (no creo que nadie sepa cómo) que tienen perlas de atium en su interior."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 12.\nAcción narrativa: Rompí los cristales que producen las geodas de atium. Fue mucho más fácil moverme por allí abajo, ahora que domino la alomancia (magia de metales). Producen las geodas (no creo que nadie sepa cómo) que tienen perlas de atium en su interior.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 12.\nAcción narrativa: Rompí los cristales que producen las geodas de atium. Fue mucho más fácil moverme por allí abajo, ahora que domino la alomancia (magia de metales). Producen las geodas (no creo que nadie sepa cómo) que tienen perlas de atium en su interior.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "status": "definitive",
+      "text": {
+        "original": "Te dejé detenerme una vez antes, en la colina, junto al campo de batalla. —Todavía tienes que aprender algunas cosas sobre la amistad, Vin. Ham adelantó a Vin, corriendo en una dirección distinta, abriéndose paso entre los skaa que confluían hacia la plaza.",
+        "current": "Te dejé detenerme una vez antes, en la colina, junto al campo de batalla. —Todavía tienes que aprender algunas cosas sobre la amistad, Vin. Ham adelantó a Vin, corriendo en una dirección distinta, abriéndose paso entre los skaa que confluían hacia la plaza."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 13.\nAcción narrativa: Te dejé detenerme una vez antes, en la colina, junto al campo de batalla. —Todavía tienes que aprender algunas cosas sobre la amistad, Vin. Ham adelantó a Vin, corriendo en una dirección distinta, abriéndose paso entre los skaa que confluían hacia la plaza.\nPersonajes visibles: Vin, Ham.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 13.\nAcción narrativa: Te dejé detenerme una vez antes, en la colina, junto al campo de batalla. —Todavía tienes que aprender algunas cosas sobre la amistad, Vin. Ham adelantó a Vin, corriendo en una dirección distinta, abriéndose paso entre los skaa que confluían hacia la plaza.\nPersonajes visibles: Vin, Ham.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "status": "definitive",
+      "text": {
+        "original": "Los metales ardieron en su pecho, junto a su furia. Kelsier se detuvo a unos pocos pasos del inquisidor. Con los puños cerrados, avivó su acero en un enorme empujón.",
+        "current": "Los metales ardieron en su pecho, junto a su furia. Kelsier se detuvo a unos pocos pasos del inquisidor. Con los puños cerrados, avivó su acero en un enorme empujón."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 14.\nAcción narrativa: Los metales ardieron en su pecho, junto a su furia. Kelsier se detuvo a unos pocos pasos del inquisidor. Con los puños cerrados, avivó su acero en un enorme empujón.\nPersonajes visibles: Kelsier, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 14.\nAcción narrativa: Los metales ardieron en su pecho, junto a su furia. Kelsier se detuvo a unos pocos pasos del inquisidor. Con los puños cerrados, avivó su acero en un enorme empujón.\nPersonajes visibles: Kelsier, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "status": "definitive",
+      "text": {
+        "original": "—exigió saber Elend Venture; su voz desesperada llegó a los sentidos amplificados por el estaño de Kelsier—. Chaval, estás empezando a molestarme de verdad, pensó Kelsier, empujándose a través de los soldados que corrían hacia el carro. El inquisidor apareció, saltando detrás de un grupo de soldados.",
+        "current": "—exigió saber Elend Venture; su voz desesperada llegó a los sentidos amplificados por el estaño de Kelsier—. Chaval, estás empezando a molestarme de verdad, pensó Kelsier, empujándose a través de los soldados que corrían hacia el carro. El inquisidor apareció, saltando detrás de un grupo de soldados."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 15.\nAcción narrativa: —exigió saber Elend Venture; su voz desesperada llegó a los sentidos amplificados por el estaño de Kelsier—. Chaval, estás empezando a molestarme de verdad, pensó Kelsier, empujándose a través de los soldados que corrían hacia el carro. El inquisidor apareció, saltando detrás de un grupo de soldados.\nPersonajes visibles: Kelsier, Elend, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 15.\nAcción narrativa: —exigió saber Elend Venture; su voz desesperada llegó a los sentidos amplificados por el estaño de Kelsier—. Chaval, estás empezando a molestarme de verdad, pensó Kelsier, empujándose a través de los soldados que corrían hacia el carro. El inquisidor apareció, saltando detrás de un grupo de soldados.\nPersonajes visibles: Kelsier, Elend, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "status": "definitive",
+      "text": {
+        "original": "Se lanzó hacia delante, hacia el desorientado inquisidor, y empuñó una piedra suelta del suelo. La criatura se volvió hacia él y Kelsier gritó, descargando un golpe con la piedra, su fuerza aumentada aún más por la furia y el peltre. La cabeza de la criatura se echó hacia atrás y chocó contra el fondo del carro volcado.",
+        "current": "Se lanzó hacia delante, hacia el desorientado inquisidor, y empuñó una piedra suelta del suelo. La criatura se volvió hacia él y Kelsier gritó, descargando un golpe con la piedra, su fuerza aumentada aún más por la furia y el peltre. La cabeza de la criatura se echó hacia atrás y chocó contra el fondo del carro volcado."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 16.\nAcción narrativa: Se lanzó hacia delante, hacia el desorientado inquisidor, y empuñó una piedra suelta del suelo. La criatura se volvió hacia él y Kelsier gritó, descargando un golpe con la piedra, su fuerza aumentada aún más por la furia y el peltre. La cabeza de la criatura se echó hacia atrás y chocó contra el fondo del carro volcado.\nPersonajes visibles: Kelsier, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'La ciudad al borde', página 16.\nAcción narrativa: Se lanzó hacia delante, hacia el desorientado inquisidor, y empuñó una piedra suelta del suelo. La criatura se volvió hacia él y Kelsier gritó, descargando un golpe con la piedra, su fuerza aumentada aún más por la furia y el peltre. La cabeza de la criatura se echó hacia atrás y chocó contra el fondo del carro volcado.\nPersonajes visibles: Kelsier, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    }
+  ]
+}

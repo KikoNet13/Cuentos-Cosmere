@@ -1,0 +1,353 @@
+{
+  "schema_version": "1.1",
+  "story_id": "08",
+  "title": "El amanecer del cambio",
+  "story_title": "El amanecer del cambio",
+  "status": "definitive",
+  "book_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final-codex",
+  "created_at": "2026-02-17T12:08:42.846937+00:00",
+  "updated_at": "2026-02-17T12:08:42.846937+00:00",
+  "cover": {
+    "status": "draft",
+    "prompt": {
+      "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nPortada del cuento 'El amanecer del cambio'.\nIdea central: Para trabajar conmigo, había dicho Kelsier, solo os pido que me prometáis una cosa: confiad en mí. Confiaste lo suficiente para saltar de la muralla y te sostuve. Flotaba, el estaño apagado para ver mejor las brumas.\nEscena icónica con protagonistas en movimiento sobre un fondo reconocible del Imperio Final.\nComposición de portada: personaje principal en primer plano, secundario de apoyo, paisaje de bruma al fondo.\nColor: base gris ceniza, acentos rojo oscuro y azul metálico para elementos de magia.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+      "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nPortada del cuento 'El amanecer del cambio'.\nIdea central: Para trabajar conmigo, había dicho Kelsier, solo os pido que me prometáis una cosa: confiad en mí. Confiaste lo suficiente para saltar de la muralla y te sostuve. Flotaba, el estaño apagado para ver mejor las brumas.\nEscena icónica con protagonistas en movimiento sobre un fondo reconocible del Imperio Final.\nComposición de portada: personaje principal en primer plano, secundario de apoyo, paisaje de bruma al fondo.\nColor: base gris ceniza, acentos rojo oscuro y azul metálico para elementos de magia.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+    },
+    "asset_rel_path": "",
+    "notes": "Portada pendiente de generación con imagegen."
+  },
+  "source_refs": {
+    "proposal_md_rel_path": "",
+    "reference_pdf_rel_path": "library/_inbox/El imperio final.pdf",
+    "inbox_book_title": "El imperio final"
+  },
+  "ingest_meta": {
+    "phase": "initial_ingest",
+    "target_age": 9,
+    "generated_at": "2026-02-17T12:08:42.846937+00:00",
+    "generated_by": "adaptacion-ingesta-inicial",
+    "semantic_mode": "codex_chat"
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "status": "definitive",
+      "text": {
+        "original": "Para trabajar conmigo, había dicho Kelsier, solo os pido que me prometáis una cosa: confiad en mí. Confiaste lo suficiente para saltar de la muralla y te sostuve. Flotaba, el estaño apagado para ver mejor las brumas.",
+        "current": "Para trabajar conmigo, había dicho Kelsier, solo os pido que me prometáis una cosa: confiad en mí. Confiaste lo suficiente para saltar de la muralla y te sostuve. Flotaba, el estaño apagado para ver mejor las brumas."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 1.\nAcción narrativa: Para trabajar conmigo, había dicho Kelsier, solo os pido que me prometáis una cosa: confiad en mí. Confiaste lo suficiente para saltar de la muralla y te sostuve. Flotaba, el estaño apagado para ver mejor las brumas.\nPersonajes visibles: Kelsier.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 1.\nAcción narrativa: Para trabajar conmigo, había dicho Kelsier, solo os pido que me prometáis una cosa: confiad en mí. Confiaste lo suficiente para saltar de la muralla y te sostuve. Flotaba, el estaño apagado para ver mejor las brumas.\nPersonajes visibles: Kelsier.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "status": "definitive",
+      "text": {
+        "original": "—Os equivocáis —dijo una voz que resonó en el cavernoso almacén—. El grupo dio un respingo y Vin avivó sus metales... Una figura se movió al fondo del almacén, permaneciendo en las sombras.",
+        "current": "—Os equivocáis —dijo una voz que resonó en el cavernoso almacén—. El grupo dio un respingo y Vin avivó sus metales... Una figura se movió al fondo del almacén, permaneciendo en las sombras."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 2.\nAcción narrativa: —Os equivocáis —dijo una voz que resonó en el cavernoso almacén—. El grupo dio un respingo y Vin avivó sus metales... Una figura se movió al fondo del almacén, permaneciendo en las sombras.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 2.\nAcción narrativa: —Os equivocáis —dijo una voz que resonó en el cavernoso almacén—. El grupo dio un respingo y Vin avivó sus metales... Una figura se movió al fondo del almacén, permaneciendo en las sombras.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "status": "definitive",
+      "text": {
+        "original": "Los hombres empezaron a ponerse en cola y a recoger armas. —A veces solo tenemos que esperar el tiempo suficiente, señora —dijo—. Hay un dicho al que maese Kelsier era muy aficionado.",
+        "current": "Los hombres empezaron a ponerse en cola y a recoger armas. —A veces solo tenemos que esperar el tiempo suficiente, señora —dijo—. Hay un dicho al que maese Kelsier era muy aficionado."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 3.\nAcción narrativa: Los hombres empezaron a ponerse en cola y a recoger armas. —A veces solo tenemos que esperar el tiempo suficiente, señora —dijo—. Hay un dicho al que maese Kelsier era muy aficionado.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 3.\nAcción narrativa: Los hombres empezaron a ponerse en cola y a recoger armas. —A veces solo tenemos que esperar el tiempo suficiente, señora —dijo—. Hay un dicho al que maese Kelsier era muy aficionado.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "status": "definitive",
+      "text": {
+        "original": "No se volvió para seguir combatiendo con ninguno de los dos, no con los problemas que una de las criaturas le había creado a Kelsier. Su objetivo en esa incursión no era matar, sino recopilar información y huir. Vin irrumpió en el edificio dentro del edificio, casi tropezando con una alfombra de alguna piel exótica.",
+        "current": "No se volvió para seguir combatiendo con ninguno de los dos, no con los problemas que una de las criaturas le había creado a Kelsier. Su objetivo en esa incursión no era matar, sino recopilar información y huir. Vin irrumpió en el edificio dentro del edificio, casi tropezando con una alfombra de alguna piel exótica."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 4.\nAcción narrativa: No se volvió para seguir combatiendo con ninguno de los dos, no con los problemas que una de las criaturas le había creado a Kelsier. Su objetivo en esa incursión no era matar, sino recopilar información y huir. Vin irrumpió en el edificio dentro del edificio, casi tropezando con una alfombra de alguna piel exótica.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 4.\nAcción narrativa: No se volvió para seguir combatiendo con ninguno de los dos, no con los problemas que una de las criaturas le había creado a Kelsier. Su objetivo en esa incursión no era matar, sino recopilar información y huir. Vin irrumpió en el edificio dentro del edificio, casi tropezando con una alfombra de alguna piel exótica.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "status": "definitive",
+      "text": {
+        "original": "Elend se acercó a la puerta abierta y contempló el caos. El vestíbulo permaneció en silencio tras él, mientras la gente aterrorizada advertía la magnitud del peligro que corría. No dejes a nadie atrás, y luego marchad hacia el Torreón de Lekal.",
+        "current": "Elend se acercó a la puerta abierta y miró el caos. El vestíbulo permaneció en silencio tras él, mientras la gente aterrorizada advertía la magnitud del peligro que corría. No dejes a nadie atrás, y luego marchad hacia el Torreón de Lekal."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 5.\nAcción narrativa: Elend se acercó a la puerta abierta y miró el caos. El vestíbulo permaneció en silencio tras él, mientras la gente aterrorizada advertía la magnitud del peligro que corría. No dejes a nadie atrás, y luego marchad hacia el Torreón de Lekal.\nPersonajes visibles: Elend.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 5.\nAcción narrativa: Elend se acercó a la puerta abierta y miró el caos. El vestíbulo permaneció en silencio tras él, mientras la gente aterrorizada advertía la magnitud del peligro que corría. No dejes a nadie atrás, y luego marchad hacia el Torreón de Lekal.\nPersonajes visibles: Elend.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "status": "definitive",
+      "text": {
+        "original": "Su cara quedaba en sombras, pero las cabezas de los clavos sobresalían. Otro inquisidor esperaba en la puerta mientras la primera criatura sacaba un manojo de llaves y se disponía a abrir la jaula de Vin. La puerta chasqueó y se puso en pie de un salto, abalanzándose hacia delante.",
+        "current": "Su cara quedaba en sombras, pero las cabezas de los clavos sobresalían. Otro inquisidor esperaba en la puerta mientras la primera criatura sacaba un manojo de llaves y se disponía a abrir la jaula de Vin. La puerta chasqueó y se puso en pie de un salto, abalanzándose hacia delante."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 6.\nAcción narrativa: Su cara quedaba en sombras, pero las cabezas de los clavos sobresalían. Otro inquisidor esperaba en la puerta mientras la primera criatura sacaba un manojo de llaves y se disponía a abrir la jaula de Vin. La puerta chasqueó y se puso en pie de un salto, abalanzándose hacia delante.\nPersonajes visibles: Vin, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 6.\nAcción narrativa: Su cara quedaba en sombras, pero las cabezas de los clavos sobresalían. Otro inquisidor esperaba en la puerta mientras la primera criatura sacaba un manojo de llaves y se disponía a abrir la jaula de Vin. La puerta chasqueó y se puso en pie de un salto, abalanzándose hacia delante.\nPersonajes visibles: Vin, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "status": "definitive",
+      "text": {
+        "original": "El sumo prelado vaciló, el ceño cada vez más fruncido. El lord Legislador se levantó despacio y bajó los escalones de su tarima para dirigirse a Vin. ¿Qué casa noble habría abandonado a una criatura semejante?",
+        "current": "El sumo prelado vaciló, el ceño cada vez más fruncido. El Lord Legislador (emperador) se levantó despacio y bajó los escalones de su tarima para dirigirse a Vin. ¿Qué casa noble habría abandonado a una criatura semejante?"
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 7.\nAcción narrativa: El sumo prelado vaciló, el ceño cada vez más fruncido. El Lord Legislador (emperador) se levantó despacio y bajó los escalones de su tarima para dirigirse a Vin. ¿Qué casa noble habría abandonado a una criatura semejante?\nPersonajes visibles: Vin, Lord Legislador.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 7.\nAcción narrativa: El sumo prelado vaciló, el ceño cada vez más fruncido. El Lord Legislador (emperador) se levantó despacio y bajó los escalones de su tarima para dirigirse a Vin. ¿Qué casa noble habría abandonado a una criatura semejante?\nPersonajes visibles: Vin, Lord Legislador.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "status": "definitive",
+      "text": {
+        "original": "—Mira, retiraré a nuestros hombres del Torreón de Venture. Lo más probable es que no haya ninguna necesidad de luchar ahora que... —He enviado a mis soldados al Torreón de Lekal —lo interrumpió Elend—.",
+        "current": "—Mira, retiraré a nuestros hombres del Torreón de Venture. Lo más probable es que no haya ninguna necesidad de luchar ahora que... —He enviado a mis soldados al Torreón de Lekal —lo interrumpió Elend—."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 8.\nAcción narrativa: —Mira, retiraré a nuestros hombres del Torreón de Venture. Lo más probable es que no haya ninguna necesidad de luchar ahora que... —He enviado a mis soldados al Torreón de Lekal —lo interrumpió Elend—.\nPersonajes visibles: Elend.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 8.\nAcción narrativa: —Mira, retiraré a nuestros hombres del Torreón de Venture. Lo más probable es que no haya ninguna necesidad de luchar ahora que... —He enviado a mis soldados al Torreón de Lekal —lo interrumpió Elend—.\nPersonajes visibles: Elend.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "status": "definitive",
+      "text": {
+        "original": "Avanzó con paso torpe y los guardias echaron a correr gritando en busca de ayuda. Mi fuerza no durará mucho: el metal que tragué no era bastante para contener mucha carga feruquímica. La sala de guardia era bastante pequeña, con solo un par de sillas.",
+        "current": "Avanzó con paso torpe y los guardias echaron a correr gritando en busca de ayuda. Mi fuerza no durará mucho: el metal que tragué no era bastante para contener mucha carga feruquímica. La sala de guardia era bastante pequeña, con solo un par de sillas."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 9.\nAcción narrativa: Avanzó con paso torpe y los guardias echaron a correr gritando en busca de ayuda. Mi fuerza no durará mucho: el metal que tragué no era bastante para contener mucha carga feruquímica. La sala de guardia era bastante pequeña, con solo un par de sillas.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 9.\nAcción narrativa: Avanzó con paso torpe y los guardias echaron a correr gritando en busca de ayuda. Mi fuerza no durará mucho: el metal que tragué no era bastante para contener mucha carga feruquímica. La sala de guardia era bastante pequeña, con solo un par de sillas.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "status": "definitive",
+      "text": {
+        "original": "Quiero decir, normalmente es un gesto de cortesía contarles a los amigos ese tipo de cosas. —Está en el suelo, por ahí —contestó ella, mirándolo—. —Tu amigo, un tal maese Dockson, me ha dicho que te habían capturado en el palacio.",
+        "current": "Quiero decir, normalmente es un gesto de cortesía contarles a los amigos ese tipo de cosas. —Está en el suelo, por ahí —contestó ella, mirándolo—. —Tu amigo, un tal maese Dockson, me ha dicho que te habían capturado en el palacio."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 10.\nAcción narrativa: Quiero decir, normalmente es un gesto de cortesía contarles a los amigos ese tipo de cosas. —Está en el suelo, por ahí —contestó ella, mirándolo—. —Tu amigo, un tal maese Dockson, me ha dicho que te habían capturado en el palacio.\nPersonajes visibles: Dockson.\nEntorno principal: Palacio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 10.\nAcción narrativa: Quiero decir, normalmente es un gesto de cortesía contarles a los amigos ese tipo de cosas. —Está en el suelo, por ahí —contestó ella, mirándolo—. —Tu amigo, un tal maese Dockson, me ha dicho que te habían capturado en el palacio.\nPersonajes visibles: Dockson.\nEntorno principal: Palacio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "status": "definitive",
+      "text": {
+        "original": "Luego se abalanzó directamente hacia el lord Legislador. El yo-pasado del lord Legislador apareció igual que había hecho antes, como surgido de la bruma, para situarse en la tarima junto al trono. La criatura, por fortuna, reaccionó despacio y ella ya había recorrido la mitad del camino que la separaba de la tarima antes de que acertara a perseguirla.",
+        "current": "Luego se abalanzó directamente hacia el Lord Legislador. El yo-pasado del Lord Legislador apareció igual que había hecho antes, como surgido de la bruma, para situarse en la tarima junto al trono. La criatura, por fortuna, reaccionó despacio y ella ya había recorrido la mitad del camino que la separaba de la tarima antes de que acertara a perseguirla."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 11.\nAcción narrativa: Luego se abalanzó directamente hacia el Lord Legislador. El yo-pasado del Lord Legislador apareció igual que había hecho antes, como surgido de la bruma, para situarse en la tarima junto al trono. La criatura, por fortuna, reaccionó despacio y ella ya había recorrido la mitad del camino que la separaba de la tarima antes de que acertara a perseguirla.\nPersonajes visibles: Lord Legislador.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 11.\nAcción narrativa: Luego se abalanzó directamente hacia el Lord Legislador. El yo-pasado del Lord Legislador apareció igual que había hecho antes, como surgido de la bruma, para situarse en la tarima junto al trono. La criatura, por fortuna, reaccionó despacio y ella ya había recorrido la mitad del camino que la separaba de la tarima antes de que acertara a perseguirla.\nPersonajes visibles: Lord Legislador.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "status": "definitive",
+      "text": {
+        "original": "Kelsier le había asegurado que ningún alomántico podía influir en los metales que estuvieran en el cuerpo de nadie. Pero también había dicho que ningún alomántico era capaz de influir en las emociones de una persona que estuviera quemando cobre. Las monedas arrojadas antes volaron por el suelo, alejándose del lord Legislador.",
+        "current": "Kelsier le había asegurado que ningún alomántico podía influir en los metales que estuvieran en el cuerpo de nadie. Pero también había dicho que ningún alomántico era capaz de influir en las emociones de una persona que estuviera quemando cobre. Las monedas arrojadas antes volaron por el suelo, alejándose del Lord Legislador."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 12.\nAcción narrativa: Kelsier le había asegurado que ningún alomántico podía influir en los metales que estuvieran en el cuerpo de nadie. Pero también había dicho que ningún alomántico era capaz de influir en las emociones de una persona que estuviera quemando cobre. Las monedas arrojadas antes volaron por el suelo, alejándose del Lord Legislador.\nPersonajes visibles: Kelsier, Lord Legislador.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 12.\nAcción narrativa: Kelsier le había asegurado que ningún alomántico podía influir en los metales que estuvieran en el cuerpo de nadie. Pero también había dicho que ningún alomántico era capaz de influir en las emociones de una persona que estuviera quemando cobre. Las monedas arrojadas antes volaron por el suelo, alejándose del Lord Legislador.\nPersonajes visibles: Kelsier, Lord Legislador.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "status": "definitive",
+      "text": {
+        "original": "Si él podía influir en los metales que estaban dentro del cuerpo de una persona, entonces ella también. Aparecieron líneas azules apuntando a los anillos y brazaletes del lord Legislador: a todos menos a los de sus antebrazos, los que le perforaban la piel. Vin quemó hierro concentrándose, empujando tan fuerte como pudo.",
+        "current": "Si él podía influir en los metales que estaban dentro del cuerpo de una persona, entonces ella también. Aparecieron líneas azules apuntando a los anillos y brazaletes del Lord Legislador: a todos menos a los de sus antebrazos, los que le perforaban la piel. Vin quemó hierro concentrándose, empujando tan fuerte como pudo."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 13.\nAcción narrativa: Si él podía influir en los metales que estaban dentro del cuerpo de una persona, entonces ella también. Aparecieron líneas azules apuntando a los anillos y brazaletes del Lord Legislador: a todos menos a los de sus antebrazos, los que le perforaban la piel. Vin quemó hierro concentrándose, empujando tan fuerte como pudo.\nPersonajes visibles: Vin, Lord Legislador.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 13.\nAcción narrativa: Si él podía influir en los metales que estaban dentro del cuerpo de una persona, entonces ella también. Aparecieron líneas azules apuntando a los anillos y brazaletes del Lord Legislador: a todos menos a los de sus antebrazos, los que le perforaban la piel. Vin quemó hierro concentrándose, empujando tan fuerte como pudo.\nPersonajes visibles: Vin, Lord Legislador.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "status": "definitive",
+      "text": {
+        "original": "Aparte de eso, sin embargo, nadie le ha visto mucha utilidad. Sin embargo, si el feruquimista fuera también alomántico, podría quemar sus propios recursos de metal, liberando la energía interior multiplicada diez veces. Vin ya trató de quemar algunos de mis metales, pero no pudo acceder al poder.",
+        "current": "Aparte de eso, sin embargo, nadie le ha visto mucha utilidad. Sin embargo, si el feruquimista fuera también alomántico, podría quemar sus propios recursos de metal, liberando la energía interior multiplicada diez veces. Vin ya trató de quemar algunos de mis metales, pero no pudo acceder al poder."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 14.\nAcción narrativa: Aparte de eso, sin embargo, nadie le ha visto mucha utilidad. Sin embargo, si el feruquimista fuera también alomántico, podría quemar sus propios recursos de metal, liberando la energía interior multiplicada diez veces. Vin ya trató de quemar algunos de mis metales, pero no pudo acceder al poder.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 14.\nAcción narrativa: Aparte de eso, sin embargo, nadie le ha visto mucha utilidad. Sin embargo, si el feruquimista fuera también alomántico, podría quemar sus propios recursos de metal, liberando la energía interior multiplicada diez veces. Vin ya trató de quemar algunos de mis metales, pero no pudo acceder al poder.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "status": "definitive",
+      "text": {
+        "original": "Me temo que incluso los guardadores sabemos poco de ellos. Están relacionados con los espectros de la bruma..., tal vez incluso sean las mismas criaturas, pero más viejas. A causa de su reputación, generalmente prefieren no ser vistos...",
+        "current": "Me temo que incluso los guardadores sabemos poco de ellos. Están relacionados con los espectros de la bruma..., tal vez incluso sean las mismas criaturas, pero más viejas. A causa de su reputación, generalmente prefieren no ser vistos..."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 15.\nAcción narrativa: Me temo que incluso los guardadores sabemos poco de ellos. Están relacionados con los espectros de la bruma..., tal vez incluso sean las mismas criaturas, pero más viejas. A causa de su reputación, generalmente prefieren no ser vistos...\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 15.\nAcción narrativa: Me temo que incluso los guardadores sabemos poco de ellos. Están relacionados con los espectros de la bruma..., tal vez incluso sean las mismas criaturas, pero más viejas. A causa de su reputación, generalmente prefieren no ser vistos...\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "status": "definitive",
+      "text": {
+        "original": "Soy la niña que creció en las sombras, la niña que debería estar sola. En realidad, nunca había sido una noble muy buena. Había llegado la hora de volver a ser aquello en lo que era buena.",
+        "current": "Soy la niña que creció en las sombras, la niña que debería estar sola. En realidad, nunca había sido una noble muy buena. Había llegado la hora de volver a ser aquello en lo que era buena."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 16.\nAcción narrativa: Soy la niña que creció en las sombras, la niña que debería estar sola. En realidad, nunca había sido una noble muy buena. Había llegado la hora de volver a ser aquello en lo que era buena.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El amanecer del cambio', página 16.\nAcción narrativa: Soy la niña que creció en las sombras, la niña que debería estar sola. En realidad, nunca había sido una noble muy buena. Había llegado la hora de volver a ser aquello en lo que era buena.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    }
+  ]
+}

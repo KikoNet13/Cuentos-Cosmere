@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.1",
+  "story_id": "01",
+  "story_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final-codex/01",
+  "generated_at": "2026-02-17T12:08:42.846937+00:00",
+  "review_mode": "canonical_pdf_only",
+  "canon_source": {
+    "reference_pdf_rel_path": "library/_inbox/El imperio final.pdf",
+    "chapter_range": {
+      "from": 1,
+      "to": 5
+    }
+  },
+  "summary": {
+    "critical": 0,
+    "major": 0,
+    "minor": 3,
+    "info": 1
+  },
+  "metrics": {
+    "pages": 16,
+    "issues_total": 4,
+    "detectors": {
+      "age.too_complex": 3,
+      "canon.quote_loss": 1
+    }
+  },
+  "issues": [
+    {
+      "issue_id": "01-001",
+      "severity": "minor",
+      "category": "age.too_complex",
+      "page_number": 4,
+      "evidence": "Texto denso para audiencia 5-12: avg_sentence_length=22.667, long_word_ratio=0.0588",
+      "suggested_action": "Simplificar una oración y reducir palabras largas en la página.",
+      "status": "open",
+      "detector": "age.readability",
+      "confidence": 0.67
+    },
+    {
+      "issue_id": "01-002",
+      "severity": "minor",
+      "category": "age.too_complex",
+      "page_number": 15,
+      "evidence": "Texto denso para audiencia 5-12: avg_sentence_length=22.667, long_word_ratio=0.0441",
+      "suggested_action": "Simplificar una oración y reducir palabras largas en la página.",
+      "status": "open",
+      "detector": "age.readability",
+      "confidence": 0.67
+    },
+    {
+      "issue_id": "01-003",
+      "severity": "minor",
+      "category": "age.too_complex",
+      "page_number": 16,
+      "evidence": "Texto denso para audiencia 5-12: avg_sentence_length=21.667, long_word_ratio=0.0769",
+      "suggested_action": "Simplificar una oración y reducir palabras largas en la página.",
+      "status": "open",
+      "detector": "age.readability",
+      "confidence": 0.67
+    },
+    {
+      "issue_id": "01-004",
+      "severity": "info",
+      "category": "canon.quote_loss",
+      "page_number": 1,
+      "evidence": "Cuento generado desde capítulos 1-5 del PDF canónico único.",
+      "suggested_action": "No aplicar cambios sin contrastar con el mismo rango de capítulos del PDF fuente.",
+      "status": "confirmed",
+      "detector": "canon.chapter_range_binding",
+      "confidence": 0.99
+    }
+  ]
+}

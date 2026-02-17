@@ -5,6 +5,19 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [17/02/26] - Experimento de adaptacion completa desde PDF unico a version `-codex`
+
+- Fuente canonica unica: `library/_inbox/El imperio final.pdf` (sin uso de internet).
+- Segmentacion fija aplicada a 8 cuentos (`01..08`) con 16 paginas por cuento.
+- Publicados `NN.json` con `status=definitive` en:
+  - `library/cosmere/nacidos-de-la-bruma-era-1/el-imperio-final-codex/`
+- Publicados sidecars por libro/cuento:
+  - `adaptation_context.json`
+  - `NN.issues.json`
+  - `visual_bible.json` (nuevo sidecar de preparacion visual para imagegen).
+- Prompts visuales detallados por pagina con continuidad de personajes, localizaciones y restricciones negativas.
+- Tarea: `docs/tasks/TAREA-022-experimento-adaptacion-completa-pdf-unico-codex.md`.
+
 ## [17/02/26] - Skill de ingesta inicial 100% conversacional (sin scripts)
 
 - Refactor de `.codex/skills/adaptacion-ingesta-inicial` a ejecucion en chat sin CLI ni `scripts/`.

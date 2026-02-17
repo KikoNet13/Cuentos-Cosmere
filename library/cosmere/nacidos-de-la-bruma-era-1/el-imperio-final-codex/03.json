@@ -1,0 +1,353 @@
+{
+  "schema_version": "1.1",
+  "story_id": "03",
+  "title": "Sombras sobre Luthadel",
+  "story_title": "Sombras sobre Luthadel",
+  "status": "definitive",
+  "book_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final-codex",
+  "created_at": "2026-02-17T12:08:42.846937+00:00",
+  "updated_at": "2026-02-17T12:08:42.846937+00:00",
+  "cover": {
+    "status": "draft",
+    "prompt": {
+      "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nPortada del cuento 'Sombras sobre Luthadel'.\nIdea central: Kelsier se detuvo en la puerta, tapándole la vista a Vin. Ella intentó ponerse de puntillas para ver la guarida, pero había demasiada gente en medio. Solo vio que la puerta colgaba torcida, astillada, arrancada del gozne superior.\nEscena icónica con protagonistas en movimiento sobre un fondo reconocible del Imperio Final.\nComposición de portada: personaje principal en primer plano, secundario de apoyo, paisaje de bruma al fondo.\nColor: base gris ceniza, acentos rojo oscuro y azul metálico para elementos de magia.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+      "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nPortada del cuento 'Sombras sobre Luthadel'.\nIdea central: Kelsier se detuvo en la puerta, tapándole la vista a Vin. Ella intentó ponerse de puntillas para ver la guarida, pero había demasiada gente en medio. Solo vio que la puerta colgaba torcida, astillada, arrancada del gozne superior.\nEscena icónica con protagonistas en movimiento sobre un fondo reconocible del Imperio Final.\nComposición de portada: personaje principal en primer plano, secundario de apoyo, paisaje de bruma al fondo.\nColor: base gris ceniza, acentos rojo oscuro y azul metálico para elementos de magia.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+    },
+    "asset_rel_path": "",
+    "notes": "Portada pendiente de generación con imagegen."
+  },
+  "source_refs": {
+    "proposal_md_rel_path": "",
+    "reference_pdf_rel_path": "library/_inbox/El imperio final.pdf",
+    "inbox_book_title": "El imperio final"
+  },
+  "ingest_meta": {
+    "phase": "initial_ingest",
+    "target_age": 9,
+    "generated_at": "2026-02-17T12:08:42.846937+00:00",
+    "generated_by": "adaptacion-ingesta-inicial",
+    "semantic_mode": "codex_chat"
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "status": "definitive",
+      "text": {
+        "original": "Kelsier se detuvo en la puerta, tapándole la vista a Vin. Ella intentó ponerse de puntillas para ver la guarida, pero había demasiada gente en medio. Solo vio que la puerta colgaba torcida, astillada, arrancada del gozne superior.",
+        "current": "Kelsier se detuvo en la puerta, tapándole la vista a Vin. Ella intentó ponerse de puntillas para ver la guarida, pero había demasiada gente en medio. Solo vio que la puerta colgaba torcida, astillada, arrancada del gozne superior."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 1.\nAcción narrativa: Kelsier se detuvo en la puerta, tapándole la vista a Vin. Ella intentó ponerse de puntillas para ver la guarida, pero había demasiada gente en medio. Solo vio que la puerta colgaba torcida, astillada, arrancada del gozne superior.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 1.\nAcción narrativa: Kelsier se detuvo en la puerta, tapándole la vista a Vin. Ella intentó ponerse de puntillas para ver la guarida, pero había demasiada gente en medio. Solo vio que la puerta colgaba torcida, astillada, arrancada del gozne superior.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "status": "definitive",
+      "text": {
+        "original": "Al cabo de un rato, dejó de hablar, inclinó la cabeza y cerró los ojos. Pretende despertar a los espíritus de los muertos y liberarlos de su carne para que puedan regresar a la montaña de las almas. Puedo enseñarte esa religión, si lo deseas, señora.",
+        "current": "Al cabo de un rato, dejó de hablar, inclinó la cabeza y cerró los ojos. Pretende despertar a los espíritus de los muertos y liberarlos de su carne para que puedan regresar a la montaña de las almas. Puedo enseñarte esa religión, si lo deseas, señora."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 2.\nAcción narrativa: Al cabo de un rato, dejó de hablar, inclinó la cabeza y cerró los ojos. Pretende despertar a los espíritus de los muertos y liberarlos de su carne para que puedan regresar a la montaña de las almas. Puedo enseñarte esa religión, si lo deseas, señora.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 2.\nAcción narrativa: Al cabo de un rato, dejó de hablar, inclinó la cabeza y cerró los ojos. Pretende despertar a los espíritus de los muertos y liberarlos de su carne para que puedan regresar a la montaña de las almas. Puedo enseñarte esa religión, si lo deseas, señora.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "status": "definitive",
+      "text": {
+        "original": "El fino y oscuro callejón estaba cubierto de basura y ceniza. Camon, bandido convertido en mendigo, colgaba de una cuerda atada en lo alto. Su cuerpo giraba lentamente con la brisa y la ceniza caía a su alrededor.",
+        "current": "El fino y oscuro callejón estaba cubierto de basura y ceniza. Camon, bandido convertido en mendigo, colgaba de una cuerda atada en lo alto. Su cuerpo giraba lentamente con la brisa y la ceniza caía a su alrededor."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 3.\nAcción narrativa: El fino y oscuro callejón estaba cubierto de basura y ceniza. Camon, bandido convertido en mendigo, colgaba de una cuerda atada en lo alto. Su cuerpo giraba lentamente con la brisa y la ceniza caía a su alrededor.\nPersonajes visibles: Brisa.\nEntorno principal: ceniza, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 3.\nAcción narrativa: El fino y oscuro callejón estaba cubierto de basura y ceniza. Camon, bandido convertido en mendigo, colgaba de una cuerda atada en lo alto. Su cuerpo giraba lentamente con la brisa y la ceniza caía a su alrededor.\nPersonajes visibles: Brisa.\nEntorno principal: ceniza, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "status": "definitive",
+      "text": {
+        "original": "El carruaje dio una sacudida violenta y Vin se sobresaltó. Sin embargo, el vehículo continuó con normalidad su avance y Sazed no se movió de su lugar en el pescante. Vin avivó sus metales, tensándose, mientras una figura saltaba de la parte superior del carruaje y aterrizaba en el estribo, ante su puerta.",
+        "current": "El carruaje dio una sacudida violenta y Vin se sobresaltó. Sin embargo, el vehículo continuó con normalidad su avance y Sazed no se movió de su lugar en el pescante. Vin avivó sus metales, tensándose, mientras una figura saltaba de la parte superior del carruaje y aterrizaba en el estribo, ante su puerta."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 4.\nAcción narrativa: El carruaje dio una sacudida violenta y Vin se sobresaltó. Sin embargo, el vehículo continuó con normalidad su avance y Sazed no se movió de su lugar en el pescante. Vin avivó sus metales, tensándose, mientras una figura saltaba de la parte superior del carruaje y aterrizaba en el estribo, ante su puerta.\nPersonajes visibles: Vin, Sazed.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 4.\nAcción narrativa: El carruaje dio una sacudida violenta y Vin se sobresaltó. Sin embargo, el vehículo continuó con normalidad su avance y Sazed no se movió de su lugar en el pescante. Vin avivó sus metales, tensándose, mientras una figura saltaba de la parte superior del carruaje y aterrizaba en el estribo, ante su puerta.\nPersonajes visibles: Vin, Sazed.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "status": "definitive",
+      "text": {
+        "original": "Llevaba una ropa aún más refinada que de costumbre; aunque con la misma pauta en forma de V, tenía un cinturón y anchas mangas envolventes. Hasta la alfombra, para que tu vestido no roce el empedrado, y luego entra por la puerta principal. Avanzó, dejando atrás nobles y damas con diversas galas y vestidos.",
+        "current": "Llevaba una ropa aún más refinada que de costumbre; aunque con la misma pauta en forma de V, tenía un cinturón y anchas mangas envolventes. Hasta la alfombra, para que tu vestido no roce el empedrado, y luego entra por la puerta principal. Avanzó, dejando atrás nobles y damas con diversas galas y vestidos."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 5.\nAcción narrativa: Llevaba una ropa aún más refinada que de costumbre; aunque con la misma pauta en forma de V, tenía un cinturón y anchas mangas envolventes. Hasta la alfombra, para que tu vestido no roce el empedrado, y luego entra por la puerta principal. Avanzó, dejando atrás nobles y damas con diversas galas y vestidos.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 5.\nAcción narrativa: Llevaba una ropa aún más refinada que de costumbre; aunque con la misma pauta en forma de V, tenía un cinturón y anchas mangas envolventes. Hasta la alfombra, para que tu vestido no roce el empedrado, y luego entra por la puerta principal. Avanzó, dejando atrás nobles y damas con diversas galas y vestidos.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "status": "definitive",
+      "text": {
+        "original": "Vin dejó de prestar atención a los obligadores (su presencia aún seguía haciéndola sentirse un poco incómoda) y se concentró en otra cosa: las hermosas vidrieras. Sentada donde estaba, podía ver algunas de las que estaban directamente enfrente y encima. Eran escenas religiosas, como muchas de las preferidas por la aristocracia.",
+        "current": "Vin dejó de prestar atención a los obligadores (su presencia aún seguía haciéndola sentirse un poco incómoda) y se concentró en otra cosa: las hermosas vidrieras. Sentada donde estaba, podía ver algunas de las que estaban directamente enfrente y encima. Eran escenas religiosas, como muchas de las preferidas por la aristocracia."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 6.\nAcción narrativa: Vin dejó de prestar atención a los obligadores (su presencia aún seguía haciéndola sentirse un poco incómoda) y se concentró en otra cosa: las hermosas vidrieras. Sentada donde estaba, podía ver algunas de las que estaban directamente enfrente y encima. Eran escenas religiosas, como muchas de las preferidas por la aristocracia.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 6.\nAcción narrativa: Vin dejó de prestar atención a los obligadores (su presencia aún seguía haciéndola sentirse un poco incómoda) y se concentró en otra cosa: las hermosas vidrieras. Sentada donde estaba, podía ver algunas de las que estaban directamente enfrente y encima. Eran escenas religiosas, como muchas de las preferidas por la aristocracia.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "status": "definitive",
+      "text": {
+        "original": "Tres jóvenes más se acercaron para invitarla a bailar, pero cada uno de ellos aceptó su amable rechazo. Ningún otro vino después: debía de haberse corrido la voz de que no estaba interesada en bailar. Memorizó los nombres de los cuatro hombres que la habían abordado (Kelsier querría conocerlos) y se dispuso a esperar.",
+        "current": "Tres jóvenes más se acercaron para invitarla a bailar, pero cada uno de ellos aceptó su amable rechazo. Ningún otro vino después: debía de haberse corrido la voz de que no estaba interesada en bailar. Memorizó los nombres de los cuatro hombres que la habían abordado (Kelsier querría conocerlos) y se dispuso a esperar."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 7.\nAcción narrativa: Tres jóvenes más se acercaron para invitarla a bailar, pero cada uno de ellos aceptó su amable rechazo. Ningún otro vino después: debía de haberse corrido la voz de que no estaba interesada en bailar. Memorizó los nombres de los cuatro hombres que la habían abordado (Kelsier querría conocerlos) y se dispuso a esperar.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 7.\nAcción narrativa: Tres jóvenes más se acercaron para invitarla a bailar, pero cada uno de ellos aceptó su amable rechazo. Ningún otro vino después: debía de haberse corrido la voz de que no estaba interesada en bailar. Memorizó los nombres de los cuatro hombres que la habían abordado (Kelsier querría conocerlos) y se dispuso a esperar.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "status": "definitive",
+      "text": {
+        "original": "Su traje no era el más bonito que había viso, ni su chaleco el más brillante. La casaca y la camisa le quedaban demasiado grandes e iba un poco despeinado. Llevaba una copa de vino y en el bolsillo exterior de su casaca se notaba un bulto: un libro demasiado grande para caber en él.",
+        "current": "Su traje no era el más bonito que había viso, ni su chaleco el más brillante. La casaca y la camisa le quedaban demasiado grandes e iba un poco despeinado. Llevaba una copa de vino y en el bolsillo exterior de su casaca se notaba un bulto: un libro demasiado grande para caber en él."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 8.\nAcción narrativa: Su traje no era el más bonito que había viso, ni su chaleco el más brillante. La casaca y la camisa le quedaban demasiado grandes e iba un poco despeinado. Llevaba una copa de vino y en el bolsillo exterior de su casaca se notaba un bulto: un libro demasiado grande para caber en él.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 8.\nAcción narrativa: Su traje no era el más bonito que había viso, ni su chaleco el más brillante. La casaca y la camisa le quedaban demasiado grandes e iba un poco despeinado. Llevaba una copa de vino y en el bolsillo exterior de su casaca se notaba un bulto: un libro demasiado grande para caber en él.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "status": "definitive",
+      "text": {
+        "original": "Tal vez había habido más en la conversación de lo que ella creía. Tenía el cobre encendido y eso significaba que él no había podido usar contra ella alomancia emocional. De algún modo, sin razón aparente, la había hecho bajar la guardia.",
+        "current": "Tal vez había habido más en la conversación de lo que ella creía. Tenía el cobre encendido y eso significaba que él no había podido usar contra ella alomancia (magia de metales) emocional. De algún modo, sin razón aparente, la había hecho bajar la guardia."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 9.\nAcción narrativa: Tal vez había habido más en la conversación de lo que ella creía. Tenía el cobre encendido y eso significaba que él no había podido usar contra ella alomancia (magia de metales) emocional. De algún modo, sin razón aparente, la había hecho bajar la guardia.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 9.\nAcción narrativa: Tal vez había habido más en la conversación de lo que ella creía. Tenía el cobre encendido y eso significaba que él no había podido usar contra ella alomancia (magia de metales) emocional. De algún modo, sin razón aparente, la había hecho bajar la guardia.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "status": "definitive",
+      "text": {
+        "original": "Frunció el ceño y continuó adelante hasta que llegó a una fuente fija de metal: dos pequeñas barras de bronce asomaban del suelo, separadas entre sí un par de palmos. Saltar era más rápido que correr, pero no parecía tener mucho sentido hacerlo en medio de la nada. Avanzó unos pasos y encontró otras dos barras de bronce clavadas en el suelo.",
+        "current": "Frunció el ceño y continuó adelante hasta que llegó a una fuente fija de metal: dos pequeñas barras de bronce asomaban del suelo, separadas entre sí un par de palmos. Saltar era más rápido que correr, pero no parecía tener mucho sentido hacerlo en medio de la nada. Avanzó unos pasos y encontró otras dos barras de bronce clavadas en el suelo."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 10.\nAcción narrativa: Frunció el ceño y continuó adelante hasta que llegó a una fuente fija de metal: dos pequeñas barras de bronce asomaban del suelo, separadas entre sí un par de palmos. Saltar era más rápido que correr, pero no parecía tener mucho sentido hacerlo en medio de la nada. Avanzó unos pasos y encontró otras dos barras de bronce clavadas en el suelo.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 10.\nAcción narrativa: Frunció el ceño y continuó adelante hasta que llegó a una fuente fija de metal: dos pequeñas barras de bronce asomaban del suelo, separadas entre sí un par de palmos. Saltar era más rápido que correr, pero no parecía tener mucho sentido hacerlo en medio de la nada. Avanzó unos pasos y encontró otras dos barras de bronce clavadas en el suelo.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "status": "definitive",
+      "text": {
+        "original": "¿Por qué ibas a preocuparnos más si nos cuentas los detalles? Vin se calló, miró a un lado, hacia donde iba Kelsier. La semana pasada dijiste que ibas a hacerle una visita.",
+        "current": "¿Por qué ibas a preocuparnos más si nos cuentas los detalles? Vin se calló, miró a un lado, hacia donde iba Kelsier. La semana pasada dijiste que ibas a hacerle una visita."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 11.\nAcción narrativa: ¿Por qué ibas a preocuparnos más si nos cuentas los detalles? Vin se calló, miró a un lado, hacia donde iba Kelsier. La semana pasada dijiste que ibas a hacerle una visita.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 11.\nAcción narrativa: ¿Por qué ibas a preocuparnos más si nos cuentas los detalles? Vin se calló, miró a un lado, hacia donde iba Kelsier. La semana pasada dijiste que ibas a hacerle una visita.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "status": "definitive",
+      "text": {
+        "original": "—¿Significa esto que vas a llevarme contigo esta noche? No pretendo encontrarme con el lord Legislador, pero sí colarme en su fortaleza. Creo que sé dónde podríamos encontrar una pista para derrotarlo.",
+        "current": "—¿Significa esto que vas a llevarme contigo esta noche? No pretendo encontrarme con el Lord Legislador (emperador), pero sí colarme en su fortaleza. Creo que sé dónde podríamos encontrar una pista para derrotarlo."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 12.\nAcción narrativa: —¿Significa esto que vas a llevarme contigo esta noche? No pretendo encontrarme con el Lord Legislador (emperador), pero sí colarme en su fortaleza. Creo que sé dónde podríamos encontrar una pista para derrotarlo.\nPersonajes visibles: Lord Legislador.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 12.\nAcción narrativa: —¿Significa esto que vas a llevarme contigo esta noche? No pretendo encontrarme con el Lord Legislador (emperador), pero sí colarme en su fortaleza. Creo que sé dónde podríamos encontrar una pista para derrotarlo.\nPersonajes visibles: Lord Legislador.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "status": "definitive",
+      "text": {
+        "original": "Un soldado se volvió hacia Vin y ella reaccionó sin pensar. Empujó y los proyectiles salieron disparados hacia delante, desgarrando la carne del guardia y haciéndolo caer. Quemó hierro, tirando de las monedas hacia su mano.",
+        "current": "Un soldado se volvió hacia Vin y ella reaccionó sin pensar. Empujó y los proyectiles salieron disparados hacia delante, desgarrando la carne del guardia y haciéndolo caer. Quemó hierro, tirando de las monedas hacia su mano."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 13.\nAcción narrativa: Un soldado se volvió hacia Vin y ella reaccionó sin pensar. Empujó y los proyectiles salieron disparados hacia delante, desgarrando la carne del guardia y haciéndolo caer. Quemó hierro, tirando de las monedas hacia su mano.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 13.\nAcción narrativa: Un soldado se volvió hacia Vin y ella reaccionó sin pensar. Empujó y los proyectiles salieron disparados hacia delante, desgarrando la carne del guardia y haciéndolo caer. Quemó hierro, tirando de las monedas hacia su mano.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "status": "definitive",
+      "text": {
+        "original": "Agarró el primer trozo de metal que vio y tiró, despegándose del suelo. Se lanzó por el pasillo a velocidad descontrolada, el terror avivaba su hierro. Golpeó el suelo de mala manera, su cabeza chocó contra la burda piedra y se quedó allí aturdida, preguntándose qué había sucedido.",
+        "current": "Agarró el primer trozo de metal que vio y tiró, despegándose del suelo. Se lanzó por el pasillo a velocidad descontrolada, el terror avivaba su hierro. Golpeó el suelo de mala manera, su cabeza chocó contra la burda piedra y se quedó allí aturdida, preguntándose qué había sucedido."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 14.\nAcción narrativa: Agarró el primer trozo de metal que vio y tiró, despegándose del suelo. Se lanzó por el pasillo a velocidad descontrolada, el terror avivaba su hierro. Golpeó el suelo de mala manera, su cabeza chocó contra la burda piedra y se quedó allí aturdida, preguntándose qué había sucedido.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 14.\nAcción narrativa: Agarró el primer trozo de metal que vio y tiró, despegándose del suelo. Se lanzó por el pasillo a velocidad descontrolada, el terror avivaba su hierro. Golpeó el suelo de mala manera, su cabeza chocó contra la burda piedra y se quedó allí aturdida, preguntándose qué había sucedido.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "status": "definitive",
+      "text": {
+        "original": "Aturdida, Vin se volvió hacia el cielo y tiró de una de las muchas torres del palacio. Oyó al inquisidor maldecir mientras se lanzaba al aire y se perdía en la noche oscura. No había bruma que reflejara la luz ambiental y las estrellas estaban ocultas por las nubes.",
+        "current": "Aturdida, Vin se volvió hacia el cielo y tiró de una de las muchas torres del palacio. Oyó al inquisidor maldecir mientras se lanzaba al aire y se perdía en la noche oscura. No había bruma que reflejara la luz ambiental y las estrellas estaban ocultas por las nubes."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 15.\nAcción narrativa: Aturdida, Vin se volvió hacia el cielo y tiró de una de las muchas torres del palacio. Oyó al inquisidor maldecir mientras se lanzaba al aire y se perdía en la noche oscura. No había bruma que reflejara la luz ambiental y las estrellas estaban ocultas por las nubes.\nPersonajes visibles: Vin, Inquisidor.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 15.\nAcción narrativa: Aturdida, Vin se volvió hacia el cielo y tiró de una de las muchas torres del palacio. Oyó al inquisidor maldecir mientras se lanzaba al aire y se perdía en la noche oscura. No había bruma que reflejara la luz ambiental y las estrellas estaban ocultas por las nubes.\nPersonajes visibles: Vin, Inquisidor.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "status": "definitive",
+      "text": {
+        "original": "Aunque Vin estuviera ocultándose en algún lugar de la ciudad, lo más probable era que los inquisidores la encontrasen antes. Kelsier se detuvo y su súbito movimiento hizo que los otros lo imitaran. Sonaron pasos apresurados mientras Lestibournes bajaba corriendo las escaleras y entraba en la habitación, completamente empapado por la lluvia.",
+        "current": "Aunque Vin estuviera ocultándose en algún lugar de la ciudad, lo más probable era que los inquisidores la encontrasen antes. Kelsier se detuvo y su súbito movimiento hizo que los otros lo imitaran. Sonaron pasos apresurados mientras Lestibournes bajaba corriendo las escaleras y entraba en la habitación, completamente empapado por la lluvia."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 16.\nAcción narrativa: Aunque Vin estuviera ocultándose en algún lugar de la ciudad, lo más probable era que los inquisidores la encontrasen antes. Kelsier se detuvo y su súbito movimiento hizo que los otros lo imitaran. Sonaron pasos apresurados mientras Lestibournes bajaba corriendo las escaleras y entraba en la habitación, completamente empapado por la lluvia.\nPersonajes visibles: Vin, Kelsier, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Sombras sobre Luthadel', página 16.\nAcción narrativa: Aunque Vin estuviera ocultándose en algún lugar de la ciudad, lo más probable era que los inquisidores la encontrasen antes. Kelsier se detuvo y su súbito movimiento hizo que los otros lo imitaran. Sonaron pasos apresurados mientras Lestibournes bajaba corriendo las escaleras y entraba en la habitación, completamente empapado por la lluvia.\nPersonajes visibles: Vin, Kelsier, Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    }
+  ]
+}

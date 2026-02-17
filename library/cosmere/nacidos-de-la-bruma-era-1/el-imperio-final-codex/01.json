@@ -1,0 +1,353 @@
+{
+  "schema_version": "1.1",
+  "story_id": "01",
+  "title": "Vin y la chispa en la bruma",
+  "story_title": "Vin y la chispa en la bruma",
+  "status": "definitive",
+  "book_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final-codex",
+  "created_at": "2026-02-17T12:08:42.846937+00:00",
+  "updated_at": "2026-02-17T12:08:42.846937+00:00",
+  "cover": {
+    "status": "draft",
+    "prompt": {
+      "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nPortada del cuento 'Vin y la chispa en la bruma'.\nIdea central: Vin miró los copos revolotear en el aire mientras caían. Los trozos de hollín caían como copos de nieve negra, descendiendo sobre la oscura ciudad de Luthadel. Se acumulaban en las esquinas, impulsados por la brisa, y se enroscaban en diminutos remolinos sobre el empedrado.\nEscena icónica con protagonistas en movimiento sobre un fondo reconocible del Imperio Final.\nComposición de portada: personaje principal en primer plano, secundario de apoyo, paisaje de bruma al fondo.\nColor: base gris ceniza, acentos rojo oscuro y azul metálico para elementos de magia.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+      "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nPortada del cuento 'Vin y la chispa en la bruma'.\nIdea central: Vin miró los copos revolotear en el aire mientras caían. Los trozos de hollín caían como copos de nieve negra, descendiendo sobre la oscura ciudad de Luthadel. Se acumulaban en las esquinas, impulsados por la brisa, y se enroscaban en diminutos remolinos sobre el empedrado.\nEscena icónica con protagonistas en movimiento sobre un fondo reconocible del Imperio Final.\nComposición de portada: personaje principal en primer plano, secundario de apoyo, paisaje de bruma al fondo.\nColor: base gris ceniza, acentos rojo oscuro y azul metálico para elementos de magia.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+    },
+    "asset_rel_path": "",
+    "notes": "Portada pendiente de generación con imagegen."
+  },
+  "source_refs": {
+    "proposal_md_rel_path": "",
+    "reference_pdf_rel_path": "library/_inbox/El imperio final.pdf",
+    "inbox_book_title": "El imperio final"
+  },
+  "ingest_meta": {
+    "phase": "initial_ingest",
+    "target_age": 9,
+    "generated_at": "2026-02-17T12:08:42.846937+00:00",
+    "generated_by": "adaptacion-ingesta-inicial",
+    "semantic_mode": "codex_chat"
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "status": "definitive",
+      "text": {
+        "original": "Vin contempló los copos revolotear en el aire mientras caían. Los trozos de hollín caían como copos de nieve negra, descendiendo sobre la oscura ciudad de Luthadel. Se acumulaban en las esquinas, impulsados por la brisa, y se enroscaban en diminutos remolinos sobre el empedrado.",
+        "current": "Vin miró los copos revolotear en el aire mientras caían. Los trozos de hollín caían como copos de nieve negra, descendiendo sobre la oscura ciudad de Luthadel. Se acumulaban en las esquinas, impulsados por la brisa, y se enroscaban en diminutos remolinos sobre el empedrado."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 1.\nAcción narrativa: Vin miró los copos revolotear en el aire mientras caían. Los trozos de hollín caían como copos de nieve negra, descendiendo sobre la oscura ciudad de Luthadel. Se acumulaban en las esquinas, impulsados por la brisa, y se enroscaban en diminutos remolinos sobre el empedrado.\nPersonajes visibles: Vin, Brisa.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 1.\nAcción narrativa: Vin miró los copos revolotear en el aire mientras caían. Los trozos de hollín caían como copos de nieve negra, descendiendo sobre la oscura ciudad de Luthadel. Se acumulaban en las esquinas, impulsados por la brisa, y se enroscaban en diminutos remolinos sobre el empedrado.\nPersonajes visibles: Vin, Brisa.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "status": "definitive",
+      "text": {
+        "original": "La soltó por fin, luego le indicó que se colocara a un lado de la habitación, junto a una planta de interior. Ella hizo lo que le ordenaba, orientándose para tener una buena panorámica de la habitación. En cuanto Camon apartó la mirada, se frotó el hombro.",
+        "current": "La soltó por fin, luego le indicó que se colocara a un lado de la habitación, junto a una planta de interior. Ella hizo lo que le ordenaba, orientándose para tener una buena panorámica de la habitación. En cuanto Camon apartó la mirada, se frotó el hombro."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 2.\nAcción narrativa: La soltó por fin, luego le indicó que se colocara a un lado de la habitación, junto a una planta de interior. Ella hizo lo que le ordenaba, orientándose para tener una buena panorámica de la habitación. En cuanto Camon apartó la mirada, se frotó el hombro.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 2.\nAcción narrativa: La soltó por fin, luego le indicó que se colocara a un lado de la habitación, junto a una planta de interior. Ella hizo lo que le ordenaba, orientándose para tener una buena panorámica de la habitación. En cuanto Camon apartó la mirada, se frotó el hombro.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "status": "definitive",
+      "text": {
+        "original": "Si todo salía bien llegaría un momento en que Kelsier querría ser visto y reconocido. Por ahora, lo mejor sería permanecer en el anonimato. Al cabo de un rato se le acercó un hombre en la muralla.",
+        "current": "Si todo salía bien llegaría un momento en que Kelsier querría ser visto y reconocido. Por ahora, lo mejor sería permanecer en el anonimato. Al cabo de un rato se le acercó un hombre en la muralla."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 3.\nAcción narrativa: Si todo salía bien llegaría un momento en que Kelsier querría ser visto y reconocido. Por ahora, lo mejor sería permanecer en el anonimato. Al cabo de un rato se le acercó un hombre en la muralla.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 3.\nAcción narrativa: Si todo salía bien llegaría un momento en que Kelsier querría ser visto y reconocido. Por ahora, lo mejor sería permanecer en el anonimato. Al cabo de un rato se le acercó un hombre en la muralla.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "status": "definitive",
+      "text": {
+        "original": "Llevaba su caro traje de noble y le acompañaban media docena de miembros de la banda, incluida Vin, para hacerse pasar por sus criados. Vin siguió a Camon escalinata arriba y esperó mientras uno de los miembros de la banda se adelantaba de un salto para abrir la puerta a su amo. De los seis partícipes, parecía que solo a Vin no le habían dicho nada del plan.",
+        "current": "Llevaba su caro traje de noble y le acompañaban media docena de miembros de la banda, incluida Vin, para hacerse pasar por sus criados. Vin siguió a Camon escalinata arriba y esperó mientras uno de los miembros de la banda se adelantaba de un salto para abrir la puerta a su amo. De los seis partícipes, parecía que solo a Vin no le habían dicho nada del plan."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 4.\nAcción narrativa: Llevaba su caro traje de noble y le acompañaban media docena de miembros de la banda, incluida Vin, para hacerse pasar por sus criados. Vin siguió a Camon escalinata arriba y esperó mientras uno de los miembros de la banda se adelantaba de un salto para abrir la puerta a su amo. De los seis partícipes, parecía que solo a Vin no le habían dicho nada del plan.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 4.\nAcción narrativa: Llevaba su caro traje de noble y le acompañaban media docena de miembros de la banda, incluida Vin, para hacerse pasar por sus criados. Vin siguió a Camon escalinata arriba y esperó mientras uno de los miembros de la banda se adelantaba de un salto para abrir la puerta a su amo. De los seis partícipes, parecía que solo a Vin no le habían dicho nada del plan.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "status": "definitive",
+      "text": {
+        "original": "Camon se reunió con el resto de sus ayudantes con obvio alivio. Camon había conseguido timar con éxito tanto al Ministerio como al otro jefe de la banda. Kelsier se metió en la boca otro de los pastelitos de cobertura roja y lo masticó con satisfacción.",
+        "current": "Camon se reunió con el resto de sus ayudantes con obvio alivio. Camon había conseguido timar con éxito tanto al Ministerio como al otro jefe de la banda. Kelsier se metió en la boca otro de los pastelitos de cobertura roja y lo masticó con satisfacción."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 5.\nAcción narrativa: Camon se reunió con el resto de sus ayudantes con obvio alivio. Camon había conseguido timar con éxito tanto al Ministerio como al otro jefe de la banda. Kelsier se metió en la boca otro de los pastelitos de cobertura roja y lo masticó con satisfacción.\nPersonajes visibles: Kelsier.\nEntorno principal: Ministerio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 5.\nAcción narrativa: Camon se reunió con el resto de sus ayudantes con obvio alivio. Camon había conseguido timar con éxito tanto al Ministerio como al otro jefe de la banda. Kelsier se metió en la boca otro de los pastelitos de cobertura roja y lo masticó con satisfacción.\nPersonajes visibles: Kelsier.\nEntorno principal: Ministerio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "status": "definitive",
+      "text": {
+        "original": "Luego se dirigió en silencio hacia el fondo de la sala, lleno de humo y cenizas. La habitación donde dormía la banda era un sencillo pasillo alargado cubierto de petates. Era un sitio estrecho e incómodo, pero mucho mejor que los fríos callejones en los que ella había dormido durante sus años de viaje con Reen.",
+        "current": "Luego se dirigió en silencio hacia el fondo de la sala, lleno de humo y cenizas. La habitación donde dormía la banda era un sencillo pasillo alargado cubierto de petates. Era un sitio estrecho e incómodo, pero mucho mejor que los fríos callejones en los que ella había dormido durante sus años de viaje con Reen."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 6.\nAcción narrativa: Luego se dirigió en silencio hacia el fondo de la sala, lleno de humo y cenizas. La habitación donde dormía la banda era un sencillo pasillo alargado cubierto de petates. Era un sitio estrecho e incómodo, pero mucho mejor que los fríos callejones en los que ella había dormido durante sus años de viaje con Reen.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: ceniza, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 6.\nAcción narrativa: Luego se dirigió en silencio hacia el fondo de la sala, lleno de humo y cenizas. La habitación donde dormía la banda era un sencillo pasillo alargado cubierto de petates. Era un sitio estrecho e incómodo, pero mucho mejor que los fríos callejones en los que ella había dormido durante sus años de viaje con Reen.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: ceniza, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "status": "definitive",
+      "text": {
+        "original": "Hizo una pausa, dejando que lo que eso implicaba flotara en el aire. ¿Qué tipo de persona podía decir tan campante que se había encargado de un inquisidor? Según los rumores esas criaturas eran inmortales, podían ver el alma de un hombre y eran guerreros sin rival.",
+        "current": "Hizo una pausa, dejando que lo que eso implicaba flotara en el aire. ¿Qué tipo de persona podía decir tan campante que se había encargado de un inquisidor? Según los rumores esas criaturas eran inmortales, podían ver el alma de un hombre y eran guerreros sin rival."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 7.\nAcción narrativa: Hizo una pausa, dejando que lo que eso implicaba flotara en el aire. ¿Qué tipo de persona podía decir tan campante que se había encargado de un inquisidor? Según los rumores esas criaturas eran inmortales, podían ver el alma de un hombre y eran guerreros sin rival.\nPersonajes visibles: Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 7.\nAcción narrativa: Hizo una pausa, dejando que lo que eso implicaba flotara en el aire. ¿Qué tipo de persona podía decir tan campante que se había encargado de un inquisidor? Según los rumores esas criaturas eran inmortales, podían ver el alma de un hombre y eran guerreros sin rival.\nPersonajes visibles: Inquisidor.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "status": "definitive",
+      "text": {
+        "original": "Tenía algo que ver con combatir, había supuesto siempre. Se decía que los brumosos, como los llamaban, eran lo bastante peligrosos para matar a una banda entera de ladrones. No obstante, los skaa que conocía hablaban del poder en susurros inciertos.",
+        "current": "Tenía algo que ver con combatir, había supuesto siempre. Se decía que los brumosos, como los llamaban, eran lo bastante peligrosos para matar a una banda entera de ladrones. No obstante, los skaa (clase trabajadora) que conocía hablaban del poder en susurros inciertos."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 8.\nAcción narrativa: Tenía algo que ver con combatir, había supuesto siempre. Se decía que los brumosos, como los llamaban, eran lo bastante peligrosos para matar a una banda entera de ladrones. No obstante, los skaa (clase trabajadora) que conocía hablaban del poder en susurros inciertos.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 8.\nAcción narrativa: Tenía algo que ver con combatir, había supuesto siempre. Se decía que los brumosos, como los llamaban, eran lo bastante peligrosos para matar a una banda entera de ladrones. No obstante, los skaa (clase trabajadora) que conocía hablaban del poder en susurros inciertos.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "status": "definitive",
+      "text": {
+        "original": "Se había limpiado un poco desde que Camon le propinara aquella paliza. Al final, acabó por aceptar un pañuelo de Dockson para quitarse la sangre de la cara. Sin embargo, no podía hacer gran cosa con los cardenales.",
+        "current": "Se había limpiado un poco desde que Camon le propinara aquella paliza. Al final, acabó por aceptar un pañuelo de Dockson para quitarse la sangre de la cara. Sin embargo, no podía hacer gran cosa con los cardenales."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 9.\nAcción narrativa: Se había limpiado un poco desde que Camon le propinara aquella paliza. Al final, acabó por aceptar un pañuelo de Dockson para quitarse la sangre de la cara. Sin embargo, no podía hacer gran cosa con los cardenales.\nPersonajes visibles: Dockson.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 9.\nAcción narrativa: Se había limpiado un poco desde que Camon le propinara aquella paliza. Al final, acabó por aceptar un pañuelo de Dockson para quitarse la sangre de la cara. Sin embargo, no podía hacer gran cosa con los cardenales.\nPersonajes visibles: Dockson.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "status": "definitive",
+      "text": {
+        "original": "Le he dado ánimos, solo que por medios irregulares, eso es todo. Ya estás de pie e ibas a volver de todas formas... ¿Se sentía anormalmente impulsada a hacer lo que le pedía?",
+        "current": "Le he dado ánimos, solo que por medios irregulares, eso es todo. Ya estás de pie e ibas a volver de todas formas... ¿Se sentía anormalmente impulsada a hacer lo que le pedía?"
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 10.\nAcción narrativa: Le he dado ánimos, solo que por medios irregulares, eso es todo. Ya estás de pie e ibas a volver de todas formas... ¿Se sentía anormalmente impulsada a hacer lo que le pedía?\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 10.\nAcción narrativa: Le he dado ánimos, solo que por medios irregulares, eso es todo. Ya estás de pie e ibas a volver de todas formas... ¿Se sentía anormalmente impulsada a hacer lo que le pedía?\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "status": "definitive",
+      "text": {
+        "original": "¡Eso es algo en lo que los rebeldes skaa llevan trabajando mil años! ¿Qué te hace pensar que tendremos éxito donde esos hombres han fracasado? Eso es algo de lo que siempre ha carecido la rebelión.",
+        "current": "¡Eso es algo en lo que los rebeldes skaa llevan trabajando mil años! ¿Qué te hace pensar que tendremos éxito donde esos hombres han fracasado? Eso es algo de lo que siempre ha carecido la rebelión."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 11.\nAcción narrativa: ¡Eso es algo en lo que los rebeldes skaa llevan trabajando mil años! ¿Qué te hace pensar que tendremos éxito donde esos hombres han fracasado? Eso es algo de lo que siempre ha carecido la rebelión.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 11.\nAcción narrativa: ¡Eso es algo en lo que los rebeldes skaa llevan trabajando mil años! ¿Qué te hace pensar que tendremos éxito donde esos hombres han fracasado? Eso es algo de lo que siempre ha carecido la rebelión.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "status": "definitive",
+      "text": {
+        "original": "La rebelión fracasa porque está demasiado dispersa y extendida. En el momento en que una de sus muchas piezas gana impulso, el Ministerio de Acero la aplasta. Esa no es forma de derrotar al Imperio Final, caballeros.",
+        "current": "La rebelión fracasa porque está demasiado dispersa y extendida. En el momento en que una de sus muchas piezas gana impulso, el Ministerio de Acero la aplasta. Esa no es forma de derrotar al Imperio Final, caballeros."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 12.\nAcción narrativa: La rebelión fracasa porque está demasiado dispersa y extendida. En el momento en que una de sus muchas piezas gana impulso, el Ministerio de Acero la aplasta. Esa no es forma de derrotar al Imperio Final, caballeros.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Ministerio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 12.\nAcción narrativa: La rebelión fracasa porque está demasiado dispersa y extendida. En el momento en que una de sus muchas piezas gana impulso, el Ministerio de Acero la aplasta. Esa no es forma de derrotar al Imperio Final, caballeros.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Ministerio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "status": "definitive",
+      "text": {
+        "original": "Recogió las tres copas y se reunió con Vin y Dockson en la mesa. La reunión había terminado un rato antes, y Brisa, Ham y Yeden se habían marchado a reflexionar sobre los asuntos que les había indicado Kelsier. Vin pensaba que también debía marcharse, pero no tenía ningún sitio al que ir.",
+        "current": "Recogió las tres copas y se reunió con Vin y Dockson en la mesa. La reunión había terminado un rato antes, y Brisa, Ham y Yeden se habían marchado a reflexionar sobre los asuntos que les había indicado Kelsier. Vin pensaba que también debía marcharse, pero no tenía ningún sitio al que ir."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 13.\nAcción narrativa: Recogió las tres copas y se reunió con Vin y Dockson en la mesa. La reunión había terminado un rato antes, y Brisa, Ham y Yeden se habían marchado a reflexionar sobre los asuntos que les había indicado Kelsier. Vin pensaba que también debía marcharse, pero no tenía ningún sitio al que ir.\nPersonajes visibles: Vin, Kelsier, Ham, Brisa.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 13.\nAcción narrativa: Recogió las tres copas y se reunió con Vin y Dockson en la mesa. La reunión había terminado un rato antes, y Brisa, Ham y Yeden se habían marchado a reflexionar sobre los asuntos que les había indicado Kelsier. Vin pensaba que también debía marcharse, pero no tenía ningún sitio al que ir.\nPersonajes visibles: Vin, Kelsier, Ham, Brisa.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "status": "definitive",
+      "text": {
+        "original": "—Nunca había estado tan cerca de alguien que llevara una de estas. La voz apagada casi daba miedo en la bruma nocturna. —Una capa de los nacidos de la bruma —dijo Dockson—.",
+        "current": "—Nunca había estado tan cerca de alguien que llevara una de estas. La voz apagada casi daba miedo en la bruma nocturna. —Una capa de los nacidos de la bruma —dijo Dockson—."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 14.\nAcción narrativa: —Nunca había estado tan cerca de alguien que llevara una de estas. La voz apagada casi daba miedo en la bruma nocturna. —Una capa de los nacidos de la bruma —dijo Dockson—.\nPersonajes visibles: Dockson.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 14.\nAcción narrativa: —Nunca había estado tan cerca de alguien que llevara una de estas. La voz apagada casi daba miedo en la bruma nocturna. —Una capa de los nacidos de la bruma —dijo Dockson—.\nPersonajes visibles: Dockson.\nEntorno principal: bruma, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "status": "definitive",
+      "text": {
+        "original": "Kelsier arremetió contra él como una exhalación tras saltar al aire y tirar levemente del peto de acero del hombre y hacerle perder el equilibrio. Sacó una de las dagas de cristal, permitiendo que la fuerza de su tirón al hierro lo lanzara hacia el guardia. Aterrizó con ambos pies contra el pecho del soldado y luego se giró y cortó con una estocada reforzada por el peltre.",
+        "current": "Kelsier arremetió contra él como una exhalación tras saltar al aire y tirar levemente del peto de acero del hombre y hacerle perder el equilibrio. Sacó una de las dagas de cristal, permitiendo que la fuerza de su tirón al hierro lo lanzara hacia el guardia. Aterrizó con ambos pies contra el pecho del soldado y luego se giró y cortó con una estocada reforzada por el peltre."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 15.\nAcción narrativa: Kelsier arremetió contra él como una exhalación tras saltar al aire y tirar levemente del peto de acero del hombre y hacerle perder el equilibrio. Sacó una de las dagas de cristal, permitiendo que la fuerza de su tirón al hierro lo lanzara hacia el guardia. Aterrizó con ambos pies contra el pecho del soldado y luego se giró y cortó con una estocada reforzada por el peltre.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 15.\nAcción narrativa: Kelsier arremetió contra él como una exhalación tras saltar al aire y tirar levemente del peto de acero del hombre y hacerle perder el equilibrio. Sacó una de las dagas de cristal, permitiendo que la fuerza de su tirón al hierro lo lanzara hacia el guardia. Aterrizó con ambos pies contra el pecho del soldado y luego se giró y cortó con una estocada reforzada por el peltre.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "status": "definitive",
+      "text": {
+        "original": "El hombre retrocedió, sorprendido, y el movimiento despojó a Kelsier de una de sus dagas. Un segundo mataneblino atacó, pero Kelsier lo esquivó y luego con la mano libre se soltó la bolsa del cinturón. El mataneblino se preparó para bloquear la daga que le quedaba a Kelsier, pero este alzó la otra mano y golpeó con la bolsa de monedas el escudo del hombre.",
+        "current": "El hombre retrocedió, sorprendido, y el movimiento despojó a Kelsier de una de sus dagas. Un segundo mataneblino atacó, pero Kelsier lo esquivó y luego con la mano libre se soltó la bolsa del cinturón. El mataneblino se preparó para bloquear la daga que le quedaba a Kelsier, pero este alzó la otra mano y golpeó con la bolsa de monedas el escudo del hombre."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 16.\nAcción narrativa: El hombre retrocedió, sorprendido, y el movimiento despojó a Kelsier de una de sus dagas. Un segundo mataneblino atacó, pero Kelsier lo esquivó y luego con la mano libre se soltó la bolsa del cinturón. El mataneblino se preparó para bloquear la daga que le quedaba a Kelsier, pero este alzó la otra mano y golpeó con la bolsa de monedas el escudo del hombre.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'Vin y la chispa en la bruma', página 16.\nAcción narrativa: El hombre retrocedió, sorprendido, y el movimiento despojó a Kelsier de una de sus dagas. Un segundo mataneblino atacó, pero Kelsier lo esquivó y luego con la mano libre se soltó la bolsa del cinturón. El mataneblino se preparó para bloquear la daga que le quedaba a Kelsier, pero este alzó la otra mano y golpeó con la bolsa de monedas el escudo del hombre.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    }
+  ]
+}

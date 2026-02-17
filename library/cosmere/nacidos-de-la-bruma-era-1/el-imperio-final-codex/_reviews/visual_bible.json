@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "book_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final-codex",
+  "updated_at": "2026-02-17T12:08:42.846937+00:00",
+  "style_reference": {
+    "source": "docs/assets/style_refs/Hansel y Gretel",
+    "intent": "acabado gráfico y ritmo visual, sin copiar contenido"
+  },
+  "art_direction": {
+    "line": "trazo negro limpio, grosor medio, contornos cerrados",
+    "color": "color plano con paleta controlada, sombras suaves",
+    "mood": "sobrio, aventurero, claro para público 5-12",
+    "camera": "alternancia de plano general, medio y ángulos de tensión"
+  },
+  "character_anchors": [
+    {
+      "id": "vin",
+      "name": "Vin",
+      "traits": "adolescente baja y delgada, cabello oscuro corto, mirada alerta",
+      "wardrobe": "ropa discreta de calle; en infiltración, vestido noble sencillo",
+      "must_keep": [
+        "expresión contenida",
+        "agilidad corporal"
+      ]
+    },
+    {
+      "id": "kelsier",
+      "name": "Kelsier",
+      "traits": "adulto atlético, cicatrices en brazos, sonrisa confiada",
+      "wardrobe": "capa de bruma con tiras, tonos grises",
+      "must_keep": [
+        "presencia carismática",
+        "energía de liderazgo"
+      ]
+    },
+    {
+      "id": "sazed",
+      "name": "Sazed",
+      "traits": "hombre alto y sereno, porte elegante",
+      "wardrobe": "túnica cuidada y brazaletes metálicos",
+      "must_keep": [
+        "gesto calmado",
+        "postura recta"
+      ]
+    },
+    {
+      "id": "elend",
+      "name": "Elend",
+      "traits": "joven noble, aspecto intelectual",
+      "wardrobe": "ropa noble funcional, libro frecuente en mano",
+      "must_keep": [
+        "expresión reflexiva"
+      ]
+    },
+    {
+      "id": "inquisidor",
+      "name": "Inquisidores",
+      "traits": "figuras amenazantes con clavos oculares",
+      "wardrobe": "túnicas oscuras",
+      "must_keep": [
+        "silueta inquietante",
+        "lectura clara como antagonista"
+      ]
+    }
+  ],
+  "location_anchors": [
+    {
+      "id": "luthadel",
+      "name": "Luthadel",
+      "traits": "arquitectura opresiva, piedra oscura, niebla constante"
+    },
+    {
+      "id": "kredik_shaw",
+      "name": "Kredik Shaw / Palacio Negro",
+      "traits": "volumen severo, torres oscuras, presencia monumental"
+    },
+    {
+      "id": "safehouses",
+      "name": "Guaridas y talleres",
+      "traits": "interiores modestos, madera, velas, mapas y herramientas"
+    }
+  ],
+  "object_anchors": [
+    {
+      "id": "metals",
+      "name": "Metales alománticos",
+      "traits": "frascos pequeños o viales discretos, brillo contenido"
+    },
+    {
+      "id": "atium",
+      "name": "Atium",
+      "traits": "pieza pequeña valiosa, tratamiento visual de rareza"
+    }
+  ],
+  "continuity_rules": [
+    "No variar rasgos físicos base de personajes entre páginas.",
+    "Mantener coherencia de escala arquitectónica dentro del mismo lugar.",
+    "Si una escena ocurre en bruma nocturna, conservar clima visual en páginas contiguas.",
+    "No mezclar iconografía de épocas modernas."
+  ],
+  "negative_global": [
+    "sin estilo anime",
+    "sin hiperrealismo",
+    "sin texto incrustado",
+    "sin armas o ropa moderna",
+    "sin estética humorística exagerada"
+  ],
+  "imagegen_ready": {
+    "model_default": "gpt-image-1.5",
+    "quality": "high",
+    "batch_strategy": "un job por página y portada"
+  }
+}

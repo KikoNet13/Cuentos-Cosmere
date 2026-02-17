@@ -1,0 +1,353 @@
+{
+  "schema_version": "1.1",
+  "story_id": "06",
+  "title": "El precio de la esperanza",
+  "story_title": "El precio de la esperanza",
+  "status": "definitive",
+  "book_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final-codex",
+  "created_at": "2026-02-17T12:08:42.846937+00:00",
+  "updated_at": "2026-02-17T12:08:42.846937+00:00",
+  "cover": {
+    "status": "draft",
+    "prompt": {
+      "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nPortada del cuento 'El precio de la esperanza'.\nIdea central: Kelsier metió otra cantimplora de agua en su mochila. —Brisa, haz una lista de todos los escondites donde hemos reclutado gente. Ve a advertirles de que el Ministerio puede que pronto tenga prisioneros que podrán delatarlos.\nEscena icónica con protagonistas en movimiento sobre un fondo reconocible del Imperio Final.\nComposición de portada: personaje principal en primer plano, secundario de apoyo, paisaje de bruma al fondo.\nColor: base gris ceniza, acentos rojo oscuro y azul metálico para elementos de magia.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+      "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nPortada del cuento 'El precio de la esperanza'.\nIdea central: Kelsier metió otra cantimplora de agua en su mochila. —Brisa, haz una lista de todos los escondites donde hemos reclutado gente. Ve a advertirles de que el Ministerio puede que pronto tenga prisioneros que podrán delatarlos.\nEscena icónica con protagonistas en movimiento sobre un fondo reconocible del Imperio Final.\nComposición de portada: personaje principal en primer plano, secundario de apoyo, paisaje de bruma al fondo.\nColor: base gris ceniza, acentos rojo oscuro y azul metálico para elementos de magia.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+    },
+    "asset_rel_path": "",
+    "notes": "Portada pendiente de generación con imagegen."
+  },
+  "source_refs": {
+    "proposal_md_rel_path": "",
+    "reference_pdf_rel_path": "library/_inbox/El imperio final.pdf",
+    "inbox_book_title": "El imperio final"
+  },
+  "ingest_meta": {
+    "phase": "initial_ingest",
+    "target_age": 9,
+    "generated_at": "2026-02-17T12:08:42.846937+00:00",
+    "generated_by": "adaptacion-ingesta-inicial",
+    "semantic_mode": "codex_chat"
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "status": "definitive",
+      "text": {
+        "original": "Kelsier metió otra cantimplora de agua en su mochila. —Brisa, haz una lista de todos los escondites donde hemos reclutado gente. Ve a advertirles de que el Ministerio puede que pronto tenga prisioneros que podrán delatarlos.",
+        "current": "Kelsier metió otra cantimplora de agua en su mochila. —Brisa, haz una lista de todos los escondites donde hemos reclutado gente. Ve a advertirles de que el Ministerio puede que pronto tenga prisioneros que podrán delatarlos."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 1.\nAcción narrativa: Kelsier metió otra cantimplora de agua en su mochila. —Brisa, haz una lista de todos los escondites donde hemos reclutado gente. Ve a advertirles de que el Ministerio puede que pronto tenga prisioneros que podrán delatarlos.\nPersonajes visibles: Kelsier, Brisa.\nEntorno principal: Ministerio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 1.\nAcción narrativa: Kelsier metió otra cantimplora de agua en su mochila. —Brisa, haz una lista de todos los escondites donde hemos reclutado gente. Ve a advertirles de que el Ministerio puede que pronto tenga prisioneros que podrán delatarlos.\nPersonajes visibles: Kelsier, Brisa.\nEntorno principal: Ministerio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "status": "definitive",
+      "text": {
+        "original": "Pasaron las horas y Vin empezó a sentir la fatiga que él había anunciado. Mantuvo la velocidad, pero notaba una resistencia interior, un ansia por detenerse a descansar. A pesar del poder del peltre su cuerpo se estaba quedando sin fuerzas.",
+        "current": "Pasaron las horas y Vin empezó a sentir la fatiga que él había anunciado. Mantuvo la velocidad, pero notaba una resistencia interior, un ansia por detenerse a descansar. A pesar del poder del peltre su cuerpo se estaba quedando sin fuerzas."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 2.\nAcción narrativa: Pasaron las horas y Vin empezó a sentir la fatiga que él había anunciado. Mantuvo la velocidad, pero notaba una resistencia interior, un ansia por detenerse a descansar. A pesar del poder del peltre su cuerpo se estaba quedando sin fuerzas.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 2.\nAcción narrativa: Pasaron las horas y Vin empezó a sentir la fatiga que él había anunciado. Mantuvo la velocidad, pero notaba una resistencia interior, un ansia por detenerse a descansar. A pesar del poder del peltre su cuerpo se estaba quedando sin fuerzas.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "status": "definitive",
+      "text": {
+        "original": "En cuanto Kelsier descubriera quién había sido tan previsor, pretendía concederle un buen ascenso. Muchísimos de los dos mil hombres habían dejado atrás la juventud. Quedaban hombres lo suficientemente sabios como para ver que el plan de Yeden era una locura y hombres lo bastante jóvenes para tener miedo.",
+        "current": "En cuanto Kelsier descubriera quién había sido tan previsor, pretendía concederle un buen ascenso. Muchísimos de los dos mil hombres habían dejado atrás la juventud. Quedaban hombres lo suficientemente sabios como para ver que el plan de Yeden era una locura y hombres lo bastante jóvenes para tener miedo."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 3.\nAcción narrativa: En cuanto Kelsier descubriera quién había sido tan previsor, pretendía concederle un buen ascenso. Muchísimos de los dos mil hombres habían dejado atrás la juventud. Quedaban hombres lo suficientemente sabios como para ver que el plan de Yeden era una locura y hombres lo bastante jóvenes para tener miedo.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 3.\nAcción narrativa: En cuanto Kelsier descubriera quién había sido tan previsor, pretendía concederle un buen ascenso. Muchísimos de los dos mil hombres habían dejado atrás la juventud. Quedaban hombres lo suficientemente sabios como para ver que el plan de Yeden era una locura y hombres lo bastante jóvenes para tener miedo.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "status": "definitive",
+      "text": {
+        "original": "Kelsier debía de haberse pasado media noche en vela, explicando los acontecimientos a los demás miembros de la banda. Vin, sin embargo, se había sentido feliz de irse directa a la cama. Las noches pasadas durmiendo sobre la dura tierra le habían recordado que una cama cómoda era un lujo al que había empezado a acostumbrarse.",
+        "current": "Kelsier debía de haberse pasado media noche en vela, explicando los acontecimientos a los demás miembros de la banda. Vin, sin embargo, se había sentido feliz de irse directa a la cama. Las noches pasadas durmiendo sobre la dura tierra le habían recordado que una cama cómoda era un lujo al que había empezado a acostumbrarse."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 4.\nAcción narrativa: Kelsier debía de haberse pasado media noche en vela, explicando los acontecimientos a los demás miembros de la banda. Vin, sin embargo, se había sentido feliz de irse directa a la cama. Las noches pasadas durmiendo sobre la dura tierra le habían recordado que una cama cómoda era un lujo al que había empezado a acostumbrarse.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 4.\nAcción narrativa: Kelsier debía de haberse pasado media noche en vela, explicando los acontecimientos a los demás miembros de la banda. Vin, sin embargo, se había sentido feliz de irse directa a la cama. Las noches pasadas durmiendo sobre la dura tierra le habían recordado que una cama cómoda era un lujo al que había empezado a acostumbrarse.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "status": "definitive",
+      "text": {
+        "original": "Estaban cerca de la fuente central, que se alzaba unos cinco palmos sobre el resto de la plaza. Alguien había construido asientos para la nobleza, y allí estaban, como si asistieran a una representación teatral o a una carrera de caballos. Muchos iban acompañados de criados que sujetaban parasoles para protegerlos de la ceniza, pero caía tan poca que algunos ni siquiera le prestaron la menor atención.",
+        "current": "Estaban cerca de la fuente central, que se alzaba unos cinco palmos sobre el resto de la plaza. Alguien había construido asientos para la nobleza, y allí estaban, como si asistieran a una representación teatral o a una carrera de caballos. Muchos iban acompañados de criados que sujetaban parasoles para protegerlos de la ceniza, pero caía tan poca que algunos ni siquiera le prestaron la menor atención."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 5.\nAcción narrativa: Estaban cerca de la fuente central, que se alzaba unos cinco palmos sobre el resto de la plaza. Alguien había construido asientos para la nobleza, y allí estaban, como si asistieran a una representación teatral o a una carrera de caballos. Muchos iban acompañados de criados que sujetaban parasoles para protegerlos de la ceniza, pero caía tan poca que algunos ni siquiera le prestaron la menor atención.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: ceniza, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 5.\nAcción narrativa: Estaban cerca de la fuente central, que se alzaba unos cinco palmos sobre el resto de la plaza. Alguien había construido asientos para la nobleza, y allí estaban, como si asistieran a una representación teatral o a una carrera de caballos. Muchos iban acompañados de criados que sujetaban parasoles para protegerlos de la ceniza, pero caía tan poca que algunos ni siquiera le prestaron la menor atención.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: ceniza, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "status": "definitive",
+      "text": {
+        "original": "Me doy cuenta de que algunos cuestionáis mi liderazgo. Creéis que me he estado haciendo demasiada propaganda entre los skaa. Susurráis que me estoy convirtiendo en otro lord Legislador...",
+        "current": "Me doy cuenta de que algunos cuestionáis mi liderazgo. Creéis que me he estado haciendo demasiada propaganda entre los skaa (clase trabajadora). Susurráis que me estoy convirtiendo en otro Lord Legislador (emperador)..."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 6.\nAcción narrativa: Me doy cuenta de que algunos cuestionáis mi liderazgo. Creéis que me he estado haciendo demasiada propaganda entre los skaa (clase trabajadora). Susurráis que me estoy convirtiendo en otro Lord Legislador (emperador)...\nPersonajes visibles: Lord Legislador.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 6.\nAcción narrativa: Me doy cuenta de que algunos cuestionáis mi liderazgo. Creéis que me he estado haciendo demasiada propaganda entre los skaa (clase trabajadora). Susurráis que me estoy convirtiendo en otro Lord Legislador (emperador)...\nPersonajes visibles: Lord Legislador.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "status": "definitive",
+      "text": {
+        "original": "Mira a ver si consigues que el muchacho hable de las finanzas de su casa. Encuéntranos un hueco y nosotros haremos el resto. Sin embargo, las ejecuciones estaban todavía frescas en su mente.",
+        "current": "Mira a ver si consigues que el muchacho hable de las finanzas de su casa. Encuéntranos un hueco y nosotros haremos el resto. Sin embargo, las ejecuciones estaban todavía frescas en su mente."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 7.\nAcción narrativa: Mira a ver si consigues que el muchacho hable de las finanzas de su casa. Encuéntranos un hueco y nosotros haremos el resto. Sin embargo, las ejecuciones estaban todavía frescas en su mente.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 7.\nAcción narrativa: Mira a ver si consigues que el muchacho hable de las finanzas de su casa. Encuéntranos un hueco y nosotros haremos el resto. Sin embargo, las ejecuciones estaban todavía frescas en su mente.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "status": "definitive",
+      "text": {
+        "original": "—Cierto —dijo Kelsier, buscando dentro de su capa y sacando un frasquito que contenía varias perlas de atium—. No importa si un feruquimista es tan fuerte como cinco hombres o como cincuenta... Si sé qué va a hacer a continuación, lo derrotaré.",
+        "current": "—Cierto —dijo Kelsier, buscando dentro de su capa y sacando un frasquito que contenía varias perlas de atium—. No importa si un feruquimista es tan fuerte como cinco hombres o como cincuenta... Si sé qué va a hacer a continuación, lo derrotaré."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 8.\nAcción narrativa: —Cierto —dijo Kelsier, buscando dentro de su capa y sacando un frasquito que contenía varias perlas de atium—. No importa si un feruquimista es tan fuerte como cinco hombres o como cincuenta... Si sé qué va a hacer a continuación, lo derrotaré.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 8.\nAcción narrativa: —Cierto —dijo Kelsier, buscando dentro de su capa y sacando un frasquito que contenía varias perlas de atium—. No importa si un feruquimista es tan fuerte como cinco hombres o como cincuenta... Si sé qué va a hacer a continuación, lo derrotaré.\nPersonajes visibles: Kelsier.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "status": "definitive",
+      "text": {
+        "original": "Adondequiera que vayas te reconocerán como un obligador o como un fraude. —Es parte del precio que tuvo que pagar por infiltrarse en el Ministerio, Vin —dijo Kelsier en voz baja. No tenía mucha vida antes de todo esto, de cualquier forma.",
+        "current": "Adondequiera que vayas te reconocerán como un obligador o como un fraude. —Es parte del precio que tuvo que pagar por infiltrarse en el Ministerio, Vin —dijo Kelsier en voz baja. No tenía mucha vida antes de todo esto, de cualquier forma."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 9.\nAcción narrativa: Adondequiera que vayas te reconocerán como un obligador o como un fraude. —Es parte del precio que tuvo que pagar por infiltrarse en el Ministerio, Vin —dijo Kelsier en voz baja. No tenía mucha vida antes de todo esto, de cualquier forma.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Ministerio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 9.\nAcción narrativa: Adondequiera que vayas te reconocerán como un obligador o como un fraude. —Es parte del precio que tuvo que pagar por infiltrarse en el Ministerio, Vin —dijo Kelsier en voz baja. No tenía mucha vida antes de todo esto, de cualquier forma.\nPersonajes visibles: Vin, Kelsier.\nEntorno principal: Ministerio, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "status": "definitive",
+      "text": {
+        "original": "—He oído que tienes noticias interesantes sobre lady Tren-Pedri Delouse —dijo Vin con cuidado—. Yo misma he oído algunas cosas interesantes últimamente. —Miró a Kliss, dando a entender que estaba dispuesta a intercambiar chismes.",
+        "current": "—He oído que tienes noticias interesantes sobre lady Tren-Pedri Delouse —dijo Vin con cuidado—. Yo misma he oído algunas cosas interesantes últimamente. —Miró a Kliss, dando a entender que estaba dispuesta a intercambiar chismes."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 10.\nAcción narrativa: —He oído que tienes noticias interesantes sobre lady Tren-Pedri Delouse —dijo Vin con cuidado—. Yo misma he oído algunas cosas interesantes últimamente. —Miró a Kliss, dando a entender que estaba dispuesta a intercambiar chismes.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 10.\nAcción narrativa: —He oído que tienes noticias interesantes sobre lady Tren-Pedri Delouse —dijo Vin con cuidado—. Yo misma he oído algunas cosas interesantes últimamente. —Miró a Kliss, dando a entender que estaba dispuesta a intercambiar chismes.\nPersonajes visibles: Vin.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "status": "definitive",
+      "text": {
+        "original": "Cuando eso suceda, no puedo garantizar tu seguridad. La familia Tekiel no fue asesinada por bandidos... No serán las últimas muertes antes de que esto haya terminado.",
+        "current": "Cuando eso suceda, no puedo garantizar tu seguridad. La familia Tekiel no fue asesinada por bandidos... No serán las últimas muertes antes de que esto haya terminado."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 11.\nAcción narrativa: Cuando eso suceda, no puedo garantizar tu seguridad. La familia Tekiel no fue asesinada por bandidos... No serán las últimas muertes antes de que esto haya terminado.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 11.\nAcción narrativa: Cuando eso suceda, no puedo garantizar tu seguridad. La familia Tekiel no fue asesinada por bandidos... No serán las últimas muertes antes de que esto haya terminado.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "status": "definitive",
+      "text": {
+        "original": "Encontró fácilmente la mesa de Shan; la mujer siempre se sentaba con un gran número de nobles asistentes, presidiendo como un lord dirige su plantación. Alguien, sin embargo, tenía que proteger a Elend: obviamente, él era demasiado necio para hacerlo por su cuenta. El terrisano de Shan la estudió mientras se acercaba.",
+        "current": "Encontró fácilmente la mesa de Shan; la mujer siempre se sentaba con un gran número de nobles asistentes, presidiendo como un lord dirige su plantación. Alguien, sin embargo, tenía que proteger a Elend: obviamente, él era demasiado necio para hacerlo por su cuenta. El terrisano de Shan la estudió mientras se acercaba."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 12.\nAcción narrativa: Encontró fácilmente la mesa de Shan; la mujer siempre se sentaba con un gran número de nobles asistentes, presidiendo como un lord dirige su plantación. Alguien, sin embargo, tenía que proteger a Elend: obviamente, él era demasiado necio para hacerlo por su cuenta. El terrisano de Shan la estudió mientras se acercaba.\nPersonajes visibles: Elend, Shan.\nEntorno principal: Terris, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 12.\nAcción narrativa: Encontró fácilmente la mesa de Shan; la mujer siempre se sentaba con un gran número de nobles asistentes, presidiendo como un lord dirige su plantación. Alguien, sin embargo, tenía que proteger a Elend: obviamente, él era demasiado necio para hacerlo por su cuenta. El terrisano de Shan la estudió mientras se acercaba.\nPersonajes visibles: Elend, Shan.\nEntorno principal: Terris, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "status": "definitive",
+      "text": {
+        "original": "Elend todavía no estaba acostumbrado al último cuerpo de la criatura, que una vez había pertenecido a un criado de la Mansión Hasting. La criatura lo saludó inclinando la cabeza y se retiró en silencio. El sillón de Straff estaba delante de varios estantes de libros, ninguno de los cuales había leído: Elend estaba seguro de ello.",
+        "current": "Elend todavía no estaba acostumbrado al último cuerpo de la criatura, que una vez había pertenecido a un criado de la Mansión Hasting. La criatura lo saludó inclinando la cabeza y se retiró en silencio. El sillón de Straff estaba delante de varios estantes de libros, ninguno de los cuales había leído: Elend estaba seguro de ello."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 13.\nAcción narrativa: Elend todavía no estaba acostumbrado al último cuerpo de la criatura, que una vez había pertenecido a un criado de la Mansión Hasting. La criatura lo saludó inclinando la cabeza y se retiró en silencio. El sillón de Straff estaba delante de varios estantes de libros, ninguno de los cuales había leído: Elend estaba seguro de ello.\nPersonajes visibles: Elend.\nEntorno principal: mansión, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 13.\nAcción narrativa: Elend todavía no estaba acostumbrado al último cuerpo de la criatura, que una vez había pertenecido a un criado de la Mansión Hasting. La criatura lo saludó inclinando la cabeza y se retiró en silencio. El sillón de Straff estaba delante de varios estantes de libros, ninguno de los cuales había leído: Elend estaba seguro de ello.\nPersonajes visibles: Elend.\nEntorno principal: mansión, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano general con foco en acción principal; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "status": "definitive",
+      "text": {
+        "original": "Sin embargo, dan a entender que también tendré poder para destruirlo. Tendré la habilidad para cumplir cualquier deseo de mi corazón. Tomará sobre sí mismo la autoridad que ningún mortal debería ostentar. Sin embargo, los filósofos me advirtieron que, si me sirvo a mí mismo con el poder, mi egoísmo lo manchará.",
+        "current": "Sin embargo, dan a entender que también tendré poder para destruirlo. Tendré la habilidad para cumplir cualquier deseo de mi corazón. Tomará sobre sí mismo la autoridad que ningún mortal debería ostentar. Sin embargo, los filósofos me advirtieron que, si me sirvo a mí mismo con el poder, mi egoísmo lo manchará."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 14.\nAcción narrativa: Sin embargo, dan a entender que también tendré poder para destruirlo. Tendré la habilidad para cumplir cualquier deseo de mi corazón. Tomará sobre sí mismo la autoridad que ningún mortal debería ostentar. Sin embargo, los filósofos me advirtieron que, si me sirvo a mí mismo con el poder, mi egoísmo lo manchará.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 14.\nAcción narrativa: Sin embargo, dan a entender que también tendré poder para destruirlo. Tendré la habilidad para cumplir cualquier deseo de mi corazón. Tomará sobre sí mismo la autoridad que ningún mortal debería ostentar. Sin embargo, los filósofos me advirtieron que, si me sirvo a mí mismo con el poder, mi egoísmo lo manchará.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: plano medio con protagonistas en primer término; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "status": "definitive",
+      "text": {
+        "original": "Creían que colores distintos eran indicativos de distintos tipos de fortuna y detallaban sus descripciones de luz y color. Es gracias a ellos que tenemos algunas de nuestras mejores ideas de cómo pudieron ser las cosas antes de la Ascensión. Tenían una escala de colores y la usaban para describir el cielo del azul más intenso y las diversas plantas en sus tonos de verde.",
+        "current": "Creían que colores distintos eran indicativos de distintos tipos de fortuna y detallaban sus descripciones de luz y color. Es gracias a ellos que tenemos algunas de nuestras mejores ideas de cómo pudieron ser las cosas antes de la Ascensión. Tenían una escala de colores y la usaban para describir el cielo del azul más intenso y las diversas plantas en sus tonos de verde."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 15.\nAcción narrativa: Creían que colores distintos eran indicativos de distintos tipos de fortuna y detallaban sus descripciones de luz y color. Es gracias a ellos que tenemos algunas de nuestras mejores ideas de cómo pudieron ser las cosas antes de la Ascensión. Tenían una escala de colores y la usaban para describir el cielo del azul más intenso y las diversas plantas en sus tonos de verde.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 15.\nAcción narrativa: Creían que colores distintos eran indicativos de distintos tipos de fortuna y detallaban sus descripciones de luz y color. Es gracias a ellos que tenemos algunas de nuestras mejores ideas de cómo pudieron ser las cosas antes de la Ascensión. Tenían una escala de colores y la usaban para describir el cielo del azul más intenso y las diversas plantas en sus tonos de verde.\nPersonajes visibles: personajes anónimos del Imperio Final.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo bajo para transmitir tensión; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "status": "definitive",
+      "text": {
+        "original": "De hecho, Marsh debía de haber corrido un riesgo enorme al enviarlo. Incluso un riesgo excesivo, pero la información que contenía... Iba vestida de noche, con un hermoso atuendo de una pieza solo levemente más elegante que un vestido de baile.",
+        "current": "De hecho, Marsh debía de haber corrido un riesgo enorme al enviarlo. Incluso un riesgo excesivo, pero la información que contenía... Iba vestida de noche, con un hermoso atuendo de una pieza solo levemente más elegante que un vestido de baile."
+      },
+      "images": {
+        "main": {
+          "slot_name": "main",
+          "status": "draft",
+          "prompt": {
+            "original": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 16.\nAcción narrativa: De hecho, Marsh debía de haber corrido un riesgo enorme al enviarlo. Incluso un riesgo excesivo, pero la información que contenía... Iba vestida de noche, con un hermoso atuendo de una pieza solo levemente más elegante que un vestido de baile.\nPersonajes visibles: Marsh.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados.",
+            "current": "Ilustración narrativa 2D de línea limpia y expresiva, color plano controlado, sombras mínimas, siluetas claras y lectura visual inmediata. Estética editorial inspirada en álbum ilustrado clásico europeo de trazo simple (solo acabado visual, sin copiar composición ni personajes de otras obras).\nEscena del cuento 'El precio de la esperanza', página 16.\nAcción narrativa: De hecho, Marsh debía de haber corrido un riesgo enorme al enviarlo. Incluso un riesgo excesivo, pero la información que contenía... Iba vestida de noche, con un hermoso atuendo de una pieza solo levemente más elegante que un vestido de baile.\nPersonajes visibles: Marsh.\nEntorno principal: Luthadel, atmósfera de ceniza y bruma coherente con El Imperio Final.\nComposición: ángulo alto para mostrar entorno y escala; siluetas legibles y jerarquía visual clara.\nIluminación: contraste suave, dominante fría con acentos cálidos en focos narrativos.\nContinuidad obligatoria: vestuario y rasgos consistentes con la biblia visual del libro; sin cambios arbitrarios entre páginas.\nEvitar: hiperrealismo, estilo anime, render 3D, textura fotográfica, estética kawaii, deformaciones caricaturescas extremas, armas anacrónicas, vestuario moderno, texto o rótulos incrustados."
+          },
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    }
+  ]
+}

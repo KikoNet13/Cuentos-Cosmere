@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.1",
+  "story_id": "08",
+  "story_rel_path": "cosmere/nacidos-de-la-bruma-era-1/el-imperio-final-codex/08",
+  "generated_at": "2026-02-17T12:08:42.846937+00:00",
+  "review_mode": "canonical_pdf_only",
+  "canon_source": {
+    "reference_pdf_rel_path": "library/_inbox/El imperio final.pdf",
+    "chapter_range": {
+      "from": 35,
+      "to": 38
+    }
+  },
+  "summary": {
+    "critical": 0,
+    "major": 0,
+    "minor": 0,
+    "info": 2
+  },
+  "metrics": {
+    "pages": 16,
+    "issues_total": 2,
+    "detectors": {
+      "canon.low_page_overlap": 1,
+      "canon.quote_loss": 1
+    }
+  },
+  "issues": [
+    {
+      "issue_id": "08-001",
+      "severity": "info",
+      "category": "canon.low_page_overlap",
+      "page_number": 1,
+      "evidence": "Sin alertas críticas en legibilidad inicial. Revisión humana recomendada para matiz estilístico.",
+      "suggested_action": "Validar tono y continuidad de personajes en pase editorial.",
+      "status": "open",
+      "detector": "editorial.sanity",
+      "confidence": 0.61
+    },
+    {
+      "issue_id": "08-002",
+      "severity": "info",
+      "category": "canon.quote_loss",
+      "page_number": 1,
+      "evidence": "Cuento generado desde capítulos 35-38 del PDF canónico único.",
+      "suggested_action": "No aplicar cambios sin contrastar con el mismo rango de capítulos del PDF fuente.",
+      "status": "confirmed",
+      "detector": "canon.chapter_range_binding",
+      "confidence": 0.99
+    }
+  ]
+}
