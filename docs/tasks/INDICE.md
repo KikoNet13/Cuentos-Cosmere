@@ -1,6 +1,16 @@
 # Índice de tareas
 
-- Próximo ID: `021`
+- Próximo ID: `022`
+
+## TAREA-021-refactor-skill-ingesta-conversacional-sin-scripts
+
+- Fecha: 17/02/26 11:02
+- Estado: cerrada
+- Resumen: refactor de `adaptacion-ingesta-inicial` a skill 100% conversacional sin CLI/scripts, con contraste canonico por `pdf`, preguntas una a una y escritura incremental en archivos finales.
+- Versión: 1.8.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`
+- Archivo: `docs/tasks/TAREA-021-refactor-skill-ingesta-conversacional-sin-scripts.md`
 
 ## TAREA-020-contraste-canonico-obligatorio-pdf
 

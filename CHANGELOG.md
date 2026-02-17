@@ -5,10 +5,29 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [17/02/26] - Skill de ingesta inicial 100% conversacional (sin scripts)
+
+- Refactor de `.codex/skills/adaptacion-ingesta-inicial` a ejecucion en chat sin CLI ni `scripts/`.
+- Eliminado el contrato de envelope ejecutable (`phase`, `pending_questions`, `planned_outputs`, `written_outputs`).
+- `SKILL.md` reescrito con protocolo conversacional:
+  - gate canonico bloqueante por lote;
+  - preguntas una a una con opciones;
+  - resolucion en bloque para la misma incoherencia repetida;
+  - escritura incremental en archivos finales.
+- Contraste canonico definido con skill `pdf` (sin OCR ni pipeline parser local en la skill).
+- Contrato limpio en `references/contracts.md` centrado en salidas JSON y reglas operativas.
+- Actualizada documentacion global (`AGENTS.md`, `README.md`, `app/README.md`, `docs/tasks/INDICE.md`).
+- Tarea: `docs/tasks/TAREA-021-refactor-skill-ingesta-conversacional-sin-scripts.md`.
+
 ## [16/02/26] - Ingesta inicial con contraste canonico obligatorio PDF
 
-- `adaptacion-ingesta-inicial` ahora bloquea por lote cuando falta cobertura canonica PDF (`input.missing_pdf`, `pdf.parser_unavailable`, `pdf.unreadable`, `pdf.page_unreadable`).
-- Nuevo preflight multi-backend de PDF (`pdfplumber` -> `pypdf`) con OCR opcional por pagina.
+- `adaptacion-ingesta-inicial` bloquea por lote cuando falta cobertura canonica PDF (`input.missing_pdf`, `pdf.parser_unavailable`, `pdf.unreadable`).
+- Nuevo preflight multi-backend de PDF (`pdfplumber` -> `pypdf`) en modo parser-only (sin OCR).
+- Paginas no textuales del PDF (portada/mapa) pasan a ser no bloqueantes si hay senal narrativa suficiente para contraste.
+- Contraste canonico refinado a alineacion semantica MD->PDF (sin comparacion 1:1 por numero de pagina).
+- Glosario/contexto refinado a modo `md-first` con filtro de ruido y preguntas de glosario en `choice` con opciones.
+- Contexto jerarquico por nodos (`book`, ancestros y global) con escalado a niveles superiores bajo confirmacion por termino.
+- Nuevo detector de descriptores conceptuales para incoherencias tipo `Lord Legislador` vs `rey malvado` y variantes de entorno tipo `cae ceniza` vs `cae nieve gris`.
 - Nuevos detectores por pagina: overlap canonico, entidades faltantes/sobrantes, diferencias numericas, perdida de citas y desajuste por edad (`age.too_complex|age.too_childish`).
 - Contrato enriquecido:
   - `pending_questions[]` con `reason` y `evidence_pages`.

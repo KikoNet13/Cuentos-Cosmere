@@ -36,14 +36,13 @@ library/_backups/         # opcional
 ## Skills versionadas
 
 - `.codex/skills/adaptacion-ingesta-inicial/`
-  - Ingesta inicial interactiva de `_inbox` a `NN.json` + sidecars con contraste canonico obligatorio contra `NN.pdf`.
-  - Si falta PDF util (parser/OCR), la skill devuelve `phase=failed` y bloquea el lote.
-  - Script: `python .codex/skills/adaptacion-ingesta-inicial/scripts/ingesta_inicial.py run --help`
-
-Dependencias recomendadas para la skill de ingesta:
-- `pdfplumber`
-- `pypdf`
-- `pdf2image` + `pytesseract` + binario `tesseract` (OCR opcional)
+  - Ingesta inicial conversacional de `_inbox` a `NN.json` + sidecars con contraste canonico obligatorio contra `NN.pdf`.
+  - Sin scripts ni CLI: el agente ejecuta todo el flujo en chat.
+  - Si falta senal textual suficiente de historia en PDF canonico, la skill bloquea el lote completo.
+  - Paginas visuales sin texto (portada/mapa) no bloquean por si solas.
+  - Glosario/contexto en modo `md-first expandido` (el PDF aporta terminos solo para resolver incoherencias reales).
+  - Soporte de contexto jerarquico por nodos (`book` + ancestros + global).
+  - Contraste canonico con apoyo de la skill `pdf`.
 
 ## UI
 

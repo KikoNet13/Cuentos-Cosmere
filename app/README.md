@@ -17,7 +17,7 @@
   - alternativas de imagen por slot y `active_id`
 - Los assets de imagen viven en el mismo directorio del libro con nombre opaco `img_<uuid>_<slug>.<ext>`.
 - Estados aceptados de cuento: legacy (`draft`, `ready`, etc.) y flujo actual (`in_review`, `definitive`).
-- La ingesta inicial externa (`.codex/skills/adaptacion-ingesta-inicial`) aplica gate PDF obligatorio; `app/` consume solo resultados ya escritos.
+- La ingesta inicial externa (`.codex/skills/adaptacion-ingesta-inicial`) es conversacional, aplica gate PDF obligatorio por lote y escribe resultados en JSON; `app/` solo consume esos resultados.
 
 ## Runtime web
 

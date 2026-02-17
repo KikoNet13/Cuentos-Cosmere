@@ -27,6 +27,7 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 7. Los assets de imagen se nombran con formato opaco `img_<uuid>_<slug>.<ext>` y la relacion pagina/slot vive en JSON.
 8. `library/_inbox/` se usa como bandeja de propuestas editoriales `.md` y referencias `.pdf`.
    - Para la skill `adaptacion-ingesta-inicial`, el contraste con `NN.pdf` es obligatorio por lote: si un cuento no tiene cobertura PDF util, la ejecucion falla.
+   - La skill `adaptacion-ingesta-inicial` es 100% conversacional: no usa scripts ni CLI, y utiliza la skill `pdf` para contraste canonico.
 9. `library/_backups/` es opcional para respaldos manuales.
 10. Sidecars de revision vigentes en `library/<book>/_reviews/`:
     - `adaptation_context.json` (contexto y glosario por libro)
@@ -39,7 +40,8 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 
 1. Las skills de adaptacion versionadas en este repositorio viven en `.codex/skills/`.
 2. `app/` no ejecuta pipeline editorial.
-3. Cualquier flujo editorial externo debe respetar este contrato de datos.
+3. `adaptacion-ingesta-inicial` se ejecuta en chat con preguntas una a una y opciones; la escritura es incremental sobre archivos finales.
+4. Cualquier flujo editorial externo debe respetar este contrato de datos.
 
 ## Runtime de app
 
