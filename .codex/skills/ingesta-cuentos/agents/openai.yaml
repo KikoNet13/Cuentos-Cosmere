@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ingesta Cuentos"
+  short_description: "Valida e importa NN.json/meta.json desde _inbox al contrato final"
+  default_prompt: "Usa $ingesta-cuentos para ejecutar ingesta conversacional: detectar library/_inbox/<book_title>/NN.json, pedir book_rel_path, validar contrato nuevo, bloquear lote si hay errores, emitir mensajes accionables para NotebookLM y mover solo lote valido a library/<book_rel_path>/ con status definitive."

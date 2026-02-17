@@ -2,7 +2,7 @@
 
 ## Proposito
 
-Este repositorio aplica un flujo profesional para el **Generador de cuentos ilustrados**.
+Este repositorio opera como plataforma orquestadora del flujo 3 IAs para cuentos ilustrados.
 
 ## Reglas operativas
 
@@ -12,36 +12,63 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 4. Evitar acciones destructivas fuera del alcance de la tarea activa.
 5. Tras cada plan aprobado: registrar tarea, actualizar indice/changelog, cerrar con un commit unico y hacer push a GitHub.
 
+## Flujo 3 IAs (oficial)
+
+1. NotebookLM:
+   - fuente de generacion editorial;
+   - entrega `NN.json` y opcional `meta.json` en `library/_inbox/<book_title>/`.
+2. Codex (este repo):
+   - valida contrato, mueve/importa lotes y mantiene app;
+   - emite mensajes accionables para NotebookLM;
+   - facilita prompts y gestion de assets para ChatGPT Project.
+3. ChatGPT Project:
+   - genera imagenes a partir de prompts/anchors;
+   - devuelve archivos para importarlos en su slot/ancla correcto.
+
+Notas:
+
+- El orquestador documental vive en este archivo (`AGENTS.md`), sin playbooks paralelos.
+- La skill activa de ingesta es `ingesta-cuentos`.
+
 ## Contrato de datos vigente
 
 1. Fuente de verdad: `library/`.
 2. Un libro se detecta por presencia de uno o mas archivos `NN.json` en su carpeta.
 3. Cada cuento se guarda en un unico archivo `NN.json` (2 digitos).
 4. Estructura canonica de `NN.json`:
-   - top-level base: `schema_version`, `story_id`, `title`, `status`, `book_rel_path`, `created_at`, `updated_at`, `pages`.
-   - top-level extension inicial de ingesta: `story_title`, `cover`, `source_refs`, `ingest_meta`.
-   - por pagina: `page_number`, `status`, `text.original`, `text.current`, `images`.
+   - top-level obligatorio: `story_id`, `title`, `status`, `book_rel_path`, `created_at`, `updated_at`, `cover`, `pages`.
+   - por pagina: `page_number`, `text`, `images`.
    - `images.main` obligatorio, `images.secondary` opcional.
-5. Cada slot de imagen define `status`, `prompt.original`, `prompt.current`, `active_id` y `alternatives[]`.
-6. Cada alternativa define `id`, `slug`, `asset_rel_path`, `mime_type`, `status`, `created_at`, `notes`.
-7. Los assets de imagen se nombran con formato opaco `img_<uuid>_<slug>.<ext>` y la relacion pagina/slot vive en JSON.
-8. `library/_inbox/` se usa como bandeja de propuestas editoriales `.md` y referencias `.pdf`.
-   - Para la skill `adaptacion-ingesta-inicial`, el contraste con `NN.pdf` es obligatorio por lote: si un cuento no tiene cobertura PDF util, la ejecucion falla.
-   - La skill `adaptacion-ingesta-inicial` es 100% conversacional: no usa scripts ni CLI, y utiliza la skill `pdf` para contraste canonico.
-9. `library/_backups/` es opcional para respaldos manuales.
-10. Sidecars de revision vigentes en `library/<book>/_reviews/`:
-    - `adaptation_context.json` (contexto y glosario por libro)
-    - `NN.issues.json` (incoherencias/errores por cuento)
-    - `NN.review.json` (maestro por cuento)
-    - `NN.decisions.log.jsonl` (log final por hallazgo resuelto)
-11. Sidecars legacy (`context_chain`, `glossary_merged`, `pipeline_state`, `NN.findings`, etc.) quedan fuera de contrato.
+5. Contrato de slot de imagen (`cover` y `images.*`):
+   - `status`, `prompt`, `active_id`, `alternatives[]`, `reference_ids[]` (opcional).
+6. Contrato de alternativa:
+   - `id` (filename con extension),
+   - `slug`,
+   - `asset_rel_path`,
+   - `mime_type`,
+   - `status`,
+   - `created_at`,
+   - `notes`.
+7. Los assets de imagen se nombran con formato opaco `<uuid>_<slug>.<ext>`.
+8. Todos los assets de nodo viven en `library/<node>/images/`.
+9. Cada nodo mantiene `library/<node>/images/index.json` con:
+   - `filename`, `asset_rel_path`, `description`, `node_rel_path`, `created_at`.
+10. `library/_inbox/` es la bandeja de entrada oficial:
+    - `NN.json` por cuento;
+    - `meta.json` opcional por lote;
+    - `.md/.pdf` se ignoran en la ingesta nueva.
+11. `meta.json` por jerarquia:
+    - `library/meta.json` (global),
+    - `library/<node>/meta.json` (ancestros + libro),
+    - minimos: `collection.title`, `anchors[]`, `updated_at`.
+12. Sidecars legacy de adaptacion (`adaptation_context.json`, `NN.issues.json`, etc.) quedan fuera de contrato.
 
 ## Pipeline editorial
 
-1. Las skills de adaptacion versionadas en este repositorio viven en `.codex/skills/`.
-2. `app/` no ejecuta pipeline editorial.
-3. `adaptacion-ingesta-inicial` se ejecuta en chat con preguntas una a una y opciones; la escritura es incremental sobre archivos finales.
-4. Cualquier flujo editorial externo debe respetar este contrato de datos.
+1. Las skills versionadas en este repositorio viven en `.codex/skills/`.
+2. Skill de ingesta activa: `.codex/skills/ingesta-cuentos/` (conversacional, sin scripts).
+3. `app/` no ejecuta pipeline editorial autonomo; solo consume y edita contrato final.
+4. Cualquier flujo externo debe respetar este contrato.
 
 ## Runtime de app
 
@@ -52,12 +79,21 @@ Este repositorio aplica un flujo profesional para el **Generador de cuentos ilus
 5. Lectura por pagina: `/story/<path>/page/<int:page_number>`.
 6. Modo editorial por pagina: `/editor/story/<path>/page/<int:page_number>`.
 7. Fragmentos HTMX de lectura: `/fragments/story/<path>/page/<int:page_number>/*`.
-8. Rutas legacy (`/n/<path>` y `/story/<path>?p=N[&editor=1]`) quedan como compatibilidad temporal con redirect.
+8. Compatibilidad legacy:
+   - `/n/<path>` y `/story/<path>?p=N[&editor=1]` se mantienen solo como redirect temporal.
 
 ## CLI vigente
 
 1. `python manage.py runserver`
 2. No existen comandos CLI de ingesta/adaptacion en `app/`.
+
+## Mensajeria orquestadora (Codex)
+
+Codex debe poder producir estos bloques para el usuario:
+
+1. Setup NotebookLM (checklist + prompt base de salida JSON).
+2. Setup ChatGPT Project (checklist + prompt base de continuidad visual).
+3. Delta update estructurado para reentregas parciales de NotebookLM.
 
 ## Sistema documental
 

@@ -8,6 +8,7 @@
       <div>
         <h1 class="title is-3 mb-2">{{ story.title }}</h1>
         <p class="has-text-grey mb-1">Ruta: <code>{{ story.story_rel_path }}</code></p>
+        <p class="has-text-grey mb-1">Libro: <code>{{ story.book_rel_path }}</code></p>
         <p class="has-text-grey">Estado: <strong>{{ story.status }}</strong></p>
       </div>
       <a
@@ -21,57 +22,161 @@
 
   {% if missing_pages %}
     <article class="message is-warning is-small mb-4">
-      <div class="message-body">Faltan páginas en secuencia: {{ missing_pages | join(", ") }}.</div>
+      <div class="message-body">Faltan paginas en secuencia: {{ missing_pages | join(", ") }}.</div>
     </article>
   {% endif %}
 
   {% if page %}
     <section class="box">
-      <h2 class="title is-5">Edición de página {{ page.page_number }}</h2>
+      <h2 class="title is-5">Edicion de pagina {{ page.page_number }}</h2>
       <form method="post" action="{{ url_for('web.save_story_page', story_path=story.story_rel_path, page_number=page.page_number) }}" class="is-flex is-flex-direction-column gap-3">
         <input type="hidden" name="next" value="{{ request.full_path }}">
 
         <div>
-          <label class="label">Texto actual</label>
-          <textarea class="textarea" name="text_current" rows="8">{{ page.text_current }}</textarea>
-        </div>
-
-        <div class="box is-shadowless has-background-light">
-          <h3 class="title is-6">Texto original</h3>
-          <pre id="editor-text-original" class="story-prose">{{ page.text_original }}</pre>
-          <div class="is-flex is-align-items-center gap-2 mt-2">
-            <button class="button is-small is-light" type="button" onclick="copyTextFromElement('editor-text-original','copy-editor-text-original')">Copiar original</button>
-            <span id="copy-editor-text-original" class="copy-feedback"></span>
-          </div>
+          <label class="label">Texto</label>
+          <textarea class="textarea" name="text" rows="8">{{ page.text }}</textarea>
         </div>
 
         <div>
-          <label class="label">Prompt main actual</label>
-          <textarea class="textarea" name="main_prompt_current" rows="4">{{ (slot_map.main.prompt_current if slot_map.main else "") }}</textarea>
+          <label class="label">Prompt main</label>
+          <textarea class="textarea" name="main_prompt" rows="4">{{ (slot_map.main.prompt if slot_map.main else "") }}</textarea>
         </div>
-        <div class="box is-shadowless has-background-light">
-          <h3 class="title is-6">Prompt main original</h3>
-          <pre id="editor-main-original" class="story-prose">{{ (slot_map.main.prompt_original if slot_map.main else "") }}</pre>
-          <div class="is-flex is-align-items-center gap-2 mt-2">
-            <button class="button is-small is-light" type="button" onclick="copyTextFromElement('editor-main-original','copy-editor-main-original')">Copiar original</button>
-            <span id="copy-editor-main-original" class="copy-feedback"></span>
-          </div>
+        <div>
+          <label class="label">Reference IDs main (csv)</label>
+          <input class="input" type="text" name="main_reference_ids" value="{{ (slot_map.main.reference_ids_csv if slot_map.main else "") }}" placeholder="archivo1.png, archivo2.jpg">
         </div>
 
         <div>
-          <label class="label">Prompt secondary actual (opcional)</label>
-          <textarea class="textarea" name="secondary_prompt_current" rows="4">{{ (slot_map.secondary.prompt_current if slot_map.secondary else "") }}</textarea>
+          <label class="label">Prompt secondary (opcional)</label>
+          <textarea class="textarea" name="secondary_prompt" rows="4">{{ (slot_map.secondary.prompt if slot_map.secondary else "") }}</textarea>
         </div>
-        <div class="box is-shadowless has-background-light">
-          <h3 class="title is-6">Prompt secondary original</h3>
-          <pre id="editor-secondary-original" class="story-prose">{{ (slot_map.secondary.prompt_original if slot_map.secondary else "") }}</pre>
-          <div class="is-flex is-align-items-center gap-2 mt-2">
-            <button class="button is-small is-light" type="button" onclick="copyTextFromElement('editor-secondary-original','copy-editor-secondary-original')">Copiar original</button>
-            <span id="copy-editor-secondary-original" class="copy-feedback"></span>
-          </div>
+        <div>
+          <label class="label">Reference IDs secondary (csv)</label>
+          <input class="input" type="text" name="secondary_reference_ids" value="{{ (slot_map.secondary.reference_ids_csv if slot_map.secondary else "") }}" placeholder="archivo1.png, archivo2.jpg">
         </div>
 
-        <button class="button is-link" type="submit">Guardar página</button>
+        <button class="button is-link" type="submit">Guardar pagina</button>
+      </form>
+    </section>
+
+    <section class="box editor-slot-card">
+      <div class="is-flex is-justify-content-space-between is-align-items-center is-flex-wrap-wrap gap-2 mb-3">
+        <h3 class="title is-6 mb-0">Portada</h3>
+        <span class="tag is-rounded">Estado: {{ cover_slot.status }}</span>
+      </div>
+
+      <form method="post" action="{{ url_for('web.save_story_cover', story_path=story.story_rel_path, page_number=page.page_number) }}" class="is-flex is-flex-direction-column gap-2">
+        <input type="hidden" name="next" value="{{ request.full_path }}">
+        <div>
+          <label class="label is-size-7">Prompt portada</label>
+          <textarea class="textarea is-small" name="cover_prompt" rows="3">{{ cover_slot.prompt }}</textarea>
+        </div>
+        <div>
+          <label class="label is-size-7">Reference IDs portada (csv)</label>
+          <input class="input is-small" type="text" name="cover_reference_ids" value="{{ cover_slot.reference_ids_csv }}" placeholder="archivo1.png, archivo2.jpg">
+        </div>
+        <button class="button is-small is-link" type="submit">Guardar portada</button>
+      </form>
+
+      <p class="panel-label mt-4">Referencias del prompt</p>
+      {% if cover_slot.reference_assets %}
+        <div class="advanced-alt-grid">
+          {% for ref in cover_slot.reference_assets %}
+            {% set ref_index = loop.index %}
+            <article class="alt-card">
+              <p class="is-size-7 mb-1"><strong>Archivo:</strong> <code>{{ ref.filename }}</code></p>
+              {% if ref.found %}
+                <p class="is-size-7 mb-2"><strong>Nodo:</strong> <code>{{ ref.node_rel_path or 'library' }}</code></p>
+                <img src="{{ ref.image_url }}" alt="Referencia portada {{ ref.filename }}">
+                <div class="is-flex is-align-items-center gap-2 mt-2">
+                  <button class="button is-small is-light" type="button" onclick="copyImageFromUrl('{{ ref.image_url }}','copy-cover-ref-{{ ref_index }}')">Copiar imagen</button>
+                  <span id="copy-cover-ref-{{ ref_index }}" class="copy-feedback"></span>
+                </div>
+              {% else %}
+                <p class="has-text-danger is-size-7">Referencia no encontrada.</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="has-text-grey is-size-7">Sin reference_ids en portada.</p>
+      {% endif %}
+
+      {% if cover_slot.active_item and cover_slot.active_item.image_exists %}
+        <p class="panel-label mt-4">Portada activa</p>
+        <img class="editor-slot-image" src="{{ cover_slot.active_item.image_url }}" alt="Portada activa">
+        <div class="is-flex is-align-items-center gap-2 mt-2">
+          <button class="button is-small is-light" type="button" onclick="copyImageFromUrl('{{ cover_slot.active_item.image_url }}','copy-cover-active')">Copiar portada</button>
+          <span id="copy-cover-active" class="copy-feedback"></span>
+        </div>
+      {% else %}
+        <p class="has-text-grey is-size-7 mt-4">Sin portada activa.</p>
+      {% endif %}
+
+      <p class="panel-label mt-4">Alternativas de portada</p>
+      {% if cover_slot.alternatives %}
+        <div class="advanced-alt-grid">
+          {% for alternative in cover_slot.alternatives %}
+            {% set alternative_index = loop.index %}
+            <article class="alt-card {% if alternative.is_active %}is-active{% endif %}">
+              <p class="is-size-7 mb-1"><strong>ID:</strong> <code>{{ alternative.id }}</code></p>
+              <p class="is-size-7 mb-2"><strong>Slug:</strong> {{ alternative.slug }}</p>
+              {% if alternative.image_exists %}
+                <img src="{{ alternative.image_url }}" alt="Portada alternativa {{ alternative.id }}">
+                <div class="is-flex is-align-items-center gap-2 mt-2">
+                  <button class="button is-small is-light" type="button" onclick="copyImageFromUrl('{{ alternative.image_url }}','copy-cover-alt-{{ alternative_index }}')">Copiar imagen</button>
+                  <span id="copy-cover-alt-{{ alternative_index }}" class="copy-feedback"></span>
+                </div>
+              {% else %}
+                <p class="has-text-grey is-size-7">Archivo no encontrado.</p>
+              {% endif %}
+
+              {% if alternative.is_active %}
+                <span class="tag is-success is-light mt-3">Activa</span>
+              {% else %}
+                <form method="post" action="{{ url_for('web.activate_cover_image', story_path=story.story_rel_path, page_number=page.page_number) }}" class="mt-3">
+                  <input type="hidden" name="next" value="{{ request.full_path }}">
+                  <input type="hidden" name="alternative_id" value="{{ alternative.id }}">
+                  <button class="button is-small is-primary is-light" type="submit">Usar como activa</button>
+                </form>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="has-text-grey is-size-7">Sin alternativas registradas.</p>
+      {% endif %}
+
+      <hr>
+      <h4 class="title is-6">Subir portada alternativa</h4>
+      <form
+        method="post"
+        action="{{ url_for('web.upload_cover_image', story_path=story.story_rel_path, page_number=page.page_number) }}"
+        enctype="multipart/form-data"
+        class="is-flex is-flex-direction-column gap-2"
+      >
+        <input type="hidden" name="next" value="{{ request.full_path }}">
+        <div>
+          <label class="label is-size-7">Archivo</label>
+          <input class="input is-small" type="file" name="image_file" accept="image/png,image/jpeg,image/webp,image/gif">
+        </div>
+        <div>
+          <label class="label is-size-7">Slug</label>
+          <input class="input is-small" type="text" name="alt_slug" placeholder="cover-editorial">
+        </div>
+        <div>
+          <label class="label is-size-7">Notas</label>
+          <textarea class="textarea is-small" name="alt_notes" rows="2" placeholder="Observaciones editoriales"></textarea>
+        </div>
+        <div>
+          <label class="label is-size-7">Pegar desde portapapeles</label>
+          <div class="is-flex is-align-items-center gap-2">
+            <button class="button is-small is-light" type="button" onclick="pasteImageToHidden('pasted-cover','paste-feedback-cover')">Pegar imagen</button>
+            <span id="paste-feedback-cover" class="copy-feedback"></span>
+          </div>
+          <input id="pasted-cover" type="hidden" name="pasted_image_data" value="">
+        </div>
+        <button class="button is-small is-link is-light" type="submit">Agregar alternativa</button>
       </form>
     </section>
 
@@ -81,10 +186,169 @@
         {% include "components/story/editor_slot_card.html" %}
       {% endfor %}
     </section>
+
+    <section class="box mt-4">
+      <h2 class="title is-5">Anclas y meta jerarquico</h2>
+      <p class="has-text-grey is-size-7 mb-3">Puedes guardar anclas en cualquier nivel (global, ancestros o libro).</p>
+
+      <form method="post" action="{{ url_for('web.save_anchor', story_path=story.story_rel_path, page_number=page.page_number) }}" class="is-flex is-flex-direction-column gap-2 mb-4">
+        <input type="hidden" name="next" value="{{ request.full_path }}">
+        <div class="columns is-multiline">
+          <div class="column is-12-tablet is-4-desktop">
+            <label class="label is-size-7">Nivel de guardado</label>
+            <div class="select is-fullwidth is-small">
+              <select name="anchor_level">
+                {% for option in anchor_level_options %}
+                  <option value="{{ option.path }}">{{ option.label }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="column is-12-tablet is-4-desktop">
+            <label class="label is-size-7">Anchor ID</label>
+            <input class="input is-small" type="text" name="anchor_id" placeholder="kelsier_base">
+          </div>
+          <div class="column is-12-tablet is-4-desktop">
+            <label class="label is-size-7">Nombre</label>
+            <input class="input is-small" type="text" name="anchor_name" placeholder="Kelsier">
+          </div>
+        </div>
+        <div>
+          <label class="label is-size-7">Prompt</label>
+          <textarea class="textarea is-small" name="anchor_prompt" rows="3" placeholder="Descripcion visual estable"></textarea>
+        </div>
+        <div class="columns">
+          <div class="column is-12-tablet is-4-desktop">
+            <label class="label is-size-7">Estado</label>
+            <div class="select is-fullwidth is-small">
+              <select name="anchor_status">
+                <option value="draft">draft</option>
+                <option value="approved">approved</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button class="button is-small is-link" type="submit">Crear/actualizar ancla</button>
+      </form>
+
+      {% if anchors %}
+        <div class="advanced-grid">
+          {% for anchor in anchors %}
+            {% set anchor_index = loop.index %}
+            <article class="box is-shadowless">
+              <div class="is-flex is-justify-content-space-between is-align-items-center is-flex-wrap-wrap gap-2">
+                <h3 class="title is-6 mb-0">{{ anchor.name }} <span class="has-text-grey">({{ anchor.id }})</span></h3>
+                <span class="tag is-light">Nivel: {{ anchor.source_label }}</span>
+              </div>
+              <p class="panel-label mt-3">Prompt</p>
+              <pre id="anchor-prompt-{{ anchor_index }}" class="story-prose">{{ anchor.prompt }}</pre>
+              <div class="is-flex is-align-items-center gap-2 mt-2">
+                <button class="button is-small is-light" type="button" onclick="copyTextFromElement('anchor-prompt-{{ anchor_index }}','copy-anchor-prompt-{{ anchor_index }}')">Copiar prompt</button>
+                <span id="copy-anchor-prompt-{{ anchor_index }}" class="copy-feedback"></span>
+              </div>
+
+              <p class="panel-label mt-4">Imagen activa</p>
+              {% if anchor.active_item and anchor.active_item.image_exists %}
+                <img class="editor-slot-image" src="{{ anchor.active_item.image_url }}" alt="Ancla activa {{ anchor.id }}">
+                <div class="is-flex is-align-items-center gap-2 mt-2">
+                  <button class="button is-small is-light" type="button" onclick="copyImageFromUrl('{{ anchor.active_item.image_url }}','copy-anchor-active-{{ anchor_index }}')">Copiar imagen</button>
+                  <span id="copy-anchor-active-{{ anchor_index }}" class="copy-feedback"></span>
+                </div>
+              {% else %}
+                <p class="has-text-grey is-size-7">Sin imagen activa.</p>
+              {% endif %}
+
+              <p class="panel-label mt-4">image_filenames / referencias</p>
+              {% if anchor.reference_assets %}
+                <div class="advanced-alt-grid">
+                  {% for ref in anchor.reference_assets %}
+                    {% set ref_index = loop.index %}
+                    <article class="alt-card">
+                      <p class="is-size-7 mb-1"><strong>Archivo:</strong> <code>{{ ref.filename }}</code></p>
+                      {% if ref.found %}
+                        <img src="{{ ref.image_url }}" alt="Referencia ancla {{ ref.filename }}">
+                        <div class="is-flex is-align-items-center gap-2 mt-2">
+                          <button class="button is-small is-light" type="button" onclick="copyImageFromUrl('{{ ref.image_url }}','copy-anchor-ref-{{ anchor_index }}-{{ ref_index }}')">Copiar imagen</button>
+                          <span id="copy-anchor-ref-{{ anchor_index }}-{{ ref_index }}" class="copy-feedback"></span>
+                        </div>
+                      {% else %}
+                        <p class="has-text-danger is-size-7">Referencia no encontrada.</p>
+                      {% endif %}
+                    </article>
+                  {% endfor %}
+                </div>
+              {% else %}
+                <p class="has-text-grey is-size-7">Sin image_filenames.</p>
+              {% endif %}
+
+              <p class="panel-label mt-4">Alternativas</p>
+              {% if anchor.alternatives %}
+                <div class="advanced-alt-grid">
+                  {% for alternative in anchor.alternatives %}
+                    {% set alternative_index = loop.index %}
+                    <article class="alt-card {% if alternative.is_active %}is-active{% endif %}">
+                      <p class="is-size-7 mb-1"><strong>ID:</strong> <code>{{ alternative.id }}</code></p>
+                      {% if alternative.image_exists %}
+                        <img src="{{ alternative.image_url }}" alt="Alternativa ancla {{ alternative.id }}">
+                      {% else %}
+                        <p class="has-text-grey is-size-7">Archivo no encontrado.</p>
+                      {% endif %}
+                      {% if alternative.is_active %}
+                        <span class="tag is-success is-light mt-3">Activa</span>
+                      {% else %}
+                        <form method="post" action="{{ url_for('web.activate_anchor_image', story_path=story.story_rel_path, page_number=page.page_number, anchor_id=anchor.id) }}" class="mt-3">
+                          <input type="hidden" name="next" value="{{ request.full_path }}">
+                          <input type="hidden" name="anchor_level" value="{{ anchor.source_node_rel_path }}">
+                          <input type="hidden" name="alternative_id" value="{{ alternative.id }}">
+                          <button class="button is-small is-primary is-light" type="submit">Usar como activa</button>
+                        </form>
+                      {% endif %}
+                    </article>
+                  {% endfor %}
+                </div>
+              {% else %}
+                <p class="has-text-grey is-size-7">Sin alternativas registradas.</p>
+              {% endif %}
+
+              <hr>
+              <h4 class="title is-6">Subir alternativa para ancla</h4>
+              <form method="post" action="{{ url_for('web.upload_anchor_image', story_path=story.story_rel_path, page_number=page.page_number, anchor_id=anchor.id) }}" enctype="multipart/form-data" class="is-flex is-flex-direction-column gap-2">
+                <input type="hidden" name="next" value="{{ request.full_path }}">
+                <input type="hidden" name="anchor_level" value="{{ anchor.source_node_rel_path }}">
+                <div>
+                  <label class="label is-size-7">Archivo</label>
+                  <input class="input is-small" type="file" name="image_file" accept="image/png,image/jpeg,image/webp,image/gif">
+                </div>
+                <div>
+                  <label class="label is-size-7">Slug</label>
+                  <input class="input is-small" type="text" name="alt_slug" placeholder="{{ anchor.id }}-v2">
+                </div>
+                <div>
+                  <label class="label is-size-7">Notas</label>
+                  <textarea class="textarea is-small" name="alt_notes" rows="2"></textarea>
+                </div>
+                <div>
+                  <label class="label is-size-7">Pegar desde portapapeles</label>
+                  <div class="is-flex is-align-items-center gap-2">
+                    <button class="button is-small is-light" type="button" onclick="pasteImageToHidden('pasted-anchor-{{ anchor_index }}','paste-feedback-anchor-{{ anchor_index }}')">Pegar imagen</button>
+                    <span id="paste-feedback-anchor-{{ anchor_index }}" class="copy-feedback"></span>
+                  </div>
+                  <input id="pasted-anchor-{{ anchor_index }}" type="hidden" name="pasted_image_data" value="">
+                </div>
+                <button class="button is-small is-link is-light" type="submit">Agregar alternativa</button>
+              </form>
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <article class="message is-light">
+          <div class="message-body">No hay anclas aplicables en la jerarquia actual.</div>
+        </article>
+      {% endif %}
+    </section>
   {% else %}
     <article class="message is-light">
-      <div class="message-body">Este cuento no contiene páginas.</div>
+      <div class="message-body">Este cuento no contiene paginas.</div>
     </article>
   {% endif %}
 {% endblock %}
-

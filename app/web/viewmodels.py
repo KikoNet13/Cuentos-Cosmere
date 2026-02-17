@@ -5,7 +5,18 @@ from typing import Any
 from flask import url_for
 
 from ..catalog_provider import get_story_summary
-from ..story_store import StoryStoreError, get_story_page, list_page_slots, list_story_pages, resolve_media_rel_path
+from ..story_store import (
+    StoryStoreError,
+    get_story_cover,
+    get_story_page,
+    list_applicable_anchors,
+    list_meta_hierarchy,
+    list_node_levels,
+    list_page_slots,
+    list_story_pages,
+    resolve_media_rel_path,
+    resolve_reference_assets,
+)
 from .common import build_breadcrumbs, normalize_rel_path
 
 
@@ -38,6 +49,38 @@ def _build_alternative_view(alternative: dict[str, Any], active_id: str) -> dict
     }
 
 
+def _build_reference_views(book_rel_path: str, reference_ids: list[str]) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for ref in resolve_reference_assets(book_rel_path, reference_ids):
+        row = dict(ref)
+        row["image_url"] = (
+            url_for("web.media_file", rel_path=row["asset_rel_path"])
+            if row.get("found") and row.get("asset_rel_path")
+            else ""
+        )
+        rows.append(row)
+    return rows
+
+
+def _build_slot_item(raw_slot: dict[str, Any], book_rel_path: str) -> dict[str, Any]:
+    active_id = str(raw_slot.get("active_id", ""))
+    alternatives = [_build_alternative_view(item, active_id) for item in raw_slot.get("alternatives", [])]
+    active_item = next((item for item in alternatives if item["is_active"]), None)
+    reference_ids = list(raw_slot.get("reference_ids", []))
+
+    return {
+        "slot_name": str(raw_slot.get("slot_name", "main")),
+        "status": str(raw_slot.get("status", "draft")),
+        "prompt": str(raw_slot.get("prompt", "")),
+        "reference_ids": reference_ids,
+        "reference_ids_csv": ", ".join(reference_ids),
+        "reference_assets": _build_reference_views(book_rel_path, reference_ids),
+        "active_id": active_id,
+        "active_item": active_item,
+        "alternatives": alternatives,
+    }
+
+
 def _resolve_slot_image(slot_item: dict[str, Any] | None) -> dict[str, Any] | None:
     if not slot_item:
         return None
@@ -53,6 +96,34 @@ def _resolve_slot_image(slot_item: dict[str, Any] | None) -> dict[str, Any] | No
     return None
 
 
+def _level_label(level: str) -> str:
+    if not level:
+        return "global (library)"
+    return level
+
+
+def _build_anchor_view(anchor: dict[str, Any], book_rel_path: str) -> dict[str, Any]:
+    active_id = str(anchor.get("active_id", ""))
+    alternatives = [_build_alternative_view(item, active_id) for item in anchor.get("alternatives", [])]
+    active_item = next((item for item in alternatives if item["is_active"]), None)
+    image_filenames = [str(item).strip() for item in anchor.get("image_filenames", []) if str(item).strip()]
+
+    return {
+        "id": str(anchor.get("id", "")),
+        "name": str(anchor.get("name", "")),
+        "prompt": str(anchor.get("prompt", "")),
+        "status": str(anchor.get("status", "draft")),
+        "source_node_rel_path": str(anchor.get("source_node_rel_path", "")),
+        "source_label": _level_label(str(anchor.get("source_node_rel_path", ""))),
+        "image_filenames": image_filenames,
+        "image_filenames_csv": ", ".join(image_filenames),
+        "reference_assets": _build_reference_views(book_rel_path, image_filenames),
+        "active_id": active_id,
+        "active_item": active_item,
+        "alternatives": alternatives,
+    }
+
+
 def build_story_view_model(
     story_rel_path: str,
     selected_page_number: int,
@@ -64,6 +135,7 @@ def build_story_view_model(
     if not story:
         return None
 
+    book_rel_path = str(story.get("book_rel_path", ""))
     pages = list_story_pages(normalized)
     page_numbers = [int(page["page_number"]) for page in pages]
     default_page_number = page_numbers[0] if page_numbers else 1
@@ -77,24 +149,12 @@ def build_story_view_model(
     slot_items: list[dict[str, Any]] = []
     if page:
         for slot in list_page_slots(normalized, selected_page):
-            active_id = str(slot.get("active_id", ""))
-            alternatives = [_build_alternative_view(item, active_id) for item in slot.get("alternatives", [])]
-            active_item = next((item for item in alternatives if item["is_active"]), None)
-            slot_items.append(
-                {
-                    "slot_name": str(slot.get("slot_name", "main")),
-                    "status": str(slot.get("status", "draft")),
-                    "prompt_current": str(slot.get("prompt_current", "")),
-                    "prompt_original": str(slot.get("prompt_original", "")),
-                    "active_id": active_id,
-                    "active_item": active_item,
-                    "alternatives": alternatives,
-                }
-            )
+            slot_items.append(_build_slot_item(slot, book_rel_path))
 
     slot_map = {item["slot_name"]: item for item in slot_items}
     main_slot = slot_map.get("main")
     secondary_slot = slot_map.get("secondary")
+    cover_slot = _build_slot_item(get_story_cover(normalized), book_rel_path)
 
     missing_pages: list[int] = []
     if page_numbers:
@@ -109,8 +169,13 @@ def build_story_view_model(
         prev_page = page_numbers[index - 1] if index > 0 else None
         next_page = page_numbers[index + 1] if index + 1 < len(page_numbers) else None
 
+    meta_hierarchy = list_meta_hierarchy(book_rel_path)
+    anchor_items = [_build_anchor_view(item, book_rel_path) for item in list_applicable_anchors(book_rel_path)]
+    level_options = [{"path": level, "label": _level_label(level)} for level in list_node_levels(book_rel_path)]
+
     return {
         "story": story,
+        "book_rel_path": book_rel_path,
         "page_numbers": page_numbers,
         "selected_page": selected_page,
         "page": page,
@@ -121,9 +186,13 @@ def build_story_view_model(
         "slot_map": slot_map,
         "main_slot": main_slot,
         "secondary_slot": secondary_slot,
+        "cover_slot": cover_slot,
         "read_main_image": _resolve_slot_image(main_slot),
         "read_secondary_image": _resolve_slot_image(secondary_slot),
+        "read_cover_image": _resolve_slot_image(cover_slot),
+        "meta_hierarchy": meta_hierarchy,
+        "anchors": anchor_items,
+        "anchor_level_options": level_options,
         "breadcrumbs": build_breadcrumbs(normalized),
         "editor_mode": editor_mode,
     }
-

@@ -4,12 +4,36 @@
     <span class="tag is-rounded">Estado: {{ slot.status }}</span>
   </div>
 
-  <p class="panel-label">Prompt actual</p>
-  <pre id="editor-prompt-current-{{ slot_index }}" class="story-prose">{{ slot.prompt_current }}</pre>
+  <p class="panel-label">Prompt</p>
+  <pre id="editor-prompt-{{ slot_index }}" class="story-prose">{{ slot.prompt }}</pre>
   <div class="is-flex is-align-items-center gap-2 mt-2">
-    <button class="button is-small is-light" type="button" onclick="copyTextFromElement('editor-prompt-current-{{ slot_index }}','copy-editor-prompt-current-{{ slot_index }}')">Copiar prompt</button>
-    <span id="copy-editor-prompt-current-{{ slot_index }}" class="copy-feedback"></span>
+    <button class="button is-small is-light" type="button" onclick="copyTextFromElement('editor-prompt-{{ slot_index }}','copy-editor-prompt-{{ slot_index }}')">Copiar prompt</button>
+    <span id="copy-editor-prompt-{{ slot_index }}" class="copy-feedback"></span>
   </div>
+
+  <p class="panel-label mt-4">Referencias del prompt</p>
+  {% if slot.reference_assets %}
+    <div class="advanced-alt-grid">
+      {% for ref in slot.reference_assets %}
+        {% set ref_index = loop.index %}
+        <article class="alt-card">
+          <p class="is-size-7 mb-1"><strong>Archivo:</strong> <code>{{ ref.filename }}</code></p>
+          {% if ref.found %}
+            <p class="is-size-7 mb-2"><strong>Nodo:</strong> <code>{{ ref.node_rel_path or 'library' }}</code></p>
+            <img src="{{ ref.image_url }}" alt="Referencia {{ ref.filename }}">
+            <div class="is-flex is-align-items-center gap-2 mt-2">
+              <button class="button is-small is-light" type="button" onclick="copyImageFromUrl('{{ ref.image_url }}','copy-editor-ref-{{ slot_index }}-{{ ref_index }}')">Copiar imagen</button>
+              <span id="copy-editor-ref-{{ slot_index }}-{{ ref_index }}" class="copy-feedback"></span>
+            </div>
+          {% else %}
+            <p class="has-text-danger is-size-7">Referencia no encontrada.</p>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="has-text-grey is-size-7">Sin reference_ids en este slot.</p>
+  {% endif %}
 
   {% if slot.active_item and slot.active_item.image_exists %}
     <p class="panel-label mt-4">Imagen activa</p>
@@ -100,4 +124,3 @@
     <button class="button is-small is-link is-light" type="submit">Agregar alternativa</button>
   </form>
 </article>
-

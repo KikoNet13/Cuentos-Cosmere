@@ -3,7 +3,7 @@
 
   {% if missing_pages %}
     <article class="message is-warning is-small mb-4">
-      <div class="message-body">Faltan páginas en secuencia: {{ missing_pages | join(", ") }}.</div>
+      <div class="message-body">Faltan paginas en secuencia: {{ missing_pages | join(", ") }}.</div>
     </article>
   {% endif %}
 
@@ -11,8 +11,8 @@
     <section class="story-reading-grid">
       {% include "components/story/media_block.html" %}
       <article class="box">
-        <h2 class="title is-5">Página {{ page.page_number }}</h2>
-        <pre class="story-prose">{{ page.text_current }}</pre>
+        <h2 class="title is-5">Pagina {{ page.page_number }}</h2>
+        <pre class="story-prose">{{ page.text }}</pre>
       </article>
     </section>
 
@@ -25,13 +25,12 @@
         hx-trigger="click once"
       >Opciones avanzadas</summary>
       <div id="advanced-panel" class="mt-4">
-        <p class="is-size-7 has-text-grey">Expande para cargar variantes, prompts y texto original.</p>
+        <p class="is-size-7 has-text-grey">Expande para cargar prompts, referencias y alternativas.</p>
       </div>
     </details>
   {% else %}
     <article class="message is-light">
-      <div class="message-body">Este cuento no contiene páginas.</div>
+      <div class="message-body">Este cuento no contiene paginas.</div>
     </article>
   {% endif %}
 </div>
-

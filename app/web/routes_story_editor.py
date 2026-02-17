@@ -6,7 +6,18 @@ import re
 
 from flask import abort, flash, redirect, render_template, request, url_for
 
-from ..story_store import StoryStoreError, add_slot_alternative, save_page_edits, set_slot_active
+from ..story_store import (
+    StoryStoreError,
+    add_anchor_alternative,
+    add_cover_alternative,
+    add_slot_alternative,
+    save_cover_edits,
+    save_page_edits,
+    set_anchor_active,
+    set_cover_active,
+    set_slot_active,
+    upsert_anchor,
+)
 from . import web_bp
 from .common import normalize_rel_path, safe_next_url
 from .viewmodels import build_story_view_model
@@ -75,11 +86,31 @@ def save_story_page(story_path: str, page_number: int):
         save_page_edits(
             story_rel_path=story_rel_path,
             page_number=page_number,
-            text_current=request.form.get("text_current", ""),
-            main_prompt_current=request.form.get("main_prompt_current", ""),
-            secondary_prompt_current=request.form.get("secondary_prompt_current", None),
+            text=request.form.get("text", ""),
+            main_prompt=request.form.get("main_prompt", ""),
+            secondary_prompt=request.form.get("secondary_prompt", None),
+            main_reference_ids=request.form.get("main_reference_ids", ""),
+            secondary_reference_ids=request.form.get("secondary_reference_ids", ""),
         )
         flash("Pagina guardada en JSON.", "success")
+    except StoryStoreError as exc:
+        flash(str(exc), "error")
+
+    return redirect(safe_next_url(request.form.get("next"), fallback))
+
+
+@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/cover/save")
+def save_story_cover(story_path: str, page_number: int):
+    story_rel_path = normalize_rel_path(story_path)
+    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+
+    try:
+        save_cover_edits(
+            story_rel_path=story_rel_path,
+            prompt=request.form.get("cover_prompt", ""),
+            reference_ids=request.form.get("cover_reference_ids", ""),
+        )
+        flash("Portada guardada.", "success")
     except StoryStoreError as exc:
         flash(str(exc), "error")
 
@@ -138,3 +169,120 @@ def activate_slot_image(story_path: str, page_number: int, slot_name: str):
 
     return redirect(safe_next_url(request.form.get("next"), fallback))
 
+
+@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/cover/upload")
+def upload_cover_image(story_path: str, page_number: int):
+    story_rel_path = normalize_rel_path(story_path)
+    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+
+    image_bytes, mime_type, error = _extract_image_payload()
+    if error:
+        flash(error, "error")
+        return redirect(safe_next_url(request.form.get("next"), fallback))
+
+    try:
+        alternative = add_cover_alternative(
+            story_rel_path=story_rel_path,
+            image_bytes=image_bytes or b"",
+            mime_type=mime_type,
+            slug=request.form.get("alt_slug", "cover"),
+            notes=request.form.get("alt_notes", ""),
+        )
+        flash(f"Portada alternativa creada: {alternative['id']}", "success")
+    except StoryStoreError as exc:
+        flash(str(exc), "error")
+
+    return redirect(safe_next_url(request.form.get("next"), fallback))
+
+
+@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/cover/activate")
+def activate_cover_image(story_path: str, page_number: int):
+    story_rel_path = normalize_rel_path(story_path)
+    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+
+    alternative_id = request.form.get("alternative_id", "").strip()
+    if not alternative_id:
+        flash("Debe indicar alternative_id.", "error")
+        return redirect(safe_next_url(request.form.get("next"), fallback))
+
+    try:
+        set_cover_active(story_rel_path=story_rel_path, alternative_id=alternative_id)
+        flash("Portada activa actualizada.", "success")
+    except StoryStoreError as exc:
+        flash(str(exc), "error")
+
+    return redirect(safe_next_url(request.form.get("next"), fallback))
+
+
+@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/anchors/save")
+def save_anchor(story_path: str, page_number: int):
+    story_rel_path = normalize_rel_path(story_path)
+    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+
+    anchor_level = normalize_rel_path(request.form.get("anchor_level", ""))
+    anchor_id = request.form.get("anchor_id", "").strip()
+
+    if not anchor_id:
+        flash("anchor_id es obligatorio.", "error")
+        return redirect(safe_next_url(request.form.get("next"), fallback))
+
+    try:
+        upsert_anchor(
+            node_rel_path=anchor_level,
+            anchor_id=anchor_id,
+            name=request.form.get("anchor_name", "").strip(),
+            prompt=request.form.get("anchor_prompt", "").strip(),
+            status=request.form.get("anchor_status", "").strip() or "draft",
+        )
+        flash("Ancla guardada.", "success")
+    except StoryStoreError as exc:
+        flash(str(exc), "error")
+
+    return redirect(safe_next_url(request.form.get("next"), fallback))
+
+
+@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/anchors/<anchor_id>/upload")
+def upload_anchor_image(story_path: str, page_number: int, anchor_id: str):
+    story_rel_path = normalize_rel_path(story_path)
+    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+    anchor_level = normalize_rel_path(request.form.get("anchor_level", ""))
+
+    image_bytes, mime_type, error = _extract_image_payload()
+    if error:
+        flash(error, "error")
+        return redirect(safe_next_url(request.form.get("next"), fallback))
+
+    try:
+        alternative = add_anchor_alternative(
+            node_rel_path=anchor_level,
+            anchor_id=anchor_id,
+            image_bytes=image_bytes or b"",
+            mime_type=mime_type,
+            slug=request.form.get("alt_slug", anchor_id),
+            notes=request.form.get("alt_notes", ""),
+        )
+        flash(f"Alternativa de ancla creada: {alternative['id']}", "success")
+    except (StoryStoreError, FileNotFoundError) as exc:
+        flash(str(exc), "error")
+
+    return redirect(safe_next_url(request.form.get("next"), fallback))
+
+
+@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/anchors/<anchor_id>/activate")
+def activate_anchor_image(story_path: str, page_number: int, anchor_id: str):
+    story_rel_path = normalize_rel_path(story_path)
+    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+    anchor_level = normalize_rel_path(request.form.get("anchor_level", ""))
+    alternative_id = request.form.get("alternative_id", "").strip()
+
+    if not alternative_id:
+        flash("Debe indicar alternative_id.", "error")
+        return redirect(safe_next_url(request.form.get("next"), fallback))
+
+    try:
+        set_anchor_active(node_rel_path=anchor_level, anchor_id=anchor_id, alternative_id=alternative_id)
+        flash("Ancla activa actualizada.", "success")
+    except (StoryStoreError, FileNotFoundError) as exc:
+        flash(str(exc), "error")
+
+    return redirect(safe_next_url(request.form.get("next"), fallback))

@@ -7,14 +7,18 @@
 <section class="advanced-grid">
   <article class="box">
     <h3 class="title is-6">Texto</h3>
-    <p class="panel-label">Versión actual</p>
-    <pre class="story-prose mb-3">{{ page.text_current }}</pre>
-    <p class="panel-label">Versión original</p>
-    <pre id="advanced-text-original" class="story-prose">{{ page.text_original }}</pre>
-    <div class="is-flex is-align-items-center gap-2 mt-2">
-      <button class="button is-small is-light" type="button" onclick="copyTextFromElement('advanced-text-original','copy-advanced-text')">Copiar original</button>
-      <span id="copy-advanced-text" class="copy-feedback"></span>
-    </div>
+    <pre class="story-prose mb-3">{{ page.text }}</pre>
+  </article>
+
+  <article class="box">
+    <h3 class="title is-6">Portada</h3>
+    <p class="panel-label">Prompt</p>
+    <pre class="story-prose mb-3">{{ cover_slot.prompt }}</pre>
+    {% if read_cover_image and read_cover_image.image_exists %}
+      <img class="editor-slot-image" src="{{ read_cover_image.image_url }}" alt="Portada activa">
+    {% else %}
+      <p class="has-text-grey is-size-7">Sin portada activa.</p>
+    {% endif %}
   </article>
 
   {% for slot in slots %}
@@ -25,19 +29,35 @@
         <span class="tag is-rounded">Estado: {{ slot.status }}</span>
       </div>
 
-      <p class="panel-label">Prompt actual</p>
-      <pre id="advanced-prompt-current-{{ slot_index }}" class="story-prose">{{ slot.prompt_current }}</pre>
+      <p class="panel-label">Prompt</p>
+      <pre id="advanced-prompt-current-{{ slot_index }}" class="story-prose">{{ slot.prompt }}</pre>
       <div class="is-flex is-align-items-center gap-2 mt-2 mb-3">
         <button class="button is-small is-light" type="button" onclick="copyTextFromElement('advanced-prompt-current-{{ slot_index }}','copy-prompt-current-{{ slot_index }}')">Copiar prompt</button>
         <span id="copy-prompt-current-{{ slot_index }}" class="copy-feedback"></span>
       </div>
 
-      <p class="panel-label">Prompt original</p>
-      <pre id="advanced-prompt-original-{{ slot_index }}" class="story-prose">{{ slot.prompt_original }}</pre>
-      <div class="is-flex is-align-items-center gap-2 mt-2 mb-4">
-        <button class="button is-small is-light" type="button" onclick="copyTextFromElement('advanced-prompt-original-{{ slot_index }}','copy-prompt-original-{{ slot_index }}')">Copiar original</button>
-        <span id="copy-prompt-original-{{ slot_index }}" class="copy-feedback"></span>
-      </div>
+      <p class="panel-label">Referencias</p>
+      {% if slot.reference_assets %}
+        <div class="advanced-alt-grid mb-4">
+          {% for ref in slot.reference_assets %}
+            {% set ref_index = loop.index %}
+            <article class="alt-card">
+              <p class="is-size-7 mb-1"><strong>Archivo:</strong> <code>{{ ref.filename }}</code></p>
+              {% if ref.found %}
+                <img src="{{ ref.image_url }}" alt="Referencia {{ ref.filename }}">
+                <div class="is-flex is-align-items-center gap-2 mt-2">
+                  <button class="button is-small is-light" type="button" onclick="copyImageFromUrl('{{ ref.image_url }}','copy-ref-read-{{ slot_index }}-{{ ref_index }}')">Copiar imagen</button>
+                  <span id="copy-ref-read-{{ slot_index }}-{{ ref_index }}" class="copy-feedback"></span>
+                </div>
+              {% else %}
+                <p class="has-text-danger is-size-7">Referencia no encontrada.</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="has-text-grey is-size-7 mb-4">Sin referencias.</p>
+      {% endif %}
 
       <p class="panel-label">Alternativas</p>
       {% if slot.alternatives %}
@@ -89,5 +109,21 @@
       {% endif %}
     </article>
   {% endfor %}
-</section>
 
+  <article class="box">
+    <h3 class="title is-6">Anclas aplicables</h3>
+    {% if anchors %}
+      <div class="advanced-alt-grid">
+        {% for anchor in anchors %}
+          <article class="alt-card">
+            <p class="is-size-7 mb-1"><strong>{{ anchor.name }}</strong> (<code>{{ anchor.id }}</code>)</p>
+            <p class="is-size-7 mb-2"><strong>Nivel:</strong> {{ anchor.source_label }}</p>
+            <pre class="story-prose">{{ anchor.prompt }}</pre>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="has-text-grey is-size-7">No hay anclas en la jerarquia.</p>
+    {% endif %}
+  </article>
+</section>

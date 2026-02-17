@@ -5,6 +5,23 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [17/02/26] - Giro a flujo 3 IAs + skill `ingesta-cuentos` + contrato nuevo app
+
+- Sustituida la skill `adaptacion-ingesta-inicial` por `ingesta-cuentos` (conversacional, sin scripts).
+- Nuevo contrato operativo:
+  - `NN.json` simplificado (`text`/`prompt` string, `cover` como slot completo).
+  - `meta.json` jerarquico por nodo (`global + ancestros + libro`).
+  - imagenes por nodo en `images/` con indice `images/index.json`.
+- Refactor fuerte de runtime en `app/`:
+  - `story_store` reescrito al formato nuevo;
+  - soporte de portada editable como slot;
+  - soporte de referencias `reference_ids[]` con warning de faltantes;
+  - panel de anclas/meta en editor con alternativas e imagen activa por nivel.
+- Gobernanza/documentacion alineada a flujo 3 IAs:
+  - `AGENTS.md`, `README.md`, `app/README.md`.
+- Reseteo de `library` para pruebas reales, preservando solo `_inbox`.
+- Tarea: `docs/tasks/TAREA-023-giro-flujo-3-ias-ingesta-cuentos-contrato-nuevo-app.md`.
+
 ## [17/02/26] - Experimento de adaptacion completa desde PDF unico a version `-codex`
 
 - Fuente canonica unica: `library/_inbox/El imperio final.pdf` (sin uso de internet).

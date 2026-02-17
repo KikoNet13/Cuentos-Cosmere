@@ -53,37 +53,34 @@ def _asset_exists(asset_rel_path: str) -> bool:
     return target.exists() and target.is_file()
 
 
-def _resolve_main_slot_thumbnail(images: dict[str, Any]) -> tuple[str, str]:
-    main_slot = images.get("main")
-    if not isinstance(main_slot, dict):
+def _resolve_slot_thumbnail(slot: dict[str, Any] | None, source_prefix: str) -> tuple[str, str]:
+    if not isinstance(slot, dict):
         return "", ""
 
-    alternatives = [item for item in main_slot.get("alternatives", []) if isinstance(item, dict)]
+    alternatives = [item for item in slot.get("alternatives", []) if isinstance(item, dict)]
     if not alternatives:
         return "", ""
 
-    active_id = str(main_slot.get("active_id", "")).strip()
+    active_id = str(slot.get("active_id", "")).strip()
     if active_id:
         active_candidate = next((item for item in alternatives if str(item.get("id", "")).strip() == active_id), None)
         if active_candidate:
             rel_path = _normalize_asset_rel_path(str(active_candidate.get("asset_rel_path", "")))
             if _asset_exists(rel_path):
-                return rel_path, "main_active"
+                return rel_path, f"{source_prefix}_active"
 
     for candidate in alternatives:
         rel_path = _normalize_asset_rel_path(str(candidate.get("asset_rel_path", "")))
         if _asset_exists(rel_path):
-            return rel_path, "main_fallback"
+            return rel_path, f"{source_prefix}_fallback"
 
     return "", ""
 
 
 def _resolve_story_thumbnail(story_payload: dict[str, Any]) -> tuple[str, str]:
-    cover = story_payload.get("cover", {})
-    if isinstance(cover, dict):
-        cover_rel = _normalize_asset_rel_path(str(cover.get("asset_rel_path", "")))
-        if _asset_exists(cover_rel):
-            return cover_rel, "cover"
+    cover_rel, cover_source = _resolve_slot_thumbnail(story_payload.get("cover"), "cover")
+    if cover_rel:
+        return cover_rel, cover_source
 
     pages = [item for item in story_payload.get("pages", []) if isinstance(item, dict)]
     pages.sort(key=lambda item: int(item.get("page_number", 0)))
@@ -91,7 +88,7 @@ def _resolve_story_thumbnail(story_payload: dict[str, Any]) -> tuple[str, str]:
         images = page.get("images", {})
         if not isinstance(images, dict):
             continue
-        rel_path, source = _resolve_main_slot_thumbnail(images)
+        rel_path, source = _resolve_slot_thumbnail(images.get("main"), "main")
         if rel_path:
             return rel_path, source
 
@@ -109,6 +106,11 @@ def _story_counts(story_payload: dict[str, Any]) -> tuple[int, int, int]:
     pages_count = len(story_payload.get("pages", []))
     slots_count = 0
     alternatives_count = 0
+
+    cover = story_payload.get("cover", {})
+    if isinstance(cover, dict):
+        slots_count += 1
+        alternatives_count += len(cover.get("alternatives", []))
 
     for page in story_payload.get("pages", []):
         images = page.get("images", {})

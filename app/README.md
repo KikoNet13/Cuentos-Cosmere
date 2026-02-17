@@ -2,22 +2,39 @@
 
 ## Alcance de `app/`
 
-- `app/` solo contiene la webapp Flask para navegacion y edicion puntual de cuentos en `library/`.
-- `app/` no contiene ni ejecuta pipeline editorial.
+- `app/` contiene solo la webapp Flask para navegar y editar el contrato final en `library/`.
+- `app/` no ejecuta pipeline editorial ni usa CLI de ingesta.
 
-## Contrato de datos
+## Contrato de datos consumido por la app
 
-- Fuente de verdad: `library/`.
-- Un libro se detecta por uno o mas archivos `NN.json`.
-- Cada `NN.json` representa un cuento completo con:
-  - metadatos de cuento (`title`, `story_title`, `status`, etc.)
-  - metadatos de ingesta inicial (`cover`, `source_refs`, `ingest_meta`)
-  - paginas (`text.original`, `text.current`)
-  - slots de imagen (`main` obligatorio, `secondary` opcional)
-  - alternativas de imagen por slot y `active_id`
-- Los assets de imagen viven en el mismo directorio del libro con nombre opaco `img_<uuid>_<slug>.<ext>`.
-- Estados aceptados de cuento: legacy (`draft`, `ready`, etc.) y flujo actual (`in_review`, `definitive`).
-- La ingesta inicial externa (`.codex/skills/adaptacion-ingesta-inicial`) es conversacional, aplica gate PDF obligatorio por lote y escribe resultados en JSON; `app/` solo consume esos resultados.
+### Cuento (`NN.json`)
+
+- top-level obligatorio:
+  - `story_id`, `title`, `status`, `book_rel_path`, `created_at`, `updated_at`, `cover`, `pages`.
+- `pages[]`:
+  - `page_number`, `text`, `images.main` obligatorio, `images.secondary` opcional.
+- slot (`cover`, `images.*`):
+  - `status`, `prompt`, `active_id`, `alternatives[]`, `reference_ids[]` opcional.
+- alternativa:
+  - `id` (filename), `slug`, `asset_rel_path`, `mime_type`, `status`, `created_at`, `notes`.
+
+### Meta por nodo (`meta.json`)
+
+- rutas:
+  - `library/meta.json` (global),
+  - `library/<node>/meta.json`.
+- minimos:
+  - `collection.title`, `anchors[]`, `updated_at`.
+- anchor minimo:
+  - `id`, `name`, `prompt`, `image_filenames[]`.
+- ampliado para edicion:
+  - `status`, `active_id`, `alternatives[]`.
+
+### Imagenes por nodo
+
+- carpeta: `library/<node>/images/`
+- assets: `<uuid>_<slug>.<ext>`
+- indice: `library/<node>/images/index.json`
 
 ## Runtime web
 
@@ -28,22 +45,19 @@
   - `/`
   - `/browse/<path>`
   - `/story/<path>/page/<int:page_number>` (lectura)
-  - `/editor/story/<path>/page/<int:page_number>` (edicion puntual)
+  - `/editor/story/<path>/page/<int:page_number>` (edicion)
   - `/fragments/story/<path>/page/<int:page_number>/*` (fragmentos HTMX)
   - `/media/<path>`
   - `/health`
-- Compatibilidad legacy con redirect:
-  - `/n/<path>`
-  - `/story/<path>?p=N[&editor=1]`
 
 ## Estructura UI
 
 - `templates/layouts/`: shell principal.
-- `templates/components/`: piezas reutilizables (tarjetas, breadcrumbs, navegacion).
+- `templates/components/`: piezas reutilizables (tarjetas, breadcrumbs, slots).
 - `templates/browse/`: vistas de biblioteca.
-- `templates/story/read/`: lectura y fragmentos HTMX.
-- `templates/story/editor/`: edicion por pagina.
-- `web/`: rutas separadas por dominio (`browse`, `story_read`, `story_editor`, `fragments`, `system`).
+- `templates/story/read/`: lectura y panel avanzado.
+- `templates/story/editor/`: edicion de pagina, portada y anclas.
+- `web/`: rutas por dominio (`browse`, `story_read`, `story_editor`, `fragments`, `system`).
 
 ## CLI de app
 

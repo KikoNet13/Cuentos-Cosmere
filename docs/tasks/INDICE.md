@@ -1,13 +1,23 @@
-# Índice de tareas
+﻿# Indice de tareas
 
-- Próximo ID: `023`
+- Proximo ID: `024`
+
+## TAREA-023-giro-flujo-3-ias-ingesta-cuentos-contrato-nuevo-app
+
+- Fecha: 17/02/26 18:03
+- Estado: cerrada
+- Resumen: giro al flujo 3 IAs con skill `ingesta-cuentos`, contrato nuevo `NN.json`/`meta.json`, refactor de app al esquema final y limpieza de `library` excepto `_inbox`.
+- Version: 2.0.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`, `0008`
+- Archivo: `docs/tasks/TAREA-023-giro-flujo-3-ias-ingesta-cuentos-contrato-nuevo-app.md`
 
 ## TAREA-022-experimento-adaptacion-completa-pdf-unico-codex
 
 - Fecha: 17/02/26 13:09
 - Estado: cerrada
 - Resumen: experimento editorial completo desde `El imperio final.pdf` (fuente canonica unica) a `el-imperio-final-codex`, con 8 cuentos de 16 paginas, sidecars de revision y biblia visual para imagegen.
-- Versión: 1.9.0
+- VersiÃ³n: 1.9.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-022-experimento-adaptacion-completa-pdf-unico-codex.md`
@@ -17,7 +27,7 @@
 - Fecha: 17/02/26 11:02
 - Estado: cerrada
 - Resumen: refactor de `adaptacion-ingesta-inicial` a skill 100% conversacional sin CLI/scripts, con contraste canonico por `pdf`, preguntas una a una y escritura incremental en archivos finales.
-- Versión: 1.8.0
+- VersiÃ³n: 1.8.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-021-refactor-skill-ingesta-conversacional-sin-scripts.md`
@@ -27,7 +37,7 @@
 - Fecha: 16/02/26 14:35
 - Estado: cerrada
 - Resumen: endurecida la skill de ingesta inicial con contraste canonico obligatorio contra PDF, gate de bloqueo por lote y contratos enriquecidos de contexto/issues/preguntas.
-- Versión: 1.7.0
+- VersiÃ³n: 1.7.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-020-contraste-canonico-obligatorio-pdf.md`
@@ -37,7 +47,7 @@
 - Fecha: 16/02/26 13:44
 - Estado: cerrada
 - Resumen: UI modular Jinja + Bulma + HTMX con navegacion por tarjetas, lectura/editor por rutas REST de pagina y compatibilidad legacy por redirect.
-- Versión: 1.6.0
+- VersiÃ³n: 1.6.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`, `0008`
 - Archivo: `docs/tasks/TAREA-019-ui-biblioteca-bulma-htmx-rutas-rest.md`
@@ -47,7 +57,7 @@
 - Fecha: 16/02/26 12:49
 - Estado: cerrada
 - Resumen: skill de ingesta inicial interactiva para `_inbox` con salida `NN.json`, `adaptation_context.json` y `NN.issues.json`.
-- Versión: 1.5.0
+- VersiÃ³n: 1.5.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-018-skill-ingesta-inicial-interactiva.md`
@@ -56,8 +66,8 @@
 
 - Fecha: 16/02/26 11:31
 - Estado: cerrada
-- Resumen: limpieza de runtime al mínimo (sin módulos legacy ni stubs retirados), dependencias reducidas y artefactos locales eliminados.
-- Versión: 1.4.1
+- Resumen: limpieza de runtime al mÃ­nimo (sin mÃ³dulos legacy ni stubs retirados), dependencias reducidas y artefactos locales eliminados.
+- VersiÃ³n: 1.4.1
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-017-limpieza-minima-runtime-repo.md`
@@ -67,7 +77,7 @@
 - Fecha: 16/02/26 10:51
 - Estado: cerrada
 - Resumen: reinicio editorial con frontera estricta `app` vs `skills`, nuevo stack `adaptacion-*` y sidecars `NN.review.json` + `NN.decisions.log.jsonl`.
-- Versión: 1.4.0
+- VersiÃ³n: 1.4.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-015-reset-editorial-con-skills-sin-app.md`
@@ -77,7 +87,7 @@
 - Fecha: 14/02/26 16:13
 - Estado: cerrada
 - Resumen: `target_age` pasa a ser obligatorio al inicio y persistido en `adaptation_profile.json`.
-- Versión: 1.3.0
+- VersiÃ³n: 1.3.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-014-edad-objetivo-dinamica-inicio-adaptacion.md`
@@ -86,8 +96,8 @@
 
 - Fecha: 14/02/26 15:15
 - Estado: cerrada
-- Resumen: revisión interactiva ligera de glosario con `context_review.json` y aplicación real en runtime editorial.
-- Versión: 1.2.0
+- Resumen: revisiÃ³n interactiva ligera de glosario con `context_review.json` y aplicaciÃ³n real en runtime editorial.
+- VersiÃ³n: 1.2.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-013-contexto-review-ligera-glosario.md`
@@ -96,8 +106,8 @@
 
 - Fecha: 13/02/26 18:40
 - Estado: cerrada
-- Resumen: cascada editorial por severidad con ciclo detección/decisión/contraste para texto y prompts, contexto jerárquico y nuevos sidecars.
-- Versión: 1.1.0
+- Resumen: cascada editorial por severidad con ciclo detecciÃ³n/decisiÃ³n/contraste para texto y prompts, contexto jerÃ¡rquico y nuevos sidecars.
+- VersiÃ³n: 1.1.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-012-cascada-editorial-severidad-tres-skills.md`
@@ -107,7 +117,7 @@
 - Fecha: 13/02/26 16:24
 - Estado: cerrada
 - Resumen: pipeline editorial por skills encadenadas, sidecars `_reviews` y UI lectura/editor por modo.
-- Versión: 1.0.0
+- VersiÃ³n: 1.0.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-011-orquestador-editorial-skills-ui-minimal.md`
@@ -117,7 +127,7 @@
 - Fecha: 13/02/26 13:49
 - Estado: cerrada
 - Resumen: ingesta editorial de `El imperio final` a `NN.json` en `library/cosmere/.../el-imperio-final`.
-- Versión: 0.9.0
+- VersiÃ³n: 0.9.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-010-ingesta-editorial-el-imperio-final-json.md`
@@ -127,7 +137,7 @@
 - Fecha: 13/02/26 13:44
 - Estado: cerrada
 - Resumen: limpieza de `library/.../el-imperio-final` en remoto para reinicio editorial desde cero.
-- Versión: 0.8.1
+- VersiÃ³n: 0.8.1
 - Commit: `pendiente`
 - ADR relacionadas: (ninguna)
 - Archivo: `docs/tasks/TAREA-009-limpieza-library-el-imperio-final.md`
@@ -137,7 +147,7 @@
 - Fecha: 13/02/26 13:20
 - Estado: cerrada
 - Resumen: skill `revision-orquestador-editorial` y runtime JSON sin SQLite ni CLI de ingesta.
-- Versión: 0.8.0
+- VersiÃ³n: 0.8.0
 - Commit: `pendiente`
 - ADR relacionadas: `0007`
 - Archivo: `docs/tasks/TAREA-008-skill-revision-adaptacion-json-sin-sqlite.md`
@@ -146,8 +156,8 @@
 
 - Fecha: 12/02/26 22:29
 - Estado: cerrada
-- Resumen: parser con auditoría IA asistida, glosario jerárquico y gate crítico mixto en apply.
-- Versión: 0.7.0
+- Resumen: parser con auditorÃ­a IA asistida, glosario jerÃ¡rquico y gate crÃ­tico mixto en apply.
+- VersiÃ³n: 0.7.0
 - Commit: `pendiente`
 - ADR relacionadas: `0005`, `0006`
 - Archivo: `docs/tasks/TAREA-007-parser-ia-auditoria-terminologia.md`
@@ -156,8 +166,8 @@
 
 - Fecha: 12/02/26 20:30
 - Estado: cerrada
-- Resumen: contrato `library/_inbox` + `NN.md`, migración de layout y skill de ingesta.
-- Versión: 0.6.0
+- Resumen: contrato `library/_inbox` + `NN.md`, migraciÃ³n de layout y skill de ingesta.
+- VersiÃ³n: 0.6.0
 - Commit: `pendiente`
 - ADR relacionadas: `0004`, `0005`
 - Archivo: `docs/tasks/TAREA-006-library-inbox-nnmd-skill-ingesta.md`
@@ -166,8 +176,8 @@
 
 - Fecha: 12/02/26 19:15
 - Estado: cerrada
-- Resumen: inglés técnico, contexto canónico en biblioteca y rebranding total.
-- Versión: 0.5.0
+- Resumen: inglÃ©s tÃ©cnico, contexto canÃ³nico en biblioteca y rebranding total.
+- VersiÃ³n: 0.5.0
 - Commit: `pendiente`
 - ADR relacionadas: `0003`, `0004`
 - Archivo: `docs/tasks/TAREA-005-ingles-tecnico-contexto-biblioteca-rebranding.md`
@@ -176,8 +186,8 @@
 
 - Fecha: 12/02/26 17:20
 - Estado: cerrada
-- Resumen: biblioteca como fuente canónica y caché SQLite temporal.
-- Versión: 0.4.0
+- Resumen: biblioteca como fuente canÃ³nica y cachÃ© SQLite temporal.
+- VersiÃ³n: 0.4.0
 - Commit: `pendiente`
 - ADR relacionadas: `0003`, `0004`
 - Archivo: `docs/tasks/TAREA-004-refactor-db-biblioteca-canonica-cache-sqlite.md`
@@ -186,8 +196,8 @@
 
 - Fecha: 12/02/26 14:41
 - Estado: cerrada
-- Resumen: reestructuración de dominio/UI orientada a generación visual.
-- Versión: 0.3.0
+- Resumen: reestructuraciÃ³n de dominio/UI orientada a generaciÃ³n visual.
+- VersiÃ³n: 0.3.0
 - Commit: `pendiente`
 - ADR relacionadas: `0003`
 - Archivo: `docs/tasks/TAREA-003-reestructuracion-pagina-ancla-imagen-ui.md`
@@ -196,8 +206,8 @@
 
 - Fecha: 12/02/26 14:00
 - Estado: cerrada
-- Resumen: paginación adaptativa por archivo importado.
-- Versión: 0.2.0
+- Resumen: paginaciÃ³n adaptativa por archivo importado.
+- VersiÃ³n: 0.2.0
 - Commit: `70c556a`
 - ADR relacionadas: `0003`
 - Archivo: `docs/tasks/TAREA-002-paginacion-adaptativa-archivo-importado.md`
@@ -207,7 +217,7 @@
 - Fecha: 12/02/26 11:05
 - Estado: cerrada
 - Resumen: base de gobernanza, ADR y sistema documental inicial.
-- Versión: 0.1.0
+- VersiÃ³n: 0.1.0
 - Commit: `52243f6`
 - ADR relacionadas: `0001`, `0002`, `0003`
 - Archivo: `docs/tasks/TAREA-001-proyecto-profesional-contexto.md`

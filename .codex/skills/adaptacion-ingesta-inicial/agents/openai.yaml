@@ -1,4 +1,0 @@
-interface:
-  display_name: "Ingesta Inicial Adaptacion"
-  short_description: "Ingesta conversacional canonica de inbox a JSON"
-  default_prompt: "Usa $adaptacion-ingesta-inicial para ejecutar la ingesta en chat: detectar NN.md + NN.pdf, contrastar canon con la skill $pdf, preguntar una a una con opciones y escribir incrementalmente NN.json, adaptation_context.json y NN.issues.json."
