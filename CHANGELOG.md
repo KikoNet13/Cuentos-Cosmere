@@ -5,6 +5,24 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [18/02/26] - Placeholders `NN_prompts.json` para pedir prompts completos a NotebookLM
+
+- Se crea parche de orquestacion para `Los juegos del hambre`:
+  - nuevos placeholders en `library/_inbox/Los juegos del hambre/`:
+    - `01_prompts.json` ... `11_prompts.json`.
+- Cada placeholder queda en texto plano (listo para copy/paste) con reglas estrictas de salida para NB:
+  - `Devuelve SOLO JSON valido`,
+  - sin markdown ni explicaciones,
+  - sin texto fuera del JSON,
+  - salida exactamente igual al contenido final del `NN_prompts.json` correspondiente.
+- Schema requerido en salida NB por cuento:
+  - `story_id`, `title`, `book_rel_path`, `updated_at`, `cover_prompt`, `page_prompts[]`, `secondary_prompts[]` opcional.
+- Validacion local aplicada:
+  - 11 archivos detectados con patron `^\\d{2}_prompts\\.json$`,
+  - placeholders con clausulas obligatorias de salida estricta.
+- No se restauran backups ni se modifica `NN.json` en esta tarea.
+- Tarea: `docs/tasks/TAREA-030-placeholders-nn-prompts-notebooklm-orquestador.md`.
+
 ## [18/02/26] - Style Prompt Maestro en setup ChatGPT Project (Los juegos del hambre)
 
 - Se incorpora bloque `STYLE PROMPT MAESTRO (CANONICO)` en setup de saga actual:

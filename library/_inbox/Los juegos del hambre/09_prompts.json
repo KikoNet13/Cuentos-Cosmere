@@ -1,0 +1,49 @@
+PROMPT NOTEBOOKLM - STORY 09 - GENERAR 09_prompts.json
+Devuelve SOLO JSON valido.
+Sin markdown, sin explicaciones.
+No incluyas nada fuera del JSON.
+Tu respuesta debe ser EXACTAMENTE el contenido final del archivo `09_prompts.json`.
+
+Genera un UNICO objeto JSON con este esquema:
+{
+  "story_id": "09",
+  "title": "Mensaje para el Presidente",
+  "book_rel_path": "los_juegos_del_hambre",
+  "updated_at": "<ISO8601_UTC>",
+  "cover_prompt": "<prompt largo>",
+  "page_prompts": [
+    { "page_number": 1, "main_prompt": "<prompt largo>" }
+  ],
+  "secondary_prompts": [
+    { "page_number": 1, "secondary_prompt": "<prompt largo>" }
+  ]
+}
+
+Reglas obligatorias:
+1) `story_id`, `title` y `book_rel_path` deben coincidir EXACTAMENTE con:
+   - story_id: "09"
+   - title: "Mensaje para el Presidente"
+   - book_rel_path: "los_juegos_del_hambre"
+2) `cover_prompt` debe estar en espanol estructurado, longitud 900-1700 caracteres, y contener EXACTAMENTE estos 8 bloques en orden:
+   - OBJETIVO DE ILUSTRACION
+   - CONTINUIDAD VISUAL OBLIGATORIA
+   - COMPOSICION Y ENCUADRE
+   - PERSONAJES Y ACCION
+   - ENTORNO, PALETA E ILUMINACION
+   - REFERENCIAS (reference_ids)
+   - RESTRICCIONES / NEGATIVOS
+   - FORMATO DE SALIDA
+3) Cada `page_prompts[].main_prompt` debe estar en espanol estructurado, longitud 700-1500 caracteres, y contener los mismos 8 bloques en orden.
+4) No incluyas `secondary_prompts` porque el cuento fuente no tiene `images.secondary`.
+5) `page_prompts` debe cubrir EXACTAMENTE estas paginas del cuento: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
+6) Cada `page_number` debe aparecer una sola vez.
+7) Mantener continuidad de personajes, entornos y props segun el cuento fuente.
+8) Usa `reference_ids` del cuento fuente para poblar el bloque `REFERENCIAS (reference_ids)` de cada prompt.
+9) No cambies el schema, no agregues campos, no elimines campos obligatorios.
+
+Fuente de verdad del cuento para construir los prompts:
+- `library/los_juegos_del_hambre/09.json`
+- Usa su `cover` y `pages[].images.main` (y `images.secondary` solo si existe).
+
+Salida final:
+- SOLO el objeto JSON final para `09_prompts.json`.

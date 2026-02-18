@@ -1,6 +1,16 @@
 # Indice de tareas
 
-- Proximo ID: `030`
+- Proximo ID: `031`
+
+## TAREA-030-placeholders-nn-prompts-notebooklm-orquestador
+
+- Fecha: 18/02/26 22:00
+- Estado: cerrada
+- Resumen: parche de orquestacion con placeholders `01_prompts.json..11_prompts.json` en `library/_inbox/Los juegos del hambre/`, listos para copy/paste con salida estricta de NotebookLM en JSON puro.
+- Version: 2.7.0
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-030-placeholders-nn-prompts-notebooklm-orquestador.md`
 
 ## TAREA-029-style-prompt-maestro-chatgpt-project
 
