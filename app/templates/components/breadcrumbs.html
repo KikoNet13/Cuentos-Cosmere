@@ -9,7 +9,7 @@
             {% if crumb.path == "" %}
               <a href="{{ url_for('web.dashboard') }}">{{ crumb.name }}</a>
             {% else %}
-              <a href="{{ url_for('web.browse_node', node_path=crumb.path) }}">{{ crumb.name }}</a>
+              <a href="{{ url_for('web.node_or_story', path_rel=crumb.path) }}">{{ crumb.name }}</a>
             {% endif %}
           </li>
         {% endif %}
@@ -17,4 +17,3 @@
     </ul>
   </nav>
 {% endif %}
-

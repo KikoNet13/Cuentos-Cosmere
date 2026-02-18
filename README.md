@@ -60,9 +60,13 @@ library/
 ## UI
 
 - Home biblioteca: `/`
-- Navegacion de nodos: `/browse/<ruta>`
-- Lectura por pagina: `/story/<ruta>/page/<N>`
-- Editor por pagina: `/editor/story/<ruta>/page/<N>`
+- Ruta canonica de nodo/cuento: `/<ruta>`
+- Lectura de cuento: `/<book>/<NN>?p=N` (sin `p`, pagina 1)
+- Editor por pagina: `/<book>/<NN>?p=N&editor=1`
+- Editor de portada: `/<book>/<NN>?editor=1`
+- Fragmentos HTMX: `/<story_path>/_fr/*`
+- Acciones editoriales: `/<story_path>/_act/*`
+- Rutas legacy removidas: `/browse/*`, `/story/*`, `/editor/story/*`, `/n/*`.
 
 ## CLI de app
 

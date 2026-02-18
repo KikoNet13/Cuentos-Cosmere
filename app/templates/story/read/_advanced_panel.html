@@ -5,22 +5,6 @@
 {% endif %}
 
 <section class="advanced-grid">
-  <article class="box">
-    <h3 class="title is-6">Texto</h3>
-    <pre class="story-prose mb-3">{{ page.text }}</pre>
-  </article>
-
-  <article class="box">
-    <h3 class="title is-6">Portada</h3>
-    <p class="panel-label">Prompt</p>
-    <pre class="story-prose mb-3">{{ cover_slot.prompt }}</pre>
-    {% if read_cover_image and read_cover_image.image_exists %}
-      <img class="editor-slot-image" src="{{ read_cover_image.image_url }}" alt="Portada activa">
-    {% else %}
-      <p class="has-text-grey is-size-7">Sin portada activa.</p>
-    {% endif %}
-  </article>
-
   {% for slot in slots %}
     {% set slot_index = loop.index %}
     <article class="box">
@@ -91,8 +75,8 @@
               {% else %}
                 <form
                   method="post"
-                  action="{{ url_for('web.story_advanced_activate_fragment', story_path=story.story_rel_path, page_number=page.page_number, slot_name=slot.slot_name) }}"
-                  hx-post="{{ url_for('web.story_advanced_activate_fragment', story_path=story.story_rel_path, page_number=page.page_number, slot_name=slot.slot_name) }}"
+                  action="{{ url_for('web.story_advanced_activate_fragment', story_path=story.story_rel_path, slot_name=slot.slot_name, p=page.page_number) }}"
+                  hx-post="{{ url_for('web.story_advanced_activate_fragment', story_path=story.story_rel_path, slot_name=slot.slot_name, p=page.page_number) }}"
                   hx-target="#advanced-panel"
                   hx-swap="innerHTML"
                   class="mt-3"

@@ -4,30 +4,30 @@
       <div class="buttons are-small mb-0">
         {% if prev_page %}
           {% if editor_mode %}
-            <a class="button is-light" href="{{ url_for('web.story_editor_page', story_path=story.story_rel_path, page_number=prev_page) }}">&larr; Página {{ prev_page }}</a>
+            <a class="button is-light" href="{{ url_for('web.node_or_story', path_rel=story.story_rel_path, p=prev_page, editor=1) }}">&larr; Pagina {{ prev_page }}</a>
           {% else %}
             <a
               class="button is-light"
-              href="{{ url_for('web.story_read_page', story_path=story.story_rel_path, page_number=prev_page) }}"
-              hx-get="{{ url_for('web.story_shell_fragment', story_path=story.story_rel_path, page_number=prev_page) }}"
+              href="{{ url_for('web.node_or_story', path_rel=story.story_rel_path, p=prev_page) }}"
+              hx-get="{{ url_for('web.story_shell_fragment', story_path=story.story_rel_path, p=prev_page) }}"
               hx-target="#story-shell"
               hx-swap="outerHTML"
-              hx-push-url="true"
-            >&larr; Página {{ prev_page }}</a>
+              hx-push-url="{{ url_for('web.node_or_story', path_rel=story.story_rel_path, p=prev_page) }}"
+            >&larr; Pagina {{ prev_page }}</a>
           {% endif %}
         {% endif %}
         {% if next_page %}
           {% if editor_mode %}
-            <a class="button is-light" href="{{ url_for('web.story_editor_page', story_path=story.story_rel_path, page_number=next_page) }}">Página {{ next_page }} &rarr;</a>
+            <a class="button is-light" href="{{ url_for('web.node_or_story', path_rel=story.story_rel_path, p=next_page, editor=1) }}">Pagina {{ next_page }} &rarr;</a>
           {% else %}
             <a
               class="button is-light"
-              href="{{ url_for('web.story_read_page', story_path=story.story_rel_path, page_number=next_page) }}"
-              hx-get="{{ url_for('web.story_shell_fragment', story_path=story.story_rel_path, page_number=next_page) }}"
+              href="{{ url_for('web.node_or_story', path_rel=story.story_rel_path, p=next_page) }}"
+              hx-get="{{ url_for('web.story_shell_fragment', story_path=story.story_rel_path, p=next_page) }}"
               hx-target="#story-shell"
               hx-swap="outerHTML"
-              hx-push-url="true"
-            >Página {{ next_page }} &rarr;</a>
+              hx-push-url="{{ url_for('web.node_or_story', path_rel=story.story_rel_path, p=next_page) }}"
+            >Pagina {{ next_page }} &rarr;</a>
           {% endif %}
         {% endif %}
       </div>
@@ -37,16 +37,16 @@
           {% if editor_mode %}
             <a
               class="tag page-chip {% if num == selected_page %}is-selected{% endif %}"
-              href="{{ url_for('web.story_editor_page', story_path=story.story_rel_path, page_number=num) }}"
+              href="{{ url_for('web.node_or_story', path_rel=story.story_rel_path, p=num, editor=1) }}"
             >{{ num }}</a>
           {% else %}
             <a
               class="tag page-chip {% if num == selected_page %}is-selected{% endif %}"
-              href="{{ url_for('web.story_read_page', story_path=story.story_rel_path, page_number=num) }}"
-              hx-get="{{ url_for('web.story_shell_fragment', story_path=story.story_rel_path, page_number=num) }}"
+              href="{{ url_for('web.node_or_story', path_rel=story.story_rel_path, p=num) }}"
+              hx-get="{{ url_for('web.story_shell_fragment', story_path=story.story_rel_path, p=num) }}"
               hx-target="#story-shell"
               hx-swap="outerHTML"
-              hx-push-url="true"
+              hx-push-url="{{ url_for('web.node_or_story', path_rel=story.story_rel_path, p=num) }}"
             >{{ num }}</a>
           {% endif %}
         {% endfor %}
@@ -54,4 +54,3 @@
     </div>
   </nav>
 {% endif %}
-

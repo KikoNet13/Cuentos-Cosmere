@@ -5,6 +5,26 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [18/02/26] - Ejemplo Hansel/Gretel alineado + prompts operativos + rutas limpias
+
+- `library/hansel_y_gretel/01.json` y espejo `hansel_y_gretel.json` realineados al set visual nuevo (`style_refs` recortado sin texto en imagen).
+- Sustituidos assets activos (cover + paginas 1..15), eliminados no usados y regenerado `library/hansel_y_gretel/images/index.json` solo con activos.
+- Nueva pagina 16 sin imagen:
+  - `images.main.status = not_required`
+  - `active_id = \"\"`
+  - `alternatives = []`
+- Prompts de portada y paginas reescritos como prompts largos de generacion para ChatGPT Image, con estructura fija y `reference_ids` simulados por anclas.
+- Nuevo `library/hansel_y_gretel/meta.json` con `collection.title`, `anchors[]`, `updated_at` (anclas metadata-only sin archivos reales).
+- Migracion breaking de rutas web:
+  - canonica `GET /<path_rel>`
+  - fragmentos `/<story_path>/_fr/*`
+  - acciones `/<story_path>/_act/*`
+  - eliminadas rutas legacy `/browse/*`, `/story/*`, `/editor/story/*`, `/n/*` (sin redirect).
+- UI:
+  - portada retirada de lectura por pagina y editor por pagina;
+  - nuevo editor de portada en `?editor=1` sin `p`.
+- Tarea: `docs/tasks/TAREA-024-ejemplo-hansel-gretel-alineado-prompts-rutas-limpias.md`.
+
 ## [17/02/26] - Giro a flujo 3 IAs + skill `ingesta-cuentos` + contrato nuevo app
 
 - Sustituida la skill `adaptacion-ingesta-inicial` por `ingesta-cuentos` (conversacional, sin scripts).

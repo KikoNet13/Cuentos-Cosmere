@@ -75,12 +75,26 @@ Notas:
 1. La webapp lee `NN.json` directo desde disco.
 2. No se usa SQLite para navegacion ni lectura.
 3. Home de biblioteca: `/`.
-4. Navegacion de nodos: `/browse/<path>`.
-5. Lectura por pagina: `/story/<path>/page/<int:page_number>`.
-6. Modo editorial por pagina: `/editor/story/<path>/page/<int:page_number>`.
-7. Fragmentos HTMX de lectura: `/fragments/story/<path>/page/<int:page_number>/*`.
-8. Compatibilidad legacy:
-   - `/n/<path>` y `/story/<path>?p=N[&editor=1]` se mantienen solo como redirect temporal.
+4. Ruta canonica unica para nodo/cuento: `/<path_rel>`.
+5. Lectura de cuento:
+   - `/<book>/<NN>` (pagina 1 por defecto).
+   - `/<book>/<NN>?p=N`.
+6. Edicion de cuento:
+   - `/<book>/<NN>?p=N&editor=1` (editor de pagina).
+   - `/<book>/<NN>?editor=1` (editor de portada a nivel cuento).
+7. Fragmentos HTMX de lectura:
+   - `GET /<story_path>/_fr/shell?p=N`
+   - `GET /<story_path>/_fr/advanced?p=N`
+   - `POST /<story_path>/_fr/slot/<slot_name>/activate?p=N`
+8. Acciones editoriales:
+   - `POST /<story_path>/_act/page/save?p=N`
+   - `POST /<story_path>/_act/page/slot/<slot_name>/upload?p=N`
+   - `POST /<story_path>/_act/page/slot/<slot_name>/activate?p=N`
+   - `POST /<story_path>/_act/cover/save`
+   - `POST /<story_path>/_act/cover/upload`
+   - `POST /<story_path>/_act/cover/activate`
+   - `POST /<story_path>/_act/anchors/*`
+9. Rutas legacy removidas (sin redirects): `/browse/*`, `/story/*`, `/editor/story/*`, `/n/*`.
 
 ## CLI vigente
 

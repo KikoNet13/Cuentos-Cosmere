@@ -12,11 +12,10 @@
       </div>
       <a
         class="button is-light is-small"
-        href="{{ url_for('web.story_editor_page', story_path=story.story_rel_path, page_number=selected_page) }}"
+        href="{{ url_for('web.node_or_story', path_rel=story.story_rel_path, p=selected_page, editor=1) }}"
       >Modo editorial</a>
     </div>
   </section>
 
   {% include "story/read/_shell.html" %}
 {% endblock %}
-

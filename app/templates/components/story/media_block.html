@@ -1,16 +1,15 @@
 <article id="story-media-main" class="box story-media-box" {% if oob %}hx-swap-oob="outerHTML"{% endif %}>
-  <h2 class="title is-5">Ilustración principal</h2>
+  <h2 class="title is-5">Ilustracion principal</h2>
   {% if read_main_image and read_main_image.image_exists %}
     <figure class="image story-main-image">
-      <img src="{{ read_main_image.image_url }}" alt="Imagen principal de la página {{ page.page_number }}">
+      <img src="{{ read_main_image.image_url }}" alt="Imagen principal de la pagina {{ page.page_number }}">
     </figure>
     <p class="is-size-7 has-text-grey mt-3">
       <code>{{ read_main_image.asset_rel_path }}</code>
     </p>
   {% else %}
     <div class="story-placeholder">
-      <span>Sin imagen activa disponible para esta página.</span>
+      <span>Sin imagen activa disponible para esta pagina.</span>
     </div>
   {% endif %}
 </article>
-

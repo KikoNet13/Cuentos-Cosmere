@@ -19,7 +19,7 @@
     <details class="box story-advanced-details mt-4">
       <summary
         class="story-advanced-summary"
-        hx-get="{{ url_for('web.story_advanced_fragment', story_path=story.story_rel_path, page_number=selected_page) }}"
+        hx-get="{{ url_for('web.story_advanced_fragment', story_path=story.story_rel_path, p=selected_page) }}"
         hx-target="#advanced-panel"
         hx-swap="innerHTML"
         hx-trigger="click once"

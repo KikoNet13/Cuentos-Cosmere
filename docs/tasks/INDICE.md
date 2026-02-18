@@ -1,6 +1,16 @@
 ﻿# Indice de tareas
 
-- Proximo ID: `024`
+- Proximo ID: `025`
+
+## TAREA-024-ejemplo-hansel-gretel-alineado-prompts-rutas-limpias
+
+- Fecha: 18/02/26 10:05
+- Estado: cerrada
+- Resumen: ejemplo `hansel_y_gretel` realineado a nuevos recortes visuales, prompts operativos largos + anclas metadata-only, migracion breaking a rutas limpias y editor de portada separado por cuento.
+- Version: 2.1.0
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-024-ejemplo-hansel-gretel-alineado-prompts-rutas-limpias.md`
 
 ## TAREA-023-giro-flujo-3-ias-ingesta-cuentos-contrato-nuevo-app
 

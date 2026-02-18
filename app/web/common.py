@@ -46,6 +46,16 @@ def build_breadcrumbs(path_rel: str) -> list[dict[str, str]]:
     return crumbs
 
 
+def build_story_url(story_rel_path: str, *, page_number: int | None = None, editor_mode: bool = False) -> str:
+    normalized = normalize_rel_path(story_rel_path)
+    args: dict[str, Any] = {"path_rel": normalized}
+    if page_number is not None and int(page_number) > 0:
+        args["p"] = int(page_number)
+    if editor_mode:
+        args["editor"] = 1
+    return url_for("web.node_or_story", **args)
+
+
 def first_story_page_number(story_rel_path: str) -> int:
     try:
         pages = list_story_pages(story_rel_path)
@@ -64,9 +74,7 @@ def decorate_children_for_cards(children: list[dict[str, Any]]) -> list[dict[str
 
         if item.get("is_story_leaf"):
             summary = item.get("story_summary") or get_story_summary(path_rel) or {}
-            page_number = first_story_page_number(path_rel)
-
-            item["href"] = url_for("web.story_read_page", story_path=path_rel, page_number=page_number)
+            item["href"] = build_story_url(path_rel)
             item["card_title"] = str(summary.get("title", "")).strip() or str(item.get("name", "")).strip()
             story_id = str(summary.get("story_id", "")).strip()
             item["card_subtitle"] = f"Cuento {story_id}" if story_id else "Cuento"
@@ -85,7 +93,7 @@ def decorate_children_for_cards(children: list[dict[str, Any]]) -> list[dict[str
             item["thumb_rel_path"] = thumb_rel_path
             item["card_kind"] = "story"
         else:
-            item["href"] = url_for("web.browse_node", node_path=path_rel) if path_rel else url_for("web.dashboard")
+            item["href"] = url_for("web.node_or_story", path_rel=path_rel) if path_rel else url_for("web.dashboard")
             item["card_title"] = str(item.get("name", "")).strip() or "(sin nombre)"
             if item.get("is_book_node"):
                 item["card_subtitle"] = "Libro"
@@ -97,4 +105,3 @@ def decorate_children_for_cards(children: list[dict[str, Any]]) -> list[dict[str
         items.append(item)
 
     return items
-

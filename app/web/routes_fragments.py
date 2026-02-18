@@ -4,22 +4,24 @@ from flask import abort, render_template, request
 
 from ..story_store import StoryStoreError, set_slot_active
 from . import web_bp
-from .common import normalize_rel_path
+from .common import first_story_page_number, normalize_rel_path, parse_positive_int
 from .viewmodels import build_story_view_model
 
 
-@web_bp.get("/fragments/story/<path:story_path>/page/<int:page_number>/shell")
-def story_shell_fragment(story_path: str, page_number: int):
+@web_bp.get("/<path:story_path>/_fr/shell")
+def story_shell_fragment(story_path: str):
     story_rel_path = normalize_rel_path(story_path)
+    page_number = parse_positive_int(request.args.get("p"), first_story_page_number(story_rel_path))
     view_model = build_story_view_model(story_rel_path, page_number, editor_mode=False)
     if not view_model:
         abort(404)
     return render_template("story/read/_shell.html", **view_model)
 
 
-@web_bp.get("/fragments/story/<path:story_path>/page/<int:page_number>/advanced")
-def story_advanced_fragment(story_path: str, page_number: int):
+@web_bp.get("/<path:story_path>/_fr/advanced")
+def story_advanced_fragment(story_path: str):
     story_rel_path = normalize_rel_path(story_path)
+    page_number = parse_positive_int(request.args.get("p"), first_story_page_number(story_rel_path))
     view_model = build_story_view_model(story_rel_path, page_number, editor_mode=False)
     if not view_model:
         abort(404)
@@ -31,9 +33,10 @@ def story_advanced_fragment(story_path: str, page_number: int):
     )
 
 
-@web_bp.post("/fragments/story/<path:story_path>/page/<int:page_number>/slot/<slot_name>/activate")
-def story_advanced_activate_fragment(story_path: str, page_number: int, slot_name: str):
+@web_bp.post("/<path:story_path>/_fr/slot/<slot_name>/activate")
+def story_advanced_activate_fragment(story_path: str, slot_name: str):
     story_rel_path = normalize_rel_path(story_path)
+    page_number = parse_positive_int(request.args.get("p"), first_story_page_number(story_rel_path))
     alternative_id = request.form.get("alternative_id", "").strip()
 
     panel_message = ""
@@ -65,4 +68,3 @@ def story_advanced_activate_fragment(story_path: str, page_number: int, slot_nam
         panel_kind=panel_kind,
         **view_model,
     )
-

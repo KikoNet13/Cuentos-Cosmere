@@ -4,7 +4,7 @@ import base64
 import mimetypes
 import re
 
-from flask import abort, flash, redirect, render_template, request, url_for
+from flask import flash, redirect, request
 
 from ..story_store import (
     StoryStoreError,
@@ -19,8 +19,7 @@ from ..story_store import (
     upsert_anchor,
 )
 from . import web_bp
-from .common import normalize_rel_path, safe_next_url
-from .viewmodels import build_story_view_model
+from .common import build_story_url, first_story_page_number, normalize_rel_path, parse_positive_int, safe_next_url
 
 
 def _extract_image_payload() -> tuple[bytes | None, str, str | None]:
@@ -57,30 +56,15 @@ def _extract_image_payload() -> tuple[bytes | None, str, str | None]:
     return decoded, mime_type, None
 
 
-@web_bp.get("/editor/story/<path:story_path>/page/<int:page_number>")
-def story_editor_page(story_path: str, page_number: int):
+def _page_number(story_rel_path: str) -> int:
+    return parse_positive_int(request.args.get("p"), first_story_page_number(story_rel_path))
+
+
+@web_bp.post("/<path:story_path>/_act/page/save")
+def save_story_page(story_path: str):
     story_rel_path = normalize_rel_path(story_path)
-    view_model = build_story_view_model(story_rel_path, page_number, editor_mode=True)
-    if not view_model:
-        abort(404)
-
-    if view_model["page_numbers"] and int(view_model["selected_page"]) != int(page_number):
-        return redirect(
-            url_for(
-                "web.story_editor_page",
-                story_path=story_rel_path,
-                page_number=int(view_model["selected_page"]),
-            )
-        )
-
-    return render_template("story/editor/page.html", **view_model)
-
-
-@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/save")
-@web_bp.post("/story/<path:story_path>/page/<int:page_number>/save")
-def save_story_page(story_path: str, page_number: int):
-    story_rel_path = normalize_rel_path(story_path)
-    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+    page_number = _page_number(story_rel_path)
+    fallback = build_story_url(story_rel_path, page_number=page_number, editor_mode=True)
 
     try:
         save_page_edits(
@@ -99,29 +83,11 @@ def save_story_page(story_path: str, page_number: int):
     return redirect(safe_next_url(request.form.get("next"), fallback))
 
 
-@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/cover/save")
-def save_story_cover(story_path: str, page_number: int):
+@web_bp.post("/<path:story_path>/_act/page/slot/<slot_name>/upload")
+def upload_slot_image(story_path: str, slot_name: str):
     story_rel_path = normalize_rel_path(story_path)
-    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
-
-    try:
-        save_cover_edits(
-            story_rel_path=story_rel_path,
-            prompt=request.form.get("cover_prompt", ""),
-            reference_ids=request.form.get("cover_reference_ids", ""),
-        )
-        flash("Portada guardada.", "success")
-    except StoryStoreError as exc:
-        flash(str(exc), "error")
-
-    return redirect(safe_next_url(request.form.get("next"), fallback))
-
-
-@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/slot/<slot_name>/upload")
-@web_bp.post("/story/<path:story_path>/page/<int:page_number>/slot/<slot_name>/upload")
-def upload_slot_image(story_path: str, page_number: int, slot_name: str):
-    story_rel_path = normalize_rel_path(story_path)
-    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+    page_number = _page_number(story_rel_path)
+    fallback = build_story_url(story_rel_path, page_number=page_number, editor_mode=True)
 
     image_bytes, mime_type, error = _extract_image_payload()
     if error:
@@ -145,11 +111,11 @@ def upload_slot_image(story_path: str, page_number: int, slot_name: str):
     return redirect(safe_next_url(request.form.get("next"), fallback))
 
 
-@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/slot/<slot_name>/activate")
-@web_bp.post("/story/<path:story_path>/page/<int:page_number>/slot/<slot_name>/activate")
-def activate_slot_image(story_path: str, page_number: int, slot_name: str):
+@web_bp.post("/<path:story_path>/_act/page/slot/<slot_name>/activate")
+def activate_slot_image(story_path: str, slot_name: str):
     story_rel_path = normalize_rel_path(story_path)
-    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+    page_number = _page_number(story_rel_path)
+    fallback = build_story_url(story_rel_path, page_number=page_number, editor_mode=True)
 
     alternative_id = request.form.get("alternative_id", "").strip()
     if not alternative_id:
@@ -170,10 +136,28 @@ def activate_slot_image(story_path: str, page_number: int, slot_name: str):
     return redirect(safe_next_url(request.form.get("next"), fallback))
 
 
-@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/cover/upload")
-def upload_cover_image(story_path: str, page_number: int):
+@web_bp.post("/<path:story_path>/_act/cover/save")
+def save_story_cover(story_path: str):
     story_rel_path = normalize_rel_path(story_path)
-    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+    fallback = build_story_url(story_rel_path, editor_mode=True)
+
+    try:
+        save_cover_edits(
+            story_rel_path=story_rel_path,
+            prompt=request.form.get("cover_prompt", ""),
+            reference_ids=request.form.get("cover_reference_ids", ""),
+        )
+        flash("Portada guardada.", "success")
+    except StoryStoreError as exc:
+        flash(str(exc), "error")
+
+    return redirect(safe_next_url(request.form.get("next"), fallback))
+
+
+@web_bp.post("/<path:story_path>/_act/cover/upload")
+def upload_cover_image(story_path: str):
+    story_rel_path = normalize_rel_path(story_path)
+    fallback = build_story_url(story_rel_path, editor_mode=True)
 
     image_bytes, mime_type, error = _extract_image_payload()
     if error:
@@ -195,10 +179,10 @@ def upload_cover_image(story_path: str, page_number: int):
     return redirect(safe_next_url(request.form.get("next"), fallback))
 
 
-@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/cover/activate")
-def activate_cover_image(story_path: str, page_number: int):
+@web_bp.post("/<path:story_path>/_act/cover/activate")
+def activate_cover_image(story_path: str):
     story_rel_path = normalize_rel_path(story_path)
-    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+    fallback = build_story_url(story_rel_path, editor_mode=True)
 
     alternative_id = request.form.get("alternative_id", "").strip()
     if not alternative_id:
@@ -214,10 +198,11 @@ def activate_cover_image(story_path: str, page_number: int):
     return redirect(safe_next_url(request.form.get("next"), fallback))
 
 
-@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/anchors/save")
-def save_anchor(story_path: str, page_number: int):
+@web_bp.post("/<path:story_path>/_act/anchors/save")
+def save_anchor(story_path: str):
     story_rel_path = normalize_rel_path(story_path)
-    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+    page_number = _page_number(story_rel_path)
+    fallback = build_story_url(story_rel_path, page_number=page_number, editor_mode=True)
 
     anchor_level = normalize_rel_path(request.form.get("anchor_level", ""))
     anchor_id = request.form.get("anchor_id", "").strip()
@@ -241,10 +226,11 @@ def save_anchor(story_path: str, page_number: int):
     return redirect(safe_next_url(request.form.get("next"), fallback))
 
 
-@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/anchors/<anchor_id>/upload")
-def upload_anchor_image(story_path: str, page_number: int, anchor_id: str):
+@web_bp.post("/<path:story_path>/_act/anchors/<anchor_id>/upload")
+def upload_anchor_image(story_path: str, anchor_id: str):
     story_rel_path = normalize_rel_path(story_path)
-    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+    page_number = _page_number(story_rel_path)
+    fallback = build_story_url(story_rel_path, page_number=page_number, editor_mode=True)
     anchor_level = normalize_rel_path(request.form.get("anchor_level", ""))
 
     image_bytes, mime_type, error = _extract_image_payload()
@@ -268,10 +254,11 @@ def upload_anchor_image(story_path: str, page_number: int, anchor_id: str):
     return redirect(safe_next_url(request.form.get("next"), fallback))
 
 
-@web_bp.post("/editor/story/<path:story_path>/page/<int:page_number>/anchors/<anchor_id>/activate")
-def activate_anchor_image(story_path: str, page_number: int, anchor_id: str):
+@web_bp.post("/<path:story_path>/_act/anchors/<anchor_id>/activate")
+def activate_anchor_image(story_path: str, anchor_id: str):
     story_rel_path = normalize_rel_path(story_path)
-    fallback = url_for("web.story_editor_page", story_path=story_rel_path, page_number=page_number)
+    page_number = _page_number(story_rel_path)
+    fallback = build_story_url(story_rel_path, page_number=page_number, editor_mode=True)
     anchor_level = normalize_rel_path(request.form.get("anchor_level", ""))
     alternative_id = request.form.get("alternative_id", "").strip()
 

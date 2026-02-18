@@ -72,7 +72,7 @@
           {% if alternative.is_active %}
             <span class="tag is-success is-light mt-3">Activa</span>
           {% else %}
-            <form method="post" action="{{ url_for('web.activate_slot_image', story_path=story.story_rel_path, page_number=page.page_number, slot_name=slot.slot_name) }}" class="mt-3">
+            <form method="post" action="{{ url_for('web.activate_slot_image', story_path=story.story_rel_path, slot_name=slot.slot_name, p=page.page_number) }}" class="mt-3">
               <input type="hidden" name="next" value="{{ request.full_path }}">
               <input type="hidden" name="alternative_id" value="{{ alternative.id }}">
               <button class="button is-small is-primary is-light" type="submit">Usar como activa</button>
@@ -89,7 +89,7 @@
   <h4 class="title is-6">Subir alternativa</h4>
   <form
     method="post"
-    action="{{ url_for('web.upload_slot_image', story_path=story.story_rel_path, page_number=page.page_number, slot_name=slot.slot_name) }}"
+    action="{{ url_for('web.upload_slot_image', story_path=story.story_rel_path, slot_name=slot.slot_name, p=page.page_number) }}"
     enctype="multipart/form-data"
     class="is-flex is-flex-direction-column gap-2"
   >

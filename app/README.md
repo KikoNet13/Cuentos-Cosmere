@@ -43,12 +43,16 @@
 - UI server-rendered con Jinja + Bulma y comportamiento parcial con HTMX.
 - Endpoints principales:
   - `/`
-  - `/browse/<path>`
-  - `/story/<path>/page/<int:page_number>` (lectura)
-  - `/editor/story/<path>/page/<int:page_number>` (edicion)
-  - `/fragments/story/<path>/page/<int:page_number>/*` (fragmentos HTMX)
+  - `/<path_rel>` (nodo o cuento)
+  - `/<book>/<NN>?p=N` (lectura por pagina)
+  - `/<book>/<NN>?p=N&editor=1` (editor de pagina)
+  - `/<book>/<NN>?editor=1` (editor de portada)
+  - `/<story_path>/_fr/*` (fragmentos HTMX)
+  - `/<story_path>/_act/*` (acciones editoriales)
   - `/media/<path>`
   - `/health`
+- Rutas legacy removidas sin redirect:
+  - `/browse/*`, `/story/*`, `/editor/story/*`, `/n/*`.
 
 ## Estructura UI
 
@@ -57,7 +61,7 @@
 - `templates/browse/`: vistas de biblioteca.
 - `templates/story/read/`: lectura y panel avanzado.
 - `templates/story/editor/`: edicion de pagina, portada y anclas.
-- `web/`: rutas por dominio (`browse`, `story_read`, `story_editor`, `fragments`, `system`).
+- `web/`: rutas por dominio (`browse` catch-all canonico, `story_editor` acciones, `fragments`, `system`).
 
 ## CLI de app
 
