@@ -30,22 +30,44 @@
       "name": "Alma Coin",
       "prompt": "OBJETIVO DE ILUSTRACION\nEstablecer el diseno visual de la Presidenta Alma Coin, capturando su autoridad fria e implacable del Distrito 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra limpia y colores planos. Coin debe tener el cabello gris perfectamente liso que le cae sobre los hombros como una sabana blanca. Sus ojos deben ser de un gris pálido, casi sin color, transmitiendo una frialdad absoluta. Su uniforme debe ser el gris reglamentario del búnker.\n\nCOMPOSICION Y ENCUADRE\nPlano medio frontal de Coin. Composición muy estática y simétrica para enfatizar su rigidez mental y politica.\n\nPERSONAJES Y ACCION\nCoin en posicion de mando, con los brazos a los lados o cruzados. Su expresion debe ser neutra, casi inhumana, sin rastro de emocion.\n\nENTORNO, PALETA E ILUMINACION\nFondo de hormigon gris plano. Paleta monocromatica de grises con contrastes minimos. Iluminación cenital fria y plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_coin_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni sombras dramaticas. No incluir elementos del Capitolio. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 para referencia de personajes de cuento.",
       "image_filenames": [
-        "anchor_char_coin.png"
+        "anchor_char_coin.png",
+        "14936fe74c3e4ef1b6198c3e26f7e1ae_flow-char-coin-base.png"
       ],
       "status": "draft",
-      "active_id": "",
-      "alternatives": []
+      "active_id": "14936fe74c3e4ef1b6198c3e26f7e1ae_flow-char-coin-base.png",
+      "alternatives": [
+        {
+          "id": "14936fe74c3e4ef1b6198c3e26f7e1ae_flow-char-coin-base.png",
+          "slug": "flow-char-coin-base",
+          "asset_rel_path": "library/los_juegos_del_hambre/images/14936fe74c3e4ef1b6198c3e26f7e1ae_flow-char-coin-base.png",
+          "mime_type": "image/png",
+          "status": "candidate",
+          "created_at": "2026-02-18T23:52:18.388150+00:00",
+          "notes": "Flujo guiado de imagenes pendientes"
+        }
+      ]
     },
     {
       "id": "char_effie_base",
       "name": "Effie Trinket",
       "prompt": "OBJETIVO DE ILUSTRACION\nCrear el ancla visual para Effie Trinket, destacando su naturaleza extravagante y artificial en contraste con los distritos.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern con línea negra vibrante. Effie debe llevar pelucas de colores intensos (rosa, oro) y maquillaje blanco de base con labios pintados de forma exagerada. Su ropa debe ser escultural y llena de volantes del Capitolio.\n\nCOMPOSICION Y ENCUADRE\nPlano medio dinamico. Ella debe ocupar el centro de la imagen con una pose de presentadora entusiasta.\n\nPERSONAJES Y ACCION\nEffie sonriendo de forma aterradora pero elegante. Gesticulando con las manos como si presentara un gran espectaculo.\n\nENTORNO, PALETA E ILUMINACION\nFondo de colores saturados o marmol blanco. Paleta neón: rosas, verdes acidos y dorados. Iluminación de escenario brillante.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_effie_base, env_train_capitol.\n\nRESTRICCIONES / NEGATIVOS\nNo usar degradados suaves. No debe parecer una persona real, sino una muñeca del Capitolio. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta claridad visual.",
       "image_filenames": [
-        "anchor_char_effie.png"
+        "anchor_char_effie.png",
+        "bd5da375ac6540b198c1a8aea74f163d_flow-char-effie-base.png"
       ],
       "status": "draft",
-      "active_id": "",
-      "alternatives": []
+      "active_id": "bd5da375ac6540b198c1a8aea74f163d_flow-char-effie-base.png",
+      "alternatives": [
+        {
+          "id": "bd5da375ac6540b198c1a8aea74f163d_flow-char-effie-base.png",
+          "slug": "flow-char-effie-base",
+          "asset_rel_path": "library/los_juegos_del_hambre/images/bd5da375ac6540b198c1a8aea74f163d_flow-char-effie-base.png",
+          "mime_type": "image/png",
+          "status": "candidate",
+          "created_at": "2026-02-18T23:53:26.920984+00:00",
+          "notes": "Flujo guiado de imagenes pendientes"
+        }
+      ]
     },
     {
       "id": "char_finnick_base",
@@ -312,7 +334,7 @@
       "alternatives": []
     }
   ],
-  "updated_at": "2026-02-18T23:51:29.781779+00:00",
+  "updated_at": "2026-02-18T23:53:26.935609+00:00",
   "style_rules": [
     "Uso obligatorio de línea negra definida (estilo Ligne Claire).",
     "Colores planos sin degradados ni sombreados dramaticos.",

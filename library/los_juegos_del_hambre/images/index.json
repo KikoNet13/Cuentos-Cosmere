@@ -1,9 +1,23 @@
 [
   {
+    "filename": "14936fe74c3e4ef1b6198c3e26f7e1ae_flow-char-coin-base.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/14936fe74c3e4ef1b6198c3e26f7e1ae_flow-char-coin-base.png",
+    "description": "anchor char_coin_base",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T23:52:18.390666+00:00"
+  },
+  {
     "filename": "1d1ea9c0878949cc8a02b93638c1ab0d_flow-char-beetee-base.png",
     "asset_rel_path": "library/los_juegos_del_hambre/images/1d1ea9c0878949cc8a02b93638c1ab0d_flow-char-beetee-base.png",
     "description": "anchor char_beetee_base",
     "node_rel_path": "los_juegos_del_hambre",
     "created_at": "2026-02-18T23:51:29.769369+00:00"
+  },
+  {
+    "filename": "bd5da375ac6540b198c1a8aea74f163d_flow-char-effie-base.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/bd5da375ac6540b198c1a8aea74f163d_flow-char-effie-base.png",
+    "description": "anchor char_effie_base",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T23:53:26.923981+00:00"
   }
 ]
