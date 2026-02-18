@@ -4,113 +4,9 @@
   },
   "anchors": [
     {
-      "id": "style_linea_editorial",
-      "name": "Estilo Sergio Kern",
-      "prompt": "Estilo de ilustración de cuento infantil clásico: línea negra limpia y expresiva, colores planos vibrantes y formas geométricas amables.",
-      "image_filenames": [
-        "anchor_style_editorial_v1.png"
-      ]
-    },
-    {
-      "id": "style_paleta_rebelion",
-      "name": "Paleta de Color Rebelde",
-      "prompt": "Contraste entre los tonos grises y ocres de los distritos frente a los colores neón y artificiales del Capitolio.",
-      "image_filenames": [
-        "anchor_style_palette_v1.png"
-      ]
-    },
-    {
-      "id": "cover_mockingjay_collection",
-      "name": "Portada Colección Sinsajo",
-      "prompt": "Símbolo del sinsajo dorado con una flecha en el centro sobre fondo negro sólido. Estilo minimalista.",
-      "image_filenames": [
-        "anchor_cover_main.png"
-      ]
-    },
-    {
-      "id": "char_katniss_base",
-      "name": "Katniss Everdeen",
-      "prompt": "Chica de 16 años, piel aceitunada, cabello negro largo trenzado a la espalda y ojos grises. Expresión decidida.",
-      "image_filenames": [
-        "anchor_char_katniss.png"
-      ]
-    },
-    {
-      "id": "char_peeta_base",
-      "name": "Peeta Mellark",
-      "prompt": "Chico de constitución fuerte, cabello rubio ceniza ondulado y ojos azules claros. Expresión amable y protectora.",
-      "image_filenames": [
-        "anchor_char_peeta.png"
-      ]
-    },
-    {
-      "id": "char_gale_base",
-      "name": "Gale Hawthorne",
-      "prompt": "Joven alto y musculoso, rasgos de la Veta con pelo negro liso y ojos grises. Aire rebelde y serio.",
-      "image_filenames": [
-        "anchor_char_gale.png"
-      ]
-    },
-    {
-      "id": "char_prim_base",
-      "name": "Primrose Everdeen",
-      "prompt": "Niña pequeña de cabello rubio claro en trenzas y ojos azules. Viste blusa con la parte de atrás por fuera (cola de pato).",
-      "image_filenames": [
-        "anchor_char_prim.png"
-      ]
-    },
-    {
-      "id": "char_haymitch_base",
-      "name": "Haymitch Abernathy",
-      "prompt": "Hombre de mediana edad, aspecto desaliñado, cabello rubio oscuro largo hasta los hombros y ojos cansados.",
-      "image_filenames": [
-        "anchor_char_haymitch.png"
-      ]
-    },
-    {
-      "id": "char_effie_base",
-      "name": "Effie Trinket",
-      "prompt": "Mujer con pelucas de colores (rosa, oro), ropa extravagante del Capitolio y maquillaje blanco con labios marcados.",
-      "image_filenames": [
-        "anchor_char_effie.png"
-      ]
-    },
-    {
-      "id": "char_snow_base",
-      "name": "Presidente Snow",
-      "prompt": "Hombre anciano de cabello blanco perfecto, ojos de serpiente y labios inusualmente hinchados. Siempre lleva una rosa blanca.",
-      "image_filenames": [
-        "anchor_char_snow.png"
-      ]
-    },
-    {
-      "id": "char_rue_base",
-      "name": "Rue",
-      "prompt": "Niña de 12 años, piel oscura y ojos brillantes. Muy pequeña y ágil, recordado a un pájaro a punto de volar.",
-      "image_filenames": [
-        "anchor_char_rue.png"
-      ]
-    },
-    {
-      "id": "char_finnick_base",
-      "name": "Finnick Odair",
-      "prompt": "Joven de belleza extraordinaria, piel dorada, cabello color bronce y ojos verde mar. Atlético y carismático.",
-      "image_filenames": [
-        "anchor_char_finnick.png"
-      ]
-    },
-    {
-      "id": "char_johanna_base",
-      "name": "Johanna Mason",
-      "prompt": "Mujer joven de mirada feroz, cabello castaño corto y ojos marrones. Actitud desafiante y cínica.",
-      "image_filenames": [
-        "anchor_char_johanna.png"
-      ]
-    },
-    {
       "id": "char_beetee_base",
       "name": "Beetee",
-      "prompt": "Hombre delgado con gafas, expresión inteligente y algo nerviosa. Experto en tecnología y cables.",
+      "prompt": "OBJETIVO DE ILUSTRACION\nCrear la referencia visual de Beetee para asegurar su consistencia como el genio tecnologico del Distrito 3 en toda la saga.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener el estilo Sergio Kern de línea negra definida y colores planos. Beetee debe ser un hombre delgado, de piel clara, con gafas de montura circular y una expresion de inteligencia analitica. Su vestuario debe ser funcional, reflejando su afinidad por la electricidad y la mecanica.\n\nCOMPOSICION Y ENCUADRE\nPlano medio del personaje en posicion de estudio. Debe estar ligeramente inclinado hacia adelante como si examinara un objeto invisible.\n\nPERSONAJES Y ACCION\nBeetee de pie, con las manos juntas o manipulando un pequeno cable. Su mirada debe transmitir una mezcla de nerviosismo y sabiduria.\n\nENTORNO, PALETA E ILUMINACION\nFondo neutro en tonos azules metalicos. La paleta debe usar grises, azules y un toque de amarillo para elementos electricos. Iluminación clara y sin sombras complejas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_beetee_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nNo usar fotorrealismo ni efectos de luz digital modernos. Evitar poses de combate agresivas. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 lista para guia de estilo editorial.",
       "image_filenames": [
         "anchor_char_beetee.png"
       ]
@@ -118,23 +14,135 @@
     {
       "id": "char_coin_base",
       "name": "Alma Coin",
-      "prompt": "Mujer de unos 50 años, cabello gris liso cortado de forma impecable y ojos de color gris pálido casi sin color.",
+      "prompt": "OBJETIVO DE ILUSTRACION\nEstablecer el diseno visual de la Presidenta Alma Coin, capturando su autoridad fria e implacable del Distrito 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra limpia y colores planos. Coin debe tener el cabello gris perfectamente liso que le cae sobre los hombros como una sabana blanca. Sus ojos deben ser de un gris pálido, casi sin color, transmitiendo una frialdad absoluta. Su uniforme debe ser el gris reglamentario del búnker.\n\nCOMPOSICION Y ENCUADRE\nPlano medio frontal de Coin. Composición muy estática y simétrica para enfatizar su rigidez mental y politica.\n\nPERSONAJES Y ACCION\nCoin en posicion de mando, con los brazos a los lados o cruzados. Su expresion debe ser neutra, casi inhumana, sin rastro de emocion.\n\nENTORNO, PALETA E ILUMINACION\nFondo de hormigon gris plano. Paleta monocromatica de grises con contrastes minimos. Iluminación cenital fria y plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_coin_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni sombras dramaticas. No incluir elementos del Capitolio. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 para referencia de personajes de cuento.",
       "image_filenames": [
         "anchor_char_coin.png"
       ]
     },
     {
+      "id": "char_effie_base",
+      "name": "Effie Trinket",
+      "prompt": "OBJETIVO DE ILUSTRACION\nCrear el ancla visual para Effie Trinket, destacando su naturaleza extravagante y artificial en contraste con los distritos.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern con línea negra vibrante. Effie debe llevar pelucas de colores intensos (rosa, oro) y maquillaje blanco de base con labios pintados de forma exagerada. Su ropa debe ser escultural y llena de volantes del Capitolio.\n\nCOMPOSICION Y ENCUADRE\nPlano medio dinamico. Ella debe ocupar el centro de la imagen con una pose de presentadora entusiasta.\n\nPERSONAJES Y ACCION\nEffie sonriendo de forma aterradora pero elegante. Gesticulando con las manos como si presentara un gran espectaculo.\n\nENTORNO, PALETA E ILUMINACION\nFondo de colores saturados o marmol blanco. Paleta neón: rosas, verdes acidos y dorados. Iluminación de escenario brillante.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_effie_base, env_train_capitol.\n\nRESTRICCIONES / NEGATIVOS\nNo usar degradados suaves. No debe parecer una persona real, sino una muñeca del Capitolio. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta claridad visual.",
+      "image_filenames": [
+        "anchor_char_effie.png"
+      ]
+    },
+    {
+      "id": "char_finnick_base",
+      "name": "Finnick Odair",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir la apariencia de Finnick Odair para asegurar su belleza extraordinaria y su aire de vencedor del Distrito 4.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra limpia y anatomia atletica. Finnick debe tener la piel dorada por el sol, cabello color bronce ondulado y ojos de un verde mar impactante. Su diseno debe ser el de un heroe clásico pero con una mirada de cansancio oculto.\n\nCOMPOSICION Y ENCUADRE\nPlano medio del personaje, mostrando su porte atletico. Posicion relajada pero lista para la acción.\n\nPERSONAJES Y ACCION\nFinnick mirando con un toque de seduccion o melancolia. Puede estar sosteniendo un azucarillo o un trozo de cuerda.\n\nENTORNO, PALETA E ILUMINACION\nFondo que sugiera el mar o el lujo del Capitolio. Colores dorados, verdes y azules claros. Iluminación natural calida.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_finnick_base, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. Evitar sombras complejas en la musculatura. No incluir tridentes en esta versión base. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 para model sheet de cuento.",
+      "image_filenames": [
+        "anchor_char_finnick.png"
+      ]
+    },
+    {
+      "id": "char_gale_base",
+      "name": "Gale Hawthorne",
+      "prompt": "OBJETIVO DE ILUSTRACION\nEstablecer el diseno de Gale Hawthorne como el rebelde y cazador del Distrito 12.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra gruesa y definida. Rasgos de la Veta: piel aceitunada, pelo negro corto y ojos grises intensos. Debe parecer más alto y fuerte que Katniss, con una expresion de furia contenida contra el Capitolio.\n\nCOMPOSICION Y ENCUADRE\nPlano medio lateral o frontal. Pose robusta con los hombros anchos. Estetica de Ligne Claire.\n\nPERSONAJES Y ACCION\nGale de pie en el bosque, con mirada desafiante hacia el horizonte. Vestido con ropa de minero o de caza desgastada.\n\nENTORNO, PALETA E ILUMINACION\nFondo de bosque brumoso o minas de carbon. Paleta de marrones, grises y verdes oscuros. Iluminación tenue de exterior.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_gale_base, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nNo fotorrealismo. No debe parecer un modelo de moda, sino un trabajador sufriente. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 limpia para página de cuento infantil.",
+      "image_filenames": [
+        "anchor_char_gale.png"
+      ]
+    },
+    {
+      "id": "char_haymitch_base",
+      "name": "Haymitch Abernathy",
+      "prompt": "OBJETIVO DE ILUSTRACION\nCrear la guia visual de Haymitch Abernathy, capturando su decadencia y su inteligencia de mentor.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern. Haymitch debe tener cabello rubio oscuro largo hasta los hombros, aspecto desaliñado y ojos azules muy cansados y algo vidriosos. Su ropa debe verse arrugada y vieja, incluso cuando es de lujo.\n\nCOMPOSICION Y ENCUADRE\nPlano medio sentado o apoyado en una superficie. Composición asimetrica que refleje su inestabilidad.\n\nPERSONAJES Y ACCION\nHaymitch sosteniendo una botella o con las manos en los bolsillos, con una mueca sarcástica en el rostro.\n\nENTORNO, PALETA E ILUMINACION\nInteriores oscuros del tren o la Aldea de los Vencedores. Colores ocres, vino y grises. Iluminación lateral de interior.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_haymitch_base, env_train_capitol.\n\nRESTRICCIONES / NEGATIVOS\nNo usar detalles grotescos excesivos. Sin fotorrealismo. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 para referencia artística estable.",
+      "image_filenames": [
+        "anchor_char_haymitch.png"
+      ]
+    },
+    {
+      "id": "char_johanna_base",
+      "name": "Johanna Mason",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir a Johanna Mason como la vencedora feroz y cinica del Distrito 7.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra limpia. Johanna tiene el cabello castaño corto, ojos marrones grandes y una mirada de odio constante hacia el Capitolio. Su postura debe ser desafiante, con las piernas abiertas y hombros hacia adelante.\n\nCOMPOSICION Y ENCUADRE\nPlano medio con el hacha visible pero no en primer plano. Encuadre directo y confrontativo.\n\nPERSONAJES Y ACCION\nJohanna mirando con desprecio, lista para soltar un insulto. Su vestuario debe ser el traje de entrenamiento gris o marron.\n\nENTORNO, PALETA E ILUMINACION\nFondo de jungla o arena tropical. Paleta de verdes, marrones y grises. Iluminación dura y plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_johanna_base, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nNo fotorrealismo. Evitar que parezca amable o vulnerable. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta definicion estilizada.",
+      "image_filenames": [
+        "anchor_char_johanna.png"
+      ]
+    },
+    {
+      "id": "char_katniss_base",
+      "name": "Katniss Everdeen",
+      "prompt": "OBJETIVO DE ILUSTRACION\nEstablecer la apariencia canónica de Katniss Everdeen para toda la colección ilustrada, asegurando su identidad visual como superviviente.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstetica de Sergio Kern y Ligne Claire. Katniss debe tener piel aceitunada, cabello negro azabache en una trenza lateral y ojos de un gris plomizo decidido. Su anatomia debe ser de una joven de 16 anos, delgada pero fuerte.\n\nCOMPOSICION Y ENCUADRE\nPlano medio frontal de estudio. La pose debe ser neutral pero alerta, mostrando claramente su rostro y el inicio de su trenza.\n\nPERSONAJES Y ACCION\nKatniss mirando fijamente con determinacion. Vestida con su chaqueta de cuero marron del Distrito 12 y pantalones oscuros sencillos.\n\nENTORNO, PALETA E ILUMINACION\nFondo plano de color gris ceniza. Paleta de colores tierra y negros profundos. Iluminación frontal plana y uniforme.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni sombras volumetricas. No incluir armas en este modelo base. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 para guia de personaje principal.",
+      "image_filenames": [
+        "anchor_char_katniss.png"
+      ]
+    },
+    {
+      "id": "char_peeta_base",
+      "name": "Peeta Mellark",
+      "prompt": "OBJETIVO DE ILUSTRACION\nCrear el ancla visual de Peeta Mellark, el chico del pan y apoyo moral de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra definida. Peeta debe ser un joven de constitucion fuerte y hombros anchos, con cabello rubio ceniza ondulado y ojos azules claros y bondadosos. Su expresion debe ser abierta y protectora.\n\nCOMPOSICION Y ENCUADRE\nPlano medio frontal. Su postura debe transmitir estabilidad y calidez.\n\nPERSONAJES Y ACCION\nPeeta mirando con una sonrisa leve o expresion de preocupacion por Katniss. Viste el traje sencillo del Distrito 12.\n\nENTORNO, PALETA E ILUMINACION\nFondo calido o de panaderia. Paleta de cremas, azules suaves y rubios dorados. Iluminación suave y uniforme.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, prop_bread_loaf.\n\nRESTRICCIONES / NEGATIVOS\nNo fotorrealismo. No debe verse agresivo. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 lista para integración en cuentos.",
+      "image_filenames": [
+        "anchor_char_peeta.png"
+      ]
+    },
+    {
+      "id": "char_prim_base",
+      "name": "Primrose Everdeen",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir a Primrose Everdeen para resaltar su inocencia y su papel como motor emocional de la historia.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern. Prim debe ser una niña pequeña, de cabello rubio claro en dos trenzas y ojos azules cristalinos. Un detalle crucial es que su blusa blanca siempre debe estar un poco salida por detrás (cola de pato).\n\nCOMPOSICION Y ENCUADRE\nPlano medio frontal. Escala pequeña comparada con los adultos.\n\nPERSONAJES Y ACCION\nPrim con expresion dulce pero asustada. Sus manos deben estar cerca de su pecho.\n\nENTORNO, PALETA E ILUMINACION\nFondo de hogar humilde. Paleta de blancos, amarillos palidos y azules claros. Iluminación suave de mañana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_prim_base, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No debe parecer mayor de su edad real. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 clara y limpia.",
+      "image_filenames": [
+        "anchor_char_prim.png"
+      ]
+    },
+    {
+      "id": "char_rue_base",
+      "name": "Rue",
+      "prompt": "OBJETIVO DE ILUSTRACION\nEstablecer la apariencia de Rue, el tributo del Distrito 11, evocando agilidad y fragilidad.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra delgada y precisa. Rue debe tener piel oscura, ojos brillantes y oscuros, y ser muy pequeña para su edad. Su diseno debe recordar a un pájaro a punto de echar a volar.\n\nCOMPOSICION Y ENCUADRE\nPlano medio cuerpo entero para mostrar su tamaño menudo. Pose agil, quizá de puntillas.\n\nPERSONAJES Y ACCION\nRue mirando con curiosidad y timidez desde el follaje. Viste la tunica de entrenamiento del Capitolio.\n\nENTORNO, PALETA E ILUMINACION\nFondo de bosque denso y verde. Paleta de verdes profundos y marrones oscuros. Luz filtrada por las hojas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_rue_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No mostrar violencia. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 poetica y estilizada.",
+      "image_filenames": [
+        "anchor_char_rue.png"
+      ]
+    },
+    {
+      "id": "char_snow_base",
+      "name": "Presidente Snow",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir al villano principal, el Presidente Snow, con su elegancia siniestra y poder absoluto.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern. Snow debe ser un anciano de cabello blanco impecable, ojos de serpiente y labios inusualmente hinchados y palidos. Siempre debe llevar una rosa blanca perfecta en la solapa.\n\nCOMPOSICION Y ENCUADRE\nPlano medio frontal o ligero contrapicado para transmitir poder. Fondo de oficina lujosa.\n\nPERSONAJES Y ACCION\nSnow sentado o de pie con absoluta calma. Su expresion debe ser de una crueldad educada.\n\nENTORNO, PALETA E ILUMINACION\nCapitolio, rojos intensos y marmol blanco. Paleta de blancos, rojos y dorados. Iluminación focal sobre su rostro.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_snow_base, prop_president_rose.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No debe parecer un anciano debil, sino peligroso. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alto impacto visual.",
+      "image_filenames": [
+        "anchor_char_snow.png"
+      ]
+    },
+    {
+      "id": "cover_mockingjay_collection",
+      "name": "Portada Colección Sinsajo",
+      "prompt": "OBJETIVO DE ILUSTRACION\nCrear el icono central de la colección basado en el broche de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra limpia y colores planos dorados. El simbolo del sinsajo debe ser un pájaro dorado en pleno vuelo, rodeado por un circulo, con una flecha cruzando el centro.\n\nCOMPOSICION Y ENCUADRE\nPrimer plano absoluto y centrado del simbolo sobre fondo negro solido.\n\nPERSONAJES Y ACCION\nSin personajes. El pájaro es el único elemento, representado con lineas de acción dinamicas.\n\nENTORNO, PALETA E ILUMINACION\nFondo negro. El pájaro es de un amarillo dorado brillante con algunos reflejos planos. Sin iluminación compleja.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, prop_mockingjay_pin, cover_mockingjay_collection.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo, sin metalizados 3D. Sin titulos incrustados. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 minimalista.",
+      "image_filenames": [
+        "anchor_cover_main.png"
+      ]
+    },
+    {
+      "id": "env_arena_clock",
+      "name": "Arena del Reloj",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir el entorno tropical y geometrico de la arena del Vasallaje.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern. Debe mostrarse una jungla tropical circular dividida en doce sectores perfectos. Un lago de agua salada central con la Cornucopia en el medio.\n\nCOMPOSICION Y ENCUADRE\nGran plano general desde arriba para captar la forma de rueda del reloj. Horizonte curvo bajo la cupula.\n\nPERSONAJES Y ACCION\nSin personajes visibles en esta ancla de entorno.\n\nENTORNO, PALETA E ILUMINACION\nJungla verde vibrante, agua azul cristalino, arena blanca. Paleta de verdes, azules y dorados. Luz solar tropical deslumbrante.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir trampas especificas en esta vista base. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de escala masiva.",
+      "image_filenames": [
+        "anchor_env_clock.png"
+      ]
+    },
+    {
+      "id": "env_arena_forest",
+      "name": "Arena del Bosque",
+      "prompt": "OBJETIVO DE ILUSTRACION\nEstablecer el escenario principal de los primeros Juegos de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra y formas simples. Bosque denso de pinos y coniferas con un claro central donde se ubica la Cornucopia dorada gigante.\n\nCOMPOSICION Y ENCUADRE\nPlano general a nivel del suelo, mostrando la inmensidad de los arboles y la estructura metalica al fondo.\n\nPERSONAJES Y ACCION\nSin personajes para priorizar el entorno.\n\nENTORNO, PALETA E ILUMINACION\nBosque sombrio y peligroso. Paleta de verdes oscuros, marrones y el oro de la Cornucopia. Luz filtrada y fria.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni efectos de niebla realistas. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 atmosferica.",
+      "image_filenames": [
+        "anchor_env_forest.png"
+      ]
+    },
+    {
       "id": "env_district12_seam",
       "name": "La Veta - Distrito 12",
-      "prompt": "Barrio minero pobre con casas de madera pequeñas, calles de tierra y una atmósfera cubierta de polvo de carbón gris.",
+      "prompt": "OBJETIVO DE ILUSTRACION\nCapturar la pobreza y el ambiente minero del hogar de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstetica Sergio Kern. Casas de madera torcidas, calles de tierra embarrada y una atmosfera cargada de polvo de carbon gris.\n\nCOMPOSICION Y ENCUADRE\nPlano general de una calle estrecha de la Veta. Perspectiva lineal simple.\n\nPERSONAJES Y ACCION\nSiluetas de mineros lejanos. Sin personajes detallados.\n\nENTORNO, PALETA E ILUMINACION\nAmbiente industrial decadente. Paleta de grises, negros, ocres y algun toque de azul triste. Luz plomiza de amanecer.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nSin colores brillantes. No fotorrealismo. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 evocadora de la pobreza.",
       "image_filenames": [
         "anchor_env_seam.png"
       ]
     },
     {
+      "id": "env_district13_bunker",
+      "name": "Búnker Distrito 13",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir la estetica militar y subterranea del Distrito 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra rigida. Pasillos de hormigon gris, tuberias vistas y puertas metalicas sin pomos. Todo debe parecer limpio pero asfixiante.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de un pasillo o habitacion comun. Fuerte uso de la geometria cuadrada.\n\nPERSONAJES Y ACCION\nSin personajes detalle.\n\nENTORNO, PALETA E ILUMINACION\nBunker subterraneo. Paleta estrictamente gris, blanca y azul metalico. Iluminación fluorescente artificial y plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin elementos naturales ni ventanas al exterior. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 minimalista y fria.",
+      "image_filenames": [
+        "anchor_env_d13.png"
+      ]
+    },
+    {
       "id": "env_reaping_square",
       "name": "Plaza de la Cosecha",
-      "prompt": "Gran plaza pública rodeada de edificios oficiales grises y el Edificio de Justicia de mármol blanco al fondo.",
+      "prompt": "OBJETIVO DE ILUSTRACION\nEstablecer el lugar donde comienza la tragedia de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern. Plaza amplia rodeada de edificios oficiales de piedra gris. El Edificio de Justicia de marmol blanco debe destacar al fondo con el podio de la cosecha.\n\nCOMPOSICION Y ENCUADRE\nPlano general amplio desde el punto de vista de la multitud. Escenario elevado en el centro.\n\nPERSONAJES Y ACCION\nMultitud sugerida mediante formas simples y repetidas.\n\nENTORNO, PALETA E ILUMINACION\nPlaza soleada pero opresiva. Paleta de grises y blancos con las banderas rojas del Capitolio. Luz cenital de mediodia.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nNo fotorrealismo. Sin detalles individuales en la masa de gente. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de gran escala narrativa.",
       "image_filenames": [
         "anchor_env_square.png"
       ]
@@ -142,97 +150,89 @@
     {
       "id": "env_train_capitol",
       "name": "Tren de los Tributos",
-      "prompt": "Interior de lujo extremo con sofás de terciopelo, mesas llenas de comida exótica y ventanales de cristal.",
+      "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el contraste de lujo extremo del Capitolio frente a la pobreza de los distritos.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra y colores planos muy saturados. Interior de un vagon de tren con muebles de terciopelo, mesas de cristal y comida exotica.\n\nCOMPOSICION Y ENCUADRE\nPlano medio interior del vagon. Enfoque en la riqueza de los materiales.\n\nPERSONAJES Y ACCION\nSin personajes en esta ancla.\n\nENTORNO, PALETA E ILUMINACION\nInterior lujoso. Paleta de purpuras, rojos, dorados y plateados. Iluminación calida y brillante.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_train_capitol.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni reflejos complejos en el cristal. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta densidad de color.",
       "image_filenames": [
         "anchor_env_train.png"
       ]
     },
     {
-      "id": "env_arena_forest",
-      "name": "Arena del Bosque",
-      "prompt": "Bosque de pinos denso con la Cornucopia dorada en un claro central llano y despejado.",
-      "image_filenames": [
-        "anchor_env_forest.png"
-      ]
-    },
-    {
-      "id": "env_arena_clock",
-      "name": "Arena del Reloj",
-      "prompt": "Jungla tropical circular con un lago de agua salada central y franjas de tierra que parecen radios de una rueda.",
-      "image_filenames": [
-        "anchor_env_clock.png"
-      ]
-    },
-    {
-      "id": "env_district13_bunker",
-      "name": "Búnker Distrito 13",
-      "prompt": "Pasillos y habitaciones de hormigón gris bajo tierra, iluminación artificial fría y mobiliario militar funcional.",
-      "image_filenames": [
-        "anchor_env_d13.png"
-      ]
-    },
-    {
       "id": "prop_bow_arrow",
       "name": "Arco y Flechas",
-      "prompt": "Arco artesanal de madera vs arco militar negro de alta tecnología con carcaj de tres compartimentos.",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir las armas iconicas de Katniss para asegurar su diseno consistente.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern. Arco de madera artesanal con vetas visibles y cuerda tensa. Flechas con plumas de colores naturales y puntas metalicas simples.\n\nCOMPOSICION Y ENCUADRE\nPlano detalle de las armas sobre un fondo neutro. Composición diagonal para dar dinamismo.\n\nPERSONAJES Y ACCION\nSin personajes. Las armas son el único foco.\n\nENTORNO, PALETA E ILUMINACION\nFondo marron suave. Paleta de madera, negro y gris metalico. Iluminación plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni texturas de madera realistas. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de referencia de objeto.",
       "image_filenames": [
         "anchor_prop_bow.png"
       ]
     },
     {
-      "id": "prop_mockingjay_pin",
-      "name": "Broche de Sinsajo",
-      "prompt": "Pequeña insignia circular de oro con un pájaro en pleno vuelo rodeado por un anillo.",
-      "image_filenames": [
-        "anchor_prop_pin.png"
-      ]
-    },
-    {
       "id": "prop_bread_loaf",
       "name": "Hogaza de Pan",
-      "prompt": "Pan rústico moreno ligeramente quemado o tarta decorada con flores glaseadas detalladas.",
+      "prompt": "OBJETIVO DE ILUSTRACION\nCrear el ancla visual del pan como simbolo de vida y conexion entre Peeta y Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra y colores planos. Pan rústico, moreno, con una costra ligeramente quemada en un lado. Forma redondeada y apetecible.\n\nCOMPOSICION Y ENCUADRE\nPrimer plano del pan sobre una superficie de madera simple o una servilleta blanca.\n\nPERSONAJES Y ACCION\nSin personajes.\n\nENTORNO, PALETA E ILUMINACION\nAmbiente calido de hogar. Paleta de dorados, marrones y cremas. Luz calida lateral.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, prop_bread_loaf.\n\nRESTRICCIONES / NEGATIVOS\nNo fotorrealismo. No debe parecer un objeto industrial. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 sencilla y clara.",
       "image_filenames": [
         "anchor_prop_bread.png"
       ]
     },
     {
+      "id": "prop_mockingjay_pin",
+      "name": "Broche de Sinsajo",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir el diseno detallado del broche que se convierte en el simbolo de la revolucion.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern. Insignia circular de oro con un pájaro en pleno vuelo grabado. El ala debe estar ligeramente salida del circulo. El oro debe ser un color plano con bordes negros.\n\nCOMPOSICION Y ENCUADRE\nPlano macro del broche centrado. Lectura iconica inmediata.\n\nPERSONAJES Y ACCION\nSin personajes.\n\nENTORNO, PALETA E ILUMINACION\nFondo azul oscuro o negro para contraste. Paleta de amarillos dorados. Luz frontal.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni brillos metalicos complejos. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 iconografica.",
+      "image_filenames": [
+        "anchor_prop_pin.png"
+      ]
+    },
+    {
       "id": "prop_nightlock_berries",
       "name": "Bayas Jaula de Noche",
-      "prompt": "Pequeños frutos de color morado oscuro brillante, con apariencia dulce pero veneno mortal.",
+      "prompt": "OBJETIVO DE ILUSTRACION\nCrear la referencia visual de las bayas mortales para su uso en escenas de tension.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra limpia. Pequenos frutos redondos de color morado oscuro brillante, casi negro, con un aspecto engañosamente dulce.\n\nCOMPOSICION Y ENCUADRE\nPlano detalle de un puñado de bayas en una palma de mano sugerida o sobre una hoja verde.\n\nPERSONAJES Y ACCION\nSin personajes detalle.\n\nENTORNO, PALETA E ILUMINACION\nFondo de bosque oscuro. Paleta de purpuras, negros y verdes. Luz fria.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, prop_nightlock_berries.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No deben parecer uvas comunes. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 clara.",
       "image_filenames": [
         "anchor_prop_berries.png"
       ]
     },
     {
+      "id": "prop_parachute_gift",
+      "name": "Paracaídas Plateado",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir el objeto de auxilio enviado por los patrocinadores en la arena.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern. Paracaídas de seda plateada con lineas de costura marcadas y una pequeña cesta metalica colgando de hilos finos.\n\nCOMPOSICION Y ENCUADRE\nPlano medio en descenso diagonal. Sensacion de movimiento ligero.\n\nPERSONAJES Y ACCION\nSin personajes.\n\nENTORNO, PALETA E ILUMINACION\nCielo de la arena (rosa o azul). Paleta de grises plateados y blancos. Luz brillante.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, prop_parachute_gift.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni transparencias de seda reales. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 funcional para el cuento.",
+      "image_filenames": [
+        "anchor_prop_parachute.png"
+      ]
+    },
+    {
       "id": "prop_president_rose",
       "name": "Rosa del Presidente",
-      "prompt": "Rosa blanca perfecta y modificada genéticamente con un aroma penetrante a sangre.",
+      "prompt": "OBJETIVO DE ILUSTRACION\nCrear el ancla visual de la rosa de Snow, un simbolo de amenaza y sangre.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra y colores planos. Rosa blanca perfecta, de petalos inmaculados pero que debe transmitir algo inquietante por su perfeccion artificial.\n\nCOMPOSICION Y ENCUADRE\nPrimer plano de la flor, quizá en un pequeño florero de cristal simple o en una solapa negra.\n\nPERSONAJES Y ACCION\nSin personajes.\n\nENTORNO, PALETA E ILUMINACION\nFondo oscuro para resaltar la blancura. Paleta de blancos, cremas y el verde del tallo. Luz dramatica pero plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, prop_president_rose.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No debe verse como una rosa natural marchitable. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 simbolica.",
       "image_filenames": [
         "anchor_prop_rose.png"
       ]
     },
     {
-      "id": "prop_parachute_gift",
-      "name": "Paracaídas Plateado",
-      "prompt": "Pequeño paracaídas de seda plateada con una cesta metálica sujeta por hilos finos.",
+      "id": "style_linea_editorial",
+      "name": "Estilo Sergio Kern",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir la estetica visual general de la colección para guiar todas las demas ilustraciones.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Ligne Claire inspirado en Sergio Kern. Línea negra de grosor medio, constante y limpia. Formas simplificadas y geometricas para edificios y vegetacion. Personajes con rasgos claros y expresivos.\n\nCOMPOSICION Y ENCUADRE\nPlanos equilibrados, sin angulos de cámara extremos. Lectura visual rapida y clara.\n\nPERSONAJES Y ACCION\nSin personajes especificos.\n\nENTORNO, PALETA E ILUMINACION\nFondos que no compitan con el primer plano. Colores planos sin degradados. Iluminación homogenea y funcional.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo, sin 3D, sin efectos cinematograficos modernos. Sin texto.\n\nFORMATO DE SALIDA\nGuia visual maestra 1:1.",
       "image_filenames": [
-        "anchor_prop_parachute.png"
+        "anchor_style_editorial_v1.png"
+      ]
+    },
+    {
+      "id": "style_paleta_rebelion",
+      "name": "Paleta de Color Rebelde",
+      "prompt": "OBJETIVO DE ILUSTRACION\nEstablecer el rango cromatico de la saga para diferenciar los mundos de Panem.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nColores planos. Contraste entre los tonos apagados de los distritos y los neones artificiales del Capitolio. El Distrito 13 usa grises y azules industriales.\n\nCOMPOSICION Y ENCUADRE\nMuestrario de parches de color planos.\n\nPERSONAJES Y ACCION\nSin personajes.\n\nENTORNO, PALETA E ILUMINACION\nPaleta: Grises carbon, marrones tierra, verde oliva, rojo sangre, amarillo dorado y azul metalico.\n\nREFERENCIAS (reference_ids)\nstyle_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin sombras complejas. Sin degradados. Sin texto.\n\nFORMATO DE SALIDA\nCarta de colores digital 1:1.",
+      "image_filenames": [
+        "anchor_style_palette_v1.png"
       ]
     }
   ],
   "style_rules": [
-    "Mantener la estética de Ligne Claire con contornos negros definidos y colores planos.",
-    "Evitar el fotorrealismo y las sombras dramáticas complejas.",
-    "El diseño debe ser accesible para un público infantil/juvenil sin perder la seriedad de la trama.",
-    "Respetar la simplicidad en los fondos para no distraer de la acción de los personajes."
+    "Uso obligatorio de línea negra definida (estilo Ligne Claire).",
+    "Colores planos sin degradados ni sombreados dramaticos.",
+    "Simplificacion de anatomia para un publico infantil/juvenil.",
+    "Fondos limpios que prioricen la acción de los personajes."
   ],
   "continuity_rules": [
-    "Katniss siempre debe aparecer con su trenza negra y ojos grises característicos.",
-    "El broche de sinsajo debe ser visible en el vestuario de Katniss desde el cuento 01 en adelante.",
-    "La vestimenta de los agentes de la paz debe ser uniformemente blanca y robótica.",
-    "Los escenarios del Capitolio deben usar paletas de colores saturados, mientras que los distritos usan tonos apagados.",
-    "Peeta debe conservar sus ojos azules y complexión robusta en todas las etapas.",
-    "La rosa blanca de Snow debe aparecer como un elemento de tensión recurrente."
+    "Katniss siempre debe aparecer con su trenza negra y ojos grises.",
+    "El broche de sinsajo debe ser visible desde el cuento 01.",
+    "La rosa blanca del Presidente Snow es un elemento de tension recurrente.",
+    "El Distrito 12 siempre debe representarse en tonos grises y ocres.",
+    "El Capitolio debe usar colores saturados y formas extravagantes.",
+    "El Distrito 13 se define por el hormigon gris y uniformes identicos."
   ],
-  "updated_at": "2026-02-18T14:22:53.584168+00:00"
+  "updated_at": "2026-02-18T22:45:00Z"
 }

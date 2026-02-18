@@ -1,7 +1,17 @@
 # índice de tareas
 
-- Pr?ximo ID: `037`
+- Pr?ximo ID: `038`
 
+
+## TAREA-037-meta-prompts-y-flow-exclusion-underscore
+
+- Fecha: 19/02/26 01:00
+- Estado: cerrada
+- Resumen: copia de `meta_prompts.json` a `library/los_juegos_del_hambre/meta.json` y ajuste de `/_flow/image` para excluir rutas con carpetas que empiezan por `_`.
+- Version: 2.7.7
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-037-meta-prompts-y-flow-exclusion-underscore.md`
 
 ## TAREA-036-copiar-prompts-inbox-a-biblioteca-los-juegos
 

@@ -40,8 +40,15 @@ def _is_in_excluded_area(rel_path: str) -> bool:
     normalized = _normalize_rel_path(rel_path)
     if not normalized:
         return False
-    first = normalized.split("/", 1)[0]
-    return first in EXCLUDED_TOP_LEVEL_DIRS
+    parts = [part for part in normalized.split("/") if part and part != "."]
+    if not parts:
+        return False
+
+    first = parts[0]
+    if first in EXCLUDED_TOP_LEVEL_DIRS:
+        return True
+
+    return any(part.startswith("_") for part in parts)
 
 
 def _has_valid_active_image(slot: dict[str, Any]) -> bool:

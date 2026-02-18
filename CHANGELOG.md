@@ -5,6 +5,17 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [19/02/26] - Meta prompts aplicados y exclusiones `_` en flujo de pendientes
+
+- Se copia `library/_inbox/Los juegos del hambre/meta_prompts.json` sobre `library/los_juegos_del_hambre/meta.json`.
+- Quedan aplicados en meta de saga los prompts largos de anchors, `style_rules`, `continuity_rules` y `updated_at` entregados por NB.
+- Se ajusta `app/web/image_flow.py`:
+  - `/_flow/image` ahora excluye cualquier ruta que contenga carpetas cuyo nombre empiece por `_`.
+- Validaciones:
+  - `META_MATCH=True` entre origen y destino de meta.
+  - `BAD_UNDERSCORE_ITEMS=0` en cola pendiente.
+- Tarea: `docs/tasks/TAREA-037-meta-prompts-y-flow-exclusion-underscore.md`.
+
 ## [19/02/26] - Copia de prompts de `_inbox` a biblioteca (`los_juegos_del_hambre`)
 
 - Se copian prompts de `01..11_prompts.json` hacia `library/los_juegos_del_hambre/01..11.json`.
