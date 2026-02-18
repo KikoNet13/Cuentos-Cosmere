@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "02",
+    "title": "La Chica en Llamas",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T12:00:00Z",
+    "updated_at": "2026-02-18T12:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss and Peeta standing on the back of a high-speed train, looking out at the blurring landscape of Panem. Katniss has her signature side-braid and a determined expression.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 1,
+            "text": "En el Edificio de Justicia, me permiten ver a mi familia por última vez. Agarro a mi madre de las manos con fuerza y le ordeno que no se rinda, que no se desconecte como hizo cuando murió mi padre. Prim tiene que sobrevivir, y mi madre debe ser su pilar ahora que yo no estoy para alimentarlas. Les prometo que ganaré, que haré todo lo posible por volver, aunque por dentro siento un nudo de angustia. El tiempo vuela y los agentes de la paz me sacan de allí sin piedad.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss in a somber gray room, holding her mother's hands while Prim looks on with wide, tearful eyes. The style is clear line with flat colors.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 2,
+            "text": "Gale es mi última visita. Intenta darme ánimos, recordándome que soy una gran cazadora y que los Juegos son solo una cacería más. Pero yo sé que los otros tributos piensan y devuelven los disparos. Cuando intenta decirme algo importante, algo sobre lo que siente por mí, los agentes cierran la puerta de golpe. Nunca sabré qué quería que recordara. Me llevan a la estación en un coche, algo que nunca había probado, rodeada de periodistas hambrientos que me apuntan con sus cámaras como si fueran insectos ruidosos.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Gale reaching out as a door closes, with Katniss looking back. Later, a wide view of a black car surrounded by a crowd of brightly dressed reporters.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 3,
+            "text": "El tren del Capitolio es una maravilla de tecnología y lujo. Viaja a cuatrocientos kilómetros por hora, cruzando Panem en menos de un día. Al entrar, las puertas se cierran y nos dejan en un mundo de terciopelo y cristales relucientes. Mi habitación es más grande que mi casa entera en la Veta, con una ducha que tiene cien opciones y armarios llenos de ropa fina. Es un contraste doloroso: mientras el Distrito 12 se muere de hambre, aquí el derroche es la norma diaria y el cielo parece de otro color.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A sleek, silver high-speed train zooming through a gray landscape. Inside, Katniss stands in a luxurious room with plush red furniture.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 4,
+            "text": "En el vagón comedor, Effie Trinket se queja de la falta de modales de nuestro mentor, Haymitch, mientras nos sirven una cena que parece un sueño. Hay huevos, jamón, montañas de patatas fritas y zumos de frutas que nunca he probado. Peeta y yo comemos hasta que nos sentimos mal; nuestros estómagos no están acostumbrados a tanta grasa y azúcar. Effie nos recuerda con voz cantarina que Haymitch es nuestro único contacto con el mundo exterior y que su ayuda puede ser la diferencia entre la vida y la muerte en la arena.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta sitting at a long table overflowing with colorful food. Effie, in a bright pink wig, gestures with a silk napkin.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 5,
+            "text": "Vemos el resumen de las cosechas en la televisión. Observamos las caras de los oponentes contra los que lucharemos: un chico monstruoso del Distrito 2, una chica astuta del 5 y, lo más inquietante, una niña de doce años del Distrito 11. Se llama Rue y me recuerda demasiado a Prim por su tamaño y sus ojos oscuros. Cuando subió al escenario y nadie se ofreció voluntario para salvarla, el silencio en su distrito fue absoluto. Me pregunto si tendré el valor de disparar una flecha contra alguien que parece tan frágil.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A television screen showing Rue, a small girl with dark skin and a bird-like stance, standing on a reaping stage.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 6,
+            "text": "Haymitch aparece finalmente, pero está tan borracho que apenas puede mantenerse en pie. Se cae en medio del vagón sobre su propio vómito, creando una escena patética que nos deja helados. Effie está horrorizada por su peluca, pero Peeta, con una amabilidad que me sorprende, se ofrece a limpiarlo y llevarlo a su compartimento. Lo ayuda sin quejarse, tratándolo con un respeto que el hombre no parece merecer en absoluto. Me pregunto si Peeta es así de bueno por naturaleza o si solo está intentando ganarse al mentor para sobrevivir.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Peeta, with his ash-blonde hair, supporting a disheveled Haymitch in the train hallway. Haymitch looks slumped and messy.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 7,
+            "text": "Me retiro a mi cuarto y me asomo a la ventana cuando el tren se detiene brevemente. Al ver unos dientes de león junto a las vías, recuerdo el día de lluvia en que Peeta me salvó la vida con un trozo de pan quemado. Aquella flor en el patio del colegio me dio la esperanza de que mi familia no moriría de hambre. Me doy cuenta de que Peeta es mucho más peligroso de lo que pensaba; la gente amable se me mete dentro y me debilita. Debo mantener las distancias si quiero ser capaz de ganar.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A single yellow dandelion growing in the dark between iron train tracks, illuminated by a sliver of moonlight.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 8,
+            "text": "A la mañana siguiente, el desayuno es otro banquete de lujo. Haymitch parece algo más despejado, aunque su cara sigue hinchada. Peeta intenta hablar de estrategia, pero Haymitch se burla de nosotros y nos ignora. De repente, Peeta le quita el vaso de la mano y lo rompe contra el suelo, harto de su desinterés. Haymitch le devuelve un puñetazo, pero yo reacciono rápido y clavo mi cuchillo en la mesa, justo entre sus dedos. Al fin, el mentor nos mira con respeto. —Bueno —dice—, parece que tengo a dos luchadores este año.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss's hand slamming a knife into a wooden table. The blade is stuck between Haymitch's fingers. Peeta looks on with a hard expression.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

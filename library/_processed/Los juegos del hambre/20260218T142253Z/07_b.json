@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "07",
+    "title": "El Secreto del Reloj",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T12:00:00Z",
+    "updated_at": "2026-02-18T12:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen in her Mockingjay dress, wings of black and white feathers visible, against the backdrop of a tropical clock-shaped arena. Clear line style.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 9,
+            "text": "Wiress sigue limpiando su bobina en la orilla, ajena al peligro. De repente, Gloss surge del agua y le corta el cuello en un instante. Mi flecha vuela más rápida que mi pensamiento y se clava en el corazón de Gloss antes de que pueda huir. Johanna aparece por el otro lado y abate a Cashmere con su hacha. Wiress ha muerto, pero su descubrimiento sobre el reloj nos ha dado la llave para vencer. El grupo de los profesionales se reduce mientras la arena se vuelve más letal.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss shooting Gloss at the beach of the Cornucopia. In the background, Johanna is striking down Cashmere. Wiress lies on the sand. Clear line art.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 10,
+            "text": "De pronto, la Cornucopia de oro empieza a girar a una velocidad vertiginosa. El suelo vibra y el agua salada nos golpea con fuerza mientras intentamos agarrarnos a las rocas. Los Vigilantes están usando la rotación para desorientarnos y hacernos perder el sentido de la posición. Cuando la máquina finalmente se detiene, estamos mareados y empapados, pero la estructura de reloj de la arena es ahora innegable. Ya no tenemos dudas: cada sección es una trampa mortal y el tiempo corre en nuestra contra.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "The large golden Cornucopia spinning rapidly in the blue water. Katniss and her allies are clinging to the edges while water splashes everywhere.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 11,
+            "text": "Beetee nos explica su audaz plan para acabar con los profesionales restantes. Tiene una bobina de alambre fino y dorado fabricado en el Distrito 3. Su idea es llevar el cable desde el gran árbol del rayo en la colina hasta la playa húmeda. Cuando el rayo caiga a medianoche, toda la orilla se electrificará, eliminando a cualquiera que esté cerca del agua. Es una trampa técnica y peligrosa, pero es nuestra única oportunidad de ganar. Nos preparamos para la misión final bajo el sol abrasador.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Beetee, wearing glasses, showing a spool of thin gold wire to Katniss and Peeta in the stylized green jungle. Flat colors and clean outlines.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 12,
+            "text": "Dividimos el grupo para ejecutar el plan. Johanna y yo cogemos la pesada bobina de alambre y empezamos a desenrollarla colina abajo, atravesando la densa jungla hacia la playa de las doce. Peeta se queda con Beetee en el árbol del rayo para protegerlo mientras termina de preparar la conexión eléctrica. Odio separarme de Peeta en este lugar tan peligroso, pero debemos movernos con rapidez. El aire es denso y húmedo, y el sonido de los insectos parece un cronómetro que nos persigue.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Johanna unspooling a thin golden wire through the thick, puffy green trees of the jungle. They look alert and determined.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 13,
+            "text": "En medio de la oscuridad de la selva, un cable nos hace tropezar. De repente, Johanna me golpea con fuerza en la cabeza con el mango de su hacha. Caigo al suelo, cegada por la sangre que brota de mi frente. Mientras me inmoviliza, clava su cuchillo en mi antebrazo. Estoy convencida de que me ha traicionado y va a matarme, pero entonces susurra que me quede quieta. Johanna no me está hiriendo; me está arrancando el rastreador del Capitolio para que no puedan encontrarme.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Johanna standing over a fallen Katniss in the dark jungle. Katniss has blood on her face. Johanna is using a knife on Katniss's arm.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 14,
+            "text": "Despierto sola y confundida, con la cabeza latiendo de dolor. Me arrastro de vuelta hacia la colina del árbol del rayo, temiendo lo peor. Al llegar, encuentro a Beetee inconsciente en el suelo, sujetando un cuchillo envuelto en alambre. Peeta no está por ninguna parte y las voces de Enobaria y Brutus resuenan en la espesura. Me doy cuenta de que soy la única que queda para terminar el trabajo. El cielo empieza a rugir y el primer rayo de medianoche está a punto de caer.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss, wounded and pale, finding Beetee lying near the base of a massive, stylized charred tree. The sky above is turning a dark violet.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 15,
+            "text": "Miro el alambre dorado y luego el cielo. Observo el punto exacto donde el campo de fuerza flaquea: Beetee no quería electrificar la playa, ¡quería destruir la arena entera! Envuelvo el cable de Beetee alrededor de mi última flecha y apunto hacia el punto débil de la cúpula. Espero al sonido del trueno, sabiendo que este disparo cambiará el mundo para siempre. «Por Peeta», susurro. Suelto la cuerda del arco justo cuando el rayo impacta contra la cima del árbol, canalizando toda la energía.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss aiming her bow upward, a golden wire attached to her arrow. A brilliant flash of lightning hits the tree behind her.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 16,
+            "text": "Una explosión de luz blanca me consume por completo. El techo de la arena se hace añicos como si fuera de cristal y el cielo real aparece tras la farsa del Capitolio. Mientras caigo hacia el abismo, un aerodeslizador plateado surge de la nada y una garra mecánica me sujeta por la cintura. He destruido los Juegos del Hambre. La última imagen que veo es el bosque tropical desvaneciéndose bajo un mar de chispas. La rebelión ha comenzado de verdad y el Sinsajo ha echado a volar.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A massive white explosion in the arena dome. A silver hovercraft reaches down with a claw to lift a falling Katniss toward the real sky.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,481 @@
+{
+  "story_id": "10",
+  "title": "Los Túneles del Capitolio",
+  "status": "definitive",
+  "book_rel_path": "los_juegos_del_hambre",
+  "created_at": "2026-02-18T14:00:00Z",
+  "updated_at": "2026-02-18T14:22:53.584168+00:00",
+  "cover": {
+    "status": "draft",
+    "prompt": "Katniss Everdeen in her black tactical Mockingjay suit, standing in a dark, misty concrete tunnel. A faint green light from a holographic device illuminates her determined face.",
+    "active_id": "",
+    "alternatives": [],
+    "reference_ids": [
+      "anchor_style_editorial_v1.png",
+      "anchor_style_palette_v1.png",
+      "anchor_cover_main.png",
+      "anchor_char_katniss.png",
+      "anchor_char_prim.png",
+      "anchor_char_effie.png",
+      "anchor_char_finnick.png",
+      "anchor_env_train.png",
+      "anchor_prop_pin.png"
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Tras el ataque de Peeta, me obligo a entrenar más duro que nunca. Johanna Mason se convierte en mi compañera de ejercicios; ella también está rota, pero compartimos un odio feroz hacia el Capitolio. Los líderes del Distrito 13 me observan con recelo mientras practico puntería con mi arco de Sinsajo. Saben que soy indisciplinada, pero me necesitan para la invasión final. En mis escasos ratos libres, visito a Peeta a través de un cristal, deseando que el veneno de rastrevíspula abandone su mente y me devuelva al chico que amaba.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and a short-haired Johanna training with weapons in a gray concrete gym. They look focused and weary. Clear line style.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "text": "Me envían al Distrito 2, el último bastión de Snow. Allí, la montaña conocida como el Hueso protege el arsenal del Capitolio. Me reúno con la comandante Lyme y los líderes rebeldes en una cueva helada para planear el asalto. Gale sugiere una táctica brutal: provocar avalanchas para enterrar vivos a los soldados enemigos dentro de la fortaleza. Me horroriza la idea de matar a tantos inocentes atrapados, pero la guerra no ofrece opciones piadosas. El viento de las montañas me recuerda que el final de Panem está cerca.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Gale standing on a snowy mountain ridge, looking toward a massive, fortified mountain. The sky is a cold, flat blue.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "text": "El plan de Gale funciona y el Hueso queda sellado bajo toneladas de roca. Salgo a los escalones del Edificio de Justicia para hablar a los supervivientes que emergen de los escombros. Intento convencerlos de que se unan a la rebelión, de que Snow solo los usa como peones. Mientras hablo, una luz roja me ciega y un disparo me derriba frente a las cámaras. La bala golpea mis costillas, pero el traje blindado de Cinna me salva la vida una vez más. Despierto de nuevo en el búnker del 13, decidida a terminar mi misión.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss falling backward on a white stone stage as a bright flash hits her chest. A crowd of people looks on in shock. High-contrast colors.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "text": "Antes de partir hacia el Capitolio, celebramos la boda de Finnick y Annie. Es un breve momento de luz en medio de la oscuridad del Distrito 13. Peeta ha empezado a mejorar y ha horneado una tarta maravillosa para la ocasión, pero cuando me ve, sus ojos todavía reflejan una sospecha helada. Formamos el pelotón 451, una unidad de élite de tiradores. La presidenta Coin no confía en mí y nos asigna un equipo de televisión para que grabemos propaganda lejos del frente real. Gale y Finnick estarán siempre a mi lado.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Finnick and Annie, in simple white clothes, holding hands at a celebratory table. A large cake decorated with blue sea waves sits in the center.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bread.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "text": "Entramos en las afueras del Capitolio, avanzando por calles desiertas con fachadas de colores pastel. Boggs nos enseña el 'holo', un dispositivo que proyecta un mapa de todas las 'vainas' o trampas ocultas en la ciudad. Bombas, mutaciones y gases letales nos esperan en cada esquina. El Capitolio se ha convertido en una arena gigantesca, más peligrosa que cualquier juego anterior. Avanzamos con cautela, sintiendo que miles de ojos nos observan a través de las cámaras de seguridad que cubren cada callejón y cada tejado de la ciudad.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "A squad of soldiers in dark uniforms moving through a bright, clean city street. One soldier holds a small glowing device. Full-bleed composition.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "text": "Durante una grabación de propaganda, el suelo estalla bajo nuestros pies. Una mina oculta alcanza a Boggs, destrozándole las piernas en un instante. El humo y el olor a sangre lo inundan todo. Antes de morir, Boggs me transfiere la autoridad del holo mediante un rayo de luz verde que escanea mi rostro. 'No confíes en ellos', me susurra con su último aliento. Me quedo paralizada con el aparato en mis manos ensangrentadas mientras el pelotón espera mis órdenes. De repente, soy la jefa de una misión que no sé cómo dirigir.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss kneeling next to a fallen Boggs on a pastel-colored street. A green light from a small device shines on her face. Somber mood.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "text": "Una marea de aceite negro y viscoso surge de las paredes, una vaina mortal que amenaza con tragarnos. Corremos desesperados mientras el grupo de televisión lo graba todo. Logramos refugiarnos en un edificio abandonado, pero la televisión anuncia que el Sinsajo ha muerto en el ataque. Es nuestra oportunidad: si el Capitolio cree que no existimos, podremos movernos con libertad para cazar a Snow. Decido que la única forma de alcanzar la mansión presidencial sin ser detectados es a través del subsuelo. Debemos entrar en los oscuros túneles del Capitolio.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "A massive wave of thick black liquid flooding a narrow street. Katniss and her squad are running toward a dark doorway. Dynamic 2D view.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "text": "Bajamos a las alcantarillas, un laberinto oscuro y húmedo que huele a metal y muerte. Pollux, que trabajó aquí como avox, nos guía por las tuberías para evitar las cámaras de seguridad. El siseo del vapor y el goteo del agua son los únicos sonidos en esta tumba de cemento. De repente, un eco aterrador recorre los pasadizos: un susurro que repite mi nombre una y otra vez. Los mutos de Snow nos han encontrado en la profundidad de la tierra. La verdadera pesadilla bajo la ciudad acaba de comenzar.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "The squad walking through a dark, damp industrial tunnel. In the background, a distorted shadow of a creature with a long tail is visible on the wall.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "text": "Avanzamos por tuberías de desagüe y tramos de vías abandonadas, con el corazón en un puño. Pollux nos guía en un silencio absoluto, pero el siseo de los mutos parece estar pegado a nuestras nucas. De repente, unos gritos guturales rebotan en las paredes de hormigón, un sonido que hiela la sangre. Ya no es solo un susurro; es la caza real. Corremos con el peso de nuestras armas y la angustia de ser alcanzados en esta tumba de cemento, mientras el hedor de las alcantarillas se mezcla con un aroma a muerte.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "The rebel squad moving cautiously through a dark, damp industrial tunnel. Long, distorted shadows stretch across the gray walls. Ligne claire style.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text": "Entramos en el Transportador, un nivel subterráneo de baldosas blancas donde los vehículos del Capitolio suelen circular sin atascos. De pronto, un nido de ratas carnívoras mutadas surge de las sombras. Levanto mi arco de Sinsajo y disparo una flecha explosiva, despejando el camino entre nubes de humo y escombros. Sin embargo, el aire empieza a cambiar. Un aroma dulce y penetrante inunda el túnel, un olor que reconozco al instante y que me hace temblar de puro terror: rosas frescas. Snow ha soltado a sus monstruos más personales.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss firing an explosive arrow into a dark side-tunnel. A bright orange blast illuminates the white tiled corridor. 2D flat composition.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text": "La situación se vuelve crítica al llegar a la «picadora de carne», una vaina mortal de dientes industriales que trituran el suelo. Los mutos lagarto, con sus pieles blancas y colas de reptil, caen sobre nosotros con una furia salvaje. Jackson y Leeg 1 toman una decisión heroica: se quedan atrás para contener a las bestias mientras el resto del pelotón escapa por un conducto. Oigo sus gritos y el estruendo del metal chocando contra la carne, pero no puedo volver. El sacrificio de mis camaradas es el precio amargo para que el Sinsajo siga volando.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Two soldiers standing defiantly at a narrow junction in the tunnel, firing at pale, blurry creatures. A large metal grinding machine is visible behind them.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_env_train.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "text": "Llegamos a la alcantarilla principal, donde una sopa tóxica de basura y residuos químicos burbujea bajo nosotros. Caminamos por una repisa resbaladiza de apenas treinta centímetros, con el vapor quemándonos los pulmones. Al otro lado de un puente estrecho, Pollux encuentra una escalera que sube hacia la libertad. Justo cuando cruzamos, los mutos aparecen al final del túnel, silbando mi nombre con voces inhumanas. Gale dispara una flecha explosiva y vuela el puente por los aires, enviando a los monstruos al abismo de aguas negras mientras nosotros trepamos desesperadamente.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "The squad crossing a narrow metal bridge over a glowing, toxic dark-green river. Gale is looking back, bow drawn. High-contrast colors.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "text": "Salimos a la superficie y nos encontramos en medio de una multitud de ciudadanos del Capitolio. Es un contraste surrealista: nosotros estamos cubiertos de barro y sangre, mientras la gente camina con sus ropas de colores pastel, huyendo hacia el centro de la ciudad. El Capitolio ha ordenado la evacuación total ante el avance rebelde. Nos mezclamos entre los refugiados, ocultando nuestras armas bajo las capas. Veo nuestras caras en las pantallas gigantes de las esquinas; el Capitolio anuncia que hemos muerto en el subsuelo. Somos fantasmas caminando por las avenidas de nuestro enemigo.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Gale, wearing hooded cloaks, blending into a crowd of people in bright, eccentric outfits. A large screen in the background shows Katniss's face.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "text": "Cressida nos guía con paso firme a través de calles desconocidas, evitando las patrullas de los agentes de la paz que registran a los transeúntes. Las sirenas de alarma no dejan de sonar y el cielo se llena de aerodeslizadores militares. Necesitamos un refugio urgente donde escondernos y curar nuestras heridas antes de que Snow descubra que seguimos vivos. Peeta camina en estado de shock, sostenido por Finnick, mientras Gale vigila nuestra retaguardia. Finalmente, Cressida se detiene ante una pequeña tienda de ropa de pieles con un escaparate polvoriento y oscuro.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "The small group huddled in a dark alleyway, looking toward a shop window that says 'TIGRIS' in gold letters. White Capitol planes fly overhead.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "text": "Entramos en la tienda y nos recibe Tigris, una antigua estilista de los Juegos que Snow expulsó hace años. Su cara es un mapa de operaciones quirúrgicas que le dan un aspecto felino, con tatuajes de rayas negras y el rostro estirado como el de un tigre. A pesar de su apariencia inquietante, sus ojos reflejan un odio profundo hacia el presidente. Sin decir una palabra, nos indica un panel oculto bajo el mostrador que conduce a un pequeño sótano secreto. Tigris nos ofrece protección y silencio, convirtiéndose en nuestra aliada más improbable en el corazón del Capitolio.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Tigris, a woman with feline facial features and striped tattoos, staring intensely at Katniss. She wears a large fur coat in a dim, cluttered shop.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "text": "Nos refugiamos en el sótano, un espacio estrecho y cálido rodeado de pieles antiguas. Me siento al lado de Peeta, que sigue esposado para evitar un nuevo ataque. Jugamos a su juego de «real o no real» para intentar anclar sus recuerdos. Me pregunta si arriesgué mi vida por él en la cueva, y le respondo que sí, que nos protegemos el uno al otro. Él parece relajarse un poco, aunque sus ojos azules siguen nublados por el veneno. En la oscuridad, cuento nuestras bajas: ocho amigos muertos en un solo día. La deuda es inmensa.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Peeta sitting on the floor of a dark basement filled with hanging fur coats. Katniss is holding Peeta's hand. Soft, warm lighting.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    }
+  ]
+}

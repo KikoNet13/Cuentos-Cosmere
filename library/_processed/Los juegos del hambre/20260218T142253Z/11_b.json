@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "11",
+    "title": "El Final de los Juegos",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T20:00:00Z",
+    "updated_at": "2026-02-18T20:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen standing in a lush green meadow under a bright blue sky, looking toward the horizon with a peaceful expression. Stylized Sergio Kern style.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 9,
+            "text": "Despierto en una habitación blanca del Capitolio. Prim ha muerto y el vacío en mi pecho es más doloroso que las quemaduras que cubren mi piel. Me he convertido en un avox mental, alguien que ha perdido su voz ante el horror de la pérdida. Los médicos dicen que estoy recuperándome, pero mi mente solo repite los nombres de los caídos. Me siento como una pieza rota de un mecanismo que ya no tiene sentido, esperando el final de la historia.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss, with bandages on her arms and a sad expression, sitting in a sterile white hospital room. Full-bleed 2D composition with clean lines.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 10,
+            "text": "Un día camino por los pasillos hasta el jardín de rosas del Presidente Snow. Allí lo encuentro, débil y sentenciado. Me mira con sus ojos de serpiente y suelta una risa ahogada. Me dice que no fue él quien mató a Prim, sino que Coin soltó los paracaídas para forzar la rendición del Capitolio. «Nos han tomado a los dos por idiotas», susurra. El aroma dulce de las rosas oculta el rastro de la sangre y comprendo que el enemigo ha cambiado de rostro.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss standing in a greenhouse filled with rows of vibrant white and pink roses. An elderly, pale Snow sits on a stool. Clear 2D view in pastel colors.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 11,
+            "text": "La Presidenta Coin nos reúne a los últimos vencedores. Propone unos Juegos del Hambre simbólicos con los hijos de los líderes del Capitolio. Peeta se opone con horror, pero Johanna y Enobaria quieren venganza. Miro a Peeta y recuerdo a mi hermana. «Voto que sí», digo con firmeza, «por Prim». Haymitch me observa durante un largo silencio, comprende mi intención oculta y decide apoyarme. El tablero está listo para el movimiento final del Sinsajo y el destino de Coin.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "The few surviving victors sitting around a large wooden table. Coin stands at the head. Stylized characters with simple features and flat colors.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 12,
+            "text": "Llega el momento de la ejecución. Una multitud inmensa llena la plaza frente a la mansión. Snow está atado a un poste, esperando mi flecha. Levanto el arco de Sinsajo y apunto a su corazón. Recuerdo sus palabras sobre la bomba de Coin. En el último segundo, muevo la punta de la flecha hacia arriba y atravieso el pecho de la Presidenta Coin. Snow se ríe a carcajadas mientras se ahoga. El caos estalla en la plaza y yo sé que, por fin, he hecho justicia.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss on a high balcony, aiming her black bow upwards. In the background, the colorful crowd in the square looks on in shock. Dramatic flat angle.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 13,
+            "text": "Me encierran durante meses, pero al final deciden que estoy demasiado rota para ser juzgada. Me envían de vuelta al Distrito 12, escoltada por un Haymitch silencioso. Al llegar, descubro que mi antiguo hogar es un desierto de cenizas grises. Me instalo en la Aldea de los Vencedores, donde el silencio es el único habitante. Me siento en mi cocina frente al fuego y espero a que el tiempo se lleve los recuerdos del fuego y la sangre de la guerra que terminó.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Haymitch standing among the charcoal gray ruins of District 12. Somber mood with minimalist silhouettes and flat gray tones.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 14,
+            "text": "Una mañana de primavera, Peeta aparece en mi jardín. Está plantando prímulas amarillas para que el jardín siempre me recuerde a mi hermana Prim. Trae pan caliente de la panadería y, por primera vez en mucho tiempo, compartimos un desayuno de verdad. Peeta todavía tiene momentos de oscuridad, pero su bondad sigue siendo el único refugio que me queda. Juntos, empezamos a limpiar las cenizas de la Veta y a sembrar semillas de una vida nueva sobre las ruinas del pasado.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Peeta with ash-blonde hair, kneeling in a garden planting bright yellow flowers. Katniss watches him from a wooden doorway. Warm morning light style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 15,
+            "text": "Creamos un libro de recuerdos juntos. En sus páginas de pergamino dibujamos a todos los que amamos y perdimos: el color de los ojos de Finnick, la risa de mi padre, la valentía de Rue y la sonrisa de Prim. Escribimos sus historias para que el mundo nunca olvide lo que pasó ni el precio que pagamos por la libertad. Haymitch se une a nosotros, aportando los nombres de los tributos a los que no pudo salvar. Este libro es nuestra forma de sanar las heridas.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta sitting together, looking at a large handmade book with colorful drawings and writing. High contrast 2D composition with warm tones.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 16,
+            "text": "Han pasado veinte años. Mis hijos juegan sobre la hierba de la pradera, corriendo bajo el sol sin saber que juegan sobre un cementerio. A veces las pesadillas regresan y me despierto gritando, pero Peeta me abraza y me recuerda qué es real. Le contaré a mis hijos cómo sobrevivimos y por qué el mundo es diferente ahora. Miro el horizonte y siento paz. «¿Me amas?», pregunta él. «Real», respondo. Por fin, los Juegos del Hambre han terminado para siempre.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A beautiful sunset over a rolling green meadow. Two small children run in the distance while two figures sit on the grass holding hands. Cinematic flat view.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

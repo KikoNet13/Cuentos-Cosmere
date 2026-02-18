@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "05",
+    "title": "La Chispa de la Rebelion",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T12:00:00Z",
+    "updated_at": "2026-02-18T12:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen looking tense in her study, with the shadow of President Snow and a single white rose visible on a wooden desk.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 1,
+            "text": "Sujeto el termo con ambas manos, aunque el calor del té se perdió hace un rato en el aire helado. Estoy sentada sobre una roca mientras el alba empieza a iluminar el bosque. Hoy empieza la Gira de la Victoria y tengo miedo. He pasado los últimos meses intentando olvidar la arena, pero el Capitolio no me deja en paz. Vivo en la Aldea de los Vencedores con mi madre y Prim, pero mi mente sigue atrapada entre los árboles de los Juegos, esperando el siguiente ataque.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss sitting alone on a rock in a misty, gray forest at dawn, holding a metal thermos. Clear line style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 2,
+            "text": "Al volver a casa, encuentro a mi madre pálida y asustada. En el estudio me espera un visitante inesperado: el Presidente Snow. Su olor a rosas y sangre inunda la habitación. Me mira con sus ojos de serpiente y me explica que mi truco con las bayas en la arena no fue visto como un acto de amor, sino como un desafío. Dice que he encendido una chispa de rebelión en los distritos y que, si no logro apagarla, mi familia y Gale pagarán las consecuencias.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "President Snow sitting behind a wooden desk in a cozy room, wearing a white rose on his lapel. Katniss stands before him.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 3,
+            "text": "Snow me ordena que, durante la Gira de la Victoria, convenza a todo Panem de que estoy loca de amor por Peeta. «Convénceme a mí», susurra antes de marcharse. Siento un frío glacial que no tiene nada que ver con la nieve exterior. Mi vida ya no me pertenece; ahora soy una pieza más en su tablero. Debo sonreír, besar a Peeta y fingir felicidad absoluta mientras el mundo que conozco empieza a agrietarse. El peso de la seguridad de mis seres queridos recae sobre mis hombros.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Close-up of President Snow whispering into Katniss's ear. His face is pale and his expression is cold and threatening.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 4,
+            "text": "El tren de la victoria es tan lujoso como el primero, pero esta vez el ambiente es tenso y silencioso. Peeta y yo apenas nos hablamos, atrapados en la mentira que debemos representar. Cinna me prepara ropa elegante, intentando ocultar mi angustia tras capas de seda y pieles de armiño. Haymitch me advierte que la situación es mucho más peligrosa de lo que imagino. Cada parada de este viaje será una prueba de fuego. No puedo permitirme ni un solo error si quiero mantener a Prim a salvo.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta sitting in a luxury train car with velvet seats. They are looking in opposite directions with sad expressions.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 5,
+            "text": "Nuestra primera parada es el Distrito 11, el hogar de Rue. Al ver los campos de cultivo y los rostros cansados de los trabajadores, el corazón me da un vuelco. Subimos a un estrado frente al Edificio de Justicia, rodeados de agentes de la paz con armas automáticas. Veo a la familia de Rue entre la multitud; sus ojos oscuros me recuerdan tanto a la niña que no pude salvar. El aire está cargado de una electricidad extraña, una mezcla de dolor y esperanza contenida que me aterra.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta standing on a high white stage in District 11. Below, a large crowd of workers looks up at them.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 6,
+            "text": "Llega el momento de hablar. Aunque tengo un discurso preparado por el Capitolio, decido decir lo que siento. Agradezco a las familias de Rue y Thresh por su sacrificio y les digo que siempre estarán conmigo. De repente, un anciano silba la melodía de cuatro notas de Rue. La multitud entera se lleva tres dedos a los labios y me dedica el saludo del Distrito 12 en un silencio absoluto. Es un acto de desafío masivo que me deja sin aliento. He fallado a Snow.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A sea of hands in a crowd raised with three fingers extended in a salute. The background is a dusty, gray city plaza.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 7,
+            "text": "El castigo del Capitolio es instantáneo y cruel. Antes de que podamos bajar del escenario, dos agentes de la paz arrastran al anciano que silbó y lo obligan a ponerse de rodillas. Le pegan un tiro en la cabeza delante de todos. Peeta me agarra del brazo y me empuja hacia el interior del edificio mientras los gritos de la multitud estallan fuera. Las puertas se cierran de golpe, dejándonos en la oscuridad. Comprendo con horror que mis palabras, en vez de calmar las aguas, han provocado más muertes.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "White-uniformed soldiers grabbing an old man in a crowd. Katniss is being pulled away by Peeta toward a large stone door.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 8,
+            "text": "Seguimos el viaje por los demás distritos como si fuéramos autómatas. Cenas, discursos y sonrisas falsas bajo la mirada vigilante de las cámaras. Una noche, en la televisión del alcalde de un distrito, veo algo que no debería haber visto: imágenes del Distrito 8 en llamas. La gente lucha en las calles con los rostros tapados, desafiando a los agentes de la paz. Es un levantamiento real. La chispa que Snow tanto temía se ha convertido en un incendio y yo soy la razón de todo ese caos.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A television screen showing a chaotic city square with smoke, fire, and people throwing bricks. Stylized clear line art.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

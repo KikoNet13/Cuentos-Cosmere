@@ -1,51 +1,73 @@
-PROMPT NOTEBOOKLM - STORY 08 - GENERAR 08_prompts.json
-Devuelve SOLO JSON válido.
-Sin markdown, sin explicaciones.
-No incluyas nada fuera del JSON.
-Tu respuesta debe ser EXACTAMENTE el contenido final del archivo `08_prompts.json`.
-
-CONTEXTO DISPONIBLE EN NOTEBOOKLM (IMPORTANTE)
-- Tienes acceso a los libros canónicos de la saga Los juegos del hambre.
-- Tienes acceso al ejemplo completo de Hansel y Gretel como referencia de estructura de prompts.
-- Tienes acceso a la fuente de estilo visual ya guardada.
-- Revisa tambien la NUEVA FUENTE: `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-- NO dependas de rutas locales, nombres de archivo del repositorio ni detalles de la webapp.
-
-En `FUENTE_NB_los_juegos_textos_y_anchors.md` tienes:
-- texto completo por página del cuento;
-- anchors canónicos del meta de saga;
-- ids y `image_filenames` para referencias visuales.
-
-Genera un ÚNICO objeto JSON con este esquema:
 {
   "story_id": "08",
   "title": "El Sinsajo del Distrito 13",
   "book_rel_path": "los_juegos_del_hambre",
-  "updated_at": "<ISO8601_UTC>",
-  "cover_prompt": "<prompt largo>",
+  "updated_at": "2026-02-19T10:00:00Z",
+  "cover_prompt": "OBJETIVO DE ILUSTRACION\nCrear una portada iconica para el octavo cuento centrado en la transformacion de Katniss Everdeen en el Sinsajo dentro de la fortaleza del Distrito 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener el estilo Sergio Kern: linea negra limpia y definida, colores planos y anatomia de cuento. Katniss debe tener su trenza negra, ojos grises y piel aceitunada. Viste el uniforme tactico negro diseñado por Cinna. El fondo debe evocar la frialdad del hormigon del Distrito 13. Respetar la estetica de Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de Katniss en el centro de la imagen, mirando con una determinacion feroz. Detras de ella, la silueta azulada del emblema del Distrito 13. Composicion simetrica y poderosa que denote liderazgo y rebelion.\n\nPERSONAJES Y ACCIÓN\nKatniss de pie, sujetando su arco militar negro. Lleva el broche del sinsajo en el pecho. Su expresion es seria, marcada por la perdida pero lista para la guerra.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo de muros de hormigon gris con lineas industriales limpias. Paleta de colores: grises ceniza, azul oscuro metalico, negro profundo y el dorado sutil del broche. Iluminacion frontal plana y fria.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, env_district13_bunker, prop_bow_arrow, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto ni titulos. Sin fotorrealismo, sin degradados complejos, sin personajes adicionales. Evitar sombras dramaticas o efectos de luz cinematograficos modernos.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta claridad, lista para maquetacion editorial de cuento infantil con aire limpio en los bordes.",
   "page_prompts": [
-    { "page_number": 1, "main_prompt": "<prompt largo>" }
+    {
+      "page_number": 1,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Katniss Everdeen observando las ruinas carbonizadas de su hogar en el Distrito 12.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con trenza negra y rasgos de la Veta. El entorno debe ser un paramo gris de cenizas y escombros. Estilo Sergio Kern de linea clara.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general de Katniss de pie frente a los restos de su casa. Perspectiva amplia para enfatizar la desolacion del paisaje destruido.\n\nPERSONAJES Y ACCIÓN\nKatniss mirando hacia abajo, a sus zapatos cubiertos de polvo gris. Su postura refleja una pena inmensa y shock ante la destruccion total.\n\nENTORNO, PALETA E ILUMINACIÓN\nPaisaje de cenizas grises, ladrillos negros y humo residual. Paleta monocromatica de grises y negros con apenas toques de color. Luz mortecina y plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_district12_seam, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni sangre. No incluir al aerodeslizador en el primer plano. Evitar detalles excesivos en los escombros para mantener la claridad.\n\nFORMATO DE SALIDA\nIlustracion 1:1 nítida para pagina de cuento."
+    },
+    {
+      "page_number": 2,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el escalofriante hallazgo de la rosa blanca de Snow en la casa de Katniss en la Aldea de los Vencedores.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nRosa blanca perfecta y fresca. Habitacion limpia pero fria de la Aldea de los Vencedores. Katniss visible en la escena.\n\nCOMPOSICIÓN Y ENCUADRE\nPrimer plano de una comoda de madera donde reposa la rosa. Katniss se ve al fondo, entrando por la puerta, con expresion de terror.\n\nPERSONAJES Y ACCIÓN\nKatniss paralizada al ver la flor. La rosa blanca destaca como un objeto intruso y amenazante en el dormitorio.\n\nENTORNO, PALETA E ILUMINACIÓN\nInterior domestico en tonos madera y azul palido. La rosa es de un blanco puro y brillante. Iluminacion focal sobre la flor que parece brillar de forma artificial.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, prop_president_rose, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nSin sombras complejas. La rosa no debe parecer natural, sino modificada y perfecta. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 con linea negra definida."
+    },
+    {
+      "page_number": 3,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nPresentar a la Presidenta Alma Coin y la primera reunion en la sala de mando del Distrito 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCoin con pelo gris perfectamente liso hasta los hombros y ojos gris palido. Katniss con su trenza. Entorno militar de hormigon.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de Coin sentada tras una mesa metalica, mirando a Katniss que esta de pie frente a ella. Composicion tensa y fria.\n\nPERSONAJES Y ACCIÓN\nCoin evaluando a Katniss con mirada implacable. Katniss se siente incomoda, como una pieza en un tablero que no comprende.\n\nENTORNO, PALETA E ILUMINACIÓN\nBunker subterraneo. Paleta de grises industriales, azules acero y blancos frios. Iluminacion fluorescente plana y sin calidez.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_coin_base, char_katniss_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nNo fotorrealismo. Coin no debe sonreir. Sin elementos del Capitolio visibles.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 estilizada."
+    },
+    {
+      "page_number": 4,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nMostrar la vida cotidiana y restrictiva de los ciudadanos en los comedores del Distrito 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nUniformes grises identicos. Horarios tatuados en los antebrazos. Bandejas de metal con comida sencilla (pure de nabos).\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general del comedor. Filas de personas sentadas en mesas largas de metal. Repeticion de formas geometricas.\n\nPERSONAJES Y ACCIÓN\nGente comiendo en silencio. Katniss y Gale sentados juntos, mirando sus horarios en los brazos. Ambiente de prision disciplinada.\n\nENTORNO, PALETA E ILUMINACIÓN\nGrandes salas de hormigon con columnas. Iluminacion cenital homogenea. Paleta monocromatica de grises con tonos azulados debiles.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_district13_bunker, char_katniss_base, char_gale_base.\n\nRESTRICCIONES / NEGATIVOS\nSin colores vibrantes. Evitar gestos de alegria o desorden. No incluir ventanas al exterior.\n\nFORMATO DE SALIDA\nIlustracion 1:1 clara y limpia."
+    },
+    {
+      "page_number": 5,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nCapturar el momento de determinacion de Katniss en su dormitorio de D13 al decidir ser el Sinsajo para rescatar a Peeta.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nHabitacion pequena y austera. Katniss sentada en la cama de metal. El broche de sinsajo sobre la mesa.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de Katniss. Ella esta mirando el broche, con una luz tenue que resalta sus ojos grises decididos.\n\nPERSONAJES Y ACCIÓN\nKatniss apretando los puños, tomando la decision de aceptar el papel de simbolo rebelde. Expresion de sacrificio y amor por Peeta.\n\nENTORNO, PALETA E ILUMINACIÓN\nHabitacion de hormigon minimalista. Sombras suaves y planas. Paleta de grises y dorados tenues para el broche.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_district13_bunker, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No debe haber armas en esta escena intíma. Sin otros personajes.\n\nFORMATO DE SALIDA\nIlustracion 1:1 con gran fuerza emocional."
+    },
+    {
+      "page_number": 6,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nMostrar la negociacion de Katniss con Coin en la sala de mando, exigiendo inmunidad para Peeta.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con una lista escrita en papel. Coin escuchando con escepticismo. Plutarch Heavensbee al fondo.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de los personajes alrededor de una mesa de mapas holograficos. Katniss señala su lista con firmeza.\n\nPERSONAJES Y ACCIÓN\nKatniss desafiante ante el poder de Coin. Coin sopesando el valor de Katniss contra sus exigencias. Plutarch sonrie sutilmente.\n\nENTORNO, PALETA E ILUMINACIÓN\nSala de alta tecnologia subterranea. Resplandores azules de las pantallas. Paleta de grises y azules metalicos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_coin_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin efectos cinematograficos de luz complejos. El holograma debe ser una forma geometrica simple en 2D.\n\nFORMATO DE SALIDA\nIlustracion 1:1 narrativa y clara."
+    },
+    {
+      "page_number": 7,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRevelar los bocetos de Cinna para el traje de Sinsajo en el cuaderno entregado por Plutarch.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCuaderno encuadernado en cuero. Dibujo de estilo profesional de un traje tactico negro con alas sugeridas.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano detalle de las manos de Katniss sosteniendo el cuaderno abierto. El dibujo del traje es el protagonista visual.\n\nPERSONAJES Y ACCIÓN\nLas manos de Katniss tocan con ternura la pagina donde Cinna escribio: 'Todavia apuesto por ti'. Se percibe la emocion de la protagonista.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo desenfocado de la sala de mando. El papel es amarillento (pergamino) y el dibujo es negro intenso. Luz calida sobre el libro.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, prop_mockingjay_pin, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nNo mostrar el rostro de Katniss para centrar el impacto en el cuaderno. Sin fotorrealismo en la textura del papel.\n\nFORMATO DE SALIDA\nIlustracion 1:1 simbolica y potente."
+    },
+    {
+      "page_number": 8,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nEl terrible descubrimiento del equipo de preparacion encadenado en el compartimento 3908.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPuerta roja con el numero 3908. Venia, Flavius y Octavia con aspecto demacrado y hematomas. Octavia con piel verde palida.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general desde la puerta abierta. Katniss en el umbral mirando con horror hacia el interior de la celda.\n\nPERSONAJES Y ACCIÓN\nLos tres estilistas acurrucados contra la pared, esposados. Katniss paralizada ante la crueldad de sus propios aliados rebeldes.\n\nENTORNO, PALETA E ILUMINACIÓN\nHabitacion sucia y oscura en los niveles profundos. Paleta de grises, verdes enfermos y el rojo de la puerta. Luz tenue y desagradable.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre explicita ni gore. El horror debe ser sugerido por la postura y el aspecto de los personajes. No fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de alto impacto visual."
+    },
+    {
+      "page_number": 9,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nKatniss confrontando a los guardias y exigiendo la liberacion de sus amigos del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss gritando a dos guardias del 13 en uniformes grises. Los estilistas siendo liberados al fondo.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano americano de Katniss en primer plano lateral, señalando hacia la celda. Los guardias se ven intimidados por el Sinsajo.\n\nPERSONAJES Y ACCIÓN\nKatniss furiosa, ejerciendo su poder recien adquirido. Venia y Octavia llorando mientras las ayudan a levantarse.\n\nENTORNO, PALETA E ILUMINACIÓN\nPasillo de hormigon asfixiante. Tonos frios de azul y gris. Luz plana que resalta el conflicto verbal.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin violencia fisica. Evitar que Katniss parezca una villana; su rabia es justa. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 dinamica."
+    },
+    {
+      "page_number": 10,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nKatniss y Gale equipandose en la armeria de Defensa Especial con Beetee.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nBeetee con sus gafas circulares. Gale con su arco militar negro. Katniss con su uniforme de Sinsajo completo.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de los tres personajes entre armeros llenos de arcos y flechas tecnologicas. Composicion triangular.\n\nPERSONAJES Y ACCIÓN\nBeetee explicando el funcionamiento del equipo. Gale examinando su arco negro con respeto. Katniss se siente finalmente como una soldado.\n\nENTORNO, PALETA E ILUMINACIÓN\nArmeria de alta tecnologia con estantes metalicos. Paleta de negros, grises metalicos y blancos. Luz brillante de laboratorio.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_beetee_base, char_gale_base, prop_bow_arrow, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin disparos ni accion. El ambiente es de preparacion profesional. Evitar sombras complejas en el metal.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 clara."
+    },
+    {
+      "page_number": 11,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el fracaso de Katniss intentando actuar para las grabaciones de propaganda en el estudio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con maquillaje pesado y el traje de Sinsajo. Fondo de pantalla verde y maquinas de humo.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de Katniss frente a una camara insecto. Ella luce rigida y poco natural. Detras, Plutarch y Fulvia con gesto de decepcion.\n\nPERSONAJES Y ACCIÓN\nKatniss gritando una linea de guion sin conviccion. Su postura es de madera. Fulvia se tapa la cara con la mano.\n\nENTORNO, PALETA E ILUMINACIÓN\nEstudio de television subterraneo. Contraste entre el verde brillante del croma y el negro del traje. Luces de estudio cegadoras.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nEvitar que la escena parezca heroica; debe verse como un rodaje fallido. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 nitida."
+    },
+    {
+      "page_number": 12,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nEl regreso de Haymitch Abernathy burlandose de la actuacion de Katniss ante los lideres rebeldes.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nHaymitch mas delgado y palido. Pantalla de monitor mostrando a la Katniss 'actriz'. Entorno de la sala de mando.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de Haymitch riendo y señalando la pantalla. Katniss a un lado, ofendida pero reconociendo la verdad.\n\nPERSONAJES Y ACCIÓN\nHaymitch con una carcajada cinica. Katniss con los brazos cruzados. Coin observa la escena con su habitual rostro de piedra.\n\nENTORNO, PALETA E ILUMINACIÓN\nSala de monitores en penumbra azulada. La cara de Haymitch iluminada por el resplandor de las pantallas. Tonos azules y grises.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_haymitch_base, char_katniss_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin alcohol en la escena (D13 es seco). Haymitch debe verse sobrio pero igual de mordaz. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 expresiva."
+    },
+    {
+      "page_number": 13,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nReunion con amigos para redescubrir la verdadera fuerza del Sinsajo sin guiones.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nGrupo sentado en circulo: Gale, Sae la Grasienta, Haymitch y Katniss. Pizarra con notas escritas al fondo.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general de la habitacion. Los personajes hablan de forma espontanea. Katniss escucha mientras los demas recuerdan sus momentos reales.\n\nPERSONAJES Y ACCIÓN\nHaymitch dirigiendo la conversacion. Gale mirando a Katniss con admiracion. Katniss empieza a comprender su propio valor como simbolo.\n\nENTORNO, PALETA E ILUMINACIÓN\nHabitacion de reuniones sencilla en D13. Paleta de grises y marrones suaves. Luz calida de conversacion entre amigos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, char_haymitch_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin elementos militares agresivos. Evitar poses estaticas; debe sentirse como una charla fluida. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 equilibrada."
+    },
+    {
+      "page_number": 14,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nLa Presidenta Coin aceptando enviar a Katniss a una zona de guerra real en el Distrito 8.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCoin frente a un gran mapa de Panem iluminado. Katniss lista para la partida. Boggs al lado.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano americano. Coin señala un punto rojo en el mapa (D8). Katniss asiente con una mirada de acero. Boggs luce protector.\n\nPERSONAJES Y ACCIÓN\nCoin tomando la decision estrategica de arriesgar al Sinsajo. Katniss ansiosa por salir del bunker. Boggs se prepara para ser su guardaespaldas.\n\nENTORNO, PALETA E ILUMINACIÓN\nSala de mando estrategica. Brillo rojo y azul del mapa holografico sobre los rostros. Paleta fria y profesional.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_coin_base, char_katniss_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin degradados complejos. El mapa debe ser iconico y simple. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 cinematografica plana."
+    },
+    {
+      "page_number": 15,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nPresentar a Boggs y al equipo de television de Cressida preparandose en el hangar.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCressida con la cabeza tatuada de enredaderas verdes. Pollux el Avox cargando una camara pesada. Boggs en uniforme militar.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio del equipo revisando sus herramientas frente a un aerodeslizador plateado. Katniss y Gale al fondo.\n\nPERSONAJES Y ACCIÓN\nCressida dando ordenes tecnicas. Pollux moviendose en silencio y eficiencia. Boggs verificando las armas del grupo. Ambiente de mision inminente.\n\nENTORNO, PALETA E ILUMINACIÓN\nHangar subterraneo inmenso. Paleta de plateados, grises y azules. Luz industrial brillante.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No debe verse como una escena de accion todavia; es la preparacion previa.\n\nFORMATO DE SALIDA\nIlustracion 1:1 nitida para cuento."
+    },
+    {
+      "page_number": 16,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nEl despegue del aerodeslizador desde las profundidades del Distrito 13 hacia la superficie.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nAerodeslizador plateado con el sello del Distrito 13. Tunel vertical de lanzamiento. Luz del dia asomando arriba.\n\nCOMPOSICIÓN Y ENCUADRE\nContrapicado desde el fondo del tunel, viendo la nave ascender hacia el circulo de luz exterior. Katniss visible por una ventanilla.\n\nPERSONAJES Y ACCIÓN\nLa nave vibra y sube a gran velocidad. Katniss mira hacia arriba, despidiendose de las cuevas para entrar en la guerra real.\n\nENTORNO, PALETA E ILUMINACIÓN\nTunel de lanzamiento de metal y roca. Contraste entre la oscuridad del bunker y el azul deslumbrante del cielo al final del tunel.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_district13_bunker, char_katniss_base.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni desenfoque de movimiento. La nave debe tener una silueta clara y limpia.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 de cierre de cuento."
+    }
   ]
 }
-
-Reglas obligatorias:
-1) `story_id`, `title` y `book_rel_path` deben coincidir EXACTAMENTE con esta historia.
-2) `cover_prompt` en español estructurado, 900-1700 caracteres, con EXACTAMENTE estos 8 bloques en orden:
-   - OBJETIVO DE ILUSTRACION
-   - CONTINUIDAD VISUAL OBLIGATORIA
-   - COMPOSICIÓN Y ENCUADRE
-   - PERSONAJES Y ACCIÓN
-   - ENTORNO, PALETA E ILUMINACIÓN
-   - REFERENCIAS (reference_ids)
-   - RESTRICCIONES / NEGATIVOS
-   - FORMATO DE SALIDA
-3) Cada `page_prompts[].main_prompt` en español estructurado, 700-1500 caracteres, con los mismos 8 bloques en orden.
-4) `page_prompts` debe cubrir EXACTAMENTE estas páginas: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
-5) Cada `page_number` aparece una sola vez.
-6) Construye el contenido de cada prompt usando el texto de página de `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-7) En el bloque `REFERENCIAS (reference_ids)`, usa anchors del meta canónico de la saga presentes en `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-8) Anchors canónicos disponibles (IDs): char_beetee_base, char_coin_base, char_effie_base, char_finnick_base, char_gale_base, char_haymitch_base, char_johanna_base, char_katniss_base, char_peeta_base, char_prim_base, char_rue_base, char_snow_base, cover_mockingjay_collection, env_arena_clock, env_arena_forest, env_district12_seam, env_district13_bunker, env_reaping_square, env_train_capitol, prop_bow_arrow, prop_bread_loaf, prop_mockingjay_pin, prop_nightlock_berries, prop_parachute_gift, prop_president_rose, style_linea_editorial, style_paleta_rebelion
-9) No cambies el schema, no agregues campos, no elimines campos obligatorios.
-
-Salida final:
-- SOLO el objeto JSON final para `08_prompts.json`.

@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "03",
+    "title": "El Canto de Rue",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T15:00:00Z",
+    "updated_at": "2026-02-18T15:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen with her signature braid and Rue, a small dark-skinned girl, looking through thick green leaves in a stylized forest. Clear line style.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 9,
+            "text": "Con cuidado, empiezo a serrar la rama donde cuelga el nido. Cuando el tronco cede, el avispero cae directamente sobre el campamento de los profesionales. Los gritos de dolor rompen el silencio mientras las rastrevíspulas atacan sin piedad. Bajo del árbol y, a pesar del riesgo, le arrebato el arco y las flechas al cadáver de Glimmer. Noto dos picaduras en el brazo y un veneno abrasador empieza a correr por mis venas. Al fin tengo el arma que necesitaba para ganar, pero el mundo empieza a dar vueltas a mi alrededor.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss, with a dazed expression and a red sting on her neck, desperately grabs a golden bow from the ground. Swarming golden wasps fill the air.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 10,
+            "text": "Las alucinaciones me atrapan en una pesadilla de colores neón y burbujas de sangre. De repente, alguien me empuja y me grita que corra. ¡Es Peeta! Me salva de los profesionales antes de desplomarme en el barro. Paso dos días sumergida en la oscuridad, viendo morir a mi familia en mis sueños una y otra vez. Cuando finalmente despierto, estoy débil y hambrienta, pero el veneno ha salido de mi cuerpo. Me doy cuenta de que Peeta no quería matarme; él me ha mantenido con vida cuando estaba indefensa.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss lies in a shallow hole covered in dead leaves. The forest around her looks distorted with swirling, vibrant orange bubbles.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 11,
+            "text": "Un movimiento entre las hojas me pone en guardia, pero es Rue. La niña me observa con timidez y me ofrece unas hojas masticadas para curar mis picaduras. Decidimos formar una alianza oficial. Compartimos nuestras escasas provisiones: mis galletas saladas y su cecina de ciervo. Rue me cuenta cosas de su distrito, de los campos de agricultura y de cómo ama la música. Al verla tan pequeña y valiente, me recuerda a mi hermana Prim. Por primera vez en la arena, siento que no estoy luchando sola contra el Capitolio.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Rue sitting together on a thick branch. Rue is placing green leaves on Katniss's swollen sting. They are sharing a simple meal.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 12,
+            "text": "Rue me explica que los profesionales tienen una montaña de suministros junto al lago. Ellos no pasan hambre, y eso es lo que les da ventaja. Trazamos un plan de ataque: Rue encenderá tres fogatas para distraerlos mientras yo intento destruir su comida. Nos despedimos con un abrazo rápido, prometiendo reunirnos al anochecer. —Ten cuidado —me susurra ella. —Tú también —le respondo. Mientras me dirijo al lago, los sinsajos repiten la melodía de cuatro notas que Rue usa para decir que está a salvo.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Rue whispering together in the woods. Rue carries a small handmade sling, and Katniss holds her wooden bow. They look determined.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 13,
+            "text": "Llego al borde del bosque y espío el campamento. Los profesionales han apilado sus cajas y sacos formando una pirámide perfecta sobre la arena. De repente, veo a la chica del Distrito 5 acercarse sigilosamente dando extraños saltitos. Ella sabe algo que yo no: ¡el terreno está minado! El chico del Distrito 3 ha reactivado las minas de las plataformas iniciales para proteger el botín. Si pongo un pie allí, volaré en pedazos. Debo encontrar la forma de activar las bombas desde la distancia si quiero que mi plan funcione.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A view of a pyramid of wooden crates and bags on a sandy beach. Small, round metal plates are partially buried in the sand around it.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 14,
+            "text": "Apunto mi flecha hacia un saco de manzanas que cuelga sobre las minas. Una flecha, dos, tres... a la tercera, la red se rompe y las manzanas caen en cascada. ¡BOOM! Una explosión gigantesca sacude la arena, lanzándome por los aires. Mi oído izquierdo se queda sordo y el humo lo cubre todo. La pirámide de comida ha desaparecido, convertida en astillas y polvo. He logrado mi objetivo: los profesionales ya no tienen nada que comer. Me arrastro hacia la espesura, herida y mareada, mientras escucho los gritos de rabia de Cato en la distancia.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A massive explosion of smoke and fire on the beach. Crates are flying through the air, and many red apples are scattered in the chaos.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 15,
+            "text": "Busco a Rue desesperadamente, pero el bosque está en silencio. De pronto, un grito infantil rasga el aire. ¡Es ella! Corro hacia el claro y la encuentro atrapada en una red de hilos dorados. Rue me mira con terror justo antes de que una lanza le atraviese el estómago. El chico del Distrito 1 aparece entre los árboles, pero mi flecha lo alcanza en el cuello antes de que pueda celebrar su victoria. Caigo de rodillas al lado de Rue, agarrando su mano pequeña mientras su vida se escapa entre mis dedos.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss standing in a clearing, pointing her bow at a falling boy. In the foreground, Rue is tangled in a net on the ground.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 16,
+            "text": "—Canta —me susurra Rue con un hilo de voz. Aunque las lágrimas me ahogan, empiezo a entonar una nana de las montañas de mi hogar. Canto sobre un prado verde donde no existe el dolor. Cuando termino, Rue ha cerrado los ojos para siempre. La cubro con flores silvestres de colores brillantes, un gesto de respeto y rebeldía contra el Capitolio. Me llevo tres dedos a los labios y los extiendo hacia el cielo. Adiós, pequeña Rue. Ahora voy a ganar estos Juegos por las dos.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss sitting next to Rue, who is covered in a bed of small yellow and white flowers. Katniss is looking up with a somber expression.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

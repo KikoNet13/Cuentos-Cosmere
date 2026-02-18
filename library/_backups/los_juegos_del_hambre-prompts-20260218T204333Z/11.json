@@ -1,0 +1,454 @@
+{
+  "story_id": "11",
+  "title": "El Final de los Juegos",
+  "status": "definitive",
+  "book_rel_path": "los_juegos_del_hambre",
+  "created_at": "2026-02-18T16:00:00Z",
+  "updated_at": "2026-02-18T14:22:53.584168+00:00",
+  "cover": {
+    "status": "draft",
+    "prompt": "Katniss Everdeen in her black tactical suit, bow in hand, standing before the grand white gates of the President's mansion under a snowy sky. Full-bleed 2D composition.",
+    "active_id": "",
+    "alternatives": [],
+    "reference_ids": [
+      "anchor_style_editorial_v1.png",
+      "anchor_style_palette_v1.png",
+      "anchor_cover_main.png",
+      "anchor_char_katniss.png",
+      "anchor_char_prim.png",
+      "anchor_char_snow.png",
+      "anchor_char_finnick.png",
+      "anchor_env_square.png",
+      "anchor_env_train.png",
+      "anchor_prop_rose.png"
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Avanzamos hacia el corazón del Capitolio, esquivando las últimas defensas de Snow. Gale y yo nos movemos entre las sombras de los edificios de colores pastel, ahora manchados de hollín y sangre. A lo lejos, la mansión presidencial brilla bajo el cielo gris, rodeada por una barrera de agentes de la paz. El aire está cargado del olor a pólvora y desesperación. Siento que el final de esta larga pesadilla está a solo unos pasos de distancia, pero el peligro acecha en cada esquina de estas calles desconocidas.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Gale moving through a soot-stained Capitol street with bright buildings. The white mansion is visible in the far distance. Ligne claire style.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "text": "Llegamos al Círculo de la Ciudad y nos encontramos con una escena desgarradora. Cientos de niños del Capitolio han sido colocados frente a las puertas de la mansión, formando un escudo humano. Tiritan de frío, rodeados por una barricada de agentes de la paz que parecen tan confundidos como nosotros. No entiendo qué planea Snow al usar a sus propios ciudadanos de esta manera. La multitud de rebeldes presiona desde los laterales, creando un caos de gritos y disparos que resuena en las paredes de mármol.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "A massive crowd of children standing behind a white barricade in front of the President's mansion. Soldiers in white uniforms stand nearby. Wide angle flat view.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "text": "De repente, un aerodeslizador con el sello del Capitolio aparece sobre nuestras cabezas. El rugido de sus motores ahoga el clamor de la plaza. En lugar de bombas, vemos caer cientos de pequeños paracaídas plateados, iguales a los que traían regalos en la arena. Los niños extienden las manos con esperanza, creyendo que el Gobierno les envía comida o ayuda en medio del asedio. Observo el descenso lento y brillante de la seda, sintiendo un presentimiento glacial que me recorre la columna vertebral. Algo no encaja.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "A silver hovercraft in a gray sky, dropping hundreds of tiny silver parachutes over a crowded city square. Bright and surreal atmosphere.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_rue.png",
+            "anchor_char_beetee.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "text": "La primera oleada de paracaídas estalla antes de tocar el suelo. Una serie de explosiones coordinadas convierte la nieve en una carnicería roja. El suelo vibra y el aire se llena de humo acre. Los gritos de los niños son ensordecedores mientras los agentes de la paz intentan retirar las barricadas para ayudar. Es una trampa cruel diseñada para causar el máximo dolor. Me quedo paralizada, con el arco bajado, viendo cómo la inocencia se desintegra en un instante bajo el poder despiadado de los que mandan.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Explosions of fire and smoke in the middle of a crowd of children. Red flames contrast with white snow and gray buildings. Dramatic flat composition.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_snow.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "text": "En medio del caos, un grupo de sanitarios rebeldes con uniformes blancos corre hacia el centro de la plaza. Se abren paso entre la multitud para atender a los heridos que agonizan en el suelo. Busco a Gale con la mirada, pero mis ojos se clavan en una figura pequeña que se mueve con determinación. Una trenza rubia, un abrigo que se quita para cubrir a un niño herido... El corazón me da un vuelco salvaje. Es una visión imposible en este infierno de fuego y escombros.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Rebel medics in white uniforms rushing into a smoking plaza. One small figure with a blonde braid is helping a child. Ligne claire style.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "text": "Es Prim. Mi hermana está allí, en el corazón del desastre, haciendo lo que mejor sabe: curar. La veo arrodillada sobre un niño que llora, su colita de pato asomando por la blusa como aquel día de la cosecha. Intento gritar su nombre, abrirme paso entre la masa humana que me empuja hacia atrás. Ella levanta la vista y, por un segundo, nuestras miradas se encuentran. Sus labios forman mi nombre justo cuando estalla la segunda oleada de paracaídas, envolviéndolo todo en una bola de fuego insoportable.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "A close-up of Prim, a young girl with a blonde braid, looking up with wide eyes in a smoky plaza. A bright orange flash blooms behind her.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "text": "El fuego me alcanza y me transforma en una criatura de llamas, el pájaro de Cinna consumiéndose en su propia esencia. Siento que mi piel se derrite mientras caigo hacia un abismo de agonía absoluta. No hay sonido, solo un ardor implacable que me borra la conciencia. Los rostros de los que amo vuelan como pájaros por un cielo negro antes de que la oscuridad se lo trague todo. El Sinsajo ha caído y, con él, la última chispa de mi voluntad de seguir luchando en este mundo.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "A stylized image of Katniss engulfed in orange and yellow flames, her body looking like a bird silhouette. Pitch black background.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "text": "Despierto en un mundo de blanco y silencio, atrapada en una cama de hospital del Capitolio. Mi piel es un rompecabezas de injertos rosados y cicatrices rojas, un mapa del dolor que me ha dejado marcada para siempre. Me dicen que la guerra ha terminado, que Snow ha sido capturado y que los rebeldes han vencido finalmente. Pero yo no siento la victoria. Solo hay un vacío inmenso en mi pecho y un silencio que me impide gritar. Me he convertido en una avox mental, una sombra que ya no reconoce su propia voz.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss lying in a sterile white hospital bed, her arms bandaged. She is staring blankly at a high white ceiling. Cold, clinical lighting.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "text": "Despierto en una habitación blanca del Capitolio. Prim ha muerto y el vacío en mi pecho es más doloroso que las quemaduras que cubren mi piel. Me he convertido en un avox mental, alguien que ha perdido su voz ante el horror de la pérdida. Los médicos dicen que estoy recuperándome, pero mi mente solo repite los nombres de los caídos. Me siento como una pieza rota de un mecanismo que ya no tiene sentido, esperando el final de la historia.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss, with bandages on her arms and a sad expression, sitting in a sterile white hospital room. Full-bleed 2D composition with clean lines.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text": "Un día camino por los pasillos hasta el jardín de rosas del Presidente Snow. Allí lo encuentro, débil y sentenciado. Me mira con sus ojos de serpiente y suelta una risa ahogada. Me dice que no fue él quien mató a Prim, sino que Coin soltó los paracaídas para forzar la rendición del Capitolio. «Nos han tomado a los dos por idiotas», susurra. El aroma dulce de las rosas oculta el rastro de la sangre y comprendo que el enemigo ha cambiado de rostro.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss standing in a greenhouse filled with rows of vibrant white and pink roses. An elderly, pale Snow sits on a stool. Clear 2D view in pastel colors.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text": "La Presidenta Coin nos reúne a los últimos vencedores. Propone unos Juegos del Hambre simbólicos con los hijos de los líderes del Capitolio. Peeta se opone con horror, pero Johanna y Enobaria quieren venganza. Miro a Peeta y recuerdo a mi hermana. «Voto que sí», digo con firmeza, «por Prim». Haymitch me observa durante un largo silencio, comprende mi intención oculta y decide apoyarme. El tablero está listo para el movimiento final del Sinsajo y el destino de Coin.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "The few surviving victors sitting around a large wooden table. Coin stands at the head. Stylized characters with simple features and flat colors.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "text": "Llega el momento de la ejecución. Una multitud inmensa llena la plaza frente a la mansión. Snow está atado a un poste, esperando mi flecha. Levanto el arco de Sinsajo y apunto a su corazón. Recuerdo sus palabras sobre la bomba de Coin. En el último segundo, muevo la punta de la flecha hacia arriba y atravieso el pecho de la Presidenta Coin. Snow se ríe a carcajadas mientras se ahoga. El caos estalla en la plaza y yo sé que, por fin, he hecho justicia.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss on a high balcony, aiming her black bow upwards. In the background, the colorful crowd in the square looks on in shock. Dramatic flat angle.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "text": "Me encierran durante meses, pero al final deciden que estoy demasiado rota para ser juzgada. Me envían de vuelta al Distrito 12, escoltada por un Haymitch silencioso. Al llegar, descubro que mi antiguo hogar es un desierto de cenizas grises. Me instalo en la Aldea de los Vencedores, donde el silencio es el único habitante. Me siento en mi cocina frente al fuego y espero a que el tiempo se lleve los recuerdos del fuego y la sangre de la guerra que terminó.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Haymitch standing among the charcoal gray ruins of District 12. Somber mood with minimalist silhouettes and flat gray tones.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "text": "Una mañana de primavera, Peeta aparece en mi jardín. Está plantando prímulas amarillas para que el jardín siempre me recuerde a mi hermana Prim. Trae pan caliente de la panadería y, por primera vez en mucho tiempo, compartimos un desayuno de verdad. Peeta todavía tiene momentos de oscuridad, pero su bondad sigue siendo el único refugio que me queda. Juntos, empezamos a limpiar las cenizas de la Veta y a sembrar semillas de una vida nueva sobre las ruinas del pasado.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Peeta with ash-blonde hair, kneeling in a garden planting bright yellow flowers. Katniss watches him from a wooden doorway. Warm morning light style.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_snow.png",
+            "anchor_env_seam.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "text": "Creamos un libro de recuerdos juntos. En sus páginas de pergamino dibujamos a todos los que amamos y perdimos: el color de los ojos de Finnick, la risa de mi padre, la valentía de Rue y la sonrisa de Prim. Escribimos sus historias para que el mundo nunca olvide lo que pasó ni el precio que pagamos por la libertad. Haymitch se une a nosotros, aportando los nombres de los tributos a los que no pudo salvar. Este libro es nuestra forma de sanar las heridas.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Peeta sitting together, looking at a large handmade book with colorful drawings and writing. High contrast 2D composition with warm tones.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "text": "Han pasado veinte años. Mis hijos juegan sobre la hierba de la pradera, corriendo bajo el sol sin saber que juegan sobre un cementerio. A veces las pesadillas regresan y me despierto gritando, pero Peeta me abraza y me recuerda qué es real. Le contaré a mis hijos cómo sobrevivimos y por qué el mundo es diferente ahora. Miro el horizonte y siento paz. «¿Me amas?», pregunta él. «Real», respondo. Por fin, los Juegos del Hambre han terminado para siempre.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "A beautiful sunset over a rolling green meadow. Two small children run in the distance while two figures sit on the grass holding hands. Cinematic flat view.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_peeta.png",
+            "anchor_char_snow.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    }
+  ]
+}

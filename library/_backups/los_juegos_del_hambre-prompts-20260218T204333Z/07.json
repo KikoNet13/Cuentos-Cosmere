@@ -1,0 +1,438 @@
+{
+  "story_id": "07",
+  "title": "El Secreto del Reloj",
+  "status": "definitive",
+  "book_rel_path": "los_juegos_del_hambre",
+  "created_at": "2026-02-18T12:00:00Z",
+  "updated_at": "2026-02-18T14:22:53.584168+00:00",
+  "cover": {
+    "status": "draft",
+    "prompt": "Katniss Everdeen in her Mockingjay dress, wings of black and white feathers visible, against the backdrop of a tropical clock-shaped arena. Clear line style.",
+    "active_id": "",
+    "alternatives": [],
+    "reference_ids": [
+      "anchor_style_editorial_v1.png",
+      "anchor_style_palette_v1.png",
+      "anchor_cover_main.png",
+      "anchor_char_katniss.png",
+      "anchor_char_prim.png",
+      "anchor_char_finnick.png",
+      "anchor_env_forest.png",
+      "anchor_env_clock.png",
+      "anchor_prop_pin.png"
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "En el Centro de Entrenamiento, el ambiente es gélido. Los tributos de este año no son niños asustados, sino guerreros veteranos que ya han ganado una vez. Finnick Odair, el apuesto campeón del Distrito 4, se me acerca con una sonrisa seductora y me ofrece un terrón de azúcar. Johanna Mason se quita su traje de árbol con total descaro, desafiando a todos. Me doy cuenta de que estos Juegos no se parecen en nada a los primeros; aquí todos somos expertos en el arte de matar y nadie confía en nadie.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Finnick Odair, with wavy blonde hair, smiling seductively while offering a sugar cube to Katniss in the training gym. Clear line style.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_prim.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "text": "Llega mi sesión privada con los Vigilantes. Están aburridos, comiendo mientras nos observan. De repente, decido enviarles un mensaje que no olvidarán. Cojo un muñeco de entrenamiento, le ato una soga al cuello y lo cuelgo frente a ellos. Con zumo de bayas rojo sangre, escribo un nombre en su pecho: SENECA CRANE, el Vigilante Jefe que ejecutaron el año pasado. El silencio en la sala es absoluto. Al fin he captado su atención, pero sé que mi vida corre ahora más peligro que nunca bajo la mirada de Snow.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss hanging a training dummy by the neck in front of shocked gamemakers. The name SENECA CRANE is written in red on the dummy's chest.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_snow.png",
+            "anchor_char_johanna.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "text": "La noche de las entrevistas, el Presidente Snow me obliga a usar el vestido de novia que el público eligió. Es una prenda pesada y hermosa, cubierta de perlas. Cinna me pide que dé una vuelta completa sobre el escenario. Al hacerlo, el vestido empieza a arder con llamas blancas y se transforma en un traje de plumas negras y blancas. Soy un sinsajo ante todo Panem. El público grita de emoción y asombro, mientras Cinna me observa con orgullo desde las sombras, sabiendo que hemos desafiado al Capitolio una vez más.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss spinning on a stage, her white wedding dress transforming into black Mockingjay feathers. Bright stage lights and flat colors.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "text": "Peeta sube al escenario y termina de incendiar al público con una mentira magistral. Confiesa que nos casamos en secreto y que estoy esperando un bebé. El Capitolio estalla en gritos de indignación; la gente adora a sus campeones y no quiere ver morir a una madre. Es nuestra última oportunidad para intentar frenar los Juegos, pero el Presidente Snow no se deja conmover. A pesar del caos en la audiencia, el reloj sigue avanzando. Mañana volveremos a la arena y esta vez no hay esperanza de indulto para nadie.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Peeta Mellark looking somber on the interview stage, talking into a microphone while the crowd in the background covers their mouths in shock.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_peeta.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "text": "El lanzamiento me deja sin aliento. Cuando la placa de metal se detiene, me encuentro rodeada de agua azul en lugar de bosque. La arena es un gran lago circular con franjas de tierra que salen del centro como los radios de una rueda. Escapo de mi plataforma y nado hacia la Cornucopia de oro, donde ya se libra una batalla sangrienta. Finnick Odair aparece a mi lado, tridente en mano, y me sorprende con una propuesta inesperada de alianza. Juntos, logramos alcanzar las armas antes que los profesionales de los distritos uno y dos.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss standing on a metal pedestal surrounded by blue water. In the distance, a large golden horn-shaped structure is visible.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_pin.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "text": "Nos reunimos con Mags, la anciana mentora de Finnick, y rescatamos a Peeta de su plataforma. El calor de la jungla es asfixiante y el aire pesa como plomo. Finnick demuestra ser un aliado valioso, cargando con Mags a la espalda mientras nos internamos en la espesura verde. Buscamos agua potable desesperadamente, pero solo encontramos agua salada. Finalmente, Peeta encuentra un árbol que gotea un líquido dulce y logramos saciar nuestra sed. Sin embargo, la calma dura poco; la arena esconde horrores que apenas empezamos a imaginar en este laberinto tropical.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Finnick carrying an elderly woman (Mags) on his back as they walk through a dense, stylized green jungle with Katniss and Peeta.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "text": "Al caer la noche, una niebla espesa y gris empieza a descender desde los árboles. En cuanto toca mi piel, me doy cuenta de que es ácida; ampollas dolorosas cubren mis manos y piernas al instante. Corremos desesperados, pero la niebla es más rápida. Peeta está herido y apenas puede caminar. Mags, comprendiendo que es una carga para nosotros, le da un último beso a Finnick y se lanza directamente hacia la niebla mortal para salvarnos. El dolor de perder a nuestra amiga es inmenso, pero debemos seguir huyendo hacia el agua.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Peeta running away from a wall of thick gray fog. Mags is seen walking into the fog with a peaceful expression.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "text": "Cerca de la playa nos encontramos con Johanna Mason, que trae consigo a Beetee y Wiress, los genios del Distrito 3. Wiress está en estado de shock y no deja de repetir las mismas palabras: «Tic, tac, tic, tac». Johanna está furiosa y cubierta de sangre, pero ha logrado mantenerlos con vida. Observo la posición del sol y los ataques que hemos sufrido: el rayo, la lluvia de sangre, la niebla... De repente, todo encaja en mi cabeza. Miro a Wiress y luego a la Cornucopia. «Tic, tac», susurro. Esta arena es un reloj.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss, Johanna, Beetee, and Wiress gathered on a sandy beach. Wiress is pointing toward the jungle with a dazed look.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_env_seam.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "text": "Wiress sigue limpiando su bobina en la orilla, ajena al peligro. De repente, Gloss surge del agua y le corta el cuello en un instante. Mi flecha vuela más rápida que mi pensamiento y se clava en el corazón de Gloss antes de que pueda huir. Johanna aparece por el otro lado y abate a Cashmere con su hacha. Wiress ha muerto, pero su descubrimiento sobre el reloj nos ha dado la llave para vencer. El grupo de los profesionales se reduce mientras la arena se vuelve más letal.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss shooting Gloss at the beach of the Cornucopia. In the background, Johanna is striking down Cashmere. Wiress lies on the sand. Clear line art.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_johanna.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text": "De pronto, la Cornucopia de oro empieza a girar a una velocidad vertiginosa. El suelo vibra y el agua salada nos golpea con fuerza mientras intentamos agarrarnos a las rocas. Los Vigilantes están usando la rotación para desorientarnos y hacernos perder el sentido de la posición. Cuando la máquina finalmente se detiene, estamos mareados y empapados, pero la estructura de reloj de la arena es ahora innegable. Ya no tenemos dudas: cada sección es una trampa mortal y el tiempo corre en nuestra contra.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "The large golden Cornucopia spinning rapidly in the blue water. Katniss and her allies are clinging to the edges while water splashes everywhere.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text": "Beetee nos explica su audaz plan para acabar con los profesionales restantes. Tiene una bobina de alambre fino y dorado fabricado en el Distrito 3. Su idea es llevar el cable desde el gran árbol del rayo en la colina hasta la playa húmeda. Cuando el rayo caiga a medianoche, toda la orilla se electrificará, eliminando a cualquiera que esté cerca del agua. Es una trampa técnica y peligrosa, pero es nuestra única oportunidad de ganar. Nos preparamos para la misión final bajo el sol abrasador.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Beetee, wearing glasses, showing a spool of thin gold wire to Katniss and Peeta in the stylized green jungle. Flat colors and clean outlines.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "text": "Dividimos el grupo para ejecutar el plan. Johanna y yo cogemos la pesada bobina de alambre y empezamos a desenrollarla colina abajo, atravesando la densa jungla hacia la playa de las doce. Peeta se queda con Beetee en el árbol del rayo para protegerlo mientras termina de preparar la conexión eléctrica. Odio separarme de Peeta en este lugar tan peligroso, pero debemos movernos con rapidez. El aire es denso y húmedo, y el sonido de los insectos parece un cronómetro que nos persigue.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Johanna unspooling a thin golden wire through the thick, puffy green trees of the jungle. They look alert and determined.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "text": "En medio de la oscuridad de la selva, un cable nos hace tropezar. De repente, Johanna me golpea con fuerza en la cabeza con el mango de su hacha. Caigo al suelo, cegada por la sangre que brota de mi frente. Mientras me inmoviliza, clava su cuchillo en mi antebrazo. Estoy convencida de que me ha traicionado y va a matarme, pero entonces susurra que me quede quieta. Johanna no me está hiriendo; me está arrancando el rastreador del Capitolio para que no puedan encontrarme.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Johanna standing over a fallen Katniss in the dark jungle. Katniss has blood on her face. Johanna is using a knife on Katniss's arm.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_effie.png",
+            "anchor_char_johanna.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "text": "Despierto sola y confundida, con la cabeza latiendo de dolor. Me arrastro de vuelta hacia la colina del árbol del rayo, temiendo lo peor. Al llegar, encuentro a Beetee inconsciente en el suelo, sujetando un cuchillo envuelto en alambre. Peeta no está por ninguna parte y las voces de Enobaria y Brutus resuenan en la espesura. Me doy cuenta de que soy la única que queda para terminar el trabajo. El cielo empieza a rugir y el primer rayo de medianoche está a punto de caer.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss, wounded and pale, finding Beetee lying near the base of a massive, stylized charred tree. The sky above is turning a dark violet.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_rue.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "text": "Miro el alambre dorado y luego el cielo. Observo el punto exacto donde el campo de fuerza flaquea: Beetee no quería electrificar la playa, ¡quería destruir la arena entera! Envuelvo el cable de Beetee alrededor de mi última flecha y apunto hacia el punto débil de la cúpula. Espero al sonido del trueno, sabiendo que este disparo cambiará el mundo para siempre. «Por Peeta», susurro. Suelto la cuerda del arco justo cuando el rayo impacta contra la cima del árbol, canalizando toda la energía.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss aiming her bow upward, a golden wire attached to her arrow. A brilliant flash of lightning hits the tree behind her.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_beetee.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "text": "Una explosión de luz blanca me consume por completo. El techo de la arena se hace añicos como si fuera de cristal y el cielo real aparece tras la farsa del Capitolio. Mientras caigo hacia el abismo, un aerodeslizador plateado surge de la nada y una garra mecánica me sujeta por la cintura. He destruido los Juegos del Hambre. La última imagen que veo es el bosque tropical desvaneciéndose bajo un mar de chispas. La rebelión ha comenzado de verdad y el Sinsajo ha echado a volar.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "A massive white explosion in the arena dome. A silver hovercraft reaches down with a claw to lift a falling Katniss toward the real sky.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_johanna.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    }
+  ]
+}

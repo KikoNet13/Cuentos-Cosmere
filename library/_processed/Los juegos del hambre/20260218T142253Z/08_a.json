@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "08",
+    "title": "El Sinsajo del Distrito 13",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T12:00:00Z",
+    "updated_at": "2026-02-18T12:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen wearing her black Mockingjay suit, standing defiantly against a background of smoke and the blue emblem of District 13.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 1,
+            "text": "Me encuentro sobre las cenizas de mi hogar. El Distrito 12 ya no existe; solo quedan escombros grises donde antes estaba mi cama y la mesa de la cocina. Gale me observa desde un aerodeslizador, listo para rescatarme si algo va mal. Las bombas del Capitolio lo han borrado todo, dejando tras de sí un silencio absoluto y una capa de polvo que cubre mis zapatos.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss standing alone in a vast gray landscape of ash and ruins. Charcoal gray palette with simple black outlines. Edge-to-edge illustration.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 2,
+            "text": "Entro en nuestra casa de la Aldea de los Vencedores y el frío me hiela la sangre. En mi cómoda, encuentro una rosa blanca perfecta, fresca y de olor penetrante. Es un mensaje directo del Presidente Snow: «Puedo encontrarte». Sé que no es una simple flor, sino una promesa de venganza que me recuerda que, aunque el distrito haya caído, él sigue acechándome.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A close-up of a single, perfectly rendered white rose sitting on a dark wooden dresser. A shadow of Katniss is cast on the wall. Full-bleed view.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 3,
+            "text": "Regresamos al Distrito 13, una inmensa fortaleza oculta bajo tierra. Allí conozco a la presidenta Alma Coin, una mujer de ojos grises y pelo tan perfecto que parece una sábana. Los rebeldes quieren que sea su símbolo, el Sinsajo, para unir a los distritos en la guerra final. Pero yo me siento como una pieza rota en un tablero que no comprendo.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "President Coin with her straight gray hair and pale eyes, looking sternly at Katniss in a concrete command room. Clean line art style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 4,
+            "text": "La vida en el 13 es gris y asfixiante. Cada ciudadano lleva su horario tatuado en el brazo; todo está medido, desde el tiempo de ejercicio hasta las calorías del puré de nabos que comemos en el comedor. Es un mundo de uniformes idénticos y leyes estrictas. Me pregunto si hemos cambiado una prisión por otra, atrapados en pasillos de cemento sin luz solar.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A line of people in identical gray uniforms holding trays in a stark, white-tiled cafeteria. High-angle 2D view.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 5,
+            "text": "Me paso las noches en vela, pensando en Peeta capturado por el Capitolio. Coin lo cree un traidor, pero yo sé que solo es una víctima más. De repente, tomo una decisión: aceptaré ser el Sinsajo si eso me permite salvarlo. «Voy a ser vuestro Sinsajo», les digo a los líderes rebeldes. Es mi única oportunidad para rescatar al chico que me salvó la vida.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss sitting on a simple metal bed in a dark room, looking determined. A small Mockingjay pin glows faintly on her jacket. Full-bleed composition.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 6,
+            "text": "Me enfrento a la presidenta Coin con una lista de exigencias. Exijo inmunidad para Peeta y los demás vencedores, y que se anuncie en público para que no puedan romper su palabra. También pido cazar en el bosque con Gale. Coin duda, evaluando mi valor, pero finalmente acepta mis términos. El trato está sellado: seré la cara de la revolución a cambio de sus vidas.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss standing tall and pointing at a list on a table, facing President Coin and Plutarch Heavensbee. Dynamic flat view.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 7,
+            "text": "Plutarch me entrega un cuaderno encuadernado en cuero. Al abrirlo, el corazón me da un vuelco: son bocetos de Cinna. Él diseñó mi uniforme de Sinsajo antes de que lo detuvieran. Un uniforme negro, fuerte y hermoso, con armas ocultas y un refuerzo sobre mi corazón. En la última página, escribió: «Todavía apuesto por ti». Vuelvo a ser el Sinsajo gracias a mi amigo.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss holding an open sketchbook showing a professional drawing of a black tactical suit. Warm, flat colors. Edge-to-edge illustration.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 8,
+            "text": "Bajamos a las plantas más profundas del 13 en busca de mi equipo de preparación. Al abrir la puerta del compartimento 3908, el horror me paraliza. Allí están Venia, Flavius y Octavia, medio desnudos y encadenados a la pared. Tienen moratones y tiemblan de miedo. Comprendo que la crueldad no es solo propiedad del Capitolio; en el Distrito 13, el castigo es igual de oscuro.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A dark, clinical room with a red door. Three figures with colorful hair and tattoos are huddled against a concrete wall. Somber mood.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

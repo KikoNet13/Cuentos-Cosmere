@@ -1,0 +1,494 @@
+{
+  "story_id": "01",
+  "title": "Hansel y Gretel",
+  "status": "definitive",
+  "book_rel_path": "hansel_y_gretel",
+  "created_at": "2026-02-17T10:00:00+00:00",
+  "updated_at": "2026-02-18T09:56:08.107567+00:00",
+  "cover": {
+    "status": "approved",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada del cuento Hansel y Gretel en estilo de cuento infantil clasico, centrada en la amenaza de la bruja y la tension de los dos hermanos.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano frontal con la bruja ocupando el primer plano, Hansel y Gretel en segundo plano y el raton complice visible detras. Composicion triangular clara y lectura inmediata del conflicto.\n\nPERSONAJES Y ACCION\nBruja de nariz extremadamente larga con escoba, expresion desafiante; Hansel y Gretel con gesto de susto pero diseno amable; raton vestido y con aire burlon.\n\nENTORNO, PALETA E ILUMINACION\nInterior simplificado de la casa de dulces, paleta pastel (azules, verdes suaves, melocoton y rosados) con contraste suficiente para portada.\n\nDETALLES OBLIGATORIOS\nMantener contornos negros limpios, proporciones caricaturescas coherentes, sin elementos tipograficos ni logotipos incrustados en la ilustracion.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_portada_composicion_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_bruja_model_sheet_v1.png, anchor_raton_model_sheet_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+    "reference_ids": [
+      "anchor_style_linea_editorial_v1.png",
+      "anchor_style_paleta_pastel_v1.png",
+      "anchor_portada_composicion_v1.png",
+      "anchor_hansel_model_sheet_v1.png",
+      "anchor_gretel_model_sheet_v1.png",
+      "anchor_bruja_model_sheet_v1.png",
+      "anchor_raton_model_sheet_v1.png"
+    ],
+    "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000001_cover-hansel-gretel-frontcover.jpg",
+    "alternatives": [
+      {
+        "id": "3f7c21f1-7db5-4f0a-9d3f-000000000001_cover-hansel-gretel-frontcover.jpg",
+        "slug": "cover-hansel-gretel-frontcover",
+        "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000001_cover-hansel-gretel-frontcover.jpg",
+        "mime_type": "image/jpeg",
+        "status": "approved",
+        "created_at": "2026-02-18T09:46:03.096995+00:00",
+        "notes": "Activo para ejemplo Hansel/Gretel alineado (portada)."
+      }
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "En tiempos de Maricastaña, vivían unos labriegos con sus dos hijos: el niño se llamaba Hansel y la niña, Gretel. Los labriegos eran muy pobres y, aunque trabajaban de sol a sol, casi no tenían para comer.\n\nUna noche, creyendo que sus hijos dormían, los labriegos se abrazaron llorando.\n\n-Solo nos queda comida para un día más... —se lamentaron—. No comeremos nosotros, así la ración de nuestros hijos será mayor...",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el momento inicial de pobreza familiar dentro de la casa, transmitiendo ternura y preocupacion sin dramatismo extremo.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano medio interior, mesa en primer termino y pared de piedra al fondo. El encuadre debe concentrarse en los padres abrazados en el centro para enfatizar su angustia.\n\nPERSONAJES Y ACCION\nPadre y madre abrazados junto a la mesa; presencia sutil de Hansel y Gretel sugerida en el ambiente domestico, sin quitar protagonismo a los adultos.\n\nENTORNO, PALETA E ILUMINACION\nCabana humilde de tonos beige, verde apagado y azul suave. Iluminacion calida tenue de interior nocturno.\n\nDETALLES OBLIGATORIOS\nVentana rustica con herrajes, botella sobre la mesa, silla de madera, raton y gato discretos en bordes para reforzar el lenguaje visual del cuento.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_hogar_pobre_interior_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_hogar_pobre_interior_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000004_page-01-poor-home.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000004_page-01-poor-home.jpg",
+              "slug": "page-01-poor-home",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000004_page-01-poor-home.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 1)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "text": "Pero Hansel y Gretel aún no se habían dormido y escucharon todo.\n\n-¡Pobres papás! Tenemos que hacer algo —dijo Gretel. -Sí, pero no sé qué —le contestó Hansel—. Ahora duerme. Ya pensaré algo...\n\nAl amanecer, cuando el sol ya comenzaba a despuntar, Hansel sacudió a Gretel suavemente y le dijo en voz baja:\n\n-Vístete y vamos...\n\n-¿Dónde? —preguntó Gretel. -Al bosque —le contestó Hansel—, a buscar comida...",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el instante en que Hansel despierta a Gretel y senala el inicio del plan para salir al bosque.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano medio amplio interior, cama infantil a la izquierda y figura del padre al fondo senalando hacia afuera. Punto de vista ligeramente elevado.\n\nPERSONAJES Y ACCION\nGretel incorporada en la cama, Hansel en posicion activa guiando, figura adulta al fondo en gesto de indicar salida.\n\nENTORNO, PALETA E ILUMINACION\nHabitacion rustica con pared de piedra y vigas visibles. Colores pastel frios para madrugada.\n\nDETALLES OBLIGATORIOS\nCalzado y ropa en el suelo, animales domesticos pequenos en segundo plano, lectura limpia del gesto del brazo senalando direccion.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_hogar_pobre_interior_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_hogar_pobre_interior_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000005_page-02-night-conversation.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000005_page-02-night-conversation.jpg",
+              "slug": "page-02-night-conversation",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000005_page-02-night-conversation.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 2)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "text": "Apenas avanzaron entre los árboles y los matorrales, Gretel le dijo a Hansel:\n\n-Tengo miedo... Ni tú ni yo conocemos el bosque. Cuando queramos regresar a casa, no sabremos qué camino tomar... -No te preocupes —le contestó su hermano—. Fíjate, lo tengo todo previsto...\n\nGretel observó cómo cada dos o tres pasos Hansel desmigajaba un pan seco y tiraba las migajas al suelo.\n\n-Así queda marcado nuestro camino de regreso...",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar a los hermanos entrando en el bosque mientras Hansel deja migas para marcar el regreso.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nVista en picado suave del bosque para mostrar trayecto diagonal de migas. Personajes pequenos en esquina superior derecha para sensacion de recorrido.\n\nPERSONAJES Y ACCION\nHansel delante soltando migas; Gretel siguiendolo con gesto de duda.\n\nENTORNO, PALETA E ILUMINACION\nBosque verde claro con arbustos redondeados y arboles simples repetidos. Luz diurna homogenea.\n\nDETALLES OBLIGATORIOS\nMigajas claramente visibles formando camino, manchas de color organico en el suelo para dinamismo, fondo sin sobrecargar.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_bosque_paleta_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_bosque_paleta_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000006_page-03-breadcrumb-trail.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000006_page-03-breadcrumb-trail.jpg",
+              "slug": "page-03-breadcrumb-trail",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000006_page-03-breadcrumb-trail.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 3)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "text": "Cuando comenzó a oscurecer, los hermanos no habían encontrado nada de comida. De todos modos, Hansel le dijo a Gretel:\n\n-Volvamos...\n\nPero no encontraron ninguna señal. Hansel y Gretel no se habían dado cuenta de que, a medida que tiraban las migajas, los pajarillos del bosque se las iban comiendo.",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el momento de extravio: las migas han desaparecido y los ninos se sienten desorientados.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de ambos personajes en primer plano, arboles verticales detras para encerrar la escena.\n\nPERSONAJES Y ACCION\nHansel y Gretel con expresion de preocupacion, manos en la cabeza o gesto de busqueda.\n\nENTORNO, PALETA E ILUMINACION\nBosque mas cerrado, paleta verde y marron suave, ambiente de atardecer sin dramatismo oscuro.\n\nDETALLES OBLIGATORIOS\nPajarillos comiendo migas en zona lateral para explicar visualmente la causa de la perdida del rastro.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_bosque_paleta_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_bosque_paleta_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000007_page-04-lost-in-forest.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000007_page-04-lost-in-forest.jpg",
+              "slug": "page-04-lost-in-forest",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000007_page-04-lost-in-forest.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 4)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "text": "-¿Qué haremos ahora? —preguntó la niña—. Mamá y papá estarán preocupados...\n\nHansel vio una cueva, cavada por unas ardillas, y se dirigió con su hermana hacia allí.\n\n-En esta cueva nos protegeremos del frío y de la humedad —dijo Hansel—. Mañana temprano, con la luz del día, encontraremos el camino y volveremos con papá y mamá.\n\n-Bienvenidos —les dijo una ardilla muy amable en la puerta de la cueva—. Poneos cómodos, estáis en vuestra casa.\n\nE invitó a los niños a comer unas nueces y unos piñones riquísimos.",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar refugio y alivio en la cueva de la ardilla, con una atmosfera acogedora.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano medio interior de cueva, cofre abierto en primer plano y personajes agrupados detras.\n\nPERSONAJES Y ACCION\nHansel y Gretel sonrientes junto a una ardilla anfitriona; presencia amable de la garza sugerida al fondo.\n\nENTORNO, PALETA E ILUMINACION\nCueva calida con pared rocosa estilizada. Colores beige, marron claro y verdes suaves.\n\nDETALLES OBLIGATORIOS\nNueces y pinones visibles, actitud amistosa de la ardilla, composicion equilibrada y lectura clara de hospitalidad.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_cueva_ardilla_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_cueva_ardilla_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000008_page-05-squirrel-cave.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000008_page-05-squirrel-cave.jpg",
+              "slug": "page-05-squirrel-cave",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000008_page-05-squirrel-cave.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 5)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "text": "Al día siguiente, cargados de piñones y nueces para sus padres, Hansel y Gretel emprendieron el regreso a casa. Pero...\n\n-¿Por dónde? —preguntó Gretel.\n\n-Ya encontraremos el camino —le respondió Hansel, aunque él tampoco sabía por dónde.\n\nCansados de dar vueltas y vueltas, encontraron un ratón muy feo, que se ofreció a guiarlos. Aunque tenía voz de falso y uñas largas y sucias y unos largos bigotes, los hermanos no tuvieron más remedio que seguirlo.\n\n-Por aquí... Por aquí —les decía el ratón, riéndose para sus adentros.",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar la aparicion del raton guia enganoso durante el regreso incierto.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano medio en sendero forestal, raton en primer termino lateral y hermanos detras avanzando.\n\nPERSONAJES Y ACCION\nRaton con gesto astuto, Hansel y Gretel cargando frutos y siguiendolo con cautela.\n\nENTORNO, PALETA E ILUMINACION\nBosque abierto con troncos simples y paleta verde luminosa.\n\nDETALLES OBLIGATORIOS\nNueces en brazos de los ninos, bigotes marcados del raton, direccion de marcha clara de izquierda a derecha.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_raton_model_sheet_v1.png, anchor_bosque_paleta_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_raton_model_sheet_v1.png",
+            "anchor_bosque_paleta_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000009_page-06-rat-guide.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000009_page-06-rat-guide.jpg",
+              "slug": "page-06-rat-guide",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000009_page-06-rat-guide.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 6)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "text": "Así llegaron los hermanos a un claro del bosque.\n\n-Adelante... —les insistió el ratón—, adelante...\n\nFrente a ellos había una casa como nunca habían visto. Las puertas eran de chocolate; las paredes, de turrón; la chimenea, de pan dulce; el techo, de hojaldre; las ventanas, de caramelo...\n\n-¿Quién vive en esta casa maravillosa?\n\n-El hada del bosque —contestó el ratón—. Ella os invitará a todo lo que os apetezca.",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nPresentar la casa de dulces como revelacion visual maravillosa y extrana.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nGran plano general de la casa ocupando la mayor parte del encuadre, con personajes pequenos en bordes para escala.\n\nPERSONAJES Y ACCION\nRaton senalando con entusiasmo; presencia parcial de Gretel y Hansel observando.\n\nENTORNO, PALETA E ILUMINACION\nClaro del bosque con casa de dulces en colores pastel: chocolate, caramelo y turron.\n\nDETALLES OBLIGATORIOS\nTejado de hojaldre, ventanas tipo galleta, patrones de caramelos de fondo, lectura fantasiosa pero ordenada.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_raton_model_sheet_v1.png, anchor_casa_dulces_exterior_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_raton_model_sheet_v1.png",
+            "anchor_casa_dulces_exterior_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000010_page-07-candy-house.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000010_page-07-candy-house.jpg",
+              "slug": "page-07-candy-house",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000010_page-07-candy-house.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 7)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "text": "Pero, apenas entraron, oyeron cómo a sus espaldas el ratón cerraba de un golpe la puerta y le echaba doble llave.\n\nDe pronto, apareció una mujer horrible, la más fea que uno pueda imaginar. El mango de la escoba que movía no era más largo que su narizota.\n\n-¿Tú eres el hada del bosque? —preguntaron los niños.\n\n-Pobres inocentes —se burló la mujer—. ¡Yo soy la bruja del bosque!",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el giro de amenaza: aparicion de la bruja tras cerrar la puerta.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano medio interior, bruja dominante en primer plano, raton al fondo complice y ninos arrinconados.\n\nPERSONAJES Y ACCION\nBruja de nariz larga y gesto agresivo con escoba; Hansel y Gretel asustados; raton con actitud burlona.\n\nENTORNO, PALETA E ILUMINACION\nInterior de la casa de dulces convertido en espacio inquietante pero aun infantil.\n\nDETALLES OBLIGATORIOS\nLlave o cierre insinuado, escoba visible, contraste de escala para que la bruja se perciba amenazante sin violencia explicita.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_bruja_model_sheet_v1.png, anchor_raton_model_sheet_v1.png, anchor_cocina_bruja_interior_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_bruja_model_sheet_v1.png",
+            "anchor_raton_model_sheet_v1.png",
+            "anchor_cocina_bruja_interior_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000011_page-08-witch-reveal.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000011_page-08-witch-reveal.jpg",
+              "slug": "page-08-witch-reveal",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000011_page-08-witch-reveal.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 8)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "text": "-¡Mi manjar preferido son los niños! —dijo la bruja, y lanzó una desagradable risotada.\n\nY la bruja, con ojos golosos, observó a los dos hermanos y agregó:\n\n-Tú estás a punto —le dijo a Gretel—. En cambio, tú estás aún muy delgado. Mientras Hansel engorda, tú, Gretel, te encargarás de las tareas más duras de la casa.\n\nEncerró a Hansel en una jaula y le dio a Gretel un cubo y un trapo.\n\n-Empieza por fregar el suelo...",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Hansel encerrado y a Gretel obligada a trabajar para la bruja.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano medio con jaula ocupando parte derecha y Gretel en zona inferior en actitud sumisa.\n\nPERSONAJES Y ACCION\nHansel dentro de jaula, Gretel cerca con cubo o trapo, bruja vigilando con satisfaccion.\n\nENTORNO, PALETA E ILUMINACION\nInterior domestico de la bruja, paleta de amarillos apagados y rosas suaves.\n\nDETALLES OBLIGATORIOS\nBarrotes curvos reconocibles, cubo y fregona visibles, sensacion de cautiverio sin crudeza.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_bruja_model_sheet_v1.png, anchor_cocina_bruja_interior_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_bruja_model_sheet_v1.png",
+            "anchor_cocina_bruja_interior_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000012_page-09-hansel-caged.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000012_page-09-hansel-caged.jpg",
+              "slug": "page-09-hansel-caged",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000012_page-09-hansel-caged.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 9)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text": "Todos los días, la bruja se acercaba a la jaula donde estaba encerrado Hansel y comprobaba si había engordado.\n\n-Enséñame tu dedito —le decía.\n\nHansel sacaba entre los barrotes un delgadito hueso de gallina que había encontrado en el fondo de la jaula. Así, engañándola, conseguía que pasasen los días.\n\nHasta que una mañana, cansada de esperar, la bruja exclamó:\n\n-No importa, pequeño... Te comeré igual...",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el truco del hueso con el que Hansel engana a la bruja para ganar tiempo.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPrimer plano narrativo de la bruja acercandose a la jaula y el hueso asomando entre barrotes.\n\nPERSONAJES Y ACCION\nBruja enfocada en el dedo falso (hueso), Hansel insinuado detras de barrotes.\n\nENTORNO, PALETA E ILUMINACION\nInterior simplificado para centrar atencion en gesto y engano.\n\nDETALLES OBLIGATORIOS\nNariz larga de la bruja, hueso claramente legible, tension contenida en expresiones faciales.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_bruja_model_sheet_v1.png, anchor_cocina_bruja_interior_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_bruja_model_sheet_v1.png",
+            "anchor_cocina_bruja_interior_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000013_page-10-bone-trick.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000013_page-10-bone-trick.jpg",
+              "slug": "page-10-bone-trick",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000013_page-10-bone-trick.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 10)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text": "-¡Gretel! —chilló la bruja—. ¡Enciende el horno! La niña entendió que estaba en juego la vida de su hermano, y la de ella también.\n\n¡La bruja estaba a punto de darse un gran banquete!\n\nGretel se aproximó al horno, abrió la tapa y dijo:\n\n-No sé cómo se enciende, señora...\n\n-¡Ignorante! —volvió a chillar la bruja—. Déjame a mí. Te enseñaré cómo se hace...\n\nLa bruja encendió una antorcha y se acercó al horno.",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar la orden de encender el horno y el inicio del contraataque de Gretel.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano medio con horno abierto a la derecha y bruja mandando en postura dominante.\n\nPERSONAJES Y ACCION\nBruja con antorcha, Gretel cerca de la puerta del horno en actitud aparentemente obediente.\n\nENTORNO, PALETA E ILUMINACION\nCocina de la bruja con tonos calidos y elementos simplificados.\n\nDETALLES OBLIGATORIOS\nAntorcha visible, puerta del horno abierta, llamas estilizadas controladas en el fondo.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_gretel_model_sheet_v1.png, anchor_bruja_model_sheet_v1.png, anchor_cocina_bruja_interior_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_bruja_model_sheet_v1.png",
+            "anchor_cocina_bruja_interior_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000014_page-11-oven-order.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000014_page-11-oven-order.jpg",
+              "slug": "page-11-oven-order",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000014_page-11-oven-order.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 11)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "text": "-¡Niña! —exclamó la bruja—. Toma la antorcha y entra en el horno.\n\n-No sé cómo se entra... —dijo Gretel.\n\nLa bruja, fuera de sí, se asomó al interior del horno, al tiempo que gritaba:\n\n-¡Así! Introduce primero la antorcha y, luego, tu cabeza y, después, los hombros y...\n\nLa bruja del bosque no pudo terminar su frase. Gretel le dio un empujón, la hizo caer dentro del horno y cerró de un golpe la tapa.",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el instante clave en que Gretel empuja a la bruja dentro del horno y cierra la puerta.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano dinamico con puerta del horno ocupando gran parte del encuadre y movimiento de Gretel hacia adelante.\n\nPERSONAJES Y ACCION\nGretel ejecutando el empujon; bruja cayendo dentro del horno en pose caricaturesca, sin violencia grafica.\n\nENTORNO, PALETA E ILUMINACION\nEscena de interior con remolinos de calor estilizados.\n\nDETALLES OBLIGATORIOS\nPuerta robusta del horno, lineas de movimiento claras, lectura inmediata de accion y resolucion.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_gretel_model_sheet_v1.png, anchor_bruja_model_sheet_v1.png, anchor_cocina_bruja_interior_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_bruja_model_sheet_v1.png",
+            "anchor_cocina_bruja_interior_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000015_page-12-gretel-pushes-witch.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000015_page-12-gretel-pushes-witch.jpg",
+              "slug": "page-12-gretel-pushes-witch",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000015_page-12-gretel-pushes-witch.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 12)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "text": "Ni corta ni perezosa, Gretel se dirigió a la jaula y liberó a su hermano.\n\n-¡Rápido! —gritó Hansel—. ¡Huyamos!\n\nLos dos hermanos salieron pitando de la casita. Y cuando estaban a punto de internarse en el bosque, vieron cómo por la chimenea era expulsada por los aires la bruja del bosque, que a duras penas lograba montarse en su escoba y huir despavorida.\n\n-¡Me vengaré! —gritaba—. ¡Me vengaré!\n\nPero ya era un punto insignificante que se perdía en las alturas.",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar la huida de Hansel y Gretel mientras la bruja escapa por la chimenea jurando venganza.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano general exterior con casa de dulces al fondo y hermanos en primer termino saliendo hacia el bosque.\n\nPERSONAJES Y ACCION\nHansel y Gretel corriendo juntos; silueta de la bruja alejandose en escoba en zona alta.\n\nENTORNO, PALETA E ILUMINACION\nBorde del bosque con cielo claro y vegetacion redondeada.\n\nDETALLES OBLIGATORIOS\nChimenea visible, trayectoria ascendente de la bruja, sensacion de liberacion de los protagonistas.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_bruja_model_sheet_v1.png, anchor_casa_dulces_exterior_v1.png, anchor_bosque_paleta_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_bruja_model_sheet_v1.png",
+            "anchor_casa_dulces_exterior_v1.png",
+            "anchor_bosque_paleta_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000016_page-13-escape-from-house.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000016_page-13-escape-from-house.jpg",
+              "slug": "page-13-escape-from-house",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000016_page-13-escape-from-house.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 13)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "text": "-¿Y ahora cómo volveremos a casa? —preguntó Gretel a Hansel, que tampoco tenía la respuesta.\n\n-Yo os conduciré —se oyó de pronto una voz.\n\nEra el horrible ratón, que, de golpe, se había transformado en una hermosísima garza.\n\n-La bruja del bosque me había convertido en un horrible ratón —dijo la garza—. Ahora que me habéis salvado de sus malas artes y maleficios, os podré conducir hasta la casa de vuestros padres. Pero antes...\n\n-¿Antes qué? —preguntaron al unísono los niños.\n\n-¡Ah! —respondió la garza—. ¡Una sorpresa!",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar la transformacion del raton en garza y el anuncio de que los guiara de vuelta.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano medio en bosque: garza grande ocupando lateral derecho, ninos en plano inferior mirandola.\n\nPERSONAJES Y ACCION\nGarza elegante y amable; Hansel y Gretel atentos y sorprendidos.\n\nENTORNO, PALETA E ILUMINACION\nBosque luminoso con cielo celeste y nubes suaves.\n\nDETALLES OBLIGATORIOS\nPico largo muy reconocible, escala de la garza mayor que los ninos, tono de alivio narrativo.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_raton_model_sheet_v1.png, anchor_garza_model_sheet_v1.png, anchor_bosque_paleta_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_raton_model_sheet_v1.png",
+            "anchor_garza_model_sheet_v1.png",
+            "anchor_bosque_paleta_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000018_page-14-stork-guide.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000018_page-14-stork-guide.jpg",
+              "slug": "page-14-stork-guide",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000018_page-14-stork-guide.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 14)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "text": "La garza los condujo por un sendero muy especial. Iba volando de rama en rama y los hermanitos la seguían. En un recodo, se encontraron con una vieja amiga.\n\n-¡Bienvenidos! —les dijo la ardilla—. En esta cueva que ya conocéis os espera un regalo.\n\nAl entrar, Hansel y Gretel encontraron un cofre lleno de monedas de oro y piedras preciosas.\n\n-Con este tesoro —dijo la ardilla— tendréis comida para siempre.\n\nHansel y Gretel no tuvieron que andar mucho para llegar a la casa de sus padres, que saltaron de alegría al reencontrarse con sus hijos. Y cuando vieron el tesoro, exclamaron:\n\n-¡Ya no seremos pobres!",
+      "images": {
+        "main": {
+          "status": "approved",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el final feliz con el cofre del tesoro y reencuentro de aliados.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener exactamente el estilo editorial de cuento infantil clasico: linea negra limpia y ligeramente irregular, formas simples, anatomia caricaturesca amable, colores planos pastel con poco modelado y fondos con lectura clara. Hansel y Gretel deben conservar rasgos consistentes en rostro, proporciones, peinado y vestuario entre paginas. Respetar continuidad de escala entre personajes y entorno.\n\nCOMPOSICION Y ENCUADRE\nPlano medio interior de cueva, cofre en primer plano lleno de monedas y piedras preciosas.\n\nPERSONAJES Y ACCION\nHansel y Gretel sonrientes; ardilla amiga junto al cofre; garza acompanando detras.\n\nENTORNO, PALETA E ILUMINACION\nCueva calida y amable, con abertura que deja ver algo de bosque.\n\nDETALLES OBLIGATORIOS\nMonedas apiladas y gemas triangulares claramente visibles, expresion de alivio y prosperidad.\n\nREFERENCIAS (reference_ids)\nUsar estas referencias como guia de continuidad visual y narrativa: anchor_style_linea_editorial_v1.png, anchor_style_paleta_pastel_v1.png, anchor_hansel_model_sheet_v1.png, anchor_gretel_model_sheet_v1.png, anchor_garza_model_sheet_v1.png, anchor_cueva_ardilla_v1.png, anchor_tesoro_final_v1.png.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, letras, numeros, onomatopeyas, bocadillos ni cartelas dentro de la imagen. No usar fotorrealismo, texturas 3D, sombreado dramatico, desenfoque cinematografico, lens flare ni estetica moderna. Evitar composicion recargada que compita con la lectura del texto de pagina. No cambiar diseno de personajes entre escenas.\n\nFORMATO DE SALIDA\nIlustracion final 1:1 lista para maquetacion editorial infantil. Bordes limpios, elementos principales totalmente visibles, sin marcos decorativos anadidos y con espacio negativo equilibrado para convivir con pagina de texto opuesta.",
+          "reference_ids": [
+            "anchor_style_linea_editorial_v1.png",
+            "anchor_style_paleta_pastel_v1.png",
+            "anchor_hansel_model_sheet_v1.png",
+            "anchor_gretel_model_sheet_v1.png",
+            "anchor_garza_model_sheet_v1.png",
+            "anchor_cueva_ardilla_v1.png",
+            "anchor_tesoro_final_v1.png"
+          ],
+          "active_id": "3f7c21f1-7db5-4f0a-9d3f-000000000017_page-15-treasure-home.jpg",
+          "alternatives": [
+            {
+              "id": "3f7c21f1-7db5-4f0a-9d3f-000000000017_page-15-treasure-home.jpg",
+              "slug": "page-15-treasure-home",
+              "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000017_page-15-treasure-home.jpg",
+              "mime_type": "image/jpeg",
+              "status": "approved",
+              "created_at": "2026-02-18T09:46:03.096995+00:00",
+              "notes": "Activo para ejemplo Hansel/Gretel alineado (pagina 15)."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "text": "-En realidad, nunca lo han sido del todo —les dijo la garza—, porque siempre han tenido el amor de sus hijos.\n\nLa garza levantó vuelo y se perdió en el bosque.\n\nCada tanto, se oye un murmullo. Es ella que vuelve de visita. Lo mismo hace la ardilla.\n\nfin",
+      "images": {
+        "main": {
+          "status": "not_required",
+          "prompt": "OBJETIVO DE ILUSTRACION\nNo generar imagen para esta pagina final de cierre textual. Esta pagina se publica solo con texto narrativo de cierre (fin) y no requiere ilustracion nueva.",
+          "reference_ids": [],
+          "active_id": "",
+          "alternatives": []
+        }
+      }
+    }
+  ]
+}

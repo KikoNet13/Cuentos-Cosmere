@@ -1,0 +1,446 @@
+{
+  "story_id": "06",
+  "title": "El Vasallaje de los Veinticinco",
+  "status": "definitive",
+  "book_rel_path": "los_juegos_del_hambre",
+  "created_at": "2026-02-18T18:00:00Z",
+  "updated_at": "2026-02-18T14:22:53.584168+00:00",
+  "cover": {
+    "status": "draft",
+    "prompt": "Katniss Everdeen in her black Mockingjay-inspired suit, looking defiant. In the background, a large golden '75' is displayed against a red and black Capitol-themed sky.",
+    "active_id": "",
+    "alternatives": [],
+    "reference_ids": [
+      "anchor_style_editorial_v1.png",
+      "anchor_style_palette_v1.png",
+      "anchor_cover_main.png",
+      "anchor_char_katniss.png",
+      "anchor_char_prim.png",
+      "anchor_char_finnick.png",
+      "anchor_env_train.png",
+      "anchor_prop_pin.png"
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Al llegar a la plaza, un sonido rítmico y seco me hiela la sangre. Gale está atado a un poste de madera, de rodillas y con la espalda destrozada por un látigo. Un hombre alto y musculoso, Romulus Thread, descarga el golpe sin piedad. Es el nuevo jefe de los agentes de la paz y ha venido a imponer el terror. Corro desesperada, ignorando el peligro, mientras veo a mi mejor amigo desvanecerse ante la mirada aterrada de los vecinos del Distrito 12.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "A tall, muscular Peacekeeper in a white uniform raises a whip over a kneeling Gale. Katniss is seen running toward them in a gray, dusty square.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "text": "—¡No! —grito al lanzarme entre el látigo y Gale. El impacto en mi mejilla es cegador; un dolor ardiente me cruza la cara y caigo al suelo. Thread levanta el brazo para golpearme de nuevo, pero Haymitch interviene justo a tiempo. Le advierte que tengo una sesión de fotos la semana que viene para mi boda y que el Capitolio no estará contento si mi cara está arruinada. El agente vacila y, finalmente, enrolla su látigo con un gesto de desprecio.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss is on the ground, holding her bleeding cheek. Haymitch stands between her and Thread, gesturing with authority in the gray town square.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "text": "Llevamos a Gale a casa, donde mi madre y Prim preparan una mezcla de nieve y hierbas para calmar el fuego de su espalda. Madge aparece de repente, desafiando la nieve, con una caja de medicamentos que ha sacado del botiquín de su madre. Gale respira con dificultad, sumergido en un sueño lleno de dolor. Al verlo así, comprendo que el Presidente Snow ya no busca convencerme; ahora está destruyendo todo lo que amo para recordarme quién tiene el poder.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "In a dim room, Gale lies face down on a table while Katniss's mother applies medicine. Madge stands by a wooden door, covered in snow.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_snow.png",
+            "anchor_char_coin.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "text": "Semanas después, necesito aire y escapo al bosque. Cerca de la casita de cemento junto al lago, oigo un chasquido. Me vuelvo con el arco tenso y encuentro a dos mujeres con uniformes de agentes de la paz que les quedan demasiado grandes. Se llaman Twill y Bonnie, y han huido del Distrito 8 tras un levantamiento sangriento. No son soldados, sino rebeldes desesperadas que buscan refugio en la naturaleza. Me bajan el arma ofreciéndome algo pequeño y blanco: una galleta.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss aims her bow at two women in oversized white uniforms in the woods. One woman is holding out a small, flat white cracker.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "text": "La galleta tiene la imagen grabada de mi sinsajo. Twill me explica que el pájaro es un símbolo de que están de mi parte. Me cuentan algo increíble: creen que el Distrito 13 no fue destruido del todo y que sus habitantes viven en una ciudad secreta bajo tierra. Me hablan de las noticias del Capitolio, que siempre usan las mismas imágenes antiguas del 13 para engañarnos. Por primera vez, siento que la rebelión no es solo una chispa, sino un incendio real.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Close-up of a hand holding a cracker with a bird symbol. In the background, the blurred faces of Twill and Bonnie look hopeful.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_beetee.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "text": "Al volver al distrito, descubro que Thread ha electrificado la alambrada. Me veo obligada a trepar a un árbol altísimo y saltar al otro lado, hiriéndome el talón en la caída. Llego a casa cojeando, solo para encontrar a los agentes esperándome. Mi madre inventa una excusa sobre mi herida mientras me escondo bajo las mantas. El muro que el Capitolio ha levantado a mi alrededor es cada vez más alto, y la sensación de ser una prisionera me ahoga.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss jumping from a thick tree branch toward the snowy ground. In the background, the metallic fence glows with a faint electric blue light.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "text": "Cinna y su equipo llegan para mi sesión de fotos nupciales. Me ponen vestidos de seda pesada y perlas, transformándome en una novia perfecta para las cámaras. Es una farsa cruel: mientras el Distrito 12 se muere de hambre bajo las leyes de Thread, yo debo posar sonriente. El Presidente Snow ha aprobado cada detalle en persona. Cada flash de la cámara se siente como un latigazo. El Capitolio quiere que Panem me vea como su marioneta, una distracción dorada en medio del caos.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss standing in a white wedding dress with long sleeves and pearls. Effie, in a silver wig, and Cinna stand in the background under studio lights.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_d13.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "text": "Esa noche, la televisión emite un programa obligatorio. El Presidente Snow lee una tarjeta antigua para anunciar el tercer Vasallaje de los Veinticinco. Su voz resuena fría: «Como recordatorio de que nadie es más fuerte que el Capitolio, los tributos de este año saldrán del grupo de los vencedores». Se me cae el alma a los pies al comprender la trampa. Solo hay dos vencedores vivos en el Distrito 12: Peeta y yo. Debemos volver a la arena. Los Juegos nunca terminan.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "A close-up of a television screen showing President Snow holding a yellowed envelope. Katniss and Prim look on with frozen, terrified expressions.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "text": "Mi cuerpo reacciona antes que mi cerebro. Salgo corriendo por la puerta, cruzo el césped de la Aldea de los Vencedores y me interno en la oscuridad. Llego a una de las casas vacías y me escondo en el sótano. Necesito gritar, dejar salir la histeria que me ahoga. Me meto la blusa en la boca y doy rienda suelta a mi desesperación. Volver a la arena, al origen de todas mis pesadillas. El Capitolio ha encontrado la forma definitiva de destruirnos a todos.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss in a dark, dusty cellar, curled into a ball and crying. Soft moonlight filters through a small basement window. Clear line style.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text": "Peeta me encuentra en la oscuridad. Sus manos son cálidas y me ayudan a ponerme en pie. Haymitch también está allí, y por primera vez en mucho tiempo, está completamente sobrio. Tomo una decisión: si tengo que volver a los Juegos, haré todo lo posible para que Peeta sea el que regrese a casa sano y salvo. Se lo pido a Haymitch como un favor desesperado. Él asiente, sabiendo que este será nuestro último trato. Ya no somos aliados por estrategia, sino por amor y supervivencia.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Peeta sitting on a wooden bench in a dimly lit room. Peeta is holding her hand, looking supportive. Clear line style with flat colors.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text": "El día de la cosecha es diferente esta vez. No hay multitudes animando ni cámaras de televisión en la plaza. Romulus Thread se encarga de que todo sea rápido y frío. Effie Trinket, con una peluca de metal dorado y voz temblorosa, saca mi nombre y luego el de Haymitch. Peeta se presenta voluntario de inmediato para ocupar su lugar. Nos empujan hacia un coche que nos lleva directos a la estación. Miro por la ventana cómo desaparece mi hogar, temiendo de verdad no volver a verlo jamás.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Peeta being escorted into a black car by white-clad Peacekeepers. District 12's gray buildings are visible in the background.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_env_square.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "text": "En el tren, el ambiente es lúgubre. Para prepararnos, Peeta y yo empezamos a ver las cintas de los Juegos anteriores. Encontramos una que nunca habíamos visto: el segundo Vasallaje de los Veinticinco, el año en que ganó Haymitch. Vemos a un Haymitch joven y fuerte enfrentándose al doble de tributos de lo normal. Entendemos el precio que pagó por su victoria y por qué el alcohol es su único refugio. Estudiamos a nuestros futuros oponentes, sabiendo que todos ellos son expertos en el arte de matar.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Peeta sitting on a plush sofa inside a train, watching a glowing television screen showing a young Haymitch. Stage set composition.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_env_train.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "text": "Al llegar al Capitolio, mi equipo de preparación me recibe entre lágrimas. Venia, Octavia y Flavius ya no parlotean sobre modas; están destrozados porque saben que esta vez no hay esperanza de indulto. Cinna aparece para rescatarme de su tristeza y me lleva a mi habitación. Me trata con la misma ternura de siempre, aunque sus ojos verdes están cargados de una determinación nueva. «No te rindas, Katniss», me susurra mientras empieza a trabajar en mi nuevo aspecto para la gran ceremonia de apertura.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Cinna, with gold eyeliner, gently placing his hand on Katniss's shoulder in a bright, white dressing room. Minimalist character design.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "text": "El diseño de Cinna para el desfile es asombroso. No son simples llamas; es algo mucho más profundo. Me pone un mono negro ajustado que, al pulsar un botón, empieza a brillar con una luz dorada y rojiza, como carbones ardiendo en una chimenea. Soy una brasa reluciente. Peeta lleva un traje idéntico al mío. Cinna quiere que Panem vea que todavía tenemos fuego dentro, que no somos solo piezas en el tablero de Snow. Me miro al espejo y me siento poderosa, lista para la batalla.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss standing in front of a mirror, wearing a sleek black suit that glows with orange and red light like burning coal. Vibrant colors.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_forest.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "text": "El Círculo de la Ciudad está a rebosar de gente. Cuando nuestro carro sale a la plaza, el grito de la multitud es ensordecedor. Otros distritos han intentado imitarnos con luces eléctricas, pero nadie brilla como nosotros. Peeta me coge de la mano y levantamos nuestros brazos entrelazados. No buscamos sonreír ni agradar; somos los amantes trágicos del Distrito 12, oscuros y poderosos. Veo al Presidente Snow observándonos desde su balcón y sé que, pase lo que pase, no le daremos el placer de vernos derrotados.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Katniss and Peeta standing on a black chariot, holding hands and raising them high. Artificial orange embers trail behind them. Wide angle.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "text": "Tras el desfile, conocemos a los otros vencedores en el Centro de Entrenamiento. Finnick Odair, el chico de los tridentes del Distrito 4, me ofrece un terrón de azúcar con una sonrisa seductora. Johanna Mason, del Distrito 7, se quita su disfraz de árbol con total descaro frente a nosotros. Son guerreros curtidos, gente que ha sobrevivido a lo imposible. Me doy cuenta de que estos Juegos no se parecerán en nada a los primeros. Aquí, todos somos asesinos profesionales y el peligro acecha en cada rincón.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "Finnick Odair, with wavy blonde hair, holding a small sugar cube toward Katniss. Johanna Mason stands in the background. Flat 2D view.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "10",
+    "title": "Los Túneles del Capitolio",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T14:00:00Z",
+    "updated_at": "2026-02-18T14:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen in her black tactical Mockingjay suit, standing in a dark, misty concrete tunnel. A faint green light from a holographic device illuminates her determined face.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 1,
+            "text": "Tras el ataque de Peeta, me obligo a entrenar más duro que nunca. Johanna Mason se convierte en mi compañera de ejercicios; ella también está rota, pero compartimos un odio feroz hacia el Capitolio. Los líderes del Distrito 13 me observan con recelo mientras practico puntería con mi arco de Sinsajo. Saben que soy indisciplinada, pero me necesitan para la invasión final. En mis escasos ratos libres, visito a Peeta a través de un cristal, deseando que el veneno de rastrevíspula abandone su mente y me devuelva al chico que amaba.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and a short-haired Johanna training with weapons in a gray concrete gym. They look focused and weary. Clear line style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 2,
+            "text": "Me envían al Distrito 2, el último bastión de Snow. Allí, la montaña conocida como el Hueso protege el arsenal del Capitolio. Me reúno con la comandante Lyme y los líderes rebeldes en una cueva helada para planear el asalto. Gale sugiere una táctica brutal: provocar avalanchas para enterrar vivos a los soldados enemigos dentro de la fortaleza. Me horroriza la idea de matar a tantos inocentes atrapados, pero la guerra no ofrece opciones piadosas. El viento de las montañas me recuerda que el final de Panem está cerca.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Gale standing on a snowy mountain ridge, looking toward a massive, fortified mountain. The sky is a cold, flat blue.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 3,
+            "text": "El plan de Gale funciona y el Hueso queda sellado bajo toneladas de roca. Salgo a los escalones del Edificio de Justicia para hablar a los supervivientes que emergen de los escombros. Intento convencerlos de que se unan a la rebelión, de que Snow solo los usa como peones. Mientras hablo, una luz roja me ciega y un disparo me derriba frente a las cámaras. La bala golpea mis costillas, pero el traje blindado de Cinna me salva la vida una vez más. Despierto de nuevo en el búnker del 13, decidida a terminar mi misión.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss falling backward on a white stone stage as a bright flash hits her chest. A crowd of people looks on in shock. High-contrast colors.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 4,
+            "text": "Antes de partir hacia el Capitolio, celebramos la boda de Finnick y Annie. Es un breve momento de luz en medio de la oscuridad del Distrito 13. Peeta ha empezado a mejorar y ha horneado una tarta maravillosa para la ocasión, pero cuando me ve, sus ojos todavía reflejan una sospecha helada. Formamos el pelotón 451, una unidad de élite de tiradores. La presidenta Coin no confía en mí y nos asigna un equipo de televisión para que grabemos propaganda lejos del frente real. Gale y Finnick estarán siempre a mi lado.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Finnick and Annie, in simple white clothes, holding hands at a celebratory table. A large cake decorated with blue sea waves sits in the center.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 5,
+            "text": "Entramos en las afueras del Capitolio, avanzando por calles desiertas con fachadas de colores pastel. Boggs nos enseña el 'holo', un dispositivo que proyecta un mapa de todas las 'vainas' o trampas ocultas en la ciudad. Bombas, mutaciones y gases letales nos esperan en cada esquina. El Capitolio se ha convertido en una arena gigantesca, más peligrosa que cualquier juego anterior. Avanzamos con cautela, sintiendo que miles de ojos nos observan a través de las cámaras de seguridad que cubren cada callejón y cada tejado de la ciudad.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A squad of soldiers in dark uniforms moving through a bright, clean city street. One soldier holds a small glowing device. Full-bleed composition.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 6,
+            "text": "Durante una grabación de propaganda, el suelo estalla bajo nuestros pies. Una mina oculta alcanza a Boggs, destrozándole las piernas en un instante. El humo y el olor a sangre lo inundan todo. Antes de morir, Boggs me transfiere la autoridad del holo mediante un rayo de luz verde que escanea mi rostro. 'No confíes en ellos', me susurra con su último aliento. Me quedo paralizada con el aparato en mis manos ensangrentadas mientras el pelotón espera mis órdenes. De repente, soy la jefa de una misión que no sé cómo dirigir.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss kneeling next to a fallen Boggs on a pastel-colored street. A green light from a small device shines on her face. Somber mood.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 7,
+            "text": "Una marea de aceite negro y viscoso surge de las paredes, una vaina mortal que amenaza con tragarnos. Corremos desesperados mientras el grupo de televisión lo graba todo. Logramos refugiarnos en un edificio abandonado, pero la televisión anuncia que el Sinsajo ha muerto en el ataque. Es nuestra oportunidad: si el Capitolio cree que no existimos, podremos movernos con libertad para cazar a Snow. Decido que la única forma de alcanzar la mansión presidencial sin ser detectados es a través del subsuelo. Debemos entrar en los oscuros túneles del Capitolio.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A massive wave of thick black liquid flooding a narrow street. Katniss and her squad are running toward a dark doorway. Dynamic 2D view.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 8,
+            "text": "Bajamos a las alcantarillas, un laberinto oscuro y húmedo que huele a metal y muerte. Pollux, que trabajó aquí como avox, nos guía por las tuberías para evitar las cámaras de seguridad. El siseo del vapor y el goteo del agua son los únicos sonidos en esta tumba de cemento. De repente, un eco aterrador recorre los pasadizos: un susurro que repite mi nombre una y otra vez. Los mutos de Snow nos han encontrado en la profundidad de la tierra. La verdadera pesadilla bajo la ciudad acaba de comenzar.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "The squad walking through a dark, damp industrial tunnel. In the background, a distorted shadow of a creature with a long tail is visible on the wall.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

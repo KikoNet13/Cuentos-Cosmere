@@ -1,0 +1,114 @@
+[
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000001_cover-hansel-gretel-frontcover.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000001_cover-hansel-gretel-frontcover.jpg",
+    "description": "story 01 cover slot cover",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000004_page-01-poor-home.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000004_page-01-poor-home.jpg",
+    "description": "story 01 page 1 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000005_page-02-night-conversation.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000005_page-02-night-conversation.jpg",
+    "description": "story 01 page 2 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000006_page-03-breadcrumb-trail.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000006_page-03-breadcrumb-trail.jpg",
+    "description": "story 01 page 3 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000007_page-04-lost-in-forest.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000007_page-04-lost-in-forest.jpg",
+    "description": "story 01 page 4 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000008_page-05-squirrel-cave.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000008_page-05-squirrel-cave.jpg",
+    "description": "story 01 page 5 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000009_page-06-rat-guide.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000009_page-06-rat-guide.jpg",
+    "description": "story 01 page 6 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000010_page-07-candy-house.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000010_page-07-candy-house.jpg",
+    "description": "story 01 page 7 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000011_page-08-witch-reveal.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000011_page-08-witch-reveal.jpg",
+    "description": "story 01 page 8 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000012_page-09-hansel-caged.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000012_page-09-hansel-caged.jpg",
+    "description": "story 01 page 9 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000013_page-10-bone-trick.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000013_page-10-bone-trick.jpg",
+    "description": "story 01 page 10 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000014_page-11-oven-order.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000014_page-11-oven-order.jpg",
+    "description": "story 01 page 11 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000015_page-12-gretel-pushes-witch.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000015_page-12-gretel-pushes-witch.jpg",
+    "description": "story 01 page 12 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000016_page-13-escape-from-house.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000016_page-13-escape-from-house.jpg",
+    "description": "story 01 page 13 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000017_page-15-treasure-home.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000017_page-15-treasure-home.jpg",
+    "description": "story 01 page 15 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  },
+  {
+    "filename": "3f7c21f1-7db5-4f0a-9d3f-000000000018_page-14-stork-guide.jpg",
+    "asset_rel_path": "library/hansel_y_gretel/images/3f7c21f1-7db5-4f0a-9d3f-000000000018_page-14-stork-guide.jpg",
+    "description": "story 01 page 14 slot main",
+    "node_rel_path": "hansel_y_gretel",
+    "created_at": "2026-02-18T09:46:03.096995+00:00"
+  }
+]

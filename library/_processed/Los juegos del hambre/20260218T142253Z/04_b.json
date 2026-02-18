@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "04",
+    "title": "El Triunfo de las Bayas",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T20:00:00Z",
+    "updated_at": "2026-02-18T20:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss and Peeta sitting together inside a dark stone cave. Katniss is looking alert while Peeta rests his head on her shoulder. Vibrant colors with clear line style.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 9,
+            "text": "Entro en la cueva tiritando y herida, pero con un tesoro en mis manos: la mochila naranja. Dentro encuentro una caja delgada con una aguja hipodérmica. Sin perder un segundo, le clavo la aguja a Peeta en el brazo y presiono el émbolo. Es la medicina que le salvará la vida. Me desplomo a su lado, agotada por la pelea en la Cornucopia y la pérdida de sangre de mi frente. El sueño me vence mientras espero que el Capitolio cumpla su parte y sane a mi amigo antes de que sea demasiado tarde.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss, with a bloody bandage on her forehead, is injecting a needle into Peeta's arm inside the dim cave. The small orange backpack lies open on the ground.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 10,
+            "text": "Al despertar, veo que la fiebre de Peeta ha desaparecido. Sus ojos azules brillan con claridad y su pierna ya no está hinchada. Afuera, el cielo se ha cerrado y una lluvia torrencial inunda la arena. Los Vigilantes están usando el clima para mantenernos encerrados mientras los demás tributos mueren. Peeta me cuida con ternura, lavándome la herida de la frente y obligándome a comer. Por primera vez, el romance que fingimos para las cámaras empieza a sentirse como algo real, un refugio cálido en medio de un mundo de pesadilla.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Peeta, looking much healthier, is gently washing Katniss's face with a damp cloth. Outside the cave entrance, heavy rain is falling against a gray sky.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 11,
+            "text": "De pronto, un ruido metálico nos sobresalta. Un paracaídas plateado aterriza justo en la entrada de la cueva. Dentro hay un banquete: panecillos, queso de cabra, manzanas y una sopera llena de estofado de cordero con arroz, mi plato favorito del Capitolio. Comemos con ansia, saboreando cada bocado como si fuera el último. Haymitch está enviándonos un mensaje claro: si seguimos actuando como enamorados, el público seguirá enviándonos comida. Nos abrazamos bajo el saco de dormir, escuchando el rugido de la tormenta y soñando con volver a casa.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A silver pot overflowing with steaming lamb stew and golden rolls sits on a stone floor. Katniss and Peeta are smiling at each other, ready to eat.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 12,
+            "text": "Cuando la lluvia para, salimos a cazar. Peeta recolecta unas bayas de un color morado intenso que ha encontrado cerca del arroyo. Yo las reconozco de inmediato por las historias de mi padre: son «jaulas de noche», un veneno mortal que te mata antes de llegar al estómago. De repente, un cañonazo suena. El aerodeslizador aparece para llevarse a la chica del Distrito 5, la «Comadreja». Ella nos estaba espiando y robó las bayas de Peeta, creyendo que eran seguras. El veneno que Peeta recogió por error ha eliminado a nuestra rival más astuta.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A handful of dark, shiny purple berries. In the background, a hovering silver hovercraft uses a claw to lift a fallen girl with red hair.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 13,
+            "text": "El sol vuelve a brillar con un calor brutal, pero algo ha cambiado. El arroyo se ha secado por completo; los Vigilantes han drenado toda el agua de la arena excepto la del gran lago frente a la Cornucopia. Es su forma de obligarnos a salir de nuestro escondite y enfrentarnos al último tributo: Cato. Recogemos nuestras cosas y nos dirigimos al lago, sabiendo que el final de los Juegos está cerca. Ya no queda donde esconderse. El Capitolio quiere su gran final y nosotros somos los protagonistas del espectáculo.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta standing over a cracked, dry riverbed. The ground is parched and white, stretching toward the dense green jungle.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 14,
+            "text": "Al llegar al lago, vemos a Cato huyendo desesperadamente. Pero no huye de nosotros, sino de algo mucho peor. Una manada de mutaciones, lobos gigantescos con pelaje de colores y ojos humanos, surge de la espesura. Corremos hacia la Cornucopia de oro para protegernos. Al subir a la parte más alta, me doy cuenta con horror de que los lobos llevan collares con los números de los distritos: son los tributos muertos transformados en bestias. El Capitolio nos obliga a luchar contra los fantasmas de los que ya han caído.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A pack of large, stylized wolves with human-like eyes chasing Katniss and Peeta toward the giant golden horn. The wolves have different colored fur.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 15,
+            "text": "La batalla en lo alto de la Cornucopia es feroz. Cato tiene a Peeta agarrado por el cuello, amenazando con tirarlo a los lobos si disparo. Peeta, con un último esfuerzo, dibuja una equis con su propia sangre en la mano de Cato. Aprovecho el segundo de distracción y le atravieso la mano con una flecha. Cato cae al suelo, donde las mutaciones lo esperan. Tras una noche de agonía, disparo una flecha final por piedad. El cañón suena. Solo quedamos Peeta y yo. ¡Hemos ganado! Pero el silencio que sigue es aterrador.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss standing on top of the golden Cornucopia, aiming her bow downward. Peeta is exhausted at her feet, and the sky is a dark indigo.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 16,
+            "text": "De pronto, la voz de Claudius Templesmith anuncia que el cambio de reglas ha sido revocado: solo puede haber un vencedor. El Capitolio nos ha traicionado para forzar un duelo final entre nosotros. Peeta baja su cuchillo y me pide que lo mate, pero yo tengo un plan mejor. Saco las bayas venenosas y le doy la mitad. «A la de tres», susurro. Justo cuando estamos a punto de tragarlas, las trompetas suenan frenéticas. ¡Parad! ¡Parad! Nos declaran vencedores a ambos. El triunfo de las bayas ha humillado al Capitolio, y ahora somos libres, pero el peligro real acaba de empezar.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta standing back-to-back, each holding a handful of purple berries to their lips. Bright golden trumpets appear in the sky above them.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

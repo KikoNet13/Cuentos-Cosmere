@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "03",
+    "title": "El Canto de Rue",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T15:00:00Z",
+    "updated_at": "2026-02-18T15:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen with her signature braid and Rue, a small dark-skinned girl, looking through thick green leaves in a stylized forest. Clear line style.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 1,
+            "text": "Sesenta segundos. Ese es el tiempo que debo permanecer sobre mi círculo de metal antes de que el gong nos libere. Si bajo antes, las minas me volarán las piernas. Frente a mí se alza la Cornucopia, un cuerno de oro gigante lleno de comida y armas. Veo a Peeta a lo lejos; me mira y sacude la cabeza, advirtiéndome que no entre en el baño de sangre. El sol me deslumbra y el corazón me late con fuerza en los oídos. De repente, el sonido del gong desgarra el aire. ¡Los Juegos han empezado!",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss standing on a round metal pedestal in a bright meadow. In the center, a large golden horn structure called the Cornucopia is visible.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 2,
+            "text": "Me olvido de los consejos de Haymitch y corro hacia el centro, pero la carnicería es aterradora. Logro agarrar una mochila de color naranja intenso al mismo tiempo que otro chico. Forcejeamos un instante hasta que él tose sangre sobre mi cara y cae al suelo. No miro atrás. Con el corazón en la garganta, me echo la mochila al hombro y huyo hacia la espesura de los árboles. Oigo el silbido de un cuchillo rozándome la oreja, pero no me detengo. Debo encontrar refugio en el bosque antes de que los tributos profesionales me den caza.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss running towards the forest with a bright orange backpack. The background shows stylized trees with rounded shapes. Clear line art style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 3,
+            "text": "Camino durante horas, alejándome todo lo posible de la Cornucopia. Al caer la noche, busco un árbol alto y me ato a una rama con mi cinturón para no caer mientras duermo. De repente, el himno de Panem suena en el cielo y aparecen las caras de los muertos proyectadas en las nubes. Cuento once cañonazos. Once chicos y chicas han muerto hoy. Me invade un alivio egoísta al ver que la cara de Peeta no aparece entre ellos. El bosque se queda a oscuras y el frío empieza a calarme los huesos bajo mi saco de dormir.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss tied to a thick tree branch high above the ground. In the night sky, a faint projection of the Capitol seal is visible.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 4,
+            "text": "Un ruido me despierta en plena noche. Abajo, en el suelo, veo el resplandor de una hoguera. ¡Qué idiota! Alguien ha encendido un fuego y está atrayendo a los asesinos. En cuestión de minutos, una manada de tributos profesionales cae sobre la víctima. Me quedo helada al escuchar las risas de los cazadores, pero lo peor llega después. Entre las sombras, distingo a Peeta caminando con ellos. ¿Cómo es posible? El chico que me dio el pan se ha aliado con los más fuertes para matarme. La traición duele más que el hambre que empieza a retorcerme el estómago.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Looking down from a tree, a small campfire is visible. Shadows of a group of teenagers stand around it. Peeta's ash-blonde hair is distinguishable.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 5,
+            "text": "A la mañana siguiente, el cielo se vuelve gris y el aire se llena de un humo asfixiante. No es un fuego natural; los Vigilantes han decidido animar el espectáculo. De repente, enormes bolas de fuego empiezan a llover desde el cielo, estallando contra los árboles y convirtiendo la jungla en un infierno. Corro desesperada, esquivando las llamas que me persiguen como si tuvieran vida propia. Una de ellas me golpea en la pierna y noto un dolor abrasador que me hace gritar. El Capitolio quiere verme arder y yo solo puedo seguir corriendo hacia ninguna parte.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss sprinting through the woods as stylized orange and red fireballs fall from the sky. Swirling patterns represent the fire.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 6,
+            "text": "Consigo encontrar un pequeño estanque y sumerjo mi pierna quemada en el agua fría. El alivio es instantáneo, pero estoy agotada y deshidratada. Me aplico una pomada que me han enviado mis patrocinadores en un pequeño paracaídas plateado. Mientras descanso, oigo el crujir de las ramas. Los profesionales me han encontrado siguiendo el rastro del humo. Estoy demasiado débil para luchar, así que trepo por un árbol con las pocas fuerzas que me quedan. Me escondo entre el follaje espeso, rezando para que no miren hacia arriba, mientras sus voces crueles resuenan justo debajo de mis pies.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss sitting by a small pool of water, applying ointment to a red burn on her leg. A small silver parachute lies on the ground nearby.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 7,
+            "text": "—¡Baja de ahí, preciosa! —grita Cato desde la base del tronco. Se ríen de mí, sabiendo que estoy atrapada. Intentan subir, pero son demasiado pesados y las ramas se rompen bajo su peso. Deciden acampar debajo de mi árbol, esperando a que el hambre o el cansancio me obliguen a bajar directamente a sus armas. Paso la noche temblando, mirando sus caras a la luz de la luna. Peeta sigue con ellos, observando el bosque con una expresión que no alcanzo a comprender. Me siento sola, rodeada de enemigos que esperan mi muerte como si fuera un juego.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Cato and other Career tributes standing at the bottom of a tree, looking up and mocking Katniss. They carry swords and spears.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 8,
+            "text": "Entonces, noto un movimiento en el árbol de al lado. Unos ojos oscuros y brillantes me observan entre las hojas. Es Rue, la niña pequeña del Distrito 11. Me hace una señal en silencio y señala algo que cuelga sobre mi cabeza: un nido de rastrevíspulas. Son avispas mutantes del Capitolio cuyo veneno provoca alucinaciones y una muerte agónica. Si logro cortarlo y dejarlo caer sobre los profesionales, tendré una oportunidad de escapar. Rue se funde de nuevo con las sombras, dejándome con un plan peligroso y la esperanza de haber encontrado, por fin, a una aliada.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss looks up to see a golden, papery wasp nest on a branch. In the background, Rue's small face peeks through some leaves.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

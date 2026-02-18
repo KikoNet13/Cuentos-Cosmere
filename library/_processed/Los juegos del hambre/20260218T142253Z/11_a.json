@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "11",
+    "title": "El Final de los Juegos",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T16:00:00Z",
+    "updated_at": "2026-02-18T16:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen in her black tactical suit, bow in hand, standing before the grand white gates of the President's mansion under a snowy sky. Full-bleed 2D composition.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 1,
+            "text": "Avanzamos hacia el corazón del Capitolio, esquivando las últimas defensas de Snow. Gale y yo nos movemos entre las sombras de los edificios de colores pastel, ahora manchados de hollín y sangre. A lo lejos, la mansión presidencial brilla bajo el cielo gris, rodeada por una barrera de agentes de la paz. El aire está cargado del olor a pólvora y desesperación. Siento que el final de esta larga pesadilla está a solo unos pasos de distancia, pero el peligro acecha en cada esquina de estas calles desconocidas.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Gale moving through a soot-stained Capitol street with bright buildings. The white mansion is visible in the far distance. Ligne claire style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 2,
+            "text": "Llegamos al Círculo de la Ciudad y nos encontramos con una escena desgarradora. Cientos de niños del Capitolio han sido colocados frente a las puertas de la mansión, formando un escudo humano. Tiritan de frío, rodeados por una barricada de agentes de la paz que parecen tan confundidos como nosotros. No entiendo qué planea Snow al usar a sus propios ciudadanos de esta manera. La multitud de rebeldes presiona desde los laterales, creando un caos de gritos y disparos que resuena en las paredes de mármol.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A massive crowd of children standing behind a white barricade in front of the President's mansion. Soldiers in white uniforms stand nearby. Wide angle flat view.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 3,
+            "text": "De repente, un aerodeslizador con el sello del Capitolio aparece sobre nuestras cabezas. El rugido de sus motores ahoga el clamor de la plaza. En lugar de bombas, vemos caer cientos de pequeños paracaídas plateados, iguales a los que traían regalos en la arena. Los niños extienden las manos con esperanza, creyendo que el Gobierno les envía comida o ayuda en medio del asedio. Observo el descenso lento y brillante de la seda, sintiendo un presentimiento glacial que me recorre la columna vertebral. Algo no encaja.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A silver hovercraft in a gray sky, dropping hundreds of tiny silver parachutes over a crowded city square. Bright and surreal atmosphere.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 4,
+            "text": "La primera oleada de paracaídas estalla antes de tocar el suelo. Una serie de explosiones coordinadas convierte la nieve en una carnicería roja. El suelo vibra y el aire se llena de humo acre. Los gritos de los niños son ensordecedores mientras los agentes de la paz intentan retirar las barricadas para ayudar. Es una trampa cruel diseñada para causar el máximo dolor. Me quedo paralizada, con el arco bajado, viendo cómo la inocencia se desintegra en un instante bajo el poder despiadado de los que mandan.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Explosions of fire and smoke in the middle of a crowd of children. Red flames contrast with white snow and gray buildings. Dramatic flat composition.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 5,
+            "text": "En medio del caos, un grupo de sanitarios rebeldes con uniformes blancos corre hacia el centro de la plaza. Se abren paso entre la multitud para atender a los heridos que agonizan en el suelo. Busco a Gale con la mirada, pero mis ojos se clavan en una figura pequeña que se mueve con determinación. Una trenza rubia, un abrigo que se quita para cubrir a un niño herido... El corazón me da un vuelco salvaje. Es una visión imposible en este infierno de fuego y escombros.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Rebel medics in white uniforms rushing into a smoking plaza. One small figure with a blonde braid is helping a child. Ligne claire style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 6,
+            "text": "Es Prim. Mi hermana está allí, en el corazón del desastre, haciendo lo que mejor sabe: curar. La veo arrodillada sobre un niño que llora, su colita de pato asomando por la blusa como aquel día de la cosecha. Intento gritar su nombre, abrirme paso entre la masa humana que me empuja hacia atrás. Ella levanta la vista y, por un segundo, nuestras miradas se encuentran. Sus labios forman mi nombre justo cuando estalla la segunda oleada de paracaídas, envolviéndolo todo en una bola de fuego insoportable.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A close-up of Prim, a young girl with a blonde braid, looking up with wide eyes in a smoky plaza. A bright orange flash blooms behind her.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 7,
+            "text": "El fuego me alcanza y me transforma en una criatura de llamas, el pájaro de Cinna consumiéndose en su propia esencia. Siento que mi piel se derrite mientras caigo hacia un abismo de agonía absoluta. No hay sonido, solo un ardor implacable que me borra la conciencia. Los rostros de los que amo vuelan como pájaros por un cielo negro antes de que la oscuridad se lo trague todo. El Sinsajo ha caído y, con él, la última chispa de mi voluntad de seguir luchando en este mundo.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A stylized image of Katniss engulfed in orange and yellow flames, her body looking like a bird silhouette. Pitch black background.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 8,
+            "text": "Despierto en un mundo de blanco y silencio, atrapada en una cama de hospital del Capitolio. Mi piel es un rompecabezas de injertos rosados y cicatrices rojas, un mapa del dolor que me ha dejado marcada para siempre. Me dicen que la guerra ha terminado, que Snow ha sido capturado y que los rebeldes han vencido finalmente. Pero yo no siento la victoria. Solo hay un vacío inmenso en mi pecho y un silencio que me impide gritar. Me he convertido en una avox mental, una sombra que ya no reconoce su propia voz.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss lying in a sterile white hospital bed, her arms bandaged. She is staring blankly at a high white ceiling. Cold, clinical lighting.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

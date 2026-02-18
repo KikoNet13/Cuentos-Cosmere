@@ -1,51 +1,73 @@
-PROMPT NOTEBOOKLM - STORY 07 - GENERAR 07_prompts.json
-Devuelve SOLO JSON válido.
-Sin markdown, sin explicaciones.
-No incluyas nada fuera del JSON.
-Tu respuesta debe ser EXACTAMENTE el contenido final del archivo `07_prompts.json`.
-
-CONTEXTO DISPONIBLE EN NOTEBOOKLM (IMPORTANTE)
-- Tienes acceso a los libros canónicos de la saga Los juegos del hambre.
-- Tienes acceso al ejemplo completo de Hansel y Gretel como referencia de estructura de prompts.
-- Tienes acceso a la fuente de estilo visual ya guardada.
-- Revisa tambien la NUEVA FUENTE: `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-- NO dependas de rutas locales, nombres de archivo del repositorio ni detalles de la webapp.
-
-En `FUENTE_NB_los_juegos_textos_y_anchors.md` tienes:
-- texto completo por página del cuento;
-- anchors canónicos del meta de saga;
-- ids y `image_filenames` para referencias visuales.
-
-Genera un ÚNICO objeto JSON con este esquema:
 {
   "story_id": "07",
   "title": "El Secreto del Reloj",
   "book_rel_path": "los_juegos_del_hambre",
-  "updated_at": "<ISO8601_UTC>",
-  "cover_prompt": "<prompt largo>",
+  "updated_at": "2026-02-18T23:30:00Z",
+  "cover_prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'El Secreto del Reloj', representando a Katniss Everdeen como el Sinsajo frente a la naturaleza geometrica de la arena tropical del Vasallaje de los Veinticinco.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: linea negra limpia y definida, colores planos vibrantes y formas geometricas amables. Katniss debe aparecer con su trenza negra, piel aceitunada y el vestido de novia transformandose en plumas negras y blancas de sinsajo. Respetar la estetica de Ligne Claire sin sombras complejas ni fotorrealismo.\n\nCOMPOSICION Y ENCUADRE\nPlano medio-largo de Katniss Everdeen en el centro de la imagen, con los brazos ligeramente extendidos mostrando sus alas de plumas. De fondo, una vista cenital estilizada de la arena en forma de reloj con sus doce sectores y el agua azul rodeando el centro de oro.\n\nPERSONAJES Y ACCION\nKatniss con expresion decidida y majestuosa. La accion sugiere el momento de su transformacion simbolica ante Panem. El broche de sinsajo dorado debe destacar en su pecho.\n\nENTORNO, PALETA E ILUMINACION\nFondo de jungla verde esmeralda y mar azul brillante. La paleta combina el blanco y negro del traje con los colores saturados del entorno tropical. Iluminacion clara y homogenea de cuento infantil.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, env_arena_clock, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, titulos ni creditos. Prohibido el fotorrealismo, las texturas 3D, el sombreado dramatico o los efectos de lente. Evitar elementos sangrientos o violentos para mantener el tono editorial.\n\nFORMATO DE SALIDA\nIlustracion digital final 1:1 con bordes limpios y alta definicion en los contornos, lista para maquetacion de portada.",
   "page_prompts": [
-    { "page_number": 1, "main_prompt": "<prompt largo>" }
+    {
+      "page_number": 1,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el encuentro tenso en el Centro de Entrenamiento entre Katniss y los vencedores Finnick y Johanna.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nFinnick Odair con cabello bronce y ojos verde mar. Johanna Mason con mirada feroz y cabello corto. Katniss con trenza negra. Estilo Sergio Kern de linea clara y colores planos.\n\nCOMPOSICION Y ENCUADRE\nPlano medio. Finnick en primer plano ofreciendo un azucarillo a Katniss, mientras Johanna se ve al fondo en una pose desafiante cerca de los equipos de gimnasia.\n\nPERSONAJES Y ACCION\nFinnick sonriendo de forma seductora. Katniss mirandolo con desconfianza. Johanna mostrando su traje de arbol del Distrito 7 con descaro.\n\nENTORNO, PALETA E ILUMINACION\nGimnasio de alta tecnologia con paredes blancas y equipo gris metalico. Paleta de grises, azules y el punto focal dorado del azucarillo. Luz cenital plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_finnick_base, char_johanna_base, char_katniss_base, env_train_capitol.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni sombras complejas. No incluir armas en esta escena de entrenamiento inicial.\n\nFORMATO DE SALIDA\nIlustracion 1:1 nitida para pagina de cuento."
+    },
+    {
+      "page_number": 2,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nCapturar el acto de desafio de Katniss ante los Vigilantes colgando un muñeco con el nombre de Seneca Crane.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con uniforme de entrenamiento gris. Muñeco de tela con soga al cuello. El nombre SENECA CRANE escrito en rojo sangre.\n\nCOMPOSICION Y ENCUADRE\nPlano medio dinamico de Katniss frente al muñeco colgado, con los Vigilantes asombrados visibles al fondo detras de un ventanal de cristal.\n\nPERSONAJES Y ACCION\nKatniss con expresion de furia contenida. Los Vigilantes dejando caer su comida por la sorpresa. La inscripcion roja es el punto focal.\n\nENTORNO, PALETA E ILUMINACION\nSala de entrenamiento cerrada. Paleta de grises y blancos con el rojo intenso del zumo de bayas. Iluminacion clara y directa.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre real, debe parecer zumo de frutas. Evitar fotorrealismo y detalles grotescos en el muñeco.\n\nFORMATO DE SALIDA\nIlustracion 1:1 clara y limpia."
+    },
+    {
+      "page_number": 3,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar la impactante transformacion del vestido de Katniss en el escenario de Caesar Flickerman.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss dando una vuelta. El vestido blanco transformandose en plumas negras y blancas. Estetica de Ligne Claire y colores planos.\n\nCOMPOSICION Y ENCUADRE\nPlano americano de Katniss en el centro del escenario, con estelas de fuego blanco rodeandola mientras el plumaje del sinsajo emerge.\n\nPERSONAJES Y ACCION\nKatniss con la barbilla alta y mirada poderosa. El movimiento de giro crea una espiral de plumas y llamas blancas sinteticas.\n\nENTORNO, PALETA E ILUMINACION\nEscenario de television del Capitolio con luces de focos brillantes. Paleta de blancos puros, negros profundos y azules electricos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin degradados complejos en el fuego. No incluir a Caesar Flickerman para centrar la atencion en el Sinsajo.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 vibrante."
+    },
+    {
+      "page_number": 4,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Peeta Mellark en su entrevista anunciando la mentira del embarazo para frenar los Juegos.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta Mellark con traje elegante y cabello rubio ceniza ondulado. Estilo Sergio Kern de linea negra definida.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Peeta hablando apasionadamente frente al microfono. Al fondo, la audiencia del Capitolio reacciona con gestos de horror y sorpresa.\n\nPERSONAJES Y ACCION\nPeeta con expresion sincera y dolorosa. El publico en las gradas llevandose las manos a la boca. La escena transmite una gran tension emocional.\n\nENTORNO, PALETA E ILUMINACION\nInterior lujoso del teatro del Capitolio. Paleta de dorados, azules y rojos. Iluminacion focalizada sobre Peeta.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, env_train_capitol.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni desenfoques de camara. Evitar que la escena parezca comica; el impacto debe ser tragico.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de alto impacto narrativo."
+    },
+    {
+      "page_number": 5,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nCapturar el inicio de los Juegos en la arena tropical con el encuentro entre Katniss y Finnick en el agua.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPlataformas metalicas en el mar. Cornucopia dorada al fondo. Katniss y Finnick nadando o sobre franjas de tierra. Estetica Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano general lateral mostrando el anillo de agua azul y las doce franjas de tierra que salen del centro como radios.\n\nPERSONAJES Y ACCION\nFinnick con su tridente de plata ayudando a Katniss a subir a una de las lenguas de tierra. Ambos visten los monos de tributo azules.\n\nENTORNO, PALETA E ILUMINACION\nArena del Reloj bajo un sol deslumbrante. Colores saturados: azul turquesa, oro brillante y verde jungla. Luz cenital dura.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_finnick_base, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre ni violencia explicita en el baño de sangre inicial. Evitar efectos de agua realistas.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de escala masiva."
+    },
+    {
+      "page_number": 6,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nMostrar la supervivencia del grupo en la jungla usando la espita de Haymitch para obtener agua.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss, Peeta y Mags (anciana de pelo gris). Arbol tropical de corteza verde. La espita metalica clavada en el tronco.\n\nCOMPOSICION Y ENCUADRE\nPlano medio del grupo reunido alrededor de un arbol enorme. Katniss esta ajustando la espita mientras los demas esperan con sed.\n\nPERSONAJES Y ACCION\nPeeta apoyado en Katniss por su pierna herida. Mags observando con sabiduria. El agua fluyendo de la espita es el punto focal.\n\nENTORNO, PALETA E ILUMINACION\nJungla densa con hojas gigantescas y aire bochornoso. Paleta de verdes oliva, marrones y sombras frescas planas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin elementos tecnologicos modernos. El arbol no debe ser un pino del Distrito 12, sino una especie tropical estilizada.\n\nFORMATO DE SALIDA\nIlustracion 1:1 clara y detallada."
+    },
+    {
+      "page_number": 7,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el sacrificio heroico de Mags en medio de la niebla acida mortal.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nNiebla gris espesa con burbujas brillantes. Mags caminando hacia la niebla. Katniss y Finnick huyendo. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio-largo. El grupo corre hacia la camara mientras la pared de niebla los alcanza. Mags se queda atras con un gesto de paz.\n\nPERSONAJES Y ACCION\nFinnick cargando a Peeta, mirando hacia atras con dolor. Katniss con la piel roja por las quemaduras de la niebla. Mags desapareciendo en el humo gris.\n\nENTORNO, PALETA E ILUMINACION\nJungla nocturna iluminada por el brillo antinatural de la niebla. Tonos morados, grises y verdes oscuros. Luz debil de luna.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_finnick_base, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin heridas sangrientas; las quemaduras deben ser parches rojos planos. La niebla no debe ser transparente.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de alto impacto emocional."
+    },
+    {
+      "page_number": 8,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el descubrimiento de que la arena es un reloj gracias a Wiress.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nWiress (pelo oscuro, mirada perdida), Beetee (gafas), Johanna y Katniss en la playa. Wiress dibujando en la arena.\n\nCOMPOSICION Y ENCUADRE\nPlano medio del grupo en circulo sobre la arena blanca. Wiress señala hacia la Cornucopia repitiendo 'tic, tac'.\n\nPERSONAJES Y ACCION\nKatniss con expresion de comprension repentina. Johanna cubierta de sangre seca y barro. Beetee observando con interes cientifico.\n\nENTORNO, PALETA E ILUMINACION\nPlaya de arena blanca y mar azul. Paleta de colores claros y limpios contrastando con el estado andrajoso de los tributos. Luz de tarde.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_johanna_base, char_beetee_base, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir el reloj fisico; la idea debe transmitirse por el dibujo en la arena y los gestos.\n\nFORMATO DE SALIDA\nIlustracion 1:1 narrativa."
+    },
+    {
+      "page_number": 9,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nCapturar la batalla en la playa donde muere Wiress y Katniss abate a Gloss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss disparando su arco. Gloss cayendo. Johanna con su hacha. Estetica Sergio Kern de linea negra firme.\n\nCOMPOSICION Y ENCUADRE\nPlano dinamico de accion. Katniss en el centro soltando una flecha; Gloss al fondo siendo alcanzado. Wiress yace en la arena blanca.\n\nPERSONAJES Y ACCION\nKatniss con determinacion feroz. Johanna en plena carrera para atacar a Cashmere. La accion es rapida y violenta pero estilizada.\n\nENTORNO, PALETA E ILUMINACION\nOrilla del mar bajo un cielo brillante. Paleta de azules, blancos y el ocre de la arena. Destellos de luz en el agua plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_johanna_base, prop_bow_arrow, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre explicita. Evitar sombras dramaticas realistas; mantener el estilo de colores planos de Ligne Claire.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de accion cinematografica."
+    },
+    {
+      "page_number": 10,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el momento de desorientacion total cuando la Cornucopia empieza a girar.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLa Cornucopia dorada girando a gran velocidad. El agua saltando. Los tributos agarrandose a las rocas. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano general picado que enfatiza el movimiento circular. Las franjas de tierra parecen un ventilador gigante bajo los pies de los personajes.\n\nPERSONAJES Y ACCION\nKatniss, Peeta y Finnick luchando por no caer al mar. El agua forma remolinos blancos y azules planos. Expresiones de mareo y terror.\n\nENTORNO, PALETA E ILUMINACION\nCentro de la arena. Paleta de amarillos dorados y azules intensos. Luz solar vibrante que crea un efecto de velocidad.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin efectos de desenfoque digital modernos. Usar lineas de accion negras para sugerir la rotacion de la estructura metalica.\n\nFORMATO DE SALIDA\nIlustracion 1:1 dinamica y confusa."
+    },
+    {
+      "page_number": 11,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Beetee explicando su audaz plan para destruir a los profesionales con el alambre dorado.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nBeetee sosteniendo una bobina de alambre fino y brillante. Katniss y Peeta escuchando con atencion. Estetica de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio interior bajo el dosel de la jungla. El alambre dorado forma una linea brillante que cruza la composicion.\n\nPERSONAJES Y ACCION\nBeetee con expresion concentrada y manos habiles manipulando el cable. Katniss observando el alambre con curiosidad y esperanza frágil.\n\nENTORNO, PALETA E ILUMINACION\nFollaje tropical verde oscuro. El punto focal es el brillo amarillo-oro del alambre de Beetee. Iluminacion moteada filtrada por las hojas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_beetee_base, char_katniss_base, char_peeta_base, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. El alambre debe verse como una linea de color solida y no como un efecto de luz complejo. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 con gran detalle en los objetos."
+    },
+    {
+      "page_number": 12,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nIlustrar a Katniss y Johanna desenrollando el alambre a traves de la selva peligrosa.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss y Johanna avanzando entre la vegetacion. El alambre dorado extendiendose por el suelo. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio lateral. Los personajes avanzan de izquierda a derecha. El alambre se ve en el suelo entre las raices y hojas secas.\n\nPERSONAJES Y ACCION\nKatniss con el arco listo. Johanna sosteniendo la pesada bobina. Ambas lucen cansadas pero alertas ante cualquier sonido en la maleza.\n\nENTORNO, PALETA E ILUMINACION\nJungla tropical densa con raices retorcidas. Colores verdes profundos, marrones y el destello dorado del cable. Luz de atardecer.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_johanna_base, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin sombras dramaticas realistas. No incluir a Peeta ni Beetee en esta escena para enfatizar la separacion del grupo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 con ritmo visual de marcha."
+    },
+    {
+      "page_number": 13,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nCapturar el momento en que Johanna ataca a Katniss para salvarla del rastreador del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nJohanna sobre Katniss en el suelo. Cuchillo en la mano. Sangre en la cara de Katniss. Estetica Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio cerrado y tenso. Katniss en el suelo mirando con terror a Johanna, que parece estar atacandola violentamente.\n\nPERSONAJES Y ACCION\nJohanna con expresion feroz pero decidida. Katniss herida en la frente. La accion sugiere una traicion, aunque Johanna esta rescatandola.\n\nENTORNO, PALETA E ILUMINACION\nBosque nocturno en penumbra. Paleta de azules oscuros y negros con el rojo brillante de la sangre en la piel palida. Luz de luna.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_johanna_base, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin violencia gratuita; la escena debe ser tensa pero apta para el tono del cuento. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de alta tension emocional."
+    },
+    {
+      "page_number": 14,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Katniss encontrando a Beetee herido junto al gran arbol del rayo antes de la medianoche.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nBeetee inconsciente. El gran arbol solitario en la colina. Katniss herida y sola. Estilo Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio-largo. Katniss llega a la cima de la colina y encuentra a Beetee junto al tronco quemado. El cielo amenaza tormenta.\n\nPERSONAJES Y ACCION\nKatniss gateando hacia Beetee. El ambiente es de desolacion y urgencia. El tiempo se agota antes de que caiga el rayo.\n\nENTORNO, PALETA E ILUMINACION\nCielo violeta oscuro con nubes cargadas de electricidad. El arbol es una silueta imponente. Colores frios y atmosfericos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_beetee_base, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin efectos de luz digital modernos. Evitar que Beetee parezca muerto; debe verse solo herido o inconsciente.\n\nFORMATO DE SALIDA\nIlustracion 1:1 evocadora y solitaria."
+    },
+    {
+      "page_number": 15,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el momento culminante en que Katniss dispara la flecha con el alambre hacia el campo de fuerza.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con su arco. Flecha envuelta en alambre dorado. El rayo impactando en el arbol. Estetica Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano dinamico de Katniss apuntando hacia el cielo. El rayo es una linea blanca zigzagueante que conecta el arbol con su arco.\n\nPERSONAJES Y ACCION\nKatniss con expresion de maxima concentracion y desafio. Su figura destaca contra el destello de la tormenta. Accion heroica final.\n\nENTORNO, PALETA E ILUMINACION\nColina bajo la tormenta electrica. Paleta de blancos electricos, azules profundos y el brillo del alambre. Iluminacion extrema.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, prop_bow_arrow, env_arena_clock.\n\nRESTRICCIONES / NEGATIVOS\nSin degradados; usar formas de luz solidas. No incluir a otros personajes para enfatizar el papel solitario del Sinsajo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de alto impacto visual."
+    },
+    {
+      "page_number": 16,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nCapturar la destruccion de la arena y el rescate de Katniss por el aerodeslizador rebelde.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLa cupula del cielo agrietandose. Aerodeslizador plateado con una garra mecanica. Katniss cayendo. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano general de gran escala. El techo de la arena se rompe en pedazos geometricos. Katniss es rescatada desde arriba hacia el cielo real.\n\nPERSONAJES Y ACCION\nKatniss inconsciente en el aire mientras la garra la sujeta. El aerodeslizador surge entre las nubes y los escombros de la arena.\n\nENTORNO, PALETA E ILUMINACION\nContraste entre el fuego de la arena y el azul del cielo nocturno real. Paleta de plateados, azules y naranjas. Luz de explosion.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni creditos finales. El aerodeslizador debe tener un diseno limpio y no demasiado complejo.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 final de cierre de cuento."
+    }
   ]
 }
-
-Reglas obligatorias:
-1) `story_id`, `title` y `book_rel_path` deben coincidir EXACTAMENTE con esta historia.
-2) `cover_prompt` en español estructurado, 900-1700 caracteres, con EXACTAMENTE estos 8 bloques en orden:
-   - OBJETIVO DE ILUSTRACION
-   - CONTINUIDAD VISUAL OBLIGATORIA
-   - COMPOSICIÓN Y ENCUADRE
-   - PERSONAJES Y ACCIÓN
-   - ENTORNO, PALETA E ILUMINACIÓN
-   - REFERENCIAS (reference_ids)
-   - RESTRICCIONES / NEGATIVOS
-   - FORMATO DE SALIDA
-3) Cada `page_prompts[].main_prompt` en español estructurado, 700-1500 caracteres, con los mismos 8 bloques en orden.
-4) `page_prompts` debe cubrir EXACTAMENTE estas páginas: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
-5) Cada `page_number` aparece una sola vez.
-6) Construye el contenido de cada prompt usando el texto de página de `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-7) En el bloque `REFERENCIAS (reference_ids)`, usa anchors del meta canónico de la saga presentes en `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-8) Anchors canónicos disponibles (IDs): char_beetee_base, char_coin_base, char_effie_base, char_finnick_base, char_gale_base, char_haymitch_base, char_johanna_base, char_katniss_base, char_peeta_base, char_prim_base, char_rue_base, char_snow_base, cover_mockingjay_collection, env_arena_clock, env_arena_forest, env_district12_seam, env_district13_bunker, env_reaping_square, env_train_capitol, prop_bow_arrow, prop_bread_loaf, prop_mockingjay_pin, prop_nightlock_berries, prop_parachute_gift, prop_president_rose, style_linea_editorial, style_paleta_rebelion
-9) No cambies el schema, no agregues campos, no elimines campos obligatorios.
-
-Salida final:
-- SOLO el objeto JSON final para `07_prompts.json`.

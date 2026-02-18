@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "04",
+    "title": "El Triunfo de las Bayas",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T20:00:00Z",
+    "updated_at": "2026-02-18T20:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss and Peeta sitting together inside a dark stone cave. Katniss is looking alert while Peeta rests his head on her shoulder. Vibrant colors with clear line style.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 1,
+            "text": "Tras el anuncio de Claudius Templesmith, mi corazón da un vuelco. ¡Peeta y yo podemos ganar juntos! El Capitolio ha cambiado las reglas porque nuestra historia de amor les encanta. Sin pensarlo dos veces, grito su nombre con todas mis fuerzas, rompiendo el silencio del bosque. Debo encontrarlo antes de que sea tarde. Ya no somos enemigos, somos aliados oficiales. La esperanza de volver a casa con él me da nuevas energías para seguir adelante en esta arena mortal y desafiar el destino que nos impusieron.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss standing in the woods with her hand cupped around her mouth, shouting. The sky behind her is turning a soft twilight pink. Clear line art.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 2,
+            "text": "Paso horas buscando a Peeta cerca del arroyo. Haymitch no le ha enviado medicinas, lo que significa que debe estar cerca del agua para sobrevivir por su cuenta. El terreno es difícil, lleno de rocas resbaladizas y orillas embarradas que ocultan cualquier rastro. Sigo un rastro de manchas oscuras que me lleva hasta una zona de plantas acuáticas enredadas. Llamo su nombre en voz baja una y otra vez, temiendo que los profesionales me escuchen, pero solo los sinsajos me responden desde las copas de los árboles imitando mi propia voz.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss walking carefully along a muddy riverbank. Tall, stylized green reeds and rounded gray rocks surround the flowing blue water.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 3,
+            "text": "—No me pises —dice una voz ronca y débil a mis pies. Me sobresalto y miro hacia el suelo con incredulidad. ¡Es Peeta! Está tan bien camuflado con barro, arena y hojas verdes que parece una parte más de la orilla del arroyo. Su asombroso talento para decorar pasteles en la panadería le ha servido para fabricar un disfraz perfecto y esconderse de los asesinos. Me arrodillo a su lado y empiezo a limpiarle la cara con cuidado. Sus ojos azules brillan de alivio al verme, pero su piel está pálida y arde por la fiebre.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Peeta's face appearing from a mound of mud and leaves. Only his eyes and mouth are clear. Katniss is kneeling next to him, reaching out.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 4,
+            "text": "Ayudo a Peeta a levantarse, aunque casi no puede apoyar su pierna derecha. Está herido de gravedad; un corte profundo le atraviesa el muslo y la infección empieza a extenderse peligrosamente por su cuerpo. Con mucho esfuerzo y paciencia, lo llevo apoyado en mi hombro hasta una pequeña cueva oculta entre las rocas, lejos del cauce del agua. Lo acomodo en el saco de dormir y trato de limpiar su herida con el poco material que tengo. La situación es desesperada: si no consigo medicinas del Capitolio pronto, Peeta no sobrevivirá a la infección.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss supporting a limping Peeta as they walk toward a dark opening in a rock wall. Peeta looks exhausted, and his leg is bandaged with gray cloth.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 5,
+            "text": "Nos refugiamos en la penumbra de la cueva mientras una tormenta eléctrica estalla fuera. Intento animar a Peeta y, recordando los consejos de Haymitch sobre el romance, le doy un beso para intentar ganar el favor de los patrocinadores. Él me responde con una ternura que me confunde, recordándome aquel día de lluvia bajo el manzano. Poco después, un paracaídas plateado aterriza en la entrada. Contiene una olla de caldo de cordero caliente, pero no la medicina que tanto necesitamos. Comemos en silencio, compartiendo el calor de nuestros cuerpos mientras el mundo exterior desaparece bajo la lluvia.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Inside the cave, Katniss and Peeta are sharing a small metal pot of soup. A silver parachute lies on the cave floor nearby. Flat, warm colors.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 6,
+            "text": "De pronto, la voz de Claudius Templesmith resuena de nuevo por toda la arena. Nos invita a un «banquete» especial en la Cornucopia al amanecer. Promete que habrá una mochila marcada con el número de cada distrito que contendrá algo que necesitamos con urgencia. Sé que en la nuestra está la medicina para salvar la pierna de Peeta. —No irás, Katniss —me ordena él con firmeza, apretándome la mano—. No voy a dejar que te maten por mi culpa en ese baño de sangre. Pero yo ya he tomado una decisión secreta: no dejaré que muera.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Peeta looking sternly at Katniss inside the cave. His face is pale and sweaty. Katniss looks back with a hidden, determined expression.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 7,
+            "text": "Para poder ir al banquete sin su permiso, tengo que engañar a Peeta. Aprovecho el último regalo que nos envió Haymitch: un pequeño frasco de jarabe para dormir. Aplasto unas cuantas bayas dulces para ocultar el sabor y le doy la mezcla con una cuchara. En pocos minutos, sus párpados se vuelven pesados y cae en un sueño profundo e inamovible. Me siento culpable por traicionar su confianza, pero es la única forma de mantenerlo a salvo. Le doy un beso de despedida en la frente y me preparo para enfrentarme a los demás tributos.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss feeding a spoonful of purple liquid to Peeta. He is leaning back against the cave wall, eyes starting to close in sleep.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 8,
+            "text": "Llego a la Cornucopia justo cuando el primer rayo de sol ilumina el metal dorado. En una mesa con mantel blanco veo las cuatro mochilas que quedan. Corro hacia la nuestra, la pequeña de color naranja, pero Clove me intercepta con un cuchillo. Forcejeamos en el suelo y ella se burla de mi hermana y de Peeta mientras me inmoviliza. Justo antes de que pueda acabar conmigo, Thresh aparece de la nada y la derriba de un golpe. Me mira con dureza, pero al recordar cómo cuidé de Rue, decide perdonarme la vida. Cojo la mochila y huyo hacia el bosque.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss running away from the golden Cornucopia, clutching a small orange backpack. In the background, a very tall, muscular boy (Thresh) stands over Clove.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

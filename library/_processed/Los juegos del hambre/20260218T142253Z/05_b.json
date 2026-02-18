@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "05",
+    "title": "La Chispa de la Rebelion",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T12:00:00Z",
+    "updated_at": "2026-02-18T12:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen looking tense in her study, with the shadow of President Snow and a single white rose visible on a wooden desk.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 9,
+            "text": "Regresamos al Distrito 12 con el peso del mundo sobre los hombros. El ambiente en la estación es pesado, lleno de cámaras que esperan nuestra llegada como si fuéramos trofeos. Peeta me ofrece su mano, fría y firme. «¿Una última vez?», me pregunta con un tono que suena más a derrota que a amor artificial. Lo cojo de la mano y sonrío para Panem mientras el tren se detiene. Sé que, aunque la gira ha terminado, la verdadera batalla contra el Presidente Snow acaba de empezar en los callejones grises de mi hogar.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta standing on the train platform in District 12, holding hands and looking somber. Gray, soot-stained buildings in the background. Clear line style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 10,
+            "text": "Unos días después, Peeta viene a visitarme a la casa nueva. Caminamos por la Aldea de los Vencedores, lejos de los oídos y las cámaras del Capitolio. Me dice que ya no quiere que nuestra relación sea solo una actuación; quiere que seamos amigos de verdad. Me pregunta cuál es mi color favorito, algo tan sencillo que me deja sin palabras. Me doy cuenta de que sabe que soy capaz de morir por él, pero no conoce mis gustos más simples. Por un momento, entre la nieve, el peso de los Juegos parece desaparecer.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta walking through the snowy Victor's Village. Peeta looks at Katniss kindly. The houses are large and white. Ligne claire art style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 11,
+            "text": "Aprovecho el primer domingo libre para ir al bosque. Gale me espera en nuestro lugar de reunión habitual, junto al saliente rocoso, pero su mirada es gélida. Está dolido por mi compromiso público con Peeta, aunque sepa que es estrategia pura. Le ofrezco una bolsa con comida y unos guantes de Cinna, intentando romper el hielo entre nosotros. Gale se burla de mi papel de «prometida», pero su amargura esconde un dolor profundo. Siento que el bosque, que antes era nuestro refugio secreto, ahora está lleno de muros invisibles.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss meeting Gale in the mist-covered forest. Gale looks stern, leaning against a tree. Katniss is holding out a leather bag. Vibrant but flat colors.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 12,
+            "text": "—El Presidente Snow amenazó con matarte —le confieso de golpe. Gale deja de jugar con su cuchillo y me mira con una seriedad absoluta. Le cuento todo sobre la visita del presidente a mi estudio, los agentes de la paz disparando en el Distrito 11 y la chispa que he encendido sin querer en Panem. Gale escucha en silencio mientras avivamos una pequeña hoguera. Sus manos, fuertes y hábiles, se tensan al comprender que ya no hay vuelta atrás. El peligro que corre mi familia y la suya es ahora una realidad compartida.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Gale sitting by a small, stylized campfire in the woods. Gale has a hard, focused expression. The fire is rendered as swirling orange shapes.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 13,
+            "text": "—Tenemos que huir, Gale —le digo con urgencia—. Podemos coger a nuestras familias y meternos en lo más profundo del bosque. Tú mismo dijiste que podíamos hacerlo la mañana de la cosecha. Recuerdo la esperanza en sus ojos aquel día, pero ahora algo ha cambiado. Le propongo dejar atrás el Distrito 12 para siempre, vivir de la caza y el agua de los arroyos, lejos de la tiranía del Capitolio. Es nuestra única oportunidad de salvar a Prim y a sus hermanos de la inminente venganza de los Vigilantes.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss leaning toward Gale, looking desperate. Gale is staring into the fire. The background is a dense green forest with rounded, puffy tree shapes.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 14,
+            "text": "Pero Gale no se mueve. Me habla de lo que vio en las minas: la gente está hablando, el descontento se extiende como un reguero de pólvora por toda la Veta. Me cuenta que si el Distrito 8 se ha levantado, otros distritos también pueden hacerlo. —No has hecho daño a nadie, Katniss —susurra con una pasión que me asusta—. Les has dado una oportunidad. Solo tienen que ser lo suficientemente valientes para aprovecharla. Gale ya no piensa en huir; ahora piensa en luchar, en convertir la pequeña chispa en un incendio total.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Gale standing up, looking inspired and fierce. He gestures toward the horizon. Katniss looks up at him with a worried, small face. Clear line art.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 15,
+            "text": "La decisión de Gale me deja desolada. Él prefiere quedarse y arriesgarse a una guerra antes que buscar la seguridad silenciosa de los árboles. Entiendo que ya no somos solo dos jóvenes cazadores intentando sobrevivir; Gale se ha convertido en un soldado de la rebelión. Mi plan de escape se desmorona frente a su deseo inquebrantable de libertad. Camino de vuelta a la alambrada, sintiendo el peso de un destino que no he elegido. El Distrito 12 se siente hoy más como una jaula que nunca antes en mi vida.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss walking away from Gale toward the gray fence of the District. Gale is a small shadow in the distance. The sky is a flat, cold blue.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 16,
+            "text": "Al llegar a la Aldea, me encuentro con Peeta. Le hago la misma propuesta desesperada: ¿huirías del distrito conmigo? Él me sujeta del brazo y me mira con una tristeza infinita en sus ojos azules. —Iré si me lo pides, Katniss —responde—, pero estoy convencido de que tú no lo harás al final. Él sabe la verdad que yo intento ocultar: no puedo abandonar a Gale en medio de una revolución. Peeta me suelta, dejándome sola bajo la nieve que empieza a caer. El tablero está listo y yo estoy atrapada.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Peeta holding Katniss's arm under a streetlamp in Victor's Village. Snowflakes are falling. Peeta looks sad and knowing. Full-bleed 2D composition.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

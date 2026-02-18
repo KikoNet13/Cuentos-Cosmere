@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "09",
+    "title": "Mensaje para el Presidente",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T10:00:00Z",
+    "updated_at": "2026-02-18T10:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen in her black Mockingjay suit, standing in front of a massive fire and grey smoke, looking directly into a camera with a fierce, defiant expression.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 9,
+            "text": "Tras ver a Peeta en televisión, huyo a mi escondite habitual: el armario de material escolar del Distrito 13. Me hago un ovillo contra una caja de tizas, sintiendo que el aire me falta. Gale me encuentra y se sienta a mi lado en silencio, compartiendo mi dolor. Le confieso mi mayor temor: Snow está destruyendo a Peeta para castigarme a mí. Gale, con la mirada endurecida por la guerra, toma una decisión. No podemos dejarlo allí; se ofrece voluntario para una misión de rescate en el Capitolio.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss huddled in a dark supply closet filled with wooden boxes of chalk. Gale sits beside her on the floor in a dimly lit concrete room. Clear line style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 10,
+            "text": "La presidenta Coin autoriza la misión de rescate. Boggs liderará a un equipo de élite para infiltrarse en el Centro de Entrenamiento y traer de vuelta a los vencedores. Gale prepara sus flechas con una determinación que me asusta; sé que está dispuesto a morir por rescatar al chico que yo amo. Me obligan a quedarme en el Distrito 13, atrapada entre muros de cemento mientras mis amigos arriesgan sus vidas en el nido de la serpiente. El silencio del búnker se vuelve insoportable mientras espero noticias.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Gale and Boggs checking military gear and black bows in a gray, high-tech hangar. Katniss stands in the background looking small and worried. Ligne claire style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 11,
+            "text": "Para cubrir el asalto, Plutarch organiza una distracción masiva en las ondas. Debemos emitir una propo tan impactante que el Capitolio no pueda apartar la vista de las pantallas ni detectar al equipo de rescate. Finnick y yo nos preparamos en el estudio de televisión. El ambiente es tenso; sabemos que cada segundo que ganemos es una oportunidad de vida para Gale y Boggs. Finnick me mira con ojos cansados pero decididos. Él también tiene a alguien que recuperar: su querida Annie, atrapada en las garras de Snow.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Finnick sitting on a TV set with bright studio lights. Finnick is nervously playing with a piece of rope. They wear gray District 13 uniforms. Flat 2D view.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 12,
+            "text": "Finnick sube al escenario y empieza a hablar con una voz monótona y distante. Ante las cámaras de todo Panem, revela el secreto más oscuro de Snow: cómo el presidente usaba a los vencedores como trofeos y vendía sus cuerpos a los ciudadanos más ricos del Capitolio. Habla de los abusos y de las amenazas de muerte contra sus seres queridos. Es una confesión desgarradora que paraliza a la audiencia y mantiene a Snow ocupado mientras los rebeldes aterrizan en el corazón de la ciudad para cumplir su misión.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A close-up of Finnick speaking into a microphone. His expression is somber and distant. In the background, a screen shows a golden Capitol seal. Vibrant, flat colors.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 13,
+            "text": "Regresamos a la sala de mando para esperar el desenlace. Las pantallas muestran mapas electrónicos y señales de radio distorsionadas que emiten estática. El silencio en el búnker es absoluto, roto solo por el zumbido constante de las máquinas de ventilación. Haymitch no despega los ojos de los monitores, apretando los puños hasta que los nudillos se le vuelven blancos. Me siento pequeña e impotente, rezando para que el aerodeslizador rebelde regrese antes de que las defensas del Capitolio descubran que han sido burladas por completo.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Haymitch standing in front of large glowing digital maps in the Command Center. The room is dark, illuminated by blue and green holographic screens.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 14,
+            "text": "De repente, un grito de alivio recorre la sala. ¡Lo han conseguido! El aerodeslizador aterriza en el hangar y corro hacia allí desesperada. Veo salir a los soldados, cansados y cubiertos de polvo. Gale aparece con el brazo quemado pero con vida. Detrás de él, los médicos transportan camillas con los vencedores rescatados. Veo a Annie, que corre a los brazos de un Finnick que llora de alegría, y a Johanna, demacrada y débil. Mi corazón late con una fuerza salvaje buscando una sola cara entre la multitud de heridos.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Gale being helped off a silver hovercraft by soldiers. In the background, medical teams are carrying stretchers. Katniss is running toward them. Cinematic flat view.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 15,
+            "text": "Me dirijo al hospital del distrito, esquivando a los enfermeros que corren por los pasillos. Encuentro la habitación de Peeta y abro la puerta con las manos temblorosas. Allí está él, tumbado en una cama blanca, con los ojos azules clavados en el techo. Siento una alegría infinita que me hace romper a llorar; Peeta está a salvo, ha vuelto conmigo después de semanas de pesadilla. Me acerco despacio, deseando abrazarlo y decirle que ya nadie podrá hacernos daño en este refugio seguro bajo tierra. Solo quiero tocar su mano.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss standing at the doorway of a bright white hospital room. Peeta is lying on a bed with straps on his arms, looking toward the ceiling. Soft, clinical lighting.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 16,
+            "text": "—Peeta —susurro con amor. Él se vuelve y me mira con una expresión de puro odio, como si estuviera viendo a un monstruo. De repente, salta de la cama con una fuerza sobrehumana y se lanza contra mí. Sus manos se cierran alrededor de mi cuello con una violencia aterradora. Intento gritar, pero el aire no llega. Peeta, el chico del pan, está intentando matarme. Comprendo con horror que el Capitolio no solo lo capturó; lo han transformado en un arma letal diseñada específicamente para destruirme.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Peeta lunging at Katniss, his hands around her throat. His face is distorted with rage. Katniss looks shocked and terrified. High-tension composition. Clear line art.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

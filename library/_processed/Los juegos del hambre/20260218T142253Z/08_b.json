@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "08",
+    "title": "El Sinsajo del Distrito 13",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T12:00:00Z",
+    "updated_at": "2026-02-18T12:00:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen wearing her black Mockingjay suit, standing defiantly against a background of smoke and the blue emblem of District 13.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 9,
+            "text": "El horror de ver a mi equipo de preparación encadenados me consume. Plutarch me explica que los castigaron por robar una ración extra de comida, pero para mí es otra muestra de la rigidez implacable y cruel del Distrito 13. Exijo que los liberen y los lleven al hospital de inmediato para ser curados. «Son mi gente», les grito a los soldados. Comprendo que mi papel como Sinsajo me otorga un poder que debo usar para proteger a los que no tienen voz, incluso si antes servían al Capitolio.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss standing in a dark, clinical room, looking angry at two gray-clad guards. In the corner, Venia and Octavia look thin and bruised, huddled against a wall. Clear line style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 10,
+            "text": "Boggs me conduce a Defensa Especial, un laberinto de alta tecnología oculto bajo la roca. Allí Beetee trabaja en armas asombrosas que aprovechan la ciencia del Distrito 3. Gale elige un arco militar negro, pesado y preciso, diseñado para la guerra real. Yo recibo mi uniforme de Sinsajo definitivo, con sus capas de blindaje y el diseño original de Cinna. Al sujetar mi arco y mis nuevas flechas, el peso de la responsabilidad se vuelve físico. Ya no soy una jugadora de un programa, soy una soldado de la revolución.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Gale in a high-tech armory with silver walls. Gale holds a sleek black military bow, while Katniss touches her black tactical Mockingjay suit on a stand. Vibrant, flat colors.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 11,
+            "text": "Pasamos horas en un estudio de televisión intentando grabar mensajes de propaganda. Fulvia y Plutarch me obligan a usar maquillaje pesado y a gritar lemas sobre la justicia frente a un fondo de humo falso y luces cegadoras. Me siento ridícula y acartonada, como una marioneta que ha olvidado cómo moverse por sí misma. El resultado en las pantallas es un desastre total; parezco una niña asustada intentando actuar. Mi voz suena hueca y mi mirada carece del fuego que encendió a los distritos durante los Juegos.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss on a TV set with bright studio lights and a green screen background. She looks stiff and uncomfortable in her Mockingjay suit, looking at a camera insect. 2D flat composition.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 12,
+            "text": "De repente, una voz familiar y sarcástica resuena en la sala de mando. Es Haymitch. Al ver mi actuación fallida en el monitor, suelta una carcajada que me hiere pero que dice la verdad. Está más delgado y tiene la piel amarillenta por la falta de alcohol, pero su mente sigue siendo igual de afilada y directa. Me mira con desprecio a través de la pantalla y me confirma lo que yo ya sospechaba: soy una actriz pésima. Todos sabemos que para que yo funcione, no necesito guiones del Capitolio.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Haymitch, looking thin and pale in a gray uniform, pointing at a glowing television screen that shows a wooden-looking Katniss. Katniss stands nearby, looking offended. Stage set view.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 13,
+            "text": "Haymitch organiza una reunión con las personas que mejor me conocen: Gale, Sae la Grasienta y otros refugiados. Les pide que recuerden momentos en los que el Sinsajo les hizo sentir esperanza de verdad. «Cuando se presentó voluntaria por Prim», dice uno con emoción. «Cuando decoró el cuerpo de Rue con flores», añade otro. Al ver la lista escrita en la pizarra, comprendo que mi fuerza no está en las frases ensayadas, sino en mis reacciones espontáneas ante el horror y la injusticia que Snow nos impone.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A group of people sitting around a large rectangular table in a concrete room. A chalkboard behind Haymitch lists handwritten Spanish phrases. Katniss looks thoughtful. Minimalist character design.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 14,
+            "text": "La presidenta Coin escucha las conclusiones con su habitual frialdad. Entiende que para que el Sinsajo sea un símbolo eficaz, debe estar donde sucede la lucha real. Deciden enviarme al Distrito 8 para visitar un hospital lleno de heridos tras un bombardeo reciente. Es una apuesta peligrosa; si muero, la rebelión pierde su icono, pero si me quedo encerrada aquí, el símbolo se marchitará sin remedio. Acepto el reto de inmediato, deseando respirar aire exterior aunque huela a humo y el cielo esté lleno de ceniza.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and President Coin facing each other in a cold command center. Coin is rigid, while Katniss looks determined. A holographic map of Panem glows on the table between them. Wide angle.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 15,
+            "text": "Boggs es nombrado mi jefe de seguridad personal para la misión. Es un hombre de aspecto sólido y mirada inteligente en el que empiezo a confiar poco a poco. Me entrena en las maniobras de defensa y me asigna un pelotón de guardaespaldas expertos. Cressida y su equipo de televisión también vendrán para grabarlo todo de forma real. Pollux, uno de los cámaras, es un avox al que el Capitolio le cortó la lengua. Su silencio es un recordatorio constante de la crueldad contra la que estamos luchando finalmente.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss standing with Boggs and a camera crew in a gray hangar. Cressida has a tattooed head and a professional camera. A silver hovercraft is visible in the background. Ligne claire style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 16,
+            "text": "Subimos al aerodeslizador en el hangar subterráneo. El motor vibra bajo mis pies mientras nos deslizamos por los túneles que llevan a la superficie. Al salir a la luz del día, el resplandor me ciega por un instante antes de mostrarme el mundo exterior. Sobrevamos los bosques hacia el Distrito 8, dejando atrás la seguridad asfixiante de las cuevas del 13. Miro a Gale, que sujeta su arco con fuerza, y sé que este es el primer paso de una guerra que cambiará el destino de Panem.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "A view from inside a silver hovercraft looking out at the bright sky and puffy clouds. Katniss and Gale are sitting in military seats, bows ready, looking toward the horizon. Cinematic flat view.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}

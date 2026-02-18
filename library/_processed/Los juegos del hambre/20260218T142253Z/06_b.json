@@ -1,0 +1,112 @@
+﻿{
+    "story_id": "06",
+    "title": "El Vasallaje de los Veinticinco",
+    "status": "draft",
+    "book_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-18T18:00:00Z",
+    "updated_at": "2026-02-18T18:30:00Z",
+    "cover": {
+        "status": "draft",
+        "prompt": "Katniss Everdeen in her black Mockingjay-inspired suit, looking defiant. In the background, a large golden '75' is displayed against a red and black Capitol-themed sky.",
+        "active_id": "",
+        "alternatives": []
+    },
+    "pages": [
+        {
+            "page_number": 9,
+            "text": "Mi cuerpo reacciona antes que mi cerebro. Salgo corriendo por la puerta, cruzo el césped de la Aldea de los Vencedores y me interno en la oscuridad. Llego a una de las casas vacías y me escondo en el sótano. Necesito gritar, dejar salir la histeria que me ahoga. Me meto la blusa en la boca y doy rienda suelta a mi desesperación. Volver a la arena, al origen de todas mis pesadillas. El Capitolio ha encontrado la forma definitiva de destruirnos a todos.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss in a dark, dusty cellar, curled into a ball and crying. Soft moonlight filters through a small basement window. Clear line style.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 10,
+            "text": "Peeta me encuentra en la oscuridad. Sus manos son cálidas y me ayudan a ponerme en pie. Haymitch también está allí, y por primera vez en mucho tiempo, está completamente sobrio. Tomo una decisión: si tengo que volver a los Juegos, haré todo lo posible para que Peeta sea el que regrese a casa sano y salvo. Se lo pido a Haymitch como un favor desesperado. Él asiente, sabiendo que este será nuestro último trato. Ya no somos aliados por estrategia, sino por amor y supervivencia.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta sitting on a wooden bench in a dimly lit room. Peeta is holding her hand, looking supportive. Clear line style with flat colors.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 11,
+            "text": "El día de la cosecha es diferente esta vez. No hay multitudes animando ni cámaras de televisión en la plaza. Romulus Thread se encarga de que todo sea rápido y frío. Effie Trinket, con una peluca de metal dorado y voz temblorosa, saca mi nombre y luego el de Haymitch. Peeta se presenta voluntario de inmediato para ocupar su lugar. Nos empujan hacia un coche que nos lleva directos a la estación. Miro por la ventana cómo desaparece mi hogar, temiendo de verdad no volver a verlo jamás.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta being escorted into a black car by white-clad Peacekeepers. District 12's gray buildings are visible in the background.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 12,
+            "text": "En el tren, el ambiente es lúgubre. Para prepararnos, Peeta y yo empezamos a ver las cintas de los Juegos anteriores. Encontramos una que nunca habíamos visto: el segundo Vasallaje de los Veinticinco, el año en que ganó Haymitch. Vemos a un Haymitch joven y fuerte enfrentándose al doble de tributos de lo normal. Entendemos el precio que pagó por su victoria y por qué el alcohol es su único refugio. Estudiamos a nuestros futuros oponentes, sabiendo que todos ellos son expertos en el arte de matar.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta sitting on a plush sofa inside a train, watching a glowing television screen showing a young Haymitch. Stage set composition.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 13,
+            "text": "Al llegar al Capitolio, mi equipo de preparación me recibe entre lágrimas. Venia, Octavia y Flavius ya no parlotean sobre modas; están destrozados porque saben que esta vez no hay esperanza de indulto. Cinna aparece para rescatarme de su tristeza y me lleva a mi habitación. Me trata con la misma ternura de siempre, aunque sus ojos verdes están cargados de una determinación nueva. «No te rindas, Katniss», me susurra mientras empieza a trabajar en mi nuevo aspecto para la gran ceremonia de apertura.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Cinna, with gold eyeliner, gently placing his hand on Katniss's shoulder in a bright, white dressing room. Minimalist character design.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 14,
+            "text": "El diseño de Cinna para el desfile es asombroso. No son simples llamas; es algo mucho más profundo. Me pone un mono negro ajustado que, al pulsar un botón, empieza a brillar con una luz dorada y rojiza, como carbones ardiendo en una chimenea. Soy una brasa reluciente. Peeta lleva un traje idéntico al mío. Cinna quiere que Panem vea que todavía tenemos fuego dentro, que no somos solo piezas en el tablero de Snow. Me miro al espejo y me siento poderosa, lista para la batalla.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss standing in front of a mirror, wearing a sleek black suit that glows with orange and red light like burning coal. Vibrant colors.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 15,
+            "text": "El Círculo de la Ciudad está a rebosar de gente. Cuando nuestro carro sale a la plaza, el grito de la multitud es ensordecedor. Otros distritos han intentado imitarnos con luces eléctricas, pero nadie brilla como nosotros. Peeta me coge de la mano y levantamos nuestros brazos entrelazados. No buscamos sonreír ni agradar; somos los amantes trágicos del Distrito 12, oscuros y poderosos. Veo al Presidente Snow observándonos desde su balcón y sé que, pase lo que pase, no le daremos el placer de vernos derrotados.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Katniss and Peeta standing on a black chariot, holding hands and raising them high. Artificial orange embers trail behind them. Wide angle.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        },
+        {
+            "page_number": 16,
+            "text": "Tras el desfile, conocemos a los otros vencedores en el Centro de Entrenamiento. Finnick Odair, el chico de los tridentes del Distrito 4, me ofrece un terrón de azúcar con una sonrisa seductora. Johanna Mason, del Distrito 7, se quita su disfraz de árbol con total descaro frente a nosotros. Son guerreros curtidos, gente que ha sobrevivido a lo imposible. Me doy cuenta de que estos Juegos no se parecerán en nada a los primeros. Aquí, todos somos asesinos profesionales y el peligro acecha en cada rincón.",
+            "images": {
+                "main": {
+                    "status": "draft",
+                    "prompt": "Finnick Odair, with wavy blonde hair, holding a small sugar cube toward Katniss. Johanna Mason stands in the background. Flat 2D view.",
+                    "active_id": "",
+                    "alternatives": []
+                }
+            }
+        }
+    ]
+}
