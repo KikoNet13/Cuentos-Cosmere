@@ -1,6 +1,16 @@
 # Indice de tareas
 
-- Proximo ID: `031`
+- Proximo ID: `032`
+
+## TAREA-031-contexto-notebooklm-placeholders-meta-anchors
+
+- Fecha: 18/02/26 22:08
+- Estado: cerrada
+- Resumen: ajuste de placeholders `NN_prompts.json` para NotebookLM sin dependencias de rutas/webapp y alta de `meta_prompts.json` para generar `meta.json` con anchors.
+- Version: 2.7.1
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-031-contexto-notebooklm-placeholders-meta-anchors.md`
 
 ## TAREA-030-placeholders-nn-prompts-notebooklm-orquestador
 

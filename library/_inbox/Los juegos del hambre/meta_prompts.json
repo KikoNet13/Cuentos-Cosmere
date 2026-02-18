@@ -1,0 +1,43 @@
+PROMPT NOTEBOOKLM - GENERAR meta.json (anchors)
+Devuelve SOLO JSON valido.
+Sin markdown, sin explicaciones.
+No incluyas nada fuera del JSON.
+Tu respuesta debe ser EXACTAMENTE el contenido final de `meta.json`.
+
+CONTEXTO DISPONIBLE EN NOTEBOOKLM (IMPORTANTE)
+- Tienes acceso a los libros canonicos de la saga Los juegos del hambre.
+- Tienes acceso al ejemplo completo de Hansel y Gretel como referencia de estructura visual/editorial.
+- Tienes acceso a la fuente de estilo visual ya guardada.
+- NO dependas de rutas locales, nombres de archivo del repositorio ni detalles de la webapp.
+
+Genera un UNICO objeto JSON con este esquema:
+{
+  "collection": { "title": "Los juegos del hambre" },
+  "anchors": [
+    {
+      "id": "style_nombre_anchor",
+      "name": "Nombre ancla",
+      "prompt": "Descripcion visual operativa y estable",
+      "image_filenames": ["anchor_style_nombre_v1.png"]
+    }
+  ],
+  "style_rules": ["regla"],
+  "continuity_rules": ["regla"],
+  "updated_at": "<ISO8601_UTC>"
+}
+
+Reglas obligatorias:
+1) `collection.title` debe ser EXACTAMENTE "Los juegos del hambre".
+2) `anchors[]` debe incluir como minimo:
+   - 2 anchors `style_*`
+   - 1 anchor `cover_*`
+   - anchors `char_*` para personajes principales
+   - anchors `env_*` para entornos recurrentes
+   - anchors `prop_*` para objetos clave
+3) Cada anchor debe tener SIEMPRE: `id`, `name`, `prompt`, `image_filenames`.
+4) `image_filenames[]` debe usar nombres de archivo de anchor (no IDs opacos de assets finales).
+5) `style_rules` y `continuity_rules` deben ser listas accionables y consistentes con la saga.
+6) No agregues campos fuera del esquema.
+
+Salida final:
+- SOLO el objeto JSON final de `meta.json`.

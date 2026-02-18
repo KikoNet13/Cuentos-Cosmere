@@ -5,6 +5,25 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [18/02/26] - Contexto NotebookLM en placeholders + meta anchors
+
+- Se corrigen los placeholders `01..11_prompts.json` para operar en NotebookLM sin depender de rutas/ficheros locales ni de la webapp.
+- Se agrega bloque explicito de contexto disponible en NB:
+  - libros canonicos,
+  - ejemplo Hansel y Gretel,
+  - fuente de estilo ya cargada.
+- Se ajusta la instruccion de referencias:
+  - usar anchors del `meta.json` (`style_*`, `char_*`, `env_*`, `prop_*`, `cover_*`).
+- Se crea placeholder faltante:
+  - `library/_inbox/Los juegos del hambre/meta_prompts.json`,
+  - para pedir a NB el `meta.json` completo con anchors y reglas.
+- Validacion automatica:
+  - 11 placeholders de cuentos detectados con patron correcto,
+  - clausulas de salida estricta presentes,
+  - `meta_prompts.json` presente y consistente.
+- No se restauran backups ni se modifica `NN.json` en este ajuste.
+- Tarea: `docs/tasks/TAREA-031-contexto-notebooklm-placeholders-meta-anchors.md`.
+
 ## [18/02/26] - Placeholders `NN_prompts.json` para pedir prompts completos a NotebookLM
 
 - Se crea parche de orquestacion para `Los juegos del hambre`:
