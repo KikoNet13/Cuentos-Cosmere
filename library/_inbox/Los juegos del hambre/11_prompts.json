@@ -8,78 +8,13 @@ CONTEXTO DISPONIBLE EN NOTEBOOKLM (IMPORTANTE)
 - Tienes acceso a los libros canonicos de la saga Los juegos del hambre.
 - Tienes acceso al ejemplo completo de Hansel y Gretel como referencia de estructura de prompts.
 - Tienes acceso a la fuente de estilo visual ya guardada.
+- Revisa tambien la NUEVA FUENTE: `FUENTE_NB_los_juegos_textos_y_anchors.md`.
 - NO dependas de rutas locales, nombres de archivo del repositorio ni detalles de la webapp.
 
-TEXTO BASE DEL CUENTO (USAR COMO FUENTE NARRATIVA PARA PAGE_PROMPTS)
-- Usa este texto como base obligatoria para cada `page_number`.
-- NO inventes ni cambies el orden de paginas.
-- Si hay conflicto, prioriza este bloque.
-[
-  {
-    "page_number": 1,
-    "text": "Avanzamos hacia el corazón del Capitolio, esquivando las últimas defensas de Snow. Gale y yo nos movemos entre las sombras de los edificios de colores pastel, ahora manchados de hollín y sangre. A lo lejos, la mansión presidencial brilla bajo el cielo gris, rodeada por una barrera de agentes de la paz. El aire está cargado del olor a pólvora y desesperación. Siento que el final de esta larga pesadilla está a solo unos pasos de distancia, pero el peligro acecha en cada esquina de estas calles desconocidas."
-  },
-  {
-    "page_number": 2,
-    "text": "Llegamos al Círculo de la Ciudad y nos encontramos con una escena desgarradora. Cientos de niños del Capitolio han sido colocados frente a las puertas de la mansión, formando un escudo humano. Tiritan de frío, rodeados por una barricada de agentes de la paz que parecen tan confundidos como nosotros. No entiendo qué planea Snow al usar a sus propios ciudadanos de esta manera. La multitud de rebeldes presiona desde los laterales, creando un caos de gritos y disparos que resuena en las paredes de mármol."
-  },
-  {
-    "page_number": 3,
-    "text": "De repente, un aerodeslizador con el sello del Capitolio aparece sobre nuestras cabezas. El rugido de sus motores ahoga el clamor de la plaza. En lugar de bombas, vemos caer cientos de pequeños paracaídas plateados, iguales a los que traían regalos en la arena. Los niños extienden las manos con esperanza, creyendo que el Gobierno les envía comida o ayuda en medio del asedio. Observo el descenso lento y brillante de la seda, sintiendo un presentimiento glacial que me recorre la columna vertebral. Algo no encaja."
-  },
-  {
-    "page_number": 4,
-    "text": "La primera oleada de paracaídas estalla antes de tocar el suelo. Una serie de explosiones coordinadas convierte la nieve en una carnicería roja. El suelo vibra y el aire se llena de humo acre. Los gritos de los niños son ensordecedores mientras los agentes de la paz intentan retirar las barricadas para ayudar. Es una trampa cruel diseñada para causar el máximo dolor. Me quedo paralizada, con el arco bajado, viendo cómo la inocencia se desintegra en un instante bajo el poder despiadado de los que mandan."
-  },
-  {
-    "page_number": 5,
-    "text": "En medio del caos, un grupo de sanitarios rebeldes con uniformes blancos corre hacia el centro de la plaza. Se abren paso entre la multitud para atender a los heridos que agonizan en el suelo. Busco a Gale con la mirada, pero mis ojos se clavan en una figura pequeña que se mueve con determinación. Una trenza rubia, un abrigo que se quita para cubrir a un niño herido... El corazón me da un vuelco salvaje. Es una visión imposible en este infierno de fuego y escombros."
-  },
-  {
-    "page_number": 6,
-    "text": "Es Prim. Mi hermana está allí, en el corazón del desastre, haciendo lo que mejor sabe: curar. La veo arrodillada sobre un niño que llora, su colita de pato asomando por la blusa como aquel día de la cosecha. Intento gritar su nombre, abrirme paso entre la masa humana que me empuja hacia atrás. Ella levanta la vista y, por un segundo, nuestras miradas se encuentran. Sus labios forman mi nombre justo cuando estalla la segunda oleada de paracaídas, envolviéndolo todo en una bola de fuego insoportable."
-  },
-  {
-    "page_number": 7,
-    "text": "El fuego me alcanza y me transforma en una criatura de llamas, el pájaro de Cinna consumiéndose en su propia esencia. Siento que mi piel se derrite mientras caigo hacia un abismo de agonía absoluta. No hay sonido, solo un ardor implacable que me borra la conciencia. Los rostros de los que amo vuelan como pájaros por un cielo negro antes de que la oscuridad se lo trague todo. El Sinsajo ha caído y, con él, la última chispa de mi voluntad de seguir luchando en este mundo."
-  },
-  {
-    "page_number": 8,
-    "text": "Despierto en un mundo de blanco y silencio, atrapada en una cama de hospital del Capitolio. Mi piel es un rompecabezas de injertos rosados y cicatrices rojas, un mapa del dolor que me ha dejado marcada para siempre. Me dicen que la guerra ha terminado, que Snow ha sido capturado y que los rebeldes han vencido finalmente. Pero yo no siento la victoria. Solo hay un vacío inmenso en mi pecho y un silencio que me impide gritar. Me he convertido en una avox mental, una sombra que ya no reconoce su propia voz."
-  },
-  {
-    "page_number": 9,
-    "text": "Despierto en una habitación blanca del Capitolio. Prim ha muerto y el vacío en mi pecho es más doloroso que las quemaduras que cubren mi piel. Me he convertido en un avox mental, alguien que ha perdido su voz ante el horror de la pérdida. Los médicos dicen que estoy recuperándome, pero mi mente solo repite los nombres de los caídos. Me siento como una pieza rota de un mecanismo que ya no tiene sentido, esperando el final de la historia."
-  },
-  {
-    "page_number": 10,
-    "text": "Un día camino por los pasillos hasta el jardín de rosas del Presidente Snow. Allí lo encuentro, débil y sentenciado. Me mira con sus ojos de serpiente y suelta una risa ahogada. Me dice que no fue él quien mató a Prim, sino que Coin soltó los paracaídas para forzar la rendición del Capitolio. «Nos han tomado a los dos por idiotas», susurra. El aroma dulce de las rosas oculta el rastro de la sangre y comprendo que el enemigo ha cambiado de rostro."
-  },
-  {
-    "page_number": 11,
-    "text": "La Presidenta Coin nos reúne a los últimos vencedores. Propone unos Juegos del Hambre simbólicos con los hijos de los líderes del Capitolio. Peeta se opone con horror, pero Johanna y Enobaria quieren venganza. Miro a Peeta y recuerdo a mi hermana. «Voto que sí», digo con firmeza, «por Prim». Haymitch me observa durante un largo silencio, comprende mi intención oculta y decide apoyarme. El tablero está listo para el movimiento final del Sinsajo y el destino de Coin."
-  },
-  {
-    "page_number": 12,
-    "text": "Llega el momento de la ejecución. Una multitud inmensa llena la plaza frente a la mansión. Snow está atado a un poste, esperando mi flecha. Levanto el arco de Sinsajo y apunto a su corazón. Recuerdo sus palabras sobre la bomba de Coin. En el último segundo, muevo la punta de la flecha hacia arriba y atravieso el pecho de la Presidenta Coin. Snow se ríe a carcajadas mientras se ahoga. El caos estalla en la plaza y yo sé que, por fin, he hecho justicia."
-  },
-  {
-    "page_number": 13,
-    "text": "Me encierran durante meses, pero al final deciden que estoy demasiado rota para ser juzgada. Me envían de vuelta al Distrito 12, escoltada por un Haymitch silencioso. Al llegar, descubro que mi antiguo hogar es un desierto de cenizas grises. Me instalo en la Aldea de los Vencedores, donde el silencio es el único habitante. Me siento en mi cocina frente al fuego y espero a que el tiempo se lleve los recuerdos del fuego y la sangre de la guerra que terminó."
-  },
-  {
-    "page_number": 14,
-    "text": "Una mañana de primavera, Peeta aparece en mi jardín. Está plantando prímulas amarillas para que el jardín siempre me recuerde a mi hermana Prim. Trae pan caliente de la panadería y, por primera vez en mucho tiempo, compartimos un desayuno de verdad. Peeta todavía tiene momentos de oscuridad, pero su bondad sigue siendo el único refugio que me queda. Juntos, empezamos a limpiar las cenizas de la Veta y a sembrar semillas de una vida nueva sobre las ruinas del pasado."
-  },
-  {
-    "page_number": 15,
-    "text": "Creamos un libro de recuerdos juntos. En sus páginas de pergamino dibujamos a todos los que amamos y perdimos: el color de los ojos de Finnick, la risa de mi padre, la valentía de Rue y la sonrisa de Prim. Escribimos sus historias para que el mundo nunca olvide lo que pasó ni el precio que pagamos por la libertad. Haymitch se une a nosotros, aportando los nombres de los tributos a los que no pudo salvar. Este libro es nuestra forma de sanar las heridas."
-  },
-  {
-    "page_number": 16,
-    "text": "Han pasado veinte años. Mis hijos juegan sobre la hierba de la pradera, corriendo bajo el sol sin saber que juegan sobre un cementerio. A veces las pesadillas regresan y me despierto gritando, pero Peeta me abraza y me recuerda qué es real. Le contaré a mis hijos cómo sobrevivimos y por qué el mundo es diferente ahora. Miro el horizonte y siento paz. «¿Me amas?», pregunta él. «Real», respondo. Por fin, los Juegos del Hambre han terminado para siempre."
-  }
-]
+En `FUENTE_NB_los_juegos_textos_y_anchors.md` tienes:
+- texto completo por pagina del cuento;
+- anchors canonicos del meta de saga;
+- ids y `image_filenames` para referencias visuales.
 
 Genera un UNICO objeto JSON con este esquema:
 {
@@ -90,18 +25,12 @@ Genera un UNICO objeto JSON con este esquema:
   "cover_prompt": "<prompt largo>",
   "page_prompts": [
     { "page_number": 1, "main_prompt": "<prompt largo>" }
-  ],
-  "secondary_prompts": [
-    { "page_number": 1, "secondary_prompt": "<prompt largo>" }
   ]
 }
 
 Reglas obligatorias:
-1) `story_id`, `title` y `book_rel_path` deben coincidir EXACTAMENTE con:
-   - story_id: "11"
-   - title: "El Final de los Juegos"
-   - book_rel_path: "los_juegos_del_hambre"
-2) `cover_prompt` debe estar en espanol estructurado, longitud 900-1700 caracteres, y contener EXACTAMENTE estos 8 bloques en orden:
+1) `story_id`, `title` y `book_rel_path` deben coincidir EXACTAMENTE con esta historia.
+2) `cover_prompt` en espanol estructurado, 900-1700 caracteres, con EXACTAMENTE estos 8 bloques en orden:
    - OBJETIVO DE ILUSTRACION
    - CONTINUIDAD VISUAL OBLIGATORIA
    - COMPOSICION Y ENCUADRE
@@ -110,12 +39,12 @@ Reglas obligatorias:
    - REFERENCIAS (reference_ids)
    - RESTRICCIONES / NEGATIVOS
    - FORMATO DE SALIDA
-3) Cada `page_prompts[].main_prompt` debe estar en espanol estructurado, longitud 700-1500 caracteres, y contener los mismos 8 bloques en orden.
-4) No incluyas `secondary_prompts` para este cuento; devuelve solo `cover_prompt` y `page_prompts` de main.
-5) `page_prompts` debe cubrir EXACTAMENTE estas paginas del cuento: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
-6) Cada `page_number` debe aparecer una sola vez.
-7) Mantener continuidad de personajes, entornos y props segun el canon de la saga.
-8) En cada bloque `REFERENCIAS (reference_ids)`, usa anchors coherentes con el `meta.json` de la saga (style_*, char_*, env_*, prop_*, cover_*).
+3) Cada `page_prompts[].main_prompt` en espanol estructurado, 700-1500 caracteres, con los mismos 8 bloques en orden.
+4) `page_prompts` debe cubrir EXACTAMENTE estas paginas: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
+5) Cada `page_number` aparece una sola vez.
+6) Construye el contenido de cada prompt usando el texto de pagina de `FUENTE_NB_los_juegos_textos_y_anchors.md`.
+7) En el bloque `REFERENCIAS (reference_ids)`, usa anchors del meta canonico de la saga presentes en `FUENTE_NB_los_juegos_textos_y_anchors.md`.
+8) Anchors canonicos disponibles (IDs): char_beetee_base, char_coin_base, char_effie_base, char_finnick_base, char_gale_base, char_haymitch_base, char_johanna_base, char_katniss_base, char_peeta_base, char_prim_base, char_rue_base, char_snow_base, cover_mockingjay_collection, env_arena_clock, env_arena_forest, env_district12_seam, env_district13_bunker, env_reaping_square, env_train_capitol, prop_bow_arrow, prop_bread_loaf, prop_mockingjay_pin, prop_nightlock_berries, prop_parachute_gift, prop_president_rose, style_linea_editorial, style_paleta_rebelion
 9) No cambies el schema, no agregues campos, no elimines campos obligatorios.
 
 Salida final:

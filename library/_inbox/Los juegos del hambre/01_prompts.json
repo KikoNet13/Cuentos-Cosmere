@@ -8,78 +8,13 @@ CONTEXTO DISPONIBLE EN NOTEBOOKLM (IMPORTANTE)
 - Tienes acceso a los libros canonicos de la saga Los juegos del hambre.
 - Tienes acceso al ejemplo completo de Hansel y Gretel como referencia de estructura de prompts.
 - Tienes acceso a la fuente de estilo visual ya guardada.
+- Revisa tambien la NUEVA FUENTE: `FUENTE_NB_los_juegos_textos_y_anchors.md`.
 - NO dependas de rutas locales, nombres de archivo del repositorio ni detalles de la webapp.
 
-TEXTO BASE DEL CUENTO (USAR COMO FUENTE NARRATIVA PARA PAGE_PROMPTS)
-- Usa este texto como base obligatoria para cada `page_number`.
-- NO inventes ni cambies el orden de paginas.
-- Si hay conflicto, prioriza este bloque.
-[
-  {
-    "page_number": 1,
-    "text": "Cuando me despierto, el otro lado de la cama está frío. Estiro los dedos buscando el calor de mi hermana pequeña, pero solo encuentro la basta funda de lona del colchón. Prim debe de haber tenido pesadillas, por eso se ha metido en la cama de nuestra madre. Es normal estar asustada; hoy es el día de la cosecha. En nuestro hogar, en la Veta del Distrito 12, el miedo es lo único que sobra. Me levanto en silencio, me pongo mis botas de cuero y me preparo para salir a los bosques."
-  },
-  {
-    "page_number": 2,
-    "text": "Caminar por la Veta es como atravesar un mar de ceniza y carbón. Los mineros avanzan encorvados hacia las fosas, con los rostros ennegrecidos por el polvo. Me dirijo hacia la alambrada que rodea el distrito, una barrera de metal que se supone debería estar electrificada las veinticuatro horas para protegernos de los depredadores del bosque. Sin embargo, casi siempre está tan silenciosa como una piedra. Me deslizo por debajo de un punto débil en la red y, en un instante, dejo atrás la prisión que es mi ciudad para entrar en la libertad de los árboles."
-  },
-  {
-    "page_number": 3,
-    "text": "En cuanto estoy entre los árboles, recupero mi arco y mi carcaj de flechas escondidos en un tronco hueco. Mi padre fabricó este arco antes de morir en la explosión de la mina; es mi tesoro más valioso. Aquí en los bosques, la caza es ilegal y el castigo es la muerte, pero es la única forma de que mi familia no muera de hambre. Me muevo con sigilo, escuchando el canto de los pájaros y el crujir de las hojas, sintiéndome al fin dueña de mis propios pasos."
-  },
-  {
-    "page_number": 4,
-    "text": "—Hola, Catnip —me saluda una voz conocida. Es Gale. Verlo allí, esperándome en nuestro saliente rocoso, es lo único que me hace sonreír de verdad. Gale es mi mejor amigo y mi compañero de caza. Hoy trae una hogaza de pan auténtico que ha conseguido en la panadería a cambio de una ardilla. Nos sentamos a desayunar frente al valle, disfrutando del sabor del pan y de unas bayas dulces que acabamos de recoger. Por un momento, el peligro de la cosecha parece estar muy lejos de nosotros."
-  },
-  {
-    "page_number": 5,
-    "text": "—Podríamos hacerlo, Katniss —dice Gale en voz baja—. Dejar el distrito, huir y vivir en el bosque. Tú y yo podríamos sobrevivir. Lo miro sorprendida. La idea es tan absurda como hermosa, pero ambos sabemos la verdad: no podemos abandonar a nuestras familias. Gale tiene hermanos pequeños y yo tengo a Prim y a mi madre. ¿Quién las alimentaría si nos fuéramos? La responsabilidad pesa más que el deseo de libertad. Nos levantamos en silencio, recogemos nuestras presas y nos preparamos para volver al polvo del Distrito 12."
-  },
-  {
-    "page_number": 6,
-    "text": "Pasamos por el Quemador, el mercado negro del distrito, para cambiar nuestras presas por un poco de manteca y sal. Después vamos a la casa del alcalde para vender unas fresas. Madge, su hija, nos abre la puerta vestida con un caro traje blanco para la ceremonia. Lleva un broche de oro con un pequeño pájaro grabado: un sinsajo. Gale se muestra amargo ante su elegancia, recordándole que los pobres siempre tienen más papeletas en la urna de la cosecha. La injusticia de Panem es una herida que Gale nunca deja de tocar."
-  },
-  {
-    "page_number": 7,
-    "text": "El sistema de la cosecha es cruel. Al cumplir doce años, tu nombre entra una vez en el sorteo, y cada año se añaden más papeletas. Como somos pobres, Gale y yo hemos tenido que pedir teselas: pequeños suministros de cereales a cambio de meter nuestro nombre más veces en las urnas. Yo tengo dieciséis años y mi nombre está escrito veinte veces. Gale, que alimenta a una familia de cinco, tiene cuarenta y dos papeletas. Prim, que acaba de cumplir los doce, solo tiene una. Ella debería estar a salvo de cualquier peligro hoy."
-  },
-  {
-    "page_number": 8,
-    "text": "En casa, mi madre y Prim ya están listas. Prim lleva un vestido que se le queda un poco grande, con la blusa saliéndose por detrás como una cola de pato. Intento calmar sus nervios mientras la ayudo a peinarse. Ella está preocupada por mí, temiendo que mi nombre sea el elegido entre los miles de trozos de papel. Le prometo que todo saldrá bien, aunque por dentro siento un nudo de angustia que me oprime el pecho. Nos cogemos de la mano y nos dirigimos a la plaza principal del Distrito 12."
-  },
-  {
-    "page_number": 9,
-    "text": "La plaza está abarrotada y el ambiente es asfixiante. Los agentes de la paz nos dirigen a áreas delimitadas por edades; los mayores delante y los jóvenes, como Prim, detrás. El Edificio de Justicia se alza frente a nosotros, decorado con banderas del Capitolio. En el escenario han colocado tres sillas y dos grandes urnas de cristal. Una para los chicos y otra para las chicas. Miro hacia la urna de las chicas y trato de imaginar mis veinte nombres mezclados entre la multitud de papeles blancos. El silencio es absoluto, roto solo por el viento."
-  },
-  {
-    "page_number": 10,
-    "text": "El alcalde Undersee sube al podio y comienza a leer la historia oficial de Panem. Habla de los Días Oscuros, de la rebelión de los trece distritos contra el Capitolio y de cómo doce de ellos fueron derrotados. Para recordarnos nuestra traición y garantizar la paz, nacieron los Juegos del Hambre. Cada año, cada distrito debe entregar a un chico y una chica para que luchen a muerte en una arena hasta que solo quede uno. Es el castigo del Capitolio, su forma de decirnos que nuestros hijos les pertenecen."
-  },
-  {
-    "page_number": 11,
-    "text": "Entonces aparece Effie Trinket, la acompañante del Distrito 12, enviada directamente desde el Capitolio. Lleva una peluca rosa chillón y un traje verde primavera que parece una broma pesada en medio de nuestra miseria. Con su eterna sonrisa blanca, sube al escenario y saluda con su habitual alegría artificial. —¡Felices Juegos del Hambre! ¡Y que la suerte esté siempre de vuestra parte! —exclama con entusiasmo. Nadie responde. En la Veta, la suerte no es algo que se pida, es algo que se sobrevive. Ha llegado el momento del sorteo."
-  },
-  {
-    "page_number": 12,
-    "text": "Effie se dirige a la urna de cristal de las chicas. «Las damas primero», anuncia con voz cantarina. Mete la mano en el fondo del recipiente y remueve los miles de papeles antes de sacar uno. La multitud contiene el aliento. Yo cierro los ojos con fuerza y rezo para que no sea yo, para que mis veinte papeletas se queden en el fondo. Effie vuelve al podio, alisa el trozo de papel y lee el nombre con una claridad aterradora que resuena en todos los rincones de la plaza. No es mi nombre."
-  },
-  {
-    "page_number": 13,
-    "text": "—¡Primrose Everdeen! —grita Effie. El mundo se detiene. Siento como si me hubieran arrancado todo el aire de los pulmones. Me vuelvo y veo a Prim, pequeña y aterrorizada, dando un paso al frente desde la sección de los doce años. Su blusa se le ha vuelto a salir por detrás, pareciendo más frágil que nunca. No puede ser ella. Ella solo tiene una papeleta entre miles. Es imposible. Pero Prim sigue avanzando hacia el escenario, con los ojos muy abiertos, como si estuviera caminando sonámbula hacia su propia ejecución."
-  },
-  {
-    "page_number": 14,
-    "text": "—¡Prim! —El grito sale de mi garganta antes de que pueda pensar. Corro desesperada, abriéndome paso entre los chicos hasta alcanzarla justo antes de que suba los escalones. La empujo detrás de mí, protegiéndola con mi cuerpo. —¡Me presento voluntaria! —grito con voz ahogada—. ¡Me presento voluntaria como tributo! En el escenario se produce una conmoción. En el Distrito 12 no hemos tenido voluntarios en décadas. Para nosotros, la palabra tributo es sinónimo de cadáver, pero no voy a dejar que se lleven a mi hermana pequeña."
-  },
-  {
-    "page_number": 15,
-    "text": "Gale se apresura a apartar a Prim, que grita desconsolada mientras él la levanta en el aire para llevársela con nuestra madre. Me obligo a subir los escalones con la cabeza alta. No voy a llorar, no delante de las cámaras del Capitolio que retransmiten esto a todo el país. Effie Trinket está encantada de ver por fin algo de acción en su distrito. —¡Qué espíritu! —exclama entusiasmada—. ¿Cómo te llamas? —Katniss Everdeen —respondo tras tragar saliva. El público guarda un silencio absoluto, un gesto de respeto y protesta ante mi sacrificio."
-  },
-  {
-    "page_number": 16,
-    "text": "Todavía falta el tributo masculino. Effie saca un nombre de la segunda urna: Peeta Mellark. El hijo del panadero ocupa su lugar en el escenario a mi lado. Recuerdo aquel día de lluvia, hace años, cuando Peeta me dio un trozo de pan quemado para salvarme del hambre. Ahora, ese mismo chico tendrá que luchar contra mí en la arena. Nos damos la mano frente a la multitud mientras el himno de Panem empieza a sonar. La cosecha ha terminado. Mañana dejaremos el Distrito 12 para siempre. Que empiecen los Septuagésimo Cuartos Juegos del Hambre."
-  }
-]
+En `FUENTE_NB_los_juegos_textos_y_anchors.md` tienes:
+- texto completo por pagina del cuento;
+- anchors canonicos del meta de saga;
+- ids y `image_filenames` para referencias visuales.
 
 Genera un UNICO objeto JSON con este esquema:
 {
@@ -90,18 +25,12 @@ Genera un UNICO objeto JSON con este esquema:
   "cover_prompt": "<prompt largo>",
   "page_prompts": [
     { "page_number": 1, "main_prompt": "<prompt largo>" }
-  ],
-  "secondary_prompts": [
-    { "page_number": 1, "secondary_prompt": "<prompt largo>" }
   ]
 }
 
 Reglas obligatorias:
-1) `story_id`, `title` y `book_rel_path` deben coincidir EXACTAMENTE con:
-   - story_id: "01"
-   - title: "La Cosecha de Katniss"
-   - book_rel_path: "los_juegos_del_hambre"
-2) `cover_prompt` debe estar en espanol estructurado, longitud 900-1700 caracteres, y contener EXACTAMENTE estos 8 bloques en orden:
+1) `story_id`, `title` y `book_rel_path` deben coincidir EXACTAMENTE con esta historia.
+2) `cover_prompt` en espanol estructurado, 900-1700 caracteres, con EXACTAMENTE estos 8 bloques en orden:
    - OBJETIVO DE ILUSTRACION
    - CONTINUIDAD VISUAL OBLIGATORIA
    - COMPOSICION Y ENCUADRE
@@ -110,12 +39,12 @@ Reglas obligatorias:
    - REFERENCIAS (reference_ids)
    - RESTRICCIONES / NEGATIVOS
    - FORMATO DE SALIDA
-3) Cada `page_prompts[].main_prompt` debe estar en espanol estructurado, longitud 700-1500 caracteres, y contener los mismos 8 bloques en orden.
-4) No incluyas `secondary_prompts` para este cuento; devuelve solo `cover_prompt` y `page_prompts` de main.
-5) `page_prompts` debe cubrir EXACTAMENTE estas paginas del cuento: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
-6) Cada `page_number` debe aparecer una sola vez.
-7) Mantener continuidad de personajes, entornos y props segun el canon de la saga.
-8) En cada bloque `REFERENCIAS (reference_ids)`, usa anchors coherentes con el `meta.json` de la saga (style_*, char_*, env_*, prop_*, cover_*).
+3) Cada `page_prompts[].main_prompt` en espanol estructurado, 700-1500 caracteres, con los mismos 8 bloques en orden.
+4) `page_prompts` debe cubrir EXACTAMENTE estas paginas: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
+5) Cada `page_number` aparece una sola vez.
+6) Construye el contenido de cada prompt usando el texto de pagina de `FUENTE_NB_los_juegos_textos_y_anchors.md`.
+7) En el bloque `REFERENCIAS (reference_ids)`, usa anchors del meta canonico de la saga presentes en `FUENTE_NB_los_juegos_textos_y_anchors.md`.
+8) Anchors canonicos disponibles (IDs): char_beetee_base, char_coin_base, char_effie_base, char_finnick_base, char_gale_base, char_haymitch_base, char_johanna_base, char_katniss_base, char_peeta_base, char_prim_base, char_rue_base, char_snow_base, cover_mockingjay_collection, env_arena_clock, env_arena_forest, env_district12_seam, env_district13_bunker, env_reaping_square, env_train_capitol, prop_bow_arrow, prop_bread_loaf, prop_mockingjay_pin, prop_nightlock_berries, prop_parachute_gift, prop_president_rose, style_linea_editorial, style_paleta_rebelion
 9) No cambies el schema, no agregues campos, no elimines campos obligatorios.
 
 Salida final:

@@ -5,6 +5,27 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [18/02/26] - Fuente NB unica con textos y anchors + regen de placeholders
+
+- Se crea fuente central para NotebookLM:
+  - `library/_inbox/Los juegos del hambre/FUENTE_NB_los_juegos_textos_y_anchors.md`.
+- La fuente incluye:
+  - anchors canonicos del meta (`id`, `name`, `prompt`, `image_filenames`),
+  - textos completos por cuento y pagina (`01..11`).
+- Se regeneran `01..11_prompts.json` para referenciar esa fuente nueva:
+  - prompts mas cortos para copy/paste,
+  - sin dependencia de rutas locales ni webapp,
+  - salida estricta en JSON puro.
+- Se actualiza `meta_prompts.json`:
+  - exige inclusion de TODOS los anchors canonicos,
+  - incluye listado explicito de IDs obligatorios.
+- Validacion automatica:
+  - fuente presente,
+  - 11 placeholders referenciando la fuente,
+  - reglas de salida estricta y meta completas (`NB_SOURCE_AND_PLACEHOLDERS_OK`).
+- No se restauran backups ni se modifica `NN.json`.
+- Tarea: `docs/tasks/TAREA-033-fuente-nb-unica-textos-anchors-regen-placeholders.md`.
+
 ## [18/02/26] - Placeholders con texto de paginas para NotebookLM
 
 - Se actualizan `01..11_prompts.json` en `library/_inbox/Los juegos del hambre/` para incluir el texto narrativo completo por pagina.

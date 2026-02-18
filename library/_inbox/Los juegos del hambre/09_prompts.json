@@ -8,78 +8,13 @@ CONTEXTO DISPONIBLE EN NOTEBOOKLM (IMPORTANTE)
 - Tienes acceso a los libros canonicos de la saga Los juegos del hambre.
 - Tienes acceso al ejemplo completo de Hansel y Gretel como referencia de estructura de prompts.
 - Tienes acceso a la fuente de estilo visual ya guardada.
+- Revisa tambien la NUEVA FUENTE: `FUENTE_NB_los_juegos_textos_y_anchors.md`.
 - NO dependas de rutas locales, nombres de archivo del repositorio ni detalles de la webapp.
 
-TEXTO BASE DEL CUENTO (USAR COMO FUENTE NARRATIVA PARA PAGE_PROMPTS)
-- Usa este texto como base obligatoria para cada `page_number`.
-- NO inventes ni cambies el orden de paginas.
-- Si hay conflicto, prioriza este bloque.
-[
-  {
-    "page_number": 1,
-    "text": "Llegamos al Distrito 8, un lugar de asfalto y humo constante. Boggs me guía con paso firme hacia un almacén que sirve como hospital improvisado para los rebeldes. Al entrar, el olor a metal y antiséptico me golpea, pero nada me prepara para lo que ven mis ojos. Cientos de personas heridas, hombres, mujeres y niños, están amontonadas en camillas sobre el frío suelo de cemento. La comandante Paylor me observa con desconfianza, pero yo solo puedo mirar a los pacientes. He venido para que me vean, pero me siento pequeña ante tanto dolor real."
-  },
-  {
-    "page_number": 2,
-    "text": "Camino despacio entre las filas de heridos. Un hombre me toca el brazo con dedos temblorosos y su cara se ilumina al reconocer el Sinsajo grabado en mi uniforme negro. Poco a poco, los que aún pueden moverse empiezan a susurrar y corear mi nombre con voces roncas por el humo. Siento una chispa de poder que no conocía; Snow tenía razón al temerme tanto. Ya no soy una simple pieza en su tablero, soy el rostro de su destrucción. Cressida y su equipo de televisión lo graban todo, capturando la conexión verdadera entre el símbolo y su gente."
-  },
-  {
-    "page_number": 3,
-    "text": "De repente, el estruendo de los aviones del Capitolio rompe el breve momento de paz. Las sirenas de alarma aúllan y Boggs nos ordena correr hacia un búnker de seguridad cercano. Pero las bombas ya están cayendo sobre la ciudad. El suelo vibra con violencia y el aire se llena de un asfixiante polvo de ladrillo gris. Veo con horror cómo los aviones apuntan directamente al hospital, a la gente indefensa que acabo de conocer. La rabia arde en mi pecho con una intensidad que me nubla la vista. No voy a esconderme mientras Snow asesina a los inocentes."
-  },
-  {
-    "page_number": 4,
-    "text": "Subo corriendo al tejado de un almacén vecino, ignorando los gritos de Haymitch que resuenan por mi auricular. Gale está a mi lado, preparando con destreza sus flechas explosivas. Los aerodeslizadores del Capitolio vuelan bajo, soltando su carga mortal sobre el edificio lleno de heridos. Apunto con mi arco de Sinsajo, inspiro hondo y suelto la cuerda con precisión. La flecha atraviesa el ala de un avión y estalla en una espectacular bola de fuego naranja. Por un instante, somos nosotros quienes dominamos el cielo, respondiendo a la crueldad con una fuerza desesperada y certera."
-  },
-  {
-    "page_number": 5,
-    "text": "El hospital es ahora una pira de llamas y escombros humeantes. No hay supervivientes entre las ruinas. Me vuelvo hacia la cámara de Cressida, con la cara manchada de ceniza y los ojos ardiendo de furia incontenible. —Quiero decir a los rebeldes que estoy viva y que el Capitolio acaba de masacrar a gente desarmada —grito, señalando el horror a mi espalda—. Si creen que Snow nos tratará con justicia algún día, miren esto. ¡Esto es lo que hacen! El fuego se propaga, y si nosotros ardemos, ¡el presidente Snow arderá con nosotros!"
-  },
-  {
-    "page_number": 6,
-    "text": "Regresamos al Distrito 13 en un silencio sepulcral. En la sala de mando, la presidenta Coin y Plutarch observan la grabación del Distrito 8 con asombro contenido. Mi mensaje espontáneo se ha convertido en la primera 'propo' real, un grito de guerra que está encendiendo a los distritos de todo Panem. Me envían al hospital para curar mis heridas menores, pero mi mente sigue atrapada en el campo de batalla. Aunque el Sinsajo ha recuperado su voz ante el mundo, el precio ha sido una carnicería innecesaria que nunca podré olvidar del todo."
-  },
-  {
-    "page_number": 7,
-    "text": "Esa noche, todos los refugiados se reúnen frente a las pantallas para ver una emisión obligatoria desde el Capitolio. Caesar Flickerman presenta a un invitado especial que nos deja helados: Peeta Mellark. Al verlo, se me corta la respiración de golpe. Está vivo, pero parece una sombra trágica del chico que amaba. Está mucho más delgado, pálido y sus ojos azules están llenos de una sospecha extraña y gélida. Peeta habla con una voz monótona, defendiendo la paz y pidiendo un alto el fuego inmediato. Es una marioneta perfecta en manos de Snow."
-  },
-  {
-    "page_number": 8,
-    "text": "Las palabras de Peeta causan una conmoción de rabia en la sala de mando del Distrito 13. Coin lo llama traidor sin dudarlo, y los soldados del búnker murmuran con odio contra él. Yo me quedo muda, sintiendo cómo mi mundo se derrumba por milésima vez. Peeta me mira a través de la pantalla con frialdad, pero sé que no me ve a mí; ve al enemigo que le han enseñado a odiar. Snow lo ha torturado y retorcido para usarlo como su arma definitiva. Comprendo con horror que la verdadera guerra consiste en destruir lo que más amamos."
-  },
-  {
-    "page_number": 9,
-    "text": "Tras ver a Peeta en televisión, huyo a mi escondite habitual: el armario de material escolar del Distrito 13. Me hago un ovillo contra una caja de tizas, sintiendo que el aire me falta. Gale me encuentra y se sienta a mi lado en silencio, compartiendo mi dolor. Le confieso mi mayor temor: Snow está destruyendo a Peeta para castigarme a mí. Gale, con la mirada endurecida por la guerra, toma una decisión. No podemos dejarlo allí; se ofrece voluntario para una misión de rescate en el Capitolio."
-  },
-  {
-    "page_number": 10,
-    "text": "La presidenta Coin autoriza la misión de rescate. Boggs liderará a un equipo de élite para infiltrarse en el Centro de Entrenamiento y traer de vuelta a los vencedores. Gale prepara sus flechas con una determinación que me asusta; sé que está dispuesto a morir por rescatar al chico que yo amo. Me obligan a quedarme en el Distrito 13, atrapada entre muros de cemento mientras mis amigos arriesgan sus vidas en el nido de la serpiente. El silencio del búnker se vuelve insoportable mientras espero noticias."
-  },
-  {
-    "page_number": 11,
-    "text": "Para cubrir el asalto, Plutarch organiza una distracción masiva en las ondas. Debemos emitir una propo tan impactante que el Capitolio no pueda apartar la vista de las pantallas ni detectar al equipo de rescate. Finnick y yo nos preparamos en el estudio de televisión. El ambiente es tenso; sabemos que cada segundo que ganemos es una oportunidad de vida para Gale y Boggs. Finnick me mira con ojos cansados pero decididos. Él también tiene a alguien que recuperar: su querida Annie, atrapada en las garras de Snow."
-  },
-  {
-    "page_number": 12,
-    "text": "Finnick sube al escenario y empieza a hablar con una voz monótona y distante. Ante las cámaras de todo Panem, revela el secreto más oscuro de Snow: cómo el presidente usaba a los vencedores como trofeos y vendía sus cuerpos a los ciudadanos más ricos del Capitolio. Habla de los abusos y de las amenazas de muerte contra sus seres queridos. Es una confesión desgarradora que paraliza a la audiencia y mantiene a Snow ocupado mientras los rebeldes aterrizan en el corazón de la ciudad para cumplir su misión."
-  },
-  {
-    "page_number": 13,
-    "text": "Regresamos a la sala de mando para esperar el desenlace. Las pantallas muestran mapas electrónicos y señales de radio distorsionadas que emiten estática. El silencio en el búnker es absoluto, roto solo por el zumbido constante de las máquinas de ventilación. Haymitch no despega los ojos de los monitores, apretando los puños hasta que los nudillos se le vuelven blancos. Me siento pequeña e impotente, rezando para que el aerodeslizador rebelde regrese antes de que las defensas del Capitolio descubran que han sido burladas por completo."
-  },
-  {
-    "page_number": 14,
-    "text": "De repente, un grito de alivio recorre la sala. ¡Lo han conseguido! El aerodeslizador aterriza en el hangar y corro hacia allí desesperada. Veo salir a los soldados, cansados y cubiertos de polvo. Gale aparece con el brazo quemado pero con vida. Detrás de él, los médicos transportan camillas con los vencedores rescatados. Veo a Annie, que corre a los brazos de un Finnick que llora de alegría, y a Johanna, demacrada y débil. Mi corazón late con una fuerza salvaje buscando una sola cara entre la multitud de heridos."
-  },
-  {
-    "page_number": 15,
-    "text": "Me dirijo al hospital del distrito, esquivando a los enfermeros que corren por los pasillos. Encuentro la habitación de Peeta y abro la puerta con las manos temblorosas. Allí está él, tumbado en una cama blanca, con los ojos azules clavados en el techo. Siento una alegría infinita que me hace romper a llorar; Peeta está a salvo, ha vuelto conmigo después de semanas de pesadilla. Me acerco despacio, deseando abrazarlo y decirle que ya nadie podrá hacernos daño en este refugio seguro bajo tierra. Solo quiero tocar su mano."
-  },
-  {
-    "page_number": 16,
-    "text": "—Peeta —susurro con amor. Él se vuelve y me mira con una expresión de puro odio, como si estuviera viendo a un monstruo. De repente, salta de la cama con una fuerza sobrehumana y se lanza contra mí. Sus manos se cierran alrededor de mi cuello con una violencia aterradora. Intento gritar, pero el aire no llega. Peeta, el chico del pan, está intentando matarme. Comprendo con horror que el Capitolio no solo lo capturó; lo han transformado en un arma letal diseñada específicamente para destruirme."
-  }
-]
+En `FUENTE_NB_los_juegos_textos_y_anchors.md` tienes:
+- texto completo por pagina del cuento;
+- anchors canonicos del meta de saga;
+- ids y `image_filenames` para referencias visuales.
 
 Genera un UNICO objeto JSON con este esquema:
 {
@@ -90,18 +25,12 @@ Genera un UNICO objeto JSON con este esquema:
   "cover_prompt": "<prompt largo>",
   "page_prompts": [
     { "page_number": 1, "main_prompt": "<prompt largo>" }
-  ],
-  "secondary_prompts": [
-    { "page_number": 1, "secondary_prompt": "<prompt largo>" }
   ]
 }
 
 Reglas obligatorias:
-1) `story_id`, `title` y `book_rel_path` deben coincidir EXACTAMENTE con:
-   - story_id: "09"
-   - title: "Mensaje para el Presidente"
-   - book_rel_path: "los_juegos_del_hambre"
-2) `cover_prompt` debe estar en espanol estructurado, longitud 900-1700 caracteres, y contener EXACTAMENTE estos 8 bloques en orden:
+1) `story_id`, `title` y `book_rel_path` deben coincidir EXACTAMENTE con esta historia.
+2) `cover_prompt` en espanol estructurado, 900-1700 caracteres, con EXACTAMENTE estos 8 bloques en orden:
    - OBJETIVO DE ILUSTRACION
    - CONTINUIDAD VISUAL OBLIGATORIA
    - COMPOSICION Y ENCUADRE
@@ -110,12 +39,12 @@ Reglas obligatorias:
    - REFERENCIAS (reference_ids)
    - RESTRICCIONES / NEGATIVOS
    - FORMATO DE SALIDA
-3) Cada `page_prompts[].main_prompt` debe estar en espanol estructurado, longitud 700-1500 caracteres, y contener los mismos 8 bloques en orden.
-4) No incluyas `secondary_prompts` para este cuento; devuelve solo `cover_prompt` y `page_prompts` de main.
-5) `page_prompts` debe cubrir EXACTAMENTE estas paginas del cuento: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
-6) Cada `page_number` debe aparecer una sola vez.
-7) Mantener continuidad de personajes, entornos y props segun el canon de la saga.
-8) En cada bloque `REFERENCIAS (reference_ids)`, usa anchors coherentes con el `meta.json` de la saga (style_*, char_*, env_*, prop_*, cover_*).
+3) Cada `page_prompts[].main_prompt` en espanol estructurado, 700-1500 caracteres, con los mismos 8 bloques en orden.
+4) `page_prompts` debe cubrir EXACTAMENTE estas paginas: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
+5) Cada `page_number` aparece una sola vez.
+6) Construye el contenido de cada prompt usando el texto de pagina de `FUENTE_NB_los_juegos_textos_y_anchors.md`.
+7) En el bloque `REFERENCIAS (reference_ids)`, usa anchors del meta canonico de la saga presentes en `FUENTE_NB_los_juegos_textos_y_anchors.md`.
+8) Anchors canonicos disponibles (IDs): char_beetee_base, char_coin_base, char_effie_base, char_finnick_base, char_gale_base, char_haymitch_base, char_johanna_base, char_katniss_base, char_peeta_base, char_prim_base, char_rue_base, char_snow_base, cover_mockingjay_collection, env_arena_clock, env_arena_forest, env_district12_seam, env_district13_bunker, env_reaping_square, env_train_capitol, prop_bow_arrow, prop_bread_loaf, prop_mockingjay_pin, prop_nightlock_berries, prop_parachute_gift, prop_president_rose, style_linea_editorial, style_paleta_rebelion
 9) No cambies el schema, no agregues campos, no elimines campos obligatorios.
 
 Salida final:

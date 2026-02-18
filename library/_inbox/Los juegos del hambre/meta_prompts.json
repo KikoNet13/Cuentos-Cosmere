@@ -8,7 +8,10 @@ CONTEXTO DISPONIBLE EN NOTEBOOKLM (IMPORTANTE)
 - Tienes acceso a los libros canonicos de la saga Los juegos del hambre.
 - Tienes acceso al ejemplo completo de Hansel y Gretel como referencia de estructura visual/editorial.
 - Tienes acceso a la fuente de estilo visual ya guardada.
+- Revisa tambien la NUEVA FUENTE: `FUENTE_NB_los_juegos_textos_y_anchors.md`.
 - NO dependas de rutas locales, nombres de archivo del repositorio ni detalles de la webapp.
+
+En `FUENTE_NB_los_juegos_textos_y_anchors.md` tienes el listado canonico de anchors (ids, names, prompts, image_filenames).
 
 Genera un UNICO objeto JSON con este esquema:
 {
@@ -28,16 +31,13 @@ Genera un UNICO objeto JSON con este esquema:
 
 Reglas obligatorias:
 1) `collection.title` debe ser EXACTAMENTE "Los juegos del hambre".
-2) `anchors[]` debe incluir como minimo:
-   - 2 anchors `style_*`
-   - 1 anchor `cover_*`
-   - anchors `char_*` para personajes principales
-   - anchors `env_*` para entornos recurrentes
-   - anchors `prop_*` para objetos clave
-3) Cada anchor debe tener SIEMPRE: `id`, `name`, `prompt`, `image_filenames`.
-4) `image_filenames[]` debe usar nombres de archivo de anchor (no IDs opacos de assets finales).
-5) `style_rules` y `continuity_rules` deben ser listas accionables y consistentes con la saga.
-6) No agregues campos fuera del esquema.
+2) `anchors[]` debe incluir TODOS los anchors canonicos listados en `FUENTE_NB_los_juegos_textos_y_anchors.md` (sin omisiones).
+3) IDs de anchors obligatorios:
+   char_beetee_base, char_coin_base, char_effie_base, char_finnick_base, char_gale_base, char_haymitch_base, char_johanna_base, char_katniss_base, char_peeta_base, char_prim_base, char_rue_base, char_snow_base, cover_mockingjay_collection, env_arena_clock, env_arena_forest, env_district12_seam, env_district13_bunker, env_reaping_square, env_train_capitol, prop_bow_arrow, prop_bread_loaf, prop_mockingjay_pin, prop_nightlock_berries, prop_parachute_gift, prop_president_rose, style_linea_editorial, style_paleta_rebelion
+4) Cada anchor debe tener SIEMPRE: `id`, `name`, `prompt`, `image_filenames`.
+5) `image_filenames[]` debe respetar los nombres canonicos del listado de `FUENTE_NB_los_juegos_textos_y_anchors.md`.
+6) `style_rules` y `continuity_rules` deben ser listas accionables y consistentes con la saga.
+7) No agregues campos fuera del esquema.
 
 Salida final:
 - SOLO el objeto JSON final de `meta.json`.

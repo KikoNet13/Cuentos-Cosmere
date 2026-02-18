@@ -1,6 +1,16 @@
 # Indice de tareas
 
-- Proximo ID: `033`
+- Proximo ID: `034`
+
+## TAREA-033-fuente-nb-unica-textos-anchors-regen-placeholders
+
+- Fecha: 18/02/26 22:16
+- Estado: cerrada
+- Resumen: se crea fuente unica `.md` para NotebookLM con textos+anchors y se regeneran `01..11_prompts.json` + `meta_prompts.json` para referenciarla, sin depender de rutas/webapp.
+- Version: 2.7.3
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-033-fuente-nb-unica-textos-anchors-regen-placeholders.md`
 
 ## TAREA-032-placeholders-nn-prompts-con-texto-de-paginas
 
