@@ -1,6 +1,16 @@
 ﻿# Indice de tareas
 
-- Proximo ID: `025`
+- Proximo ID: `026`
+
+## TAREA-025-skill-notebooklm-fusion-ingesta
+
+- Fecha: 18/02/26 15:35
+- Estado: cerrada
+- Resumen: nueva skill `notebooklm-comunicacion` para prompts por partes/fallback y extension de `ingesta-cuentos` para fusion en memoria + archivado `_processed`.
+- Version: 2.2.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`, `0008`
+- Archivo: `docs/tasks/TAREA-025-skill-notebooklm-fusion-ingesta.md`
 
 ## TAREA-024-ejemplo-hansel-gretel-alineado-prompts-rutas-limpias
 

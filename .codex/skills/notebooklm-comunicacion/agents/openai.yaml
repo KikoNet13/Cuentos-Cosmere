@@ -1,0 +1,4 @@
+interface:
+  display_name: "NotebookLM Comunicacion"
+  short_description: "Prepara prompts por partes NN_a/NN_b y fallback 4+4 para lotes en _inbox"
+  default_prompt: "Usa $notebooklm-comunicacion para preparar comunicacion con NotebookLM: generar prompts por archivo (NN_a/NN_b), activar fallback 4+4 si se corta la respuesta y emitir deltas por archivo."

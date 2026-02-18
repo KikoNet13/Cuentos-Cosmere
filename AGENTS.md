@@ -16,9 +16,11 @@ Este repositorio opera como plataforma orquestadora del flujo 3 IAs para cuentos
 
 1. NotebookLM:
    - fuente de generacion editorial;
-   - entrega `NN.json` y opcional `meta.json` en `library/_inbox/<book_title>/`.
+   - trabaja por prompts preparados por Codex;
+   - entrega `NN.json` o partes `NN_a/_b` (y fallback `a1/a2/b1/b2`) en `library/_inbox/<book_title>/`.
 2. Codex (este repo):
-   - valida contrato, mueve/importa lotes y mantiene app;
+   - prepara comunicacion con NotebookLM via skill dedicada;
+   - valida contrato, fusiona partes en memoria, importa lotes y mantiene app;
    - emite mensajes accionables para NotebookLM;
    - facilita prompts y gestion de assets para ChatGPT Project.
 3. ChatGPT Project:
@@ -28,7 +30,7 @@ Este repositorio opera como plataforma orquestadora del flujo 3 IAs para cuentos
 Notas:
 
 - El orquestador documental vive en este archivo (`AGENTS.md`), sin playbooks paralelos.
-- La skill activa de ingesta es `ingesta-cuentos`.
+- Skills activas del flujo: `notebooklm-comunicacion` + `ingesta-cuentos`.
 
 ## Contrato de datos vigente
 
@@ -54,7 +56,8 @@ Notas:
 9. Cada nodo mantiene `library/<node>/images/index.json` con:
    - `filename`, `asset_rel_path`, `description`, `node_rel_path`, `created_at`.
 10. `library/_inbox/` es la bandeja de entrada oficial:
-    - `NN.json` por cuento;
+    - `NN.json` por cuento, o partes `NN_a.json` + `NN_b.json`;
+    - fallback permitido: `NN_a1.json`, `NN_a2.json`, `NN_b1.json`, `NN_b2.json`;
     - `meta.json` opcional por lote;
     - `.md/.pdf` se ignoran en la ingesta nueva.
 11. `meta.json` por jerarquia:
@@ -62,11 +65,15 @@ Notas:
     - `library/<node>/meta.json` (ancestros + libro),
     - minimos: `collection.title`, `anchors[]`, `updated_at`.
 12. Sidecars legacy de adaptacion (`adaptation_context.json`, `NN.issues.json`, etc.) quedan fuera de contrato.
+13. Archivado post-import:
+    - al completar un lote sin pendientes, mover `library/_inbox/<book_title>/` a `library/_processed/<book_title>/<timestamp>/`.
 
 ## Pipeline editorial
 
 1. Las skills versionadas en este repositorio viven en `.codex/skills/`.
-2. Skill de ingesta activa: `.codex/skills/ingesta-cuentos/` (conversacional, sin scripts).
+2. Skills activas:
+   - `.codex/skills/notebooklm-comunicacion/` para prompting por partes y fallback;
+   - `.codex/skills/ingesta-cuentos/` para fusion en memoria + validacion/importacion.
 3. `app/` no ejecuta pipeline editorial autonomo; solo consume y edita contrato final.
 4. Cualquier flujo externo debe respetar este contrato.
 
@@ -105,9 +112,10 @@ Notas:
 
 Codex debe poder producir estos bloques para el usuario:
 
-1. Setup NotebookLM (checklist + prompt base de salida JSON).
+1. Setup NotebookLM (checklist + prompt base de salida JSON por partes).
 2. Setup ChatGPT Project (checklist + prompt base de continuidad visual).
 3. Delta update estructurado para reentregas parciales de NotebookLM.
+4. Fallback automatico de particion (`8+8` -> `4+4`) cuando NotebookLM se corta por limite.
 
 ## Sistema documental
 

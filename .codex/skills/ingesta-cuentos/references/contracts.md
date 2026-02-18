@@ -15,20 +15,59 @@ Ruta de lote:
 
 Archivos:
 
-- `NN.json` (obligatorio, 2 digitos).
+- `NN.json` (preferido, 2 digitos).
+- Partes permitidas:
+  - `NN_a.json`, `NN_b.json`
+  - `NN_a1.json`, `NN_a2.json`, `NN_b1.json`, `NN_b2.json`
 - `meta.json` (opcional, por libro de inbox).
 - `.md/.pdf` (ignorar + warning no bloqueante).
 
 ## Politica de lote
 
-1. Si un `NN.json` falla contrato, no se importa ningun cuento del lote.
-2. Si hay colision con `library/<book_rel_path>/NN.json`, preguntar confirmacion por cuento.
-3. Solo tras lote valido:
+1. Resolucion por cuento:
+   - priorizar `NN.json` valido;
+   - si no existe, fusionar partes en memoria.
+2. Si un cuento resuelto falla contrato, no se importa ningun cuento del lote.
+3. Si parte esperada falta o no parsea, bloquear con error accionable.
+4. Si hay colision con `library/<book_rel_path>/NN.json`, preguntar confirmacion por cuento.
+5. Solo tras lote valido:
    - forzar `status=definitive`;
    - normalizar timestamps;
-   - mover a destino final.
+   - guardar en destino final.
+6. Archivado post-import:
+   - si el lote se completa sin pendientes, mover carpeta origen a `library/_processed/<book_title>/<timestamp>/`.
 
-## Contrato `NN.json` (nuevo, unico)
+## Resolucion y fusion de partes
+
+Combinaciones validas por cuento (`NN`):
+
+1. `a + b`
+2. `a1 + a2 + b`
+3. `a + b1 + b2`
+4. `a1 + a2 + b1 + b2`
+
+Rangos esperados:
+
+- `a`: paginas `1..8`
+- `b`: paginas `9..16`
+- `a1`: paginas `1..4`
+- `a2`: paginas `5..8`
+- `b1`: paginas `9..12`
+- `b2`: paginas `13..16`
+
+Reglas:
+
+1. Cada parte debe parsear como JSON de cuento con top-level completo.
+2. `pages[].page_number` debe caer en el rango del sufijo.
+3. La union no puede tener duplicados de `page_number`.
+4. La secuencia final debe ser `1..N` sin huecos.
+5. Cover final:
+   - preferir `a`,
+   - si no existe, preferir `a1`,
+   - si no, primer bloque valido.
+6. Cover discrepante entre partes: warning no bloqueante.
+
+## Contrato `NN.json` (canonico final)
 
 Top-level obligatorio:
 
@@ -56,7 +95,7 @@ Slot (`cover` / `images.*`):
 
 - `status` (string)
 - `prompt` (string)
-- `reference_ids` (array opcional de filenames con extension)
+- `reference_ids` (array opcional de strings)
 - `active_id` (string)
 - `alternatives` (array)
 
@@ -131,12 +170,17 @@ Entrada minima:
 - `contract.invalid_slot`
 - `contract.invalid_alternative`
 - `contract.empty_pages`
+- `input.pending_notebooklm`
+- `input.missing_story_parts`
+- `merge.invalid_part_range`
+- `merge.duplicate_page_number`
 
 ## Warnings no bloqueantes recomendados
 
 - `input.legacy_file_ignored`
 - `input.meta_missing`
 - `meta.optional_field_missing`
+- `merge.cover_mismatch`
 
 ## Mensajes accionables para NotebookLM
 
@@ -147,4 +191,13 @@ Formato recomendado por error:
 - Problema: <descripcion corta>
 - Corrige asi: <instruccion concreta>
 - Vuelve a entregar: <archivo exacto>
+```
+
+Fallback recomendado cuando se corta una parte:
+
+```text
+[NN=<ID>] input.pending_notebooklm
+- Problema: el bloque <NN_a|NN_b> no llego como JSON completo.
+- Corrige asi: reentrega en 4+4 con <NN_a1, NN_a2, NN_b1, NN_b2>.
+- Vuelve a entregar: solo los archivos faltantes.
 ```

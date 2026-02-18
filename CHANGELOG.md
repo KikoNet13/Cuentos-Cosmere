@@ -5,6 +5,18 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [18/02/26] - Skill NotebookLM + fusion por partes en ingesta
+
+- Nueva skill `.codex/skills/notebooklm-comunicacion/` (conversacional, sin scripts) para preparar prompts por partes:
+  - `NN_a`/`NN_b` (8+8),
+  - fallback automatico `NN_a1/a2` + `NN_b1/b2` (4+4),
+  - mensajes delta por archivo para reentregas NotebookLM.
+- `ingesta-cuentos` ampliada para aceptar partes en `_inbox`, fusionarlas en memoria por cuento y validar el contrato final antes de importar.
+- Contrato de referencia extendido con reglas de fusion, rangos por sufijo y nuevos codigos de error/warning (`input.pending_notebooklm`, `merge.*`).
+- Archivado post-import definido en `library/_processed/<book_title>/<timestamp>/` cuando el lote se completa sin pendientes.
+- Documentacion alineada en `AGENTS.md`, `README.md` y `docs/guia-orquestador-editorial.md`.
+- Tarea: `docs/tasks/TAREA-025-skill-notebooklm-fusion-ingesta.md`.
+
 ## [18/02/26] - Ejemplo Hansel/Gretel alineado + prompts operativos + rutas limpias
 
 - `library/hansel_y_gretel/01.json` y espejo `hansel_y_gretel.json` realineados al set visual nuevo (`style_refs` recortado sin texto en imagen).

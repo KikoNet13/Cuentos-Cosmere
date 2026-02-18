@@ -2,16 +2,19 @@
 
 Plataforma local para gestionar cuentos ilustrados con flujo 3 IAs:
 
-1. NotebookLM genera `NN.json` y `meta.json` (opcional) en `_inbox`.
-2. Codex valida/importa y mantiene la app.
-3. ChatGPT Project genera imagenes usando prompts/anchors.
+1. Codex usa `notebooklm-comunicacion` para preparar prompts por partes (`NN_a/_b`, fallback `a1/a2/b1/b2`).
+2. NotebookLM genera `NN.json` o partes + `meta.json` (opcional) en `_inbox`.
+3. Codex usa `ingesta-cuentos` para fusionar en memoria, validar/importar y mantener la app.
+4. ChatGPT Project genera imagenes usando prompts/anchors.
 
 ## Arquitectura vigente
 
 - Fuente de verdad: `library/`.
 - Contrato unico por cuento: `NN.json` (dos digitos).
 - Runtime de app sin SQLite (lectura directa de disco).
-- Skill de ingesta activa: `.codex/skills/ingesta-cuentos/` (conversacional, sin scripts).
+- Skills activas:
+  - `.codex/skills/notebooklm-comunicacion/`
+  - `.codex/skills/ingesta-cuentos/`
 
 ## Contrato canonico
 
@@ -44,9 +47,18 @@ Imagenes por nodo:
 library/
   _inbox/
     <book_title>/
-      01.json
-      02.json
+      01.json          # completo opcional
+      02_a.json        # parte A (1..8)
+      02_b.json        # parte B (9..16)
+      02_a1.json       # fallback opcional
+      02_a2.json
+      02_b1.json
+      02_b2.json
       meta.json        # opcional
+  _processed/
+    <book_title>/
+      <timestamp>/
+        ...            # copia archivada del inbox procesado
   meta.json            # global opcional
   <node>/.../<book>/
     01.json
