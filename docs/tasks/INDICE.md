@@ -2,15 +2,15 @@
 
 - Proximo ID: `030`
 
-## TAREA-029-estandar-prompts-largos-balanceados-migracion-los-juegos-del-hambre
+## TAREA-029-style-prompt-maestro-chatgpt-project
 
-- Fecha: 18/02/26 21:45
+- Fecha: 18/02/26 21:50
 - Estado: cerrada
-- Resumen: estandar global de prompts largos balanceados (8 bloques) en `notebooklm-comunicacion`, gate de validacion en documentos de Project y migracion de `los_juegos_del_hambre/01..11.json` a formato largo en espanol.
+- Resumen: incorporacion de `Style Prompt Maestro` canonico (EN + resumen ES), politica de composicion por intencion del slot (`full-bleed`/`spot art`) y sincronizacion de guia operativa + plantilla oficial de dossier ChatGPT Project.
 - Version: 2.6.0
 - Commit: `pendiente`
 - ADR relacionadas: `0008`
-- Archivo: `docs/tasks/TAREA-029-estandar-prompts-largos-balanceados-migracion-los-juegos-del-hambre.md`
+- Archivo: `docs/tasks/TAREA-029-style-prompt-maestro-chatgpt-project.md`
 
 ## TAREA-028-flujo-guiado-relleno-imagenes
 

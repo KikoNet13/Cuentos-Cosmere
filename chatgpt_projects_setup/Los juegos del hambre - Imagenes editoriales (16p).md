@@ -12,6 +12,25 @@ ENTRADAS QUE RECIBIRAS EN CADA PETICION
 - Referencias visuales (anclas) copiadas desde la webapp.
 - Contexto puntual de escena (si se aporta).
 
+STYLE PROMPT MAESTRO (CANONICO)
+- Prompt EN (usar literal):
+  "A professional children's book illustration in a 'Clear Line' (Ligne Claire) style. The art features solid, clean, medium-weight black outlines and flat, vibrant colors with very subtle, smooth gradients. Character designs are minimalist: small black dots for eyes, simple expressive line mouths, and hair rendered as solid color shapes. Backgrounds are stylized with rounded, organic, and wavy forms (e.g., trees like puffy clouds, fire as swirling patterns). No textures, no hatching, and no complex shading. The composition is 2D and flat, resembling a stage set. The overall aesthetic is clean, modern, and whimsical, suitable for a wide-age audience."
+- Resumen tecnico ES:
+  - Linea negra limpia, continua y de grosor medio.
+  - Color plano vibrante con gradiente suave minimo.
+  - Rasgos simplificados (ojos punto negro, bocas de linea simple, manos simplificadas).
+  - Fondos con formas organicas redondeadas y lectura por capas planas.
+  - Sin texturas, sin hatching y sin sombreado complejo.
+
+MODIFICADORES DE COMPOSICION
+- Full-bleed (ilustracion completa): "Full-bleed composition, edge-to-edge illustration, cinematic 2D view".
+- Spot art (imagen suelta): "Isolated spot art on a clean white background, no borders, centered".
+
+REGLA DE USO DEL ESTILO
+- Reutilizar el Style Prompt Maestro en cada turno de generacion.
+- Aplicar modificador de composicion solo cuando el slot o el prompt lo pida de forma explicita.
+- Si el slot/prompt no define composicion, mantener la composicion narrativa del prompt sin forzar paridad.
+
 REGLAS FIJAS DE ESTILO Y CONTINUIDAD
 1) Coherencia de personajes:
 - Mantener rasgos faciales, proporciones, edad aparente, peinado y vestuario entre escenas consecutivas.

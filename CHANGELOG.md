@@ -5,23 +5,18 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
-## [18/02/26] - Estandar de prompts largos balanceados + migracion Los juegos del hambre
+## [18/02/26] - Style Prompt Maestro en setup ChatGPT Project (Los juegos del hambre)
 
-- `notebooklm-comunicacion` pasa a prompts largos en espanol estructurado para `cover` y `pages.main`:
-  - 8 bloques obligatorios de prompt,
-  - perfil balanceado de longitud (`cover 900-1700`, `main 700-1500`),
-  - nuevos deltas de prompt (`prompts.too_short`, `prompts.missing_sections`, `prompts.language_mismatch`, `prompts.range_incomplete`),
-  - nueva plantilla de reentrega `prompts-only` para cuentos existentes.
-- `ingesta-cuentos` (template de dossier) y guias de Project alineadas con gate obligatorio:
-  - si el prompt llega incompleto o corto, no generar imagen y pedir delta a NotebookLM.
-- Migrados `library/los_juegos_del_hambre/01..11.json` a prompts largos (sin cambiar contrato):
-  - preservados `text`, `reference_ids`, `active_id`, `alternatives` y `page_number`,
-  - actualizado `updated_at` por cuento.
-- Backup no destructivo creado en:
-  - `library/_backups/los_juegos_del_hambre-prompts-20260218T204333Z/`.
-- Dossier de saga regenerado:
-  - `library/los_juegos_del_hambre/chatgpt_project_setup.md`.
-- Tarea: `docs/tasks/TAREA-029-estandar-prompts-largos-balanceados-migracion-los-juegos-del-hambre.md`.
+- Se incorpora bloque `STYLE PROMPT MAESTRO (CANONICO)` en setup de saga actual:
+  - prompt EN literal,
+  - resumen tecnico ES breve,
+  - regla explicita de reutilizacion por turno.
+- Se formaliza politica de composicion por intencion del slot:
+  - `full-bleed` y `spot art` solo cuando el slot/prompt lo solicita;
+  - sin regla fija por paridad.
+- Se alinea la guia operativa `PASOS_OPERATIVOS.md` con verificacion obligatoria del style prompt y checklist de QA tecnico de estilo.
+- Se sincroniza plantilla oficial de dossier y bloque B2 de `ingesta-cuentos` con el nuevo estandar.
+- Tarea: `docs/tasks/TAREA-029-style-prompt-maestro-chatgpt-project.md`.
 
 ## [18/02/26] - Flujo guiado de imagenes pendientes (anclas primero)
 
