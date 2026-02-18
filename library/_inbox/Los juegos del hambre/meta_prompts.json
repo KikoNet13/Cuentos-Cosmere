@@ -6,12 +6,12 @@ Tu respuesta debe ser EXACTAMENTE el contenido final de `meta.json`.
 
 CONTEXTO DISPONIBLE EN NOTEBOOKLM (IMPORTANTE)
 - Tienes acceso a los libros canonicos de la saga Los juegos del hambre.
-- Tienes acceso al ejemplo completo de Hansel y Gretel como referencia de estructura visual/editorial.
+- Tienes acceso al ejemplo completo de Hansel y Gretel como referencia de estructura de prompts.
 - Tienes acceso a la fuente de estilo visual ya guardada.
 - Revisa tambien la NUEVA FUENTE: `FUENTE_NB_los_juegos_textos_y_anchors.md`.
 - NO dependas de rutas locales, nombres de archivo del repositorio ni detalles de la webapp.
 
-En `FUENTE_NB_los_juegos_textos_y_anchors.md` tienes el listado canonico de anchors (ids, names, prompts, image_filenames).
+En `FUENTE_NB_los_juegos_textos_y_anchors.md` tienes el listado canonico de anchors (ids, names, image_filenames) y los textos por cuento/pagina.
 
 Genera un UNICO objeto JSON con este esquema:
 {
@@ -20,7 +20,7 @@ Genera un UNICO objeto JSON con este esquema:
     {
       "id": "style_nombre_anchor",
       "name": "Nombre ancla",
-      "prompt": "Descripcion visual operativa y estable",
+      "prompt": "<prompt largo estructurado>",
       "image_filenames": ["anchor_style_nombre_v1.png"]
     }
   ],
@@ -35,9 +35,19 @@ Reglas obligatorias:
 3) IDs de anchors obligatorios:
    char_beetee_base, char_coin_base, char_effie_base, char_finnick_base, char_gale_base, char_haymitch_base, char_johanna_base, char_katniss_base, char_peeta_base, char_prim_base, char_rue_base, char_snow_base, cover_mockingjay_collection, env_arena_clock, env_arena_forest, env_district12_seam, env_district13_bunker, env_reaping_square, env_train_capitol, prop_bow_arrow, prop_bread_loaf, prop_mockingjay_pin, prop_nightlock_berries, prop_parachute_gift, prop_president_rose, style_linea_editorial, style_paleta_rebelion
 4) Cada anchor debe tener SIEMPRE: `id`, `name`, `prompt`, `image_filenames`.
-5) `image_filenames[]` debe respetar los nombres canonicos del listado de `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-6) `style_rules` y `continuity_rules` deben ser listas accionables y consistentes con la saga.
-7) No agregues campos fuera del esquema.
+5) Cada `anchors[].prompt` debe estar en espanol estructurado, longitud 700-1500 caracteres, con EXACTAMENTE estos 8 bloques en orden:
+   - OBJETIVO DE ILUSTRACION
+   - CONTINUIDAD VISUAL OBLIGATORIA
+   - COMPOSICION Y ENCUADRE
+   - PERSONAJES Y ACCION
+   - ENTORNO, PALETA E ILUMINACION
+   - REFERENCIAS (reference_ids)
+   - RESTRICCIONES / NEGATIVOS
+   - FORMATO DE SALIDA
+6) En el bloque `REFERENCIAS (reference_ids)` de cada anchor prompt usa IDs canonicos de la lista obligatoria (sin inventar IDs).
+7) `image_filenames[]` debe respetar los nombres canonicos del listado de `FUENTE_NB_los_juegos_textos_y_anchors.md`.
+8) `style_rules` y `continuity_rules` deben ser listas accionables y consistentes con la saga.
+9) No cambies el schema, no agregues campos, no elimines campos obligatorios.
 
 Salida final:
 - SOLO el objeto JSON final de `meta.json`.

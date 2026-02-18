@@ -1,6 +1,16 @@
 # Indice de tareas
 
-- Proximo ID: `034`
+- Proximo ID: `035`
+
+## TAREA-034-ajuste-placeholders-nb-meta-largo-fuente-sin-prompts-anchor
+
+- Fecha: 18/02/26 22:25
+- Estado: cerrada
+- Resumen: ajuste de placeholders para NotebookLM: `meta_prompts.json` exige prompts largos estructurados para anchors y la fuente NB elimina prompts de anchors para dejar solo ids/nombres/filenames + textos narrativos.
+- Version: 2.7.4
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-034-ajuste-placeholders-nb-meta-largo-fuente-sin-prompts-anchor.md`
 
 ## TAREA-033-fuente-nb-unica-textos-anchors-regen-placeholders
 

@@ -5,6 +5,18 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [18/02/26] - Ajuste final NB: meta con prompts largos y fuente sin prompts de anchors
+
+- Se actualiza `library/_inbox/Los juegos del hambre/meta_prompts.json` para exigir prompts largos estructurados tambien en `anchors[].prompt`:
+  - 8 bloques obligatorios en orden,
+  - rango objetivo 700-1500 caracteres,
+  - uso de IDs canonicos en `REFERENCIAS (reference_ids)`.
+- Se limpia `library/_inbox/Los juegos del hambre/FUENTE_NB_los_juegos_textos_y_anchors.md`:
+  - se eliminan prompts de anchors,
+  - se mantienen `id`, `name`, `image_filenames` y los textos narrativos por cuento/pagina.
+- No se modifica `library/los_juegos_del_hambre/NN.json`.
+- Tarea: `docs/tasks/TAREA-034-ajuste-placeholders-nb-meta-largo-fuente-sin-prompts-anchor.md`.
+
 ## [18/02/26] - Fuente NB unica con textos y anchors + regen de placeholders
 
 - Se crea fuente central para NotebookLM:
