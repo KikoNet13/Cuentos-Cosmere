@@ -5,6 +5,24 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [18/02/26] - Placeholders con texto de paginas para NotebookLM
+
+- Se actualizan `01..11_prompts.json` en `library/_inbox/Los juegos del hambre/` para incluir el texto narrativo completo por pagina.
+- Nuevo bloque en cada placeholder:
+  - `TEXTO BASE DEL CUENTO (USAR COMO FUENTE NARRATIVA PARA PAGE_PROMPTS)`,
+  - con lista `page_number` + `text` para todas las paginas.
+- Reglas reforzadas:
+  - no inventar ni cambiar el orden de paginas,
+  - priorizar el texto base del bloque ante dudas.
+- Se mantiene salida estricta para NB:
+  - solo JSON valido,
+  - sin markdown ni explicaciones,
+  - sin texto fuera del JSON final.
+- Validacion automatica:
+  - 11 placeholders con bloque de texto base detectado (`PAGE_TEXT_SECTION_OK`).
+- No se restauran backups ni se modifica `NN.json`.
+- Tarea: `docs/tasks/TAREA-032-placeholders-nn-prompts-con-texto-de-paginas.md`.
+
 ## [18/02/26] - Contexto NotebookLM en placeholders + meta anchors
 
 - Se corrigen los placeholders `01..11_prompts.json` para operar en NotebookLM sin depender de rutas/ficheros locales ni de la webapp.

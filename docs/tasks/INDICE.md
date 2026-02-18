@@ -1,6 +1,16 @@
 # Indice de tareas
 
-- Proximo ID: `032`
+- Proximo ID: `033`
+
+## TAREA-032-placeholders-nn-prompts-con-texto-de-paginas
+
+- Fecha: 18/02/26 22:11
+- Estado: cerrada
+- Resumen: actualizacion de `01..11_prompts.json` para incluir texto base completo por pagina dentro de cada placeholder, de forma que NotebookLM no dependa de conocer previamente las paginas adaptadas.
+- Version: 2.7.2
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-032-placeholders-nn-prompts-con-texto-de-paginas.md`
 
 ## TAREA-031-contexto-notebooklm-placeholders-meta-anchors
 
