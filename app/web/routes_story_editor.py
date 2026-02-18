@@ -1,9 +1,5 @@
 from __future__ import annotations
 
-import base64
-import mimetypes
-import re
-
 from flask import flash, redirect, request
 
 from ..story_store import (
@@ -20,40 +16,7 @@ from ..story_store import (
 )
 from . import web_bp
 from .common import build_story_url, first_story_page_number, normalize_rel_path, parse_positive_int, safe_next_url
-
-
-def _extract_image_payload() -> tuple[bytes | None, str, str | None]:
-    uploaded = request.files.get("image_file")
-    if uploaded and uploaded.filename:
-        payload = uploaded.read()
-        mime_type = (uploaded.mimetype or "").strip()
-        if not mime_type:
-            mime_type = mimetypes.guess_type(uploaded.filename)[0] or "image/png"
-        if payload:
-            return payload, mime_type, None
-
-    pasted = request.form.get("pasted_image_data", "").strip()
-    if not pasted:
-        return None, "image/png", "No se recibio ninguna imagen."
-
-    mime_type = "image/png"
-    encoded = pasted
-    if pasted.startswith("data:"):
-        match = re.match(r"^data:([^;]+);base64,(.*)$", pasted, flags=re.IGNORECASE | re.DOTALL)
-        if not match:
-            return None, "image/png", "Formato de imagen pegada invalido."
-        mime_type = match.group(1).strip() or "image/png"
-        encoded = match.group(2)
-
-    try:
-        decoded = base64.b64decode(encoded, validate=True)
-    except (TypeError, ValueError):
-        return None, "image/png", "No se pudo decodificar la imagen pegada."
-
-    if not decoded:
-        return None, "image/png", "La imagen pegada esta vacia."
-
-    return decoded, mime_type, None
+from .image_upload import extract_image_payload
 
 
 def _page_number(story_rel_path: str) -> int:
@@ -89,7 +52,7 @@ def upload_slot_image(story_path: str, slot_name: str):
     page_number = _page_number(story_rel_path)
     fallback = build_story_url(story_rel_path, page_number=page_number, editor_mode=True)
 
-    image_bytes, mime_type, error = _extract_image_payload()
+    image_bytes, mime_type, error = extract_image_payload(request)
     if error:
         flash(error, "error")
         return redirect(safe_next_url(request.form.get("next"), fallback))
@@ -159,7 +122,7 @@ def upload_cover_image(story_path: str):
     story_rel_path = normalize_rel_path(story_path)
     fallback = build_story_url(story_rel_path, editor_mode=True)
 
-    image_bytes, mime_type, error = _extract_image_payload()
+    image_bytes, mime_type, error = extract_image_payload(request)
     if error:
         flash(error, "error")
         return redirect(safe_next_url(request.form.get("next"), fallback))
@@ -233,7 +196,7 @@ def upload_anchor_image(story_path: str, anchor_id: str):
     fallback = build_story_url(story_rel_path, page_number=page_number, editor_mode=True)
     anchor_level = normalize_rel_path(request.form.get("anchor_level", ""))
 
-    image_bytes, mime_type, error = _extract_image_payload()
+    image_bytes, mime_type, error = extract_image_payload(request)
     if error:
         flash(error, "error")
         return redirect(safe_next_url(request.form.get("next"), fallback))

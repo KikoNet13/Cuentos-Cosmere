@@ -4,7 +4,14 @@
       <span class="brand-pill">Biblioteca</span>
       <span>Generador de cuentos ilustrados</span>
     </a>
-    <small class="has-text-grey">Fuente de verdad: <code>library/.../NN.json</code></small>
+    <div class="is-flex is-align-items-center gap-2 is-flex-wrap-wrap is-justify-content-flex-end">
+      {% if image_flow_nav and image_flow_nav.has_pending %}
+        <a class="button is-small is-link is-light" href="{{ url_for('web.image_flow_page') }}">
+          Rellenar imagenes pendientes
+          <span class="tag is-rounded is-warning is-light">{{ image_flow_nav.pending_count }}</span>
+        </a>
+      {% endif %}
+      <small class="has-text-grey">Fuente de verdad: <code>library/.../NN.json</code></small>
+    </div>
   </div>
 </header>
-

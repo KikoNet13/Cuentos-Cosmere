@@ -1,6 +1,16 @@
 # Indice de tareas
 
-- Proximo ID: `028`
+- Proximo ID: `029`
+
+## TAREA-028-flujo-guiado-relleno-imagenes
+
+- Fecha: 18/02/26 17:12
+- Estado: cerrada
+- Resumen: flujo operativo unico `/_flow/image` para rellenar imagenes pendientes globales (anclas primero), con guardado por portapapeles y avance automatico al siguiente pendiente.
+- Version: 2.5.0
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-028-flujo-guiado-relleno-imagenes.md`
 
 ## TAREA-027-modo-rapido-imagen-dossier-project-saga
 

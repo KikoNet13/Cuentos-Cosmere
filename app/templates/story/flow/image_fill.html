@@ -1,0 +1,109 @@
+{% extends "layouts/base.html" %}
+{% block title %}Flujo de imagenes pendientes{% endblock %}
+{% block content %}
+  <section class="box hero-surface">
+    <div class="is-flex is-justify-content-space-between is-align-items-flex-start is-flex-wrap-wrap gap-3">
+      <div>
+        <h1 class="title is-3 mb-2">Flujo guiado de imagenes</h1>
+        <p class="has-text-grey mb-1">Modo operativo: anclas primero, luego cuentos.</p>
+        <div class="cluster-tags mt-2">
+          <span class="tag is-rounded is-warning is-light">Pendientes: {{ pending_count }}</span>
+          <span class="tag is-rounded is-success is-light">Completadas: {{ completed_count }}</span>
+          <span class="tag is-rounded is-light">Sin prompt: {{ excluded_no_prompt_count }}</span>
+        </div>
+      </div>
+      <div class="buttons are-small">
+        <a class="button is-light" href="{{ url_for('web.dashboard') }}">Volver a biblioteca</a>
+      </div>
+    </div>
+  </section>
+
+  {% if current_item %}
+    <section class="box image-flow-card">
+      <div class="is-flex is-justify-content-space-between is-align-items-center is-flex-wrap-wrap gap-2 mb-3">
+        <h2 class="title is-5 mb-0">{{ current_item.display_title }}</h2>
+        <span class="tag is-info is-light is-rounded">{{ current_item.item_type }}</span>
+      </div>
+      <p class="has-text-grey is-size-7 mb-3">{{ current_item.display_subtitle }}</p>
+
+      <div class="cluster-tags mb-3">
+        {% if current_item.item_type == "anchor" %}
+          <span class="tag is-rounded">Nodo: <code>{{ current_item.anchor_node_rel_path or 'library' }}</code></span>
+          <span class="tag is-rounded">Anchor ID: <code>{{ current_item.anchor_id }}</code></span>
+        {% elif current_item.item_type == "cover" %}
+          <span class="tag is-rounded">Cuento: <code>{{ current_item.story_rel_path }}</code></span>
+          <span class="tag is-rounded">Slot: <code>cover</code></span>
+        {% else %}
+          <span class="tag is-rounded">Cuento: <code>{{ current_item.story_rel_path }}</code></span>
+          <span class="tag is-rounded">Pagina: <code>{{ current_item.page_number }}</code></span>
+          <span class="tag is-rounded">Slot: <code>{{ current_item.slot_name }}</code></span>
+        {% endif %}
+      </div>
+
+      <p class="panel-label">Prompt</p>
+      <pre id="flow-prompt-current" class="story-prose">{{ current_item.prompt }}</pre>
+      <div class="is-flex is-align-items-center gap-2 mt-2 mb-4">
+        <button class="button is-small is-light" type="button" onclick="copyTextFromElement('flow-prompt-current','flow-copy-prompt-feedback')">Copiar prompt</button>
+        <span id="flow-copy-prompt-feedback" class="copy-feedback"></span>
+      </div>
+
+      <p class="panel-label">Referencias</p>
+      {% if current_item.reference_assets %}
+        <div class="advanced-alt-grid mb-4">
+          {% for ref in current_item.reference_assets %}
+            {% set ref_index = loop.index %}
+            <article class="alt-card">
+              <p class="is-size-7 mb-1"><strong>Archivo:</strong> <code>{{ ref.filename }}</code></p>
+              {% if ref.found %}
+                <img src="{{ ref.image_url }}" alt="Referencia {{ ref.filename }}">
+                <div class="is-flex is-align-items-center gap-2 mt-2">
+                  <button class="button is-small is-light" type="button" onclick="copyImageFromUrl('{{ ref.image_url }}','flow-ref-feedback-{{ ref_index }}')">Copiar ref {{ ref_index }}</button>
+                  <span id="flow-ref-feedback-{{ ref_index }}" class="copy-feedback"></span>
+                </div>
+              {% else %}
+                <p class="has-text-danger is-size-7">Referencia no encontrada.</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="has-text-grey is-size-7 mb-4">Este pendiente no tiene referencias declaradas.</p>
+      {% endif %}
+
+      <form id="flow-submit-form" method="post" action="{{ url_for('web.image_flow_submit') }}" class="is-flex is-flex-direction-column gap-2">
+        <input type="hidden" name="item_type" value="{{ current_item.item_type }}">
+        <input type="hidden" name="story_rel_path" value="{{ current_item.story_rel_path }}">
+        <input type="hidden" name="page_number" value="{{ current_item.page_number }}">
+        <input type="hidden" name="slot_name" value="{{ current_item.slot_name }}">
+        <input type="hidden" name="anchor_id" value="{{ current_item.anchor_id }}">
+        <input type="hidden" name="anchor_node_rel_path" value="{{ current_item.anchor_node_rel_path }}">
+        <input id="flow-pasted-image" type="hidden" name="pasted_image_data" value="">
+
+        <div class="is-flex is-align-items-center gap-2 is-flex-wrap-wrap">
+          <button class="button is-link" type="button" onclick="pasteImageAndSubmit('flow-pasted-image','flow-submit-feedback','flow-submit-form')">Pegar y guardar</button>
+          <a class="button is-light" href="{{ current_item.editor_url }}">Abrir editor completo</a>
+          <a class="button is-light" href="{{ url_for('web.dashboard') }}">Volver a biblioteca</a>
+          <span id="flow-submit-feedback" class="copy-feedback"></span>
+        </div>
+      </form>
+    </section>
+  {% else %}
+    <article class="message is-success">
+      <div class="message-body">
+        No hay pendientes de imagen. La cola global esta completada.
+      </div>
+    </article>
+  {% endif %}
+
+  {% if excluded_no_prompt_count %}
+    <section class="box mt-4">
+      <h2 class="title is-6">Excluidos por falta de prompt</h2>
+      <p class="has-text-grey is-size-7 mb-3">Estos elementos no entran en cola hasta que tengan prompt.</p>
+      <ul class="is-size-7">
+        {% for row in excluded_no_prompt %}
+          <li><strong>{{ row.display_title }}</strong> - {{ row.display_subtitle }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+{% endblock %}

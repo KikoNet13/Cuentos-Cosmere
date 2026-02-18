@@ -112,6 +112,11 @@
   min-height: 1rem;
 }
 
+.image-flow-card .story-prose {
+  max-height: 34vh;
+  overflow-y: auto;
+}
+
 @media (max-width: 1060px) {
   .story-reading-grid {
     grid-template-columns: 1fr;

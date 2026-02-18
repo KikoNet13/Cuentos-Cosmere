@@ -5,6 +5,28 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [18/02/26] - Flujo guiado de imagenes pendientes (anclas primero)
+
+- Nuevo modo operativo global en webapp:
+  - `GET /_flow/image` muestra solo el primer pendiente de imagen.
+  - `POST /_flow/image/submit` guarda desde portapapeles y avanza al siguiente pendiente.
+- Cola global de pendientes con prioridad:
+  - primero anclas de `meta.json`,
+  - luego cuentos (`cover -> main -> secondary`) por `story_rel_path`.
+- Criterio de pendiente:
+  - slot/ancla sin imagen activa valida en disco.
+  - se excluyen elementos `not_required` y los que tienen prompt vacio (reportados aparte).
+- Boton en topbar:
+  - "Rellenar imagenes pendientes" con badge de pendientes cuando aplica.
+- Reuso de logica de decodificacion:
+  - helper comun `app/web/image_upload.py` compartido entre editor tradicional y flujo guiado.
+- Nueva vista dedicada:
+  - `app/templates/story/flow/image_fill.html` con acciones minimas de produccion:
+    - copiar prompt,
+    - copiar refs individuales,
+    - pegar y guardar.
+- Tarea: `docs/tasks/TAREA-028-flujo-guiado-relleno-imagenes.md`.
+
 ## [18/02/26] - Modo rapido de imagen + dossier ChatGPT Project por saga
 
 - UI de editor reforzada con barra `Modo rapido` en slots y portada:

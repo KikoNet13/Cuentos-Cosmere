@@ -14,9 +14,13 @@ Resumen:
 4. `ingesta-cuentos` regenera `library/<book_rel_path>/chatgpt_project_setup.md` (y permite refresh manual sin reimportar).
 5. ChatGPT Project genera imagenes a partir de prompts + anchors (`reference_ids` basados en `meta.anchors[].image_filenames`).
 6. Operacion recomendada en UI para imagen:
-   - abrir editor de portada o pagina,
-   - usar barra "Modo rapido" del slot (copiar prompt + refs),
-   - generar en ChatGPT Project,
-   - usar "Pegar y guardar alternativa" en un clic.
+   - abrir `/_flow/image`,
+   - la app muestra solo el primer pendiente global,
+   - copiar prompt + refs, generar en ChatGPT Project,
+   - usar "Pegar y guardar";
+   - recarga automatica al siguiente pendiente.
+7. Orden de prioridad visual del flujo guiado:
+   - primero todas las anclas pendientes,
+   - despues portada/main/secondary de cuentos.
 
 Para reglas, contratos y mensajes base, usar siempre `AGENTS.md`.

@@ -37,6 +37,7 @@ Notas:
 
 - El orquestador documental vive en este archivo (`AGENTS.md`), sin playbooks paralelos.
 - Skills activas del flujo: `notebooklm-comunicacion` + `ingesta-cuentos`.
+- La webapp incluye flujo guiado de relleno: `/_flow/image` (anclas primero).
 
 ## Contrato de datos vigente
 
@@ -116,6 +117,9 @@ Notas:
    - `POST /<story_path>/_act/cover/activate`
    - `POST /<story_path>/_act/anchors/*`
 9. Rutas legacy removidas (sin redirects): `/browse/*`, `/story/*`, `/editor/story/*`, `/n/*`.
+10. Flujo guiado de imagen:
+   - `GET /_flow/image` (muestra solo el primer pendiente global).
+   - `POST /_flow/image/submit` (pegar y guardar, avanza al siguiente pendiente).
 
 ## CLI vigente
 
