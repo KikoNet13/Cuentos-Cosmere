@@ -10,18 +10,18 @@
 
 ## Objetivo
 
-Reducir el repositorio al minimo operativo actual, eliminando codigo legacy/no usado y artefactos locales de cache/SQLite.
+Reducir el repositorio al mínimo operativo actual, eliminando codigo legacy/no usado y artefactos locales de cache/SQLite.
 
 ## Contexto
 
 - El runtime vigente usa Flask + lectura directa de `library/` via `NN.json`.
-- Seguian presentes modulos legacy de migracion, stubs retirados y una plantilla sin ruta activa.
+- Seguian presentes módulos legacy de migracion, stubs retirados y una plantilla sin ruta activa.
 - Habia dependencias de Python no usadas (`peewee`, `pypdf`) y archivos locales de cache/SQLite.
 
 ## Plan
 
 1. Auditar referencias reales del runtime (`manage.py`, `app/__init__.py`, `routes_v3`, `story_store`, `catalog_provider`).
-2. Eliminar modulos y plantillas sin referencias activas.
+2. Eliminar módulos y plantillas sin referencias activas.
 3. Reducir dependencias en `Pipfile` y regenerar `Pipfile.lock`.
 4. Limpiar artefactos locales no versionados y validar runtime con comandos finitos.
 
@@ -37,7 +37,7 @@ Reducir el repositorio al minimo operativo actual, eliminando codigo legacy/no u
   - `app/routes.py`
   - `app/templates/cuento.html`
 - `app/__init__.py` pasa a importar `web_bp` desde `app/routes_v3.py` directamente.
-- Se actualiza documentacion operativa para reflejar que no hay skills de adaptacion versionadas en este repo.
+- Se actualiza documentacion operativa para reflejar que no hay skills de adaptación versionadas en este repo.
 - Se retiran dependencias no usadas (`peewee`, `pypdf`).
 - `.venv/` no pudo eliminarse por bloqueo de `python.exe` (WinError 5); se mantiene ignorada.
 
@@ -63,7 +63,7 @@ Reducir el repositorio al minimo operativo actual, eliminando codigo legacy/no u
 
 ## Validacion ejecutada
 
-1. `rg -n` de referencias cruzadas para confirmar modulos no usados.
+1. `rg -n` de referencias cruzadas para confirmar módulos no usados.
 2. `python -m compileall app manage.py`
    - OK, sin errores.
 3. `python -c "from app import create_app; app=create_app(); print(sorted(str(r) for r in app.url_map.iter_rules()))"`
@@ -75,13 +75,13 @@ Reducir el repositorio al minimo operativo actual, eliminando codigo legacy/no u
 
 ## Riesgos
 
-- Si algun flujo externo importaba explicitamente los modulos eliminados, requerira ajuste.
+- Si algun flujo externo importaba explicitamente los módulos eliminados, requerira ajuste.
 - `.venv/` quedo sin limpiar por bloqueo de archivo en Windows.
 
 ## Seguimiento
 
 1. Opcional: cerrar procesos que bloqueen `.venv/Scripts/python.exe` y borrar `.venv/` para limpieza total local.
-2. Opcional: documentar retroactivamente `TAREA-016` en `docs/tasks/` para mantener continuidad historica en indice.
+2. Opcional: documentar retroactivamente `TAREA-016` en `docs/tasks/` para mantener continuidad historica en índice.
 
 ## Commit asociado
 

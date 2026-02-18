@@ -1,4 +1,4 @@
-﻿# TAREA-010-ingesta-editorial-el-imperio-final-json
+# TAREA-010-ingesta-editorial-el-imperio-final-json
 
 ## Metadatos
 
@@ -10,7 +10,7 @@
 
 ## Objetivo
 
-Procesar editorialmente `library/_inbox/El imperio final` con la skill `revision-orquestador-editorial` y publicar los cuentos en formato canonico `NN.json` en `library/cosmere/nacidos-de-la-bruma-era-1/el-imperio-final`.
+Procesar editorialmente `library/_inbox/El imperio final` con la skill `revision-orquestador-editorial` y publicar los cuentos en formato canónico `NN.json` en `library/cosmere/nacidos-de-la-bruma-era-1/el-imperio-final`.
 
 ## Contexto
 
@@ -25,20 +25,20 @@ El libro habia sido limpiado para reiniciar desde cero. Las propuestas disponibl
 ## Plan
 
 1. Leer propuestas `NN.md` del inbox del libro.
-2. Construir `NN.json` canonicos en la ruta destino acordada.
+2. Construir `NN.json` canónicos en la ruta destino acordada.
 3. Validar estructura y carga por runtime (`story_store` + catalogo).
-4. Registrar trazabilidad documental y cerrar con commit unico.
+4. Registrar trazabilidad documental y cerrar con commit único.
 
 ## Decisiones
 
 - Se procesaron los cinco cuentos disponibles (`01` a `05`), incluyendo los ubicados en `_future`.
 - Se preservo comparativa editorial con `text.original/current` y `prompt.original/current`.
-- Se inicializo `images.main` en todas las paginas con `active_id` vacio y `alternatives` vacia.
+- Se inicializo `images.main` en todas las páginas con `active_id` vacio y `alternatives` vacia.
 - `images.secondary` no se agrego en esta pasada al no existir valor editorial adicional en la propuesta base.
 
 ## Cambios aplicados
 
-- Nuevos cuentos canonicos:
+- Nuevos cuentos canónicos:
   - `library/cosmere/nacidos-de-la-bruma-era-1/el-imperio-final/01.json`
   - `library/cosmere/nacidos-de-la-bruma-era-1/el-imperio-final/02.json`
   - `library/cosmere/nacidos-de-la-bruma-era-1/el-imperio-final/03.json`
@@ -51,7 +51,7 @@ El libro habia sido limpiado para reiniciar desde cero. Las propuestas disponibl
 
 ## Validacion ejecutada
 
-- `python -c "import json; ..."` sobre `01.json` a `05.json` para verificar cantidad de paginas y slot `main`.
+- `python -c "import json; ..."` sobre `01.json` a `05.json` para verificar cantidad de páginas y slot `main`.
 - `python -c "from app.story_store import list_story_json_files, load_story; ..."` para validar lectura por runtime y `book_rel_path`.
 - `git status --short`
 
@@ -62,7 +62,7 @@ El libro habia sido limpiado para reiniciar desde cero. Las propuestas disponibl
 
 ## Seguimiento
 
-1. Revisar en UI pagina por pagina para ajustar `text.current` y `prompt.current` donde haga falta.
+1. Revisar en UI página por página para ajustar `text.current` y `prompt.current` donde haga falta.
 2. Cargar alternativas de imagen por slot y definir `active_id` en los casos priorizados.
 
 ## Commit asociado

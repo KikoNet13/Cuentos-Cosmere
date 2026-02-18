@@ -1,4 +1,4 @@
-﻿# 0007 - Canon `NN.json` sin SQLite y skill editorial
+# 0007 - Canon `NN.json` sin SQLite y skill editorial
 
 - Estado: aceptado
 - Fecha: 13/02/26
@@ -13,8 +13,8 @@ Se adopta el siguiente contrato vigente:
 
 - fuente de verdad: `library/.../NN.json`.
 - un libro se detecta por presencia de archivos `NN.json`.
-- cada cuento vive en un unico archivo `NN.json`.
-- estructura por pagina:
+- cada cuento vive en un único archivo `NN.json`.
+- estructura por página:
   - `text.original` y `text.current`
   - `images.main` obligatorio
   - `images.secondary` opcional
@@ -25,8 +25,8 @@ Se adopta el siguiente contrato vigente:
 
 ## Consecuencias
 
-- se simplifica la operacion diaria de ingesta/adaptacion editorial.
+- se simplifica la operación diaria de ingesta/adaptacion editorial.
 - la comparativa original/current queda integrada en el contrato de cuento.
 - la gestion de alternativas de imagen se vuelve trazable por JSON.
-- se mantiene una seam tecnica para introducir indice global en el futuro sin cambiar contrato de datos.
+- se mantiene una seam técnica para introducir índice global en el futuro sin cambiar contrato de datos.
 

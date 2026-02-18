@@ -10,23 +10,23 @@
 
 ## Objetivo
 
-Implementar una UI de biblioteca tipo catalogo streaming con stack Jinja + Bulma + HTMX, separando lectura y edicion por rutas REST de pagina y manteniendo compatibilidad temporal con rutas legacy.
+Implementar una UI de biblioteca tipo catalogo streaming con stack Jinja + Bulma + HTMX, separando lectura y edición por rutas REST de página y manteniendo compatibilidad temporal con rutas legacy.
 
 ## Contexto
 
-La app tenia templates monoliticos y rutas de lectura/editor por query (`?p=` y `?editor=1`). Se requeria una estructura mas mantenible, panel avanzado ocultable en lectura y navegacion con tarjetas visuales de nodos/cuentos.
+La app tenia templates monoliticos y rutas de lectura/editor por query (`?p=` y `?editor=1`). Se requeria una estructura más mantenible, panel avanzado ocultable en lectura y navegación con tarjetas visuales de nodos/cuentos.
 
 ## Plan
 
 1. Modularizar backend web por dominio de rutas y view-models.
 2. Reestructurar templates en layouts/componentes/paginas.
 3. Integrar Bulma + HTMX (CDN + fallback local vendor).
-4. Redisenar navegacion y vistas de lectura/editor con panel avanzado HTMX.
+4. Redisenar navegación y vistas de lectura/editor con panel avanzado HTMX.
 5. Actualizar contrato documental (AGENTS/README/ADR/tarea/indice/changelog).
 
 ## Decisiones
 
-- Contrato canonico de rutas actualizado a:
+- Contrato canónico de rutas actualizado a:
   - `/`
   - `/browse/<path>`
   - `/story/<path>/page/<int:page_number>`
@@ -34,10 +34,10 @@ La app tenia templates monoliticos y rutas de lectura/editor por query (`?p=` y 
   - `/fragments/story/<path>/page/<int:page_number>/*`
 - Se mantienen rutas legacy con redirect para transicion.
 - HTMX se usa en lectura para:
-  - paginacion parcial con `hx-push-url`,
+  - paginación parcial con `hx-push-url`,
   - carga diferida del panel avanzado,
   - activacion de alternativa desde lectura con refresh parcial + swap OOB de imagen principal.
-- Navegacion de nodos se mantiene full-page para simplicidad y claridad.
+- Navegación de nodos se mantiene full-page para simplicidad y claridad.
 - Catalogo incorpora miniatura por cuento (`cover`, luego `main` activa, luego placeholder).
 
 ## Cambios aplicados
@@ -95,7 +95,7 @@ La app tenia templates monoliticos y rutas de lectura/editor por query (`?p=` y 
 
 ## Seguimiento
 
-1. Agregar tests Flask basicos de rutas canonicas y redirects legacy.
+1. Agregar tests Flask basicos de rutas canónicas y redirects legacy.
 2. Evaluar retiro definitivo de rutas legacy tras migrar bookmarks/enlaces operativos.
 
 ## Commit asociado

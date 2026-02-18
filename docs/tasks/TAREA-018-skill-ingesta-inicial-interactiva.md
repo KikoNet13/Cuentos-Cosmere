@@ -20,13 +20,13 @@ con preguntas de usuario para `target_age`, `book_rel_path` y glosario ambiguo.
 
 ## Contexto
 
-El runtime de `app/` ya usa `NN.json` como fuente de verdad, pero faltaba una skill de ingesta inicial con salida estructurada y contrato de sidecars para etapa "en revision".
+El runtime de `app/` ya usa `NN.json` como fuente de verdad, pero faltaba una skill de ingesta inicial con salida estructurada y contrato de sidecars para etapa "en revisión".
 
 ## Plan
 
 1. Crear skill versionada para ingesta inicial con script CLI no bloqueante.
 2. Extender `app/story_store.py` para soportar metadatos top-level nuevos y estados `in_review|definitive`.
-3. Actualizar documentacion operativa y trazabilidad (tarea, indice, changelog).
+3. Actualizar documentacion operativa y trazabilidad (tarea, índice, changelog).
 4. Validar comandos finitos y flujo interactivo (`awaiting_user` -> `completed`).
 
 ## Decisiones

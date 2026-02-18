@@ -2,7 +2,7 @@
 
 - Fecha: 18/02/26 22:25
 - Estado: cerrada
-- Version objetivo: 2.7.4
+- Versión objetivo: 2.7.4
 
 ## Resumen
 
@@ -13,13 +13,13 @@ Se corrige el parche de orquestacion para NotebookLM en dos puntos:
 
 ## Alcance implementado
 
-1. Actualizacion de `meta_prompts.json`:
+1. Actualización de `meta_prompts.json`:
    - mantiene salida JSON estricta;
-   - mantiene IDs canonicos obligatorios;
+   - mantiene IDs canónicos obligatorios;
    - agrega regla explicita de 8 bloques para cada `anchors[].prompt`;
    - agrega rango de longitud 700-1500 para prompts de anchors.
 2. Limpieza de fuente NB:
-   - se eliminan lineas `- prompt:` en la seccion `Anchors Canonicos (meta)`;
+   - se eliminan lineas `- prompt:` en la sección `Anchors Canonicos (meta)`;
    - no se toca el contenido narrativo por cuento/pagina.
 
 ## Validaciones ejecutadas

@@ -1,22 +1,22 @@
 PROMPT NOTEBOOKLM - STORY 04 - GENERAR 04_prompts.json
-Devuelve SOLO JSON valido.
+Devuelve SOLO JSON válido.
 Sin markdown, sin explicaciones.
 No incluyas nada fuera del JSON.
 Tu respuesta debe ser EXACTAMENTE el contenido final del archivo `04_prompts.json`.
 
 CONTEXTO DISPONIBLE EN NOTEBOOKLM (IMPORTANTE)
-- Tienes acceso a los libros canonicos de la saga Los juegos del hambre.
+- Tienes acceso a los libros canónicos de la saga Los juegos del hambre.
 - Tienes acceso al ejemplo completo de Hansel y Gretel como referencia de estructura de prompts.
 - Tienes acceso a la fuente de estilo visual ya guardada.
 - Revisa tambien la NUEVA FUENTE: `FUENTE_NB_los_juegos_textos_y_anchors.md`.
 - NO dependas de rutas locales, nombres de archivo del repositorio ni detalles de la webapp.
 
 En `FUENTE_NB_los_juegos_textos_y_anchors.md` tienes:
-- texto completo por pagina del cuento;
-- anchors canonicos del meta de saga;
+- texto completo por página del cuento;
+- anchors canónicos del meta de saga;
 - ids y `image_filenames` para referencias visuales.
 
-Genera un UNICO objeto JSON con este esquema:
+Genera un ÚNICO objeto JSON con este esquema:
 {
   "story_id": "04",
   "title": "El Triunfo de las Bayas",
@@ -30,21 +30,21 @@ Genera un UNICO objeto JSON con este esquema:
 
 Reglas obligatorias:
 1) `story_id`, `title` y `book_rel_path` deben coincidir EXACTAMENTE con esta historia.
-2) `cover_prompt` en espanol estructurado, 900-1700 caracteres, con EXACTAMENTE estos 8 bloques en orden:
+2) `cover_prompt` en español estructurado, 900-1700 caracteres, con EXACTAMENTE estos 8 bloques en orden:
    - OBJETIVO DE ILUSTRACION
    - CONTINUIDAD VISUAL OBLIGATORIA
-   - COMPOSICION Y ENCUADRE
-   - PERSONAJES Y ACCION
-   - ENTORNO, PALETA E ILUMINACION
+   - COMPOSICIÓN Y ENCUADRE
+   - PERSONAJES Y ACCIÓN
+   - ENTORNO, PALETA E ILUMINACIÓN
    - REFERENCIAS (reference_ids)
    - RESTRICCIONES / NEGATIVOS
    - FORMATO DE SALIDA
-3) Cada `page_prompts[].main_prompt` en espanol estructurado, 700-1500 caracteres, con los mismos 8 bloques en orden.
-4) `page_prompts` debe cubrir EXACTAMENTE estas paginas: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
+3) Cada `page_prompts[].main_prompt` en español estructurado, 700-1500 caracteres, con los mismos 8 bloques en orden.
+4) `page_prompts` debe cubrir EXACTAMENTE estas páginas: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
 5) Cada `page_number` aparece una sola vez.
-6) Construye el contenido de cada prompt usando el texto de pagina de `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-7) En el bloque `REFERENCIAS (reference_ids)`, usa anchors del meta canonico de la saga presentes en `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-8) Anchors canonicos disponibles (IDs): char_beetee_base, char_coin_base, char_effie_base, char_finnick_base, char_gale_base, char_haymitch_base, char_johanna_base, char_katniss_base, char_peeta_base, char_prim_base, char_rue_base, char_snow_base, cover_mockingjay_collection, env_arena_clock, env_arena_forest, env_district12_seam, env_district13_bunker, env_reaping_square, env_train_capitol, prop_bow_arrow, prop_bread_loaf, prop_mockingjay_pin, prop_nightlock_berries, prop_parachute_gift, prop_president_rose, style_linea_editorial, style_paleta_rebelion
+6) Construye el contenido de cada prompt usando el texto de página de `FUENTE_NB_los_juegos_textos_y_anchors.md`.
+7) En el bloque `REFERENCIAS (reference_ids)`, usa anchors del meta canónico de la saga presentes en `FUENTE_NB_los_juegos_textos_y_anchors.md`.
+8) Anchors canónicos disponibles (IDs): char_beetee_base, char_coin_base, char_effie_base, char_finnick_base, char_gale_base, char_haymitch_base, char_johanna_base, char_katniss_base, char_peeta_base, char_prim_base, char_rue_base, char_snow_base, cover_mockingjay_collection, env_arena_clock, env_arena_forest, env_district12_seam, env_district13_bunker, env_reaping_square, env_train_capitol, prop_bow_arrow, prop_bread_loaf, prop_mockingjay_pin, prop_nightlock_berries, prop_parachute_gift, prop_president_rose, style_linea_editorial, style_paleta_rebelion
 9) No cambies el schema, no agregues campos, no elimines campos obligatorios.
 
 Salida final:

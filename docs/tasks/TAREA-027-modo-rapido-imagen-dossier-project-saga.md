@@ -2,19 +2,19 @@
 
 - Fecha: 18/02/26 16:35
 - Estado: cerrada
-- Version objetivo: 2.4.0
+- Versión objetivo: 2.4.0
 
 ## Resumen
 
 Se implementa el tramo final del flujo de imagen para reducir friccion operativa en editor y dejar un dossier reutilizable por saga:
 
 1. La webapp incorpora barra "Modo rapido" en editor de slots y portada.
-2. Se habilita accion de un clic para `Pegar y guardar alternativa` desde portapapeles.
+2. Se habilita acción de un clic para `Pegar y guardar alternativa` desde portapapeles.
 3. La skill `ingesta-cuentos` queda documentada para generar/refrescar `chatgpt_project_setup.md`.
 
 ## Alcance implementado
 
-1. UI de editor (pagina y portada):
+1. UI de editor (página y portada):
    - barra compacta con:
      - copiar prompt,
      - copiar referencias individuales del slot,
@@ -27,11 +27,11 @@ Se implementa el tramo final del flujo de imagen para reducir friccion operativa
 3. Estilos:
    - nueva clase `quick-actions-bar` en `app/static/css/pages.css`.
 4. Skill `ingesta-cuentos`:
-   - objetivo y flujo actualizados para regenerar `library/<book_rel_path>/chatgpt_project_setup.md` tras ingesta valida;
+   - objetivo y flujo actualizados para regenerar `library/<book_rel_path>/chatgpt_project_setup.md` tras ingesta válida;
    - modo `refresh manual` del dossier sin reimportar cuentos;
    - plantilla documental del dossier incluida en la skill.
 5. Contrato de referencia:
-   - `chatgpt_project_setup.md` documentado como artefacto operativo (no canonico).
+   - `chatgpt_project_setup.md` documentado como artefacto operativo (no canónico).
 6. Orquestacion/documentacion:
    - `AGENTS.md`, `README.md` y `docs/guia-orquestador-editorial.md` alineados al nuevo flujo.
 

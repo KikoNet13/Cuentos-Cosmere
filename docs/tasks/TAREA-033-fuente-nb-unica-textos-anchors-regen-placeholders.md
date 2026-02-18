@@ -1,32 +1,32 @@
-﻿# TAREA-033 - Fuente NB unica (.md) con textos y anchors + regen de placeholders
+# TAREA-033 - Fuente NB única (.md) con textos y anchors + regen de placeholders
 
 - Fecha: 18/02/26 22:16
 - Estado: cerrada
-- Version objetivo: 2.7.3
+- Versión objetivo: 2.7.3
 
 ## Resumen
 
-Se pasa del enfoque de prompts largos inline a un enfoque de fuente unica para NotebookLM:
+Se pasa del enfoque de prompts largos inline a un enfoque de fuente única para NotebookLM:
 
-1. Se genera un `.md` unico con todos los textos de paginas y el listado canonico de anchors.
+1. Se genera un `.md` único con todos los textos de páginas y el listado canónico de anchors.
 2. Se regeneran `01..11_prompts.json` para que apunten a esa fuente y no dependan de rutas/webapp.
-3. Se actualiza `meta_prompts.json` para exigir inclusion de todos los anchors canonicos.
+3. Se actualiza `meta_prompts.json` para exigir inclusion de todos los anchors canónicos.
 
 ## Alcance implementado
 
 1. Fuente nueva para NotebookLM:
    - `library/_inbox/Los juegos del hambre/FUENTE_NB_los_juegos_textos_y_anchors.md`
    - contenido:
-     - seccion de anchors canonicos (id, name, prompt, image_filenames),
-     - seccion de textos por cuento/pagina (`story_id`, `title`, `book_rel_path`, paginas 1..N).
+     - sección de anchors canónicos (id, name, prompt, image_filenames),
+     - sección de textos por cuento/pagina (`story_id`, `title`, `book_rel_path`, páginas 1..N).
 2. Placeholders de cuentos regenerados (`01..11_prompts.json`):
    - instruyen revisar la fuente nueva;
    - mantienen salida JSON estricta sin texto adicional;
    - eliminan dependencia de rutas/ficheros locales;
-   - fuerzan cobertura exacta de paginas por cuento.
+   - fuerzan cobertura exacta de páginas por cuento.
 3. `meta_prompts.json` regenerado:
    - exige `meta.json` completo;
-   - exige incluir TODOS los anchors canonicos;
+   - exige incluir TODOS los anchors canónicos;
    - incluye listado explicito de IDs obligatorios.
 
 ## Validaciones ejecutadas

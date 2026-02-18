@@ -5,12 +5,12 @@ Plataforma local para gestionar cuentos ilustrados con flujo 3 IAs:
 1. Codex usa `notebooklm-comunicacion` para preparar prompts por partes (`NN_a/_b`, fallback `a1/a2/b1/b2`).
 2. NotebookLM genera `NN.json` o partes + `meta.json` (opcional) en `_inbox`.
 3. Codex usa `ingesta-cuentos` para fusionar en memoria, validar/importar y generar el dossier de ChatGPT Project por saga.
-4. ChatGPT Project genera imagenes usando prompts/anchors.
+4. ChatGPT Project genera imágenes usando prompts/anchors.
 
 ## Arquitectura vigente
 
 - Fuente de verdad: `library/`.
-- Contrato unico por cuento: `NN.json` (dos digitos).
+- Contrato único por cuento: `NN.json` (dos digitos).
 - Runtime de app sin SQLite (lectura directa de disco).
 - Skills activas:
   - `.codex/skills/notebooklm-comunicacion/`
@@ -18,12 +18,12 @@ Plataforma local para gestionar cuentos ilustrados con flujo 3 IAs:
 - Dossier operativo por saga:
   - `library/<book_rel_path>/chatgpt_project_setup.md` (setup de Project + flujo rapido de imagen).
 
-## Contrato canonico
+## Contrato canónico
 
 `NN.json` por cuento:
 
 - top-level: `story_id`, `title`, `status`, `book_rel_path`, `created_at`, `updated_at`, `cover`, `pages`.
-- pagina: `page_number`, `text`, `images`.
+- página: `page_number`, `text`, `images`.
 - slot de imagen (`cover`, `images.main`, `images.secondary` opcional):
   - `status`, `prompt`, `active_id`, `alternatives[]`, `reference_ids[]` opcional.
 - alternativa:
@@ -37,10 +37,10 @@ Plataforma local para gestionar cuentos ilustrados con flujo 3 IAs:
 - minimos:
   - `collection.title`, `anchors[]`, `updated_at`.
 
-Imagenes por nodo:
+Imágenes por nodo:
 
 - carpeta: `library/<node>/images/`
-- indice: `library/<node>/images/index.json`
+- índice: `library/<node>/images/index.json`
 - nombre de asset: `<uuid>_<slug>.<ext>`
 
 ## Estructura esperada
@@ -75,9 +75,9 @@ library/
 ## UI
 
 - Home biblioteca: `/`
-- Ruta canonica de nodo/cuento: `/<ruta>`
-- Lectura de cuento: `/<book>/<NN>?p=N` (sin `p`, pagina 1)
-- Editor por pagina: `/<book>/<NN>?p=N&editor=1`
+- Ruta canónica de nodo/cuento: `/<ruta>`
+- Lectura de cuento: `/<book>/<NN>?p=N` (sin `p`, página 1)
+- Editor por página: `/<book>/<NN>?p=N&editor=1`
 - Editor de portada: `/<book>/<NN>?editor=1`
 - Fragmentos HTMX: `/<story_path>/_fr/*`
 - Acciones editoriales: `/<story_path>/_act/*`
@@ -89,7 +89,7 @@ library/
 
 ## Trazabilidad
 
-- Operacion: `AGENTS.md`
+- Operación: `AGENTS.md`
 - Tareas: `docs/tasks/`
 - ADR: `docs/adr/`
 - Historial breve: `CHANGELOG.md`

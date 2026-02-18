@@ -1,4 +1,4 @@
-﻿# TAREA-008-skill-revision-adaptacion-json-sin-sqlite
+# TAREA-008-skill-revision-adaptacion-json-sin-sqlite
 
 ## Metadatos
 
@@ -26,11 +26,11 @@ El flujo anterior dependia de `NN.md`, cache SQLite y comandos por batch (`inbox
 
 ## Decisiones
 
-- Contrato canonico por cuento: `library/<book>/NN.json`.
-- Runtime sin SQLite; lectura directa de disco con seam para indice futuro.
+- Contrato canónico por cuento: `library/<book>/NN.json`.
+- Runtime sin SQLite; lectura directa de disco con seam para índice futuro.
 - Slots de imagen fijos: `main` obligatorio y `secondary` opcional.
 - Alternativas de imagen con `active_id` y archivos opacos `img_<uuid>_<slug>.<ext>`.
-- Edicion web con guardado por pagina (`text.current`, `prompt.current`).
+- Edición web con guardado por página (`text.current`, `prompt.current`).
 - Flujo de ingesta oficial en skill, no en comandos CLI.
 
 ## Cambios aplicados
@@ -49,8 +49,8 @@ El flujo anterior dependia de `NN.md`, cache SQLite y comandos por batch (`inbox
   - `app/templates/cuento.html`
   - `app/static/css/app.css`
 - Legacy retirado de flujo activo:
-  - `app/library_cache.py` (stub de modulo retirado)
-  - `app/notebooklm_ingest.py` (stub de modulo retirado)
+  - `app/library_cache.py` (stub de módulo retirado)
+  - `app/notebooklm_ingest.py` (stub de módulo retirado)
 - Skill:
   - `.codex/skills/revision-orquestador-editorial/SKILL.md`
   - `.codex/skills/revision-orquestador-editorial/references/checklist.md`
@@ -86,7 +86,7 @@ El flujo anterior dependia de `NN.md`, cache SQLite y comandos por batch (`inbox
 ## Seguimiento
 
 1. Ejecutar migracion real de `_inbox` a `NN.json` mediante la skill en una tarea operativa posterior.
-2. Si el volumen crece, evaluar indice global JSON sin cambiar contrato de cuento.
+2. Si el volumen crece, evaluar índice global JSON sin cambiar contrato de cuento.
 
 ## Commit asociado
 

@@ -13,4 +13,4 @@ Mantener SQLite en `db/` y excluir de versionado.
 
 ## Estado actual
 
-Este ADR queda reemplazado por `0007`, que elimina SQLite del runtime de navegacion y adopta lectura directa desde `NN.json`.
+Este ADR queda reemplazado por `0007`, que elimina SQLite del runtime de navegación y adopta lectura directa desde `NN.json`.

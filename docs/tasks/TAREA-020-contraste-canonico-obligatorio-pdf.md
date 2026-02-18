@@ -12,18 +12,18 @@
 
 Endurecer `.codex/skills/adaptacion-ingesta-inicial` para que la ingesta inicial:
 
-1. Haga contraste canonico obligatorio contra `NN.pdf`.
+1. Haga contraste canónico obligatorio contra `NN.pdf`.
 2. Bloquee el lote completo si no hay cobertura PDF util.
 3. Enriquezca contrato de preguntas, issues y contexto.
-4. Añada detecciones canonicas y de ajuste por edad (`target_age`, modo equilibrado).
+4. Añada detecciones canónicas y de ajuste por edad (`target_age`, modo equilibrado).
 
 ## Alcance implementado
 
 1. Refactor completo del script `ingesta_inicial.py` con preflight PDF por lote:
    - orden de parser: `pdfplumber` -> `pypdf`.
-   - OCR opcional por pagina sin texto (`pdf2image` + `pytesseract` + `tesseract`).
+   - OCR opcional por página sin texto (`pdf2image` + `pytesseract` + `tesseract`).
    - bloqueo total por codigos: `input.missing_pdf`, `pdf.parser_unavailable`, `pdf.unreadable`, `pdf.page_unreadable`.
-2. Nuevas detecciones por pagina:
+2. Nuevas detecciones por página:
    - `pdf.page_count_mismatch`
    - `canon.low_page_overlap`
    - `canon.missing_entity`
@@ -101,7 +101,7 @@ Endurecer `.codex/skills/adaptacion-ingesta-inicial` para que la ingesta inicial
 ## Riesgos y notas
 
 1. Con glosario en modo `todo ambiguo`, el volumen de preguntas puede ser muy alto.
-2. Si el PDF tiene muchas paginas sin texto embebido, la ejecucion exigira OCR para poder completar.
+2. Si el PDF tiene muchas páginas sin texto embebido, la ejecucion exigira OCR para poder completar.
 3. El lote real `El imperio final` queda correctamente bloqueado hasta disponer de OCR/cobertura de texto suficiente.
 
 ## Commit asociado

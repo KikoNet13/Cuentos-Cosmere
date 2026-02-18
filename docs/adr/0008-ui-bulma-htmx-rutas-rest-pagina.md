@@ -1,4 +1,4 @@
-# 0008 - UI modular Bulma+HTMX y rutas REST por pagina
+# 0008 - UI modular Bulma+HTMX y rutas REST por página
 
 - Estado: aceptado
 - Fecha: 16/02/26
@@ -9,16 +9,16 @@ La UI estaba concentrada en pocos templates largos, con rutas de lectura/editor 
 
 Se necesitaba:
 
-- navegacion visual tipo catalogo por nodos con tarjetas,
+- navegación visual tipo catalogo por nodos con tarjetas,
 - lectura limpia con opciones avanzadas ocultables,
-- mantener edicion por pagina,
+- mantener edición por página,
 - estructura mantenible en frontend/backend.
 
 ## Decision
 
 Se adopta el siguiente contrato y arquitectura de UI:
 
-- rutas canonicas:
+- rutas canónicas:
   - `/`
   - `/browse/<path>`
   - `/story/<path>/page/<int:page_number>`
@@ -34,7 +34,7 @@ Se adopta el siguiente contrato y arquitectura de UI:
 ## Consecuencias
 
 - mejora mantenibilidad de UI y rutas.
-- lectura gana paginacion parcial HTMX y panel avanzado bajo demanda.
+- lectura gana paginación parcial HTMX y panel avanzado bajo demanda.
 - editor conserva acciones de guardado/subida/activacion en rutas explicitas.
 - se incrementa numero de archivos (tradeoff aceptado para evitar plantillas monoliticas).
 - la compatibilidad legacy reduce friccion en enlaces existentes mientras se migra documentacion y accesos.

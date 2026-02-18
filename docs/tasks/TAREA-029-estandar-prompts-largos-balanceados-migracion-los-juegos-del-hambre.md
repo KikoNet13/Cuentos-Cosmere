@@ -1,28 +1,28 @@
-# TAREA-029 - Estandar de prompts largos balanceados + migracion Los juegos del hambre
+# TAREA-029 - Estándar de prompts largos balanceados + migracion Los juegos del hambre
 
 - Fecha: 18/02/26 21:45
 - Estado: cerrada
-- Version objetivo: 2.6.0
+- Versión objetivo: 2.6.0
 
 ## Resumen
 
-Se implementa un estandar global de prompts largos para imagen en el flujo NotebookLM -> Ingesta -> ChatGPT Project y se migra `library/los_juegos_del_hambre/01..11.json` al formato tipo Hansel con perfil balanceado.
+Se implementa un estándar global de prompts largos para imagen en el flujo NotebookLM -> Ingesta -> ChatGPT Project y se migra `library/los_juegos_del_hambre/01..11.json` al formato tipo Hansel con perfil balanceado.
 
 ## Alcance implementado
 
 1. Skill `notebooklm-comunicacion` actualizada:
-   - nuevo estandar obligatorio de 8 bloques para `cover.prompt` y `pages[].images.main.prompt`;
+   - nuevo estándar obligatorio de 8 bloques para `cover.prompt` y `pages[].images.main.prompt`;
    - longitudes del perfil balanceado:
      - portada: `900-1700`;
-     - pagina main: `700-1500`;
-   - idioma canonico: espanol estructurado;
+     - página main: `700-1500`;
+   - idioma canónico: español estructurado;
    - nueva plantilla de reentrega `prompts-only` para cuentos existentes;
    - nuevos codigos delta de prompts:
      - `prompts.too_short`
      - `prompts.missing_sections`
      - `prompts.language_mismatch`
      - `prompts.range_incomplete`
-2. Agent metadata de la skill alineada al nuevo estandar:
+2. Agent metadata de la skill alineada al nuevo estándar:
    - `notebooklm-comunicacion/agents/openai.yaml` actualizado.
 3. Documentacion operativa de Project alineada:
    - gate obligatorio para validar los 8 bloques antes de generar;
@@ -33,7 +33,7 @@ Se implementa un estandar global de prompts largos para imagen en el flujo Noteb
    - reescritura de prompts en `01..11.json`:
      - portada y pages.main en formato largo balanceado;
      - preservando `text`, `reference_ids`, `active_id`, `alternatives`, `page_number`.
-   - actualizacion de `updated_at` en cada cuento migrado.
+   - actualización de `updated_at` en cada cuento migrado.
 5. Dossier de saga regenerado:
    - nuevo `library/los_juegos_del_hambre/chatgpt_project_setup.md`.
 
@@ -51,7 +51,7 @@ Se implementa un estandar global de prompts largos para imagen en el flujo Noteb
    - comparacion estructurada contra backup;
    - resultado: `INTEGRITY_OK`.
 4. Contrato de cuentos 01..11:
-   - parse JSON + secuencia de paginas `1..16` por cuento;
+   - parse JSON + secuencia de páginas `1..16` por cuento;
    - resultado: `SEQ_OK`.
 5. Validacion operativa rapida de flujo guiado:
    - `GET /_flow/image` con `Flask test_client`;

@@ -31,30 +31,30 @@ Codificacion de entrada:
 ## Politica de lote
 
 1. Resolucion por cuento:
-   - priorizar `NN.json` valido;
+   - priorizar `NN.json` válido;
    - si no existe, fusionar partes en memoria.
 2. Si un cuento resuelto falla contrato, no se importa ningun cuento del lote.
 3. Si parte esperada falta o no parsea, bloquear con error accionable.
 4. Si hay colision con `library/<book_rel_path>/NN.json`, preguntar confirmacion por cuento.
-5. Enriquecimiento preimport de refs (si hay `meta.json` valido):
+5. Enriquecimiento preimport de refs (si hay `meta.json` válido):
    - respetar refs existentes;
    - autocompletar faltantes con anclas de `meta`;
    - reportar warnings de cobertura.
-6. Solo tras lote valido:
+6. Solo tras lote válido:
    - forzar `status=definitive`;
    - normalizar timestamps;
    - guardar en destino final.
 7. Archivado post-import:
    - si el lote se completa sin pendientes, mover carpeta origen a `library/_processed/<book_title>/<timestamp>/`.
 8. Dossier por saga:
-   - tras importacion valida, regenerar `chatgpt_project_setup.md`.
+   - tras importacion válida, regenerar `chatgpt_project_setup.md`.
    - debe incluir setup de ChatGPT Project, checklist de anclas, flujo por slot y QA.
 9. Refresh manual:
    - permitido regenerar `chatgpt_project_setup.md` para un libro ya importado sin reimportar `NN.json`.
 
 ## Resolucion y fusion de partes
 
-Combinaciones validas por cuento (`NN`):
+Combinaciones válidas por cuento (`NN`):
 
 1. `a + b`
 2. `a1 + a2 + b`
@@ -63,12 +63,12 @@ Combinaciones validas por cuento (`NN`):
 
 Rangos esperados:
 
-- `a`: paginas `1..8`
-- `b`: paginas `9..16`
-- `a1`: paginas `1..4`
-- `a2`: paginas `5..8`
-- `b1`: paginas `9..12`
-- `b2`: paginas `13..16`
+- `a`: páginas `1..8`
+- `b`: páginas `9..16`
+- `a1`: páginas `1..4`
+- `a2`: páginas `5..8`
+- `b1`: páginas `9..12`
+- `b2`: páginas `13..16`
 
 Reglas:
 
@@ -79,10 +79,10 @@ Reglas:
 5. Cover final:
    - preferir `a`,
    - si no existe, preferir `a1`,
-   - si no, primer bloque valido.
+   - si no, primer bloque válido.
 6. Cover discrepante entre partes: warning no bloqueante.
 
-## Contrato `NN.json` (canonico final)
+## Contrato `NN.json` (canónico final)
 
 Top-level obligatorio:
 
@@ -133,10 +133,10 @@ Alternativa:
    - `ingesta-cuentos` completa faltantes antes de importar.
 4. Si un slot tiene `status = not_required`, se permite `reference_ids` vacio.
 
-## Enriquecimiento automatico de referencias
+## Enriquecimiento automático de referencias
 
 1. Precondicion:
-   - existe `meta.json` valido del libro/lote.
+   - existe `meta.json` válido del libro/lote.
 2. Slots objetivo:
    - `cover`
    - `pages[].images.main`
@@ -150,7 +150,7 @@ Alternativa:
 
 ## Contrato `meta.json` por nodo
 
-Rutas validas:
+Rutas válidas:
 
 - `library/meta.json` (global)
 - `library/<node>/meta.json`
@@ -161,7 +161,7 @@ Minimos:
 - `anchors` (array)
 - `updated_at`
 
-Anchor minimo:
+Anchor mínimo:
 
 - `id`
 - `name`
@@ -191,22 +191,22 @@ Ruta:
 
 Naturaleza:
 
-- artefacto operativo (no canonico del cuento);
-- se regenera tras cada ingesta valida;
+- artefacto operativo (no canónico del cuento);
+- se regenera tras cada ingesta válida;
 - puede refrescarse manualmente sin reimport.
 - plantilla de referencia para contenido base:
   - `.codex/skills/ingesta-cuentos/references/chatgpt_project_setup_template.md`.
 
-Contenido minimo:
+Contenido mínimo:
 
 1. nombre sugerido del Project por saga.
 2. instrucciones maestras de continuidad visual.
-3. checklist de fase obligatoria de anclas antes de paginas.
+3. checklist de fase obligatoria de anclas antes de páginas.
 4. flujo operativo por slot (portada/pagina) para ciclo rapido `copiar -> generar -> pegar`.
 5. politica de QA rapido.
 6. troubleshooting de portapapeles/navegador.
 
-## Indice de imagenes por nodo
+## índice de imágenes por nodo
 
 Ruta:
 

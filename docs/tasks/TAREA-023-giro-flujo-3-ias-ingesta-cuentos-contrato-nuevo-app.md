@@ -2,7 +2,7 @@
 
 - Fecha: 17/02/26 18:03
 - Estado: cerrada
-- Version objetivo: 2.0.0
+- Versión objetivo: 2.0.0
 
 ## Resumen
 
@@ -10,7 +10,7 @@ Se reorienta el repositorio al flujo 3 IAs:
 
 1. NotebookLM entrega `NN.json` (+ `meta.json` opcional) en `_inbox`.
 2. Codex valida/importa con la skill `ingesta-cuentos` y emite mensajes accionables.
-3. ChatGPT Project genera imagenes usando prompts/anchors del contrato final.
+3. ChatGPT Project genera imágenes usando prompts/anchors del contrato final.
 
 La app y la documentacion quedan migradas al formato nuevo, sin dependencia operativa del esquema legacy.
 
@@ -25,15 +25,15 @@ La app y la documentacion quedan migradas al formato nuevo, sin dependencia oper
    - eliminado `.codex/skills/adaptacion-ingesta-inicial/`.
 3. Refactor de runtime de app al contrato nuevo:
    - `app/story_store.py` reescrito:
-     - `text` string por pagina;
+     - `text` string por página;
      - `prompt` string por slot;
      - `cover` como slot completo;
-     - almacenamiento de imagenes en `<node>/images/`;
+     - almacenamiento de imágenes en `<node>/images/`;
      - nombre opaco `<uuid>_<slug>.<ext>`;
-     - actualizacion automatica de `images/index.json`;
+     - actualización automática de `images/index.json`;
      - soporte de `meta.json` por nodo, jerarquia y anclas.
    - UI/editor adaptado:
-     - edicion simple de texto/prompt;
+     - edición simple de texto/prompt;
      - `reference_ids[]` visibles con warning de faltantes;
      - portada editable como slot completo;
      - panel de anclas jerarquicas con alta/edicion, alternativas y activacion.
@@ -59,7 +59,7 @@ La app y la documentacion quedan migradas al formato nuevo, sin dependencia oper
    - sin `schema_version`, `story_title`, `source_refs`, `ingest_meta`.
 2. `meta.json`:
    - soportado en libro + ancestros + global.
-3. Sidecars legacy de adaptacion:
+3. Sidecars legacy de adaptación:
    - fuera de contrato en esta etapa.
 
 ## Archivos principales tocados

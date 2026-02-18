@@ -25,16 +25,16 @@
   - `library/<node>/meta.json`.
 - minimos:
   - `collection.title`, `anchors[]`, `updated_at`.
-- anchor minimo:
+- anchor mínimo:
   - `id`, `name`, `prompt`, `image_filenames[]`.
-- ampliado para edicion:
+- ampliado para edición:
   - `status`, `active_id`, `alternatives[]`.
 
-### Imagenes por nodo
+### Imágenes por nodo
 
 - carpeta: `library/<node>/images/`
 - assets: `<uuid>_<slug>.<ext>`
-- indice: `library/<node>/images/index.json`
+- índice: `library/<node>/images/index.json`
 
 ## Runtime web
 
@@ -44,8 +44,8 @@
 - Endpoints principales:
   - `/`
   - `/<path_rel>` (nodo o cuento)
-  - `/<book>/<NN>?p=N` (lectura por pagina)
-  - `/<book>/<NN>?p=N&editor=1` (editor de pagina)
+  - `/<book>/<NN>?p=N` (lectura por página)
+  - `/<book>/<NN>?p=N&editor=1` (editor de página)
   - `/<book>/<NN>?editor=1` (editor de portada)
   - `/<story_path>/_fr/*` (fragmentos HTMX)
   - `/<story_path>/_act/*` (acciones editoriales)
@@ -60,8 +60,8 @@
 - `templates/components/`: piezas reutilizables (tarjetas, breadcrumbs, slots).
 - `templates/browse/`: vistas de biblioteca.
 - `templates/story/read/`: lectura y panel avanzado.
-- `templates/story/editor/`: edicion de pagina, portada y anclas.
-- `web/`: rutas por dominio (`browse` catch-all canonico, `story_editor` acciones, `fragments`, `system`).
+- `templates/story/editor/`: edición de página, portada y anclas.
+- `web/`: rutas por dominio (`browse` catch-all canónico, `story_editor` acciones, `fragments`, `system`).
 
 ## CLI de app
 

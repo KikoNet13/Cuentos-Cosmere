@@ -1,4 +1,4 @@
-﻿# TAREA-029 - Style Prompt Maestro en setup ChatGPT Project (Los juegos del hambre)
+# TAREA-029 - Style Prompt Maestro en setup ChatGPT Project (Los juegos del hambre)
 
 ## Metadatos
 
@@ -10,7 +10,7 @@
 
 ## Objetivo
 
-Incorporar en las instrucciones de ChatGPT Project un bloque explicito y reutilizable de estilo canonico para reducir deriva visual, junto con reglas operativas de composicion por intencion del slot.
+Incorporar en las instrucciones de ChatGPT Project un bloque explicito y reutilizable de estilo canónico para reducir deriva visual, junto con reglas operativas de composición por intencion del slot.
 
 ## Contexto
 
@@ -18,34 +18,34 @@ Los documentos operativos tenian reglas de continuidad generales, pero no fijaba
 
 ## Plan
 
-1. Actualizar setup de saga actual con bloque de estilo canonico y modificadores de composicion.
-2. Actualizar guia operativa generica para forzar verificacion de estilo y decision de composicion por slot.
+1. Actualizar setup de saga actual con bloque de estilo canónico y modificadores de composición.
+2. Actualizar guia operativa generica para forzar verificacion de estilo y decision de composición por slot.
 3. Actualizar plantilla oficial de dossier en `ingesta-cuentos` con placeholders genericos de style prompt.
 4. Sincronizar ejemplo B2 de `SKILL.md` con la plantilla oficial.
-5. Registrar trazabilidad en tarea, indice y changelog.
-6. Cerrar con commit unico y push en `main`.
+5. Registrar trazabilidad en tarea, índice y changelog.
+6. Cerrar con commit único y push en `main`.
 
 ## Decisiones
 
-- El prompt de estilo en ingles se conserva literal como canon.
-- Se agrega resumen tecnico breve en espanol como apoyo operativo.
-- La composicion (`full-bleed` / `spot art`) se aplica solo cuando el slot/prompt lo pide de forma explicita.
+- El prompt de estilo en inglés se conserva literal como canon.
+- Se agrega resumen técnico breve en español como apoyo operativo.
+- La composición (`full-bleed` / `spot art`) se aplica solo cuando el slot/prompt lo pide de forma explicita.
 - No se tocaron `library/los_juegos_del_hambre/*.json` ni `library/los_juegos_del_hambre/meta.json`.
 - No se crea ni modifica `library/los_juegos_del_hambre/chatgpt_project_setup.md` en esta tarea.
 
 ## Cambios aplicados
 
 - `chatgpt_projects_setup/Los juegos del hambre - Imagenes editoriales (16p).md`
-  - Seccion `STYLE PROMPT MAESTRO (CANONICO)` (EN literal + resumen ES).
-  - Seccion `MODIFICADORES DE COMPOSICION`.
+  - Sección `STYLE PROMPT MAESTRO (CANONICO)` (EN literal + resumen ES).
+  - Sección `MODIFICADORES DE COMPOSICION`.
   - Regla explicita de uso por slot/prompt.
 - `chatgpt_projects_setup/PASOS_OPERATIVOS.md`
   - Verificacion obligatoria del style prompt en preparacion.
-  - Paso de decision de composicion por intencion del slot.
-  - Checklist QA con invariantes tecnicos de estilo.
+  - Paso de decision de composición por intencion del slot.
+  - Checklist QA con invariantes técnicos de estilo.
 - `.codex/skills/ingesta-cuentos/references/chatgpt_project_setup_template.md`
   - Bloque generico `Style Prompt Maestro de la saga` con placeholders.
-  - Politica de composicion por intencion del slot.
+  - Politica de composición por intencion del slot.
 - `.codex/skills/ingesta-cuentos/SKILL.md`
   - Bloque B2 sincronizado con plantilla oficial.
 - `docs/tasks/INDICE.md`

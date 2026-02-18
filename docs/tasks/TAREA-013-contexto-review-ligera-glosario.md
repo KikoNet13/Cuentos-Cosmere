@@ -1,4 +1,4 @@
-﻿# TAREA-013-contexto-review-ligera-glosario
+# TAREA-013-contexto-review-ligera-glosario
 
 ## Metadatos
 

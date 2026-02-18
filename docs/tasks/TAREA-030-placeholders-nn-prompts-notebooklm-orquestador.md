@@ -1,15 +1,15 @@
-﻿# TAREA-030 - Placeholders `NN_prompts.json` para NotebookLM por cuento (orquestador)
+# TAREA-030 - Placeholders `NN_prompts.json` para NotebookLM por cuento (orquestador)
 
 - Fecha: 18/02/26 22:00
 - Estado: cerrada
-- Version objetivo: 2.7.0
+- Versión objetivo: 2.7.0
 
 ## Resumen
 
 Se implementa un parche de orquestacion para pedir a NotebookLM los prompts completos por cuento sin tocar ahora `NN.json`:
 
 1. Se crean placeholders `NN_prompts.json` en texto plano, listos para copiar/pegar en NotebookLM.
-2. Cada placeholder exige salida estricta en JSON valido y sin texto extra.
+2. Cada placeholder exige salida estricta en JSON válido y sin texto extra.
 3. El resultado esperado de NB se vuelca en el mismo `NN_prompts.json` para preparar un merge posterior.
 
 ## Alcance implementado

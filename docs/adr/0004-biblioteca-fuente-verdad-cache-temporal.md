@@ -9,10 +9,10 @@ Se adopto inicialmente una arquitectura hibrida: `library/` como fuente de verda
 
 ## Decision (historica)
 
-- fuente de verdad canonica: `library/`
+- fuente de verdad canónica: `library/`
 - SQLite como cache de lectura rapida
 - deteccion stale por fingerprint
 
 ## Estado actual
 
-Este ADR queda reemplazado por `0007`: la navegacion pasa a lectura directa de `NN.json`, sin cache SQLite en runtime.
+Este ADR queda reemplazado por `0007`: la navegación pasa a lectura directa de `NN.json`, sin cache SQLite en runtime.

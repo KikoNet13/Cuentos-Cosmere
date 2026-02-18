@@ -17,7 +17,7 @@ Refactorizar `.codex/skills/adaptacion-ingesta-inicial` para que la ingesta inic
 1. Eliminado el flujo CLI y el envelope ejecutable (`phase`, `pending_questions`, `planned_outputs`, etc.).
 2. Reescrito `SKILL.md` con workflow conversacional completo:
    - descubrimiento de `NN.md` + `NN.pdf`;
-   - gate canonico bloqueante por lote;
+   - gate canónico bloqueante por lote;
    - contraste con skill `pdf`;
    - preguntas una a una con opciones y excepcion de resolucion en bloque de incoherencias repetidas;
    - escritura incremental sobre archivos finales.
@@ -33,8 +33,8 @@ Refactorizar `.codex/skills/adaptacion-ingesta-inicial` para que la ingesta inic
 ## Decisiones
 
 1. La skill no tiene scripts ni fallback CLI.
-2. Bloqueo canonico inmediato por lote cuando falla cobertura PDF util de cualquier cuento.
-3. Uso de skill `pdf` para contraste canonico.
+2. Bloqueo canónico inmediato por lote cuando falla cobertura PDF util de cualquier cuento.
+3. Uso de skill `pdf` para contraste canónico.
 4. Politica `md-first expandido` para glosario/contexto.
 5. Preguntar todos los ambiguos (una pregunta por turno, con excepcion de resolucion en bloque por incoherencia repetida).
 6. Escritura parcial directa en archivos finales con estado `in_review`/`pending`/`open` segun corresponda.
@@ -67,7 +67,7 @@ Refactorizar `.codex/skills/adaptacion-ingesta-inicial` para que la ingesta inic
 
 1. Al no existir CLI, toda la ejecucion depende del protocolo conversacional correcto del agente.
 2. Preguntar todos los ambiguos puede generar rondas largas en lotes grandes.
-3. La calidad del contraste canonico depende del uso consistente de la skill `pdf` para evidencia.
+3. La calidad del contraste canónico depende del uso consistente de la skill `pdf` para evidencia.
 
 ## Commit asociado
 

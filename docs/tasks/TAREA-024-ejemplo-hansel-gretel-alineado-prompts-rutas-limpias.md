@@ -1,8 +1,8 @@
-# TAREA-024 - Ejemplo Hansel/Gretel alineado + prompts de generacion + rutas limpias
+# TAREA-024 - Ejemplo Hansel/Gretel alineado + prompts de generación + rutas limpias
 
 - Fecha: 18/02/26 10:05
 - Estado: cerrada
-- Version objetivo: 2.1.0
+- Versión objetivo: 2.1.0
 
 ## Resumen
 
@@ -11,21 +11,21 @@ Se alinea el ejemplo `library/hansel_y_gretel/01.json` con el nuevo set visual r
 ## Alcance implementado
 
 1. Ejemplo Hansel/Gretel realineado:
-   - reemplazo de assets activos (cover + paginas 1..15) usando `docs/assets/style_refs/Hansel y Gretel/`.
+   - reemplazo de assets activos (cover + páginas 1..15) usando `docs/assets/style_refs/Hansel y Gretel/`.
    - eliminacion de assets no usados del nodo.
    - regeneracion de `library/hansel_y_gretel/images/index.json` solo con activos.
 2. Contrato del cuento:
    - `library/hansel_y_gretel/01.json` reescrito con:
      - texto narrativo en UTF-8 correcto,
-     - prompts largos estructurados para cover y paginas 1..15,
+     - prompts largos estructurados para cover y páginas 1..15,
      - `reference_ids` simulados por anclas,
-     - pagina 16 con `images.main.status = not_required`, `active_id = \"\"`, `alternatives = []`.
+     - página 16 con `images.main.status = not_required`, `active_id = \"\"`, `alternatives = []`.
    - espejo sincronizado en `library/hansel_y_gretel/hansel_y_gretel.json`.
 3. Simulacion de anclas:
    - nuevo `library/hansel_y_gretel/meta.json` con `collection.title`, `anchors[]`, `updated_at`.
    - anclas de continuidad visual y de personajes/escenas con `image_filenames` simulados (sin archivos reales).
 4. Migracion breaking de rutas:
-   - ruta canonica unica: `GET /<path_rel>`.
+   - ruta canónica única: `GET /<path_rel>`.
    - semantica de cuento:
      - `/<book>/<NN>`
      - `/<book>/<NN>?p=N`
@@ -44,8 +44,8 @@ Se alinea el ejemplo `library/hansel_y_gretel/01.json` con el nuevo set visual r
    - rutas legacy eliminadas sin redirect:
      - `/browse/*`, `/story/*`, `/editor/story/*`, `/n/*`.
 5. UI portada:
-   - portada retirada de lectura por pagina (`story/read/_advanced_panel.html`).
-   - portada retirada del editor por pagina (`story/editor/page.html`).
+   - portada retirada de lectura por página (`story/read/_advanced_panel.html`).
+   - portada retirada del editor por página (`story/editor/page.html`).
    - nuevo editor dedicado `story/editor/cover.html` accesible con `?editor=1` sin `p`.
 6. Documentacion:
    - actualizados `AGENTS.md`, `README.md`, `app/README.md`.
@@ -63,9 +63,9 @@ Se alinea el ejemplo `library/hansel_y_gretel/01.json` con el nuevo set visual r
    - rutas legacy (`/browse/...`, `/story/...`, `/editor/story/...`, `/n/...`) -> `404`.
 3. Validacion de datos de ejemplo (script local):
    - top-level obligatorio presente.
-   - paginas secuenciales `1..16`.
-   - paginas `1..15` con `active_id` valido y asset existente.
-   - pagina `16` en `not_required` sin alternativa activa.
+   - páginas secuenciales `1..16`.
+   - páginas `1..15` con `active_id` válido y asset existente.
+   - página `16` en `not_required` sin alternativa activa.
    - `images/index.json` coincide exactamente con activos usados.
    - `meta.json` cumple minimos (`collection.title`, `anchors[]`, `updated_at`).
 

@@ -13,7 +13,7 @@ Operar como orquestador conversacional entre NotebookLM, ChatGPT Project y la we
 3. Validar contrato de cuentos/imagenes/meta.
 4. Enriquecer `reference_ids` faltantes antes de importar cuando exista `meta.json`.
 5. Bloquear lote completo si hay errores estructurales/editoriales.
-6. Importar lote valido a `library/<book_rel_path>/NN.json` con normalizaciones de importacion.
+6. Importar lote válido a `library/<book_rel_path>/NN.json` con normalizaciones de importacion.
 7. Generar/actualizar `library/<book_rel_path>/chatgpt_project_setup.md` con setup y flujo operativo de imagen.
 8. Archivar carpeta de inbox procesada en `library/_processed/<book_title>/<timestamp>/` cuando el lote se completa sin pendientes.
 9. Emitir mensajes accionables para NotebookLM.
@@ -37,8 +37,8 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
    - Confirmar slug final antes de importar.
 
 3. Resolucion por cuento (fusion en memoria)
-   - Si existe `NN.json` valido, usarlo como fuente canonica del cuento.
-   - Si no existe `NN.json`, intentar fusion por combinaciones validas:
+   - Si existe `NN.json` válido, usarlo como fuente canónica del cuento.
+   - Si no existe `NN.json`, intentar fusion por combinaciones válidas:
      - `a + b`
      - `a1 + a2 + b`
      - `a + b1 + b2`
@@ -51,11 +51,11 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
      - `a2`: `5..8`
      - `b1`: `9..12`
      - `b2`: `13..16`
-   - Unir paginas sin duplicados y exigir secuencia final `1..N` sin huecos.
+   - Unir páginas sin duplicados y exigir secuencia final `1..N` sin huecos.
    - Cover final:
      - preferir `a`;
      - si no existe, preferir `a1`;
-     - si no, primer bloque valido.
+     - si no, primer bloque válido.
    - Si hay cover distinto entre partes, warning no bloqueante.
 
 4. Validacion estructural de lote
@@ -64,7 +64,7 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
    - Entregar errores por cuento con formato accionable para NotebookLM.
 
 5. Enriquecimiento preimport de `reference_ids`
-   - Si existe `meta.json` valido del lote, aplicar politica hibrida:
+   - Si existe `meta.json` válido del lote, aplicar politica hibrida:
      - respetar `reference_ids` ya presentes;
      - autocompletar slots sin refs en `cover` y `pages[].images.main`.
    - Regla de precedencia:
@@ -80,7 +80,7 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
      - preguntar 1 a 1 si se sobrescribe ese cuento;
      - continuar solo con confirmacion explicita.
 
-7. Importacion (solo si lote valido)
+7. Importacion (solo si lote válido)
    - Forzar `status = definitive`.
    - Rellenar `created_at` si falta.
    - Actualizar `updated_at` siempre.
@@ -95,19 +95,19 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
        - ancestros de `book_rel_path`
        - `library/meta.json`
    - Si falta `meta.json`: warning no bloqueante.
-   - Si hay conflicto semantico real (no tecnico): preguntar al usuario.
+   - Si hay conflicto semantico real (no técnico): preguntar al usuario.
 
 9. Dossier ChatGPT Project por saga (obligatorio tras import)
    - Generar o regenerar siempre:
      - `library/<book_rel_path>/chatgpt_project_setup.md`
    - Fuente para derivacion:
      - `library/<book_rel_path>/meta.json` (anclas, reglas);
-     - `library/<book_rel_path>/NN.json` (prompts/slots por cuento y pagina).
-   - Contenido minimo del dossier:
+     - `library/<book_rel_path>/NN.json` (prompts/slots por cuento y página).
+   - Contenido mínimo del dossier:
      - nombre sugerido del project;
      - instrucciones maestras de continuidad visual;
-     - checklist obligatorio de fase de anclas antes de paginas;
-     - flujo rapido por slot de portada y pagina (copiar prompt + refs, generar, pegar y guardar);
+     - checklist obligatorio de fase de anclas antes de páginas;
+     - flujo rapido por slot de portada y página (copiar prompt + refs, generar, pegar y guardar);
      - politica de QA rapido (coherencia de personajes, paleta, encuadre, continuidad);
      - troubleshooting de portapapeles/navegador.
 
@@ -156,7 +156,7 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
 
 1. Nombre permitido:
    - `NN_a.json`, `NN_b.json`, `NN_a1.json`, `NN_a2.json`, `NN_b1.json`, `NN_b2.json`.
-2. Cada parte debe parsear como JSON valido de cuento (top-level completo).
+2. Cada parte debe parsear como JSON válido de cuento (top-level completo).
 3. Parse aceptado para UTF-8 y UTF-8 BOM.
 4. `pages[].page_number` debe caer en su rango esperado por sufijo.
 5. Si parte contiene texto plano placeholder/no JSON:
@@ -168,7 +168,7 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
    - `collection.title`,
    - `anchors[]`,
    - `updated_at`.
-2. Anchor minimo:
+2. Anchor mínimo:
    - `id`, `name`, `prompt`, `image_filenames[]`.
 3. Anchor ampliado permitido:
    - `status`, `active_id`, `alternatives[]`.
@@ -201,7 +201,7 @@ Usar este modo cuando ya existe `library/<book_rel_path>/` y solo se quiere refr
 2. Cargar `library/<book_rel_path>/meta.json` y todos los `NN.json` del libro.
 3. Regenerar `library/<book_rel_path>/chatgpt_project_setup.md`.
 4. Reportar:
-   - fecha de actualizacion,
+   - fecha de actualización,
    - total de cuentos detectados,
    - total de anchors y reglas aplicadas,
    - warnings (si falta `meta.json` o hay refs sin resolver).
@@ -215,7 +215,7 @@ Usar este modo cuando ya existe `library/<book_rel_path>/` y solo se quiere refr
      - error concreto,
      - correccion sugerida para NotebookLM.
 
-2. Si el lote es valido:
+2. Si el lote es válido:
    - confirmar destino,
    - listar importaciones,
    - listar warnings no bloqueantes.

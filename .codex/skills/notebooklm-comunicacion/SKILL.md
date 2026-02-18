@@ -1,6 +1,6 @@
 ---
 name: notebooklm-comunicacion
-description: Skill conversacional para preparar comunicacion con NotebookLM en 4 fases: plan de coleccion, meta/anclas, partes de cuentos y deltas de correccion.
+description: Skill conversacional para preparar comunicacion con NotebookLM en 4 fases: plan de colección, meta/anclas, partes de cuentos y deltas de correccion.
 ---
 
 # NotebookLM Comunicacion
@@ -8,24 +8,24 @@ description: Skill conversacional para preparar comunicacion con NotebookLM en 4
 ## Objetivo
 Estandarizar la comunicacion con NotebookLM para nuevas novelas/sagas:
 
-1. Definir plan editorial de coleccion (lista de cuentos y tramos).
+1. Definir plan editorial de colección (lista de cuentos y tramos).
 2. Obtener `meta.json` de libro con anclas, reglas de estilo y continuidad.
 3. Emitir prompts listos para entrega de cuentos por partes (`8+8`) y fallback (`4+4`).
 4. Emitir mensajes delta por archivo para corregir errores sin rehacer el lote.
-5. Forzar prompts largos en espanol estructurado para `cover` y `pages[].images.main`.
+5. Forzar prompts largos en español estructurado para `cover` y `pages[].images.main`.
 
 Esta skill es **100% conversacional** y **no usa scripts internos**.
 
 ## Scope de la skill
 
-1. Prepara prompting y operacion de entrega para NotebookLM.
+1. Prepara prompting y operación de entrega para NotebookLM.
 2. No importa cuentos ni mueve archivos al destino final.
 3. La fusion/validacion/importacion final pertenece a `ingesta-cuentos`.
 
 ## Entradas minimas
 
 1. `book_title` (nombre de carpeta de `_inbox`).
-2. Fuente canonica cargada en NotebookLM (novela/saga origen).
+2. Fuente canónica cargada en NotebookLM (novela/saga origen).
 3. Lista de cuentos objetivo (si no existe, pedirla en fase de plan).
 4. `book_rel_path` opcional (puede confirmarse despues en `ingesta-cuentos`).
 
@@ -41,11 +41,11 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
 3. `reference_ids` de slots debe apuntar a filenames declarados en `meta.anchors[].image_filenames[]`.
 4. No usar `uuid_slug` de assets finales dentro de `reference_ids`.
 
-## Estandar de prompt de slot (obligatorio)
+## Estándar de prompt de slot (obligatorio)
 
 Aplica a `cover.prompt` y `pages[].images.main.prompt`.
 
-1. Idioma canonico: espanol estructurado.
+1. Idioma canónico: español estructurado.
 2. Estructura fija de 8 bloques con este orden exacto:
    - `OBJETIVO DE ILUSTRACION`
    - `CONTINUIDAD VISUAL OBLIGATORIA`
@@ -63,11 +63,11 @@ Aplica a `cover.prompt` y `pages[].images.main.prompt`.
 
 ## Estrategia por defecto
 
-1. Cuentos objetivo: 16 paginas.
+1. Cuentos objetivo: 16 páginas.
 2. Particion inicial:
-   - `NN_a.json` -> paginas `1..8`
-   - `NN_b.json` -> paginas `9..16`
-3. Si NotebookLM se corta o no devuelve JSON valido:
+   - `NN_a.json` -> páginas `1..8`
+   - `NN_b.json` -> páginas `9..16`
+3. Si NotebookLM se corta o no devuelve JSON válido:
    - autoescalar para ese bloque a:
      - `NN_a1.json` -> `1..4`
      - `NN_a2.json` -> `5..8`
@@ -76,31 +76,31 @@ Aplica a `cover.prompt` y `pages[].images.main.prompt`.
 
 ## Flujo oficial (4 fases)
 
-1. Plan de coleccion
+1. Plan de colección
    - pedir listado de cuentos (`story_id`, `title`, `tramo_narrativo_origen`, `paginas_objetivo`).
 2. Meta/anclas
    - pedir `meta.json` del libro con `collection`, `anchors`, `style_rules`, `continuity_rules`, `updated_at`.
 3. Cuentos por partes
    - pedir `NN_a.json` y `NN_b.json` (o fallback `a1/a2/b1/b2`) con contrato completo.
 4. Deltas
-   - corregir solo archivos afectados por: JSON truncado, JSON invalido, rango incorrecto, faltantes de `reference_ids` o prompts fuera de estandar.
+   - corregir solo archivos afectados por: JSON truncado, JSON invalido, rango incorrecto, faltantes de `reference_ids` o prompts fuera de estándar.
 
 ## Reglas de prompts a NotebookLM
 
-1. Salida: solo JSON valido (sin markdown, sin explicaciones).
+1. Salida: solo JSON válido (sin markdown, sin explicaciones).
 2. Contrato de cuento top-level obligatorio:
    - `story_id`, `title`, `status`, `book_rel_path`, `created_at`, `updated_at`, `cover`, `pages`.
 3. `pages` solo en el rango solicitado por archivo.
 4. `images.main` obligatorio.
 5. `images.secondary` excluido por defecto.
-6. Texto narrativo en espanol, 50-100 palabras por pagina.
+6. Texto narrativo en español, 50-100 palabras por página.
 7. Si existe `meta.json`, incluir `reference_ids` cuando sea posible usando `anchors[].image_filenames`.
-8. Prompts de slot en espanol estructurado con el estandar de 8 bloques.
+8. Prompts de slot en español estructurado con el estándar de 8 bloques.
 9. Respetar perfil balanceado de longitud por slot.
 
 ## Plantillas operativas
 
-### A) Prompt de plan de coleccion
+### A) Prompt de plan de colección
 
 ```text
 PROMPT NOTEBOOKLM - PLAN DE COLECCION
@@ -269,7 +269,7 @@ Salida final:
 - SOLO JSON valido.
 ```
 
-### E) Fallback automatico `4+4`
+### E) Fallback automático `4+4`
 
 ```text
 La respuesta se corto o no es JSON valido.
@@ -368,6 +368,6 @@ Salida final:
 2. Debe quedar claro el siguiente archivo a generar/corregir.
 3. Debe quedar claro cuando pasar a `ingesta-cuentos`.
 4. El usuario debe terminar con:
-   - `meta.json` valido del libro,
+   - `meta.json` válido del libro,
    - partes `NN_a/NN_b` (o fallback) por cuento,
    - contrato listo para fusion/importacion.

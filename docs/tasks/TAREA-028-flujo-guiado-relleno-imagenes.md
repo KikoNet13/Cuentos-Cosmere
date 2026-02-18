@@ -1,12 +1,12 @@
-# TAREA-028 - Flujo guiado de relleno de imagenes pendientes
+# TAREA-028 - Flujo guiado de relleno de imágenes pendientes
 
 - Fecha: 18/02/26 17:12
 - Estado: cerrada
-- Version objetivo: 2.5.0
+- Versión objetivo: 2.5.0
 
 ## Resumen
 
-Se implementa un modo operativo unico para produccion de imagenes:
+Se implementa un modo operativo único para produccion de imágenes:
 
 1. Se entra por `/_flow/image`.
 2. La app muestra solo el primer pendiente global.
@@ -18,12 +18,12 @@ La prioridad de cola queda cerrada: anclas primero, despues cuentos.
 ## Alcance implementado
 
 1. Motor de cola global:
-   - nuevo modulo `app/web/image_flow.py`.
+   - nuevo módulo `app/web/image_flow.py`.
    - recorre `library/**/meta.json` y cuentos `NN.json` excluyendo `_inbox`, `_processed`, `_backups`.
    - criterio de pendiente:
      - `status != not_required`,
      - prompt no vacio,
-     - sin imagen activa valida.
+     - sin imagen activa válida.
    - excluidos:
      - prompt vacio.
 2. Orden de cola:
@@ -45,7 +45,7 @@ La prioridad de cola queda cerrada: anclas primero, despues cuentos.
 6. UI:
    - nuevo template `app/templates/story/flow/image_fill.html` (modo minimal de produccion).
    - topbar con acceso directo y badge de pendientes.
-7. Integracion de blueprint:
+7. Integración de blueprint:
    - registro de `routes_image_flow` en `app/web/__init__.py`.
    - context processor global para estado de pendientes en topbar.
 

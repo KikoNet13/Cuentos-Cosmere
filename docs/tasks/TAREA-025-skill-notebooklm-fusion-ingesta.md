@@ -2,7 +2,7 @@
 
 - Fecha: 18/02/26 15:35
 - Estado: cerrada
-- Version objetivo: 2.2.0
+- Versión objetivo: 2.2.0
 
 ## Resumen
 
@@ -13,11 +13,11 @@ Se formaliza el tramo NotebookLM del flujo 3 IAs con una nueva skill conversacio
 1. Nueva skill `notebooklm-comunicacion` (sin scripts):
    - setup de lote para NotebookLM;
    - prompts por partes `8+8` (`NN_a`, `NN_b`);
-   - fallback automatico `4+4` (`a1/a2/b1/b2`);
+   - fallback automático `4+4` (`a1/a2/b1/b2`);
    - mensajes delta por archivo.
 2. `ingesta-cuentos` actualizado:
    - descubrimiento de cuentos por `NN.json` o piezas;
-   - fusion en memoria por combinaciones validas;
+   - fusion en memoria por combinaciones válidas;
    - validacion de rango por sufijo de parte;
    - warnings por cover discrepante;
    - archivado post-import en `library/_processed/<book_title>/<timestamp>/`.

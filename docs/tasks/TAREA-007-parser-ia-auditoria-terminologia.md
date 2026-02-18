@@ -14,14 +14,14 @@ Implementar parser con auditoria IA asistida en `inbox-parse`, gate critico en `
 
 ## Contexto
 
-El flujo previo generaba propuesta tecnica (`review.md`) pero no tenia contrato estructurado para revisar coherencia semantica/canon/terminologia ni para bloquear aplicacion por hallazgos criticos.
+El flujo previo generaba propuesta técnica (`review.md`) pero no tenia contrato estructurado para revisar coherencia semantica/canon/terminologia ni para bloquear aplicacion por hallazgos criticos.
 
 ## Plan
 
 1. Extender parser para generar contexto y review IA estructurada por batch.
 2. Incorporar validador CLI de `review_ai.json`.
 3. Aplicar gate critico en `inbox-apply` con override trazable (`--force-reason`).
-4. Documentar contratos (`meta.md` glosario, flujo de revision IA).
+4. Documentar contratos (`meta.md` glosario, flujo de revisión IA).
 5. Actualizar skill operativa global y trazabilidad repo.
 
 ## Decisiones
@@ -30,7 +30,7 @@ El flujo previo generaba propuesta tecnica (`review.md`) pero no tenia contrato 
 - Gate de `inbox-apply` bloquea por `status` pendiente/bloqueado y por `critical_open > 0`.
 - `--force` exige `--force-reason` y registra override en `manifest.json`.
 - Glosario por nodo en `meta.md` con `## Glosario` en tabla tipada y merge jerarquico.
-- Deteccion automatica inicial: variantes prohibidas de glosario se crean como findings `critical`.
+- Deteccion automática inicial: variantes prohibidas de glosario se crean como findings `critical`.
 
 ## Cambios aplicados
 

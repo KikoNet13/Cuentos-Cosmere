@@ -1,8 +1,8 @@
-﻿# TAREA-031 - Contexto NotebookLM en placeholders + meta anchors
+# TAREA-031 - Contexto NotebookLM en placeholders + meta anchors
 
 - Fecha: 18/02/26 22:08
 - Estado: cerrada
-- Version objetivo: 2.7.1
+- Versión objetivo: 2.7.1
 
 ## Resumen
 
@@ -32,7 +32,7 @@ Se corrigen los placeholders `NN_prompts.json` para que funcionen en NotebookLM 
 3. Verificacion de meta placeholder:
    - `meta_prompts.json` existente;
    - instruccion de salida exacta para `meta.json`.
-4. Resultado de validacion automatica:
+4. Resultado de validacion automática:
    - `PROMPT_PLACEHOLDERS_OK`.
 
 ## Notas operativas

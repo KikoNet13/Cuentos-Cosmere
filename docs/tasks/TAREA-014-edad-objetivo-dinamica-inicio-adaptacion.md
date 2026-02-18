@@ -1,4 +1,4 @@
-﻿# TAREA-014-edad-objetivo-dinamica-inicio-adaptacion
+# TAREA-014-edad-objetivo-dinamica-inicio-adaptacion
 
 ## Metadatos
 

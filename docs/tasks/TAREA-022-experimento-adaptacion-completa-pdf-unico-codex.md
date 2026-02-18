@@ -10,12 +10,12 @@
 
 ## Objetivo
 
-Generar una adaptacion editorial completa desde una fuente canonica unica (`library/_inbox/El imperio final.pdf`) y publicar una version nueva en `library/cosmere/nacidos-de-la-bruma-era-1/el-imperio-final-codex/`, con 8 cuentos de 16 paginas, sidecars de revision y preparacion visual para lote posterior con `imagegen`.
+Generar una adaptación editorial completa desde una fuente canónica única (`library/_inbox/El imperio final.pdf`) y publicar una versión nueva en `library/cosmere/nacidos-de-la-bruma-era-1/el-imperio-final-codex/`, con 8 cuentos de 16 páginas, sidecars de revisión y preparacion visual para lote posterior con `imagegen`.
 
 ## Alcance implementado
 
-1. Preflight canonico con PDF unico:
-   - lectura de `library/_inbox/El imperio final.pdf` (899 paginas);
+1. Preflight canónico con PDF único:
+   - lectura de `library/_inbox/El imperio final.pdf` (899 páginas);
    - deteccion y validacion de capitulos `1..38`;
    - aborta si falta secuencia completa de capitulos.
 2. Segmentacion editorial fija aplicada:
@@ -27,11 +27,11 @@ Generar una adaptacion editorial completa desde una fuente canonica unica (`libr
    - `06`: capitulos `25-29`
    - `07`: capitulos `30-34`
    - `08`: capitulos `35-38`
-3. Generacion completa de salidas:
-   - `01..08.json` en contrato vigente, `status=definitive`, `16` paginas por cuento;
-   - `text.original/current` por pagina;
-   - prompts de imagen detallados por pagina en `images.main.prompt`.
-4. Sidecars de revision y contexto:
+3. Generación completa de salidas:
+   - `01..08.json` en contrato vigente, `status=definitive`, `16` páginas por cuento;
+   - `text.original/current` por página;
+   - prompts de imagen detallados por página en `images.main.prompt`.
+4. Sidecars de revisión y contexto:
    - `adaptation_context.json` (glosario y decisiones editoriales operativas);
    - `NN.issues.json` por cuento;
    - `visual_bible.json` para continuidad visual y lote imagegen posterior.
@@ -41,7 +41,7 @@ Generar una adaptacion editorial completa desde una fuente canonica unica (`libr
 ## Decisiones
 
 1. Canon exclusivo de esta tarea: `library/_inbox/El imperio final.pdf`.
-2. Sin uso de internet para decisiones canonicas.
+2. Sin uso de internet para decisiones canónicas.
 3. Estado final de cuentos: `definitive`.
 4. Estilo de salida: lenguaje claro 5-12, sin tono caricaturesco.
 5. Preparacion visual obligatoria para consistencia entre cuentos.
@@ -74,20 +74,20 @@ Generar una adaptacion editorial completa desde una fuente canonica unica (`libr
 
 ## Validacion ejecutada
 
-1. Generacion integral:
+1. Generación integral:
    - `python tmp/tarea022_generate_codex.py`
 2. Verificacion estructural:
    - existen `01..08.json`;
-   - cada cuento tiene `16` paginas y `status=definitive`;
-   - cada pagina tiene `text.original/current` e `images.main`.
+   - cada cuento tiene `16` páginas y `status=definitive`;
+   - cada página tiene `text.original/current` e `images.main`.
 3. Verificacion de sidecars:
    - existen `01..08.issues.json`, `adaptation_context.json` y `visual_bible.json`.
-4. Verificacion canonica de preflight:
+4. Verificacion canónica de preflight:
    - deteccion de capitulos `1..38` antes de publicar salidas.
 
 ## Riesgos y notas
 
-1. Aunque la salida es completa y usable, sigue recomendada una pasada editorial humana antes de imagenes definitivas.
+1. Aunque la salida es completa y usable, sigue recomendada una pasada editorial humana antes de imágenes definitivas.
 2. `library/` esta ignorado globalmente en `.gitignore`; para versionar esta tarea se anaden de forma explicita solo los archivos del experimento `-codex`.
 
 ## Commit asociado

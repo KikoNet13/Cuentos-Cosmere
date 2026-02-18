@@ -1,4 +1,4 @@
-﻿# TAREA-009-limpieza-library-el-imperio-final
+# TAREA-009-limpieza-library-el-imperio-final
 
 ## Metadatos
 
@@ -20,12 +20,12 @@ El usuario elimino localmente archivos `NN.md` y `NN.pdf` legacy de `library/...
 
 1. Confirmar estado git con eliminaciones pendientes en `library/...`.
 2. Actualizar trazabilidad documental (`TAREA-009`, `INDICE`, `CHANGELOG`).
-3. Crear un unico commit y hacer push a `main`.
+3. Crear un único commit y hacer push a `main`.
 
 ## Decisiones
 
 - Se elimina solo contenido legacy del libro en `library/...`, sin tocar `library/_inbox`.
-- La configuracion local `.codex/config.toml` no se versiona en este commit.
+- La configuración local `.codex/config.toml` no se versiona en este commit.
 
 ## Cambios aplicados
 
@@ -54,7 +54,7 @@ El usuario elimino localmente archivos `NN.md` y `NN.pdf` legacy de `library/...
 
 ## Riesgos
 
-- Si algun flujo aun depende de `NN.md`/`NN.pdf` legacy, quedara sin datos hasta completar adaptacion a `NN.json`.
+- Si algun flujo aún depende de `NN.md`/`NN.pdf` legacy, quedara sin datos hasta completar adaptación a `NN.json`.
 
 ## Seguimiento
 

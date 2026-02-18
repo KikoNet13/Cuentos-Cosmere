@@ -1,51 +1,73 @@
-PROMPT NOTEBOOKLM - STORY 03 - GENERAR 03_prompts.json
-Devuelve SOLO JSON valido.
-Sin markdown, sin explicaciones.
-No incluyas nada fuera del JSON.
-Tu respuesta debe ser EXACTAMENTE el contenido final del archivo `03_prompts.json`.
-
-CONTEXTO DISPONIBLE EN NOTEBOOKLM (IMPORTANTE)
-- Tienes acceso a los libros canonicos de la saga Los juegos del hambre.
-- Tienes acceso al ejemplo completo de Hansel y Gretel como referencia de estructura de prompts.
-- Tienes acceso a la fuente de estilo visual ya guardada.
-- Revisa tambien la NUEVA FUENTE: `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-- NO dependas de rutas locales, nombres de archivo del repositorio ni detalles de la webapp.
-
-En `FUENTE_NB_los_juegos_textos_y_anchors.md` tienes:
-- texto completo por pagina del cuento;
-- anchors canonicos del meta de saga;
-- ids y `image_filenames` para referencias visuales.
-
-Genera un UNICO objeto JSON con este esquema:
 {
   "story_id": "03",
   "title": "El Canto de Rue",
   "book_rel_path": "los_juegos_del_hambre",
-  "updated_at": "<ISO8601_UTC>",
-  "cover_prompt": "<prompt largo>",
+  "updated_at": "2026-02-18T23:45:00Z",
+  "cover_prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'El Canto de Rue' que represente la alianza más conmovedora y tragica de los Juegos del Hambre entre Katniss Everdeen y la pequeña Rue.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern de línea negra definida y colores planos vibrantes. Katniss debe tener su trenza negra, ojos grises y su arco de madera. Rue debe ser una niña pequeña de piel oscura, ojos brillantes y aspecto agil. Ambas deben vestir los uniformes de entrenamiento grises del Capitolio con el broche de sinsajo dorado visible en el pecho de Katniss. Respetar la estetica de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Katniss y Rue sentadas una junto a la otra en la rama gruesa de un arbol gigante. Rue señala hacia arriba con curiosidad. El encuadre es equilibrado y transmite una sensacion de refugio secreto en medio de la selva.\n\nPERSONAJES Y ACCION\nKatniss observa a Rue con una expresion protectora y tierna. Rue sonrie ligeramente, compartiendo un momento de paz. La acción es estatica pero cargada de emocion fraternal.\n\nENTORNO, PALETA E ILUMINACION\nFondo de bosque denso con hojas de color verde esmeralda y marron calido. La luz del sol se filtra entre las ramas creando parches amarillos planos. Paleta de verdes, marrones y el dorado del broche de sinsajo. Iluminación clara y sin sombras complejas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_rue_base, env_arena_forest, prop_mockingjay_pin, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto ni titulos. Sin fotorrealismo, sin degradados suaves, sin efectos de luz digital modernos ni sombreado dramatico. No mostrar violencia ni a otros tributos en la portada.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta claridad, lista para impresion de cuento infantil con bordes limpios y alta definicion en los contornos.",
   "page_prompts": [
-    { "page_number": 1, "main_prompt": "<prompt largo>" }
+    {
+      "page_number": 1,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nCapturar la tension extrema de los sesenta segundos previos al inicio de los Juegos del Hambre en la plataforma de lanzamiento.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss de pie sobre una placa circular de metal. Al fondo la Cornucopia dorada gigante. Estilo Sergio Kern de línea clara y colores planos saturados.\n\nCOMPOSICION Y ENCUADRE\nPlano general desde la espalda de Katniss mirando hacia el centro de la arena. El sol brilla intensamente sobre el cuerno de oro. La simetria de las plataformas de los otros tributos es visible.\n\nPERSONAJES Y ACCION\nKatniss en tension, con los musculos preparados para correr. A lo lejos se distingue a Peeta Mellark en su plataforma sacudiendo la cabeza en señal de advertencia.\n\nENTORNO, PALETA E ILUMINACION\nLlanura despejada rodeada de bosque al fondo. Paleta de azules intensos para el cielo y el oro brillante de la Cornucopia. Luz cenital dura y plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nNo usar desenfoque de movimiento. Sin fotorrealismo. Evitar detalles excesivos en la multitud de armas dentro de la Cornucopia para mantener la claridad visual.\n\nFORMATO DE SALIDA\nIlustracion 1:1 nitida."
+    },
+    {
+      "page_number": 2,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el caos del baño de sangre inicial y la lucha por los suministros en la base de la Cornucopia.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss forcejeando por una mochila de color naranja intenso. Estilo Sergio Kern con contornos negros marcados.\n\nCOMPOSICION Y ENCUADRE\nPlano medio dinamico de Katniss tirando de la mochila contra un chico del Distrito 9. La acción es frontal y urgente.\n\nPERSONAJES Y ACCION\nKatniss con gesto de esfuerzo. El chico del Distrito 9 tose sangre (representada como manchas rojas planas) sobre el rostro de Katniss. En el fondo, una chica del Distrito 2 se prepara para lanzar cuchillos.\n\nENTORNO, PALETA E ILUMINACION\nSuelo de arena dorada. Colores planos: naranja para la mochila, rojo para la sangre y blanco para el Edificio de Justicia sugerido. Luz brillante de mediodia.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir sangre de forma realista o truculenta. Sin degradados complejos. Evitar que la escena sea demasiado oscura.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 dinamica."
+    },
+    {
+      "page_number": 3,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Katniss refugiada en el bosque al caer la noche tras el primer dia de los juegos.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con su mochila naranja y su cinturon de cuero. Estilo Ligne Claire con colores nocturnos planos.\n\nCOMPOSICION Y ENCUADRE\nPlano general de Katniss atada a la rama de un pino muy alto. Al fondo, el cielo nocturno muestra el sello del Capitolio proyectado en las nubes.\n\nPERSONAJES Y ACCION\nKatniss dentro de su saco de dormir, con la mirada fija en el cielo. Su expresion es de cansancio y soledad absoluta.\n\nENTORNO, PALETA E ILUMINACION\nBosque sombrio de coniferas bajo un cielo azul profundo. El sello del Capitolio emite una luz blanca plana que ilumina la copa del arbol.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin sombras dramaticas realistas. No usar efectos de brillo digital exagerados. El sello del Capitolio debe ser un icono simple.\n\nFORMATO DE SALIDA\nIlustracion 1:1 atmosferica."
+    },
+    {
+      "page_number": 4,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el descubrimiento de la alianza de Peeta con los tributos profesionales desde el escondite de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta Mellark con rostro amoratado e iluminado por el fuego. Estilo Sergio Kern de línea negra definida.\n\nCOMPOSICION Y ENCUADRE\nPlano desde el punto de vista de Katniss (picado desde el arbol). En el suelo se ve una pequeña hoguera y al grupo de los profesionales descansando.\n\nPERSONAJES Y ACCION\nPeeta de pie junto al fuego, mirando hacia el bosque con expresion dura. Los otros tributos profesionales (D1, D2, D4) estan sentados riendo. La acción transmite traicion y peligro.\n\nENTORNO, PALETA E ILUMINACION\nClaro del bosque nocturno. Paleta de azules oscuros contrastando con el naranja brillante de la hoguera. Luz plana focalizada en el fuego.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir a Katniss en el encuadre para enfatizar el punto de vista de observadora oculta.\n\nFORMATO DE SALIDA\nIlustracion 1:1 narrativa."
+    },
+    {
+      "page_number": 5,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el ataque de los Vigilantes mediante bolas de fuego para forzar a los tributos a encontrarse.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nBolas de fuego de color naranja y rojo intenso cayendo del cielo. Katniss huyendo entre las llamas. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano americano de Katniss corriendo hacia el espectador. Detras de ella, un arbol estalla en una bola de fuego circular perfecta.\n\nPERSONAJES Y ACCION\nKatniss con gesto de panico, protegiendose la cara con un brazo. Su ropa tiene pequeñas quemaduras sugeridas por puntos negros.\n\nENTORNO, PALETA E ILUMINACION\nBosque en llamas. Paleta de naranjas, amarillos y negros sobre fondo verde oscuro. Iluminación muy brillante y saturada.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin efectos de humo realistas; usar formas de nubes grises planas. No mostrar heridas sangrientas.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alto impacto visual."
+    },
+    {
+      "page_number": 6,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Katniss atrapada en un arbol mientras los profesionales la esperan debajo para matarla.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss herida en la pierna. Los profesionales armados en la base del arbol. Estetica Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano general vertical que muestra la altura del arbol. Katniss esta en las ramas superiores; Cato y los demas estan diminutos abajo, mirando hacia arriba.\n\nPERSONAJES Y ACCION\nKatniss desafiante gritando hacia abajo. Los profesionales sentados en circulo, confiados en que no podra bajar. Cato sostiene una espada.\n\nENTORNO, PALETA E ILUMINACION\nBosque denso a la luz de la tarde. Colores ocres y verdes. Luz lateral que proyecta sombras largas y planas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nEvitar fotorrealismo. No dibujar expresiones faciales demasiado grotescas en los villanos. Mantener la simplicidad de las formas.\n\nFORMATO DE SALIDA\nIlustracion 1:1 clara."
+    },
+    {
+      "page_number": 7,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el momento en que Katniss descubre el nido de rastrevíspulas gracias a la ayuda silenciosa de Rue.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nNido de avispas mutantes: una esfera dorada grande y rugosa. Rue asomando entre las hojas. Estetica Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio corto de Katniss mirando hacia arriba a una rama vecina donde el nido cuelga peligrosamente. Rue es visible en el arbol de al lado, señalando el nido con el dedo.\n\nPERSONAJES Y ACCION\nKatniss con expresion de sorpresa y comprension. Rue como una sombra agil y silenciosa entre el follaje. Gesto de complicidad.\n\nENTORNO, PALETA E ILUMINACION\nPrimer plano de hojas verdes vibrantes. El nido brilla con un tono dorado amarillento. Luz filtrada y suave.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_rue_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nNo dibujar insectos detallados; el nido debe ser una forma geometrica sugerente. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 con gran detalle en los personajes."
+    },
+    {
+      "page_number": 8,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nMostrar el peligroso acto de sabotaje de Katniss cortando la rama del nido de rastrevíspulas.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss usando su cuchillo. El nido dorado a punto de caer. Estilo Ligne Claire de línea negra firme.\n\nCOMPOSICION Y ENCUADRE\nPlano detalle de la mano de Katniss cortando la madera de la rama. En segundo plano, se ve el suelo lejano donde estan los profesionales.\n\nPERSONAJES Y ACCION\nAccion de corte precisa y tensa. Un par de avispas doradas empiezan a salir del nido, representadas como puntos brillantes.\n\nENTORNO, PALETA E ILUMINACION\nMadera marron, hojas verdes y el oro del nido. Iluminación de amanecer con tonos rosados suaves en el cielo visible entre las ramas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin efectos de desenfoque. No usar sombras volumetricas. Mantener la claridad en la representacion de la rama y el nido.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de tension narrativa."
+    },
+    {
+      "page_number": 9,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el momento en que Katniss obtiene el arco y las flechas de la fallecida Glimmer bajo los efectos del veneno.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nArco plateado y carcaj con flechas verdes. Katniss con los ojos muy abiertos y rostro palido. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Katniss de rodillas en el suelo del bosque, arrebatando el arco de las manos de un cuerpo sugerido (Glimmer) entre la niebla.\n\nPERSONAJES Y ACCION\nKatniss en estado de alucinacion, viendo el mundo distorsionado. El arco es el único elemento nitido y brillante de la escena.\n\nENTORNO, PALETA E ILUMINACION\nAmbiente brumoso con remolinos de color violeta y verde neón. Paleta psicodelica pero plana que refleja el efecto de las picaduras.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, prop_bow_arrow, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nNo mostrar el cuerpo de Glimmer de forma grafica; usar sombras y niebla para cubrir los detalles. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 estilizada."
+    },
+    {
+      "page_number": 10,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nIlustrar la consolidacion de la alianza entre Katniss y Rue compartiendo comida en un lugar seguro.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss y Rue sentadas frente a frente. Hogaza de pan del Distrito 11 y moras purpuras. Estetica Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio lateral de ambas niñas sentadas sobre un lecho de hojas. La comida esta repartida sobre una tela en el centro.\n\nPERSONAJES Y ACCION\nRue comiendo con hambre voraz. Katniss ofreciendole un trozo de pan. Miradas de confianza mutua. Rue es mucho más pequeña que Katniss.\n\nENTORNO, PALETA E ILUMINACION\nInterior del bosque bajo un arbol protector. Colores calidos, marrones y verdes oliva. Luz solar suave y moteada.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_rue_base, prop_bread_loaf, prop_nightlock_berries.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir armas en este momento de paz. Sin degradados de color. El pan debe verse rústico y oscuro.\n\nFORMATO DE SALIDA\nIlustracion 1:1 emotiva."
+    },
+    {
+      "page_number": 11,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Katniss y Rue descansando juntas, enfatizando el parecido de Rue con Primrose.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss y Rue bajo el mismo saco de dormir. Rue con expresion pacifica. Estilo Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Katniss abrazando a Rue mientras duermen en la rama de un arbol. La posicion recuerda a como Katniss cuida a Prim en casa.\n\nPERSONAJES Y ACCION\nMomento de vulnerabilidad y afecto. Rue parece un pájaro pequeño acurrucado. Katniss vigila con un ojo entreabierto.\n\nENTORNO, PALETA E ILUMINACION\nNocturno con luz de luna azulada sobre las figuras. Tonos grises, azules y el marron del saco de dormir.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_rue_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin sombras dramaticas realistas. No usar elementos tecnologicos. Evitar que la escena parezca romantica; es puramente fraternal.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 tierna."
+    },
+    {
+      "page_number": 12,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nCapturar el momento en que los sinsajos repiten la melodia de Rue, señalando el inicio del plan de ataque.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nSinsajos (pajaros negros con manchas blancas) posados en las ramas. Rue silbando. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano general lateral. Rue en un extremo silbando hacia el cielo; los pajaros en el centro y Katniss al fondo preparando su arco.\n\nPERSONAJES Y ACCION\nRue concentrada en la musica. Los pajaros con el pico abierto repitiendo las notas. Katniss lista para la mision de destruccion.\n\nENTORNO, PALETA E ILUMINACION\nCielo despejado visible tras el follaje. Paleta de verdes brillantes y azules claros. Iluminación optimista de mañana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_rue_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nNo dibujar notas musicales flotando. Sin fotorrealismo en los pajaros; deben ser siluetas claras y estilizadas.\n\nFORMATO DE SALIDA\nIlustracion 1:1 lirica."
+    },
+    {
+      "page_number": 13,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar la montaña de suministros de los profesionales protegida por minas invisibles cerca del lago.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPirámide de cajas de madera, sacos de red y contenedores de metal. El lago azul al fondo. Estetica Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano general desde la distancia. En el centro la pila de comida; a un lado el chico del Distrito 3 vigilando con una caja de plastico.\n\nPERSONAJES Y ACCION\nEl chico del Distrito 3 luce escuálido y concentrado. La tierra alrededor de la pila esta removida de forma sospechosa (sugiriendo minas).\n\nENTORNO, PALETA E ILUMINACION\nPlaya de arena blanca y agua azul cristalina. Colores saturados y planos. Luz solar deslumbrante.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_beetee_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nNo mostrar las minas bajo tierra. Sin fotorrealismo. No incluir a Katniss en este plano de espionaje.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de escala masiva."
+    },
+    {
+      "page_number": 14,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nCapturar la gran explosion de los suministros provocada por la flecha de Katniss sobre las manzanas.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nManzanas rojas volando por los aires entre llamas y humo. Katniss siendo lanzada hacia atras por la onda expansiva.\n\nCOMPOSICION Y ENCUADRE\nPlano dinamico de gran escala. Una explosion circular naranja y amarilla ocupa el centro de la imagen. Katniss en una esquina volando por los aires.\n\nPERSONAJES Y ACCION\nKatniss con expresion de shock y dolor mientras pierde el sentido por el estruendo. Cajas y comida desintegrandose en formas geometricas.\n\nENTORNO, PALETA E ILUMINACION\nContraste extremo de luz blanca y naranja contra el azul del cielo y el agua. Colores planos muy saturados.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin efectos de humo volumetricos realistas. No mostrar heridos. Evitar detalles innecesarios en la arena de la playa.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 cinematografica."
+    },
+    {
+      "page_number": 15,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el momento tragico en que Rue es herida por la lanza del tributo del Distrito 1.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nRue atrapada en una red de hilos dorados. Katniss apuntando su arco. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio dinamico. Rue en el suelo envuelta en la red; el chico del Distrito 1 detras de ella con una lanza. Katniss aparece por un lateral disparando su flecha.\n\nPERSONAJES Y ACCION\nRue con los ojos muy abiertos de terror. El chico del Distrito 1 cayendo hacia atras con una flecha en el cuello. Katniss con rostro desencajado por la furia y el dolor.\n\nENTORNO, PALETA E ILUMINACION\nClaro del bosque con luz sombria. Paleta de verdes oscuros y el brillo dorado de la red. Iluminación dramatica pero plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_rue_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre explicita. No mostrar la lanza atravesando el cuerpo. Mantener el tono de cuento infantil a pesar de la tragedia.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de alto impacto emocional."
+    },
+    {
+      "page_number": 16,
+      "main_prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el funeral de Rue y el gesto de rebeldia final de Katniss ante las cámaras de Panem.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nRue cubierta de flores silvestres de colores. Katniss haciendo el saludo de los tres dedos. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio corto. El cuerpo pequeño de Rue yace sobre un lecho de flores blancas y amarillas. Katniss esta de pie al lado, mirando hacia la cámara invisible con determinacion.\n\nPERSONAJES Y ACCION\nKatniss con la mano izquierda alzada (tres dedos extendidos). Su rostro esta manchado de ceniza y lagrimas pero su mirada es de acero. Rue parece estar dormida entre las flores.\n\nENTORNO, PALETA E ILUMINACION\nFollaje verde oscuro de fondo. El punto focal son las flores multicolores y el brillo del broche de sinsajo. Luz crepuscular dorada y solemne.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_rue_base, prop_mockingjay_pin, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir el cadaver del otro tributo. Evitar expresiones de llanto excesivamente caricaturescas; buscar la dignidad en el dolor.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 final de cierre de cuento."
+    }
   ]
 }
-
-Reglas obligatorias:
-1) `story_id`, `title` y `book_rel_path` deben coincidir EXACTAMENTE con esta historia.
-2) `cover_prompt` en espanol estructurado, 900-1700 caracteres, con EXACTAMENTE estos 8 bloques en orden:
-   - OBJETIVO DE ILUSTRACION
-   - CONTINUIDAD VISUAL OBLIGATORIA
-   - COMPOSICION Y ENCUADRE
-   - PERSONAJES Y ACCION
-   - ENTORNO, PALETA E ILUMINACION
-   - REFERENCIAS (reference_ids)
-   - RESTRICCIONES / NEGATIVOS
-   - FORMATO DE SALIDA
-3) Cada `page_prompts[].main_prompt` en espanol estructurado, 700-1500 caracteres, con los mismos 8 bloques en orden.
-4) `page_prompts` debe cubrir EXACTAMENTE estas paginas: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.
-5) Cada `page_number` aparece una sola vez.
-6) Construye el contenido de cada prompt usando el texto de pagina de `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-7) En el bloque `REFERENCIAS (reference_ids)`, usa anchors del meta canonico de la saga presentes en `FUENTE_NB_los_juegos_textos_y_anchors.md`.
-8) Anchors canonicos disponibles (IDs): char_beetee_base, char_coin_base, char_effie_base, char_finnick_base, char_gale_base, char_haymitch_base, char_johanna_base, char_katniss_base, char_peeta_base, char_prim_base, char_rue_base, char_snow_base, cover_mockingjay_collection, env_arena_clock, env_arena_forest, env_district12_seam, env_district13_bunker, env_reaping_square, env_train_capitol, prop_bow_arrow, prop_bread_loaf, prop_mockingjay_pin, prop_nightlock_berries, prop_parachute_gift, prop_president_rose, style_linea_editorial, style_paleta_rebelion
-9) No cambies el schema, no agregues campos, no elimines campos obligatorios.
-
-Salida final:
-- SOLO el objeto JSON final para `03_prompts.json`.

@@ -1,4 +1,4 @@
-# Indice ADR
+# índice ADR
 
 Los ADR registran decisiones arquitectonicas de largo plazo.
 
