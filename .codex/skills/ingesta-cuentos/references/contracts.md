@@ -22,6 +22,10 @@ Archivos:
 - `meta.json` (opcional, por libro de inbox).
 - `.md/.pdf` (ignorar + warning no bloqueante).
 
+Codificacion de entrada:
+
+- JSON en UTF-8 y UTF-8 BOM (ambos aceptados).
+
 ## Politica de lote
 
 1. Resolucion por cuento:
@@ -30,11 +34,15 @@ Archivos:
 2. Si un cuento resuelto falla contrato, no se importa ningun cuento del lote.
 3. Si parte esperada falta o no parsea, bloquear con error accionable.
 4. Si hay colision con `library/<book_rel_path>/NN.json`, preguntar confirmacion por cuento.
-5. Solo tras lote valido:
+5. Enriquecimiento preimport de refs (si hay `meta.json` valido):
+   - respetar refs existentes;
+   - autocompletar faltantes con anclas de `meta`;
+   - reportar warnings de cobertura.
+6. Solo tras lote valido:
    - forzar `status=definitive`;
    - normalizar timestamps;
    - guardar en destino final.
-6. Archivado post-import:
+7. Archivado post-import:
    - si el lote se completa sin pendientes, mover carpeta origen a `library/_processed/<book_title>/<timestamp>/`.
 
 ## Resolucion y fusion de partes
@@ -109,6 +117,30 @@ Alternativa:
 - `created_at` (string ISO)
 - `notes` (string)
 
+## Convencion operativa de `reference_ids`
+
+1. `reference_ids` debe apuntar a filenames declarados en `meta.anchors[].image_filenames[]`.
+2. `reference_ids` no debe usar IDs opacos de alternativas (`<uuid>_<slug>.<ext>`) como convension principal.
+3. Estrategia hibrida recomendada:
+   - NotebookLM propone refs cuando puede.
+   - `ingesta-cuentos` completa faltantes antes de importar.
+4. Si un slot tiene `status = not_required`, se permite `reference_ids` vacio.
+
+## Enriquecimiento automatico de referencias
+
+1. Precondicion:
+   - existe `meta.json` valido del libro/lote.
+2. Slots objetivo:
+   - `cover`
+   - `pages[].images.main`
+3. Regla de precedencia:
+   - preservar refs existentes;
+   - completar faltantes con anchors `style_*` + anchors semanticos detectados por texto/prompt;
+   - eliminar duplicados preservando orden.
+4. Politica de validacion:
+   - autocompletar + warning (no bloqueo) si hay `meta`.
+   - si no hay `meta`, no bloquear por refs; reportar warning operativo.
+
 ## Contrato `meta.json` por nodo
 
 Rutas validas:
@@ -139,6 +171,10 @@ Opcionales globales:
 
 - `style_rules`
 - `continuity_rules`
+
+Operativo recomendado para flujo listo de imagen:
+
+- incluir categorias por prefijo: `style_*`, `char_*`, `env_*`, `prop_*`, `cover_*`.
 
 ## Indice de imagenes por nodo
 
@@ -181,6 +217,9 @@ Entrada minima:
 - `input.meta_missing`
 - `meta.optional_field_missing`
 - `merge.cover_mismatch`
+- `refs.autofilled`
+- `refs.style_only_fallback`
+- `refs.anchor_missing`
 
 ## Mensajes accionables para NotebookLM
 

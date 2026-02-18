@@ -5,6 +5,24 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [18/02/26] - Automatizacion de anclas en flujo 2 skills
+
+- `notebooklm-comunicacion` ampliada a flujo oficial en 4 fases:
+  - plan de coleccion,
+  - `meta.json` con anclas y reglas,
+  - partes de cuentos (`NN_a/NN_b` + fallback `a1/a2/b1/b2`),
+  - deltas por archivo.
+- Nueva convencion operativa de anclas y referencias:
+  - IDs por categoria (`style_*`, `char_*`, `env_*`, `prop_*`, `cover_*`),
+  - `reference_ids` basados en `meta.anchors[].image_filenames`.
+- `ingesta-cuentos` actualizada con enriquecimiento preimport de `reference_ids`:
+  - conserva refs existentes,
+  - autocompleta faltantes con anclas de estilo + semantica,
+  - warnings de cobertura (`refs.autofilled`, `refs.style_only_fallback`, `refs.anchor_missing`).
+- Contrato de ingesta alineado con compatibilidad de entrada JSON en UTF-8 y UTF-8 BOM.
+- Documentacion de orquestacion actualizada en `AGENTS.md` y `docs/guia-orquestador-editorial.md`.
+- Tarea: `docs/tasks/TAREA-026-automatizacion-anclas-flujo-2-skills.md`.
+
 ## [18/02/26] - Skill NotebookLM + fusion por partes en ingesta
 
 - Nueva skill `.codex/skills/notebooklm-comunicacion/` (conversacional, sin scripts) para preparar prompts por partes:
@@ -100,17 +118,17 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [16/02/26] - UI biblioteca Bulma + HTMX y rutas REST por pagina
 
-- Rediseño UI de biblioteca con navegación por tarjetas tipo catálogo y miniaturas por cuento.
-- Refactor backend web en módulos (`app/web/*`) y view-models compartidos.
+- RediseÃ±o UI de biblioteca con navegaciÃ³n por tarjetas tipo catÃ¡logo y miniaturas por cuento.
+- Refactor backend web en mÃ³dulos (`app/web/*`) y view-models compartidos.
 - Nuevo contrato de rutas:
   - `/`
   - `/browse/<path>`
   - `/story/<path>/page/<int:page_number>`
   - `/editor/story/<path>/page/<int:page_number>`
   - `/fragments/story/<path>/page/<int:page_number>/*`
-- HTMX en lectura para paginación parcial (`hx-push-url`) y panel avanzado ocultable.
-- Activación de alternativas desde modo lectura con actualización parcial de panel y media.
-- Integración Bulma y HTMX por CDN con fallback local en `app/static/vendor/`.
+- HTMX en lectura para paginaciÃ³n parcial (`hx-push-url`) y panel avanzado ocultable.
+- ActivaciÃ³n de alternativas desde modo lectura con actualizaciÃ³n parcial de panel y media.
+- IntegraciÃ³n Bulma y HTMX por CDN con fallback local en `app/static/vendor/`.
 - Tarea: `docs/tasks/TAREA-019-ui-biblioteca-bulma-htmx-rutas-rest.md`.
 
 ## [16/02/26] - Skill de ingesta inicial interactiva
@@ -134,8 +152,8 @@ El detalle operativo vive en `docs/tasks/`.
 ## [16/02/26] - Reset editorial con skills `adaptacion-*` fuera de `app`
 
 - Se eliminaron skills legacy `revision-*` y la skill local `revision-adaptacion-editorial`.
-- Se retiró `app/editorial_orquestador.py`.
-- Se incorporó el stack:
+- Se retirÃ³ `app/editorial_orquestador.py`.
+- Se incorporÃ³ el stack:
   - `adaptacion-contexto`
   - `adaptacion-texto`
   - `adaptacion-prompts`
@@ -144,32 +162,32 @@ El detalle operativo vive en `docs/tasks/`.
 - Nuevo contrato sidecar:
   - `library/<book>/_reviews/NN.review.json`
   - `library/<book>/_reviews/NN.decisions.log.jsonl`
-- Documentación actualizada (`AGENTS.md`, `README.md`, `app/README.md`).
+- DocumentaciÃ³n actualizada (`AGENTS.md`, `README.md`, `app/README.md`).
 - Tarea: `docs/tasks/TAREA-015-reset-editorial-con-skills-sin-app.md`.
 
-## [14/02/26] - Edad objetivo dinámica al iniciar adaptación
+## [14/02/26] - Edad objetivo dinÃ¡mica al iniciar adaptaciÃ³n
 
 - `target_age` obligatorio al inicio del flujo.
 - Tarea: `docs/tasks/TAREA-014-edad-objetivo-dinamica-inicio-adaptacion.md`.
 
-## [14/02/26] - Revisión ligera de glosario en contexto canon
+## [14/02/26] - RevisiÃ³n ligera de glosario en contexto canon
 
-- Se añadió revisión manual de glosario y su sidecar.
+- Se aÃ±adiÃ³ revisiÃ³n manual de glosario y su sidecar.
 - Tarea: `docs/tasks/TAREA-013-contexto-review-ligera-glosario.md`.
 
 ## [13/02/26] - Cascada editorial por severidad
 
-- Flujo por severidad con ciclo detección/decisión/contraste.
+- Flujo por severidad con ciclo detecciÃ³n/decisiÃ³n/contraste.
 - Tarea: `docs/tasks/TAREA-012-cascada-editorial-severidad-tres-skills.md`.
 
-## [13/02/26] - Orquestador editorial por skills + UI mínima
+## [13/02/26] - Orquestador editorial por skills + UI mÃ­nima
 
-- Pipeline editorial por skills encadenadas y sidecars de revisión.
+- Pipeline editorial por skills encadenadas y sidecars de revisiÃ³n.
 - Tarea: `docs/tasks/TAREA-011-orquestador-editorial-skills-ui-minimal.md`.
 
 ## [13/02/26] - Ingesta editorial a `NN.json`
 
-- Publicación de cuentos en contrato canónico JSON.
+- PublicaciÃ³n de cuentos en contrato canÃ³nico JSON.
 - Tarea: `docs/tasks/TAREA-010-ingesta-editorial-el-imperio-final-json.md`.
 
 ## [13/02/26] - Limpieza de biblioteca para reinicio editorial
@@ -179,12 +197,12 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [13/02/26] - Skill editorial y runtime JSON sin SQLite
 
-- Adopción de `NN.json` como contrato de runtime.
+- AdopciÃ³n de `NN.json` como contrato de runtime.
 - Tarea: `docs/tasks/TAREA-008-skill-revision-adaptacion-json-sin-sqlite.md`.
 
-## [12/02/26] - Parser IA asistida y gate crítico mixto
+## [12/02/26] - Parser IA asistida y gate crÃ­tico mixto
 
-- Auditoría asistida, glosario jerárquico y gate crítico.
+- AuditorÃ­a asistida, glosario jerÃ¡rquico y gate crÃ­tico.
 - Tarea: `docs/tasks/TAREA-007-parser-ia-auditoria-terminologia.md`.
 
 ## [12/02/26] - `library/_inbox` + contrato `NN.md`
@@ -192,27 +210,27 @@ El detalle operativo vive en `docs/tasks/`.
 - Flujo de ingesta con contrato plano por cuento.
 - Tarea: `docs/tasks/TAREA-006-library-inbox-nnmd-skill-ingesta.md`.
 
-## [12/02/26] - Rebranding técnico y contexto canónico
+## [12/02/26] - Rebranding tÃ©cnico y contexto canÃ³nico
 
-- Actualización de nomenclatura y estructura de contexto.
+- ActualizaciÃ³n de nomenclatura y estructura de contexto.
 - Tarea: `docs/tasks/TAREA-005-ingles-tecnico-contexto-biblioteca-rebranding.md`.
 
-## [12/02/26] - Refactor biblioteca canónica y cache SQLite temporal
+## [12/02/26] - Refactor biblioteca canÃ³nica y cache SQLite temporal
 
-- Reorganización de fuente canónica y soporte temporal de cache.
+- ReorganizaciÃ³n de fuente canÃ³nica y soporte temporal de cache.
 - Tarea: `docs/tasks/TAREA-004-refactor-db-biblioteca-canonica-cache-sqlite.md`.
 
-## [12/02/26] - Reestructuración UI y dominio de página
+## [12/02/26] - ReestructuraciÃ³n UI y dominio de pÃ¡gina
 
-- Reordenación de UI orientada a generación visual.
+- ReordenaciÃ³n de UI orientada a generaciÃ³n visual.
 - Tarea: `docs/tasks/TAREA-003-reestructuracion-pagina-ancla-imagen-ui.md`.
 
-## [12/02/26] - Paginación adaptativa
+## [12/02/26] - PaginaciÃ³n adaptativa
 
-- Implementación de paginación adaptativa por archivo importado.
+- ImplementaciÃ³n de paginaciÃ³n adaptativa por archivo importado.
 - Tarea: `docs/tasks/TAREA-002-paginacion-adaptativa-archivo-importado.md`.
 
 ## [12/02/26] - Base documental y gobernanza
 
-- Sistema inicial de operación, ADR y tareas.
+- Sistema inicial de operaciÃ³n, ADR y tareas.
 - Tarea: `docs/tasks/TAREA-001-proyecto-profesional-contexto.md`.

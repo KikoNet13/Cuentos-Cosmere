@@ -1,6 +1,6 @@
 ---
 name: notebooklm-comunicacion
-description: Skill conversacional para preparar comunicacion con NotebookLM por partes (8+8) y fallback automatico (4+4), generando prompts accionables para _inbox.
+description: Skill conversacional para preparar comunicacion con NotebookLM en 4 fases: plan de coleccion, meta/anclas, partes de cuentos y deltas de correccion.
 ---
 
 # NotebookLM Comunicacion
@@ -8,27 +8,37 @@ description: Skill conversacional para preparar comunicacion con NotebookLM por 
 ## Objetivo
 Estandarizar la comunicacion con NotebookLM para nuevas novelas/sagas:
 
-1. Definir estructura de entrega por cuento en `_inbox` usando partes.
-2. Emitir prompts listos para copiar/pegar por archivo.
-3. Aplicar fallback automatico `4+4` cuando falle una parte de `8+8`.
-4. Entregar mensajes delta para correcciones puntuales sin rehacer el lote completo.
+1. Definir plan editorial de coleccion (lista de cuentos y tramos).
+2. Obtener `meta.json` de libro con anclas, reglas de estilo y continuidad.
+3. Emitir prompts listos para entrega de cuentos por partes (`8+8`) y fallback (`4+4`).
+4. Emitir mensajes delta por archivo para corregir errores sin rehacer el lote.
 
 Esta skill es **100% conversacional** y **no usa scripts internos**.
 
 ## Scope de la skill
 
-1. Esta skill prepara prompting y operacion de entrega para NotebookLM.
+1. Prepara prompting y operacion de entrega para NotebookLM.
 2. No importa cuentos ni mueve archivos al destino final.
 3. La fusion/validacion/importacion final pertenece a `ingesta-cuentos`.
 
 ## Entradas minimas
 
 1. `book_title` (nombre de carpeta de `_inbox`).
-2. Lista de cuentos con:
-   - `story_id` (`NN`)
-   - `title`
-   - `tramo_narrativo_origen`
-3. `book_rel_path` opcional (puede definirse despues en `ingesta-cuentos`).
+2. Fuente canonica cargada en NotebookLM (novela/saga origen).
+3. Lista de cuentos objetivo (si no existe, pedirla en fase de plan).
+4. `book_rel_path` opcional (puede confirmarse despues en `ingesta-cuentos`).
+
+## Convencion de anclas y referencias
+
+1. IDs de ancla por categoria reusable:
+   - `style_*`
+   - `char_*`
+   - `env_*`
+   - `prop_*`
+   - `cover_*`
+2. Cada saga define anclas narrativas propias (personajes/escenas/objetos).
+3. `reference_ids` de slots debe apuntar a filenames declarados en `meta.anchors[].image_filenames[]`.
+4. No usar `uuid_slug` de assets finales dentro de `reference_ids`.
 
 ## Estrategia por defecto
 
@@ -43,42 +53,109 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
      - `NN_b1.json` -> `9..12`
      - `NN_b2.json` -> `13..16`
 
-## Flujo operativo
+## Flujo oficial (4 fases)
 
-1. Setup de lote
-   - Confirmar `book_title`.
-   - Confirmar lista de cuentos (`NN`, titulo, tramo).
-   - Confirmar si se usa 16 paginas.
-2. Emision de prompts por cuento
-   - Generar prompt para `NN_a.json`.
-   - Generar prompt para `NN_b.json`.
-   - Cada prompt pide salida JSON valida y top-level completo.
-3. Fallback por error
-   - Si falla bloque A o B, emitir prompts de `a1/a2` o `b1/b2` sin preguntar confirmacion adicional.
-4. Delta de correccion
-   - Si un bloque devuelve JSON valido pero con error de contrato, emitir correccion minima dirigida solo a ese archivo.
-5. Handoff
-   - Cuando el lote de partes este completo, indicar ejecutar `ingesta-cuentos`.
+1. Plan de coleccion
+   - pedir listado de cuentos (`story_id`, `title`, `tramo_narrativo_origen`, `paginas_objetivo`).
+2. Meta/anclas
+   - pedir `meta.json` del libro con `collection`, `anchors`, `style_rules`, `continuity_rules`, `updated_at`.
+3. Cuentos por partes
+   - pedir `NN_a.json` y `NN_b.json` (o fallback `a1/a2/b1/b2`) con contrato completo.
+4. Deltas
+   - corregir solo archivos afectados por: JSON truncado, JSON invalido, rango incorrecto, faltantes de `reference_ids`.
 
 ## Reglas de prompts a NotebookLM
 
 1. Salida: solo JSON valido (sin markdown, sin explicaciones).
-2. Top-level obligatorio:
-   - `story_id`, `title`, `status`, `book_rel_path`, `created_at`, `updated_at`, `cover`, `pages`
+2. Contrato de cuento top-level obligatorio:
+   - `story_id`, `title`, `status`, `book_rel_path`, `created_at`, `updated_at`, `cover`, `pages`.
 3. `pages` solo en el rango solicitado por archivo.
 4. `images.main` obligatorio.
 5. `images.secondary` excluido por defecto.
 6. Texto en espanol, 50-100 palabras por pagina.
+7. Si existe `meta.json`, incluir `reference_ids` cuando sea posible usando `anchors[].image_filenames`.
 
 ## Plantillas operativas
 
-### A) Prompt base `NN_a.json` (1..8)
+### A) Prompt de plan de coleccion
+
+```text
+PROMPT NOTEBOOKLM - PLAN DE COLECCION
+Devuelve SOLO JSON valido.
+No uses markdown ni explicaciones.
+
+Objetivo:
+- Dividir la obra canonica en cuentos ilustrados de 16 paginas.
+- Mantener continuidad narrativa y cortes en hitos claros.
+
+Salida exacta:
+{
+  "collection_title": "<BOOK_TITLE>",
+  "stories": [
+    {
+      "story_id": "01",
+      "title": "...",
+      "tramo_narrativo_origen": "...",
+      "paginas_objetivo": 16
+    }
+  ]
+}
+
+Reglas:
+1) `story_id` en 2 digitos y secuencial.
+2) `paginas_objetivo` fijo en 16.
+3) Cubrir toda la obra sin solapamientos ilogicos.
+4) SOLO JSON valido.
+```
+
+### B) Prompt de `meta.json` (anclas + reglas)
+
+```text
+PROMPT NOTEBOOKLM - META JSON DE LIBRO
+Devuelve SOLO JSON valido.
+No uses markdown ni explicaciones.
+
+Genera `meta.json` para la coleccion "<BOOK_TITLE>" con este top-level exacto:
+- collection
+- anchors
+- style_rules
+- continuity_rules
+- updated_at
+
+Reglas obligatorias:
+1) collection.title = "<BOOK_TITLE>".
+2) anchors[] debe incluir categorias:
+   - style_* (minimo 2)
+   - cover_* (minimo 1)
+   - char_* (personajes principales)
+   - env_* (escenarios recurrentes)
+   - prop_* (objetos simbolicos)
+3) Cada anchor con:
+   - id
+   - name
+   - prompt
+   - image_filenames (array de filenames placeholder .png o .jpg)
+4) `style_rules` y `continuity_rules` deben ser arrays de reglas claras y accionables.
+5) `updated_at` en ISO 8601 UTC.
+6) SOLO JSON valido.
+
+Ejemplo de anchor:
+{
+  "id": "char_katniss_base",
+  "name": "Katniss base",
+  "prompt": "Modelo consistente de personaje...",
+  "image_filenames": ["anchor_char_katniss_base_v1.png"]
+}
+```
+
+### C) Prompt base `NN_a.json` (1..8)
 
 ```text
 PROMPT NOTEBOOKLM - STORY <NN> - PARTE A (PAGINAS 1-8)
 Genera SOLO JSON valido.
 No uses markdown. No escribas explicaciones.
-Devuelve un unico objeto JSON con top-level completo y SOLO 8 paginas (1..8).
+
+Devuelve un unico objeto JSON con top-level completo y SOLO paginas 1..8.
 Top-level obligatorio exacto:
 - story_id
 - title
@@ -88,6 +165,7 @@ Top-level obligatorio exacto:
 - updated_at
 - cover
 - pages
+
 Reglas:
 1) story_id="<NN>", title="<TITLE>", status="draft", book_rel_path="<BOOK_REL_PATH_OR_DRAFT>".
 2) pages con page_number secuencial 1..8.
@@ -95,29 +173,37 @@ Reglas:
 4) Mantener continuidad del tramo narrativo indicado: "<TRAMO>".
 5) No inventar campos fuera del contrato.
 6) No incluir images.secondary.
+7) Si `meta.json` existe, incluye `reference_ids` usando SOLO filenames de `anchors[].image_filenames`.
+
 Contrato de cover:
 - status: "draft"
-- prompt: 1-2 frases utiles para ilustracion.
+- prompt: 1-2 frases utiles para ilustracion
+- reference_ids: [] o lista de filenames de anchors
 - active_id: ""
 - alternatives: []
+
 Contrato de pages[i].images.main:
 - status: "draft"
-- prompt: 1-2 frases utiles para ilustracion.
+- prompt: 1-2 frases utiles para ilustracion
+- reference_ids: [] o lista de filenames de anchors
 - active_id: ""
 - alternatives: []
+
 Fechas:
 - created_at y updated_at en ISO 8601 UTC.
+
 Salida final:
 - SOLO JSON valido.
 ```
 
-### B) Prompt base `NN_b.json` (9..16)
+### D) Prompt base `NN_b.json` (9..16)
 
 ```text
 PROMPT NOTEBOOKLM - STORY <NN> - PARTE B (PAGINAS 9-16)
 Genera SOLO JSON valido.
 No uses markdown. No escribas explicaciones.
-Devuelve un unico objeto JSON con top-level completo y SOLO 8 paginas (9..16).
+
+Devuelve un unico objeto JSON con top-level completo y SOLO paginas 9..16.
 Top-level obligatorio exacto:
 - story_id
 - title
@@ -127,6 +213,7 @@ Top-level obligatorio exacto:
 - updated_at
 - cover
 - pages
+
 Reglas:
 1) story_id="<NN>", title="<TITLE>", status="draft", book_rel_path="<BOOK_REL_PATH_OR_DRAFT>".
 2) pages con page_number secuencial 9..16.
@@ -134,23 +221,30 @@ Reglas:
 4) Mantener continuidad del tramo narrativo indicado: "<TRAMO>".
 5) No inventar campos fuera del contrato.
 6) No incluir images.secondary.
+7) Si `meta.json` existe, incluye `reference_ids` usando SOLO filenames de `anchors[].image_filenames`.
+
 Contrato de cover:
 - status: "draft"
-- prompt: 1-2 frases utiles para ilustracion.
+- prompt: 1-2 frases utiles para ilustracion
+- reference_ids: [] o lista de filenames de anchors
 - active_id: ""
 - alternatives: []
+
 Contrato de pages[i].images.main:
 - status: "draft"
-- prompt: 1-2 frases utiles para ilustracion.
+- prompt: 1-2 frases utiles para ilustracion
+- reference_ids: [] o lista de filenames de anchors
 - active_id: ""
 - alternatives: []
+
 Fechas:
 - created_at y updated_at en ISO 8601 UTC.
+
 Salida final:
 - SOLO JSON valido.
 ```
 
-### C) Fallback automatico `4+4`
+### E) Fallback automatico `4+4`
 
 ```text
 La respuesta se corto o no es JSON valido.
@@ -163,7 +257,7 @@ Mantener exactamente el mismo contrato JSON completo.
 No usar markdown. No agregar texto fuera del JSON.
 ```
 
-### D) Delta de correccion por archivo
+### F) Delta de correccion por archivo
 
 ```text
 Correccion de archivo: <NOMBRE_ARCHIVO>
@@ -173,8 +267,28 @@ Correccion de archivo: <NOMBRE_ARCHIVO>
 Reentrega SOLO ese archivo en JSON valido.
 ```
 
+### G) Deltas especializados
+
+```text
+[<NOMBRE_ARCHIVO>] contract.invalid_json
+- Problema: JSON truncado o invalido.
+- Corrige asi: reentrega el archivo completo, solo JSON valido.
+
+[<NOMBRE_ARCHIVO>] merge.invalid_part_range
+- Problema: page_number fuera del rango esperado por el sufijo del archivo.
+- Corrige asi: ajusta pages al rango correcto y reentrega solo ese archivo.
+
+[<NOMBRE_ARCHIVO>] refs.missing_reference_ids
+- Problema: faltan reference_ids en cover o pages.images.main.
+- Corrige asi: agrega reference_ids con filenames existentes en meta.anchors[].image_filenames.
+```
+
 ## Criterios de salida de la skill
 
-1. Debe quedar claro para el usuario que archivos pedir a NotebookLM.
-2. Debe quedar claro cual es el siguiente archivo a generar/corregir.
+1. Debe quedar claro en cada paso que archivo pedir a NotebookLM.
+2. Debe quedar claro el siguiente archivo a generar/corregir.
 3. Debe quedar claro cuando pasar a `ingesta-cuentos`.
+4. El usuario debe terminar con:
+   - `meta.json` valido del libro,
+   - partes `NN_a/NN_b` (o fallback) por cuento,
+   - contrato listo para fusion/importacion.

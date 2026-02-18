@@ -1,6 +1,16 @@
-﻿# Indice de tareas
+# Indice de tareas
 
-- Proximo ID: `026`
+- Proximo ID: `027`
+
+## TAREA-026-automatizacion-anclas-flujo-2-skills
+
+- Fecha: 18/02/26 15:03
+- Estado: cerrada
+- Resumen: automatizacion de anclas en flujo 2 skills: `notebooklm-comunicacion` incorpora plan+meta/anclas y `ingesta-cuentos` enriquece `reference_ids` antes de importar, con soporte UTF-8 BOM.
+- Version: 2.3.0
+- Commit: `pendiente`
+- ADR relacionadas: `0007`, `0008`
+- Archivo: `docs/tasks/TAREA-026-automatizacion-anclas-flujo-2-skills.md`
 
 ## TAREA-025-skill-notebooklm-fusion-ingesta
 

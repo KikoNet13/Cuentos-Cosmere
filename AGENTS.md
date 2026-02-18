@@ -17,10 +17,14 @@ Este repositorio opera como plataforma orquestadora del flujo 3 IAs para cuentos
 1. NotebookLM:
    - fuente de generacion editorial;
    - trabaja por prompts preparados por Codex;
-   - entrega `NN.json` o partes `NN_a/_b` (y fallback `a1/a2/b1/b2`) en `library/_inbox/<book_title>/`.
+   - flujo esperado:
+     - plan de coleccion,
+     - meta/anclas (`meta.json`),
+     - cuentos (`NN.json` o partes `NN_a/_b` + fallback `a1/a2/b1/b2`);
+   - entrega en `library/_inbox/<book_title>/`.
 2. Codex (este repo):
    - prepara comunicacion con NotebookLM via skill dedicada;
-   - valida contrato, fusiona partes en memoria, importa lotes y mantiene app;
+   - valida contrato, fusiona partes en memoria, enriquece `reference_ids` y importa lotes;
    - emite mensajes accionables para NotebookLM;
    - facilita prompts y gestion de assets para ChatGPT Project.
 3. ChatGPT Project:
@@ -43,7 +47,10 @@ Notas:
    - `images.main` obligatorio, `images.secondary` opcional.
 5. Contrato de slot de imagen (`cover` y `images.*`):
    - `status`, `prompt`, `active_id`, `alternatives[]`, `reference_ids[]` (opcional).
-6. Contrato de alternativa:
+6. Convencion operativa de `reference_ids`:
+   - deben referenciar filenames de `meta.anchors[].image_filenames[]`.
+   - no usar IDs opacos de assets finales como convencion principal.
+7. Contrato de alternativa:
    - `id` (filename con extension),
    - `slug`,
    - `asset_rel_path`,
@@ -51,29 +58,31 @@ Notas:
    - `status`,
    - `created_at`,
    - `notes`.
-7. Los assets de imagen se nombran con formato opaco `<uuid>_<slug>.<ext>`.
-8. Todos los assets de nodo viven en `library/<node>/images/`.
-9. Cada nodo mantiene `library/<node>/images/index.json` con:
+8. Los assets de imagen se nombran con formato opaco `<uuid>_<slug>.<ext>`.
+9. Todos los assets de nodo viven en `library/<node>/images/`.
+10. Cada nodo mantiene `library/<node>/images/index.json` con:
    - `filename`, `asset_rel_path`, `description`, `node_rel_path`, `created_at`.
-10. `library/_inbox/` es la bandeja de entrada oficial:
+11. `library/_inbox/` es la bandeja de entrada oficial:
     - `NN.json` por cuento, o partes `NN_a.json` + `NN_b.json`;
     - fallback permitido: `NN_a1.json`, `NN_a2.json`, `NN_b1.json`, `NN_b2.json`;
-    - `meta.json` opcional por lote;
+    - `meta.json` opcional por lote (recomendado para flujo listo de imagen);
     - `.md/.pdf` se ignoran en la ingesta nueva.
-11. `meta.json` por jerarquia:
+12. Compatibilidad de codificacion de entrada:
+    - JSON UTF-8 y UTF-8 BOM aceptados.
+13. `meta.json` por jerarquia:
     - `library/meta.json` (global),
     - `library/<node>/meta.json` (ancestros + libro),
     - minimos: `collection.title`, `anchors[]`, `updated_at`.
-12. Sidecars legacy de adaptacion (`adaptation_context.json`, `NN.issues.json`, etc.) quedan fuera de contrato.
-13. Archivado post-import:
+14. Sidecars legacy de adaptacion (`adaptation_context.json`, `NN.issues.json`, etc.) quedan fuera de contrato.
+15. Archivado post-import:
     - al completar un lote sin pendientes, mover `library/_inbox/<book_title>/` a `library/_processed/<book_title>/<timestamp>/`.
 
 ## Pipeline editorial
 
 1. Las skills versionadas en este repositorio viven en `.codex/skills/`.
 2. Skills activas:
-   - `.codex/skills/notebooklm-comunicacion/` para prompting por partes y fallback;
-   - `.codex/skills/ingesta-cuentos/` para fusion en memoria + validacion/importacion.
+   - `.codex/skills/notebooklm-comunicacion/` para plan de coleccion, meta/anclas, prompting por partes y fallback.
+   - `.codex/skills/ingesta-cuentos/` para fusion en memoria, validacion, enriquecimiento de refs e importacion.
 3. `app/` no ejecuta pipeline editorial autonomo; solo consume y edita contrato final.
 4. Cualquier flujo externo debe respetar este contrato.
 
@@ -112,10 +121,11 @@ Notas:
 
 Codex debe poder producir estos bloques para el usuario:
 
-1. Setup NotebookLM (checklist + prompt base de salida JSON por partes).
-2. Setup ChatGPT Project (checklist + prompt base de continuidad visual).
-3. Delta update estructurado para reentregas parciales de NotebookLM.
-4. Fallback automatico de particion (`8+8` -> `4+4`) cuando NotebookLM se corta por limite.
+1. Setup NotebookLM (checklist + prompt base de plan de coleccion).
+2. Prompt de `meta.json` (anclas + `style_rules` + `continuity_rules`).
+3. Prompts de cuentos por partes con fallback (`8+8` -> `4+4`).
+4. Delta update estructurado para reentregas parciales de NotebookLM.
+5. Setup ChatGPT Project (checklist + prompt base de continuidad visual).
 
 ## Sistema documental
 

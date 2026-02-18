@@ -1,6 +1,6 @@
 ---
 name: ingesta-cuentos
-description: Skill conversacional para fusionar (en memoria) partes NN_a/NN_b, validar e importar lotes NN.json/meta.json desde library/_inbox al contrato final de library/.
+description: Skill conversacional para fusionar (en memoria) partes NN_a/NN_b, validar, enriquecer reference_ids e importar lotes NN.json/meta.json desde library/_inbox al contrato final de library/.
 ---
 
 # Ingesta Cuentos
@@ -11,10 +11,11 @@ Operar como orquestador conversacional entre NotebookLM, ChatGPT Project y la we
 1. Recibir en `library/_inbox/<book_title>/` cuentos completos `NN.json` o partes (`NN_a/_b`, `NN_a1/_a2/_b1/_b2`) y `meta.json` opcional.
 2. Fusionar partes por cuento en memoria antes de validar (sin crear `NN.json` intermedio en `_inbox`).
 3. Validar contrato de cuentos/imagenes/meta.
-4. Bloquear lote completo si hay errores estructurales/editoriales.
-5. Importar lote valido a `library/<book_rel_path>/NN.json` con normalizaciones de importacion.
-6. Archivar carpeta de inbox procesada en `library/_processed/<book_title>/<timestamp>/` cuando el lote se completa sin pendientes.
-7. Emitir mensajes accionables para NotebookLM.
+4. Enriquecer `reference_ids` faltantes antes de importar cuando exista `meta.json`.
+5. Bloquear lote completo si hay errores estructurales/editoriales.
+6. Importar lote valido a `library/<book_rel_path>/NN.json` con normalizaciones de importacion.
+7. Archivar carpeta de inbox procesada en `library/_processed/<book_title>/<timestamp>/` cuando el lote se completa sin pendientes.
+8. Emitir mensajes accionables para NotebookLM.
 
 Esta skill es **100% conversacional** y **no usa scripts internos**.
 
@@ -28,6 +29,7 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
      - fallback: `NN_a1.json`, `NN_a2.json`, `NN_b1.json`, `NN_b2.json`
    - `meta.json` es opcional.
    - Archivos `.md/.pdf` se ignoran con warning no bloqueante.
+   - Parse de entrada robusto: aceptar JSON en UTF-8 y UTF-8 BOM.
 
 2. Pregunta inicial de destino
    - Pedir `book_rel_path` una sola vez por lote.
@@ -55,24 +57,36 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
      - si no, primer bloque valido.
    - Si hay cover distinto entre partes, warning no bloqueante.
 
-4. Validacion de lote
+4. Validacion estructural de lote
    - Validar todos los cuentos resueltos (completos o fusionados).
-   - Si un cuento falla, bloquear lote completo.
+   - Si un cuento falla estructura, bloquear lote completo.
    - Entregar errores por cuento con formato accionable para NotebookLM.
 
-5. Manejo de colisiones
+5. Enriquecimiento preimport de `reference_ids`
+   - Si existe `meta.json` valido del lote, aplicar politica hibrida:
+     - respetar `reference_ids` ya presentes;
+     - autocompletar slots sin refs en `cover` y `pages[].images.main`.
+   - Regla de precedencia:
+     - anclas base de estilo (`style_*`) siempre primero;
+     - luego anclas semanticas detectadas desde `title`, `text`, `prompt`;
+     - eliminar duplicados preservando orden.
+   - Politica de cierre:
+     - si faltan refs y se pudieron autocompletar, warning no bloqueante;
+     - si no hay `meta.json`, no bloquear por refs (warning operativo).
+
+6. Manejo de colisiones
    - Si `library/<book_rel_path>/NN.json` ya existe:
      - preguntar 1 a 1 si se sobrescribe ese cuento;
      - continuar solo con confirmacion explicita.
 
-6. Importacion (solo si lote valido)
+7. Importacion (solo si lote valido)
    - Forzar `status = definitive`.
    - Rellenar `created_at` si falta.
    - Actualizar `updated_at` siempre.
    - Normalizar `story_id` segun `NN`.
    - Guardar en `library/<book_rel_path>/NN.json`.
 
-7. Meta jerarquico
+8. Meta jerarquico
    - Si existe `_inbox/<book_title>/meta.json`:
      - validar minimos;
      - merge incremental en:
@@ -82,19 +96,20 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
    - Si falta `meta.json`: warning no bloqueante.
    - Si hay conflicto semantico real (no tecnico): preguntar al usuario.
 
-8. Archivado de inbox
+9. Archivado de inbox
    - Si el lote fue importado completo y no hay pendientes/placeholders:
      - mover `library/_inbox/<book_title>/` a `library/_processed/<book_title>/<timestamp>/`.
    - Si hay pendientes:
      - no mover carpeta;
      - reportar exactamente que `NN`/parte falta o esta invalida.
 
-9. Resumen de cierre
+10. Resumen de cierre
    - Informar:
      - cuentos importados,
      - warnings,
      - colisiones resueltas,
      - estado de fusion por cuento,
+     - cobertura de enriquecimiento de refs por cuento/pagina,
      - estado de archivado (`_processed` o pendiente),
      - mensajes para NotebookLM (si hubo bloqueos).
 
@@ -126,8 +141,9 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
 1. Nombre permitido:
    - `NN_a.json`, `NN_b.json`, `NN_a1.json`, `NN_a2.json`, `NN_b1.json`, `NN_b2.json`.
 2. Cada parte debe parsear como JSON valido de cuento (top-level completo).
-3. `pages[].page_number` debe caer en su rango esperado por sufijo.
-4. Si parte contiene texto plano placeholder/no JSON:
+3. Parse aceptado para UTF-8 y UTF-8 BOM.
+4. `pages[].page_number` debe caer en su rango esperado por sufijo.
+5. Si parte contiene texto plano placeholder/no JSON:
    - error bloqueante `input.pending_notebooklm`.
 
 ## Reglas de validacion de `meta.json`
@@ -143,6 +159,23 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
 4. Campos opcionales permitidos:
    - `style_rules`,
    - `continuity_rules`.
+5. Operativo recomendado para salida lista de imagen:
+   - categorias de anchors con prefijos `style_*`, `char_*`, `env_*`, `prop_*`, `cover_*`.
+
+## Reglas de enriquecimiento de referencias
+
+1. Slot objetivo:
+   - `cover`
+   - `pages[].images.main`
+2. Exclusion:
+   - slots con `status = not_required`.
+3. Politica:
+   - respetar refs existentes;
+   - autocompletar solo faltantes.
+4. Fuente de truth para refs:
+   - filenames de `meta.anchors[].image_filenames[]`.
+5. No permitido en refs:
+   - IDs opacos de alternatives (`<uuid>_<slug>.<ext>`) salvo que coincidan explicitamente como anchor filename.
 
 ## Formato de respuesta en chat
 
@@ -182,7 +215,10 @@ Formato requerido por cuento: NN.json (dos digitos)
 - slot: status, prompt, active_id, alternatives[], reference_ids[] opcional
 - alternativa: id(filename), slug, asset_rel_path, mime_type, status, created_at, notes
 
-Opcional: meta.json con collection.title, anchors[], updated_at.
+Recomendado para flujo listo de imagen:
+- meta.json con collection.title, anchors[], style_rules, continuity_rules, updated_at.
+- reference_ids apuntando a anchors[].image_filenames.
+
 No entregues .md ni .pdf para ingesta.
 ```
 
