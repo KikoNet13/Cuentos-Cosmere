@@ -5,6 +5,17 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [19/02/26] - Copia de prompts de `_inbox` a biblioteca (`los_juegos_del_hambre`)
+
+- Se copian prompts de `01..11_prompts.json` hacia `library/los_juegos_del_hambre/01..11.json`.
+- Campos sincronizados por cuento:
+  - `cover.prompt` desde `cover_prompt`.
+  - `pages[].images.main.prompt` desde `page_prompts[].main_prompt`.
+  - `updated_at` del cuento desde el `_prompts.json`.
+- Se preserva el resto de campos (`text`, `reference_ids`, `alternatives`, `active_id`, `status`).
+- Validaci?n de consistencia de copia: `COPIED_OK=11`.
+- Tarea: `docs/tasks/TAREA-036-copiar-prompts-inbox-a-biblioteca-los-juegos.md`.
+
 ## [18/02/26] - Normalización UTF-8 y acentos en `.md/.json` versionados
 
 - Se normalizan todos los `.md/.json` versionados a UTF-8 sin BOM.

@@ -1,0 +1,454 @@
+{
+  "story_id": "11",
+  "title": "El Final de los Juegos",
+  "status": "definitive",
+  "book_rel_path": "los_juegos_del_hambre",
+  "created_at": "2026-02-18T16:00:00Z",
+  "updated_at": "2026-02-18T22:30:00Z",
+  "cover": {
+    "status": "draft",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear una portada conclusiva para el ultimo cuento de la saga que simbolice la paz alcanzada tras la guerra y el renacimiento de Panem, centrada en la figura de Katniss Everdeen.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: linea negra limpia, formas geometricas amables y colores planos. Katniss debe aparecer con su trenza negra, ojos grises y piel aceitunada, vistiendo ropas sencillas que sugieran su regreso al hogar. Respetar la estetica de Ligne Claire sin sombras complejas.\n\nCOMPOSICION Y ENCUADRE\nPlano general de Katniss de pie en una pradera verde infinita. La composicion es abierta y luminosa, con Katniss mirando hacia un horizonte despejado. En la parte superior, espacio negativo para el titulo.\n\nPERSONAJES Y ACCION\nKatniss de pie, relajada, sosteniendo una primula amarilla en la mano. Su expresion es de paz profunda y melancolia contenida. No hay armas visibles.\n\nENTORNO, PALETA E ILUMINACION\nUna pradera verde vibrante bajo un cielo azul claro con nubes blancas redondeadas. Paleta de verdes, amarillos y azules pastel. Iluminacion de mañana clara y optimista.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, cover_mockingjay_collection.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir armas, fuego, escombros ni elementos de guerra. Prohibido el fotorrealismo, degradados suaves y efectos de luz cinematograficos. Sin texto ni logotipos incrustados.\n\nFORMATO DE SALIDA\nIlustracion digital final 1:1 de alta definicion, lista para maquetacion editorial infantil con bordes limpios.",
+    "active_id": "",
+    "alternatives": [],
+    "reference_ids": [
+      "anchor_style_editorial_v1.png",
+      "anchor_style_palette_v1.png",
+      "anchor_cover_main.png",
+      "anchor_char_katniss.png",
+      "anchor_char_prim.png",
+      "anchor_char_snow.png",
+      "anchor_char_finnick.png",
+      "anchor_env_square.png",
+      "anchor_env_train.png",
+      "anchor_prop_rose.png"
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Avanzamos hacia el corazón del Capitolio, esquivando las últimas defensas de Snow. Gale y yo nos movemos entre las sombras de los edificios de colores pastel, ahora manchados de hollín y sangre. A lo lejos, la mansión presidencial brilla bajo el cielo gris, rodeada por una barrera de agentes de la paz. El aire está cargado del olor a pólvora y desesperación. Siento que el final de esta larga pesadilla está a solo unos pasos de distancia, pero el peligro acecha en cada esquina de estas calles desconocidas.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el avance sigiloso de Katniss y Gale por las calles del Capitolio hacia la mansion presidencial.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con trenza negra y traje tactico negro. Gale alto y fuerte con rasgos de la Veta. Estilo Sergio Kern de linea negra definida.\n\nCOMPOSICION Y ENCUADRE\nPlano medio lateral de los dos personajes moviendose entre escombros. Perspectiva hacia el fondo donde se ve la mansion blanca.\n\nPERSONAJES Y ACCION\nKatniss y Gale avanzando agachados, alerta. Sus rostros reflejan el agotamiento de la guerra pero una determinacion absoluta.\n\nENTORNO, PALETA E ILUMINACION\nCalles del Capitolio con edificios pastel manchados de hollin. Cielo gris plomizo. Tonos apagados con contrastes en negro.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni violencia explicita. Evitar sombras dramaticas.\n\nFORMATO DE SALIDA\nIlustracion 1:1 nitida.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "text": "Llegamos al Círculo de la Ciudad y nos encontramos con una escena desgarradora. Cientos de niños del Capitolio han sido colocados frente a las puertas de la mansión, formando un escudo humano. Tiritan de frío, rodeados por una barricada de agentes de la paz que parecen tan confundidos como nosotros. No entiendo qué planea Snow al usar a sus propios ciudadanos de esta manera. La multitud de rebeldes presiona desde los laterales, creando un caos de gritos y disparos que resuena en las paredes de mármol.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el escudo humano de ninos frente a la mansion presidencial, capturando la crueldad del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nNinos pequenos tiritando. Agentes de la paz en uniformes blancos robóticos. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano general amplio desde la altura de los ojos. Una marea de ninos detras de una barrera blanca frente a los grandes portones dorados.\n\nPERSONAJES Y ACCION\nNinos asustados, algunos llorando. Agentes de la paz impasibles sujetando fusiles. La escena transmite una vulnerabilidad extrema.\n\nENTORNO, PALETA E ILUMINACION\nPlaza de marmol blanco bajo un cielo nublado. Paleta de blancos, rojos Capitolio y grises frios. Luz mortecina.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_reaping_square, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nNo dibujar caras individuales detalladas en la multitud. Sin sangre.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de escala narrativa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "text": "De repente, un aerodeslizador con el sello del Capitolio aparece sobre nuestras cabezas. El rugido de sus motores ahoga el clamor de la plaza. En lugar de bombas, vemos caer cientos de pequeños paracaídas plateados, iguales a los que traían regalos en la arena. Los niños extienden las manos con esperanza, creyendo que el Gobierno les envía comida o ayuda en medio del asedio. Observo el descenso lento y brillante de la seda, sintiendo un presentimiento glacial que me recorre la columna vertebral. Algo no encaja.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el descenso de los paracaidas plateados, creando un contraste entre la belleza visual y la amenaza oculta.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nParacaidas de seda plateada con cestas metalicas. Aerodeslizador con sello del Capitolio. Estetica Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano contrapicado (mirando hacia arriba). Cientos de pequenos paracaidas llenando el cielo gris como si fueran copos de nieve.\n\nPERSONAJES Y ACCION\nNinos abajo extendiendo los brazos con esperanza. El aerodeslizador desaparece entre las nubes en la parte superior.\n\nENTORNO, PALETA E ILUMINACION\nCielo gris ceniza. El brillo plateado de los paracaidas es el punto focal. Colores planos y formas circulares repetidas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, prop_parachute_gift, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nNo mostrar las explosiones todavia. Sin fotorrealismo en las nubes.\n\nFORMATO DE SALIDA\nIlustracion 1:1 surrealista.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_rue.png",
+            "anchor_char_beetee.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "text": "La primera oleada de paracaídas estalla antes de tocar el suelo. Una serie de explosiones coordinadas convierte la nieve en una carnicería roja. El suelo vibra y el aire se llena de humo acre. Los gritos de los niños son ensordecedores mientras los agentes de la paz intentan retirar las barricadas para ayudar. Es una trampa cruel diseñada para causar el máximo dolor. Me quedo paralizada, con el arco bajado, viendo cómo la inocencia se desintegra en un instante bajo el poder despiadado de los que mandan.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el momento devastador de las explosiones de los paracaidas en el Círculo de la Ciudad.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLlamas naranjas y rojas. Humo gris en formas redondeadas. Estilo Sergio Kern de linea negra firme.\n\nCOMPOSICION Y ENCUADRE\nPlano general dinamico. Explosiones circulares estallando en medio de la multitud de ninos. El suelo blanco se mancha de rojo.\n\nPERSONAJES Y ACCION\nFiguras simplificadas cayendo por la onda expansiva. El caos visual se representa con lineas de accion negras.\n\nENTORNO, PALETA E ILUMINACION\nPlaza blanca cubierta de nieve sucia. Contraste violento entre el naranja del fuego y el frio del entorno. Luz deslumbrante.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nEvitar el gore o detalles truculentos. La violencia debe ser estilizada y simbolica.\n\nFORMATO DE SALIDA\nIlustracion 1:1 de alto impacto visual.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_snow.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "text": "En medio del caos, un grupo de sanitarios rebeldes con uniformes blancos corre hacia el centro de la plaza. Se abren paso entre la multitud para atender a los heridos que agonizan en el suelo. Busco a Gale con la mirada, pero mis ojos se clavan en una figura pequeña que se mueve con determinación. Una trenza rubia, un abrigo que se quita para cubrir a un niño herido... El corazón me da un vuelco salvaje. Es una visión imposible en este infierno de fuego y escombros.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nPresentar la llegada de los sanitarios rebeldes y la aparicion inesperada de Prim en el campo de batalla.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPrimrose Everdeen con trenza rubia y uniforme de enfermera blanco. Sanitarios con brazaletes rojos.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Prim en primer plano ayudando a un nino herido. Katniss al fondo, borrosa, intentando alcanzarla.\n\nPERSONAJES Y ACCION\nPrim concentrada, mostrando la valentia que Katniss siempre admiro. Los sanitarios se mueven con urgencia entre el humo.\n\nENTORNO, PALETA E ILUMINACION\nAmbiente brumoso cargado de polvo gris. Paleta de blancos y grises con el detalle rojo del brazalete. Luz filtrada.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_prim_base, char_katniss_base.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir armas en este momento de auxilio medico.\n\nFORMATO DE SALIDA\nIlustracion 1:1 emotiva.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "text": "Es Prim. Mi hermana está allí, en el corazón del desastre, haciendo lo que mejor sabe: curar. La veo arrodillada sobre un niño que llora, su colita de pato asomando por la blusa como aquel día de la cosecha. Intento gritar su nombre, abrirme paso entre la masa humana que me empuja hacia atrás. Ella levanta la vista y, por un segundo, nuestras miradas se encuentran. Sus labios forman mi nombre justo cuando estalla la segunda oleada de paracaídas, envolviéndolo todo en una bola de fuego insoportable.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nCapturar el tragico momento final de Prim justo antes de la segunda explosion.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPrim mirando hacia Katniss. La blusa con la 'cola de pato' fuera. Destello de luz naranja al fondo.\n\nCOMPOSICION Y ENCUADRE\nPrimer plano de Primrose con expresion de reconocimiento. Sus labios forman el nombre de su hermana. Katniss reflejada en sus pupilas.\n\nPERSONAJES Y ACCION\nPrim levanta la vista. Katniss extiende la mano desde fuera de encuadre. El tiempo parece detenerse antes del fuego.\n\nENTORNO, PALETA E ILUMINACION\nFondo de humo gris que empieza a iluminarse de un naranja cegador. Colores pastel en el rostro de Prim.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_prim_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No mostrar el impacto de la explosion sobre el cuerpo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 tragica y bella.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "text": "El fuego me alcanza y me transforma en una criatura de llamas, el pájaro de Cinna consumiéndose en su propia esencia. Siento que mi piel se derrite mientras caigo hacia un abismo de agonía absoluta. No hay sonido, solo un ardor implacable que me borra la conciencia. Los rostros de los que amo vuelan como pájaros por un cielo negro antes de que la oscuridad se lo trague todo. El Sinsajo ha caído y, con él, la última chispa de mi voluntad de seguir luchando en este mundo.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar a Katniss como el sinsajo en llamas, consumida por el fuego y el dolor.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nSilueta de Katniss envuelta en llamas naranjas y amarillas. Forma de pajaro sugerida por el fuego. Estilo Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Katniss cayendo de espaldas en un abismo negro. Las llamas forman alas efimeras a su alrededor.\n\nPERSONAJES Y ACCION\nKatniss con los ojos cerrados, perdiendo el sentido. El fuego es una masa de color plano con bordes negros vibrantes.\n\nENTORNO, PALETA E ILUMINACION\nFondo negro absoluto. Unica fuente de luz es la propia Katniss ardiendo. Paleta de rojos, naranjas y amarillos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, cover_mockingjay_collection.\n\nRESTRICCIONES / NEGATIVOS\nEvitar efectos de fuego realistas. Sin rasgos faciales detallados debido a la luz.\n\nFORMATO DE SALIDA\nIlustracion 1:1 simbolica y poderosa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "text": "Despierto en un mundo de blanco y silencio, atrapada en una cama de hospital del Capitolio. Mi piel es un rompecabezas de injertos rosados y cicatrices rojas, un mapa del dolor que me ha dejado marcada para siempre. Me dicen que la guerra ha terminado, que Snow ha sido capturado y que los rebeldes han vencido finalmente. Pero yo no siento la victoria. Solo hay un vacío inmenso en mi pecho y un silencio que me impide gritar. Me he convertido en una avox mental, una sombra que ya no reconoce su propia voz.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el despertar de Katniss en el hospital tras el fin de la guerra, marcada por las quemaduras.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con vendajes en los brazos y rostro con cicatrices rosadas. Habitacion blanca esteril. Estetica Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano cenital (desde arriba) de Katniss en la cama del hospital. Mirada vacia clavada en el techo blanco.\n\nPERSONAJES Y ACCION\nKatniss inmóvil, sumida en un silencio psicologico. Su fragilidad fisica es evidente en sus manos vendadas.\n\nENTORNO, PALETA E ILUMINACION\nInterior minimalista de hospital del Capitolio. Paleta de blancos, celestes palidos y el rosa de las cicatrices. Luz fria.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre fresca. No incluir a otros personajes para enfatizar la soledad.\n\nFORMATO DE SALIDA\nIlustracion 1:1 clinica y desolada.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "text": "Despierto en una habitación blanca del Capitolio. Prim ha muerto y el vacío en mi pecho es más doloroso que las quemaduras que cubren mi piel. Me he convertido en un avox mental, alguien que ha perdido su voz ante el horror de la pérdida. Los médicos dicen que estoy recuperándome, pero mi mente solo repite los nombres de los caídos. Me siento como una pieza rota de un mecanismo que ya no tiene sentido, esperando el final de la historia.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nReflejar el duelo absoluto de Katniss por la perdida de Primrose.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss encogida en posicion fetal. Estilo Sergio Kern de formas simples y colores planos desaturados.\n\nCOMPOSICION Y ENCUADRE\nPlano general de una habitacion blanca inmensa con Katniss como una mancha pequeña y oscura en el centro del suelo.\n\nPERSONAJES Y ACCION\nKatniss abrazando sus rodillas, ocultando el rostro. Su postura transmite un vacio insoportable.\n\nENTORNO, PALETA E ILUMINACION\nArquitectura de marmol frio. Sombras largas y planas. Paleta de grises y blancos hueso. Iluminacion cenital dura.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni llanto caricaturesco. El dolor debe ser estructural.\n\nFORMATO DE SALIDA\nIlustracion 1:1 minimalista.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text": "Un día camino por los pasillos hasta el jardín de rosas del Presidente Snow. Allí lo encuentro, débil y sentenciado. Me mira con sus ojos de serpiente y suelta una risa ahogada. Me dice que no fue él quien mató a Prim, sino que Coin soltó los paracaídas para forzar la rendición del Capitolio. «Nos han tomado a los dos por idiotas», susurra. El aroma dulce de las rosas oculta el rastro de la sangre y comprendo que el enemigo ha cambiado de rostro.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nEl encuentro final entre Katniss y un Presidente Snow moribundo en su jardin de rosas.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPresidente Snow palido y debil con su rosa blanca. Katniss con mirada de acero. Jardin de rosas vibrantes.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de los dos personajes enfrentados a traves de una mesa de hierro. Las rosas llenan el fondo.\n\nPERSONAJES Y ACCION\nSnow sonriendo de forma malevola mientras habla. Katniss escuchando con horror la verdad sobre Coin. La tension es palpable.\n\nENTORNO, PALETA E ILUMINACION\nInvernadero de cristal. Rosas blancas y rojas contrastando con la palidez de Snow. Luz solar filtrada y calida.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_snow_base, char_katniss_base, prop_president_rose.\n\nRESTRICCIONES / NEGATIVOS\nNo mostrar sangre. Snow debe verse anciano y enfermo pero peligroso. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 narrativa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text": "La Presidenta Coin nos reúne a los últimos vencedores. Propone unos Juegos del Hambre simbólicos con los hijos de los líderes del Capitolio. Peeta se opone con horror, pero Johanna y Enobaria quieren venganza. Miro a Peeta y recuerdo a mi hermana. «Voto que sí», digo con firmeza, «por Prim». Haymitch me observa durante un largo silencio, comprende mi intención oculta y decide apoyarme. El tablero está listo para el movimiento final del Sinsajo y el destino de Coin.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nLa reunion de los ultimos vencedores votando sobre el destino final del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nAlma Coin con pelo gris liso. Peeta con ojos azules. Haymitch cansado. Johanna desafiante. Estetica Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano general de la mesa redonda con todos los vencedores sentados. Coin de pie en la cabecera dirigiendo la votacion.\n\nPERSONAJES Y ACCION\nPeeta votando 'No' con horror. Katniss diciendo 'Voto que si... por Prim'. Haymitch observando a Katniss antes de apoyarla.\n\nENTORNO, PALETA E ILUMINACION\nSala de reuniones de piedra. Paleta de grises militares y marrones. Luz focal sobre la mesa. Ambiente opresivo.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_coin_base, char_katniss_base, char_peeta_base, char_haymitch_base, char_johanna_base.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. Los personajes deben mantener sus rasgos de las anclas de continuidad.\n\nFORMATO DE SALIDA\nIlustracion 1:1 politica.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "text": "Llega el momento de la ejecución. Una multitud inmensa llena la plaza frente a la mansión. Snow está atado a un poste, esperando mi flecha. Levanto el arco de Sinsajo y apunto a su corazón. Recuerdo sus palabras sobre la bomba de Coin. En el último segundo, muevo la punta de la flecha hacia arriba y atravieso el pecho de la Presidenta Coin. Snow se ríe a carcajadas mientras se ahoga. El caos estalla en la plaza y yo sé que, por fin, he hecho justicia.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nEl momento culminante de la ejecucion: Katniss asesinando a la Presidenta Coin.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con su arco de sinsajo negro. Coin cayendo desde el balcon. Snow atado riendo. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano contrapicado dinamico. La flecha cruza diagonalmente la imagen hacia Coin, que esta en la parte superior.\n\nPERSONAJES Y ACCION\nKatniss con el arco tenso, mirada fija en el nuevo enemigo. Coin con expresion de sorpresa total mientras cae. Multitud abajo.\n\nENTORNO, PALETA E ILUMINACION\nPlaza del Capitolio. Colores saturados en las banderas. Destello de luz blanca tras la flecha. Clima de caos y justicia.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_coin_base, char_snow_base, prop_bow_arrow, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre explicita. No mostrar el cadaver de Snow siendo linchado. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 cinematografica plana.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "text": "Me encierran durante meses, pero al final deciden que estoy demasiado rota para ser juzgada. Me envían de vuelta al Distrito 12, escoltada por un Haymitch silencioso. Al llegar, descubro que mi antiguo hogar es un desierto de cenizas grises. Me instalo en la Aldea de los Vencedores, donde el silencio es el único habitante. Me siento en mi cocina frente al fuego y espero a que el tiempo se lleve los recuerdos del fuego y la sangre de la guerra que terminó.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el regreso de Katniss a las cenizas del Distrito 12, buscando su identidad entre las ruinas.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEscombros grises de la Veta. Katniss con ropa vieja de caza. Estilo Kern de lineas simples.\n\nCOMPOSICION Y ENCUADRE\nPlano general de Katniss caminando sola por una calle de ceniza. Las chimeneas caidas sirven de hitos visuales.\n\nPERSONAJES Y ACCION\nKatniss mirando el suelo, reconociendo el lugar donde estuvo su hogar. Su expresion es de una tristeza tranquila y aceptada.\n\nENTORNO, PALETA E ILUMINACION\nPaisaje monocromatico de grises, carbon y negro. Unico toque de color es la piel de Katniss. Luz plomiza de tarde.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nSin fuego ni humo activo. No incluir a otros personajes todavia.\n\nFORMATO DE SALIDA\nIlustracion 1:1 melancolica.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "text": "Una mañana de primavera, Peeta aparece en mi jardín. Está plantando prímulas amarillas para que el jardín siempre me recuerde a mi hermana Prim. Trae pan caliente de la panadería y, por primera vez en mucho tiempo, compartimos un desayuno de verdad. Peeta todavía tiene momentos de oscuridad, pero su bondad sigue siendo el único refugio que me queda. Juntos, empezamos a limpiar las cenizas de la Veta y a sembrar semillas de una vida nueva sobre las ruinas del pasado.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el reencuentro esperanzador con Peeta plantando flores en el jardin de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta Mellark con cabello rubio ceniza. Primulas amarillas brillantes. Estetica Kern de colores planos calidos.\n\nCOMPOSICION Y ENCUADRE\nPlano medio. Peeta de rodillas en la tierra negra, Katniss observandolo desde el umbral de la casa de madera.\n\nPERSONAJES Y ACCION\nPeeta plantando con cuidado, ofreciendo una primula a Katniss. Katniss con una sonrisa debil pero real por primera vez.\n\nENTORNO, PALETA E ILUMINACION\nJardin renaciendo. Colores verdes claros, amarillos intensos y madera calida. Luz dorada de atardecer de primavera.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, char_katniss_base, prop_bread_loaf (como concepto de calidez).\n\nRESTRICCIONES / NEGATIVOS\nNo incluir armas. Sin fotorrealismo. Evitar que parezca una escena de romance convencional.\n\nFORMATO DE SALIDA\nIlustracion 1:1 reconfortante.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_snow.png",
+            "anchor_env_seam.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "text": "Creamos un libro de recuerdos juntos. En sus páginas de pergamino dibujamos a todos los que amamos y perdimos: el color de los ojos de Finnick, la risa de mi padre, la valentía de Rue y la sonrisa de Prim. Escribimos sus historias para que el mundo nunca olvide lo que pasó ni el precio que pagamos por la libertad. Haymitch se une a nosotros, aportando los nombres de los tributos a los que no pudo salvar. Este libro es nuestra forma de sanar las heridas.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar la creacion del libro de recuerdos como proceso de sanacion colectiva.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLibro de pergamino grande. Dibujos de Rue, Finnick y Cinna. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano detalle de las manos de Katniss y Peeta trabajando juntas sobre el libro abierto en una mesa de madera.\n\nPERSONAJES Y ACCION\nPeeta dibujando un pajaro (sinsajo) y Katniss escribiendo nombres. El gesto de sus manos entrelazadas simboliza su union.\n\nENTORNO, PALETA E ILUMINACION\nInterior calido iluminado por el fuego de una chimenea. Tonos ocres, dorados y el color del papel viejo.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo usar fotorrealismo en los dibujos del libro; deben parecer bocetos hechos a mano. Sin texto legible.\n\nFORMATO DE SALIDA\nIlustracion 1:1 intima.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "text": "Han pasado veinte años. Mis hijos juegan sobre la hierba de la pradera, corriendo bajo el sol sin saber que juegan sobre un cementerio. A veces las pesadillas regresan y me despierto gritando, pero Peeta me abraza y me recuerda qué es real. Le contaré a mis hijos cómo sobrevivimos y por qué el mundo es diferente ahora. Miro el horizonte y siento paz. «¿Me amas?», pregunta él. «Real», respondo. Por fin, los Juegos del Hambre han terminado para siempre.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nFinal del cuento: La nueva generacion jugando en una Pradera libre de Juegos del Hambre.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nDos ninos (una niña de pelo oscuro y un niño rubio). Pradera verde infinita. Estetica Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano general. Los ninos corren alejandose hacia el sol. Katniss y Peeta sentados en la hierba en primer plano de espaldas.\n\nPERSONAJES Y ACCION\nNinos saltando y riendo. Katniss y Peeta tomados de la mano, observando a sus hijos con paz. El final de la historia.\n\nENTORNO, PALETA E ILUMINACION\nPradera llena de flores amarillas. Cielo azul intenso. Iluminacion deslumbrante que simboliza el nuevo mundo. Colores vibrantes.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, style_paleta_rebelion (version optimista).\n\nRESTRICCIONES / NEGATIVOS\nSin ningun rastro de guerra o escombros. No incluir titulos de 'Fin'. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustracion 1:1 conclusiva y luminosa de alta calidad.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_peeta.png",
+            "anchor_char_snow.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    }
+  ]
+}

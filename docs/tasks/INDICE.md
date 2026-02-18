@@ -1,7 +1,17 @@
 # índice de tareas
 
-- Próximo ID: `036`
+- Pr?ximo ID: `037`
 
+
+## TAREA-036-copiar-prompts-inbox-a-biblioteca-los-juegos
+
+- Fecha: 19/02/26 00:32
+- Estado: cerrada
+- Resumen: copia de `cover_prompt` y `page_prompts[].main_prompt` desde `library/_inbox/Los juegos del hambre/NN_prompts.json` hacia `library/los_juegos_del_hambre/NN.json`, sincronizando `updated_at`.
+- Versi?n: 2.7.6
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-036-copiar-prompts-inbox-a-biblioteca-los-juegos.md`
 
 ## TAREA-035-normalizacion-utf8-acentos-json-md
 
