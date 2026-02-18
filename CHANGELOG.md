@@ -5,6 +5,27 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [18/02/26] - Modo rapido de imagen + dossier ChatGPT Project por saga
+
+- UI de editor reforzada con barra `Modo rapido` en slots y portada:
+  - copiar prompt,
+  - copiar referencias individuales,
+  - accion `Pegar y guardar alternativa` en un clic.
+- `clipboard.js` ampliado con `pasteImageAndSubmit(...)`:
+  - lee imagen del portapapeles,
+  - carga hidden input,
+  - envia formulario automaticamente,
+  - mantiene fallback manual con mensajes de error claros.
+- Estilos nuevos en `app/static/css/pages.css` para ergonomia de acciones rapidas.
+- `ingesta-cuentos` ampliada a nivel de skill/contrato para dossier operativo por saga:
+  - generar/regenerar `library/<book_rel_path>/chatgpt_project_setup.md` tras ingesta valida,
+  - soporte de refresh manual del dossier sin reimport.
+- Documentacion de orquestacion actualizada:
+  - `AGENTS.md`,
+  - `README.md`,
+  - `docs/guia-orquestador-editorial.md`.
+- Tarea: `docs/tasks/TAREA-027-modo-rapido-imagen-dossier-project-saga.md`.
+
 ## [18/02/26] - Automatizacion de anclas en flujo 2 skills
 
 - `notebooklm-comunicacion` ampliada a flujo oficial en 4 fases:

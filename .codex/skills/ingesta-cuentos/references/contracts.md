@@ -6,6 +6,8 @@
 - Sin CLI ni scripts internos.
 - Entrada desde `library/_inbox/`.
 - Salida final en `library/`.
+- Artefacto operativo adicional por saga:
+  - `library/<book_rel_path>/chatgpt_project_setup.md`.
 
 ## Entradas
 
@@ -44,6 +46,11 @@ Codificacion de entrada:
    - guardar en destino final.
 7. Archivado post-import:
    - si el lote se completa sin pendientes, mover carpeta origen a `library/_processed/<book_title>/<timestamp>/`.
+8. Dossier por saga:
+   - tras importacion valida, regenerar `chatgpt_project_setup.md`.
+   - debe incluir setup de ChatGPT Project, checklist de anclas, flujo por slot y QA.
+9. Refresh manual:
+   - permitido regenerar `chatgpt_project_setup.md` para un libro ya importado sin reimportar `NN.json`.
 
 ## Resolucion y fusion de partes
 
@@ -175,6 +182,29 @@ Opcionales globales:
 Operativo recomendado para flujo listo de imagen:
 
 - incluir categorias por prefijo: `style_*`, `char_*`, `env_*`, `prop_*`, `cover_*`.
+
+## Dossier operativo `chatgpt_project_setup.md`
+
+Ruta:
+
+- `library/<book_rel_path>/chatgpt_project_setup.md`
+
+Naturaleza:
+
+- artefacto operativo (no canonico del cuento);
+- se regenera tras cada ingesta valida;
+- puede refrescarse manualmente sin reimport.
+- plantilla de referencia para contenido base:
+  - `.codex/skills/ingesta-cuentos/references/chatgpt_project_setup_template.md`.
+
+Contenido minimo:
+
+1. nombre sugerido del Project por saga.
+2. instrucciones maestras de continuidad visual.
+3. checklist de fase obligatoria de anclas antes de paginas.
+4. flujo operativo por slot (portada/pagina) para ciclo rapido `copiar -> generar -> pegar`.
+5. politica de QA rapido.
+6. troubleshooting de portapapeles/navegador.
 
 ## Indice de imagenes por nodo
 

@@ -1,9 +1,19 @@
 (function () {
+  function setFeedback(feedbackId, message, timeoutMs) {
+    const feedback = document.getElementById(feedbackId);
+    if (!feedback) return;
+    feedback.textContent = message;
+    if (timeoutMs && timeoutMs > 0) {
+      setTimeout(function () {
+        feedback.textContent = "";
+      }, timeoutMs);
+    }
+  }
+
   async function copyTextFromElement(id, feedbackId) {
     const el = document.getElementById(id);
     if (!el) return;
     const text = el.innerText || el.value || "";
-    const feedback = document.getElementById(feedbackId);
     try {
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(text);
@@ -15,24 +25,13 @@
         document.execCommand("copy");
         ta.remove();
       }
-      if (feedback) {
-        feedback.textContent = "Copiado";
-        setTimeout(function () {
-          feedback.textContent = "";
-        }, 1200);
-      }
+      setFeedback(feedbackId, "Copiado", 1200);
     } catch (_error) {
-      if (feedback) {
-        feedback.textContent = "Error al copiar";
-        setTimeout(function () {
-          feedback.textContent = "";
-        }, 1600);
-      }
+      setFeedback(feedbackId, "Error al copiar", 1600);
     }
   }
 
   async function copyImageFromUrl(url, feedbackId) {
-    const feedback = document.getElementById(feedbackId);
     try {
       const res = await fetch(url, { cache: "no-store" });
       const blob = await res.blob();
@@ -43,71 +42,95 @@
         throw new Error("Portapapeles de imagen no disponible");
       }
       await navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
-      if (feedback) {
-        feedback.textContent = "Imagen copiada";
-        setTimeout(function () {
-          feedback.textContent = "";
-        }, 1200);
-      }
+      setFeedback(feedbackId, "Imagen copiada", 1200);
     } catch (_error) {
-      if (feedback) {
-        feedback.textContent = "No se pudo copiar; abre la imagen y copia manualmente";
-        setTimeout(function () {
-          feedback.textContent = "";
-        }, 2500);
-      }
+      setFeedback(feedbackId, "No se pudo copiar; abre la imagen y copia manualmente", 2500);
     }
   }
 
-  async function pasteImageToHidden(inputId, feedbackId) {
-    const input = document.getElementById(inputId);
-    const feedback = document.getElementById(feedbackId);
-    if (!input) return;
+  async function _readClipboardImageDataUrl() {
     if (!navigator.clipboard || !navigator.clipboard.read) {
-      if (feedback) {
-        feedback.textContent = "El navegador no soporta pegar imagen";
-      }
-      return;
+      throw new Error("unsupported");
     }
-    try {
-      const items = await navigator.clipboard.read();
-      for (const item of items) {
-        const type = item.types.find(function (it) {
-          return it.startsWith("image/");
-        });
-        if (!type) continue;
-        const blob = await item.getType(type);
+
+    const items = await navigator.clipboard.read();
+    for (const item of items) {
+      const type = item.types.find(function (it) {
+        return it.startsWith("image/");
+      });
+      if (!type) continue;
+
+      const blob = await item.getType(type);
+      const dataUrl = await new Promise(function (resolve, reject) {
         const reader = new FileReader();
         reader.onload = function () {
-          input.value = String(reader.result || "");
-          if (feedback) {
-            feedback.textContent = "Imagen pegada y lista para guardar";
-            setTimeout(function () {
-              feedback.textContent = "";
-            }, 1600);
-          }
+          resolve(String(reader.result || ""));
+        };
+        reader.onerror = function () {
+          reject(new Error("read_error"));
         };
         reader.readAsDataURL(blob);
-        return;
-      }
-      if (feedback) {
-        feedback.textContent = "No se detecto imagen en el portapapeles";
-        setTimeout(function () {
-          feedback.textContent = "";
-        }, 1800);
-      }
-    } catch (_error) {
-      if (feedback) {
-        feedback.textContent = "No se pudo leer el portapapeles";
-        setTimeout(function () {
-          feedback.textContent = "";
-        }, 1800);
+      });
+
+      if (dataUrl) {
+        return dataUrl;
       }
     }
+    throw new Error("no_image");
+  }
+
+  async function pasteImageToHidden(inputId, feedbackId, options) {
+    const opts = options || {};
+    const input = document.getElementById(inputId);
+    if (!input) {
+      setFeedback(feedbackId, "No se encontro el campo de imagen", 1800);
+      return false;
+    }
+
+    try {
+      const dataUrl = await _readClipboardImageDataUrl();
+      input.value = dataUrl;
+      setFeedback(feedbackId, opts.successMessage || "Imagen pegada y lista para guardar", opts.successTimeoutMs || 1600);
+      return true;
+    } catch (_error) {
+      if (_error && _error.message === "unsupported") {
+        setFeedback(feedbackId, "El navegador no soporta pegar imagen", 1800);
+        return false;
+      }
+      if (_error && _error.message === "no_image") {
+        setFeedback(feedbackId, "No se detecto imagen en el portapapeles", 1800);
+        return false;
+      }
+      setFeedback(feedbackId, "No se pudo leer el portapapeles", 1800);
+      return false;
+    }
+  }
+
+  async function pasteImageAndSubmit(inputId, feedbackId, formId) {
+    const form = document.getElementById(formId);
+    if (!form) {
+      setFeedback(feedbackId, "No se encontro el formulario de subida", 1800);
+      return false;
+    }
+
+    const pasted = await pasteImageToHidden(inputId, feedbackId, {
+      successMessage: "Imagen pegada. Guardando alternativa...",
+      successTimeoutMs: 1200,
+    });
+    if (!pasted) {
+      return false;
+    }
+
+    if (typeof form.requestSubmit === "function") {
+      form.requestSubmit();
+    } else {
+      form.submit();
+    }
+    return true;
   }
 
   window.copyTextFromElement = copyTextFromElement;
   window.copyImageFromUrl = copyImageFromUrl;
   window.pasteImageToHidden = pasteImageToHidden;
+  window.pasteImageAndSubmit = pasteImageAndSubmit;
 })();
-

@@ -1,6 +1,16 @@
 # Indice de tareas
 
-- Proximo ID: `027`
+- Proximo ID: `028`
+
+## TAREA-027-modo-rapido-imagen-dossier-project-saga
+
+- Fecha: 18/02/26 16:35
+- Estado: cerrada
+- Resumen: modo rapido en editor (copiar prompt/refs + pegar y guardar alternativa en un clic) y formalizacion del dossier `chatgpt_project_setup.md` por saga con refresh manual en `ingesta-cuentos`.
+- Version: 2.4.0
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-027-modo-rapido-imagen-dossier-project-saga.md`
 
 ## TAREA-026-automatizacion-anclas-flujo-2-skills
 

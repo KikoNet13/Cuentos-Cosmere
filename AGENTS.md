@@ -25,6 +25,8 @@ Este repositorio opera como plataforma orquestadora del flujo 3 IAs para cuentos
 2. Codex (este repo):
    - prepara comunicacion con NotebookLM via skill dedicada;
    - valida contrato, fusiona partes en memoria, enriquece `reference_ids` y importa lotes;
+   - genera/regenera `library/<book_rel_path>/chatgpt_project_setup.md` para operar ChatGPT Project por saga;
+   - permite refresh manual del dossier sin reimportar cuentos;
    - emite mensajes accionables para NotebookLM;
    - facilita prompts y gestion de assets para ChatGPT Project.
 3. ChatGPT Project:
@@ -76,13 +78,16 @@ Notas:
 14. Sidecars legacy de adaptacion (`adaptation_context.json`, `NN.issues.json`, etc.) quedan fuera de contrato.
 15. Archivado post-import:
     - al completar un lote sin pendientes, mover `library/_inbox/<book_title>/` a `library/_processed/<book_title>/<timestamp>/`.
+16. Artefacto operativo por saga:
+    - `library/<book_rel_path>/chatgpt_project_setup.md`.
+    - se regenera en cada ingesta valida y admite refresh manual.
 
 ## Pipeline editorial
 
 1. Las skills versionadas en este repositorio viven en `.codex/skills/`.
 2. Skills activas:
    - `.codex/skills/notebooklm-comunicacion/` para plan de coleccion, meta/anclas, prompting por partes y fallback.
-   - `.codex/skills/ingesta-cuentos/` para fusion en memoria, validacion, enriquecimiento de refs e importacion.
+   - `.codex/skills/ingesta-cuentos/` para fusion en memoria, validacion, enriquecimiento de refs, importacion y dossier de ChatGPT Project.
 3. `app/` no ejecuta pipeline editorial autonomo; solo consume y edita contrato final.
 4. Cualquier flujo externo debe respetar este contrato.
 

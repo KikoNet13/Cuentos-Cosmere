@@ -21,16 +21,39 @@
   {% include "components/story/page_nav.html" %}
 
   <section class="box editor-slot-card">
+    {% set upload_form_id = "upload-cover-form" %}
+    {% set pasted_input_id = "pasted-cover" %}
+    {% set quick_feedback_id = "quick-feedback-cover" %}
+    {% set paste_feedback_id = "paste-feedback-cover" %}
     <div class="is-flex is-justify-content-space-between is-align-items-center is-flex-wrap-wrap gap-2 mb-3">
       <h3 class="title is-5 mb-0">Portada</h3>
       <span class="tag is-rounded">Estado: {{ cover_slot.status }}</span>
+    </div>
+
+    <div class="quick-actions-bar mb-3">
+      <span class="tag is-rounded is-light">Modo rapido</span>
+      <button class="button is-small is-light" type="button" onclick="copyTextFromElement('cover-prompt-text','{{ quick_feedback_id }}')">Copiar prompt</button>
+      {% if cover_slot.reference_assets %}
+        {% for ref in cover_slot.reference_assets %}
+          {% if ref.found %}
+            {% set quick_ref_index = loop.index %}
+            <button class="button is-small is-light" type="button" onclick="copyImageFromUrl('{{ ref.image_url }}','{{ quick_feedback_id }}')">Copiar ref {{ quick_ref_index }}</button>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <button
+        class="button is-small is-link is-light"
+        type="button"
+        onclick="pasteImageAndSubmit('{{ pasted_input_id }}','{{ quick_feedback_id }}','{{ upload_form_id }}')"
+      >Pegar y guardar alternativa</button>
+      <span id="{{ quick_feedback_id }}" class="copy-feedback"></span>
     </div>
 
     <form method="post" action="{{ url_for('web.save_story_cover', story_path=story.story_rel_path) }}" class="is-flex is-flex-direction-column gap-2">
       <input type="hidden" name="next" value="{{ request.full_path }}">
       <div>
         <label class="label is-size-7">Prompt portada</label>
-        <textarea class="textarea is-small" name="cover_prompt" rows="7">{{ cover_slot.prompt }}</textarea>
+        <textarea id="cover-prompt-text" class="textarea is-small" name="cover_prompt" rows="7">{{ cover_slot.prompt }}</textarea>
       </div>
       <div>
         <label class="label is-size-7">Reference IDs portada (csv)</label>
@@ -111,6 +134,7 @@
     <hr>
     <h4 class="title is-6">Subir portada alternativa</h4>
     <form
+      id="{{ upload_form_id }}"
       method="post"
       action="{{ url_for('web.upload_cover_image', story_path=story.story_rel_path) }}"
       enctype="multipart/form-data"
@@ -132,10 +156,10 @@
       <div>
         <label class="label is-size-7">Pegar desde portapapeles</label>
         <div class="is-flex is-align-items-center gap-2">
-          <button class="button is-small is-light" type="button" onclick="pasteImageToHidden('pasted-cover','paste-feedback-cover')">Pegar imagen</button>
-          <span id="paste-feedback-cover" class="copy-feedback"></span>
+          <button class="button is-small is-light" type="button" onclick="pasteImageToHidden('{{ pasted_input_id }}','{{ paste_feedback_id }}')">Pegar imagen</button>
+          <span id="{{ paste_feedback_id }}" class="copy-feedback"></span>
         </div>
-        <input id="pasted-cover" type="hidden" name="pasted_image_data" value="">
+        <input id="{{ pasted_input_id }}" type="hidden" name="pasted_image_data" value="">
       </div>
       <button class="button is-small is-link is-light" type="submit">Agregar alternativa</button>
     </form>

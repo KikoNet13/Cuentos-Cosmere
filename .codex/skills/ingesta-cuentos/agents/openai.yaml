@@ -1,4 +1,6 @@
 interface:
   display_name: "Ingesta Cuentos"
-  short_description: "Fusiona partes NN_a/NN_b, valida e importa cuentos y meta desde _inbox"
-  default_prompt: "Usa $ingesta-cuentos para ejecutar ingesta conversacional: detectar library/_inbox/<book_title>/NN.json o partes NN_a/NN_b (y fallback a1/a2/b1/b2), fusionar en memoria por cuento, validar contrato, bloquear lote si hay errores, importar solo lote valido a library/<book_rel_path>/ como NN.json definitive y archivar inbox procesado en library/_processed/."
+  short_description: "Fusiona/valida/importa cuentos y regenera dossier ChatGPT Project por saga"
+  icon_small: "./assets/ingesta-cuentos-small.svg"
+  icon_large: "./assets/ingesta-cuentos-icon.svg"
+  default_prompt: "Usa $ingesta-cuentos para ejecutar ingesta conversacional: detectar library/_inbox/<book_title>/NN.json o partes NN_a/NN_b (y fallback a1/a2/b1/b2), fusionar en memoria por cuento, validar contrato, bloquear lote si hay errores, importar solo lote valido a library/<book_rel_path>/ como NN.json definitive, regenerar library/<book_rel_path>/chatgpt_project_setup.md y archivar inbox procesado en library/_processed/. Tambien admite refresh manual del dossier sin reimportar."

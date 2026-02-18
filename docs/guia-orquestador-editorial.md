@@ -11,6 +11,12 @@ Resumen:
    - deltas de correccion por archivo.
 2. NotebookLM entrega JSON en `_inbox` (`NN.json` o partes) y `meta.json` recomendado para flujo listo de imagen.
 3. Codex ejecuta `ingesta-cuentos` para fusionar en memoria, validar, enriquecer `reference_ids` y luego importar.
-4. ChatGPT Project genera imagenes a partir de prompts + anchors (`reference_ids` basados en `meta.anchors[].image_filenames`).
+4. `ingesta-cuentos` regenera `library/<book_rel_path>/chatgpt_project_setup.md` (y permite refresh manual sin reimportar).
+5. ChatGPT Project genera imagenes a partir de prompts + anchors (`reference_ids` basados en `meta.anchors[].image_filenames`).
+6. Operacion recomendada en UI para imagen:
+   - abrir editor de portada o pagina,
+   - usar barra "Modo rapido" del slot (copiar prompt + refs),
+   - generar en ChatGPT Project,
+   - usar "Pegar y guardar alternativa" en un clic.
 
 Para reglas, contratos y mensajes base, usar siempre `AGENTS.md`.

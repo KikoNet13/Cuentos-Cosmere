@@ -1,6 +1,6 @@
 ---
 name: ingesta-cuentos
-description: Skill conversacional para fusionar (en memoria) partes NN_a/NN_b, validar, enriquecer reference_ids e importar lotes NN.json/meta.json desde library/_inbox al contrato final de library/.
+description: Skill conversacional para fusionar (en memoria) partes NN_a/NN_b, validar, enriquecer reference_ids, importar lotes y generar dossier ChatGPT Project por saga.
 ---
 
 # Ingesta Cuentos
@@ -14,8 +14,9 @@ Operar como orquestador conversacional entre NotebookLM, ChatGPT Project y la we
 4. Enriquecer `reference_ids` faltantes antes de importar cuando exista `meta.json`.
 5. Bloquear lote completo si hay errores estructurales/editoriales.
 6. Importar lote valido a `library/<book_rel_path>/NN.json` con normalizaciones de importacion.
-7. Archivar carpeta de inbox procesada en `library/_processed/<book_title>/<timestamp>/` cuando el lote se completa sin pendientes.
-8. Emitir mensajes accionables para NotebookLM.
+7. Generar/actualizar `library/<book_rel_path>/chatgpt_project_setup.md` con setup y flujo operativo de imagen.
+8. Archivar carpeta de inbox procesada en `library/_processed/<book_title>/<timestamp>/` cuando el lote se completa sin pendientes.
+9. Emitir mensajes accionables para NotebookLM.
 
 Esta skill es **100% conversacional** y **no usa scripts internos**.
 
@@ -96,20 +97,35 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
    - Si falta `meta.json`: warning no bloqueante.
    - Si hay conflicto semantico real (no tecnico): preguntar al usuario.
 
-9. Archivado de inbox
+9. Dossier ChatGPT Project por saga (obligatorio tras import)
+   - Generar o regenerar siempre:
+     - `library/<book_rel_path>/chatgpt_project_setup.md`
+   - Fuente para derivacion:
+     - `library/<book_rel_path>/meta.json` (anclas, reglas);
+     - `library/<book_rel_path>/NN.json` (prompts/slots por cuento y pagina).
+   - Contenido minimo del dossier:
+     - nombre sugerido del project;
+     - instrucciones maestras de continuidad visual;
+     - checklist obligatorio de fase de anclas antes de paginas;
+     - flujo rapido por slot de portada y pagina (copiar prompt + refs, generar, pegar y guardar);
+     - politica de QA rapido (coherencia de personajes, paleta, encuadre, continuidad);
+     - troubleshooting de portapapeles/navegador.
+
+10. Archivado de inbox
    - Si el lote fue importado completo y no hay pendientes/placeholders:
      - mover `library/_inbox/<book_title>/` a `library/_processed/<book_title>/<timestamp>/`.
    - Si hay pendientes:
      - no mover carpeta;
      - reportar exactamente que `NN`/parte falta o esta invalida.
 
-10. Resumen de cierre
+11. Resumen de cierre
    - Informar:
      - cuentos importados,
      - warnings,
      - colisiones resueltas,
      - estado de fusion por cuento,
      - cobertura de enriquecimiento de refs por cuento/pagina,
+     - estado de dossier (`generado`/`actualizado`),
      - estado de archivado (`_processed` o pendiente),
      - mensajes para NotebookLM (si hubo bloqueos).
 
@@ -176,6 +192,19 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
    - filenames de `meta.anchors[].image_filenames[]`.
 5. No permitido en refs:
    - IDs opacos de alternatives (`<uuid>_<slug>.<ext>`) salvo que coincidan explicitamente como anchor filename.
+
+## Modo refresh manual del dossier (sin reimportar)
+
+Usar este modo cuando ya existe `library/<book_rel_path>/` y solo se quiere refrescar el setup de ChatGPT Project.
+
+1. No leer `_inbox` ni mover `_processed`.
+2. Cargar `library/<book_rel_path>/meta.json` y todos los `NN.json` del libro.
+3. Regenerar `library/<book_rel_path>/chatgpt_project_setup.md`.
+4. Reportar:
+   - fecha de actualizacion,
+   - total de cuentos detectados,
+   - total de anchors y reglas aplicadas,
+   - warnings (si falta `meta.json` o hay refs sin resolver).
 
 ## Formato de respuesta en chat
 
@@ -244,6 +273,60 @@ Cuando termines cada imagen, devuelveme archivo con nombre opaco exacto <uuid>_<
 No cambies IDs ni nombres de archivos.
 ```
 
+### B2) Plantilla de `chatgpt_project_setup.md` por saga
+
+Plantilla reusable en: `references/chatgpt_project_setup_template.md`.
+
+```md
+# ChatGPT Project Setup - <BOOK_TITLE>
+
+## Nombre sugerido del Project
+- `<BOOK_TITLE> - Generacion de imagenes`
+
+## Objetivo
+- Generar imagenes para portada y paginas de los cuentos `NN.json`, manteniendo continuidad visual por anclas.
+
+## Fuentes de verdad
+1. `library/<book_rel_path>/meta.json`
+2. `library/<book_rel_path>/NN.json`
+
+## Instrucciones maestras (copiar en ChatGPT Project)
+1. Mantener continuidad estricta de personajes, vestuario, paleta y trazo.
+2. Tratar `reference_ids` como anclas visuales prioritarias del slot.
+3. No inventar cambios de estilo entre paginas.
+4. Mantener encuadre y tono segun prompt del slot.
+5. Entregar una imagen por iteracion para facilitar seleccion editorial.
+
+## Fase 1 obligatoria - anclas
+1. Generar primero anclas de `meta.json` (especialmente `style_*`, `char_*`, `env_*`, `prop_*`, `cover_*`).
+2. Validar continuidad base antes de producir paginas.
+3. Registrar variantes utiles como alternativas del propio anchor.
+
+## Fase 2 - portada y paginas
+1. Abrir editor de portada: `/<book>/<NN>?editor=1`.
+2. Para cada slot (cover/main/secondary):
+   - copiar prompt;
+   - copiar refs individuales;
+   - generar en ChatGPT;
+   - pegar en webapp con "Pegar y guardar alternativa";
+   - activar alternativa elegida.
+
+## QA rapido por pagina
+1. Personajes: rasgos, edad aparente, ropa, proporciones.
+2. Continuidad: objetos y escenario coherentes con paginas vecinas.
+3. Composicion: accion principal clara y legible.
+4. Paleta: consistente con anclas de estilo.
+5. Slot correcto: imagen cargada en cover/main/secondary segun corresponda.
+
+## Troubleshooting
+1. Si falla copiar imagen desde webapp:
+   - abrir imagen individual y copiar manualmente.
+2. Si falla leer portapapeles:
+   - confirmar HTTPS/contexto seguro o navegador compatible.
+3. Si no hay refs del slot:
+   - revisar `reference_ids` en el JSON o completar con anclas de estilo.
+```
+
 ### C) Delta update para NotebookLM (correcciones)
 
 ```text
@@ -256,3 +339,4 @@ Mantener el resto sin cambios.
 
 ## Referencia
 Contrato completo: `references/contracts.md`.
+Plantilla de dossier: `references/chatgpt_project_setup_template.md`.

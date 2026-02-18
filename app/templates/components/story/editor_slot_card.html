@@ -1,7 +1,30 @@
 <article class="box editor-slot-card">
+  {% set upload_form_id = "upload-editor-" ~ slot.slot_name ~ "-" ~ slot_index %}
+  {% set pasted_input_id = "pasted-editor-" ~ slot.slot_name ~ "-" ~ slot_index %}
+  {% set quick_feedback_id = "quick-feedback-editor-" ~ slot.slot_name ~ "-" ~ slot_index %}
+  {% set paste_feedback_id = "paste-feedback-editor-" ~ slot.slot_name ~ "-" ~ slot_index %}
   <div class="is-flex is-justify-content-space-between is-align-items-center is-flex-wrap-wrap gap-2 mb-3">
     <h3 class="title is-6 mb-0">Slot {{ slot.slot_name }}</h3>
     <span class="tag is-rounded">Estado: {{ slot.status }}</span>
+  </div>
+
+  <div class="quick-actions-bar mb-3">
+    <span class="tag is-rounded is-light">Modo rapido</span>
+    <button class="button is-small is-light" type="button" onclick="copyTextFromElement('editor-prompt-{{ slot_index }}','{{ quick_feedback_id }}')">Copiar prompt</button>
+    {% if slot.reference_assets %}
+      {% for ref in slot.reference_assets %}
+        {% if ref.found %}
+          {% set quick_ref_index = loop.index %}
+          <button class="button is-small is-light" type="button" onclick="copyImageFromUrl('{{ ref.image_url }}','{{ quick_feedback_id }}')">Copiar ref {{ quick_ref_index }}</button>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    <button
+      class="button is-small is-link is-light"
+      type="button"
+      onclick="pasteImageAndSubmit('{{ pasted_input_id }}','{{ quick_feedback_id }}','{{ upload_form_id }}')"
+    >Pegar y guardar alternativa</button>
+    <span id="{{ quick_feedback_id }}" class="copy-feedback"></span>
   </div>
 
   <p class="panel-label">Prompt</p>
@@ -88,6 +111,7 @@
   <hr>
   <h4 class="title is-6">Subir alternativa</h4>
   <form
+    id="{{ upload_form_id }}"
     method="post"
     action="{{ url_for('web.upload_slot_image', story_path=story.story_rel_path, slot_name=slot.slot_name, p=page.page_number) }}"
     enctype="multipart/form-data"
@@ -114,11 +138,11 @@
         <button
           class="button is-small is-light"
           type="button"
-          onclick="pasteImageToHidden('pasted-editor-{{ slot.slot_name }}-{{ slot_index }}','paste-feedback-editor-{{ slot.slot_name }}-{{ slot_index }}')"
+          onclick="pasteImageToHidden('{{ pasted_input_id }}','{{ paste_feedback_id }}')"
         >Pegar imagen</button>
-        <span id="paste-feedback-editor-{{ slot.slot_name }}-{{ slot_index }}" class="copy-feedback"></span>
+        <span id="{{ paste_feedback_id }}" class="copy-feedback"></span>
       </div>
-      <input id="pasted-editor-{{ slot.slot_name }}-{{ slot_index }}" type="hidden" name="pasted_image_data" value="">
+      <input id="{{ pasted_input_id }}" type="hidden" name="pasted_image_data" value="">
     </div>
 
     <button class="button is-small is-link is-light" type="submit">Agregar alternativa</button>

@@ -4,7 +4,7 @@ Plataforma local para gestionar cuentos ilustrados con flujo 3 IAs:
 
 1. Codex usa `notebooklm-comunicacion` para preparar prompts por partes (`NN_a/_b`, fallback `a1/a2/b1/b2`).
 2. NotebookLM genera `NN.json` o partes + `meta.json` (opcional) en `_inbox`.
-3. Codex usa `ingesta-cuentos` para fusionar en memoria, validar/importar y mantener la app.
+3. Codex usa `ingesta-cuentos` para fusionar en memoria, validar/importar y generar el dossier de ChatGPT Project por saga.
 4. ChatGPT Project genera imagenes usando prompts/anchors.
 
 ## Arquitectura vigente
@@ -15,6 +15,8 @@ Plataforma local para gestionar cuentos ilustrados con flujo 3 IAs:
 - Skills activas:
   - `.codex/skills/notebooklm-comunicacion/`
   - `.codex/skills/ingesta-cuentos/`
+- Dossier operativo por saga:
+  - `library/<book_rel_path>/chatgpt_project_setup.md` (setup de Project + flujo rapido de imagen).
 
 ## Contrato canonico
 
@@ -64,6 +66,7 @@ library/
     01.json
     02.json
     meta.json          # opcional
+    chatgpt_project_setup.md
     images/
       <uuid>_<slug>.png
       index.json
