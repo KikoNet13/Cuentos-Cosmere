@@ -7,3 +7,4 @@ LIBRARY_ROOT = ROOT_DIR / "library"
 
 APP_TITLE = "Generador de cuentos ilustrados"
 APP_SECRET_KEY = "story-generator-local-dev"
+UPLOAD_MAX_BYTES = 20 * 1024 * 1024

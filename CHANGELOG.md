@@ -5,6 +5,19 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [19/02/26] - Fix 413 en "Pegar y guardar" (multipart + limites 20 MB)
+
+- Se corrige el error `Request Entity Too Large` en acciones de pegado rapido de imagen.
+- Backend:
+  - `app.config["MAX_CONTENT_LENGTH"] = 20 * 1024 * 1024`
+  - `app.config["MAX_FORM_MEMORY_SIZE"] = 20 * 1024 * 1024`
+  - manejo explicito de `RequestEntityTooLarge` con flash y redireccion.
+- Frontend (`app/static/js/clipboard.js`):
+  - `pasteImageAndSubmit(...)` ahora envia imagen pegada como `image_file` via `FormData`.
+  - elimina `pasted_image_data` del envio principal y mantiene fallback legacy.
+- Compatibilidad: `extract_image_payload` conserva soporte de `image_file` y fallback base64.
+- Tarea: `docs/tasks/TAREA-038-fix-request-entity-too-large-pegar-guardar.md`.
+
 ## [19/02/26] - Meta prompts aplicados y exclusiones `_` en flujo de pendientes
 
 - Se copia `library/_inbox/Los juegos del hambre/meta_prompts.json` sobre `library/los_juegos_del_hambre/meta.json`.

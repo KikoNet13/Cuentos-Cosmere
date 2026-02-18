@@ -48,7 +48,7 @@
     }
   }
 
-  async function _readClipboardImageDataUrl() {
+  async function _readClipboardImageBlob() {
     if (!navigator.clipboard || !navigator.clipboard.read) {
       throw new Error("unsupported");
     }
@@ -61,22 +61,27 @@
       if (!type) continue;
 
       const blob = await item.getType(type);
-      const dataUrl = await new Promise(function (resolve, reject) {
-        const reader = new FileReader();
-        reader.onload = function () {
-          resolve(String(reader.result || ""));
-        };
-        reader.onerror = function () {
-          reject(new Error("read_error"));
-        };
-        reader.readAsDataURL(blob);
-      });
-
-      if (dataUrl) {
-        return dataUrl;
-      }
+      if (blob && blob.size > 0) return blob;
     }
     throw new Error("no_image");
+  }
+
+  async function _readClipboardImageDataUrl() {
+    const blob = await _readClipboardImageBlob();
+    const dataUrl = await new Promise(function (resolve, reject) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        resolve(String(reader.result || ""));
+      };
+      reader.onerror = function () {
+        reject(new Error("read_error"));
+      };
+      reader.readAsDataURL(blob);
+    });
+    if (!dataUrl) {
+      throw new Error("read_error");
+    }
+    return dataUrl;
   }
 
   async function pasteImageToHidden(inputId, feedbackId, options) {
@@ -113,20 +118,75 @@
       return false;
     }
 
-    const pasted = await pasteImageToHidden(inputId, feedbackId, {
-      successMessage: "Imagen pegada. Guardando alternativa...",
-      successTimeoutMs: 1200,
-    });
-    if (!pasted) {
-      return false;
+    // Fallback legacy: if fetch/FormData are unavailable, keep old submit flow.
+    if (!window.fetch || !window.FormData) {
+      const pasted = await pasteImageToHidden(inputId, feedbackId, {
+        successMessage: "Imagen pegada. Guardando alternativa...",
+        successTimeoutMs: 1200,
+      });
+      if (!pasted) {
+        return false;
+      }
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit();
+      } else {
+        form.submit();
+      }
+      return true;
     }
 
-    if (typeof form.requestSubmit === "function") {
-      form.requestSubmit();
-    } else {
-      form.submit();
+    try {
+      const blob = await _readClipboardImageBlob();
+      const hiddenInput = document.getElementById(inputId);
+      if (hiddenInput) {
+        hiddenInput.value = "";
+      }
+
+      setFeedback(feedbackId, "Imagen pegada. Guardando alternativa...", 1200);
+
+      const formData = new FormData(form);
+      formData.delete("pasted_image_data");
+
+      const mimeType = blob.type || "image/png";
+      const extByMime = {
+        "image/jpeg": "jpg",
+        "image/png": "png",
+        "image/webp": "webp",
+        "image/gif": "gif",
+      };
+      const fileExt = extByMime[mimeType] || "png";
+      const filename = "pasted-" + String(Date.now()) + "." + fileExt;
+      formData.append("image_file", blob, filename);
+
+      const response = await fetch(form.action || window.location.href, {
+        method: (form.method || "POST").toUpperCase(),
+        body: formData,
+        credentials: "same-origin",
+      });
+
+      if (!response.ok) {
+        if (response.status === 413) {
+          setFeedback(feedbackId, "La imagen supera el limite permitido", 2400);
+          return false;
+        }
+        setFeedback(feedbackId, "No se pudo guardar la alternativa", 2400);
+        return false;
+      }
+
+      window.location.assign(response.url || window.location.href);
+      return true;
+    } catch (_error) {
+      if (_error && _error.message === "unsupported") {
+        setFeedback(feedbackId, "El navegador no soporta pegar imagen", 1800);
+        return false;
+      }
+      if (_error && _error.message === "no_image") {
+        setFeedback(feedbackId, "No se detecto imagen en el portapapeles", 1800);
+        return false;
+      }
+      setFeedback(feedbackId, "No se pudo leer el portapapeles", 1800);
+      return false;
     }
-    return true;
   }
 
   window.copyTextFromElement = copyTextFromElement;

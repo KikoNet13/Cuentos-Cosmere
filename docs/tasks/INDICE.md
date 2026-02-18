@@ -1,7 +1,15 @@
 # índice de tareas
 
-- Pr?ximo ID: `038`
+- Proximo ID: `039`
+## TAREA-038-fix-request-entity-too-large-pegar-guardar
 
+- Fecha: 19/02/26 00:50
+- Estado: cerrada
+- Resumen: correccion de `413 Request Entity Too Large` en acciones de "Pegar y guardar" mediante envio multipart (`image_file`) y limites backend de 20 MB.
+- Version: 2.7.8
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-038-fix-request-entity-too-large-pegar-guardar.md`
 
 ## TAREA-037-meta-prompts-y-flow-exclusion-underscore
 
