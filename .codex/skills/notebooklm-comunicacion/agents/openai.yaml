@@ -1,6 +1,6 @@
 interface:
   display_name: "NotebookLM Comunicacion"
-  short_description: "Plan coleccion + meta/anclas + prompts por partes con fallback y deltas"
+  short_description: "Plan coleccion + meta/anclas + prompts largos por partes con fallback y deltas"
   icon_small: "./assets/notebooklm-comunicacion-small.svg"
   icon_large: "./assets/notebooklm-comunicacion-icon.svg"
-  default_prompt: "Usa $notebooklm-comunicacion para preparar comunicacion con NotebookLM en 4 fases: plan de coleccion, meta.json con anclas/reglas, generacion por archivo (NN_a/NN_b con fallback 4+4) y deltas por archivo, incluyendo reference_ids basados en meta."
+  default_prompt: "Usa $notebooklm-comunicacion para preparar comunicacion con NotebookLM en 4 fases: plan de coleccion, meta.json con anclas/reglas, generacion por archivo (NN_a/NN_b con fallback 4+4) y deltas por archivo. Exige prompts largos en espanol estructurado (8 bloques) para cover/pages.main, incluyendo reference_ids basados en meta."

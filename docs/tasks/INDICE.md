@@ -1,6 +1,16 @@
 # Indice de tareas
 
-- Proximo ID: `029`
+- Proximo ID: `030`
+
+## TAREA-029-estandar-prompts-largos-balanceados-migracion-los-juegos-del-hambre
+
+- Fecha: 18/02/26 21:45
+- Estado: cerrada
+- Resumen: estandar global de prompts largos balanceados (8 bloques) en `notebooklm-comunicacion`, gate de validacion en documentos de Project y migracion de `los_juegos_del_hambre/01..11.json` a formato largo en espanol.
+- Version: 2.6.0
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-029-estandar-prompts-largos-balanceados-migracion-los-juegos-del-hambre.md`
 
 ## TAREA-028-flujo-guiado-relleno-imagenes
 

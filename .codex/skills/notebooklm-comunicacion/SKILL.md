@@ -12,6 +12,7 @@ Estandarizar la comunicacion con NotebookLM para nuevas novelas/sagas:
 2. Obtener `meta.json` de libro con anclas, reglas de estilo y continuidad.
 3. Emitir prompts listos para entrega de cuentos por partes (`8+8`) y fallback (`4+4`).
 4. Emitir mensajes delta por archivo para corregir errores sin rehacer el lote.
+5. Forzar prompts largos en espanol estructurado para `cover` y `pages[].images.main`.
 
 Esta skill es **100% conversacional** y **no usa scripts internos**.
 
@@ -40,6 +41,26 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
 3. `reference_ids` de slots debe apuntar a filenames declarados en `meta.anchors[].image_filenames[]`.
 4. No usar `uuid_slug` de assets finales dentro de `reference_ids`.
 
+## Estandar de prompt de slot (obligatorio)
+
+Aplica a `cover.prompt` y `pages[].images.main.prompt`.
+
+1. Idioma canonico: espanol estructurado.
+2. Estructura fija de 8 bloques con este orden exacto:
+   - `OBJETIVO DE ILUSTRACION`
+   - `CONTINUIDAD VISUAL OBLIGATORIA`
+   - `COMPOSICION Y ENCUADRE`
+   - `PERSONAJES Y ACCION`
+   - `ENTORNO, PALETA E ILUMINACION`
+   - `REFERENCIAS (reference_ids)`
+   - `RESTRICCIONES / NEGATIVOS`
+   - `FORMATO DE SALIDA`
+3. Perfil balanceado de longitud:
+   - `cover.prompt`: 900-1700 caracteres.
+   - `pages[].images.main.prompt`: 700-1500 caracteres.
+4. Excepcion:
+   - si `status = not_required`, se permite prompt corto descriptivo.
+
 ## Estrategia por defecto
 
 1. Cuentos objetivo: 16 paginas.
@@ -62,7 +83,7 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
 3. Cuentos por partes
    - pedir `NN_a.json` y `NN_b.json` (o fallback `a1/a2/b1/b2`) con contrato completo.
 4. Deltas
-   - corregir solo archivos afectados por: JSON truncado, JSON invalido, rango incorrecto, faltantes de `reference_ids`.
+   - corregir solo archivos afectados por: JSON truncado, JSON invalido, rango incorrecto, faltantes de `reference_ids` o prompts fuera de estandar.
 
 ## Reglas de prompts a NotebookLM
 
@@ -72,8 +93,10 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
 3. `pages` solo en el rango solicitado por archivo.
 4. `images.main` obligatorio.
 5. `images.secondary` excluido por defecto.
-6. Texto en espanol, 50-100 palabras por pagina.
+6. Texto narrativo en espanol, 50-100 palabras por pagina.
 7. Si existe `meta.json`, incluir `reference_ids` cuando sea posible usando `anchors[].image_filenames`.
+8. Prompts de slot en espanol estructurado con el estandar de 8 bloques.
+9. Respetar perfil balanceado de longitud por slot.
 
 ## Plantillas operativas
 
@@ -174,17 +197,18 @@ Reglas:
 5) No inventar campos fuera del contrato.
 6) No incluir images.secondary.
 7) Si `meta.json` existe, incluye `reference_ids` usando SOLO filenames de `anchors[].image_filenames`.
+8) `cover.prompt` y `pages[].images.main.prompt` deben seguir la estructura fija de 8 bloques y longitudes balanceadas.
 
 Contrato de cover:
 - status: "draft"
-- prompt: 1-2 frases utiles para ilustracion
+- prompt: espanol estructurado en 8 bloques, 900-1700 caracteres
 - reference_ids: [] o lista de filenames de anchors
 - active_id: ""
 - alternatives: []
 
 Contrato de pages[i].images.main:
 - status: "draft"
-- prompt: 1-2 frases utiles para ilustracion
+- prompt: espanol estructurado en 8 bloques, 700-1500 caracteres
 - reference_ids: [] o lista de filenames de anchors
 - active_id: ""
 - alternatives: []
@@ -222,17 +246,18 @@ Reglas:
 5) No inventar campos fuera del contrato.
 6) No incluir images.secondary.
 7) Si `meta.json` existe, incluye `reference_ids` usando SOLO filenames de `anchors[].image_filenames`.
+8) `cover.prompt` y `pages[].images.main.prompt` deben seguir la estructura fija de 8 bloques y longitudes balanceadas.
 
 Contrato de cover:
 - status: "draft"
-- prompt: 1-2 frases utiles para ilustracion
+- prompt: espanol estructurado en 8 bloques, 900-1700 caracteres
 - reference_ids: [] o lista de filenames de anchors
 - active_id: ""
 - alternatives: []
 
 Contrato de pages[i].images.main:
 - status: "draft"
-- prompt: 1-2 frases utiles para ilustracion
+- prompt: espanol estructurado en 8 bloques, 700-1500 caracteres
 - reference_ids: [] o lista de filenames de anchors
 - active_id: ""
 - alternatives: []
@@ -281,6 +306,60 @@ Reentrega SOLO ese archivo en JSON valido.
 [<NOMBRE_ARCHIVO>] refs.missing_reference_ids
 - Problema: faltan reference_ids en cover o pages.images.main.
 - Corrige asi: agrega reference_ids con filenames existentes en meta.anchors[].image_filenames.
+
+[<NOMBRE_ARCHIVO>] prompts.too_short
+- Problema: prompt fuera del minimo de longitud del perfil balanceado.
+- Corrige asi: reescribe el prompt con los 8 bloques y longitud valida.
+
+[<NOMBRE_ARCHIVO>] prompts.missing_sections
+- Problema: faltan uno o mas encabezados obligatorios en el prompt.
+- Corrige asi: reentrega prompt con los 8 bloques en orden exacto.
+
+[<NOMBRE_ARCHIVO>] prompts.language_mismatch
+- Problema: prompt en idioma no canonico o mezcla excesiva.
+- Corrige asi: reescribe el prompt completo en espanol estructurado.
+
+[<NOMBRE_ARCHIVO>] prompts.range_incomplete
+- Problema: parte entregada con prompts validos solo en una parte de paginas del rango.
+- Corrige asi: reentrega el archivo completo con prompts validos en todas las paginas del rango.
+```
+
+### H) Reentrega prompts-only para cuentos existentes
+
+```text
+PROMPT NOTEBOOKLM - REENTREGA PROMPTS-ONLY STORY <NN>
+Genera SOLO JSON valido.
+No uses markdown. No escribas explicaciones.
+
+Objetivo:
+- Reescribir UNICAMENTE prompts de portada y pages.main al estandar largo balanceado en espanol.
+
+Mantener SIN CAMBIOS:
+- story_id
+- title
+- status
+- book_rel_path
+- created_at
+- text (todas las paginas)
+- reference_ids (cover y pages.main)
+- active_id (cover y pages.main)
+- alternatives (cover y pages.main)
+- page_number
+
+Cambiar SOLO:
+- cover.prompt
+- pages[].images.main.prompt
+- updated_at
+
+Reglas de prompt:
+1) 8 bloques obligatorios en orden exacto.
+2) cover: 900-1700 caracteres.
+3) pages.main: 700-1500 caracteres.
+4) Espanaol estructurado.
+5) Si un slot tiene status `not_required`, se permite prompt corto.
+
+Salida final:
+- SOLO JSON valido del cuento completo `NN.json`.
 ```
 
 ## Criterios de salida de la skill

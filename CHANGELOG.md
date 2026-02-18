@@ -5,6 +5,24 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [18/02/26] - Estandar de prompts largos balanceados + migracion Los juegos del hambre
+
+- `notebooklm-comunicacion` pasa a prompts largos en espanol estructurado para `cover` y `pages.main`:
+  - 8 bloques obligatorios de prompt,
+  - perfil balanceado de longitud (`cover 900-1700`, `main 700-1500`),
+  - nuevos deltas de prompt (`prompts.too_short`, `prompts.missing_sections`, `prompts.language_mismatch`, `prompts.range_incomplete`),
+  - nueva plantilla de reentrega `prompts-only` para cuentos existentes.
+- `ingesta-cuentos` (template de dossier) y guias de Project alineadas con gate obligatorio:
+  - si el prompt llega incompleto o corto, no generar imagen y pedir delta a NotebookLM.
+- Migrados `library/los_juegos_del_hambre/01..11.json` a prompts largos (sin cambiar contrato):
+  - preservados `text`, `reference_ids`, `active_id`, `alternatives` y `page_number`,
+  - actualizado `updated_at` por cuento.
+- Backup no destructivo creado en:
+  - `library/_backups/los_juegos_del_hambre-prompts-20260218T204333Z/`.
+- Dossier de saga regenerado:
+  - `library/los_juegos_del_hambre/chatgpt_project_setup.md`.
+- Tarea: `docs/tasks/TAREA-029-estandar-prompts-largos-balanceados-migracion-los-juegos-del-hambre.md`.
+
 ## [18/02/26] - Flujo guiado de imagenes pendientes (anclas primero)
 
 - Nuevo modo operativo global en webapp:
