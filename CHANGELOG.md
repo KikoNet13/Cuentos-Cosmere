@@ -5,6 +5,27 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [19/02/26] - PDF paginado cuadrado (portada + texto/imagen alternos)
+
+- `export-story-pdf` cambia al layout `paged` en paginas `size_cm x size_cm`.
+- Secuencia de salida:
+  - portada full-bleed con titulo superpuesto en banda semitransparente,
+  - por cada pagina narrativa: una pagina de texto y una pagina de imagen.
+- `secondary` deja de renderizarse en PDF (se mantiene su validacion estructural).
+- Texto remaquetado con reflujo moderado:
+  - mejor separacion de parrafos y dialogos,
+  - tamano de cuerpo mayor (rango 18pt -> 14pt),
+  - interlineado mas comodo para pagina cuadrada.
+- Tipografia editorial con fallback:
+  - `Georgia` -> `Cambria` -> `Times`.
+- `export_story_pdf(...)` ahora expone:
+  - `layout_mode = "paged"`,
+  - `page_count` (canonica),
+  - `spread_count` como alias de compatibilidad.
+- Nuevo script: `scripts/render_pdf_pages.py` (render PNG via `pypdfium2`).
+- `Pipfile`/`Pipfile.lock` actualizados con `pypdfium2`.
+- Tarea: `docs/tasks/TAREA-043-maquetacion-pdf-paginas-cuadradas.md`.
+
 ## [19/02/26] - Realineacion texto-imagen en cuento 01 + auditoria 01..11
 
 - Se corrige desfase narrativo en `library/los_juegos_del_hambre/01.json` en el tramo `p11..p16`.

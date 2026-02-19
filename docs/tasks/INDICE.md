@@ -1,6 +1,16 @@
 # índice de tareas
 
-- Proximo ID: `043`
+- Proximo ID: `044`
+
+## TAREA-043-maquetacion-pdf-paginas-cuadradas
+
+- Fecha: 19/02/26 14:38
+- Estado: cerrada
+- Resumen: rediseño de `export-story-pdf` a layout paginado cuadrado (portada + texto/imagen alternos), tipografia editorial con fallback Georgia/Cambria/Times, reflujo moderado de dialogos y script `render_pdf_pages.py` para QA visual.
+- Version: 2.8.3
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-043-maquetacion-pdf-paginas-cuadradas.md`
 
 ## TAREA-042-realineacion-texto-imagen-los-juegos
 

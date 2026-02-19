@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import io
+import re
 from pathlib import Path
 from typing import Any
 
@@ -223,18 +224,19 @@ def validate_story_for_pdf(*, story_rel_path: str) -> dict[str, Any]:
     }
 
 
-def _require_reportlab() -> tuple[Any, Any, Any, Any, Any]:
+def _require_reportlab() -> tuple[Any, Any, Any, Any, Any, Any]:
     try:
         from reportlab.lib import colors
         from reportlab.lib.units import cm as rl_cm
         from reportlab.lib.utils import ImageReader
         from reportlab.pdfbase import pdfmetrics
+        from reportlab.pdfbase.ttfonts import TTFont
         from reportlab.pdfgen import canvas as rl_canvas
     except ImportError as exc:
         raise PdfExportError(
             "Falta dependencia 'reportlab'. Instala con: pipenv install reportlab"
         ) from exc
-    return rl_canvas, pdfmetrics, ImageReader, colors, rl_cm
+    return rl_canvas, pdfmetrics, ImageReader, colors, rl_cm, TTFont
 
 
 def _default_output_path(payload: dict[str, Any]) -> Path:
@@ -255,7 +257,121 @@ def _resolve_output_path(output_path: str | Path | None, payload: dict[str, Any]
     return (ROOT_DIR / raw).resolve()
 
 
-def _wrap_line_to_width(text: str, *, pdfmetrics_mod: Any, font_name: str, font_size: float, max_width: float) -> list[str]:
+def _register_font_from_candidates(
+    *,
+    pdfmetrics_mod: Any,
+    ttfont_cls: Any,
+    font_name: str,
+    paths: list[str],
+) -> str | None:
+    for raw_path in paths:
+        candidate = Path(raw_path)
+        if not candidate.exists():
+            continue
+        try:
+            pdfmetrics_mod.registerFont(ttfont_cls(font_name, str(candidate)))
+            return font_name
+        except Exception:
+            continue
+    return None
+
+
+def _resolve_pdf_fonts(*, pdfmetrics_mod: Any, ttfont_cls: Any) -> dict[str, str]:
+    families = [
+        (
+            "StoryGeorgia",
+            [r"C:\Windows\Fonts\georgia.ttf"],
+            [r"C:\Windows\Fonts\georgiab.ttf"],
+        ),
+        (
+            "StoryCambria",
+            [r"C:\Windows\Fonts\cambria.ttf", r"C:\Windows\Fonts\cambria.ttc"],
+            [r"C:\Windows\Fonts\cambriab.ttf"],
+        ),
+    ]
+
+    for prefix, regular_paths, bold_paths in families:
+        regular_name = f"{prefix}-Regular"
+        bold_name = f"{prefix}-Bold"
+        regular_ok = _register_font_from_candidates(
+            pdfmetrics_mod=pdfmetrics_mod,
+            ttfont_cls=ttfont_cls,
+            font_name=regular_name,
+            paths=regular_paths,
+        )
+        bold_ok = _register_font_from_candidates(
+            pdfmetrics_mod=pdfmetrics_mod,
+            ttfont_cls=ttfont_cls,
+            font_name=bold_name,
+            paths=bold_paths,
+        )
+        if regular_ok and bold_ok:
+            return {"regular": regular_name, "bold": bold_name}
+
+    return {"regular": "Times-Roman", "bold": "Times-Bold"}
+
+
+def _split_long_paragraph(paragraph: str, *, max_chars: int = 220) -> list[str]:
+    clean = re.sub(r"\s+", " ", paragraph).strip()
+    if not clean:
+        return []
+    if len(clean) <= max_chars:
+        return [clean]
+
+    sentences = re.split(r"(?<=[.!?])\s+", clean)
+    if len(sentences) <= 1:
+        return [clean]
+
+    chunks: list[str] = []
+    current = ""
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if not sentence:
+            continue
+        candidate = sentence if not current else f"{current} {sentence}"
+        if len(candidate) <= max_chars or not current:
+            current = candidate
+            continue
+        chunks.append(current)
+        current = sentence
+
+    if current:
+        chunks.append(current)
+    return chunks or [clean]
+
+
+def _normalize_story_text(text: str) -> str:
+    normalized = text.replace("\r\n", "\n").replace("\r", "\n").strip()
+    if not normalized:
+        return ""
+
+    base_paragraphs = [line.strip() for line in normalized.split("\n")]
+    base_paragraphs = [line for line in base_paragraphs if line]
+    if not base_paragraphs:
+        return ""
+
+    polished: list[str] = []
+    for paragraph in base_paragraphs:
+        split_dialogue = re.sub(r"(?<!\n)\s*(—)(?=[A-ZÁÉÍÓÚÑ¡¿])", r"\n\1", paragraph)
+        split_dialogue = re.sub(r"(?<!\n)\s*(«)", r"\n\1", split_dialogue)
+
+        for chunk in split_dialogue.split("\n"):
+            chunk = chunk.strip()
+            if not chunk:
+                continue
+            polished.extend(_split_long_paragraph(chunk, max_chars=220))
+
+    return "\n\n".join(polished)
+
+
+def _wrap_line_to_width(
+    text: str,
+    *,
+    pdfmetrics_mod: Any,
+    font_name: str,
+    font_size: float,
+    max_width: float,
+) -> list[str]:
     if not text:
         return [""]
 
@@ -303,9 +419,15 @@ def _wrap_line_to_width(text: str, *, pdfmetrics_mod: Any, font_name: str, font_
     return lines
 
 
-def _wrap_text(text: str, *, pdfmetrics_mod: Any, font_name: str, font_size: float, max_width: float) -> list[str]:
-    normalized = text.replace("\r\n", "\n").replace("\r", "\n")
-    paragraphs = normalized.split("\n")
+def _wrap_text(
+    text: str,
+    *,
+    pdfmetrics_mod: Any,
+    font_name: str,
+    font_size: float,
+    max_width: float,
+) -> list[str]:
+    paragraphs = text.split("\n")
     lines: list[str] = []
     for index, paragraph in enumerate(paragraphs):
         wrapped = _wrap_line_to_width(
@@ -329,8 +451,8 @@ def _fit_text_block(
     max_width: float,
     max_height: float,
 ) -> tuple[float, float, list[str]] | None:
-    for font_size in (12.0, 11.5, 11.0, 10.5, 10.0):
-        line_height = font_size * 1.35
+    for font_size in (18.0, 17.5, 17.0, 16.5, 16.0, 15.5, 15.0, 14.5, 14.0):
+        line_height = font_size * 1.52
         lines = _wrap_text(
             text,
             pdfmetrics_mod=pdfmetrics_mod,
@@ -388,177 +510,153 @@ def _draw_image_fill(
         )
 
 
-def _draw_title_block(
+def _draw_centered_title(
     *,
     canvas_obj: Any,
     pdfmetrics_mod: Any,
     title: str,
+    font_name: str,
     x: float,
     y: float,
     width: float,
     height: float,
 ) -> None:
-    for font_size in (28.0, 26.0, 24.0, 22.0, 20.0, 18.0, 16.0):
+    for font_size in (44.0, 40.0, 36.0, 32.0, 28.0, 24.0):
         lines = _wrap_text(
             title,
             pdfmetrics_mod=pdfmetrics_mod,
-            font_name="Helvetica-Bold",
+            font_name=font_name,
             font_size=font_size,
             max_width=width,
         )
-        line_height = font_size * 1.2
+        lines = [line for line in lines if line.strip()]
+        if not lines:
+            continue
+        line_height = font_size * 1.18
         needed_height = len(lines) * line_height
         if needed_height > height:
             continue
 
-        cursor_y = y + height - font_size
-        canvas_obj.setFont("Helvetica-Bold", font_size)
-        for line in lines:
-            canvas_obj.drawString(x, cursor_y, line)
-            cursor_y -= line_height
+        start_y = y + ((height - needed_height) / 2.0) + needed_height - font_size
+        canvas_obj.setFont(font_name, font_size)
+        for index, line in enumerate(lines):
+            line_width = pdfmetrics_mod.stringWidth(line, font_name, font_size)
+            line_x = x + max(0.0, (width - line_width) / 2.0)
+            line_y = start_y - (index * line_height)
+            canvas_obj.drawString(line_x, line_y, line)
         return
 
-    raise PdfExportError("text_overflow: la portada no puede renderizar el titulo en el panel izquierdo.")
+    raise PdfExportError("text_overflow: la portada no puede renderizar el titulo en la banda superior.")
 
 
-def _draw_cover_spread(
+def _draw_cover_page(
     *,
     canvas_obj: Any,
     payload: dict[str, Any],
     cover_image_path: Path,
-    spread_w: float,
-    spread_h: float,
+    page_size: float,
     image_reader_cls: Any,
     colors_mod: Any,
     pdfmetrics_mod: Any,
+    fonts: dict[str, str],
 ) -> None:
-    panel_w = spread_w / 2.0
-    margin = 34.0
-
-    canvas_obj.setFillColor(colors_mod.HexColor("#F7F2E8"))
-    canvas_obj.rect(0, 0, panel_w, spread_h, fill=1, stroke=0)
-
-    canvas_obj.setFillColor(colors_mod.HexColor("#1F1F1F"))
-    canvas_obj.setFont("Helvetica-Bold", 16)
-    canvas_obj.drawString(margin, spread_h - margin, "Cuento ilustrado")
-
-    title = str(payload.get("title", "")).strip() or "Sin titulo"
-    _draw_title_block(
-        canvas_obj=canvas_obj,
-        pdfmetrics_mod=pdfmetrics_mod,
-        title=title,
-        x=margin,
-        y=spread_h * 0.34,
-        width=panel_w - (margin * 2),
-        height=spread_h * 0.42,
-    )
-
-    story_id = str(payload.get("story_id", "")).strip() or "--"
-    page_count = len(_sorted_pages(payload))
-    book_rel_path = _normalize_rel_path(str(payload.get("book_rel_path", ""))) or "library"
-
-    canvas_obj.setFont("Helvetica", 11)
-    canvas_obj.drawString(margin, margin + 34, f"Cuento {story_id}")
-    canvas_obj.drawString(margin, margin + 18, f"Paginas: {page_count}")
-    canvas_obj.drawString(margin, margin + 2, f"Saga: {book_rel_path}")
-
     _draw_image_fill(
         canvas_obj=canvas_obj,
         image_reader_cls=image_reader_cls,
         image_path=cover_image_path,
-        x=panel_w,
+        x=0.0,
         y=0.0,
-        width=panel_w,
-        height=spread_h,
+        width=page_size,
+        height=page_size,
+    )
+
+    band_h = page_size * 0.2
+    band_y = page_size - band_h
+    canvas_obj.saveState()
+    canvas_obj.setFillColor(colors_mod.HexColor("#151515"))
+    if hasattr(canvas_obj, "setFillAlpha"):
+        canvas_obj.setFillAlpha(0.48)
+    canvas_obj.rect(0.0, band_y, page_size, band_h, fill=1, stroke=0)
+    canvas_obj.restoreState()
+
+    title = str(payload.get("title", "")).strip() or "Sin titulo"
+    canvas_obj.setFillColor(colors_mod.white)
+    _draw_centered_title(
+        canvas_obj=canvas_obj,
+        pdfmetrics_mod=pdfmetrics_mod,
+        title=title,
+        font_name=fonts["bold"],
+        x=24.0,
+        y=band_y + 8.0,
+        width=page_size - 48.0,
+        height=band_h - 16.0,
     )
 
 
-def _draw_story_spread(
+def _draw_text_page(
     *,
     canvas_obj: Any,
     page: dict[str, Any],
-    main_path: Path,
-    secondary_path: Path | None,
-    spread_w: float,
-    spread_h: float,
-    image_reader_cls: Any,
+    page_size: float,
     pdfmetrics_mod: Any,
     colors_mod: Any,
+    fonts: dict[str, str],
 ) -> None:
-    panel_w = spread_w / 2.0
-    margin = 22.0
+    margin = max(36.0, page_size * 0.075)
+    header_gap = 30.0
 
     canvas_obj.setFillColor(colors_mod.white)
-    canvas_obj.rect(0, 0, panel_w, spread_h, fill=1, stroke=0)
-    canvas_obj.setStrokeColor(colors_mod.HexColor("#E5E5E5"))
-    canvas_obj.setLineWidth(0.8)
-    canvas_obj.line(panel_w, 0, panel_w, spread_h)
+    canvas_obj.rect(0.0, 0.0, page_size, page_size, fill=1, stroke=0)
 
     page_number = int(page.get("page_number", 0))
-    canvas_obj.setFillColor(colors_mod.HexColor("#1F1F1F"))
-    canvas_obj.setFont("Helvetica-Bold", 13)
-    canvas_obj.drawString(margin, spread_h - margin, f"Pagina {page_number}")
+    canvas_obj.setFillColor(colors_mod.HexColor("#2A2A2A"))
+    canvas_obj.setFont(fonts["bold"], 14.0)
+    canvas_obj.drawString(margin, page_size - margin, f"Pagina {page_number}")
 
     text_x = margin
     text_y = margin
-    text_w = panel_w - (margin * 2)
-    text_h = spread_h - (margin * 2) - 20
-
-    if secondary_path is not None:
-        thumb_w = min(text_w * 0.38, panel_w * 0.36)
-        thumb_h = thumb_w
-        thumb_x = panel_w - margin - thumb_w
-        thumb_y = margin
-
-        _draw_image_fill(
-            canvas_obj=canvas_obj,
-            image_reader_cls=image_reader_cls,
-            image_path=secondary_path,
-            x=thumb_x,
-            y=thumb_y,
-            width=thumb_w,
-            height=thumb_h,
-        )
-        canvas_obj.setStrokeColor(colors_mod.HexColor("#BDBDBD"))
-        canvas_obj.setLineWidth(0.8)
-        canvas_obj.rect(thumb_x, thumb_y, thumb_w, thumb_h, fill=0, stroke=1)
-        canvas_obj.setFont("Helvetica-Bold", 8)
-        canvas_obj.setFillColor(colors_mod.HexColor("#4A4A4A"))
-        canvas_obj.drawString(thumb_x + 4, thumb_y + thumb_h + 3, "Sec.")
-
-        reserved_h = thumb_h + 16
-        text_y += reserved_h
-        text_h -= reserved_h
+    text_w = page_size - (margin * 2.0)
+    text_h = page_size - (margin * 2.0) - header_gap
+    story_text = _normalize_story_text(str(page.get("text", "")))
 
     fit = _fit_text_block(
-        text=str(page.get("text", "")),
+        text=story_text,
         pdfmetrics_mod=pdfmetrics_mod,
-        font_name="Helvetica",
+        font_name=fonts["regular"],
         max_width=text_w,
         max_height=text_h,
     )
     if fit is None:
         raise PdfExportError(
             f"text_overflow: la pagina {page_number} excede el area de texto "
-            "incluso reduciendo de 12pt a 10pt."
+            "incluso reduciendo de 18pt a 14pt."
         )
 
     font_size, line_height, lines = fit
     cursor_y = text_y + text_h - font_size
-    canvas_obj.setFillColor(colors_mod.HexColor("#262626"))
-    canvas_obj.setFont("Helvetica", font_size)
+    canvas_obj.setFillColor(colors_mod.HexColor("#1F1F1F"))
+    canvas_obj.setFont(fonts["regular"], font_size)
     for line in lines:
-        canvas_obj.drawString(text_x, cursor_y, line)
+        if line:
+            canvas_obj.drawString(text_x, cursor_y, line)
         cursor_y -= line_height
 
+
+def _draw_image_page(
+    *,
+    canvas_obj: Any,
+    main_path: Path,
+    page_size: float,
+    image_reader_cls: Any,
+) -> None:
     _draw_image_fill(
         canvas_obj=canvas_obj,
         image_reader_cls=image_reader_cls,
         image_path=main_path,
-        x=panel_w,
+        x=0.0,
         y=0.0,
-        width=panel_w,
-        height=spread_h,
+        width=page_size,
+        height=page_size,
     )
 
 
@@ -577,16 +675,10 @@ def _collect_active_paths(payload: dict[str, Any]) -> dict[str, Any]:
             main_slot = {}
         main_path = resolve_active_asset_path(main_slot)
 
-        secondary_path: Path | None = None
-        secondary_slot = images.get("secondary")
-        if isinstance(secondary_slot, dict) and slot_state(secondary_slot) == SLOT_STATE_COMPLETED:
-            secondary_path = resolve_active_asset_path(secondary_slot)
-
         page_rows.append(
             {
                 "page": page,
                 "main_path": main_path,
-                "secondary_path": secondary_path,
             }
         )
 
@@ -651,20 +743,21 @@ def export_story_pdf(
 
     output.parent.mkdir(parents=True, exist_ok=True)
 
-    rl_canvas, pdfmetrics_mod, image_reader_cls, colors_mod, rl_cm = _require_reportlab()
-    spread_w = 2.0 * float(size_cm) * rl_cm
-    spread_h = float(size_cm) * rl_cm
-    canvas_obj = rl_canvas.Canvas(str(output), pagesize=(spread_w, spread_h))
+    rl_canvas, pdfmetrics_mod, image_reader_cls, colors_mod, rl_cm, ttfont_cls = _require_reportlab()
+    fonts = _resolve_pdf_fonts(pdfmetrics_mod=pdfmetrics_mod, ttfont_cls=ttfont_cls)
 
-    _draw_cover_spread(
+    page_size = float(size_cm) * rl_cm
+    canvas_obj = rl_canvas.Canvas(str(output), pagesize=(page_size, page_size))
+
+    _draw_cover_page(
         canvas_obj=canvas_obj,
         payload=payload,
         cover_image_path=cover_path,
-        spread_w=spread_w,
-        spread_h=spread_h,
+        page_size=page_size,
         image_reader_cls=image_reader_cls,
         colors_mod=colors_mod,
         pdfmetrics_mod=pdfmetrics_mod,
+        fonts=fonts,
     )
 
     for row in active_paths.get("pages", []):
@@ -672,29 +765,36 @@ def export_story_pdf(
             continue
         page = row.get("page")
         main_path = row.get("main_path")
-        secondary_path = row.get("secondary_path")
         if not isinstance(page, dict) or not isinstance(main_path, Path):
             continue
 
         canvas_obj.showPage()
-        _draw_story_spread(
+        _draw_text_page(
             canvas_obj=canvas_obj,
             page=page,
-            main_path=main_path,
-            secondary_path=secondary_path if isinstance(secondary_path, Path) else None,
-            spread_w=spread_w,
-            spread_h=spread_h,
-            image_reader_cls=image_reader_cls,
+            page_size=page_size,
             pdfmetrics_mod=pdfmetrics_mod,
             colors_mod=colors_mod,
+            fonts=fonts,
+        )
+
+        canvas_obj.showPage()
+        _draw_image_page(
+            canvas_obj=canvas_obj,
+            main_path=main_path,
+            page_size=page_size,
+            image_reader_cls=image_reader_cls,
         )
 
     canvas_obj.save()
 
+    page_count = 1 + (len(active_paths.get("pages", [])) * 2)
     return {
         "story_rel_path": validation["story_rel_path"],
         "story_id": validation["story_id"],
         "output_path": str(output),
-        "spread_count": len(active_paths.get("pages", [])) + 1,
+        "layout_mode": "paged",
+        "page_count": page_count,
+        "spread_count": page_count,
         "size_cm": float(size_cm),
     }

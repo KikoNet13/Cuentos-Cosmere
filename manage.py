@@ -80,7 +80,12 @@ def cmd_export_story_pdf(
 
     print("export: OK")
     print(f"output_path: {result['output_path']}")
-    print(f"spread_count: {result['spread_count']}")
+    if "layout_mode" in result:
+        print(f"layout_mode: {result['layout_mode']}")
+    if "page_count" in result:
+        print(f"page_count: {result['page_count']}")
+    if "spread_count" in result:
+        print(f"spread_count: {result['spread_count']}")
     print(f"size_cm: {result['size_cm']}")
     return 0
 
