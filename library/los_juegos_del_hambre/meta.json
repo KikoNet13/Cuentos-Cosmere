@@ -172,6 +172,27 @@
       ]
     },
     {
+      "id": "char_madge_base",
+      "name": "Madge Undersee",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir a Madge Undersee para mantener su continuidad visual en escenas de contraste social del Distrito 12.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMadge debe verse como adolescente de clase alta del Distrito 12: cabello rubio claro, vestido blanco limpio, lazo rosa y broche de sinsajo dorado visible. Debe conservarse en estilo editorial de linea limpia y color plano.\n\nCOMPOSICION Y ENCUADRE\nPlano medio frontal, postura tranquila y educada, con lectura clara de vestuario y broche.\n\nPERSONAJES Y ACCION\nMadge con expresion serena, amable y contenida; actitud de persona correcta, no desafiante.\n\nENTORNO, PALETA E ILUMINACION\nFondo neutro sobrio. Paleta de blancos, cremas, rosa suave y dorado. Iluminacion uniforme sin dramatismo.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_madge_base, prop_mockingjay_pin, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo, sin look moderno, sin texturas complejas, sin texto incrustado.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 limpia para ancla de personaje.",
+      "image_filenames": [
+        "anchors/char-madge.png"
+      ],
+      "status": "draft",
+      "active_id": "anchors/char-madge.png",
+      "alternatives": [
+        {
+          "id": "anchors/char-madge.png",
+          "slug": "char-madge",
+          "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/char-madge.png",
+          "mime_type": "image/png",
+          "status": "candidate",
+          "created_at": "2026-02-19T10:40:23.468122+00:00",
+          "notes": "Pendiente de carga de archivo en disco"
+        }
+      ]
+    },
+    {
       "id": "char_peeta_base",
       "name": "Peeta Mellark",
       "prompt": "OBJETIVO DE ILUSTRACION\nCrear el ancla visual de Peeta Mellark, el chico del pan y apoyo moral de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra definida. Peeta debe ser un joven de constitucion fuerte y hombros anchos, con cabello rubio ceniza ondulado y ojos azules claros y bondadosos. Su expresion debe ser abierta y protectora.\n\nCOMPOSICION Y ENCUADRE\nPlano medio frontal. Su postura debe transmitir estabilidad y calidez.\n\nPERSONAJES Y ACCION\nPeeta mirando con una sonrisa leve o expresion de preocupacion por Katniss. Viste el traje sencillo del Distrito 12.\n\nENTORNO, PALETA E ILUMINACION\nFondo calido o de panaderia. Paleta de cremas, azules suaves y rubios dorados. Iluminación suave y uniforme.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, prop_bread_loaf.\n\nRESTRICCIONES / NEGATIVOS\nNo fotorrealismo. No debe verse agresivo. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 lista para integración en cuentos.",
@@ -260,18 +281,19 @@
       "name": "Portada Colección Sinsajo",
       "prompt": "OBJETIVO DE ILUSTRACION\nCrear el icono central de la colección basado en el broche de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLinea negra limpia y colores planos dorados. El simbolo del sinsajo debe ser un pájaro dorado en pleno vuelo, rodeado por un circulo, con una flecha cruzando el centro.\n\nCOMPOSICION Y ENCUADRE\nPrimer plano absoluto y centrado del simbolo sobre fondo negro solido.\n\nPERSONAJES Y ACCION\nSin personajes. El pájaro es el único elemento, representado con lineas de acción dinamicas.\n\nENTORNO, PALETA E ILUMINACION\nFondo negro. El pájaro es de un amarillo dorado brillante con algunos reflejos planos. Sin iluminación compleja.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, prop_mockingjay_pin, cover_mockingjay_collection.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo, sin metalizados 3D. Sin titulos incrustados. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 minimalista.",
       "image_filenames": [
-        "anchors/cover-mockingjay-collection.png"
+        "anchors/cover-mockingjay-collection.png",
+        "anchors/flow-cover-mockingjay-collection.png"
       ],
       "status": "draft",
-      "active_id": "anchors/cover-mockingjay-collection.png",
+      "active_id": "anchors/flow-cover-mockingjay-collection.png",
       "alternatives": [
         {
-          "id": "anchors/cover-mockingjay-collection.png",
-          "slug": "cover-mockingjay-collection",
-          "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/cover-mockingjay-collection.png",
+          "id": "anchors/flow-cover-mockingjay-collection.png",
+          "slug": "flow-cover-mockingjay-collection",
+          "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/flow-cover-mockingjay-collection.png",
           "mime_type": "image/png",
           "status": "candidate",
-          "created_at": "2026-02-19T00:27:40.917231+00:00",
+          "created_at": "2026-02-19T09:49:33.538700+00:00",
           "notes": "Flujo guiado de imagenes pendientes"
         }
       ]
@@ -449,18 +471,19 @@
       "name": "Broche de Sinsajo",
       "prompt": "OBJETIVO DE ILUSTRACION\nDefinir el diseno detallado del broche que se convierte en el simbolo de la revolucion.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern. Insignia circular de oro con un pájaro en pleno vuelo grabado. El ala debe estar ligeramente salida del circulo. El oro debe ser un color plano con bordes negros.\n\nCOMPOSICION Y ENCUADRE\nPlano macro del broche centrado. Lectura iconica inmediata.\n\nPERSONAJES Y ACCION\nSin personajes.\n\nENTORNO, PALETA E ILUMINACION\nFondo azul oscuro o negro para contraste. Paleta de amarillos dorados. Luz frontal.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni brillos metalicos complejos. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 iconografica.",
       "image_filenames": [
-        "anchors/prop-mockingjay-pin.png"
+        "anchors/prop-mockingjay-pin.png",
+        "anchors/flow-prop-mockingjay-pin.png"
       ],
       "status": "draft",
-      "active_id": "anchors/prop-mockingjay-pin.png",
+      "active_id": "anchors/flow-prop-mockingjay-pin.png",
       "alternatives": [
         {
-          "id": "anchors/prop-mockingjay-pin.png",
-          "slug": "prop-mockingjay-pin",
-          "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/prop-mockingjay-pin.png",
+          "id": "anchors/flow-prop-mockingjay-pin.png",
+          "slug": "flow-prop-mockingjay-pin",
+          "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/flow-prop-mockingjay-pin.png",
           "mime_type": "image/png",
           "status": "candidate",
-          "created_at": "2026-02-19T00:50:03.438397+00:00",
+          "created_at": "2026-02-19T09:50:24.359302+00:00",
           "notes": "Flujo guiado de imagenes pendientes"
         }
       ]
@@ -571,7 +594,7 @@
       ]
     }
   ],
-  "updated_at": "2026-02-19T08:41:40.596634+00:00",
+  "updated_at": "2026-02-19T10:40:23.468122+00:00",
   "style_rules": [
     "Uso obligatorio de línea negra definida (estilo Ligne Claire).",
     "Colores planos sin degradados ni sombreados dramaticos.",

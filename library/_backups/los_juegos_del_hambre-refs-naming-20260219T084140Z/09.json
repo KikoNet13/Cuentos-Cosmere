@@ -1,0 +1,491 @@
+{
+  "story_id": "09",
+  "title": "Mensaje para el Presidente",
+  "status": "definitive",
+  "book_rel_path": "los_juegos_del_hambre",
+  "created_at": "2026-02-18T10:00:00Z",
+  "updated_at": "2026-02-18T23:30:00Z",
+  "cover": {
+    "status": "draft",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada emblemática para el cuento 'Mensaje para el Presidente' que capture el momento en que Katniss Everdeen se convierte definitivamente en la voz de la rebelión frente a las llamas del Distrito 8.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: línea negra limpia y expresiva, colores planos sin degradados complejos y estética de cuento infantil clásico. Katniss debe aparecer con su traje táctico negro de Sinsajo diseñado por Cinna, trenza negra, piel aceitunada y ojos grises plomizos. El entorno debe mostrar el contraste entre el humo gris de la guerra y el naranja vivo del fuego. Respetar la técnica de Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio frontal de Katniss Everdeen mirando directamente a la cámara con una expresión de furia y determinación. Detrás de ella, una cortina de humo denso y restos de una estructura industrial ardiendo. Composición centrada y poderosa con espacio para el título en la zona superior.\n\nPERSONAJES Y ACCIÓN\nKatniss de pie, con la cara manchada de ceniza pero manteniendo una postura heroica. Señala con el brazo hacia el fondo donde arden los aviones del Capitolio. Su traje táctico debe mostrar el emblema del sinsajo en el pecho.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo de ruinas industriales bajo un cielo de color gris oscuro. Paleta dominada por negros, grises carbonizados y naranjas de fuego intensos. Iluminación plana que resalta los contornos negros de la protagonista y los escombros.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, prop_rebel_propos_camera, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logos. Prohibido el fotorrealismo, las texturas 3D, el sombreado dramático o el desenfoque cinematográfico. Evitar que el fuego se vea realista; debe ser mediante formas geométricas de color sólido.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alta claridad, lista para maquetación editorial con bordes limpios y alta saturación en los colores de la rebelión.",
+    "active_id": "",
+    "alternatives": [],
+    "reference_ids": [
+      "anchor_style_editorial_v1.png",
+      "anchor_style_palette_v1.png",
+      "anchor_cover_main.png",
+      "anchor_char_katniss.png",
+      "anchor_char_prim.png",
+      "anchor_char_snow.png",
+      "anchor_char_finnick.png",
+      "anchor_prop_pin.png",
+      "anchor_prop_rose.png"
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Llegamos al Distrito 8, un lugar de asfalto y humo constante. Boggs me guía con paso firme hacia un almacén que sirve como hospital improvisado para los rebeldes. Al entrar, el olor a metal y antiséptico me golpea, pero nada me prepara para lo que ven mis ojos. Cientos de personas heridas, hombres, mujeres y niños, están amontonadas en camillas sobre el frío suelo de cemento. La comandante Paylor me observa con desconfianza, pero yo solo puedo mirar a los pacientes. He venido para que me vean, pero me siento pequeña ante tanto dolor real.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar la llegada de Katniss al hospital improvisado del Distrito 8, mostrando la cruda realidad de la guerra.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con uniforme táctico negro y trenza. Boggs con uniforme militar gris. Commander Paylor con aspecto severo y ropa de combate desgastada. Estilo Sergio Kern de línea clara.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general del interior de un almacén industrial inmenso. Filas de camillas en el suelo con heridos sugeridos. Katniss y Boggs en primer plano entrando por una puerta metálica grande.\n\nPERSONAJES Y ACCIÓN\nKatniss observa el hospital con expresión de asombro y tristeza. Boggs camina a su lado con cautela. Paylor los espera con los brazos cruzados.\n\nENTORNO, PALETA E ILUMINACIÓN\nInterior gris, techos altos con vigas de metal. Paleta de grises, azules apagados y blancos de las vendas. Iluminación fría de almacén.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre explícita ni gore. No usar sombras complejas. Evitar que la escena sea demasiado oscura para permitir la lectura visual clara.\n\nFORMATO DE SALIDA\nIlustración 1:1 nítida para cuento.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_d13.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "text": "Camino despacio entre las filas de heridos. Un hombre me toca el brazo con dedos temblorosos y su cara se ilumina al reconocer el Sinsajo grabado en mi uniforme negro. Poco a poco, los que aún pueden moverse empiezan a susurrar y corear mi nombre con voces roncas por el humo. Siento una chispa de poder que no conocía; Snow tenía razón al temerme tanto. Ya no soy una simple pieza en su tablero, soy el rostro de su destrucción. Cressida y su equipo de televisión lo graban todo, capturando la conexión verdadera entre el símbolo y su gente.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar la conexión emocional entre el Sinsajo y los rebeldes heridos mientras Cressida graba la escena.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCressida con la cabeza tatuada y su cámara de alta tecnología. Katniss con el broche de sinsajo visible. Estilo Sergio Kern.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio corto. Un hombre herido en una camilla toca el brazo de Katniss. Ella se inclina hacia él. Cressida y su equipo de cámaras graban desde un lateral.\n\nPERSONAJES Y ACCION\nEl hombre mira a Katniss con esperanza. Katniss tiene una expresión de compasión verdadera. Cressida concentra su cámara insecto en el gesto de las manos.\n\nENTORNO, PALETA E ILUMINACION\nFondo de paredes de ladrillo gris y tuberías. Paleta de colores desaturados con el punto focal en el negro del uniforme de Katniss. Luz suave lateral.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, prop_mockingjay_pin, prop_rebel_propos_camera.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. Evitar gestos exagerados. No incluir otros personajes que distraigan de la conexión central.\n\nFORMATO DE SALIDA\nIlustración 1:1 con contornos negros definidos.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_beetee.png",
+            "anchor_env_train.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "text": "De repente, el estruendo de los aviones del Capitolio rompe el breve momento de paz. Las sirenas de alarma aúllan y Boggs nos ordena correr hacia un búnker de seguridad cercano. Pero las bombas ya están cayendo sobre la ciudad. El suelo vibra con violencia y el aire se llena de un asfixiante polvo de ladrillo gris. Veo con horror cómo los aviones apuntan directamente al hospital, a la gente indefensa que acabo de conocer. La rabia arde en mi pecho con una intensidad que me nubla la vista. No voy a esconderme mientras Snow asesina a los inocentes.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nCapturar el caos inicial del bombardeo del Capitolio sobre el hospital del Distrito 8.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nAviones blancos del Capitolio con el sello oficial. Humo gris y polvo de ladrillo. Estética de Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general contrapicado. En la zona superior se ven los aviones soltando bombas circulares. En la zona inferior, Katniss y Boggs corriendo hacia un búnker mientras el edificio de al lado estalla.\n\nPERSONAJES Y ACCION\nKatniss mirando hacia arriba con horror. Boggs tirando de su brazo. La multitud de refugiados se dispersa en pánico.\n\nENTORNO, PALETA E ILUMINACION\nCielo gris plomizo. Explosiones representadas como orbes naranjas y amarillos planos. Tonos de ocre y gris dominantes.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir heridos de forma gráfica. Sin efectos de fuego realistas; usar formas geométricas sólidas. Sin texto.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 dinámica.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "text": "Subo corriendo al tejado de un almacén vecino, ignorando los gritos de Haymitch que resuenan por mi auricular. Gale está a mi lado, preparando con destreza sus flechas explosivas. Los aerodeslizadores del Capitolio vuelan bajo, soltando su carga mortal sobre el edificio lleno de heridos. Apunto con mi arco de Sinsajo, inspiro hondo y suelto la cuerda con precisión. La flecha atraviesa el ala de un avión y estalla en una espectacular bola de fuego naranja. Por un instante, somos nosotros quienes dominamos el cielo, respondiendo a la crueldad con una fuerza desesperada y certera.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nKatniss y Gale devolviendo el golpe al Capitolio desde el tejado del almacén.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con su arco negro táctico. Gale con su arco militar negro. Flechas explosivas con punta roja. Estilo Kern.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio lateral dinámico. Katniss y Gale arrodillados en un tejado plano, apuntando sus arcos hacia aviones que pasan cerca. Un avión estalla en el fondo.\n\nPERSONAJES Y ACCION\nKatniss concentrada al disparar. Gale preparando su siguiente flecha. Acción de combate coordinada y profesional.\n\nENTORNO, PALETA E ILUMINACION\nTecho de cemento con chimeneas industriales. Fondo de cielo nublado con llamas naranjas. Colores muy contrastados: negro, gris y naranja fuego.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni desenfoque de movimiento. Evitar detalles excesivos en el avión para mantener la simplicidad del estilo.\n\nFORMATO DE SALIDA\nIlustración 1:1 de alta intensidad.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "text": "El hospital es ahora una pira de llamas y escombros humeantes. No hay supervivientes entre las ruinas. Me vuelvo hacia la cámara de Cressida, con la cara manchada de ceniza y los ojos ardiendo de furia incontenible. —Quiero decir a los rebeldes que estoy viva y que el Capitolio acaba de masacrar a gente desarmada —grito, señalando el horror a mi espalda—. Si creen que Snow nos tratará con justicia algún día, miren esto. ¡Esto es lo que hacen! El fuego se propaga, y si nosotros ardemos, ¡el presidente Snow arderá con nosotros!",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nEl discurso histórico de Katniss frente a las cámaras: 'Si nosotros ardemos, tú arderás con nosotros'.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con la cara manchada de hollín negro. Ruinas humeantes del hospital de fondo. Cressida grabando. Estilo Sergio Kern.\n\nCOMPOSICIÓN Y ENCUADRE\nPrimer plano de Katniss, con la mano extendida hacia el espectador señalando el desastre. A su espalda, el edificio del hospital es solo una pila de escombros ardiendo.\n\nPERSONAJES Y ACCION\nKatniss gritando con furia contenida. Su mirada es de un odio profundo hacia Snow. Cressida en un lateral sujetando su cámara insecto.\n\nENTORNO, PALETA E ILUMINACION\nAtmósfera de ceniza y humo gris. Colores rojos y naranjas de las brasas finales. Luz dramática plana sobre el rostro de Katniss.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, prop_rebel_propos_camera, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir el texto del discurso en la imagen. Sin fotorrealismo. Evitar sombras complejas en el rostro.\n\nFORMATO DE SALIDA\nIlustración 1:1 icónica.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "text": "Regresamos al Distrito 13 en un silencio sepulcral. En la sala de mando, la presidenta Coin y Plutarch observan la grabación del Distrito 8 con asombro contenido. Mi mensaje espontáneo se ha convertido en la primera 'propo' real, un grito de guerra que está encendiendo a los distritos de todo Panem. Me envían al hospital para curar mis heridas menores, pero mi mente sigue atrapada en el campo de batalla. Aunque el Sinsajo ha recuperado su voz ante el mundo, el precio ha sido una carnicería innecesaria que nunca podré olvidar del todo.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nLa Presidenta Coin y Plutarch analizando el impacto de la grabación en la sala de mando del 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCoin con su cabello gris liso y ojos pálidos. Plutarch con su traje de seda pero aspecto cansado. Pantalla holográfica azul.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio. Coin y Plutarch de pie frente a una mesa táctica donde se proyecta la imagen de Katniss en el Distrito 8. Katniss al fondo, pequeña y agotada.\n\nPERSONAJES Y ACCION\nCoin observa la pantalla con frialdad analítica. Plutarch asiente con satisfacción estratégica. Katniss se apoya en una pared de hormigón.\n\nENTORNO, PALETA E ILUMINACION\nBúnker de hormigón gris frío. Paleta monocromática de grises y azules neón de los hologramas. Iluminación técnica fría.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_coin_base, char_katniss_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin elementos de decoración lujosa. No usar sombras realistas. Mantener la estética funcional del Distrito 13.\n\nFORMATO DE SALIDA\nIlustración 1:1 limpia.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_prim.png",
+            "anchor_char_snow.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_d13.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "text": "Esa noche, todos los refugiados se reúnen frente a las pantallas para ver una emisión obligatoria desde el Capitolio. Caesar Flickerman presenta a un invitado especial que nos deja helados: Peeta Mellark. Al verlo, se me corta la respiración de golpe. Está vivo, pero parece una sombra trágica del chico que amaba. Está mucho más delgado, pálido y sus ojos azules están llenos de una sospecha extraña y gélida. Peeta habla con una voz monótona, defendiendo la paz y pidiendo un alto el fuego inmediato. Es una marioneta perfecta en manos de Snow.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nLa aparición traumática de Peeta en la televisión del Capitolio, transformado por la tortura.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta Mellark muy delgado, pálido y con ojos asustadizos. Caesar Flickerman con pelo y labios de color celeste. Estilo Sergio Kern.\n\nCOMPOSICIÓN Y ENCUADRE\nPrimer plano de una pantalla de televisión antigua. En la pantalla se ve a Peeta sentado en un sillón elegante junto a Caesar. Katniss reflejada sutilmente en el cristal.\n\nPERSONAJES Y ACCION\nPeeta habla con voz monótona, vestido con un traje blanco impecable que enfatiza su delgadez. Caesar sonríe de forma artificial hacia la cámara.\n\nENTORNO, PALETA E ILUMINACION\nContraste entre el estudio brillante del Capitolio (rosas y dorados) y el entorno oscuro donde Katniss mira la tele. Luz azulada de pantalla.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir el diálogo en pantalla. Peeta no debe parecer heroico, sino una víctima frágil.\n\nFORMATO DE SALIDA\nIlustración 1:1 de alto impacto emocional.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "text": "Las palabras de Peeta causan una conmoción de rabia en la sala de mando del Distrito 13. Coin lo llama traidor sin dudarlo, y los soldados del búnker murmuran con odio contra él. Yo me quedo muda, sintiendo cómo mi mundo se derrumba por milésima vez. Peeta me mira a través de la pantalla con frialdad, pero sé que no me ve a mí; ve al enemigo que le han enseñado a odiar. Snow lo ha torturado y retorcido para usarlo como su arma definitiva. Comprendo con horror que la verdadera guerra consiste en destruir lo que más amamos.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nReflejar la devastación de Katniss ante el cambio de Peeta y la sospecha de los líderes rebeldes.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss en estado de shock. Coin mirando con desconfianza. El ambiente del búnker debe ser opresivo. Estética Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano americano de Katniss en el centro de la sala de mando, rodeada por el silencio de los soldados. Coin está en primer plano lateral mirándola fijamente.\n\nPERSONAJES Y ACCION\nKatniss con las manos en el pecho, incapaz de hablar. Coin tiene una expresión de duda cruel, considerando a Peeta un traidor.\n\nENTORNO, PALETA E ILUMINACION\nHormigón gris y luces de emergencia rojas. Paleta de colores fríos y desaturados. Sombras planas y marcadas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_coin_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir elementos de la televisión en este plano. Sin lágrimas exageradas; el dolor debe ser contenido en el dibujo.\n\nFORMATO DE SALIDA\nIlustración 1:1 atmosférica.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "text": "Tras ver a Peeta en televisión, huyo a mi escondite habitual: el armario de material escolar del Distrito 13. Me hago un ovillo contra una caja de tizas, sintiendo que el aire me falta. Gale me encuentra y se sienta a mi lado en silencio, compartiendo mi dolor. Le confieso mi mayor temor: Snow está destruyendo a Peeta para castigarme a mí. Gale, con la mirada endurecida por la guerra, toma una decisión. No podemos dejarlo allí; se ofrece voluntario para una misión de rescate en el Capitolio.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMomento íntimo de Katniss y Gale en el armario de material escolar, planeando el rescate.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nArmario pequeño lleno de cajas de tiza y lápices de madera. Gale Hawthorne con uniforme de soldado gris. Katniss hecha un ovillo.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio corto en un espacio muy reducido. Gale sentado en el suelo al lado de Katniss, con la espalda contra cajas de madera. Luz tenue.\n\nPERSONAJES Y ACCION\nGale habla con urgencia, tomando la mano de Katniss. Katniss lo escucha con desesperación y esperanza. Actitud de complicidad absoluta.\n\nENTORNO, PALETA E ILUMINACION\nInterior oscuro con estanterías de madera. Paleta de marrones, ocres y grises. Una única bombilla pequeña proyecta una luz cenital plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. Evitar que el espacio se vea lujoso. No incluir armas en esta escena de diálogo.\n\nFORMATO DE SALIDA\nIlustración 1:1 acogedora y triste.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_johanna.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text": "La presidenta Coin autoriza la misión de rescate. Boggs liderará a un equipo de élite para infiltrarse en el Centro de Entrenamiento y traer de vuelta a los vencedores. Gale prepara sus flechas con una determinación que me asusta; sé que está dispuesto a morir por rescatar al chico que yo amo. Me obligan a quedarme en el Distrito 13, atrapada entre muros de cemento mientras mis amigos arriesgan sus vidas en el nido de la serpiente. El silencio del búnker se vuelve insoportable mientras espero noticias.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Gale y Boggs preparándose para la peligrosa misión de infiltración en el Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nGale con su nuevo arco militar negro. Boggs con equipo de combate táctico y mapas. Estilo Sergio Kern.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general del hangar del Distrito 13. Un aerodeslizador plateado al fondo. Gale y Boggs revisando sus armas en una mesa metálica.\n\nPERSONAJES Y ACCION\nGale tensa la cuerda de su arco con determinación. Boggs da instrucciones finales. Katniss observa desde la distancia, preocupada.\n\nENTORNO, PALETA E ILUMINACION\nHangar tecnológico con suelos de metal brillante. Paleta de grises metálicos, azules acero y el negro de los arcos. Luz técnica brillante.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_gale_base, char_katniss_base, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni efectos de destello digital. Evitar sombras dramáticas. No mostrar el despegue todavía.\n\nFORMATO DE SALIDA\nIlustración 1:1 nítida.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_snow.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text": "Para cubrir el asalto, Plutarch organiza una distracción masiva en las ondas. Debemos emitir una propo tan impactante que el Capitolio no pueda apartar la vista de las pantallas ni detectar al equipo de rescate. Finnick y yo nos preparamos en el estudio de televisión. El ambiente es tenso; sabemos que cada segundo que ganemos es una oportunidad de vida para Gale y Boggs. Finnick me mira con ojos cansados pero decididos. Él también tiene a alguien que recuperar: su querida Annie, atrapada en las garras de Snow.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nKatniss y Finnick en el estudio de televisión preparando la distracción para el Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nFinnick Odair con uniforme gris, jugando con un trozo de cuerda entre los dedos. Katniss con uniforme de Sinsajo. Luces de estudio.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio. Ambos sentados en taburetes frente a un fondo de tela negra. Focos de televisión visibles en los bordes del encuadre.\n\nPERSONAJES Y ACCION\nFinnick mira hacia la cámara con expresión de sacrificio. Katniss le pone una mano en el hombro, dándole fuerzas. Tensión contenida.\n\nENTORNO, PALETA E ILUMINACION\nEstudio técnico con cables por el suelo. Paleta de negros, grises y el dorado de la cuerda de Finnick. Iluminación frontal muy fuerte.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_finnick_base, char_katniss_base, prop_rebel_propos_camera.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir público. Sin fotorrealismo ni degradados. Evitar que parezca un programa alegre.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 clara.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "text": "Finnick sube al escenario y empieza a hablar con una voz monótona y distante. Ante las cámaras de todo Panem, revela el secreto más oscuro de Snow: cómo el presidente usaba a los vencedores como trofeos y vendía sus cuerpos a los ciudadanos más ricos del Capitolio. Habla de los abusos y de las amenazas de muerte contra sus seres queridos. Es una confesión desgarradora que paraliza a la audiencia y mantiene a Snow ocupado mientras los rebeldes aterrizan en el corazón de la ciudad para cumplir su misión.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nFinnick revelando los secretos del Presidente Snow ante todo Panem.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nFinnick con rostro serio y voz que se adivina monótona. El sello del Capitolio en una pantalla de fondo. Estética Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPrimer plano de Finnick hablando a un micrófono de pie. Detrás de él, una gran pantalla proyecta imágenes de la rosa blanca de Snow.\n\nPERSONAJES Y ACCION\nFinnick confiesa los abusos con una valentía dolorosa. Sus ojos verde mar están fijos en la lente. Su postura es rígida pero digna.\n\nENTORNO, PALETA E ILUMINACION\nFondo oscuro con elementos dorados del Capitolio. Paleta de azules profundos y blancos. Luz cenital dramática pero plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_finnick_base, prop_president_rose, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre ni violencia visual. No usar efectos de desenfoque. Evitar que el fondo distraiga de la cara de Finnick.\n\nFORMATO DE SALIDA\nIlustración 1:1 poderosa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "text": "Regresamos a la sala de mando para esperar el desenlace. Las pantallas muestran mapas electrónicos y señales de radio distorsionadas que emiten estática. El silencio en el búnker es absoluto, roto solo por el zumbido constante de las máquinas de ventilación. Haymitch no despega los ojos de los monitores, apretando los puños hasta que los nudillos se le vuelven blancos. Me siento pequeña e impotente, rezando para que el aerodeslizador rebelde regrese antes de que las defensas del Capitolio descubran que han sido burladas por completo.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nLa tensa espera en la sala de mando del Distrito 13 durante el asalto al Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nHaymitch Abernathy con mirada fija en los monitores. Katniss de pie junto a él. Mapas digitales con puntos luminosos. Estilo Kern.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general lateral. Una fila de operadores de radio de espaldas. Katniss y Haymitch en el centro de la habitación mirando un mapa gigante.\n\nPERSONAJES Y ACCION\nHaymitch aprieta los puños sobre la mesa. Katniss tiene la mirada perdida, rezando por Gale y Peeta. El silencio es palpable.\n\nENTORNO, PALETA E ILUMINACION\nSala de guerra con luz azulada de pantallas. Paleta estrictamente gris y azul oscuro. Sombras planas que enfatizan la fatiga de los personajes.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_haymitch_base, char_katniss_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni desenfoque. Evitar mostrar las caras de los operadores para centrarse en los protagonistas.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 solemne.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "text": "De repente, un grito de alivio recorre la sala. ¡Lo han conseguido! El aerodeslizador aterriza en el hangar y corro hacia allí desesperada. Veo salir a los soldados, cansados y cubiertos de polvo. Gale aparece con el brazo quemado pero con vida. Detrás de él, los médicos transportan camillas con los vencedores rescatados. Veo a Annie, que corre a los brazos de un Finnick que llora de alegría, y a Johanna, demacrada y débil. Mi corazón late con una fuerza salvaje buscando una sola cara entre la multitud de heridos.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nEl regreso triunfal pero amargo del equipo de rescate al hangar del 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nGale herido en el brazo. Annie Cresta abrazando a Finnick. Johanna Mason demacrada. Aerodeslizador plateado. Estética Kern.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general amplio. El aerodeslizador con la rampa bajada. Médicos con camillas corren hacia los tributos rescatados. Katniss corriendo en primer plano.\n\nPERSONAJES Y ACCION\nAnnie y Finnick se abrazan llorando. Gale baja apoyado en un soldado. Johanna camina con dificultad, mirando al suelo. Katniss busca desesperadamente con la mirada.\n\nENTORNO, PALETA E ILUMINACION\nHangar gris con reflejos metálicos. Paleta de grises, blancos y el plata de la nave. Luz de hangar fría y uniforme.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_finnick_base, char_gale_base, char_johanna_base, char_katniss_base.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre explícita. No usar sombras complejas. Evitar que la escena sea caótica; debe haber una lectura clara de los reencuentros.\n\nFORMATO DE SALIDA\nIlustración 1:1 narrativa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_env_seam.png",
+            "anchor_prop_bread.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "text": "Me dirijo al hospital del distrito, esquivando a los enfermeros que corren por los pasillos. Encuentro la habitación de Peeta y abro la puerta con las manos temblorosas. Allí está él, tumbado en una cama blanca, con los ojos azules clavados en el techo. Siento una alegría infinita que me hace romper a llorar; Peeta está a salvo, ha vuelto conmigo después de semanas de pesadilla. Me acerco despacio, deseando abrazarlo y decirle que ya nadie podrá hacernos daño en este refugio seguro bajo tierra. Solo quiero tocar su mano.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nKatniss entrando en la habitación de hospital de Peeta en el Distrito 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nHabitación blanca aséptica. Peeta en una cama con correas. Katniss con expresión de amor y alivio. Estilo Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio desde la puerta de la habitación. Katniss entra despacio. Peeta está tumbado de espaldas a la entrada, mirando al techo.\n\nPERSONAJES Y ACCION\nKatniss extiende una mano temblorosa hacia la cama. Peeta permanece inmóvil, con los ojos azules muy abiertos y vacíos de emoción.\n\nENTORNO, PALETA E ILUMINACION\nInterior totalmente blanco y clínico. Paleta de blancos, celestes muy claros y grises suaves. Iluminación frontal suave y plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, char_katniss_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni degradados. Evitar sombras dramáticas. No mostrar el ataque todavía.\n\nFORMATO DE SALIDA\nIlustración 1:1 limpia y silenciosa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "text": "—Peeta —susurro con amor. Él se vuelve y me mira con una expresión de puro odio, como si estuviera viendo a un monstruo. De repente, salta de la cama con una fuerza sobrehumana y se lanza contra mí. Sus manos se cierran alrededor de mi cuello con una violencia aterradora. Intento gritar, pero el aire no llega. Peeta, el chico del pan, está intentando matarme. Comprendo con horror que el Capitolio no solo lo capturó; lo han transformado en un arma letal diseñada específicamente para destruirme.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nEl ataque violento de Peeta a Katniss, revelando el éxito del lavado de cerebro de Snow.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta con rostro distorsionado por el odio. Katniss asfixiándose y en shock. Correas de la cama rotas. Estilo Sergio Kern.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio dinámico y violento. Peeta se ha lanzado sobre Katniss, con las manos cerradas en torno a su cuello. El encuadre es cerrado para enfatizar el horror.\n\nPERSONAJES Y ACCION\nPeeta tiene una fuerza sobrehumana y mirada de muto. Katniss intenta soltarse, con los ojos muy abiertos por el terror y la sorpresa. Es un momento de crisis absoluta.\n\nENTORNO, PALETA E ILUMINACION\nHabitación de hospital con bandejas volcadas. Paleta de blancos y grises contrastada con el rostro enrojecido de Peeta. Luz de emergencia fría.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, char_katniss_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin violencia gore ni sangre. No usar fotorrealismo. El rostro de Peeta debe ser reconocible pero transformado por la ira.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de cierre trágico para el cuento.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    }
+  ]
+}

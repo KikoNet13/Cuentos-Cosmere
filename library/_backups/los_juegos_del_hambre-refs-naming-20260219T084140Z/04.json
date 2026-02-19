@@ -1,0 +1,466 @@
+{
+  "story_id": "04",
+  "title": "El Triunfo de las Bayas",
+  "status": "definitive",
+  "book_rel_path": "los_juegos_del_hambre",
+  "created_at": "2026-02-18T20:00:00Z",
+  "updated_at": "2025-05-22T10:00:00Z",
+  "cover": {
+    "status": "draft",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'El Triunfo de las Bayas', capturando el clímax dramático donde Katniss y Peeta desafían al Capitolio con las bayas venenosas sobre la Cornucopia.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: línea negra limpia y expresiva, colores planos vibrantes y anatomía de cuento infantil. Katniss con su trenza negra, piel aceitunada y uniforme de tributo desgastado. Peeta con cabello rubio ceniza, ojos azules y expresión de cansancio heroico. Respetar la estética de Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio-largo de Katniss y Peeta de pie sobre el lomo dorado de la Cornucopia. Ambos sostienen un puñado de bayas oscuras cerca de sus labios. Composición simétrica y poderosa que simboliza la unidad contra la opresión.\n\nPERSONAJES Y ACCIÓN\nKatniss mira con determinación hacia el espectador (desafiando a las cámaras). Peeta la mira a ella con confianza absoluta. La acción es estática pero cargada de tensión, justo antes de la rendición del Capitolio.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo de cielo rosado de atardecer en la arena. El cuerno de oro de la Cornucopia brilla con tonos amarillos planos. La paleta incluye el azul de los uniformes, el oro del metal y el púrpura profundo de las bayas. Iluminación frontal sin sombras complejas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_nightlock_berries, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logotipos. Prohibido el fotorrealismo, degradados digitales, efectos de sangre realistas o sombreado dramático 3D. Evitar que la escena parezca de terror; mantener el tono de álbum ilustrado.\n\nFORMATO DE SALIDA\nIlustración digital final 1:1 de alta calidad, con bordes definidos y colores saturados, lista para portada editorial.",
+    "active_id": "",
+    "alternatives": [],
+    "reference_ids": [
+      "anchor_style_editorial_v1.png",
+      "anchor_style_palette_v1.png",
+      "anchor_cover_main.png",
+      "anchor_char_katniss.png",
+      "anchor_char_peeta.png",
+      "anchor_char_finnick.png",
+      "anchor_char_coin.png",
+      "anchor_prop_berries.png"
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Tras el anuncio de Claudius Templesmith, mi corazón da un vuelco. ¡Peeta y yo podemos ganar juntos! El Capitolio ha cambiado las reglas porque nuestra historia de amor les encanta. Sin pensarlo dos veces, grito su nombre con todas mis fuerzas, rompiendo el silencio del bosque. Debo encontrarlo antes de que sea tarde. Ya no somos enemigos, somos aliados oficiales. La esperanza de volver a casa con él me da nuevas energías para seguir adelante en esta arena mortal y desafiar el destino que nos impusieron.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el momento en que Katniss reacciona al anuncio de que puede haber dos vencedores del mismo distrito.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern. Katniss con trenza negra y uniforme de tributo. El entorno es un bosque de pinos estilizado.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de Katniss gritando el nombre de Peeta hacia la espesura. Su cuerpo está inclinado hacia adelante, rompiendo el silencio del bosque.\n\nPERSONAJES Y ACCIÓN\nKatniss con expresión de esperanza y urgencia. Su grito es visible a través de su postura dinámica. El arco de madera está colgado en su hombro.\n\nENTORNO, PALETA E ILUMINACIÓN\nBosque denso con troncos de pinos marrones y acículas verdes. Luz de atardecer filtrada en tonos naranjas suaves. Colores planos y contornos negros.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_arena_forest, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No mostrar a Peeta en esta página. No incluir bocadillos de texto.\n\nFORMATO DE SALIDA\nIlustración 1:1 para página de cuento infantil.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_effie.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "text": "Paso horas buscando a Peeta cerca del arroyo. Haymitch no le ha enviado medicinas, lo que significa que debe estar cerca del agua para sobrevivir por su cuenta. El terreno es difícil, lleno de rocas resbaladizas y orillas embarradas que ocultan cualquier rastro. Sigo un rastro de manchas oscuras que me lleva hasta una zona de plantas acuáticas enredadas. Llamo su nombre en voz baja una y otra vez, temiendo que los profesionales me escuchen, pero solo los sinsajos me responden desde las copas de los árboles imitando mi propia voz.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar la búsqueda desesperada de Katniss siguiendo el rastro de sangre de Peeta junto al arroyo.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nUso de línea negra constante. Katniss agachada examinando el suelo. Manchas de sangre representadas como puntos rojos planos.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano picado siguiendo el curso del arroyo. Katniss en un lateral, rastreando manchas de color rojo intenso sobre piedras grises.\n\nPERSONAJES Y ACCIÓN\nKatniss con gesto de preocupación máxima, tocando una piedra manchada. La acción es de sigilo y rastreo.\n\nENTORNO, PALETA E ILUMINACIÓN\nArroyo con agua azul plana y rocas redondeadas. Paleta de azules, grises y el rojo focal de la sangre. Iluminación clara de día.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre truculenta o realista. Evitar sombras suaves. El agua no debe tener reflejos realistas.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 con estilo editorial Sergio Kern.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "text": "—No me pises —dice una voz ronca y débil a mis pies. Me sobresalto y miro hacia el suelo con incredulidad. ¡Es Peeta! Está tan bien camuflado con barro, arena y hojas verdes que parece una parte más de la orilla del arroyo. Su asombroso talento para decorar pasteles en la panadería le ha servido para fabricar un disfraz perfecto y esconderse de los asesinos. Me arrodillo a su lado y empiezo a limpiarle la cara con cuidado. Sus ojos azules brillan de alivio al verme, pero su piel está pálida y arde por la fiebre.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el hallazgo de Peeta camuflado entre el barro y las hojas, casi invisible al entorno.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta Mellark con el rostro cubierto de lodo marrón y hojas verdes. Solo sus ojos azules deben destacar.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano detalle de la orilla del río. Al principio parece solo naturaleza, pero al fondo se distinguen los rasgos de Peeta abriendo los ojos.\n\nPERSONAJES Y ACCIÓN\nPeeta sonriendo débilmente desde su escondite de barro. Katniss, fuera de cuadro o solo sus manos, acercándose con asombro.\n\nENTORNO, PALETA E ILUMINACIÓN\nLodo marrón oscuro, plantas verdes y piedras. Paleta de colores tierra muy planos. Luz tamizada por el follaje.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nNo debe parecer una escena de terror. Sin texturas de barro realistas; usar formas de color sólido.\n\nFORMATO DE SALIDA\nIlustración 1:1 nítida para álbum ilustrado.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "text": "Ayudo a Peeta a levantarse, aunque casi no puede apoyar su pierna derecha. Está herido de gravedad; un corte profundo le atraviesa el muslo y la infección empieza a extenderse peligrosamente por su cuerpo. Con mucho esfuerzo y paciencia, lo llevo apoyado en mi hombro hasta una pequeña cueva oculta entre las rocas, lejos del cauce del agua. Lo acomodo en el saco de dormir y trato de limpiar su herida con el poco material que tengo. La situación es desesperada: si no consigo medicinas del Capitolio pronto, Peeta no sobrevivirá a la infección.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nKatniss ayudando a un Peeta herido a entrar en la cueva para protegerse de la tormenta inminente.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta apoyado pesadamente sobre Katniss. Ella usa su fuerza para sostenerlo. Entrada de cueva de piedra gris.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio lateral. Los personajes se dirigen hacia la oscuridad de la entrada de la cueva bajo un cielo que empieza a oscurecer.\n\nPERSONAJES Y ACCIÓN\nAcción de apoyo y esfuerzo. Peeta tiene una pierna vendada con tela sucia. Katniss tiene la mandíbula apretada por el peso.\n\nENTORNO, PALETA E ILUMINACIÓN\nEntorno rocoso y hostil. Paleta de grises, azules oscuros y marrones. Luz mortecina de tormenta.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No mostrar heridas abiertas; solo vendajes simples. Sin efectos de lluvia digital modernos.\n\nFORMATO DE SALIDA\nIlustración 1:1 con contornos negros definidos.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "text": "Nos refugiamos en la penumbra de la cueva mientras una tormenta eléctrica estalla fuera. Intento animar a Peeta y, recordando los consejos de Haymitch sobre el romance, le doy un beso para intentar ganar el favor de los patrocinadores. Él me responde con una ternura que me confunde, recordándome aquel día de lluvia bajo el manzano. Poco después, un paracaídas plateado aterriza en la entrada. Contiene una olla de caldo de cordero caliente, pero no la medicina que tanto necesitamos. Comemos en silencio, compartiendo el calor de nuestros cuerpos mientras el mundo exterior desaparece bajo la lluvia.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el primer beso real en la cueva y la llegada del paracaídas con el caldo caliente.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss y Peeta acurrucados. Paracaídas plateado con una olla pequeña de metal. Estética Sergio Kern.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio interior de la cueva. Los personajes en primer plano se besan, mientras al fondo aterriza el regalo plateado.\n\nPERSONAJES Y ACCIÓN\nMomento de ternura forzado por la estrategia pero con emoción real. El paracaídas flota suavemente en la esquina.\n\nENTORNO, PALETA E ILUMINACIÓN\nInterior oscuro de la cueva iluminado por el brillo del paracaídas. Tonos cálidos en la piel frente al gris de la roca.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_parachute_gift.\n\nRESTRICCIONES / NEGATIVOS\nSin sombras dramáticas realistas. No usar degradados en el brillo del paracaídas; usar blanco y gris plano.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 clara y narrativa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "text": "De pronto, la voz de Claudius Templesmith resuena de nuevo por toda la arena. Nos invita a un «banquete» especial en la Cornucopia al amanecer. Promete que habrá una mochila marcada con el número de cada distrito que contendrá algo que necesitamos con urgencia. Sé que en la nuestra está la medicina para salvar la pierna de Peeta. —No irás, Katniss —me ordena él con firmeza, apretándome la mano—. No voy a dejar que te maten por mi culpa en ese baño de sangre. Pero yo ya he tomado una decisión secreta: no dejaré que muera.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el conflicto entre Katniss y Peeta sobre el banquete de la Cornucopia.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con mirada decidida. Peeta sujetando su brazo para impedir que se vaya. Uniformes grises sucios.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de ambos sentados en el suelo de la cueva. Peeta tiene expresión de mando y miedo por ella.\n\nPERSONAJES Y ACCIÓN\nPeeta le dice que no irá. Katniss asiente falsamente mientras planea su escape. La tensión es psicológica y gestual.\n\nENTORNO, PALETA E ILUMINACIÓN\nSombras proyectadas en las paredes de la cueva. Paleta de azules y ocres. Luz tenue de interior.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base.\n\nRESTRICCIONES / NEGATIVOS\nSin armas en la escena. No fotorrealismo. Evitar rasgos caricaturescos que quiten seriedad al dilema.\n\nFORMATO DE SALIDA\nIlustración 1:1 equilibrada.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_beetee.png",
+            "anchor_env_seam.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "text": "Para poder ir al banquete sin su permiso, tengo que engañar a Peeta. Aprovecho el último regalo que nos envió Haymitch: un pequeño frasco de jarabe para dormir. Aplasto unas cuantas bayas dulces para ocultar el sabor y le doy la mezcla con una cuchara. En pocos minutos, sus párpados se vuelven pesados y cae en un sueño profundo e inamovible. Me siento culpable por traicionar su confianza, pero es la única forma de mantenerlo a salvo. Le doy un beso de despedida en la frente y me preparo para enfrentarme a los demás tributos.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Katniss usando el jarabe para dormir de Haymitch para sedar a Peeta y poder ir al banquete.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nFrasco pequeño con líquido violeta. Katniss dándole de comer a Peeta con una cuchara de madera.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio corto. Katniss sostiene la cabeza de Peeta mientras él traga el jarabe, confiado en ella.\n\nPERSONAJES Y ACCIÓN\nKatniss con expresión de culpa y necesidad. Peeta con ojos entrecerrados, empezando a quedarse dormido. Gesto de traición por amor.\n\nENTORNO, PALETA E ILUMINACIÓN\nCueva sombría. El punto focal es el color violeta del jarabe. Iluminación plana y fría.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base.\n\nRESTRICCIONES / NEGATIVOS\nSin degradados de color en el jarabe. No fotorrealismo. Evitar que Katniss parezca malvada; el énfasis es la protección.\n\nFORMATO DE SALIDA\nIlustración 1:1 con gran carga emocional.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_rue.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "text": "Llego a la Cornucopia justo cuando el primer rayo de sol ilumina el metal dorado. En una mesa con mantel blanco veo las cuatro mochilas que quedan. Corro hacia la nuestra, la pequeña de color naranja, pero Clove me intercepta con un cuchillo. Forcejeamos en el suelo y ella se burla de mi hermana y de Peeta mientras me inmoviliza. Justo antes de que pueda acabar conmigo, Thresh aparece de la nada y la derriba de un golpe. Me mira con dureza, pero al recordar cómo cuidé de Rue, decide perdonarme la vida. Cojo la mochila y huyo hacia el bosque.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nCapturar la batalla en la Cornucopia y el momento en que Thresh salva a Katniss de Clove.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nThresh como un chico gigante y fuerte de piel oscura. Clove con un cuchillo en la mano. Cornucopia dorada de fondo.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano dinámico. Thresh levantando a Clove por el cuello mientras Katniss está en el suelo, asustada. La Cornucopia brilla al sol.\n\nPERSONAJES Y ACCIÓN\nThresh con mirada de advertencia hacia Katniss. La mochila naranja con el número 12 es visible en la mano de Katniss.\n\nENTORNO, PALETA E ILUMINACIÓN\nLlanura abierta y soleada. Paleta de amarillos dorados, azules de cielo y el naranja de la mochila. Luz dura de mañana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin violencia explícita ni sangre. Los personajes deben tener el diseño amable del estilo Kern. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alto impacto visual.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_forest.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "text": "Entro en la cueva tiritando y herida, pero con un tesoro en mis manos: la mochila naranja. Dentro encuentro una caja delgada con una aguja hipodérmica. Sin perder un segundo, le clavo la aguja a Peeta en el brazo y presiono el émbolo. Es la medicina que le salvará la vida. Me desplomo a su lado, agotada por la pelea en la Cornucopia y la pérdida de sangre de mi frente. El sueño me vence mientras espero que el Capitolio cumpla su parte y sane a mi amigo antes de que sea demasiado tarde.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar a Katniss inyectando la medicina a Peeta en la cueva, salvando su vida al fin.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nAguja hipodérmica pequeña. Peeta inconsciente. Katniss con heridas en la frente por la pelea.\n\nCOMPOSICION Y ENCUADRE\nPlano detalle de la mano de Katniss presionando la aguja en el brazo de Peeta. En segundo plano, el rostro aliviado de ella.\n\nPERSONAJES Y ACCIÓN\nAcción precisa y solemne. Peeta está pálido pero relajado. Katniss tiene una venda improvisada en la cabeza.\n\nENTORNO, PALETA E ILUMINACIÓN\nInterior de cueva en tonos grises y azules. La medicina brilla sutilmente en el cilindro de cristal. Luz focal suave.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre realista. No usar efectos de brillo digital modernos. Mantener la simplicidad de la Ligne Claire.\n\nFORMATO DE SALIDA\nIlustración 1:1 de cierre de acto.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text": "Al despertar, veo que la fiebre de Peeta ha desaparecido. Sus ojos azules brillan con claridad y su pierna ya no está hinchada. Afuera, el cielo se ha cerrado y una lluvia torrencial inunda la arena. Los Vigilantes están usando el clima para mantenernos encerrados mientras los demás tributos mueren. Peeta me cuida con ternura, lavándome la herida de la frente y obligándome a comer. Por primera vez, el romance que fingimos para las cámaras empieza a sentirse como algo real, un refugio cálido en medio de un mundo de pesadilla.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el descubrimiento de las bayas 'jaula de noche' y el peligro de su veneno.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nBayas de color púrpura oscuro casi negro. Katniss las sostiene con precaución. Peeta observa con curiosidad.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de ambos sentados en el bosque. En primer plano, el puñado de bayas destaca contra la palma de la mano.\n\nPERSONAJES Y ACCIÓN\nKatniss explicando el peligro mortal de la fruta. Peeta asombrado por la rapidez del veneno (mención a la Comadreja sugerida).\n\nENTORNO, PALETA E ILUMINACIÓN\nClaro del bosque con arbustos verdes. Paleta de verdes, marrones y el violeta intenso de las bayas. Luz solar clara.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_nightlock_berries.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No dibujar a la Comadreja muerta; el peligro debe ser sugerido por la conversación y el color de la fruta.\n\nFORMATO DE SALIDA\nIlustración 1:1 nítida.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text": "De pronto, un ruido metálico nos sobresalta. Un paracaídas plateado aterriza justo en la entrada de la cueva. Dentro hay un banquete: panecillos, queso de cabra, manzanas y una sopera llena de estofado de cordero con arroz, mi plato favorito del Capitolio. Comemos con ansia, saboreando cada bocado como si fuera el último. Haymitch está enviándonos un mensaje claro: si seguimos actuando como enamorados, el público seguirá enviándonos comida. Nos abrazamos bajo el saco de dormir, escuchando el rugido de la tormenta y soñando con volver a casa.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Katniss y Peeta compartiendo el estofado de cordero, un momento de verdadera felicidad en la arena.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nSopera de metal con estofado de carne y ciruelas. Panecillos del Distrito 11. Estilo Kern.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de ambos comiendo con ansia, sentados sobre su saco de dormir. Sus rostros reflejan un alivio genuino.\n\nPERSONAJES Y ACCIÓN\nPeeta ofreciendo un trozo de pan. Katniss saboreando el estofado. Es un banquete de cuento en medio de la guerra.\n\nENTORNO, PALETA E ILUMINACIÓN\nInterior acogedor de la cueva. Colores cálidos, amarillos y naranjas de la luz de una vela sugerida. Ambiente reconfortante.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_bread_loaf.\n\nRESTRICCIONES / NEGATIVOS\nSin armas visibles en este plano. No fotorrealismo. El estofado debe verse apetitoso con colores planos.\n\nFORMATO DE SALIDA\nIlustración 1:1 acogedora.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "text": "Cuando la lluvia para, salimos a cazar. Peeta recolecta unas bayas de un color morado intenso que ha encontrado cerca del arroyo. Yo las reconozco de inmediato por las historias de mi padre: son «jaulas de noche», un veneno mortal que te mata antes de llegar al estómago. De repente, un cañonazo suena. El aerodeslizador aparece para llevarse a la chica del Distrito 5, la «Comadreja». Ella nos estaba espiando y robó las bayas de Peeta, creyendo que eran seguras. El veneno que Peeta recogió por error ha eliminado a nuestra rival más astuta.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el sueño compartido de un futuro en la Aldea de los Vencedores del Distrito 12.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCasas grandes de madera con chimeneas humeantes al fondo (sugeridas). Katniss y Peeta de la mano.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general imaginario. Los personajes aparecen en una esquina mirando hacia una visión flotante de sus futuras casas bajo la nieve.\n\nPERSONAJES Y ACCIÓN\nPeeta señalando hacia el horizonte con esperanza. Katniss permitiéndose imaginar una vida sin hambre. Actitud soñadora.\n\nENTORNO, PALETA E ILUMINACIÓN\nContraste entre el gris de la cueva y el blanco/azul brillante de la visión del hogar. Paleta pastel para la ensoñación.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nSin elementos de guerra. No usar efectos de transparencia digital; la visión debe ser estilizada con líneas claras.\n\nFORMATO DE SALIDA\nIlustración 1:1 lírica.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "text": "El sol vuelve a brillar con un calor brutal, pero algo ha cambiado. El arroyo se ha secado por completo; los Vigilantes han drenado toda el agua de la arena excepto la del gran lago frente a la Cornucopia. Es su forma de obligarnos a salir de nuestro escondite y enfrentarnos al último tributo: Cato. Recogemos nuestras cosas y nos dirigimos al lago, sabiendo que el final de los Juegos está cerca. Ya no queda donde esconderse. El Capitolio quiere su gran final y nosotros somos los protagonistas del espectáculo.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el acercamiento final al lago bajo un calor brutal, con el arroyo seco como señal de peligro.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLecho de arroyo seco con piedras polvorientas. Katniss con el arco listo. El lago azul al fondo.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general lateral. Los tributos caminan por el lecho vacío del río hacia el centro de la arena. Perspectiva forzada hacia la Cornucopia.\n\nPERSONAJES Y ACCIÓN\nKatniss y Peeta alertas, sudorosos. Peeta cojea ligeramente pero avanza con firmeza. La acción es de avance táctico.\n\nENTORNO, PALETA E ILUMINACIÓN\nPaisaje árido y quemado por el sol. Paleta de amarillos, ocres y el azul intenso del lago. Luz cenital abrasadora.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nSin mutos todavía. No fotorrealismo en el efecto de calor. Evitar detalles excesivos en el bosque circundante.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de tensión.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_effie.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "text": "Al llegar al lago, vemos a Cato huyendo desesperadamente. Pero no huye de nosotros, sino de algo mucho peor. Una manada de mutaciones, lobos gigantescos con pelaje de colores y ojos humanos, surge de la espesura. Corremos hacia la Cornucopia de oro para protegernos. Al subir a la parte más alta, me doy cuenta con horror de que los lobos llevan collares con los números de los distritos: son los tributos muertos transformados en bestias. El Capitolio nos obliga a luchar contra los fantasmas de los que ya han caído.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el ataque de los mutos en el lago y la huida desesperada hacia la Cornucopia de oro.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLobos mutantes con pelajes de colores antinaturales y ojos humanos inquietantes. Cornucopia dorada gigante.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general dinámico. Katniss y Peeta trepando por el lateral del cuerno de oro mientras la jauría de lobos salta tras ellos.\n\nPERSONAJES Y ACCIÓN\nPeeta ayudando a Katniss a subir. Cato huyendo en la misma dirección. Caos y terror absoluto en el centro de la arena.\n\nENTORNO, PALETA E ILUMINACIÓN\nCrepúsculo en la arena. Cielo púrpura. El brillo dorado de la Cornucopia contrasta con las sombras de los mutos. Luz dramática plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre ni violencia gráfica explícita. Los mutos deben ser aterradores por sus colores y ojos, no por deformidades gore.\n\nFORMATO DE SALIDA\nIlustración 1:1 cinematográfica plana.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "text": "La batalla en lo alto de la Cornucopia es feroz. Cato tiene a Peeta agarrado por el cuello, amenazando con tirarlo a los lobos si disparo. Peeta, con un último esfuerzo, dibuja una equis con su propia sangre en la mano de Cato. Aprovecho el segundo de distracción y le atravieso la mano con una flecha. Cato cae al suelo, donde las mutaciones lo esperan. Tras una noche de agonía, disparo una flecha final por piedad. El cañón suena. Solo quedamos Peeta y yo. ¡Hemos ganado! Pero el silencio que sigue es aterrador.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nEl duelo final con Cato sobre la Cornucopia y la traición del Capitolio al revocar la regla de dos ganadores.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCato sujetando a Peeta por el cuello. Katniss apuntando su arco. Vencedores cansados y heridos.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio-corto sobre la cima del cuerno de oro. Triángulo de tensión entre los tres personajes bajo la luz de la luna.\n\nPERSONAJES Y ACCIÓN\nPeeta señalando con sangre en el brazo de Cato para que Katniss dispare. Cato con expresión de locura y desesperación. Momento crítico.\n\nENTORNO, PALETA E ILUMINACIÓN\nCielo nocturno azul profundo con estrellas. El metal dorado refleja la luna blanca. Paleta de azules, negros y dorados.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nSin mostrar la caída de Cato a los mutos. No fotorrealismo. Evitar sombras realistas; usar planos de color para definir volúmenes.\n\nFORMATO DE SALIDA\nIlustración 1:1 de alto impacto narrativo.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_johanna.png",
+            "anchor_env_forest.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "text": "De pronto, la voz de Claudius Templesmith anuncia que el cambio de reglas ha sido revocado: solo puede haber un vencedor. El Capitolio nos ha traicionado para forzar un duelo final entre nosotros. Peeta baja su cuchillo y me pide que lo mate, pero yo tengo un plan mejor. Saco las bayas venenosas y le doy la mitad. «A la de tres», susurro. Justo cuando estamos a punto de tragarlas, las trompetas suenan frenéticas. ¡Parad! ¡Parad! Nos declaran vencedores a ambos. El triunfo de las bayas ha humillado al Capitolio, y ahora somos libres, pero el peligro real acaba de empezar.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nCapturar el triunfo final de las bayas: Katniss y Peeta declarados vencedores tras su amago de suicidio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss y Peeta abrazados junto al lago. Sus manos están limpias de bayas. Rostros de agotamiento y victoria amarga.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano americano de ambos personajes en el centro de la playa. Un aerodeslizador plateado aparece arriba para recogerlos.\n\nPERSONAJES Y ACCIÓN\nPeeta mira a Katniss con amor infinito. Katniss mira al cielo con un desafío silencioso. El juego ha terminado, pero la rebelión comienza.\n\nENTORNO, PALETA E ILUMINACIÓN\nAmanecer sobre el lago. Colores rosados y amarillos suaves. El aerodeslizador proyecta una luz blanca plana sobre ellos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_nightlock_berries, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin créditos finales. No usar fotorrealismo. Evitar que la escena parezca puramente romántica; debe haber un aire de tragedia compartida.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 final de cierre de cuento.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_effie.png",
+            "anchor_char_rue.png",
+            "anchor_env_train.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    }
+  ]
+}

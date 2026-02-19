@@ -1,0 +1,462 @@
+{
+  "story_id": "05",
+  "title": "La Chispa de la Rebelion",
+  "status": "definitive",
+  "book_rel_path": "los_juegos_del_hambre",
+  "created_at": "2026-02-18T12:00:00Z",
+  "updated_at": "2026-02-18T23:50:00Z",
+  "cover": {
+    "status": "draft",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear una portada poderosa para el cuento 'La Chispa de la Rebelión' que simbolice el conflicto entre la esperanza de los distritos y el control absoluto del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener el estilo Sergio Kern de línea negra limpia y expresiva con colores planos vibrantes. Katniss Everdeen debe lucir su trenza negra, piel aceitunada y ojos grises. El Presidente Snow debe aparecer como una figura amenazante pero refinada, con su cabello blanco y su rosa blanca. Respetar la estética de Ligne Claire.\n\nCOMPOSICIÓNY ENCUADRE\nComposición dual. En el centro, Katniss de perfil mirando hacia un horizonte donde se intuye fuego. En la parte superior, el rostro gélido de Snow superpuesto sobre un cielo gris, como si observara cada movimiento. El broche de sinsajo debe brillar en el centro.\n\nPERSONAJES Y ACCIÓN\nKatniss con expresión de alerta y valentía contenida. Snow con mirada de serpiente, inexpresivo y calculador. No hay acción física, sino una tensión psicológica palpable entre el símbolo de la rebelión y el tirano.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo dividido entre el gris carbón del Distrito 12 y el rojo escarlata del Capitolio. Iluminación plana con contrastes fuertes entre los tonos fríos de Katniss y el blanco radiante de Snow. Una única rosa blanca destaca en la oscuridad.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_snow_base, prop_mockingjay_pin, prop_president_rose.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logos. Sin fotorrealismo, sin degradados suaves, sin sombreado complejo. Evitar que la imagen parezca de una película de acción moderna; debe ser ilustración de cuento infantil.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alta calidad, nítida y preparada para maquetación editorial.",
+    "active_id": "",
+    "alternatives": [],
+    "reference_ids": [
+      "anchor_style_editorial_v1.png",
+      "anchor_style_palette_v1.png",
+      "anchor_cover_main.png",
+      "anchor_char_katniss.png",
+      "anchor_char_prim.png",
+      "anchor_char_snow.png",
+      "anchor_char_finnick.png",
+      "anchor_prop_rose.png"
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Sujeto el termo con ambas manos, aunque el calor del té se perdió hace un rato en el aire helado. Estoy sentada sobre una roca mientras el alba empieza a iluminar el bosque. Hoy empieza la Gira de la Victoria y tengo miedo. He pasado los últimos meses intentando olvidar la arena, pero el Capitolio no me deja en paz. Vivo en la Aldea de los Vencedores con mi madre y Prim, pero mi mente sigue atrapada entre los árboles de los Juegos, esperando el siguiente ataque.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar a Katniss en soledad en el bosque nevado del Distrito 12, reflejando su aislamiento y temor antes de la Gira de la Victoria.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con su trenza negra y chaqueta de cuero. Debe estar sentada sobre una roca. Estilo de línea clara y colores planos.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general del bosque invernal. Katniss en un lateral de la imagen, pequeña ante la inmensidad de los árboles desnudos. El alba asoma tímidamente.\n\nPERSONAJES Y ACCIÓN\nKatniss sujetando un termo con ambas manos, encogida por el frío. Su mirada está perdida en el horizonte, transmitiendo una profunda preocupación.\n\nENTORNO, PALETA E ILUMINACIÓN\nBosque frío y brumoso con nieve en el suelo. Paleta de azules pálidos, blancos y grises. Luz tenue y fría de amanecer.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_arena_forest, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir otros personajes. La nieve no debe tener texturas realistas complejos.\n\nFORMATO DE SALIDA\nIlustración 1:1 nítida para cuento.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "text": "Al volver a casa, encuentro a mi madre pálida y asustada. En el estudio me espera un visitante inesperado: el Presidente Snow. Su olor a rosas y sangre inunda la habitación. Me mira con sus ojos de serpiente y me explica que mi truco con las bayas en la arena no fue visto como un acto de amor, sino como un desafío. Dice que he encendido una chispa de rebelión en los distritos y que, si no logro apagarla, mi familia y Gale pagarán las consecuencias.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nCapturar el encuentro tenso entre Katniss y el Presidente Snow en el estudio de su casa.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nSnow con cabello blanco y rosa blanca en la solapa. Katniss con expresión asustada. La habitación debe ser austera.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de ambos personajes sentados a los lados de un escritorio de madera. Snow ocupa una posición de poder, Katniss se ve vulnerable.\n\nPERSONAJES Y ACCIÓN\nSnow mirando fijamente a Katniss con sus ojos de serpiente. Katniss con las manos entrelazadas, intentando mantener la calma. El aroma a rosas y sangre debe sugerirse visualmente.\n\nENTORNO, PALETA E ILUMINACIÓN\nInterior de madera oscura y paredes de piedra. Iluminación focal sobre Snow. Colores ocres y marrones con el blanco puro de la rosa destacando.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_snow_base, prop_president_rose.\n\nRESTRICCIONES / NEGATIVOS\nSin sombras dramáticas realistas. Evitar que Snow parezca un anciano amable; debe ser inquietante. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustración 1:1 clara.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "text": "Snow me ordena que, durante la Gira de la Victoria, convenza a todo Panem de que estoy loca de amor por Peeta. «Convénceme a mí», susurra antes de marcharse. Siento un frío glacial que no tiene nada que ver con la nieve exterior. Mi vida ya no me pertenece; ahora soy una pieza más en su tablero. Debo sonreír, besar a Peeta y fingir felicidad absoluta mientras el mundo que conozco empieza a agrietarse. El peso de la seguridad de mis seres queridos recae sobre mis hombros.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar la amenaza directa de Snow hacia los seres queridos de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPrimer plano del rostro de Snow. La rosa blanca debe estar muy cerca de la cámara. Estilo Kern de línea negra constante.\n\nCOMPOSICIÓN Y ENCUADRE\nPrimer plano extremo de la cara de Snow con la rosa en primer término. Los ojos de serpiente deben ser el foco principal.\n\nPERSONAJES Y ACCIÓN\nSnow susurrando su orden fatal: convencer al Capitolio de su amor por Peeta. Su expresión es de una crueldad educada.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo desenfocado de la habitación gris. Paleta dominada por el blanco de Snow y el rojo sangre de su aliento sugerido. Iluminación plana y dura.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_snow_base, prop_president_rose.\n\nRESTRICCIONES / NEGATIVOS\nNo mostrar violencia física. Sin degradados suaves. El rostro no debe tener arrugas fotorrealistas.\n\nFORMATO DE SALIDA\nIlustración 1:1 de alto impacto visual.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "text": "El tren de la victoria es tan lujoso como el primero, pero esta vez el ambiente es tenso y silencioso. Peeta y yo apenas nos hablamos, atrapados en la mentira que debemos representar. Cinna me prepara ropa elegante, intentando ocultar mi angustia tras capas de seda y pieles de armiño. Haymitch me advierte que la situación es mucho más peligrosa de lo que imagino. Cada parada de este viaje será una prueba de fuego. No puedo permitirme ni un solo error si quiero mantener a Prim a salvo.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar la soledad de Katniss y Peeta en el lujoso tren de la Gira de la Victoria.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta con cabello rubio ceniza. Katniss con ropa de seda elegante pero triste. Interiores de lujo del Capitolio.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general del vagón. Peeta en un extremo mirando por la ventana; Katniss en otro sofá, rodeada de cojines de seda. Un muro invisible los separa.\n\nPERSONAJES Y ACCIÓN\nAmbos personajes evitando el contacto visual. Peeta melancólico; Katniss rígida. La incomodidad entre los 'amantes' es el tema central.\n\nENTORNO, PALETA E ILUMINACIÓN\nInterior saturado con terciopelos rojos y dorados. Luz cálida artificial que no logra calmar el ambiente. Colores muy vibrantes.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_train_capitol.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir a Effie Trinket ni a Haymitch en este encuadre íntimo.\n\nFORMATO DE SALIDA\nIlustración 1:1 detallada.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "text": "Nuestra primera parada es el Distrito 11, el hogar de Rue. Al ver los campos de cultivo y los rostros cansados de los trabajadores, el corazón me da un vuelco. Subimos a un estrado frente al Edificio de Justicia, rodeados de agentes de la paz con armas automáticas. Veo a la familia de Rue entre la multitud; sus ojos oscuros me recuerdan tanto a la niña que no pude salvar. El aire está cargado de una electricidad extraña, una mezcla de dolor y esperanza contenida que me aterra.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar la llegada triunfal y tensa al Distrito 11 durante la gira.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMultitud de trabajadores de piel oscura en un entorno de campos de trigo. Katniss y Peeta en un podio elevado.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general desde la multitud hacia el escenario de mármol. El sol brilla sobre las banderas del Capitolio.\n\nPERSONAJES Y ACCIÓN\nKatniss leyendo un discurso con gesto serio. Peeta a su lado. Abajo, la gente observa en un silencio sepulcral y desafiante.\n\nENTORNO, PALETA E ILUMINACIÓN\nCampos amarillos de trigo al fondo. Escenario blanco frío. Paleta de amarillos, blancos y rojos Capitolio. Luz cenital dura.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nNo dibujar caras individuales en la multitud. Sin fotorrealismo. Evitar sombras complejas en la vegetación.\n\nFORMATO DE SALIDA\nIlustración 1:1 de gran escala.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "text": "Llega el momento de hablar. Aunque tengo un discurso preparado por el Capitolio, decido decir lo que siento. Agradezco a las familias de Rue y Thresh por su sacrificio y les digo que siempre estarán conmigo. De repente, un anciano silba la melodía de cuatro notas de Rue. La multitud entera se lleva tres dedos a los labios y me dedica el saludo del Distrito 12 en un silencio absoluto. Es un acto de desafío masivo que me deja sin aliento. He fallado a Snow.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nCapturar el trágico momento del saludo de los tres dedos en el Distrito 11 y la represión inmediata.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nUn anciano arrodillado frente a agentes de la paz de blanco. Katniss mirando con horror desde el escenario.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio dinámico. En primer plano, el anciano con los tres dedos alzados; en segundo plano, un agente levantando un arma. Katniss al fondo.\n\nPERSONAJES Y ACCIÓN\nEl anciano con dignidad ante la muerte. Katniss con la boca abierta en un grito silencioso. Agentes robóticos y fríos.\n\nENTORNO, PALETA E ILUMINACION\nPlaza de piedra gris. Contraste entre el blanco de los uniformes y el rojo de las banderas. Luz dramática plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_reaping_square, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nNo mostrar sangre ni el disparo de forma explícita. Sin fotorrealismo. Mantener el estilo de cuento.\n\nFORMATO DE SALIDA\nIlustración 1:1 de impacto emocional.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "text": "El castigo del Capitolio es instantáneo y cruel. Antes de que podamos bajar del escenario, dos agentes de la paz arrastran al anciano que silbó y lo obligan a ponerse de rodillas. Le pegan un tiro en la cabeza delante de todos. Peeta me agarra del brazo y me empuja hacia el interior del edificio mientras los gritos de la multitud estallan fuera. Las puertas se cierran de golpe, dejándonos en la oscuridad. Comprendo con horror que mis palabras, en vez de calmar las aguas, han provocado más muertes.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el viaje continuo a través de los distritos, mostrando la diversidad de Panem y el descontento.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEl tren de plata cruzando diferentes paisajes. Vistas de fábricas, mar y bosques.\n\nCOMPOSICIÓN Y ENCUADRE\nComposición de panel dividido o plano general del tren en movimiento diagonal a través del mapa de Panem.\n\nPERSONAJES Y ACCIÓN\nSin personajes detallados. El tren es el protagonista, simbolizando la máquina del Capitolio recorriendo el país.\n\nENTORNO, PALETA E ILUMINACIÓN\nPaisajes industriales grises frente a costas azules y campos verdes. Paleta variada pero desaturada. Luz de atardecer.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_train_capitol, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No usar efectos de desenfoque de velocidad. Sin texto.\n\nFORMATO DE SALIDA\nIlustración 1:1 narrativa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "text": "Seguimos el viaje por los demás distritos como si fuéramos autómatas. Cenas, discursos y sonrisas falsas bajo la mirada vigilante de las cámaras. Una noche, en la televisión del alcalde de un distrito, veo algo que no debería haber visto: imágenes del Distrito 8 en llamas. La gente lucha en las calles con los rostros tapados, desafiando a los agentes de la paz. Es un levantamiento real. La chispa que Snow tanto temía se ha convertido en un incendio y yo soy la razón de todo ese caos.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el momento en que Katniss descubre la rebelión en el Distrito 8 a través de la televisión.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nUna pantalla de televisión mostrando disturbios y edificios ardiendo. Katniss reflejada en el cristal.\n\nCOMPOSICIÓN Y ENCUADRE\nPrimer plano de la pantalla de televisión. En la imagen de la tele se ven figuras con máscaras y humo. El ojo de Katniss se ve en un rincón, observando.\n\nPERSONAJES Y ACCIÓN\nRebeldes del Distrito 8 luchando contra agentes de la paz. Katniss paralizada por el asombro y el miedo. El fuego es el punto focal.\n\nENTORNO, PALETA E ILUMINACIÓN\nHabitación oscura iluminada por el resplandor azul y naranja de la tele. Paleta de grises, azules y naranjas vivos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nNo fotorrealismo. No mostrar rostros claros de los rebeldes. Sin degradados de humo realistas.\n\nFORMATO DE SALIDA\nIlustración 1:1 de tensión.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_snow.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "text": "Regresamos al Distrito 12 con el peso del mundo sobre los hombros. El ambiente en la estación es pesado, lleno de cámaras que esperan nuestra llegada como si fuéramos trofeos. Peeta me ofrece su mano, fría y firme. «¿Una última vez?», me pregunta con un tono que suena más a derrota que a amor artificial. Lo cojo de la mano y sonrío para Panem mientras el tren se detiene. Sé que, aunque la gira ha terminado, la verdadera batalla contra el Presidente Snow acaba de empezar en los callejones grises de mi hogar.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el regreso al Distrito 12 bajo un clima invernal y opresivo.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCasas de madera del Distrito 12 cubiertas de nieve sucia de carbón. Katniss caminando sola.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general de la calle principal. Katniss es una silueta oscura en medio de la blancura grisácea de la nieve.\n\nPERSONAJES Y ACCIÓN\nKatniss con los hombros hundidos, regresando a la Aldea de los Vencedores. Nadie en la calle se atreve a mirarla.\n\nENTORNO, PALETA E ILUMINACIÓN\nAmbiente industrial decadente y gélido. Paleta de grises, negros y blancos sucios. Luz de tarde mortecina.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_district12_seam, char_katniss_base.\n\nRESTRICCIONES / NEGATIVOS\nSin colores brillantes. No fotorrealismo. Evitar sombras complejas en la nieve.\n\nFORMATO DE SALIDA\nIlustración 1:1 evocadora.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text": "Unos días después, Peeta viene a visitarme a la casa nueva. Caminamos por la Aldea de los Vencedores, lejos de los oídos y las cámaras del Capitolio. Me dice que ya no quiere que nuestra relación sea solo una actuación; quiere que seamos amigos de verdad. Me pregunta cuál es mi color favorito, algo tan sencillo que me deja sin palabras. Me doy cuenta de que sabe que soy capaz de morir por él, pero no conoce mis gustos más simples. Por un momento, entre la nieve, el peso de los Juegos parece desaparecer.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el momento de amistad sincera entre Katniss y Peeta en la nieve.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta y Katniss caminando juntos. Peeta con su cabello rubio y mirada amable. Estilo de línea negra limpia.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de ambos caminando por un parque nevado. Se miran a los ojos por primera vez de forma real.\n\nPERSONAJES Y ACCIÓN\nPeeta haciendo una pregunta sencilla. Katniss esbozando una sonrisa leve. No hay pretensión de cámaras, solo dos amigos.\n\nENTORNO, PALETA E ILUMINACIÓN\nLa Aldea de los Vencedores con sus casas grandes al fondo. Paleta de blancos, azules suaves y el rubio de Peeta. Luz de mañana limpia.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir elementos del Capitolio. Evitar poses románticas exageradas.\n\nFORMATO DE SALIDA\nIlustración 1:1 cálida.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text": "Aprovecho el primer domingo libre para ir al bosque. Gale me espera en nuestro lugar de reunión habitual, junto al saliente rocoso, pero su mirada es gélida. Está dolido por mi compromiso público con Peeta, aunque sepa que es estrategia pura. Le ofrezco una bolsa con comida y unos guantes de Cinna, intentando romper el hielo entre nosotros. Gale se burla de mi papel de «prometida», pero su amargura esconde un dolor profundo. Siento que el bosque, que antes era nuestro refugio secreto, ahora está lleno de muros invisibles.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar a Katniss preparándose para ir al bosque a encontrarse con Gale.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con su arco de madera artesanal y carcaj. Viste su ropa de caza vieja. Estética de Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de Katniss revisando sus flechas antes de saltar la valla del distrito. Determinación en su rostro.\n\nPERSONAJES Y ACCIÓN\nKatniss en guardia, escuchando si la valla está electrificada. Movimiento de sigilo y precaución.\n\nENTORNO, PALETA E ILUMINACIÓN\nLímite del distrito con la alambrada gris. Al fondo, el inicio del bosque invernal. Colores desaturados y ocres.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_district12_seam, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir a Gale todavía. Sin efectos de luz digital modernos.\n\nFORMATO DE SALIDA\nIlustración 1:1 nítida.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "text": "—El Presidente Snow amenazó con matarte —le confieso de golpe. Gale deja de jugar con su cuchillo y me mira con una seriedad absoluta. Le cuento todo sobre la visita del presidente a mi estudio, los agentes de la paz disparando en el Distrito 11 y la chispa que he encendido sin querer en Panem. Gale escucha en silencio mientras avivamos una pequeña hoguera. Sus manos, fuertes y hábiles, se tensan al comprender que ya no hay vuelta atrás. El peligro que corre mi familia y la suya es ahora una realidad compartida.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nCapturar la confesión de Katniss a Gale sobre la amenaza de Snow en el bosque.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nGale con rasgos de la Veta y expresión endurecida. Katniss contándole la verdad. Pequeña hoguera entre ellos.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio corto de ambos personajes sentados frente a frente. El fuego de la hoguera ilumina sus rostros desde abajo.\n\nPERSONAJES Y ACCIÓN\nKatniss hablando con urgencia. Gale con las manos tensas, escuchando con gravedad absoluta. Sus miradas se cruzan con intensidad.\n\nENTORNO, PALETA E ILUMINACIÓN\nClaro del bosque nocturno o en penumbra. Contraste entre el naranja de las llamas y el azul profundo del entorno. Iluminación focal plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin degradados de color en el humo. Evitar fotorrealismo en las texturas de la ropa. Sin elementos del Capitolio.\n\nFORMATO DE SALIDA\nIlustración 1:1 narrativa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_env_seam.png",
+            "anchor_env_d13.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "text": "—Tenemos que huir, Gale —le digo con urgencia—. Podemos coger a nuestras familias y meternos en lo más profundo del bosque. Tú mismo dijiste que podíamos hacerlo la mañana de la cosecha. Recuerdo la esperanza en sus ojos aquel día, pero ahora algo ha cambiado. Le propongo dejar atrás el Distrito 12 para siempre, vivir de la caza y el agua de los arroyos, lejos de la tiranía del Capitolio. Es nuestra única oportunidad de salvar a Prim y a sus hermanos de la inminente venganza de los Vigilantes.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Katniss proponiendo la huida a Gale, evocando su deseo de libertad.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss señalando hacia el horizonte profundo del bosque. Gale mirando con duda. Estilo Sergio Kern.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano americano de ambos de pie en el bosque nevado. Katniss en un gesto suplicante; Gale estático como una roca.\n\nPERSONAJES Y ACCIÓN\nKatniss imaginando una vida libre en la naturaleza. Gale procesando la idea de abandonar a los demás para salvarse ellos.\n\nENTORNO, PALETA E ILUMINACIÓN\nBosque de pinos cubiertos de nieve. Paleta de blancos, verdes oscuros y marrones. Luz invernal plana y fría.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir animales. La nieve no debe ser brillante ni tener destellos realistas.\n\nFORMATO DE SALIDA\nIlustración 1:1 estilizada.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "text": "Pero Gale no se mueve. Me habla de lo que vio en las minas: la gente está hablando, el descontento se extiende como un reguero de pólvora por toda la Veta. Me cuenta que si el Distrito 8 se ha levantado, otros distritos también pueden hacerlo. —No has hecho daño a nadie, Katniss —susurra con una pasión que me asusta—. Les has dado una oportunidad. Solo tienen que ser lo suficientemente valientes para aprovecharla. Gale ya no piensa en huir; ahora piensa en luchar, en convertir la pequeña chispa en un incendio total.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nReflejar la transformación de Gale en un soldado de la rebelión.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nGale con mirada de acero y postura militar. Katniss retrocediendo un paso ante su intensidad. Línea negra firme.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de Gale alzando la barbilla, con el bosque de fondo. Él se ve más alto y decidido que nunca.\n\nPERSONAJES Y ACCIÓN\nGale hablando de la lucha y la oportunidad de vencer al Capitolio. Su expresión es de un fuego interno que Katniss no comparte.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo de árboles oscuros. Paleta de grises y verdes oliva. Luz lateral que resalta la dureza del rostro de Gale.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_gale_base, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No mostrar armas todavía. Gale no debe parecer un villano, sino un rebelde convencido.\n\nFORMATO DE SALIDA\nIlustración 1:1 de fuerza visual.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_rue.png",
+            "anchor_env_seam.png",
+            "anchor_env_d13.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "text": "La decisión de Gale me deja desolada. Él prefiere quedarse y arriesgarse a una guerra antes que buscar la seguridad silenciosa de los árboles. Entiendo que ya no somos solo dos jóvenes cazadores intentando sobrevivir; Gale se ha convertido en un soldado de la rebelión. Mi plan de escape se desmorona frente a su deseo inquebrantable de libertad. Camino de vuelta a la alambrada, sintiendo el peso de un destino que no he elegido. El Distrito 12 se siente hoy más como una jaula que nunca antes en mi vida.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar la desolación de Katniss al comprender que ha perdido su plan de escape.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss caminando sola de vuelta a la alambrada. Debe verse pequeña y derrotada. Estilo de línea clara.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano general lateral. Katniss en el centro de un camino de nieve pisoteada. A un lado el bosque libre, al otro la valla metálica.\n\nPERSONAJES Y ACCIÓN\nKatniss con la cabeza gacha. La valla metálica se yergue ante ella como los barrotes de una celda gigante.\n\nENTORNO, PALETA E ILUMINACIÓN\nCielo plomizo y triste. Paleta de grises metálicos y azules ceniza. Iluminación homogénea y fría de atardecer.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_district12_seam, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin colores cálidos. No fotorrealismo. Evitar detalles excesivos en la red de la valla.\n\nFORMATO DE SALIDA\nIlustración 1:1 melancólica.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_env_seam.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "text": "Al llegar a la Aldea, me encuentro con Peeta. Le hago la misma propuesta desesperada: ¿huirías del distrito conmigo? Él me sujeta del brazo y me mira con una tristeza infinita en sus ojos azules. —Iré si me lo pides, Katniss —responde—, pero estoy convencido de que tú no lo harás al final. Él sabe la verdad que yo intento ocultar: no puedo abandonar a Gale en medio de una revolución. Peeta me suelta, dejándome sola bajo la nieve que empieza a caer. El tablero está listo y yo estoy atrapada.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nCapturar el momento final del cuento con la respuesta triste de Peeta a la propuesta de huida.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta sujetando el brazo de Katniss bajo la nieve que cae. Mirada de profunda tristeza en sus ojos azules.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio corto de ambos personajes. El centro de la imagen son sus manos y sus rostros cercanos. Nieve cayendo en copos grandes y planos.\n\nPERSONAJES Y ACCIÓN\nPeeta diciendo que Katniss no huirá al final. Katniss mirándolo con ojos de shock, sabiendo que él tiene razón.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo borroso de la Aldea de los Vencedores. Paleta de azules, blancos y el rubio de Peeta. Iluminación mortecina de noche incipiente.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nSin créditos finales. No usar fotorrealismo. Los copos de nieve deben ser formas circulares simples.\n\nFORMATO DE SALIDA\nIlustración 1:1 final de cierre de cuento.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    }
+  ]
+}

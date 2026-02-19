@@ -4,7 +4,7 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T00:00:00Z",
-  "updated_at": "2026-02-19T12:48:40.453326+00:00",
+  "updated_at": "2026-02-19T13:21:06.269098+00:00",
   "cover": {
     "status": "draft",
     "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada emblemática para el cuento 'La Cosecha de Katniss' que capture el sacrificio heroico de la protagonista y la atmósfera opresiva del Distrito 12.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo visual de Sergio Kern: línea negra limpia y expresiva, colores planos sin degradados complejos y anatomía de cuento infantil. Katniss debe aparecer con su trenza negra, piel aceitunada y ojos grises. El entorno debe reflejar la pobreza de la Veta mediante tonos grises y ocres, respetando la estética de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio central de Katniss Everdeen mirando directamente al espectador con expresión decidida. Detrás de ella, se vislumbra la silueta del Edificio de Justicia en la Plaza de la Cosecha. Composición equilibrada con espacio para el título en la parte superior.\n\nPERSONAJES Y ACCION\nKatniss de pie, con el broche de sinsajo dorado brillando sutilmente en su pecho sobre un vestido azul sencillo. Su postura es firme, simbolizando su papel como protectora de su familia.\n\nENTORNO, PALETA E ILUMINACION\nFondo de edificios de piedra gris bajo un cielo encapotado. Paleta dominada por grises, azules cenizos y marrones, con un único punto focal dorado en el broche. Iluminación plana y uniforme característica de los álbumes ilustrados clásicos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, env_reaping_square, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni nombres de autor en la imagen. Prohibido el fotorrealismo, las texturas 3D, el sombreado dramático o el uso de degradados digitales modernos. Evitar composiciones recargadas que distraigan del personaje principal.\n\nFORMATO DE SALIDA\nIlustración digital final en relación de aspecto 1:1, lista para maquetación editorial con bordes limpios y alta definición en los contornos negros.",
@@ -300,13 +300,23 @@
       "images": {
         "main": {
           "status": "draft",
-          "prompt": "OBJETIVO DE ILUSTRACION\nPresentar a Effie Trinket ante el Distrito 12, marcando el contraste radical entre el Capitolio y la pobreza de la Veta.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEffie con peluca rosa volumetrica y traje verde primavera llamativo. Escenario oficial de la Cosecha en el Edificio de Justicia.\n\nCOMPOSICION Y ENCUADRE\nPlano medio desde la perspectiva de la multitud. Effie ocupa el foco principal en el podio, con gesto teatral y sonrisa artificial.\n\nPERSONAJES Y ACCION\nEffie saluda y hace una reverencia exagerada antes de iniciar el sorteo, mientras la multitud mantiene un silencio tenso.\n\nENTORNO, PALETA E ILUMINACION\nPaleta gris y ocre para el distrito frente al verde saturado y rosa intenso de Effie. Luz de mediodia plana, estilo editorial infantil.\n\nREFERENCIAS (reference_ids)\nanchors/char-effie.png, anchors/env-reaping-square.png.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. Evitar rasgos caricaturescos extremos y evitar elementos modernos fuera de Panem.\n\nFORMATO DE SALIDA\nIlustracion 1:1 con linea clara y contornos limpios.",
+          "prompt": "OBJETIVO DE ILUSTRACION\nPresentar a Effie Trinket ante el Distrito 12, marcando el contraste radical entre el Capitolio y la pobreza de la Veta.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEffie con peluca rosa volumetrica y traje verde primavera llamativo. Escenario oficial de la Cosecha en el Edificio de Justicia.\n\nCOMPOSICION Y ENCUADRE\nPlano medio desde la perspectiva de la multitud. Effie ocupa el foco principal en el podio, con gesto teatral y sonrisa artificial.\n\nPERSONAJES Y ACCION\nEffie saluda y hace una reverencia exagerada antes de iniciar el sorteo, mientras la multitud mantiene un silencio tenso.\n\nENTORNO, PALETA E ILUMINACION\nPaleta gris y ocre para el distrito frente al verde saturado y rosa intenso de Effie. Luz de mediodia plana, estilo editorial infantil.\n\nREFERENCIAS (reference_ids)\nchar_effie_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. Evitar rasgos caricaturescos extremos y evitar elementos modernos fuera de Panem.\n\nFORMATO DE SALIDA\nIlustracion 1:1 con linea clara y contornos limpios.",
           "reference_ids": [
             "anchors/char-effie.png",
             "anchors/env-reaping-square.png"
           ],
-          "active_id": "",
-          "alternatives": []
+          "active_id": "01/01_11_main-p11-main-flow-r2.png",
+          "alternatives": [
+            {
+              "id": "01/01_11_main-p11-main-flow-r2.png",
+              "slug": "p11-main-flow-r2",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_11_main-p11-main-flow-r2.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T13:17:20.740579+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
+          ]
         }
       }
     },
@@ -316,14 +326,24 @@
       "images": {
         "main": {
           "status": "draft",
-          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el instante de maxima tension cuando Effie introduce la mano en la urna de las chicas para extraer el papel decisivo.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEffie junto a la urna de cristal. Prim visible entre la multitud juvenil, rigida y asustada. Escenario oficial de la Cosecha.\n\nCOMPOSICION Y ENCUADRE\nPlano medio amplio centrado en la urna y la mano de Effie, con Prim al fondo en segundo termino para anticipar el impacto emocional.\n\nPERSONAJES Y ACCION\nEffie remueve papeletas y toma una. Prim observa inmovil, con gesto de miedo contenido, mientras el resto contiene la respiracion.\n\nENTORNO, PALETA E ILUMINACION\nAmbiente opresivo en grises y marrones; el vestuario de Effie aporta el unico contraste cromatico fuerte. Iluminacion uniforme de exterior.\n\nREFERENCIAS (reference_ids)\nanchors/char-effie.png, anchors/char-prim.png, anchors/env-reaping-square.png.\n\nRESTRICCIONES / NEGATIVOS\nSin dramatismos gore ni lagrimas exageradas. No incluir texto dentro de la imagen.\n\nFORMATO DE SALIDA\nIlustracion 1:1 narrativa, limpia y lista para maquetacion editorial.",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el instante de maxima tension cuando Effie introduce la mano en la urna de las chicas para extraer el papel decisivo.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEffie junto a la urna de cristal. Prim visible entre la multitud juvenil, rigida y asustada. Escenario oficial de la Cosecha.\n\nCOMPOSICION Y ENCUADRE\nPlano medio amplio centrado en la urna y la mano de Effie, con Prim al fondo en segundo termino para anticipar el impacto emocional.\n\nPERSONAJES Y ACCION\nEffie remueve papeletas y toma una. Prim observa inmovil, con gesto de miedo contenido, mientras el resto contiene la respiracion.\n\nENTORNO, PALETA E ILUMINACION\nAmbiente opresivo en grises y marrones; el vestuario de Effie aporta el unico contraste cromatico fuerte. Iluminacion uniforme de exterior.\n\nREFERENCIAS (reference_ids)\nchar_effie_base, char_prim_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin dramatismos gore ni lagrimas exageradas. No incluir texto dentro de la imagen.\n\nFORMATO DE SALIDA\nIlustracion 1:1 narrativa, limpia y lista para maquetacion editorial.",
           "reference_ids": [
             "anchors/char-effie.png",
             "anchors/char-prim.png",
             "anchors/env-reaping-square.png"
           ],
-          "active_id": "",
-          "alternatives": []
+          "active_id": "01/01_12_main-p12-main-flow-r2.png",
+          "alternatives": [
+            {
+              "id": "01/01_12_main-p12-main-flow-r2.png",
+              "slug": "p12-main-flow-r2",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_12_main-p12-main-flow-r2.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T13:21:06.255130+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
+          ]
         }
       }
     },

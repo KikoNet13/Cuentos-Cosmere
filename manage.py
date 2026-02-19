@@ -67,12 +67,16 @@ def cmd_export_story_pdf(
     if not bool(validation.get("is_valid", False)):
         return 1
 
+    # Default export path is library/<book_rel_path>/NN.pdf; this canonical target
+    # should be replaced on each export without forcing explicit --overwrite.
+    effective_overwrite = overwrite or output is None
+
     try:
         result = export_story_pdf(
             story_rel_path=story,
             output_path=output,
             size_cm=size_cm,
-            overwrite=overwrite,
+            overwrite=effective_overwrite,
         )
     except (FileNotFoundError, StoryStoreError, PdfExportError) as exc:
         print(f"ERROR: {exc}")
@@ -101,10 +105,18 @@ def main() -> None:
 
     export = sub.add_parser("export-story-pdf", help="Exportar cuento maquetado a PDF")
     export.add_argument("--story", required=True, help="Ruta de cuento, por ejemplo: los_juegos_del_hambre/01")
-    export.add_argument("--output", default=None, help="Ruta de salida del PDF")
+    export.add_argument(
+        "--output",
+        default=None,
+        help="Ruta de salida del PDF (por defecto: library/<book_rel_path>/NN.pdf)",
+    )
     export.add_argument("--size-cm", type=float, default=20.0, help="Tamano base en cm de cada pagina cuadrada")
     export.add_argument("--dry-run", action="store_true", help="Validar cuento sin generar PDF")
-    export.add_argument("--overwrite", action="store_true", help="Permitir sobreescritura del archivo destino")
+    export.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Permitir sobreescritura cuando se use --output explicito",
+    )
 
     args = parser.parse_args()
 

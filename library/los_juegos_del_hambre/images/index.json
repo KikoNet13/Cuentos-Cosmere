@@ -1,5 +1,187 @@
 [
   {
+    "filename": "01/01_00_cover-cover-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_00_cover-cover-flow.png",
+    "description": "story 01 cover",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T09:20:09.996636+00:00"
+  },
+  {
+    "filename": "01/01_01_main-p01-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_01_main-p01-main-flow.png",
+    "description": "story 01 page 1 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T09:52:36.190235+00:00"
+  },
+  {
+    "filename": "01/01_02_main-p02-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_02_main-p02-main-flow.png",
+    "description": "story 01 page 2 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T09:54:23.719244+00:00"
+  },
+  {
+    "filename": "01/01_03_main-p03-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_03_main-p03-main-flow.png",
+    "description": "story 01 page 3 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T09:56:12.385464+00:00"
+  },
+  {
+    "filename": "01/01_04_main-p04-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_04_main-p04-main-flow.png",
+    "description": "story 01 page 4 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T09:57:35.582886+00:00"
+  },
+  {
+    "filename": "01/01_05_main-p05-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_05_main-p05-main-flow.png",
+    "description": "story 01 page 5 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T09:59:18.329619+00:00"
+  },
+  {
+    "filename": "01/01_06_main-p06-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_06_main-p06-main-flow.png",
+    "description": "story 01 page 6 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T10:45:39.007909+00:00"
+  },
+  {
+    "filename": "01/01_07_main-p07-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_07_main-p07-main-flow.png",
+    "description": "story 01 page 7 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T10:50:04.186375+00:00"
+  },
+  {
+    "filename": "01/01_08_main-p08-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_08_main-p08-main-flow.png",
+    "description": "story 01 page 8 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T10:52:10.342209+00:00"
+  },
+  {
+    "filename": "01/01_09_main-p09-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_09_main-p09-main-flow.png",
+    "description": "story 01 page 9 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T10:54:20.754023+00:00"
+  },
+  {
+    "filename": "01/01_10_main-p10-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_10_main-p10-main-flow.png",
+    "description": "story 01 page 10 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T11:01:55.762327+00:00"
+  },
+  {
+    "filename": "01/01_11_main-p11-main-flow-r2.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_11_main-p11-main-flow-r2.png",
+    "description": "story 01 page 11 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T13:17:20.740579+00:00"
+  },
+  {
+    "filename": "01/01_11_main-p11-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_11_main-p11-main-flow.png",
+    "description": "story 01 page 11 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T11:11:48.220986+00:00"
+  },
+  {
+    "filename": "01/01_12_main-p12-main-flow-r2.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_12_main-p12-main-flow-r2.png",
+    "description": "story 01 page 12 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T13:21:06.258343+00:00"
+  },
+  {
+    "filename": "01/01_12_main-p12-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_12_main-p12-main-flow.png",
+    "description": "story 01 page 12 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T11:13:59.423608+00:00"
+  },
+  {
+    "filename": "01/01_13_main-p13-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_13_main-p13-main-flow.png",
+    "description": "story 01 page 13 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T11:16:42.654738+00:00"
+  },
+  {
+    "filename": "01/01_14_main-p14-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_14_main-p14-main-flow.png",
+    "description": "story 01 page 14 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T11:28:25.113957+00:00"
+  },
+  {
+    "filename": "01/01_15_main-p15-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_15_main-p15-main-flow.png",
+    "description": "story 01 page 15 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T11:31:21.445596+00:00"
+  },
+  {
+    "filename": "01/01_16_main-p16-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_16_main-p16-main-flow.png",
+    "description": "story 01 page 16 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T11:36:01.938012+00:00"
+  },
+  {
+    "filename": "02/02_00_cover-cover-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_00_cover-cover-flow.png",
+    "description": "story 02 cover",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T13:23:08.481730+00:00"
+  },
+  {
+    "filename": "02/02_01_main-p01-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_01_main-p01-main-flow.png",
+    "description": "story 02 page 1 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T13:24:32.720801+00:00"
+  },
+  {
+    "filename": "02/02_02_main-p02-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_02_main-p02-main-flow.png",
+    "description": "story 02 page 2 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T13:26:04.929866+00:00"
+  },
+  {
+    "filename": "02/02_03_main-p03-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_03_main-p03-main-flow.png",
+    "description": "story 02 page 3 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T13:31:21.384244+00:00"
+  },
+  {
+    "filename": "02/02_04_main-p04-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_04_main-p04-main-flow.png",
+    "description": "story 02 page 4 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T13:33:46.185511+00:00"
+  },
+  {
+    "filename": "02/02_05_main-p05-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_05_main-p05-main-flow.png",
+    "description": "story 02 page 5 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T13:35:40.580652+00:00"
+  },
+  {
+    "filename": "02/02_06_main-p06-main-flow.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_06_main-p06-main-flow.png",
+    "description": "story 02 page 6 slot main",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T14:13:51.040000+00:00"
+  },
+  {
     "filename": "anchors/char-beetee.png",
     "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/char-beetee.png",
     "description": "anchor char_beetee_base",
@@ -54,6 +236,13 @@
     "description": "anchor char_katniss_base",
     "node_rel_path": "los_juegos_del_hambre",
     "created_at": "2026-02-18T23:59:00.506743+00:00"
+  },
+  {
+    "filename": "anchors/char-madge.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/char-madge.png",
+    "description": "anchor char_madge_base",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T10:40:23.468122+00:00"
   },
   {
     "filename": "anchors/char-peeta.png",
@@ -131,6 +320,20 @@
     "description": "anchor env_train_capitol",
     "node_rel_path": "los_juegos_del_hambre",
     "created_at": "2026-02-19T00:47:25.385132+00:00"
+  },
+  {
+    "filename": "anchors/flow-cover-mockingjay-collection.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/flow-cover-mockingjay-collection.png",
+    "description": "anchor cover_mockingjay_collection",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T09:49:33.539702+00:00"
+  },
+  {
+    "filename": "anchors/flow-prop-mockingjay-pin.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/flow-prop-mockingjay-pin.png",
+    "description": "anchor prop_mockingjay_pin",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T09:50:24.361298+00:00"
   },
   {
     "filename": "anchors/prop-bow-arrow.png",

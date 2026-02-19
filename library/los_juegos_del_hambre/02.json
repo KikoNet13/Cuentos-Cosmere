@@ -4,16 +4,26 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T12:00:00Z",
-  "updated_at": "2026-02-19T08:46:47.513148+00:00",
+  "updated_at": "2026-02-19T14:13:51.055786+00:00",
   "cover": {
     "status": "draft",
     "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada icónica para el segundo cuento de la colección, 'La Chica en Llamas', destacando el debut deslumbrante de Katniss Everdeen ante el Capitolio y el inicio de su transformación en símbolo nacional.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: línea negra limpia y expresiva, colores planos vibrantes y formas simplificadas. Katniss debe aparecer con su trenza negra característica, piel aceitunada y ojos grises. Su vestuario debe ser el mono negro ajustado con la capa de llamas sintéticas. Peeta debe estar a su lado con un traje idéntico, cabello rubio ceniza ondulado y ojos azules. Respetar la estética de Ligne Claire sin sombras complejas.\n\nCOMPOSICION Y ENCUADRE\nPlano medio-largo de Katniss y Peeta de pie sobre su carro negro de metal. Los personajes están en el centro, con sus manos entrelazadas y alzadas en señal de unidad. El encuadre es frontal y heroico, capturando el rastro de fuego naranja y rojo que sale de sus capas.\n\nPERSONAJES Y ACCION\nKatniss con expresión seria y poderosa, mirando hacia adelante. Peeta con gesto firme y protector. La acción principal es el desfile en carro, con las llamas sintéticas envolviéndolos sin quemarlos. El contraste entre el negro de los trajes y el brillo del fuego es el punto focal.\n\nENTORNO, PALETA E ILUMINACION\nFondo sugerido del Círculo de la Ciudad del Capitolio con edificios de mármol blanco y banderas rojas. Paleta de colores: negro profundo, naranjas y rojos incandescentes, blancos puros y el gris de los ojos de Katniss. Iluminación plana que resalta el brillo de las llamas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_peeta_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logos. Prohibido el fotorrealismo, degradados suaves, efectos de luz digital modernos o sombreados dramáticos. No mostrar a otros tributos en segundo plano para no saturar la composición.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alta claridad, lista para impresión de cuento infantil con bordes definidos y alta saturación de color.",
-    "active_id": "",
-    "alternatives": [],
     "reference_ids": [
       "anchors/char-katniss.png",
       "anchors/char-peeta.png",
       "anchors/env-reaping-square.png"
+    ],
+    "active_id": "02/02_00_cover-cover-flow.png",
+    "alternatives": [
+      {
+        "id": "02/02_00_cover-cover-flow.png",
+        "slug": "cover-flow",
+        "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_00_cover-cover-flow.png",
+        "mime_type": "image/png",
+        "status": "candidate",
+        "created_at": "2026-02-19T13:23:08.479730+00:00",
+        "notes": "Flujo guiado de imagenes pendientes"
+      }
     ]
   },
   "pages": [
@@ -24,12 +34,22 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el doloroso adiós de Katniss a su familia en el Edificio de Justicia antes de partir hacia el Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEstilo Sergio Kern. Katniss con trenza negra y ojos grises. Primrose con trenzas rubias y expresión de llanto. La madre con rostro pálido y ausente. Vestuario sencillo del Distrito 12.\n\nCOMPOSICION Y ENCUADRE\nPlano medio interior. Katniss en el centro sujetando las manos de su madre con fuerza. Prim está abrazada a la cintura de Katniss.\n\nPERSONAJES Y ACCION\nKatniss dando instrucciones urgentes a su madre. Prim desconsolada. La madre parece despertar de su letargo por la intensidad de la situación.\n\nENTORNO, PALETA E ILUMINACION\nSala de paredes de mármol frío y muebles de madera pesada. Iluminación lateral que acentúa la palidez de los rostros. Tonos marrones, grises y el azul del vestido de Katniss.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_prim_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni sombras complejas. No incluir agentes de la paz en este plano íntimo.\n\nFORMATO DE SALIDA\nIlustración 1:1 limpia para página de cuento.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-prim.png",
             "anchors/env-reaping-square.png"
+          ],
+          "active_id": "02/02_01_main-p01-main-flow.png",
+          "alternatives": [
+            {
+              "id": "02/02_01_main-p01-main-flow.png",
+              "slug": "p01-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_01_main-p01-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T13:24:32.719800+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -41,12 +61,22 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nMostrar la última visita de Gale y el traslado forzoso de Katniss hacia el tren de los tributos.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nGale Hawthorne con rasgos de la Veta. Agentes de la paz con uniformes blancos impolutos y cascos robóticos. Coches negros de lujo del Capitolio.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Gale intentando hablar a través de la puerta mientras los agentes empujan a Katniss hacia un coche negro en el exterior.\n\nPERSONAJES Y ACCION\nGale con mirada desesperada. Katniss mirando hacia atrás. Los agentes actúan como máquinas, fríos y eficientes. Periodistas con cámaras insecto en los bordes.\n\nENTORNO, PALETA E ILUMINACION\nExterior de la plaza gris bajo un cielo nublado. El coche negro brilla con un acabado plano. Paleta de blancos, negros y grises industriales.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin degradados. No mostrar el rostro de los agentes de la paz tras los visores.\n\nFORMATO DE SALIDA\nIlustración 1:1 con contornos negros marcados.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-gale.png",
             "anchors/env-reaping-square.png"
+          ],
+          "active_id": "02/02_02_main-p02-main-flow.png",
+          "alternatives": [
+            {
+              "id": "02/02_02_main-p02-main-flow.png",
+              "slug": "p02-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_02_main-p02-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T13:26:04.929866+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -58,13 +88,23 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nPresentar el contraste de lujo extremo dentro del tren de los tributos y la actitud de Effie Trinket.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEffie Trinket con peluca rosa y traje verde primavera. Tren con interiores de terciopelo y mesas de cristal. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano general del vagón comedor. Effie está sentada a la mesa llena de comida exótica, mientras Katniss y Peeta observan con asombro.\n\nPERSONAJES Y ACCION\nEffie parloteando sobre el horario. Katniss y Peeta sentados en sofás de terciopelo, sintiéndose fuera de lugar. La comida es colorida y abundante.\n\nENTORNO, PALETA E ILUMINACION\nInterior lujoso y saturado. Paleta de rosas, verdes neón, dorados y plateados. Iluminación cálida y brillante de interior.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_effie_base, char_katniss_base, char_peeta_base, env_train_capitol.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir paisajes exteriores por las ventanas para centrar la atención en el lujo interno.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 vibrante.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-effie.png",
             "anchors/char-katniss.png",
             "anchors/char-peeta.png",
             "anchors/env-train-capitol.png"
+          ],
+          "active_id": "02/02_03_main-p03-main-flow.png",
+          "alternatives": [
+            {
+              "id": "02/02_03_main-p03-main-flow.png",
+              "slug": "p03-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_03_main-p03-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T13:31:21.381243+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -76,12 +116,22 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Peeta Mellark intentando conectar con Katniss durante el viaje, revelando su naturaleza bondadosa.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta con cabello rubio ceniza ondulado. Katniss mirando por la ventana del tren. Estilo Kern de línea clara.\n\nCOMPOSICION Y ENCUADRE\nPlano medio lateral de los dos personajes junto a la ventana de cristal del tren. El reflejo de Katniss es visible en el cristal.\n\nPERSONAJES Y ACCION\nPeeta señalando hacia la ciudad del Capitolio que se ve a lo lejos. Katniss con los labios apretados, desconfiando de la amabilidad de su compañero.\n\nENTORNO, PALETA E ILUMINACION\nInteriores metálicos y ricos del tren. Al fondo, siluetas de edificios futuristas en colores pastel. Luz crepuscular dorada.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, char_katniss_base, env_train_capitol.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir a otros personajes. Evitar sombras realistas; usar planos de color sólido para la ropa.\n\nFORMATO DE SALIDA\nIlustración 1:1 equilibrada.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-peeta.png",
             "anchors/char-katniss.png",
             "anchors/env-train-capitol.png"
+          ],
+          "active_id": "02/02_04_main-p04-main-flow.png",
+          "alternatives": [
+            {
+              "id": "02/02_04_main-p04-main-flow.png",
+              "slug": "p04-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_04_main-p04-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T13:33:46.183819+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -93,12 +143,22 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el momento en que los tributos ven el resumen de las cosechas en la televisión del tren.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nImagen de Rue en la pantalla: niña de 12 años, piel oscura y mirada de pájaro. Katniss reaccionando ante la pantalla.\n\nCOMPOSICION Y ENCUADRE\nPlano de Katniss de espaldas, mirando una gran pantalla plana incrustada en la pared de madera del tren. En la pantalla se ve el rostro de Rue.\n\nPERSONAJES Y ACCION\nKatniss con gesto de tristeza y reconocimiento al ver a la niña pequeña. Rue en la televisión aparece frágil y sola.\n\nENTORNO, PALETA E ILUMINACION\nAmbiente oscuro del vagón iluminado únicamente por el resplandor azulado de la pantalla. Contraste entre el lujo y el horror de las imágenes.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_rue_base, env_train_capitol.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo en la pantalla. No mostrar el rostro de Peeta en esta escena.\n\nFORMATO DE SALIDA\nIlustración 1:1 con gran fuerza emocional.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-rue.png",
             "anchors/env-train-capitol.png"
+          ],
+          "active_id": "02/02_05_main-p05-main-flow.png",
+          "alternatives": [
+            {
+              "id": "02/02_05_main-p05-main-flow.png",
+              "slug": "p05-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_05_main-p05-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T13:35:40.577571+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -110,13 +170,23 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el primer encuentro tenso con Haymitch Abernathy y su estado de embriaguez.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nHaymitch con pelo rubio oscuro largo y ojos cansados. Viste ropa arrugada. Vaso de cristal con líquido rojo roto en el suelo.\n\nCOMPOSICION Y ENCUADRE\nPlano medio. Haymitch apoyado en una mesa, Peeta de pie frente a él y Katniss sujetando un cuchillo cerca de la mesa.\n\nPERSONAJES Y ACCION\nHaymitch riendo cínicamente. Peeta con expresión dura tras haberle quitado la bebida. Katniss amenazando con el cuchillo para captar su atención.\n\nENTORNO, PALETA E ILUMINACION\nComedor del tren con restos de cena. Paleta de marrones, rojos vino y grises. Luz de interior algo mortecina.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_haymitch_base, char_peeta_base, char_katniss_base, env_train_capitol.\n\nRESTRICCIONES / NEGATIVOS\nSin detalles grotescos excesivos. El líquido rojo no debe parecer sangre, sino vino.\n\nFORMATO DE SALIDA\nIlustración 1:1 estilizada.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-haymitch.png",
             "anchors/char-peeta.png",
             "anchors/char-katniss.png",
             "anchors/env-train-capitol.png"
+          ],
+          "active_id": "02/02_06_main-p06-main-flow.png",
+          "alternatives": [
+            {
+              "id": "02/02_06_main-p06-main-flow.png",
+              "slug": "p06-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_06_main-p06-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T14:13:51.037932+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -128,14 +198,14 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nMostrar a los tributos llegando al Centro de Entrenamiento del Capitolio y viendo a sus competidores.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nOtros tributos con uniformes de entrenamiento grises. El Centro de Entrenamiento con paredes blancas y equipo de armas.\n\nCOMPOSICION Y ENCUADRE\nPlano general desde un balcón superior. Katniss y Peeta entrando en el gimnasio gigante lleno de gente entrenando.\n\nPERSONAJES Y ACCION\nTributos profesionales lanzando jabalinas. Katniss observando con atención a un chico monstruoso del Distrito 2. Peeta a su lado, alerta.\n\nENTORNO, PALETA E ILUMINACION\nArquitectura de alta tecnología, limpia y fría. Paleta de blancos, grises metálicos y toques de neón. Luz cenital uniforme.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, env_arena_forest (como concepto de simulación).\n\nRESTRICCIONES / NEGATIVOS\nSin violencia explícita. No incluir a los mentores en este plano de escala masiva.\n\nFORMATO DE SALIDA\nIlustración 1:1 de gran escala.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-peeta.png",
             "anchors/env-train-capitol.png",
             "anchors/prop-bread-loaf.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     },
@@ -146,12 +216,12 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nCapturar el acto de rebeldía de Katniss disparando a la manzana de los Vigilantes durante su sesión privada.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con su arco de madera. Una manzana roja atravesada por una flecha en una mesa llena de comida del Capitolio.\n\nCOMPOSICION Y ENCUADRE\nPlano dinámico siguiendo la trayectoria de la flecha. Katniss en primer plano lateral, la mesa de los Vigilantes al fondo en estado de shock.\n\nPERSONAJES Y ACCION\nKatniss con expresión de furia decidida. Vigilantes aburridos que de repente se sobresaltan al ver la manzana volando.\n\nENTORNO, PALETA E ILUMINACION\nSala de tiro con dianas. Paleta de grises con el punto focal rojo intenso en la manzana. Luz focalizada sobre la acción.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir sangre. Los Vigilantes deben verse ridículos con sus modas del Capitolio. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustración 1:1 de alto impacto visual.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/prop-bow-arrow.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     },
@@ -162,12 +232,12 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar la sorpresa de los tributos al recibir sus puntuaciones de entrenamiento frente al televisor.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nUn número 11 dorado brillante junto al rostro de Katniss en la pantalla. Peeta y Katniss sentados en el sofá.\n\nCOMPOSICION Y ENCUADRE\nPlano medio corto de los dos tributos mirando hacia el espectador (que es la pantalla). La luz del televisor baña sus rostros.\n\nPERSONAJES Y ACCION\nKatniss con los ojos muy abiertos, sin creerse su puntuación perfecta. Peeta sonriendo con orgullo y sorpresa. Gesto de incredulidad.\n\nENTORNO, PALETA E ILUMINACION\nAlojamiento lujoso en penumbra. Paleta de azules oscuros y el brillo dorado del número 11. Estética Ligne Claire.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base.\n\nRESTRICCIONES / NEGATIVOS\nSin degradados. No mostrar el resto de la habitación para enfatizar la reacción facial.\n\nFORMATO DE SALIDA\nIlustración 1:1 clara y limpia.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-peeta.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     },
@@ -178,11 +248,11 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el primer encuentro amable entre Katniss y su estilista Cinna en los talleres del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCinna con cabello castaño corto y delineador dorado. Katniss envuelta en una bata sencilla. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de ambos. Cinna está midiendo a Katniss sin tocarla, con una mirada de respeto artístico.\n\nPERSONAJES Y ACCION\nCinna hablando con voz suave. Katniss relajando los hombros por primera vez, sintiendo que él es diferente a los demás.\n\nENTORNO, PALETA E ILUMINACION\nTaller de diseño con telas de colores y maniquíes. Paleta de blancos, negros y el toque dorado en el rostro de Cinna.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base.\n\nRESTRICCIONES / NEGATIVOS\nNo debe parecer una escena de moda sexy. Sin fotorrealismo. Evitar sombras dramáticas.\n\nFORMATO DE SALIDA\nIlustración 1:1 acogedora.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     },
@@ -193,12 +263,12 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar a Katniss con el traje de la ceremonia inaugural diseñado por Cinna: la chica en llamas.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMalla negra ajustada. Capa con franjas naranjas y amarillas. Trenza negra. Broche de sinsajo dorado visible.\n\nCOMPOSICION Y ENCUADRE\nPlano americano de Katniss frente a un espejo, con Cinna detrás de ella prendiendo fuego (sintético) a la capa con una antorcha.\n\nPERSONAJES Y ACCION\nKatniss mirando su reflejo con asombro y temor contenido. Cinna concentrado en su obra maestra. El fuego es brillante y controlado.\n\nENTORNO, PALETA E ILUMINACION\nHabitación de preparación metálica. Paleta dominada por el negro del traje y el amarillo/naranja del fuego. Luz incandescente.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nSin degradados de color en el fuego; usar formas sólidas de amarillo y naranja. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustración 1:1 icónica.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/prop-mockingjay-pin.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     },
@@ -209,13 +279,13 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el espectacular desfile de los carros en el Círculo de la Ciudad bajo el asombro del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCarro negro tirado por caballos negros. Katniss y Peeta brillando con llamas sintéticas. Multitud enfervorecida en los bordes.\n\nCOMPOSICION Y ENCUADRE\nGran plano general con perspectiva en diagonal del carro avanzando hacia la cámara. Las llamas dejan una estela de luz plana.\n\nPERSONAJES Y ACCION\nKatniss y Peeta de pie, majestuosos, saludando a la masa de gente que les lanza flores. Los caballos se ven fuertes y potentes.\n\nENTORNO, PALETA E ILUMINACION\nPlaza monumental con estatuas y pantallas gigantes. Colores saturados: rojos, dorados, negros y naranjas. Iluminación festiva.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nNo dibujar caras individuales en la multitud. Sin efectos de desenfoque de movimiento.\n\nFORMATO DE SALIDA\nIlustración 1:1 de gran impacto cinematográfico.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-peeta.png",
             "anchors/env-reaping-square.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     },
@@ -226,14 +296,14 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el gesto de unidad entre Katniss y Peeta y la mirada vigilante del Presidente Snow desde el balcón.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nManos entrelazadas de los tributos. Presidente Snow al fondo, pequeño pero amenazante, con su rosa blanca en la solapa.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de las manos unidas en primer término, con los rostros de Katniss y Peeta mirando hacia arriba al balcón presidencial.\n\nPERSONAJES Y ACCION\nKatniss con mirada desafiante hacia Snow. Peeta apretando su mano para darle equilibrio. Snow observando con ojos de serpiente.\n\nENTORNO, PALETA E ILUMINACION\nArquitectura clásica del Capitolio. Paleta de blancos, rojos de las banderas y el dorado del fuego. Luz dura desde arriba.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_snow_base, char_katniss_base, char_peeta_base, prop_president_rose.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. El balcón de Snow debe estar bien definido aunque esté en segundo plano.\n\nFORMATO DE SALIDA\nIlustración 1:1 narrativa.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-snow.png",
             "anchors/char-katniss.png",
             "anchors/char-peeta.png",
             "anchors/prop-president-rose.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     },
@@ -244,12 +314,12 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar a Peeta y Katniss en el tejado del Centro de Entrenamiento, hablando sobre sus miedos antes de los Juegos.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta con mirada melancólica. Katniss con el pelo suelto por el viento. Estilo Sergio Kern de línea negra constante.\n\nCOMPOSICION Y ENCUADRE\nPlano medio lateral de ambos apoyados en una barandilla, con las luces de la ciudad del Capitolio brillando al fondo.\n\nPERSONAJES Y ACCION\nPeeta diciendo que quiere morir siendo él mismo. Katniss sin entenderle del todo, pero sintiendo la cercanía. Momento de paz frágil.\n\nENTORNO, PALETA E ILUMINACION\nTejado moderno con campo de fuerza invisible sugerido por chispas sutiles. Paleta de azules profundos, morados y dorados. Luz nocturna.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, char_katniss_base.\n\nRESTRICCIONES / NEGATIVOS\nSin degradados de color en el cielo. No incluir a otros personajes. Sin texto.\n\nFORMATO DE SALIDA\nIlustración 1:1 atmosférica.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-peeta.png",
             "anchors/char-katniss.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     },
@@ -260,11 +330,11 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar la entrevista con Caesar Flickerman, destacando el glamour artificial del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCaesar Flickerman con pelo y labios celestes, traje azul marino brillante. Katniss con vestido de gemas rojas y amarillas.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de los dos sentados en sillones elegantes frente a una audiencia invisibilizada. Caesar gesticulando con entusiasmo.\n\nPERSONAJES Y ACCION\nKatniss dando una vuelta completa para mostrar cómo su vestido parece arder. Caesar riendo y ganándose al público.\n\nENTORNO, PALETA E ILUMINACION\nEscenario de televisión de lujo. Paleta de azules eléctricos, rojos fuego y blancos brillantes. Iluminación de focos de estudio.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni desenfoques. Caesar debe parecer una caricatura elegante del Capitolio.\n\nFORMATO DE SALIDA\nIlustración 1:1 nítida y vibrante.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     },
@@ -275,12 +345,12 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nCapturar el momento final del cuento con la impactante confesión de amor de Peeta ante toda Panem.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta bajo los focos de la entrevista. Katniss asombrada en la pantalla gigante de fondo. Estética Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Peeta en el centro, con la cabeza ligeramente gacha y ruborizado, mientras Caesar le pone la mano en el hombro.\n\nPERSONAJES Y ACCION\nPeeta diciendo: 'Ella está aquí conmigo'. La audiencia en silencio ante la revelación. Katniss en el borde del escenario, boquiabierta.\n\nENTORNO, PALETA E ILUMINACION\nAmbiente de gran gala. Colores azules y dorados. Luz cenital dramática pero plana sobre Peeta. Clima de tragedia romántica.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, char_katniss_base.\n\nRESTRICCIONES / NEGATIVOS\nSin créditos finales. No usar fotorrealismo. Evitar detalles excesivos en el público.\n\nFORMATO DE SALIDA\nIlustración 1:1 de cierre emotivo para la colección.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-peeta.png",
             "anchors/char-katniss.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     }

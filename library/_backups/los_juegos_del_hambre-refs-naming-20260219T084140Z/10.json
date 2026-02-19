@@ -1,0 +1,481 @@
+{
+  "story_id": "10",
+  "title": "Los Túneles del Capitolio",
+  "status": "definitive",
+  "book_rel_path": "los_juegos_del_hambre",
+  "created_at": "2026-02-18T14:00:00Z",
+  "updated_at": "2026-02-18T23:50:00Z",
+  "cover": {
+    "status": "draft",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'Los Túneles del Capitolio', capturando la atmósfera de infiltración militar y el peligro acechante en el subsuelo del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener el estilo Sergio Kern de línea negra limpia y expresiva con colores planos. Katniss debe aparecer con su uniforme táctico de Sinsajo negro, su trenza característica y expresión de alerta máxima. Respetar la estética de Ligne Claire sin sombras realistas. El entorno debe ser un túnel de hormigón industrial con tuberías visibles.\n\nCOMPOSICION Y ENCUADRE\nPlano medio-largo de Katniss Everdeen en el centro, rodeada por la oscuridad del túnel. Ella sostiene su arco de Sinsajo. En primer plano lateral, un dispositivo holográfico (el Holo) emite un resplandor verde que ilumina parcialmente su rostro y la pared de cemento.\n\nPERSONAJES Y ACCION\nKatniss en posición de sigilo, lista para disparar. Al fondo, se sugieren las siluetas de Gale y Finnick siguiendo su rastro. La acción es tensa y sugiere una incursión secreta en territorio enemigo.\n\nENTORNO, PALETA E ILUMINACION\nUn túnel subterráneo húmedo y gris. La paleta es de tonos fríos: grises cemento, azul marino y negro, contrastando fuertemente con el verde neón del mapa holográfico. Iluminación focalizada y plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_finnick_base, char_gale_base, env_district13_bunker, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logos. Sin fotorrealismo, sin degradados suaves ni efectos de luz digital modernos que no sean planos. No mostrar a los mutos directamente para mantener el misterio.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alta claridad, lista para maquetación editorial infantil, con bordes limpios y equilibrio visual entre el personaje y el entorno oscuro.",
+    "active_id": "",
+    "alternatives": [],
+    "reference_ids": [
+      "anchor_style_editorial_v1.png",
+      "anchor_style_palette_v1.png",
+      "anchor_cover_main.png",
+      "anchor_char_katniss.png",
+      "anchor_char_prim.png",
+      "anchor_char_effie.png",
+      "anchor_char_finnick.png",
+      "anchor_env_train.png",
+      "anchor_prop_pin.png"
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "Tras el ataque de Peeta, me obligo a entrenar más duro que nunca. Johanna Mason se convierte en mi compañera de ejercicios; ella también está rota, pero compartimos un odio feroz hacia el Capitolio. Los líderes del Distrito 13 me observan con recelo mientras practico puntería con mi arco de Sinsajo. Saben que soy indisciplinada, pero me necesitan para la invasión final. En mis escasos ratos libres, visito a Peeta a través de un cristal, deseando que el veneno de rastrevíspula abandone su mente y me devuelva al chico que amaba.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Katniss y Johanna entrenando juntas en el gimnasio del Distrito 13 tras el trauma sufrido.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con trenza negra. Johanna con pelo corto castaño y mirada feroz. Ambas visten uniformes de ejercicio grises del Distrito 13. Estética Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de las dos jóvenes practicando puntería con arcos en una sala de entrenamiento de hormigón. Encuadre lateral dinámico.\n\nPERSONAJES Y ACCION\nKatniss tensando su arco; Johanna observando con los brazos cruzados y actitud cínica. La acción refleja disciplina militar y compañerismo en el dolor.\n\nENTORNO, PALETA E ILUMINACION\nInterior industrial del búnker. Paleta de grises y azules fríos. Iluminación cenital blanca y plana de hospital.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_johanna_base, env_district13_bunker, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No mostrar a Peeta en esta escena. Sin elementos del Capitolio.\n\nFORMATO DE SALIDA\nIlustración 1:1 limpia para cuento infantil.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 2,
+      "text": "Me envían al Distrito 2, el último bastión de Snow. Allí, la montaña conocida como el Hueso protege el arsenal del Capitolio. Me reúno con la comandante Lyme y los líderes rebeldes en una cueva helada para planear el asalto. Gale sugiere una táctica brutal: provocar avalanchas para enterrar vivos a los soldados enemigos dentro de la fortaleza. Me horroriza la idea de matar a tantos inocentes atrapados, pero la guerra no ofrece opciones piadosas. El viento de las montañas me recuerda que el final de Panem está cerca.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar la llegada de los rebeldes al Distrito 2, frente a la fortaleza fortificada conocida como el Hueso.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMontaña masiva y nevada. Katniss y Gale con uniformes de invierno grises y gruesos. Estilo de línea clara definida.\n\nCOMPOSICION Y ENCUADRE\nPlano general. Los personajes están en una cornisa nevada mirando hacia una montaña inmensa con túneles de hormigón asomando.\n\nPERSONAJES Y ACCION\nGale señalando la montaña con determinación. Katniss observando con preocupación la escala de la fortaleza enemiga.\n\nENTORNO, PALETA E ILUMINACION\nPaisaje de alta montaña. Paleta de blancos, azules gélidos y grises roca. Cielo despejado y frío.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_gale_base.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No dibujar la avalancha todavía. Sin sombras complejas en la nieve.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de escala masiva.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 3,
+      "text": "El plan de Gale funciona y el Hueso queda sellado bajo toneladas de roca. Salgo a los escalones del Edificio de Justicia para hablar a los supervivientes que emergen de los escombros. Intento convencerlos de que se unan a la rebelión, de que Snow solo los usa como peones. Mientras hablo, una luz roja me ciega y un disparo me derriba frente a las cámaras. La bala golpea mis costillas, pero el traje blindado de Cinna me salva la vida una vez más. Despierto de nuevo en el búnker del 13, decidida a terminar mi misión.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nCapturar el momento en que Katniss es herida durante su discurso frente al Edificio de Justicia del Distrito 2.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con su traje de Sinsajo negro. Un fogonazo de luz roja golpeando su pecho. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio dinámico. Katniss cayendo hacia atrás en las escaleras de mármol. El impacto es visible como una chispa geométrica.\n\nPERSONAJES Y ACCION\nKatniss con expresión de sorpresa y dolor. Al fondo, una multitud de rebeldes y ciudadanos del Distrito 2 reacciona con pánico.\n\nENTORNO, PALETA E ILUMINACION\nArquitectura clásica de piedra gris. Luz dura de tarde. El punto focal es el destello rojo del disparo.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin sangre explícita. No debe parecer que ha muerto. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustración 1:1 de alto impacto visual.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_finnick.png",
+            "anchor_char_beetee.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 4,
+      "text": "Antes de partir hacia el Capitolio, celebramos la boda de Finnick y Annie. Es un breve momento de luz en medio de la oscuridad del Distrito 13. Peeta ha empezado a mejorar y ha horneado una tarta maravillosa para la ocasión, pero cuando me ve, sus ojos todavía reflejan una sospecha helada. Formamos el pelotón 451, una unidad de élite de tiradores. La presidenta Coin no confía en mí y nos asigna un equipo de televisión para que grabemos propaganda lejos del frente real. Gale y Finnick estarán siempre a mi lado.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar la boda de Finnick y Annie como un breve momento de paz en el Distrito 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nFinnick Odair y Annie Cresta con ropas blancas sencillas. Peeta Mellark al fondo con aspecto cansado pero amable. Estética Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de la pareja dándose la mano bajo una red tejida. Katniss observa desde un lateral.\n\nPERSONAJES Y ACCION\nFinnick sonriendo con ternura. Annie con mirada soñadora. Peeta cortando una tarta decorada con flores marinas.\n\nENTORNO, PALETA E ILUMINACION\nComedor del búnker decorado con hojas y redes. Paleta de blancos, azules marinos y el amarillo de la tarta.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_finnick_base, char_peeta_base, char_katniss_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin armas en la escena. La tarta no debe ser industrial. No usar fotorrealismo.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 festiva y luminosa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bread.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 5,
+      "text": "Entramos en las afueras del Capitolio, avanzando por calles desiertas con fachadas de colores pastel. Boggs nos enseña el 'holo', un dispositivo que proyecta un mapa de todas las 'vainas' o trampas ocultas en la ciudad. Bombas, mutaciones y gases letales nos esperan en cada esquina. El Capitolio se ha convertido en una arena gigantesca, más peligrosa que cualquier juego anterior. Avanzamos con cautela, sintiendo que miles de ojos nos observan a través de las cámaras de seguridad que cubren cada callejón y cada tejado de la ciudad.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar al pelotón 451 infiltrándose en las afueras del Capitolio, usando el Holo.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCalles de colores pastel. Boggs sosteniendo el dispositivo holográfico verde. Katniss y Gale alertas. Estilo de línea clara.\n\nCOMPOSICION Y ENCUADRE\nPlano general de la calle desierta con edificios elegantes. El pelotón avanza en formación de diamante.\n\nPERSONAJES Y ACCION\nSoldados en uniformes negros tácticos. Boggs consulta el Holo que proyecta una rejilla de luces de colores en el aire.\n\nENTORNO, PALETA E ILUMINACION\nArquitectura lujosa y vacía del Capitolio. Paleta de rosas, amarillos pálidos y el verde neón del holograma. Luz solar de mañana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin civiles visibles. Sin fotorrealismo. Evitar que la escena parezca demasiado oscura.\n\nFORMATO DE SALIDA\nIlustración 1:1 nítida y detallada.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_forest.png",
+            "anchor_env_clock.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 6,
+      "text": "Durante una grabación de propaganda, el suelo estalla bajo nuestros pies. Una mina oculta alcanza a Boggs, destrozándole las piernas en un instante. El humo y el olor a sangre lo inundan todo. Antes de morir, Boggs me transfiere la autoridad del holo mediante un rayo de luz verde que escanea mi rostro. 'No confíes en ellos', me susurra con su último aliento. Me quedo paralizada con el aparato en mis manos ensangrentadas mientras el pelotón espera mis órdenes. De repente, soy la jefa de una misión que no sé cómo dirigir.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el trágico momento de la muerte de Boggs y la transferencia del mando a Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nBoggs en el suelo. El Holo emitiendo un haz de luz verde hacia la cara de Katniss. Uniformes militares grises.\n\nCOMPOSICION Y ENCUADRE\nPlano medio corto centrado en Katniss arrodillada junto a Boggs. El haz de luz une sus rostros en una diagonal perfecta.\n\nPERSONAJES Y ACCION\nKatniss con expresión de horror y responsabilidad. Boggs entregando el dispositivo con un último aliento. Humo de la explosión al fondo.\n\nENTORNO, PALETA E ILUMINACION\nSuelo de baldosas rotas. Paleta de grises y el verde brillante de la luz de seguridad. Clima de tragedia.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin heridas gráficas ni sangre excesiva. Sin fotorrealismo. No incluir a Peeta en este plano.\n\nFORMATO DE SALIDA\nIlustración 1:1 con gran carga emocional.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 7,
+      "text": "Una marea de aceite negro y viscoso surge de las paredes, una vaina mortal que amenaza con tragarnos. Corremos desesperados mientras el grupo de televisión lo graba todo. Logramos refugiarnos en un edificio abandonado, pero la televisión anuncia que el Sinsajo ha muerto en el ataque. Es nuestra oportunidad: si el Capitolio cree que no existimos, podremos movernos con libertad para cazar a Snow. Decido que la única forma de alcanzar la mansión presidencial sin ser detectados es a través del subsuelo. Debemos entrar en los oscuros túneles del Capitolio.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar la huida desesperada del pelotón ante una ola masiva de aceite negro en las calles.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMarea viscosa de color negro azabache. Katniss y Gale corriendo hacia un edificio. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano dinámico con perspectiva forzada. La ola gigante llena el fondo de la calle, amenazando con tragar a los soldados.\n\nPERSONAJES Y ACCION\nPersonajes en carrera frenética. Gale disparando flechas para romper una puerta. Katniss mirando por encima del hombro.\n\nENTORNO, PALETA E ILUMINACION\nCalle del Capitolio con edificios de colores suaves contrastando con el negro absoluto del líquido. Iluminación dramática plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. El aceite debe parecer una masa sólida y brillante, no agua real. Sin degradados.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de acción intensa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_square.png",
+            "anchor_env_train.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 8,
+      "text": "Bajamos a las alcantarillas, un laberinto oscuro y húmedo que huele a metal y muerte. Pollux, que trabajó aquí como avox, nos guía por las tuberías para evitar las cámaras de seguridad. El siseo del vapor y el goteo del agua son los únicos sonidos en esta tumba de cemento. De repente, un eco aterrador recorre los pasadizos: un susurro que repite mi nombre una y otra vez. Los mutos de Snow nos han encontrado en la profundidad de la tierra. La verdadera pesadilla bajo la ciudad acaba de comenzar.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar al grupo entrando en las alcantarillas oscuras bajo el Capitolio para esconderse.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEntrada de túnel de hormigón. Pollux guiando con una linterna. Estética de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano desde el interior del túnel mirando hacia la abertura de luz donde entra el pelotón. Sombras alargadas en el suelo.\n\nPERSONAJES Y ACCION\nPollux moviendo la mano para indicar el camino. Katniss entrando con el arco en la mano. Peeta esposado camina en silencio.\n\nENTORNO, PALETA E ILUMINACION\nEntorno subterráneo húmedo. Paleta de negros, grises y azules oscuros. Un foco de luz blanca de la linterna corta la oscuridad.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin mutos visibles todavía. No usar fotorrealismo ni desenfoques.\n\nFORMATO DE SALIDA\nIlustración 1:1 atmosférica.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 9,
+      "text": "Avanzamos por tuberías de desagüe y tramos de vías abandonadas, con el corazón en un puño. Pollux nos guía en un silencio absoluto, pero el siseo de los mutos parece estar pegado a nuestras nucas. De repente, unos gritos guturales rebotan en las paredes de hormigón, un sonido que hiela la sangre. Ya no es solo un susurro; es la caza real. Corremos con el peso de nuestras armas y la angustia de ser alcanzados en esta tumba de cemento, mientras el hedor de las alcantarillas se mezcla con un aroma a muerte.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nCapturar la tensión del pelotón mientras oyen susurros extraños en los túneles del subsuelo.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPasillo estrecho de tuberías. Katniss deteniéndose para escuchar. Estilo Kern de línea negra firme.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Katniss de perfil, con la mano en la pared del túnel. Al fondo, las caras tensas de los demás soldados.\n\nPERSONAJES Y ACCION\nKatniss con los ojos muy abiertos por el miedo. Gale preparando su arco. El aire parece cargado de voces invisibles.\n\nENTORNO, PALETA E ILUMINACION\nTúnel de cemento industrial. Paleta de grises metálicos. Iluminación mortecina y plana que proyecta sombras angulares.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir globos de texto con los susurros. Sin fotorrealismo. Evitar sombras suaves.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de suspense psicológico.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 10,
+      "text": "Entramos en el Transportador, un nivel subterráneo de baldosas blancas donde los vehículos del Capitolio suelen circular sin atascos. De pronto, un nido de ratas carnívoras mutadas surge de las sombras. Levanto mi arco de Sinsajo y disparo una flecha explosiva, despejando el camino entre nubes de humo y escombros. Sin embargo, el aire empieza a cambiar. Un aroma dulce y penetrante inunda el túnel, un olor que reconozco al instante y que me hace temblar de puro terror: rosas frescas. Snow ha soltado a sus monstruos más personales.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el encuentro con los mutos de Snow y el asfixiante olor a rosas en el subsuelo.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMutos lagarto de piel blanca y largas colas. Rosas blancas esparcidas por el suelo del túnel. Estética Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano dinámico. Una criatura blanca salta desde el techo hacia el espectador. Katniss dispara en primer plano.\n\nPERSONAJES Y ACCION\nKatniss disparando una flecha explosiva. La explosión ilumina el túnel de baldosas blancas. Caos y terror absoluto.\n\nENTORNO, PALETA E ILUMINACION\nTransportador de baldosas blancas del Capitolio. Paleta de blancos, rojos de las rosas y el naranja de la explosión. Luz cegadora.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, prop_bow_arrow, prop_president_rose.\n\nRESTRICCIONES / NEGATIVOS\nNo mostrar violencia excesiva ni sangre. Los mutos deben ser aterradores pero estilizados. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustración 1:1 de alto impacto narrativo.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 11,
+      "text": "La situación se vuelve crítica al llegar a la «picadora de carne», una vaina mortal de dientes industriales que trituran el suelo. Los mutos lagarto, con sus pieles blancas y colas de reptil, caen sobre nosotros con una furia salvaje. Jackson y Leeg 1 toman una decisión heroica: se quedan atrás para contener a las bestias mientras el resto del pelotón escapa por un conducto. Oigo sus gritos y el estruendo del metal chocando contra la carne, pero no puedo volver. El sacrificio de mis camaradas es el precio amargo para que el Sinsajo siga volando.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el heroico sacrificio de Jackson y Leeg 1 en la trampa de la picadora de carne.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMáquina industrial con dientes metálicos. Dos soldados disparando hacia atrás. Estilo Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio lateral. Las dos mujeres están en un estrechamiento del túnel, conteniendo a las criaturas blancas mientras el grupo huye.\n\nPERSONAJES Y ACCION\nSoldados con determinación suicida. Los mutos se acercan como sombras blancas. El resto del pelotón desaparece por un conducto.\n\nENTORNO, PALETA E ILUMINACION\nMaquinaria gris y pesada. Paleta de grises hierro y el blanco de los mutos. Iluminación dramática pero plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No mostrar el momento de la muerte. Sin sangre explícita.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 solemne.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_env_train.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 12,
+      "text": "Llegamos a la alcantarilla principal, donde una sopa tóxica de basura y residuos químicos burbujea bajo nosotros. Caminamos por una repisa resbaladiza de apenas treinta centímetros, con el vapor quemándonos los pulmones. Al otro lado de un puente estrecho, Pollux encuentra una escalera que sube hacia la libertad. Justo cuando cruzamos, los mutos aparecen al final del túnel, silbando mi nombre con voces inhumanas. Gale dispara una flecha explosiva y vuela el puente por los aires, enviando a los monstruos al abismo de aguas negras mientras nosotros trepamos desesperadamente.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el cruce del río tóxico en la alcantarilla principal del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLíquido verde burbujeante. Una repisa estrecha de piedra. Katniss y su arco. Estética Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano general en picado. El pelotón camina en fila india por una cornisa muy fina sobre un mar de residuos peligrosos.\n\nPERSONAJES Y ACCION\nPersonajes manteniendo el equilibrio. Gale vigila la retaguardia. El vapor sube desde el río verde envolviendo sus pies.\n\nENTORNO, PALETA E ILUMINACION\nCaverna de hormigón inmensa. Paleta de verdes radiactivos y grises oscuros. Luz que emana del propio líquido.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, env_district13_bunker.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni efectos de niebla complejos. El líquido debe ser de un verde plano y vibrante.\n\nFORMATO DE SALIDA\nIlustración 1:1 clara y peligrosa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 13,
+      "text": "Salimos a la superficie y nos encontramos en medio de una multitud de ciudadanos del Capitolio. Es un contraste surrealista: nosotros estamos cubiertos de barro y sangre, mientras la gente camina con sus ropas de colores pastel, huyendo hacia el centro de la ciudad. El Capitolio ha ordenado la evacuación total ante el avance rebelde. Nos mezclamos entre los refugiados, ocultando nuestras armas bajo las capas. Veo nuestras caras en las pantallas gigantes de las esquinas; el Capitolio anuncia que hemos muerto en el subsuelo. Somos fantasmas caminando por las avenidas de nuestro enemigo.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar a los supervivientes mezclándose con la multitud de refugiados del Capitolio en la superficie.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con una capa con capucha. Ciudadanos con ropas de colores pastel y abrigos de piel. Estética de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano general de una avenida llena de gente huyendo. Katniss y Gale caminan cabizbajos, ocultando sus armas bajo la ropa.\n\nPERSONAJES Y ACCION\nContraste entre la suciedad de los rebeldes y la elegancia de los ciudadanos. En una pantalla gigante se ve la cara de Katniss.\n\nENTORNO, PALETA E ILUMINACION\nCiudad monumental bajo un cielo gris. Paleta de amarillos, rosas y azules suaves frente al ocre de las capas rebeldes.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir agentes de la paz en este plano. Sin degradados de color en la ropa.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 narrativa.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_gale.png",
+            "anchor_char_effie.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 14,
+      "text": "Cressida nos guía con paso firme a través de calles desconocidas, evitando las patrullas de los agentes de la paz que registran a los transeúntes. Las sirenas de alarma no dejan de sonar y el cielo se llena de aerodeslizadores militares. Necesitamos un refugio urgente donde escondernos y curar nuestras heridas antes de que Snow descubra que seguimos vivos. Peeta camina en estado de shock, sostenido por Finnick, mientras Gale vigila nuestra retaguardia. Finalmente, Cressida se detiene ante una pequeña tienda de ropa de pieles con un escaparate polvoriento y oscuro.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar la llegada al refugio secreto de Tigris en una calle lateral del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEscaparate de tienda con el nombre 'TIGRIS' en letras doradas. Personajes con capas rojas y oscuras. Estética Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio. Cressida llama a una puerta de madera oscura en un callejón estrecho. El pelotón se amontona detrás.\n\nPERSONAJES Y ACCION\nCressida con gesto urgente. Gale mirando hacia atrás a los aerodeslizadores que cruzan el cielo. Katniss sujetando a Peeta.\n\nENTORNO, PALETA E ILUMINACION\nCallejón sombrío. Paleta de marrones, dorados y el gris del cielo. Luz de atardecer filtrada entre los edificios.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, char_gale_base.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No mostrar a Tigris todavía. Sin elementos modernos excesivos.\n\nFORMATO DE SALIDA\nIlustración 1:1 clara y limpia.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_clock.png",
+            "anchor_env_d13.png",
+            "anchor_prop_bow.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 15,
+      "text": "Entramos en la tienda y nos recibe Tigris, una antigua estilista de los Juegos que Snow expulsó hace años. Su cara es un mapa de operaciones quirúrgicas que le dan un aspecto felino, con tatuajes de rayas negras y el rostro estirado como el de un tigre. A pesar de su apariencia inquietante, sus ojos reflejan un odio profundo hacia el presidente. Sin decir una palabra, nos indica un panel oculto bajo el mostrador que conduce a un pequeño sótano secreto. Tigris nos ofrece protección y silencio, convirtiéndose en nuestra aliada más improbable en el corazón del Capitolio.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nPresentar a Tigris y su aspecto felino único en el interior de su tienda de pieles.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMujer con tatuajes de rayas negras y rasgos estirados quirúrgicamente. Un gran abrigo de piel de tigre. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio frontal de Tigris tras el mostrador, mirando fijamente a Katniss. Ambiente recargado de telas.\n\nPERSONAJES Y ACCION\nTigris con expresión de odio contenido hacia Snow. Katniss sorprendida por la apariencia de la estilista. Una cola mecánica se asoma.\n\nENTORNO, PALETA E ILUMINACION\nTienda oscura llena de pieles colgadas. Paleta de marrones, negros y ocres. Luz cálida de una sola lámpara.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nNo debe parecer un monstruo de terror, sino una víctima de la cirugía estética del Capitolio. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de personaje icónico.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_seam.png",
+            "anchor_env_train.png",
+            "anchor_env_d13.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png",
+            "anchor_prop_rose.png",
+            "anchor_prop_parachute.png"
+          ]
+        }
+      }
+    },
+    {
+      "page_number": 16,
+      "text": "Nos refugiamos en el sótano, un espacio estrecho y cálido rodeado de pieles antiguas. Me siento al lado de Peeta, que sigue esposado para evitar un nuevo ataque. Jugamos a su juego de «real o no real» para intentar anclar sus recuerdos. Me pregunta si arriesgué mi vida por él en la cueva, y le respondo que sí, que nos protegemos el uno al otro. Él parece relajarse un poco, aunque sus ojos azules siguen nublados por el veneno. En la oscuridad, cuento nuestras bajas: ocho amigos muertos en un solo día. La deuda es inmensa.",
+      "images": {
+        "main": {
+          "status": "draft",
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el refugio final en el sótano de Tigris y el juego de 'real o no real' entre Katniss y Peeta.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nSótano estrecho rodeado de abrigos de piel. Katniss sentada junto a un Peeta esposado. Estética Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio íntimo de los dos personajes sentados en el suelo. Sus manos se tocan ligeramente.\n\nPERSONAJES Y ACCION\nKatniss mirando a Peeta con cansancio y afecto. Peeta con ojos azules nublados por el veneno, haciendo una pregunta.\n\nENTORNO, PALETA E ILUMINACION\nInterior acogedor y polvoriento. Paleta de colores cálidos: cremas, marrones y el azul de la ropa de Peeta. Luz tenue.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin armas en este momento de calma. Sin fotorrealismo. Evitar que Peeta parezca agresivo.\n\nFORMATO DE SALIDA\nIlustración 1:1 final de cierre emotivo.",
+          "active_id": "",
+          "alternatives": [],
+          "reference_ids": [
+            "anchor_style_editorial_v1.png",
+            "anchor_style_palette_v1.png",
+            "anchor_cover_main.png",
+            "anchor_char_katniss.png",
+            "anchor_char_peeta.png",
+            "anchor_char_gale.png",
+            "anchor_char_prim.png",
+            "anchor_char_haymitch.png",
+            "anchor_char_effie.png",
+            "anchor_char_snow.png",
+            "anchor_char_rue.png",
+            "anchor_char_finnick.png",
+            "anchor_char_johanna.png",
+            "anchor_char_coin.png",
+            "anchor_env_train.png",
+            "anchor_prop_pin.png",
+            "anchor_prop_berries.png"
+          ]
+        }
+      }
+    }
+  ]
+}
