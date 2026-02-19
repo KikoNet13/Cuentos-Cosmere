@@ -1,6 +1,16 @@
 # índice de tareas
 
-- Proximo ID: `041`
+- Proximo ID: `042`
+
+## TAREA-041-export-pdf-maquetado-cuento
+
+- Fecha: 19/02/26 10:35
+- Estado: cerrada
+- Resumen: nuevo comando CLI `export-story-pdf`, motor de exportación maquetada (portada + spreads), validación de completitud de slots y maquetación cuadrada 20x20 cm por página base.
+- Versión: 2.8.1
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-041-export-pdf-maquetado-cuento.md`
 
 ## TAREA-040-refs-semanticas-y-naming-sin-uuid
 

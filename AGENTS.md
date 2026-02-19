@@ -127,7 +127,8 @@ Notas:
 ## CLI vigente
 
 1. `python manage.py runserver`
-2. No existen comandos CLI de ingesta/adaptacion en `app/`.
+2. `python manage.py export-story-pdf --story <book_rel_path/NN> [--output <path>] [--size-cm 20] [--dry-run] [--overwrite]`
+3. No existen comandos CLI de ingesta/adaptacion en `app/`.
 
 ## Mensajeria orquestadora (Codex)
 

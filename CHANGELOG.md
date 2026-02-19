@@ -5,6 +5,18 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [19/02/26] - Exportación PDF maquetada por cuento (CLI)
+
+- Nuevo comando `python manage.py export-story-pdf` para generar PDF maquetado por cuento.
+- Nuevo módulo `app/pdf_export.py` con:
+  - validación estructurada de completitud (`validate_story_for_pdf`),
+  - exportación de portada + spreads (`export_story_pdf`),
+  - control de desborde de texto (`text_overflow`) en rango 12 pt -> 10 pt.
+- Nuevo módulo compartido `app/story_progress.py` para unificar estado de slots (`completed/pending/no_prompt/not_required`) entre runtime y exportación.
+- `app/web/image_flow.py` refactorizado para reutilizar la semántica compartida.
+- `Pipfile` actualizado con `reportlab`.
+- Tarea: `docs/tasks/TAREA-041-export-pdf-maquetado-cuento.md`.
+
 ## [19/02/26] - Refs semánticas + naming legible sin UUID (Los juegos del hambre)
 
 - Se migra la convención de naming a formato legible sin UUID en `library/los_juegos_del_hambre/images/`:

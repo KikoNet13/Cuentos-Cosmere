@@ -12,9 +12,9 @@ from ..story_store import (
     json_path_to_story_rel,
     list_story_json_files,
     load_story,
-    resolve_media_rel_path,
     resolve_reference_assets,
 )
+from ..story_progress import coerce_string_list, slot_state
 
 EXCLUDED_TOP_LEVEL_DIRS = {"_inbox", "_processed", "_backups"}
 
@@ -49,66 +49,6 @@ def _is_in_excluded_area(rel_path: str) -> bool:
         return True
 
     return any(part.startswith("_") for part in parts)
-
-
-def _has_valid_active_image(slot: dict[str, Any]) -> bool:
-    active_id = str(slot.get("active_id", "")).strip()
-    if not active_id:
-        return False
-
-    alternatives = slot.get("alternatives", [])
-    if not isinstance(alternatives, list):
-        return False
-
-    target = next(
-        (
-            item
-            for item in alternatives
-            if isinstance(item, dict) and str(item.get("id", "")).strip() == active_id
-        ),
-        None,
-    )
-    if not target:
-        return False
-
-    rel_path = str(target.get("asset_rel_path", "")).strip().replace("\\", "/")
-    if not rel_path:
-        return False
-
-    try:
-        file_path = resolve_media_rel_path(rel_path)
-    except StoryStoreError:
-        return False
-    return file_path.exists() and file_path.is_file()
-
-
-def _coerce_string_list(raw_value: Any) -> list[str]:
-    if not isinstance(raw_value, list):
-        return []
-    values: list[str] = []
-    seen: set[str] = set()
-    for item in raw_value:
-        text = str(item).strip()
-        if not text or text in seen:
-            continue
-        values.append(text)
-        seen.add(text)
-    return values
-
-
-def _slot_state(slot_payload: dict[str, Any]) -> str:
-    status = str(slot_payload.get("status", "")).strip().lower()
-    if status == "not_required":
-        return "not_required"
-
-    prompt = str(slot_payload.get("prompt", "")).strip()
-    if not prompt:
-        return "no_prompt"
-
-    if _has_valid_active_image(slot_payload):
-        return "completed"
-
-    return "pending"
 
 
 def _build_reference_assets(node_rel_path: str, reference_ids: list[str]) -> list[dict[str, Any]]:
@@ -228,8 +168,8 @@ def _iter_anchor_records(story_records: list[dict[str, Any]]) -> list[dict[str, 
                 continue
 
             prompt = str(anchor.get("prompt", "")).strip()
-            reference_ids = _coerce_string_list(anchor.get("image_filenames", []))
-            state = _slot_state(anchor)
+            reference_ids = coerce_string_list(anchor.get("image_filenames", []))
+            state = slot_state(anchor)
 
             editor_target = _pick_editor_story_for_anchor(node_rel_path, story_records)
             editor_story_rel_path = editor_target[0] if editor_target else ""
@@ -276,7 +216,7 @@ def _iter_story_slot_records(story_records: list[dict[str, Any]]) -> list[dict[s
         cover = payload.get("cover", {})
         if isinstance(cover, dict):
             cover_prompt = str(cover.get("prompt", "")).strip()
-            cover_refs = _coerce_string_list(cover.get("reference_ids", []))
+            cover_refs = coerce_string_list(cover.get("reference_ids", []))
             rows.append(
                 {
                     "item_type": "cover",
@@ -293,7 +233,7 @@ def _iter_story_slot_records(story_records: list[dict[str, Any]]) -> list[dict[s
                     "status": str(cover.get("status", "draft")).strip() or "draft",
                     "reference_ids": cover_refs,
                     "reference_assets": _build_reference_assets(book_rel_path, cover_refs),
-                    "state": _slot_state(cover),
+                    "state": slot_state(cover),
                     "display_title": story_title,
                     "display_subtitle": f"Cuento {story_id} · Portada",
                     "editor_story_rel_path": story_rel_path,
@@ -323,7 +263,7 @@ def _iter_story_slot_records(story_records: list[dict[str, Any]]) -> list[dict[s
             main_slot = images.get("main", {})
             if isinstance(main_slot, dict):
                 main_prompt = str(main_slot.get("prompt", "")).strip()
-                main_refs = _coerce_string_list(main_slot.get("reference_ids", []))
+                main_refs = coerce_string_list(main_slot.get("reference_ids", []))
                 rows.append(
                     {
                         "item_type": "slot",
@@ -340,7 +280,7 @@ def _iter_story_slot_records(story_records: list[dict[str, Any]]) -> list[dict[s
                         "status": str(main_slot.get("status", "draft")).strip() or "draft",
                         "reference_ids": main_refs,
                         "reference_assets": _build_reference_assets(book_rel_path, main_refs),
-                        "state": _slot_state(main_slot),
+                        "state": slot_state(main_slot),
                         "display_title": story_title,
                         "display_subtitle": f"Cuento {story_id} · Pagina {page_number} · Slot main",
                         "editor_story_rel_path": story_rel_path,
@@ -366,7 +306,7 @@ def _iter_story_slot_records(story_records: list[dict[str, Any]]) -> list[dict[s
                 continue
 
             secondary_prompt = str(secondary_slot.get("prompt", "")).strip()
-            secondary_refs = _coerce_string_list(secondary_slot.get("reference_ids", []))
+            secondary_refs = coerce_string_list(secondary_slot.get("reference_ids", []))
             rows.append(
                 {
                     "item_type": "slot",
@@ -383,7 +323,7 @@ def _iter_story_slot_records(story_records: list[dict[str, Any]]) -> list[dict[s
                     "status": str(secondary_slot.get("status", "draft")).strip() or "draft",
                     "reference_ids": secondary_refs,
                     "reference_assets": _build_reference_assets(book_rel_path, secondary_refs),
-                    "state": _slot_state(secondary_slot),
+                    "state": slot_state(secondary_slot),
                     "display_title": story_title,
                     "display_subtitle": f"Cuento {story_id} · Pagina {page_number} · Slot secondary",
                     "editor_story_rel_path": story_rel_path,
