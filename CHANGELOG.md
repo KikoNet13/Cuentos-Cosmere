@@ -5,6 +5,26 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [19/02/26] - Fallback de referencias legacy a anclas activas
+
+- Se mejora `resolve_reference_assets(...)` para soportar referencias legacy sin migracion de datos.
+- Resolucion por pasos:
+  - intento directo por filename literal en `images/` (comportamiento actual),
+  - fallback por anclas de `meta.json` (niveles: libro -> ancestros -> library).
+- El fallback se activa cuando `reference_id` coincide con:
+  - `anchor.id`, o
+  - un valor de `anchors[].image_filenames[]`.
+- Seleccion de imagen real por ancla, en orden:
+  - `active_id`,
+  - `alternatives[].id`,
+  - `image_filenames[]`,
+  usando solo archivos existentes en disco.
+- Contratos preservados:
+  - sin cambios de rutas ni esquema JSON,
+  - sin cambios de firma de `resolve_reference_assets`,
+  - salida estable (`filename`, `found`, `asset_rel_path`, `node_rel_path`).
+- Tarea: `docs/tasks/TAREA-039-fallback-referencias-legacy.md`.
+
 ## [19/02/26] - Fix 413 en "Pegar y guardar" (multipart + limites 20 MB)
 
 - Se corrige el error `Request Entity Too Large` en acciones de pegado rapido de imagen.

@@ -1,6 +1,16 @@
 # índice de tareas
 
-- Proximo ID: `039`
+- Proximo ID: `040`
+## TAREA-039-fallback-referencias-legacy
+
+- Fecha: 19/02/26 01:39
+- Estado: cerrada
+- Resumen: fallback runtime de `reference_ids` legacy (`anchor_*.png`) a archivos reales activos de anclas (`uuid_slug.ext`) sin migrar datos JSON.
+- Version: 2.7.9
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-039-fallback-referencias-legacy.md`
+
 ## TAREA-038-fix-request-entity-too-large-pegar-guardar
 
 - Fecha: 19/02/26 00:50

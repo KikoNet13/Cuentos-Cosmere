@@ -762,9 +762,84 @@ def _node_levels(node_rel_path: str) -> list[str]:
     return levels
 
 
+def _select_anchor_resolved_filename(node_level: str, anchor: dict[str, Any]) -> str:
+    candidates: list[str] = []
+    active_id = str(anchor.get("active_id", "")).strip()
+    if active_id:
+        candidates.append(active_id)
+
+    alternatives = anchor.get("alternatives", [])
+    if isinstance(alternatives, list):
+        for item in alternatives:
+            if not isinstance(item, dict):
+                continue
+            alt_id = str(item.get("id", "")).strip()
+            if alt_id:
+                candidates.append(alt_id)
+
+    image_filenames = anchor.get("image_filenames", [])
+    if isinstance(image_filenames, list):
+        for item in image_filenames:
+            value = str(item).strip()
+            if value:
+                candidates.append(value)
+
+    seen: set[str] = set()
+    for candidate in candidates:
+        file_name = Path(candidate).name
+        if not file_name or file_name in seen:
+            continue
+        seen.add(file_name)
+        candidate_path = _node_images_dir(node_level) / file_name
+        if candidate_path.exists() and candidate_path.is_file():
+            return file_name
+
+    return ""
+
+
+def _build_anchor_reference_fallback_map(search_levels: list[str]) -> dict[str, tuple[str, str]]:
+    fallback_map: dict[str, tuple[str, str]] = {}
+
+    for level in search_levels:
+        meta = get_node_meta(level)
+        if not meta:
+            continue
+
+        anchors = meta.get("anchors", [])
+        if not isinstance(anchors, list):
+            continue
+
+        for anchor in anchors:
+            if not isinstance(anchor, dict):
+                continue
+
+            resolved_file = _select_anchor_resolved_filename(level, anchor)
+            if not resolved_file:
+                continue
+
+            aliases: list[str] = []
+            anchor_id = str(anchor.get("id", "")).strip()
+            if anchor_id:
+                aliases.append(anchor_id)
+
+            image_filenames = anchor.get("image_filenames", [])
+            if isinstance(image_filenames, list):
+                for item in image_filenames:
+                    value = Path(str(item).strip()).name
+                    if value:
+                        aliases.append(value)
+
+            for alias in aliases:
+                if alias and alias not in fallback_map:
+                    fallback_map[alias] = (level, resolved_file)
+
+    return fallback_map
+
+
 def resolve_reference_assets(node_rel_path: str, reference_ids: list[str]) -> list[dict[str, Any]]:
     normalized_node = _normalize_rel_path(node_rel_path)
     search_levels = list(reversed(_node_levels(normalized_node)))
+    fallback_map = _build_anchor_reference_fallback_map(search_levels)
 
     items: list[dict[str, Any]] = []
     for raw_name in reference_ids:
@@ -780,6 +855,13 @@ def resolve_reference_assets(node_rel_path: str, reference_ids: list[str]) -> li
                 found_rel_path = _asset_rel_path_for_node(level, file_name)
                 found_node = level
                 break
+
+        if not found_rel_path:
+            fallback_match = fallback_map.get(file_name)
+            if fallback_match:
+                matched_level, matched_file = fallback_match
+                found_rel_path = _asset_rel_path_for_node(matched_level, matched_file)
+                found_node = matched_level
 
         items.append(
             {
