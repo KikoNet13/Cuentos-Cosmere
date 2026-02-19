@@ -5,6 +5,21 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [19/02/26] - Realineacion texto-imagen en cuento 01 + auditoria 01..11
+
+- Se corrige desfase narrativo en `library/los_juegos_del_hambre/01.json` en el tramo `p11..p16`.
+- Reasignacion aplicada:
+  - `p13 <- p11`,
+  - `p14 <- p12`,
+  - `p15 <- p13` + alternativa inactiva heredada de `p14`,
+  - `p16` mantiene cierre activo + alternativa inactiva heredada de `p15`.
+- `p11` y `p12` quedan en modo regeneracion con `prompt` y `reference_ids` corregidos, sin `active_id` ni alternativas.
+- Se ejecuta auditoria lexica (Jaccard) para `01..11` con regla de alta confianza:
+  - candidato solo si `n=13,14,15` cumplen `score(text_n,prompt_{n-2}) > score(text_n,prompt_n) + 0.01`.
+  - resultado: solo `01.json` candidato; `02..11` sin autocorreccion.
+- No se eliminan ni mueven assets fisicos; se conservan sobrantes como alternativas inactivas.
+- Tarea: `docs/tasks/TAREA-042-realineacion-texto-imagen-los-juegos.md`.
+
 ## [19/02/26] - Exportación PDF maquetada por cuento (CLI)
 
 - Nuevo comando `python manage.py export-story-pdf` para generar PDF maquetado por cuento.

@@ -1,6 +1,16 @@
 # índice de tareas
 
-- Proximo ID: `042`
+- Proximo ID: `043`
+
+## TAREA-042-realineacion-texto-imagen-los-juegos
+
+- Fecha: 19/02/26 13:47
+- Estado: cerrada
+- Resumen: realineacion de slots en `01.json` (tramo final de Cosecha), liberacion de `p11/p12` para regeneracion, conservacion de sobrantes como alternativas inactivas y auditoria Jaccard en `01..11` sin mas autocorrecciones.
+- Version: 2.8.2
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-042-realineacion-texto-imagen-los-juegos.md`
 
 ## TAREA-041-export-pdf-maquetado-cuento
 

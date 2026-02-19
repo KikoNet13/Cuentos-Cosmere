@@ -4,16 +4,26 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T00:00:00Z",
-  "updated_at": "2026-02-19T08:46:47.513148+00:00",
+  "updated_at": "2026-02-19T12:48:40.453326+00:00",
   "cover": {
     "status": "draft",
     "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada emblemática para el cuento 'La Cosecha de Katniss' que capture el sacrificio heroico de la protagonista y la atmósfera opresiva del Distrito 12.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo visual de Sergio Kern: línea negra limpia y expresiva, colores planos sin degradados complejos y anatomía de cuento infantil. Katniss debe aparecer con su trenza negra, piel aceitunada y ojos grises. El entorno debe reflejar la pobreza de la Veta mediante tonos grises y ocres, respetando la estética de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio central de Katniss Everdeen mirando directamente al espectador con expresión decidida. Detrás de ella, se vislumbra la silueta del Edificio de Justicia en la Plaza de la Cosecha. Composición equilibrada con espacio para el título en la parte superior.\n\nPERSONAJES Y ACCION\nKatniss de pie, con el broche de sinsajo dorado brillando sutilmente en su pecho sobre un vestido azul sencillo. Su postura es firme, simbolizando su papel como protectora de su familia.\n\nENTORNO, PALETA E ILUMINACION\nFondo de edificios de piedra gris bajo un cielo encapotado. Paleta dominada por grises, azules cenizos y marrones, con un único punto focal dorado en el broche. Iluminación plana y uniforme característica de los álbumes ilustrados clásicos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, env_reaping_square, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni nombres de autor en la imagen. Prohibido el fotorrealismo, las texturas 3D, el sombreado dramático o el uso de degradados digitales modernos. Evitar composiciones recargadas que distraigan del personaje principal.\n\nFORMATO DE SALIDA\nIlustración digital final en relación de aspecto 1:1, lista para maquetación editorial con bordes limpios y alta definición en los contornos negros.",
-    "active_id": "",
-    "alternatives": [],
     "reference_ids": [
       "anchors/char-katniss.png",
       "anchors/env-reaping-square.png",
       "anchors/prop-mockingjay-pin.png"
+    ],
+    "active_id": "01/01_00_cover-cover-flow.png",
+    "alternatives": [
+      {
+        "id": "01/01_00_cover-cover-flow.png",
+        "slug": "cover-flow",
+        "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_00_cover-cover-flow.png",
+        "mime_type": "image/png",
+        "status": "candidate",
+        "created_at": "2026-02-19T09:20:09.996636+00:00",
+        "notes": "Flujo guiado de imagenes pendientes"
+      }
     ]
   },
   "pages": [
@@ -24,12 +34,22 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nIlustrar el despertar de Katniss en su hogar de la Veta, mostrando el contraste entre la seguridad del hogar y el miedo a la cosecha.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss con trenza negra y ojos grises. Primrose con trenzas rubias. Estilo Sergio Kern de línea clara y colores planos.\n\nCOMPOSICION Y ENCUADRE\nPlano general del dormitorio compartido. Katniss en primer plano sentada en el borde de su cama, mirando hacia la cama de su madre donde duerme Prim.\n\nPERSONAJES Y ACCION\nKatniss estirando la mano hacia el hueco frío de la cama. Prim acurrucada junto a su madre al fondo de la habitación.\n\nENTORNO, PALETA E ILUMINACION\nInterior rústico con paredes de madera y lona. Luz fría de amanecer filtrándose por una ventana pequeña. Paleta de azules grises y marrones.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_prim_base, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo ni sombras complejas. No incluir elementos tecnológicos modernos ni muebles lujosos.\n\nFORMATO DE SALIDA\nIlustración 1:1 con contornos negros definidos.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-prim.png",
             "anchors/env-district12-seam.png"
+          ],
+          "active_id": "01/01_01_main-p01-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_01_main-p01-main-flow.png",
+              "slug": "p01-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_01_main-p01-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T09:52:36.188238+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -41,12 +61,22 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el viaje de Katniss hacia el bosque prohibido, cruzando el límite del distrito.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nUso de línea negra constante. Katniss con botas de cuero y ropa de caza sencilla. La alambrada debe verse oxidada y vieja.\n\nCOMPOSICION Y ENCUADRE\nPlano medio lateral. Katniss agachada deslizándose por debajo de la red metálica de la alambrada electrificada.\n\nPERSONAJES Y ACCION\nKatniss con gesto de precaución, mirando hacia los lados mientras atraviesa el punto débil de la valla metálica.\n\nENTORNO, PALETA E ILUMINACION\nContraste entre el suelo ceniciento del distrito y el inicio del follaje verde del bosque. Colores ocres y verdes apagados.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_district12_seam, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nSin efectos de electricidad brillantes ni luces de neón. Evitar sombras dramáticas en el rostro del personaje.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 para página de cuento.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/env-district12-seam.png",
             "anchors/env-arena-forest.png"
+          ],
+          "active_id": "01/01_02_main-p02-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_02_main-p02-main-flow.png",
+              "slug": "p02-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_02_main-p02-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T09:54:23.717244+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -58,12 +88,22 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nMostrar a Katniss recuperando su tesoro más valioso: el arco de su padre oculto en el bosque.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nArco de madera artesanal detallado. Katniss con su trenza negra característica. Estética de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Katniss de espaldas a la cámara, sacando el arco y el carcaj de un tronco de árbol hueco.\n\nPERSONAJES Y ACCION\nKatniss con una expresión de alivio y respeto al tocar el arma de su padre. La acción es solemne y sigilosa.\n\nENTORNO, PALETA E ILUMINACION\nBosque denso con pinos y coníferas. Luz filtrada entre las ramas creando parches amarillos en el suelo verde oscuro.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_arena_forest, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nNo mostrar violencia ni sangre. El bosque no debe parecer terrorífico, sino un refugio natural.\n\nFORMATO DE SALIDA\nIlustración 1:1 con colores planos vibrantes.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/env-arena-forest.png",
             "anchors/prop-bow-arrow.png"
+          ],
+          "active_id": "01/01_03_main-p03-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_03_main-p03-main-flow.png",
+              "slug": "p03-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_03_main-p03-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T09:56:12.383463+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -75,12 +115,22 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nPresentar el encuentro entre Katniss y Gale compartiendo un momento de paz antes de la cosecha.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nGale Hawthorne con pelo negro corto y ojos grises. Pan rústico de panadería con corteza morena. Estilo Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de ambos personajes sentados sobre un saliente rocoso. Gale ofrece una hogaza de pan a Katniss.\n\nPERSONAJES Y ACCION\nGale sonriendo (la única vez que lo hace). Katniss relajada, cogiendo una mora con la boca mientras observa el valle.\n\nENTORNO, PALETA E ILUMINACION\nVista panorámica del valle desde las colinas. Colores verdes, azules de fondo y el dorado del pan. Luz matutina cálida.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, prop_bread_loaf.\n\nRESTRICCIONES / NEGATIVOS\nSin poses románticas exageradas. Evitar degradados suaves en la piel de los personajes.\n\nFORMATO DE SALIDA\nIlustración 1:1 limpia y despejada.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-gale.png",
             "anchors/prop-bread-loaf.png"
+          ],
+          "active_id": "01/01_04_main-p04-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_04_main-p04-main-flow.png",
+              "slug": "p04-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_04_main-p04-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T09:57:35.580885+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -92,12 +142,22 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nReflejar el dilema moral de los protagonistas sobre huir o quedarse para proteger a sus familias.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener la consistencia de los rasgos de la Veta en ambos personajes. Gale debe verse más alto y fuerte que Katniss.\n\nCOMPOSICION Y ENCUADRE\nPlano americano de ambos personajes de pie en el claro del bosque, mirándose con seriedad y angustia contenida.\n\nPERSONAJES Y ACCION\nGale gesticulando hacia el horizonte con determinación. Katniss con los hombros caídos por el peso de la responsabilidad hacia Prim.\n\nENTORNO, PALETA E ILUMINACION\nEntorno forestal sombrío. Paleta de verdes oliva y marrones tierra. Iluminación que sugiere el avance de la tarde.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir el muro del distrito. Sin elementos mágicos o de fantasía. Sin texto.\n\nFORMATO DE SALIDA\nIlustración 1:1 estilizada con línea negra definida.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-gale.png",
             "anchors/env-arena-forest.png"
+          ],
+          "active_id": "01/01_05_main-p05-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_05_main-p05-main-flow.png",
+              "slug": "p05-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_05_main-p05-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T09:59:18.326618+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -108,13 +168,24 @@
       "images": {
         "main": {
           "status": "draft",
-          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el encuentro con Madge en el distrito, destacando el contraste de clases sociales.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMadge con vestido blanco y lazo rosa. Broche de sinsajo dorado claramente visible. Katniss y Gale con ropa de caza sucia.\n\nCOMPOSICION Y ENCUADRE\nPlano medio frente a la puerta de madera de la casa del alcalde. Madge en el umbral, Katniss y Gale en la calle.\n\nPERSONAJES Y ACCION\nMadge entregando dinero a Katniss. Gale mirando con desprecio el broche dorado, símbolo de una riqueza que él no posee.\n\nENTORNO, PALETA E ILUMINACION\nZona urbana limpia del distrito. Colores blancos y cremas de la casa frente al ocre y gris de los cazadores.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo dibujar multitudes. La casa debe verse lujosa pero con el diseño simplificado del estilo Kern.\n\nFORMATO DE SALIDA\nIlustración 1:1 nítida para álbum infantil.",
-          "active_id": "",
-          "alternatives": [],
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el encuentro con Madge en el distrito, destacando el contraste de clases sociales.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMadge con vestido blanco y lazo rosa. Broche de sinsajo dorado claramente visible. Katniss y Gale con ropa de caza sucia.\n\nCOMPOSICION Y ENCUADRE\nPlano medio frente a la puerta de madera de la casa del alcalde. Madge en el umbral, Katniss y Gale en la calle.\n\nPERSONAJES Y ACCION\nMadge entregando dinero a Katniss. Gale mirando con desprecio el broche dorado, símbolo de una riqueza que él no posee.\n\nENTORNO, PALETA E ILUMINACION\nZona urbana limpia del distrito. Colores blancos y cremas de la casa frente al ocre y gris de los cazadores.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_gale_base, char_madge_base, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo dibujar multitudes. La casa debe verse lujosa pero con el diseño simplificado del estilo Kern.\n\nFORMATO DE SALIDA\nIlustración 1:1 nítida para álbum infantil.",
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-gale.png",
-            "anchors/prop-mockingjay-pin.png"
+            "anchors/prop-mockingjay-pin.png",
+            "anchors/char-madge.png"
+          ],
+          "active_id": "01/01_06_main-p06-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_06_main-p06-main-flow.png",
+              "slug": "p06-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_06_main-p06-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T10:45:39.007909+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -126,11 +197,21 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nExplicar visualmente la injusticia del sistema de teselas y la acumulación de papeletas en la urna.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nUrna de cristal redonda llena de miles de trozos de papel blanco. Estética de Ligne Claire y colores planos.\n\nCOMPOSICION Y ENCUADRE\nPlano detalle de una mano (la de Katniss) dejando caer un papelito con su nombre escrito en una urna inmensa ya llena.\n\nPERSONAJES Y ACCION\nAcción repetitiva y burocrática que simboliza la trampa de la pobreza. El rostro de Katniss se ve reflejado en el cristal.\n\nENTORNO, PALETA E ILUMINACION\nInterior del Edificio de Justicia. Paleta de grises fríos y blancos con toques de rojo Capitolio en banderas lejanas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No incluir a Effie Trinket en este plano detalle. Sin tipografía real en los papeles.\n\nFORMATO DE SALIDA\nIlustración 1:1 de alto valor simbólico.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/env-reaping-square.png"
+          ],
+          "active_id": "01/01_07_main-p07-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_07_main-p07-main-flow.png",
+              "slug": "p07-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_07_main-p07-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T10:50:04.185374+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -142,12 +223,22 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nMostrar los preparativos finales de Prim para su primera cosecha, enfatizando su vulnerabilidad.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPrim con blusa blanca con la 'cola de pato' saliendo por detrás. Katniss con un vestido azul prestado. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio interior. Katniss agachada frente a Prim, ajustando el dobladillo de su vestido en su humilde hogar.\n\nPERSONAJES Y ACCION\nPrim temblando levemente. Katniss intentando sonreír para calmarla, aunque sus ojos grises reflejan un miedo profundo.\n\nENTORNO, PALETA E ILUMINACION\nInterior de cabaña pobre con muebles de madera tosca. Luz cálida de hogar que acentúa la palidez de Prim.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_prim_base, env_district12_seam.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir al gato Buttercup. Sin sombras dramáticas o efectos de lente cinematográficos.\n\nFORMATO DE SALIDA\nIlustración 1:1 emotiva y tierna.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-prim.png",
             "anchors/env-district12-seam.png"
+          ],
+          "active_id": "01/01_08_main-p08-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_08_main-p08-main-flow.png",
+              "slug": "p08-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_08_main-p08-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T10:52:10.337669+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -159,10 +250,20 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nCapturar la tensión masiva en la Plaza de la Cosecha justo antes de que comience la ceremonia.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMultitud de personas con uniformes de minero grises y hombros caídos. Banderas rojas con el sello del Capitolio.\n\nCOMPOSICION Y ENCUADRE\nGran plano general desde la parte trasera de la multitud mirando hacia el escenario de mármol blanco. Simetría opresiva.\n\nPERSONAJES Y ACCION\nCientos de ciudadanos en silencio absoluto. Agentes de la paz en uniformes blancos robóticos vigilando los perímetros.\n\nENTORNO, PALETA E ILUMINACION\nPlaza amplia y gris bajo un sol de mediodía que no calienta. Colores desaturados excepto por el rojo de las banderas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, env_reaping_square, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nNo dibujar caras individuales en la multitud. Sin fotorrealismo. Sin texto en las pancartas.\n\nFORMATO DE SALIDA\nIlustración 1:1 de gran escala narrativa.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/env-reaping-square.png"
+          ],
+          "active_id": "01/01_09_main-p09-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_09_main-p09-main-flow.png",
+              "slug": "p09-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_09_main-p09-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T10:54:20.752515+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -174,11 +275,21 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nPresentar a las autoridades del Capitolio en el podio, destacando el contraste estético con el distrito.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEffie Trinket con peluca rosa y traje verde brillante. Alcalde Undersee de aspecto cansado. Edificio de mármol blanco.\n\nCOMPOSICION Y ENCUADRE\nPlano medio desde un ángulo bajo (contrapicado) para dar importancia al escenario elevado sobre la gente.\n\nPERSONAJES Y ACCION\nEl alcalde leyendo el Tratado de la Traición. Effie sonriendo de forma artificial y entusiasta frente al micrófono.\n\nENTORNO, PALETA E ILUMINACION\nEscenario oficial. Colores neón y saturados en Effie contrastando con el mármol frío y la ropa gris de la masa.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_effie_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir a Katniss en este plano. Sin degradados de color en la peluca de Effie. Sin texto.\n\nFORMATO DE SALIDA\nIlustracion 1:1 nítida y vibrante.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-effie.png",
             "anchors/env-reaping-square.png"
+          ],
+          "active_id": "01/01_10_main-p10-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_10_main-p10-main-flow.png",
+              "slug": "p10-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_10_main-p10-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T11:01:55.762327+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -189,14 +300,13 @@
       "images": {
         "main": {
           "status": "draft",
-          "prompt": "OBJETIVO DE ILUSTRACION\nEl momento crítico en que el azar golpea a la familia Everdeen.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nUrna de cristal de las chicas. Effie Trinket sacando un papelito. Primrose paralizada entre la multitud de su edad.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Primrose en el centro de la imagen, con un círculo de espacio vacío a su alrededor mientras la gente se aparta.\n\nPERSONAJES Y ACCION\nPrim con la cara blanca de terror, caminando como un autómata hacia el escenario. La blusa por fuera (cola de pato) es visible.\n\nENTORNO, PALETA E ILUMINACION\nLa plaza se desvanece en grises mientras la figura de Prim destaca por su fragilidad. Iluminación dura de mediodía.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_prim_base, char_effie_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nNo usar efectos de desenfoque. Sin sangre ni llanto excesivo; el horror debe ser psicológico y visual.\n\nFORMATO DE SALIDA\nIlustración 1:1 de alto impacto visual.",
-          "active_id": "",
-          "alternatives": [],
+          "prompt": "OBJETIVO DE ILUSTRACION\nPresentar a Effie Trinket ante el Distrito 12, marcando el contraste radical entre el Capitolio y la pobreza de la Veta.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEffie con peluca rosa volumetrica y traje verde primavera llamativo. Escenario oficial de la Cosecha en el Edificio de Justicia.\n\nCOMPOSICION Y ENCUADRE\nPlano medio desde la perspectiva de la multitud. Effie ocupa el foco principal en el podio, con gesto teatral y sonrisa artificial.\n\nPERSONAJES Y ACCION\nEffie saluda y hace una reverencia exagerada antes de iniciar el sorteo, mientras la multitud mantiene un silencio tenso.\n\nENTORNO, PALETA E ILUMINACION\nPaleta gris y ocre para el distrito frente al verde saturado y rosa intenso de Effie. Luz de mediodia plana, estilo editorial infantil.\n\nREFERENCIAS (reference_ids)\nanchors/char-effie.png, anchors/env-reaping-square.png.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. Evitar rasgos caricaturescos extremos y evitar elementos modernos fuera de Panem.\n\nFORMATO DE SALIDA\nIlustracion 1:1 con linea clara y contornos limpios.",
           "reference_ids": [
-            "anchors/char-prim.png",
             "anchors/char-effie.png",
             "anchors/env-reaping-square.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     },
@@ -206,15 +316,14 @@
       "images": {
         "main": {
           "status": "draft",
-          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el acto supremo de amor y valentía: el voluntariado de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss gritando con los brazos extendidos. Gale sujetando a una Prim que intenta correr. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio dinámico. Katniss abriéndose paso entre la gente hacia la cámara. Prim al fondo en brazos de Gale.\n\nPERSONAJES Y ACCION\nKatniss gritando '¡Me presento voluntaria!'. Su expresión es de una determinación feroz. La multitud reacciona con sorpresa.\n\nENTORNO, PALETA E ILUMINACION\nEscaleras del Edificio de Justicia. Colores planos y vibrantes. Luz focalizada sobre Katniss.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_prim_base, char_gale_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin armas en escena. Evitar rasgos faciales caricaturescos que resten seriedad al momento.\n\nFORMATO DE SALIDA\nIlustración 1:1 limpia y poderosa.",
-          "active_id": "",
-          "alternatives": [],
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar el instante de maxima tension cuando Effie introduce la mano en la urna de las chicas para extraer el papel decisivo.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nEffie junto a la urna de cristal. Prim visible entre la multitud juvenil, rigida y asustada. Escenario oficial de la Cosecha.\n\nCOMPOSICION Y ENCUADRE\nPlano medio amplio centrado en la urna y la mano de Effie, con Prim al fondo en segundo termino para anticipar el impacto emocional.\n\nPERSONAJES Y ACCION\nEffie remueve papeletas y toma una. Prim observa inmovil, con gesto de miedo contenido, mientras el resto contiene la respiracion.\n\nENTORNO, PALETA E ILUMINACION\nAmbiente opresivo en grises y marrones; el vestuario de Effie aporta el unico contraste cromatico fuerte. Iluminacion uniforme de exterior.\n\nREFERENCIAS (reference_ids)\nanchors/char-effie.png, anchors/char-prim.png, anchors/env-reaping-square.png.\n\nRESTRICCIONES / NEGATIVOS\nSin dramatismos gore ni lagrimas exageradas. No incluir texto dentro de la imagen.\n\nFORMATO DE SALIDA\nIlustracion 1:1 narrativa, limpia y lista para maquetacion editorial.",
           "reference_ids": [
-            "anchors/char-katniss.png",
+            "anchors/char-effie.png",
             "anchors/char-prim.png",
-            "anchors/char-gale.png",
             "anchors/env-reaping-square.png"
-          ]
+          ],
+          "active_id": "",
+          "alternatives": []
         }
       }
     },
@@ -224,13 +333,23 @@
       "images": {
         "main": {
           "status": "draft",
-          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar la reacción de respeto y protesta silenciosa de los habitantes del Distrito 12.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCentenares de personas llevándose tres dedos de la mano izquierda a los labios y extendiéndolos hacia Katniss.\n\nCOMPOSICION Y ENCUADRE\nPlano general desde el escenario mirando hacia la multitud. Katniss de espaldas en primer plano lateral.\n\nPERSONAJES Y ACCION\nEl gesto colectivo de los tres dedos (el saludo del distrito). Effie Trinket desconcertada por el silencio repentino.\n\nENTORNO, PALETA E ILUMINACION\nMar de manos alzadas sobre cabezas grises. Cielo azul pálido. Colores planos con contornos negros marcados.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_effie_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir llanto. Sin fotorrealismo en las manos. Sin elementos del Capitolio visibles en la multitud.\n\nFORMATO DE SALIDA\nIlustración 1:1 solemne y política.",
-          "active_id": "",
-          "alternatives": [],
+          "prompt": "OBJETIVO DE ILUSTRACION\nEl momento crítico en que el azar golpea a la familia Everdeen.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nUrna de cristal de las chicas. Effie Trinket sacando un papelito. Primrose paralizada entre la multitud de su edad.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Primrose en el centro de la imagen, con un círculo de espacio vacío a su alrededor mientras la gente se aparta.\n\nPERSONAJES Y ACCION\nPrim con la cara blanca de terror, caminando como un autómata hacia el escenario. La blusa por fuera (cola de pato) es visible.\n\nENTORNO, PALETA E ILUMINACION\nLa plaza se desvanece en grises mientras la figura de Prim destaca por su fragilidad. Iluminación dura de mediodía.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_prim_base, char_effie_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nNo usar efectos de desenfoque. Sin sangre ni llanto excesivo; el horror debe ser psicológico y visual.\n\nFORMATO DE SALIDA\nIlustración 1:1 de alto impacto visual.",
           "reference_ids": [
-            "anchors/char-katniss.png",
+            "anchors/char-prim.png",
             "anchors/char-effie.png",
             "anchors/env-reaping-square.png"
+          ],
+          "active_id": "01/01_11_main-p11-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_11_main-p11-main-flow.png",
+              "slug": "p11-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_11_main-p11-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T11:11:48.218986+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -241,13 +360,24 @@
       "images": {
         "main": {
           "status": "draft",
-          "prompt": "OBJETIVO DE ILUSTRACION\nKatniss en el escenario asumiendo su nuevo papel como tributo del Distrito 12.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss de pie junto a Effie Trinket. La diferencia de colorido entre ambas subraya el contraste entre el Capitolio y los distritos.\n\nCOMPOSICION Y ENCUADRE\nPlano medio frontal. Katniss con la barbilla alta y ojos grises fijos en el horizonte. Effie sosteniendo su brazo con entusiasmo.\n\nPERSONAJES Y ACCION\nEffie presentando a la 'nueva heroína'. Katniss manteniendo su máscara de indiferencia para ocultar su miedo interno.\n\nENTORNO, PALETA E ILUMINACION\nFondo de mármol blanco del Edificio de Justicia. Sombras planas y sencillas. Paleta de azules, verdes y blancos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_effie_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin fotorrealismo. No dibujar lágrimas en Katniss. Sin degradados de color en el cielo.\n\nFORMATO DE SALIDA\nIlustración 1:1 lista para impresión.",
-          "active_id": "",
-          "alternatives": [],
+          "prompt": "OBJETIVO DE ILUSTRACION\nRepresentar el acto supremo de amor y valentía: el voluntariado de Katniss.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss gritando con los brazos extendidos. Gale sujetando a una Prim que intenta correr. Estilo Sergio Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano medio dinámico. Katniss abriéndose paso entre la gente hacia la cámara. Prim al fondo en brazos de Gale.\n\nPERSONAJES Y ACCION\nKatniss gritando '¡Me presento voluntaria!'. Su expresión es de una determinación feroz. La multitud reacciona con sorpresa.\n\nENTORNO, PALETA E ILUMINACION\nEscaleras del Edificio de Justicia. Colores planos y vibrantes. Luz focalizada sobre Katniss.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_prim_base, char_gale_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin armas en escena. Evitar rasgos faciales caricaturescos que resten seriedad al momento.\n\nFORMATO DE SALIDA\nIlustración 1:1 limpia y poderosa.",
           "reference_ids": [
             "anchors/char-katniss.png",
-            "anchors/char-effie.png",
+            "anchors/char-prim.png",
+            "anchors/char-gale.png",
             "anchors/env-reaping-square.png"
+          ],
+          "active_id": "01/01_12_main-p12-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_12_main-p12-main-flow.png",
+              "slug": "p12-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_12_main-p12-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T11:13:59.416357+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -258,13 +388,32 @@
       "images": {
         "main": {
           "status": "draft",
-          "prompt": "OBJETIVO DE ILUSTRACION\nPresentar al segundo tributo del Distrito 12: Peeta Mellark.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nPeeta Mellark con cabello rubio ceniza ondulado y ojos azules. Constitución fuerte. Katniss reconociéndolo.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Peeta subiendo las escaleras hacia Katniss. Ella lo mira con una mezcla de gratitud y horror.\n\nPERSONAJES Y ACCION\nPeeta con expresión de resignación amable. Katniss recordando el momento del pan bajo la lluvia (sugerido en su mirada).\n\nENTORNO, PALETA E ILUMINACION\nEscenario de la cosecha. Luz lateral que resalta los rasgos de Peeta. Colores cálidos para su cabello frente al azul de Katniss.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_peeta_base, char_katniss_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nSin heridas visibles todavía. Evitar que Peeta parezca un villano. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustración 1:1 con estilo editorial infantil.",
-          "active_id": "",
-          "alternatives": [],
+          "prompt": "OBJETIVO DE ILUSTRACION\nMostrar la reacción de respeto y protesta silenciosa de los habitantes del Distrito 12.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nCentenares de personas llevándose tres dedos de la mano izquierda a los labios y extendiéndolos hacia Katniss.\n\nCOMPOSICION Y ENCUADRE\nPlano general desde el escenario mirando hacia la multitud. Katniss de espaldas en primer plano lateral.\n\nPERSONAJES Y ACCION\nEl gesto colectivo de los tres dedos (el saludo del distrito). Effie Trinket desconcertada por el silencio repentino.\n\nENTORNO, PALETA E ILUMINACION\nMar de manos alzadas sobre cabezas grises. Cielo azul pálido. Colores planos con contornos negros marcados.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_effie_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir llanto. Sin fotorrealismo en las manos. Sin elementos del Capitolio visibles en la multitud.\n\nFORMATO DE SALIDA\nIlustración 1:1 solemne y política.",
           "reference_ids": [
-            "anchors/char-peeta.png",
             "anchors/char-katniss.png",
+            "anchors/char-effie.png",
             "anchors/env-reaping-square.png"
+          ],
+          "active_id": "01/01_13_main-p13-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_13_main-p13-main-flow.png",
+              "slug": "p13-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_13_main-p13-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T11:16:42.654738+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            },
+            {
+              "id": "01/01_14_main-p14-main-flow.png",
+              "slug": "p14-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_14_main-p14-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T11:28:25.113957+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
@@ -276,12 +425,31 @@
         "main": {
           "status": "draft",
           "prompt": "OBJETIVO DE ILUSTRACION\nEl cierre del cuento con el apretón de manos de los dos tributos frente a Panem.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nKatniss y Peeta dándose la mano. El himno de Panem sonando (sugerido por la pompa de la escena). Estilo Kern.\n\nCOMPOSICION Y ENCUADRE\nPlano americano de ambos tributos en el centro del escenario, rodeados por agentes de la paz. Composición final de cierre.\n\nPERSONAJES Y ACCION\nManos entrelazadas. Mirada compartida de entendimiento trágico. Effie y el Alcalde al fondo observando con solemnidad.\n\nENTORNO, PALETA E ILUMINACION\nAnochecer incipiente sobre el Distrito 12. Colores púrpuras y dorados en el cielo contrastando con el gris de la ciudad.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, env_reaping_square, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nSin créditos ni texto de 'fin' dentro de la imagen. No usar efectos de luz digital modernos. Sin fotorrealismo.\n\nFORMATO DE SALIDA\nIlustración 1:1 final de alta calidad para la colección.",
-          "active_id": "",
-          "alternatives": [],
           "reference_ids": [
             "anchors/char-katniss.png",
             "anchors/char-peeta.png",
             "anchors/env-reaping-square.png"
+          ],
+          "active_id": "01/01_16_main-p16-main-flow.png",
+          "alternatives": [
+            {
+              "id": "01/01_16_main-p16-main-flow.png",
+              "slug": "p16-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_16_main-p16-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T11:36:01.936010+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            },
+            {
+              "id": "01/01_15_main-p15-main-flow.png",
+              "slug": "p15-main-flow",
+              "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_15_main-p15-main-flow.png",
+              "mime_type": "image/png",
+              "status": "candidate",
+              "created_at": "2026-02-19T11:31:21.445596+00:00",
+              "notes": "Flujo guiado de imagenes pendientes"
+            }
           ]
         }
       }
