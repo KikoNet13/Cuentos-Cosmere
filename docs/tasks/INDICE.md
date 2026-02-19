@@ -1,6 +1,16 @@
 # índice de tareas
 
-- Proximo ID: `044`
+- Proximo ID: `045`
+
+## TAREA-044-ajuste-fino-portada-espaciado-numeracion-pdf
+
+- Fecha: 19/02/26 15:47
+- Estado: cerrada
+- Resumen: refinamiento del PDF paginado con portada mas contrastada y etiqueta de coleccion en pie, compactacion del espaciado de texto y numeracion visible de exportacion `1..32` sin tocar `NN.json`.
+- Version: 2.8.4
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-044-ajuste-fino-portada-espaciado-numeracion-pdf.md`
 
 ## TAREA-043-maquetacion-pdf-paginas-cuadradas
 

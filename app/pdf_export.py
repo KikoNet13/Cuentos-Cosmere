@@ -311,6 +311,30 @@ def _resolve_pdf_fonts(*, pdfmetrics_mod: Any, ttfont_cls: Any) -> dict[str, str
     return {"regular": "Times-Roman", "bold": "Times-Bold"}
 
 
+def _humanize_book_rel_path(book_rel_path: str) -> str:
+    normalized = _normalize_rel_path(book_rel_path)
+    if not normalized:
+        return "Coleccion"
+    leaf = normalized.split("/")[-1]
+    tokens = [token for token in re.split(r"[_\-]+", leaf) if token]
+    if not tokens:
+        return leaf
+    return " ".join(token.capitalize() for token in tokens)
+
+
+def _format_collection_label(payload: dict[str, Any]) -> str:
+    collection = _humanize_book_rel_path(str(payload.get("book_rel_path", ""))).upper()
+    story_id_raw = str(payload.get("story_id", "")).strip()
+    match = re.search(r"\d+", story_id_raw)
+    if match:
+        story_code = f"{int(match.group(0)):02d}"
+    elif story_id_raw:
+        story_code = story_id_raw.zfill(2)[:2]
+    else:
+        story_code = "00"
+    return f"{collection} - CUENTO {story_code}"
+
+
 def _split_long_paragraph(paragraph: str, *, max_chars: int = 220) -> list[str]:
     clean = re.sub(r"\s+", " ", paragraph).strip()
     if not clean:
@@ -345,23 +369,32 @@ def _normalize_story_text(text: str) -> str:
     if not normalized:
         return ""
 
-    base_paragraphs = [line.strip() for line in normalized.split("\n")]
-    base_paragraphs = [line for line in base_paragraphs if line]
-    if not base_paragraphs:
-        return ""
-
     polished: list[str] = []
-    for paragraph in base_paragraphs:
-        split_dialogue = re.sub(r"(?<!\n)\s*(—)(?=[A-ZÁÉÍÓÚÑ¡¿])", r"\n\1", paragraph)
-        split_dialogue = re.sub(r"(?<!\n)\s*(«)", r"\n\1", split_dialogue)
+    previous_blank = False
+
+    for raw_line in normalized.split("\n"):
+        paragraph = raw_line.strip()
+        if not paragraph:
+            if polished and not previous_blank:
+                polished.append("")
+            previous_blank = True
+            continue
+
+        split_dialogue = re.sub(
+            r"(?<!\n)\s*(\u2014)(?=[A-Z\u00C1\u00C9\u00CD\u00D3\u00DA\u00D1\u00A1\u00BF])",
+            r"\n\1",
+            paragraph,
+        )
+        split_dialogue = re.sub(r"(?<!\n)\s*(\u00AB)", r"\n\1", split_dialogue)
 
         for chunk in split_dialogue.split("\n"):
             chunk = chunk.strip()
             if not chunk:
                 continue
             polished.extend(_split_long_paragraph(chunk, max_chars=220))
+            previous_blank = False
 
-    return "\n\n".join(polished)
+    return "\n".join(polished).strip()
 
 
 def _wrap_line_to_width(
@@ -429,7 +462,11 @@ def _wrap_text(
 ) -> list[str]:
     paragraphs = text.split("\n")
     lines: list[str] = []
-    for index, paragraph in enumerate(paragraphs):
+    for paragraph in paragraphs:
+        if not paragraph.strip():
+            if lines and lines[-1] != "":
+                lines.append("")
+            continue
         wrapped = _wrap_line_to_width(
             paragraph,
             pdfmetrics_mod=pdfmetrics_mod,
@@ -438,9 +475,7 @@ def _wrap_text(
             max_width=max_width,
         )
         lines.extend(wrapped)
-        if index < len(paragraphs) - 1:
-            lines.append("")
-    return lines
+    return lines or [""]
 
 
 def _fit_text_block(
@@ -452,7 +487,7 @@ def _fit_text_block(
     max_height: float,
 ) -> tuple[float, float, list[str]] | None:
     for font_size in (18.0, 17.5, 17.0, 16.5, 16.0, 15.5, 15.0, 14.5, 14.0):
-        line_height = font_size * 1.52
+        line_height = font_size * 1.38
         lines = _wrap_text(
             text,
             pdfmetrics_mod=pdfmetrics_mod,
@@ -570,13 +605,19 @@ def _draw_cover_page(
         height=page_size,
     )
 
-    band_h = page_size * 0.2
-    band_y = page_size - band_h
+    title_panel_h = page_size * 0.24
+    title_panel_y = page_size * 0.64
+    footer_shade_h = page_size * 0.16
+
     canvas_obj.saveState()
-    canvas_obj.setFillColor(colors_mod.HexColor("#151515"))
+    canvas_obj.setFillColor(colors_mod.HexColor("#0D0D0D"))
     if hasattr(canvas_obj, "setFillAlpha"):
-        canvas_obj.setFillAlpha(0.48)
-    canvas_obj.rect(0.0, band_y, page_size, band_h, fill=1, stroke=0)
+        canvas_obj.setFillAlpha(0.52)
+    canvas_obj.rect(0.0, title_panel_y, page_size, title_panel_h, fill=1, stroke=0)
+    canvas_obj.setFillColor(colors_mod.black)
+    if hasattr(canvas_obj, "setFillAlpha"):
+        canvas_obj.setFillAlpha(0.30)
+    canvas_obj.rect(0.0, 0.0, page_size, footer_shade_h, fill=1, stroke=0)
     canvas_obj.restoreState()
 
     title = str(payload.get("title", "")).strip() or "Sin titulo"
@@ -586,11 +627,86 @@ def _draw_cover_page(
         pdfmetrics_mod=pdfmetrics_mod,
         title=title,
         font_name=fonts["bold"],
-        x=24.0,
-        y=band_y + 8.0,
-        width=page_size - 48.0,
-        height=band_h - 16.0,
+        x=22.0,
+        y=title_panel_y + 16.0,
+        width=page_size - 44.0,
+        height=title_panel_h - 32.0,
     )
+
+    collection_label = _format_collection_label(payload)
+    label_font_size = 10.0
+    for candidate_size in (10.0, 9.5, 9.0, 8.5):
+        label_width = pdfmetrics_mod.stringWidth(collection_label, fonts["regular"], candidate_size)
+        if label_width <= (page_size * 0.86):
+            label_font_size = candidate_size
+            break
+    label_width = pdfmetrics_mod.stringWidth(collection_label, fonts["regular"], label_font_size)
+    label_padding_x = 16.0
+    label_padding_y = 5.0
+    label_box_w = label_width + (label_padding_x * 2.0)
+    label_box_h = label_font_size + (label_padding_y * 2.0)
+    label_x = (page_size - label_box_w) / 2.0
+    label_y = max(14.0, page_size * 0.05)
+
+    canvas_obj.saveState()
+    canvas_obj.setFillColor(colors_mod.HexColor("#111111"))
+    if hasattr(canvas_obj, "setFillAlpha"):
+        canvas_obj.setFillAlpha(0.58)
+    if hasattr(canvas_obj, "roundRect"):
+        canvas_obj.roundRect(label_x, label_y, label_box_w, label_box_h, 6.0, fill=1, stroke=0)
+    else:
+        canvas_obj.rect(label_x, label_y, label_box_w, label_box_h, fill=1, stroke=0)
+    canvas_obj.restoreState()
+
+    canvas_obj.setFillColor(colors_mod.HexColor("#F4F4F4"))
+    canvas_obj.setFont(fonts["regular"], label_font_size)
+    label_text_x = label_x + label_padding_x
+    label_text_y = label_y + label_padding_y
+    canvas_obj.drawString(label_text_x, label_text_y, collection_label)
+
+
+def _draw_export_page_number(
+    *,
+    canvas_obj: Any,
+    page_size: float,
+    export_page_number: int,
+    pdfmetrics_mod: Any,
+    colors_mod: Any,
+    fonts: dict[str, str],
+    on_image: bool,
+) -> None:
+    label = str(export_page_number)
+    label_font_size = 10.0
+    label_width = pdfmetrics_mod.stringWidth(label, fonts["regular"], label_font_size)
+    label_y = max(12.0, page_size * 0.03)
+
+    if on_image:
+        box_padding_x = 8.0
+        box_padding_y = 2.5
+        box_w = label_width + (box_padding_x * 2.0)
+        box_h = label_font_size + (box_padding_y * 2.0)
+        box_x = (page_size - box_w) / 2.0
+        box_y = max(8.0, page_size * 0.018)
+
+        canvas_obj.saveState()
+        canvas_obj.setFillColor(colors_mod.black)
+        if hasattr(canvas_obj, "setFillAlpha"):
+            canvas_obj.setFillAlpha(0.42)
+        if hasattr(canvas_obj, "roundRect"):
+            canvas_obj.roundRect(box_x, box_y, box_w, box_h, 4.0, fill=1, stroke=0)
+        else:
+            canvas_obj.rect(box_x, box_y, box_w, box_h, fill=1, stroke=0)
+        canvas_obj.restoreState()
+
+        canvas_obj.setFillColor(colors_mod.white)
+        canvas_obj.setFont(fonts["regular"], label_font_size)
+        canvas_obj.drawString(box_x + box_padding_x, box_y + box_padding_y, label)
+        return
+
+    canvas_obj.setFillColor(colors_mod.HexColor("#707070"))
+    canvas_obj.setFont(fonts["regular"], label_font_size)
+    label_x = (page_size - label_width) / 2.0
+    canvas_obj.drawString(label_x, label_y, label)
 
 
 def _draw_text_page(
@@ -601,22 +717,19 @@ def _draw_text_page(
     pdfmetrics_mod: Any,
     colors_mod: Any,
     fonts: dict[str, str],
+    export_page_number: int,
 ) -> None:
-    margin = max(36.0, page_size * 0.075)
-    header_gap = 30.0
+    margin = max(36.0, page_size * 0.076)
+    footer_gap = 24.0
 
     canvas_obj.setFillColor(colors_mod.white)
     canvas_obj.rect(0.0, 0.0, page_size, page_size, fill=1, stroke=0)
 
     page_number = int(page.get("page_number", 0))
-    canvas_obj.setFillColor(colors_mod.HexColor("#2A2A2A"))
-    canvas_obj.setFont(fonts["bold"], 14.0)
-    canvas_obj.drawString(margin, page_size - margin, f"Pagina {page_number}")
-
     text_x = margin
     text_y = margin
     text_w = page_size - (margin * 2.0)
-    text_h = page_size - (margin * 2.0) - header_gap
+    text_h = page_size - (margin * 2.0) - footer_gap
     story_text = _normalize_story_text(str(page.get("text", "")))
 
     fit = _fit_text_block(
@@ -641,6 +754,16 @@ def _draw_text_page(
             canvas_obj.drawString(text_x, cursor_y, line)
         cursor_y -= line_height
 
+    _draw_export_page_number(
+        canvas_obj=canvas_obj,
+        page_size=page_size,
+        export_page_number=export_page_number,
+        pdfmetrics_mod=pdfmetrics_mod,
+        colors_mod=colors_mod,
+        fonts=fonts,
+        on_image=False,
+    )
+
 
 def _draw_image_page(
     *,
@@ -648,6 +771,10 @@ def _draw_image_page(
     main_path: Path,
     page_size: float,
     image_reader_cls: Any,
+    export_page_number: int,
+    pdfmetrics_mod: Any,
+    colors_mod: Any,
+    fonts: dict[str, str],
 ) -> None:
     _draw_image_fill(
         canvas_obj=canvas_obj,
@@ -657,6 +784,15 @@ def _draw_image_page(
         y=0.0,
         width=page_size,
         height=page_size,
+    )
+    _draw_export_page_number(
+        canvas_obj=canvas_obj,
+        page_size=page_size,
+        export_page_number=export_page_number,
+        pdfmetrics_mod=pdfmetrics_mod,
+        colors_mod=colors_mod,
+        fonts=fonts,
+        on_image=True,
     )
 
 
@@ -760,6 +896,7 @@ def export_story_pdf(
         fonts=fonts,
     )
 
+    export_page_number = 0
     for row in active_paths.get("pages", []):
         if not isinstance(row, dict):
             continue
@@ -769,6 +906,7 @@ def export_story_pdf(
             continue
 
         canvas_obj.showPage()
+        export_page_number += 1
         _draw_text_page(
             canvas_obj=canvas_obj,
             page=page,
@@ -776,14 +914,20 @@ def export_story_pdf(
             pdfmetrics_mod=pdfmetrics_mod,
             colors_mod=colors_mod,
             fonts=fonts,
+            export_page_number=export_page_number,
         )
 
         canvas_obj.showPage()
+        export_page_number += 1
         _draw_image_page(
             canvas_obj=canvas_obj,
             main_path=main_path,
             page_size=page_size,
             image_reader_cls=image_reader_cls,
+            export_page_number=export_page_number,
+            pdfmetrics_mod=pdfmetrics_mod,
+            colors_mod=colors_mod,
+            fonts=fonts,
         )
 
     canvas_obj.save()

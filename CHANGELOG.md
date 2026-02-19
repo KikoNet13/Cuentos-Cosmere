@@ -5,6 +5,22 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [19/02/26] - Ajuste fino de portada, espaciado y numeracion en PDF
+
+- `export-story-pdf` mantiene layout `paged` y refina portada con mayor contraste visual.
+- Se agrega etiqueta de coleccion en pie de portada compuesta desde metadatos:
+  - `LOS JUEGOS DEL HAMBRE - CUENTO 01`.
+- Texto narrativo mas compacto:
+  - se corrige deteccion de dialogos con Unicode real (`\u2014`, `\u00AB`),
+  - se eliminan saltos en blanco automaticos extra,
+  - interlineado ajustado para mayor densidad editorial.
+- Numeracion visible de exportacion:
+  - portada sin numero,
+  - paginas narrativas numeradas en continuo (`1..32`) para cuento de 16 paginas,
+  - numeracion independiente de `pages[].page_number` en datos.
+- Sin cambios en contrato JSON ni en `library/los_juegos_del_hambre/01.json`.
+- Tarea: `docs/tasks/TAREA-044-ajuste-fino-portada-espaciado-numeracion-pdf.md`.
+
 ## [19/02/26] - PDF paginado cuadrado (portada + texto/imagen alternos)
 
 - `export-story-pdf` cambia al layout `paged` en paginas `size_cm x size_cm`.
