@@ -5,6 +5,21 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [19/02/26] - Portada PDF solida + reversion de prompts de cover
+
+- Portada de `export-story-pdf` actualizada a estilo editorial:
+  - banda superior solida (sin transparencia),
+  - titulo en blanco,
+  - etiqueta de coleccion con numero en blanco (`LOS JUEGOS DEL HAMBRE · 01`).
+- Tipografia refinada para el PDF con prioridad:
+  - `Garamond` -> `Palatino` -> `Georgia` -> `Cambria` -> `Times`.
+- Se mantiene la numeracion solo en paginas de texto; las paginas de imagen completa quedan sin numero visible.
+- Reversion en `01..11.json` del bloque nuevo de portada que exigia texto exacto incrustado:
+  - vuelve el bloque `MAQUETACION DE PORTADA (OBLIGATORIO)` + `GUIA DE MAQUETACION (ANCLAS)`.
+- Export validado y regenerado:
+  - `library/los_juegos_del_hambre/01.pdf`.
+- Tarea: `docs/tasks/TAREA-045-portada-pdf-solida-y-reversion-prompts-cover.md`.
+
 ## [19/02/26] - Ajuste fino de portada, espaciado y numeracion en PDF
 
 - `export-story-pdf` mantiene layout `paged` y refina portada con mayor contraste visual.

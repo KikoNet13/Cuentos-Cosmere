@@ -279,6 +279,16 @@ def _register_font_from_candidates(
 def _resolve_pdf_fonts(*, pdfmetrics_mod: Any, ttfont_cls: Any) -> dict[str, str]:
     families = [
         (
+            "StoryGaramond",
+            [r"C:\Windows\Fonts\gara.ttf", r"C:\Windows\Fonts\GARA.TTF"],
+            [r"C:\Windows\Fonts\garabd.ttf", r"C:\Windows\Fonts\GARABD.TTF"],
+        ),
+        (
+            "StoryPalatino",
+            [r"C:\Windows\Fonts\pala.ttf", r"C:\Windows\Fonts\PALA.TTF"],
+            [r"C:\Windows\Fonts\palab.ttf", r"C:\Windows\Fonts\PALAB.TTF"],
+        ),
+        (
             "StoryGeorgia",
             [r"C:\Windows\Fonts\georgia.ttf"],
             [r"C:\Windows\Fonts\georgiab.ttf"],
@@ -322,17 +332,12 @@ def _humanize_book_rel_path(book_rel_path: str) -> str:
     return " ".join(token.capitalize() for token in tokens)
 
 
-def _format_collection_label(payload: dict[str, Any]) -> str:
+def _format_cover_header_label(payload: dict[str, Any]) -> str:
     collection = _humanize_book_rel_path(str(payload.get("book_rel_path", ""))).upper()
     story_id_raw = str(payload.get("story_id", "")).strip()
     match = re.search(r"\d+", story_id_raw)
-    if match:
-        story_code = f"{int(match.group(0)):02d}"
-    elif story_id_raw:
-        story_code = story_id_raw.zfill(2)[:2]
-    else:
-        story_code = "00"
-    return f"{collection} - CUENTO {story_code}"
+    story_code = f"{int(match.group(0)):02d}" if match else "00"
+    return f"{collection} · {story_code}"
 
 
 def _split_long_paragraph(paragraph: str, *, max_chars: int = 220) -> list[str]:
@@ -369,21 +374,19 @@ def _normalize_story_text(text: str) -> str:
     if not normalized:
         return ""
 
-    polished: list[str] = []
-    previous_blank = False
+    # Keep paragraph breathing: one empty line between polished blocks.
+    raw_blocks = re.split(r"\n\s*\n", normalized)
+    polished_blocks: list[str] = []
 
-    for raw_line in normalized.split("\n"):
-        paragraph = raw_line.strip()
-        if not paragraph:
-            if polished and not previous_blank:
-                polished.append("")
-            previous_blank = True
+    for raw_block in raw_blocks:
+        block = re.sub(r"\s+", " ", raw_block).strip()
+        if not block:
             continue
 
         split_dialogue = re.sub(
             r"(?<!\n)\s*(\u2014)(?=[A-Z\u00C1\u00C9\u00CD\u00D3\u00DA\u00D1\u00A1\u00BF])",
             r"\n\1",
-            paragraph,
+            block,
         )
         split_dialogue = re.sub(r"(?<!\n)\s*(\u00AB)", r"\n\1", split_dialogue)
 
@@ -391,10 +394,9 @@ def _normalize_story_text(text: str) -> str:
             chunk = chunk.strip()
             if not chunk:
                 continue
-            polished.extend(_split_long_paragraph(chunk, max_chars=220))
-            previous_blank = False
+            polished_blocks.extend(_split_long_paragraph(chunk, max_chars=220))
 
-    return "\n".join(polished).strip()
+    return "\n\n".join(polished_blocks)
 
 
 def _wrap_line_to_width(
@@ -487,7 +489,7 @@ def _fit_text_block(
     max_height: float,
 ) -> tuple[float, float, list[str]] | None:
     for font_size in (18.0, 17.5, 17.0, 16.5, 16.0, 15.5, 15.0, 14.5, 14.0):
-        line_height = font_size * 1.38
+        line_height = font_size * 1.5
         lines = _wrap_text(
             text,
             pdfmetrics_mod=pdfmetrics_mod,
@@ -605,20 +607,10 @@ def _draw_cover_page(
         height=page_size,
     )
 
-    title_panel_h = page_size * 0.24
-    title_panel_y = page_size * 0.64
-    footer_shade_h = page_size * 0.16
-
-    canvas_obj.saveState()
-    canvas_obj.setFillColor(colors_mod.HexColor("#0D0D0D"))
-    if hasattr(canvas_obj, "setFillAlpha"):
-        canvas_obj.setFillAlpha(0.52)
-    canvas_obj.rect(0.0, title_panel_y, page_size, title_panel_h, fill=1, stroke=0)
-    canvas_obj.setFillColor(colors_mod.black)
-    if hasattr(canvas_obj, "setFillAlpha"):
-        canvas_obj.setFillAlpha(0.30)
-    canvas_obj.rect(0.0, 0.0, page_size, footer_shade_h, fill=1, stroke=0)
-    canvas_obj.restoreState()
+    top_band_h = page_size * 0.24
+    top_band_y = page_size - top_band_h
+    canvas_obj.setFillColor(colors_mod.HexColor("#11161F"))
+    canvas_obj.rect(0.0, top_band_y, page_size, top_band_h, fill=1, stroke=0)
 
     title = str(payload.get("title", "")).strip() or "Sin titulo"
     canvas_obj.setFillColor(colors_mod.white)
@@ -627,42 +619,23 @@ def _draw_cover_page(
         pdfmetrics_mod=pdfmetrics_mod,
         title=title,
         font_name=fonts["bold"],
-        x=22.0,
-        y=title_panel_y + 16.0,
+        x=24.0,
+        y=top_band_y + (top_band_h * 0.22),
         width=page_size - 44.0,
-        height=title_panel_h - 32.0,
+        height=top_band_h * 0.64,
     )
-
-    collection_label = _format_collection_label(payload)
-    label_font_size = 10.0
-    for candidate_size in (10.0, 9.5, 9.0, 8.5):
-        label_width = pdfmetrics_mod.stringWidth(collection_label, fonts["regular"], candidate_size)
-        if label_width <= (page_size * 0.86):
-            label_font_size = candidate_size
+    header_label = _format_cover_header_label(payload)
+    header_size = 12.0
+    for candidate_size in (12.0, 11.0, 10.0, 9.0):
+        if pdfmetrics_mod.stringWidth(header_label, fonts["regular"], candidate_size) <= (page_size * 0.84):
+            header_size = candidate_size
             break
-    label_width = pdfmetrics_mod.stringWidth(collection_label, fonts["regular"], label_font_size)
-    label_padding_x = 16.0
-    label_padding_y = 5.0
-    label_box_w = label_width + (label_padding_x * 2.0)
-    label_box_h = label_font_size + (label_padding_y * 2.0)
-    label_x = (page_size - label_box_w) / 2.0
-    label_y = max(14.0, page_size * 0.05)
-
-    canvas_obj.saveState()
-    canvas_obj.setFillColor(colors_mod.HexColor("#111111"))
-    if hasattr(canvas_obj, "setFillAlpha"):
-        canvas_obj.setFillAlpha(0.58)
-    if hasattr(canvas_obj, "roundRect"):
-        canvas_obj.roundRect(label_x, label_y, label_box_w, label_box_h, 6.0, fill=1, stroke=0)
-    else:
-        canvas_obj.rect(label_x, label_y, label_box_w, label_box_h, fill=1, stroke=0)
-    canvas_obj.restoreState()
-
-    canvas_obj.setFillColor(colors_mod.HexColor("#F4F4F4"))
-    canvas_obj.setFont(fonts["regular"], label_font_size)
-    label_text_x = label_x + label_padding_x
-    label_text_y = label_y + label_padding_y
-    canvas_obj.drawString(label_text_x, label_text_y, collection_label)
+    label_w = pdfmetrics_mod.stringWidth(header_label, fonts["regular"], header_size)
+    label_x = (page_size - label_w) / 2.0
+    label_y = top_band_y + (top_band_h * 0.14)
+    canvas_obj.setFillColor(colors_mod.white)
+    canvas_obj.setFont(fonts["regular"], header_size)
+    canvas_obj.drawString(label_x, label_y, header_label)
 
 
 def _draw_export_page_number(
@@ -771,10 +744,6 @@ def _draw_image_page(
     main_path: Path,
     page_size: float,
     image_reader_cls: Any,
-    export_page_number: int,
-    pdfmetrics_mod: Any,
-    colors_mod: Any,
-    fonts: dict[str, str],
 ) -> None:
     _draw_image_fill(
         canvas_obj=canvas_obj,
@@ -784,15 +753,6 @@ def _draw_image_page(
         y=0.0,
         width=page_size,
         height=page_size,
-    )
-    _draw_export_page_number(
-        canvas_obj=canvas_obj,
-        page_size=page_size,
-        export_page_number=export_page_number,
-        pdfmetrics_mod=pdfmetrics_mod,
-        colors_mod=colors_mod,
-        fonts=fonts,
-        on_image=True,
     )
 
 
@@ -924,10 +884,6 @@ def export_story_pdf(
             main_path=main_path,
             page_size=page_size,
             image_reader_cls=image_reader_cls,
-            export_page_number=export_page_number,
-            pdfmetrics_mod=pdfmetrics_mod,
-            colors_mod=colors_mod,
-            fonts=fonts,
         )
 
     canvas_obj.save()

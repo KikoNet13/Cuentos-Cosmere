@@ -4,17 +4,19 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T20:00:00Z",
-  "updated_at": "2026-02-19T08:46:47.513148+00:00",
+  "updated_at": "2026-02-19T22:20:14.820031+01:00",
   "cover": {
     "status": "draft",
-    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'El Triunfo de las Bayas', capturando el clímax dramático donde Katniss y Peeta desafían al Capitolio con las bayas venenosas sobre la Cornucopia.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: línea negra limpia y expresiva, colores planos vibrantes y anatomía de cuento infantil. Katniss con su trenza negra, piel aceitunada y uniforme de tributo desgastado. Peeta con cabello rubio ceniza, ojos azules y expresión de cansancio heroico. Respetar la estética de Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio-largo de Katniss y Peeta de pie sobre el lomo dorado de la Cornucopia. Ambos sostienen un puñado de bayas oscuras cerca de sus labios. Composición simétrica y poderosa que simboliza la unidad contra la opresión.\n\nPERSONAJES Y ACCIÓN\nKatniss mira con determinación hacia el espectador (desafiando a las cámaras). Peeta la mira a ella con confianza absoluta. La acción es estática pero cargada de tensión, justo antes de la rendición del Capitolio.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo de cielo rosado de atardecer en la arena. El cuerno de oro de la Cornucopia brilla con tonos amarillos planos. La paleta incluye el azul de los uniformes, el oro del metal y el púrpura profundo de las bayas. Iluminación frontal sin sombras complejas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_nightlock_berries, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logotipos. Prohibido el fotorrealismo, degradados digitales, efectos de sangre realistas o sombreado dramático 3D. Evitar que la escena parezca de terror; mantener el tono de álbum ilustrado.\n\nFORMATO DE SALIDA\nIlustración digital final 1:1 de alta calidad, con bordes definidos y colores saturados, lista para portada editorial.",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'El Triunfo de las Bayas', capturando el clímax dramático donde Katniss y Peeta desafían al Capitolio con las bayas venenosas sobre la Cornucopia.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: línea negra limpia y expresiva, colores planos vibrantes y anatomía de cuento infantil. Katniss con su trenza negra, piel aceitunada y uniforme de tributo desgastado. Peeta con cabello rubio ceniza, ojos azules y expresión de cansancio heroico. Respetar la estética de Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio-largo de Katniss y Peeta de pie sobre el lomo dorado de la Cornucopia. Ambos sostienen un puñado de bayas oscuras cerca de sus labios. Composición simétrica y poderosa que simboliza la unidad contra la opresión.\n\nPERSONAJES Y ACCIÓN\nKatniss mira con determinación hacia el espectador (desafiando a las cámaras). Peeta la mira a ella con confianza absoluta. La acción es estática pero cargada de tensión, justo antes de la rendición del Capitolio.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo de cielo rosado de atardecer en la arena. El cuerno de oro de la Cornucopia brilla con tonos amarillos planos. La paleta incluye el azul de los uniformes, el oro del metal y el púrpura profundo de las bayas. Iluminación frontal sin sombras complejas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_nightlock_berries, env_arena_forest.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logotipos. Prohibido el fotorrealismo, degradados digitales, efectos de sangre realistas o sombreado dramático 3D. Evitar que la escena parezca de terror; mantener el tono de álbum ilustrado.\n\nFORMATO DE SALIDA\nIlustración digital final 1:1 de alta calidad, con bordes definidos y colores saturados, lista para portada editorial.\n\nMAQUETACION DE PORTADA (OBLIGATORIO)\nEsta portada se regenera en ChatGPT. Reservar una zona limpia para titulo en el tercio superior y una zona limpia para etiqueta de coleccion en el pie. No incrustar texto final en la ilustracion.\n\nGUIA DE MAQUETACION (ANCLAS)\nAplicar como referencia visual: cover_title_format y cover_footer_collection_tag, priorizando contraste y legibilidad editorial.",
     "active_id": "",
     "alternatives": [],
     "reference_ids": [
       "anchors/char-katniss.png",
       "anchors/char-peeta.png",
       "anchors/prop-nightlock-berries.png",
-      "anchors/env-arena-forest.png"
+      "anchors/env-arena-forest.png",
+      "anchors/cover-title-format.png",
+      "anchors/cover-footer-collection-tag.png"
     ]
   },
   "pages": [
@@ -103,7 +105,7 @@
     },
     {
       "page_number": 6,
-      "text": "De pronto, la voz de Claudius Templesmith resuena de nuevo por toda la arena. Nos invita a un «banquete» especial en la Cornucopia al amanecer. Promete que habrá una mochila marcada con el número de cada distrito que contendrá algo que necesitamos con urgencia. Sé que en la nuestra está la medicina para salvar la pierna de Peeta. —No irás, Katniss —me ordena él con firmeza, apretándome la mano—. No voy a dejar que te maten por mi culpa en ese baño de sangre. Pero yo ya he tomado una decisión secreta: no dejaré que muera.",
+      "text": "De pronto, la voz de Claudius Templesmith resuena de nuevo por toda la arena. Nos invita a un\n«banquete» especial en la Cornucopia al amanecer. Promete que habrá una mochila marcada con el número de cada distrito que contendrá algo que necesitamos con urgencia. Sé que en la nuestra está la medicina para salvar la pierna de Peeta.\n—No irás, Katniss —me ordena él con firmeza, apretándome la mano—. No voy a dejar que te maten por mi culpa en ese baño de sangre. Pero yo ya he tomado una decisión secreta: no dejaré que muera.",
       "images": {
         "main": {
           "status": "draft",
@@ -201,7 +203,7 @@
     },
     {
       "page_number": 12,
-      "text": "Cuando la lluvia para, salimos a cazar. Peeta recolecta unas bayas de un color morado intenso que ha encontrado cerca del arroyo. Yo las reconozco de inmediato por las historias de mi padre: son «jaulas de noche», un veneno mortal que te mata antes de llegar al estómago. De repente, un cañonazo suena. El aerodeslizador aparece para llevarse a la chica del Distrito 5, la «Comadreja». Ella nos estaba espiando y robó las bayas de Peeta, creyendo que eran seguras. El veneno que Peeta recogió por error ha eliminado a nuestra rival más astuta.",
+      "text": "Cuando la lluvia para, salimos a cazar. Peeta recolecta unas bayas de un color morado intenso que ha encontrado cerca del arroyo. Yo las reconozco de inmediato por las historias de mi padre: son\n«jaulas de noche», un veneno mortal que te mata antes de llegar al estómago. De repente, un cañonazo suena. El aerodeslizador aparece para llevarse a la chica del Distrito 5, la\n«Comadreja». Ella nos estaba espiando y robó las bayas de Peeta, creyendo que eran seguras. El veneno que Peeta recogió por error ha eliminado a nuestra rival más astuta.",
       "images": {
         "main": {
           "status": "draft",
@@ -269,7 +271,7 @@
     },
     {
       "page_number": 16,
-      "text": "De pronto, la voz de Claudius Templesmith anuncia que el cambio de reglas ha sido revocado: solo puede haber un vencedor. El Capitolio nos ha traicionado para forzar un duelo final entre nosotros. Peeta baja su cuchillo y me pide que lo mate, pero yo tengo un plan mejor. Saco las bayas venenosas y le doy la mitad. «A la de tres», susurro. Justo cuando estamos a punto de tragarlas, las trompetas suenan frenéticas. ¡Parad! ¡Parad! Nos declaran vencedores a ambos. El triunfo de las bayas ha humillado al Capitolio, y ahora somos libres, pero el peligro real acaba de empezar.",
+      "text": "De pronto, la voz de Claudius Templesmith anuncia que el cambio de reglas ha sido revocado: solo puede haber un vencedor. El Capitolio nos ha traicionado para forzar un duelo final entre nosotros. Peeta baja su cuchillo y me pide que lo mate, pero yo tengo un plan mejor. Saco las bayas venenosas y le doy la mitad.\n«A la de tres», susurro. Justo cuando estamos a punto de tragarlas, las trompetas suenan frenéticas. ¡Parad! ¡Parad! Nos declaran vencedores a ambos. El triunfo de las bayas ha humillado al Capitolio, y ahora somos libres, pero el peligro real acaba de empezar.",
       "images": {
         "main": {
           "status": "draft",

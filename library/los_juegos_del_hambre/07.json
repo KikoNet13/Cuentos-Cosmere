@@ -4,16 +4,18 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T12:00:00Z",
-  "updated_at": "2026-02-19T08:46:47.513148+00:00",
+  "updated_at": "2026-02-19T22:20:14.820031+01:00",
   "cover": {
     "status": "draft",
-    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'El Secreto del Reloj', representando a Katniss Everdeen como el Sinsajo frente a la naturaleza geometrica de la arena tropical del Vasallaje de los Veinticinco.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: linea negra limpia y definida, colores planos vibrantes y formas geometricas amables. Katniss debe aparecer con su trenza negra, piel aceitunada y el vestido de novia transformandose en plumas negras y blancas de sinsajo. Respetar la estetica de Ligne Claire sin sombras complejas ni fotorrealismo.\n\nCOMPOSICION Y ENCUADRE\nPlano medio-largo de Katniss Everdeen en el centro de la imagen, con los brazos ligeramente extendidos mostrando sus alas de plumas. De fondo, una vista cenital estilizada de la arena en forma de reloj con sus doce sectores y el agua azul rodeando el centro de oro.\n\nPERSONAJES Y ACCION\nKatniss con expresion decidida y majestuosa. La accion sugiere el momento de su transformacion simbolica ante Panem. El broche de sinsajo dorado debe destacar en su pecho.\n\nENTORNO, PALETA E ILUMINACION\nFondo de jungla verde esmeralda y mar azul brillante. La paleta combina el blanco y negro del traje con los colores saturados del entorno tropical. Iluminacion clara y homogenea de cuento infantil.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, env_arena_clock, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, titulos ni creditos. Prohibido el fotorrealismo, las texturas 3D, el sombreado dramatico o los efectos de lente. Evitar elementos sangrientos o violentos para mantener el tono editorial.\n\nFORMATO DE SALIDA\nIlustracion digital final 1:1 con bordes limpios y alta definicion en los contornos, lista para maquetacion de portada.",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'El Secreto del Reloj', representando a Katniss Everdeen como el Sinsajo frente a la naturaleza geometrica de la arena tropical del Vasallaje de los Veinticinco.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: linea negra limpia y definida, colores planos vibrantes y formas geometricas amables. Katniss debe aparecer con su trenza negra, piel aceitunada y el vestido de novia transformandose en plumas negras y blancas de sinsajo. Respetar la estetica de Ligne Claire sin sombras complejas ni fotorrealismo.\n\nCOMPOSICION Y ENCUADRE\nPlano medio-largo de Katniss Everdeen en el centro de la imagen, con los brazos ligeramente extendidos mostrando sus alas de plumas. De fondo, una vista cenital estilizada de la arena en forma de reloj con sus doce sectores y el agua azul rodeando el centro de oro.\n\nPERSONAJES Y ACCION\nKatniss con expresion decidida y majestuosa. La accion sugiere el momento de su transformacion simbolica ante Panem. El broche de sinsajo dorado debe destacar en su pecho.\n\nENTORNO, PALETA E ILUMINACION\nFondo de jungla verde esmeralda y mar azul brillante. La paleta combina el blanco y negro del traje con los colores saturados del entorno tropical. Iluminacion clara y homogenea de cuento infantil.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, env_arena_clock, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, titulos ni creditos. Prohibido el fotorrealismo, las texturas 3D, el sombreado dramatico o los efectos de lente. Evitar elementos sangrientos o violentos para mantener el tono editorial.\n\nFORMATO DE SALIDA\nIlustracion digital final 1:1 con bordes limpios y alta definicion en los contornos, lista para maquetacion de portada.\n\nMAQUETACION DE PORTADA (OBLIGATORIO)\nEsta portada se regenera en ChatGPT. Reservar una zona limpia para titulo en el tercio superior y una zona limpia para etiqueta de coleccion en el pie. No incrustar texto final en la ilustracion.\n\nGUIA DE MAQUETACION (ANCLAS)\nAplicar como referencia visual: cover_title_format y cover_footer_collection_tag, priorizando contraste y legibilidad editorial.",
     "active_id": "",
     "alternatives": [],
     "reference_ids": [
       "anchors/char-katniss.png",
       "anchors/env-arena-clock.png",
-      "anchors/prop-mockingjay-pin.png"
+      "anchors/prop-mockingjay-pin.png",
+      "anchors/cover-title-format.png",
+      "anchors/cover-footer-collection-tag.png"
     ]
   },
   "pages": [
@@ -134,7 +136,7 @@
     },
     {
       "page_number": 8,
-      "text": "Cerca de la playa nos encontramos con Johanna Mason, que trae consigo a Beetee y Wiress, los genios del Distrito 3. Wiress está en estado de shock y no deja de repetir las mismas palabras: «Tic, tac, tic, tac». Johanna está furiosa y cubierta de sangre, pero ha logrado mantenerlos con vida. Observo la posición del sol y los ataques que hemos sufrido: el rayo, la lluvia de sangre, la niebla... De repente, todo encaja en mi cabeza. Miro a Wiress y luego a la Cornucopia. «Tic, tac», susurro. Esta arena es un reloj.",
+      "text": "Cerca de la playa nos encontramos con Johanna Mason, que trae consigo a Beetee y Wiress, los genios del Distrito 3. Wiress está en estado de shock y no deja de repetir las mismas palabras:\n«Tic, tac, tic, tac». Johanna está furiosa y cubierta de sangre, pero ha logrado mantenerlos con vida. Observo la posición del sol y los ataques que hemos sufrido: el rayo, la lluvia de sangre, la niebla... De repente, todo encaja en mi cabeza. Miro a Wiress y luego a la Cornucopia.\n«Tic, tac», susurro. Esta arena es un reloj.",
       "images": {
         "main": {
           "status": "draft",
@@ -256,7 +258,7 @@
     },
     {
       "page_number": 15,
-      "text": "Miro el alambre dorado y luego el cielo. Observo el punto exacto donde el campo de fuerza flaquea: Beetee no quería electrificar la playa, ¡quería destruir la arena entera! Envuelvo el cable de Beetee alrededor de mi última flecha y apunto hacia el punto débil de la cúpula. Espero al sonido del trueno, sabiendo que este disparo cambiará el mundo para siempre. «Por Peeta», susurro. Suelto la cuerda del arco justo cuando el rayo impacta contra la cima del árbol, canalizando toda la energía.",
+      "text": "Miro el alambre dorado y luego el cielo. Observo el punto exacto donde el campo de fuerza flaquea: Beetee no quería electrificar la playa, ¡quería destruir la arena entera! Envuelvo el cable de Beetee alrededor de mi última flecha y apunto hacia el punto débil de la cúpula. Espero al sonido del trueno, sabiendo que este disparo cambiará el mundo para siempre.\n«Por Peeta», susurro. Suelto la cuerda del arco justo cuando el rayo impacta contra la cima del árbol, canalizando toda la energía.",
       "images": {
         "main": {
           "status": "draft",

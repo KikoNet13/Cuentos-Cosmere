@@ -592,9 +592,53 @@
           "notes": "Flujo guiado de imagenes pendientes"
         }
       ]
+    },
+    {
+      "id": "cover_title_format",
+      "name": "Formato Titulo Portada",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir una guia visual para la zona de titulo en portadas 1:1 de la coleccion.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLa mitad superior debe ofrecer contraste estable para texto blanco o marfil, con composicion limpia y sin ruido visual en el eje central.\n\nCOMPOSICION Y ENCUADRE\nReservar una franja superior de jerarquia clara (aprox. 18-25% del alto) donde el titulo pueda leerse sin competir con detalles del fondo.\n\nPERSONAJES Y ACCION\nSin personajes obligatorios; esta ancla define estructura de portada, no narrativa.\n\nENTORNO, PALETA E ILUMINACION\nUsar contraste controlado con color/valor suficiente para superponer tipografia editorial.\n\nREFERENCIAS (reference_ids)\ncover_title_format, style_linea_editorial.\n\nRESTRICCIONES / NEGATIVOS\nNo incrustar texto real, logos ni firmas. No tipografia rasterizada dentro de la imagen.\n\nFORMATO DE SALIDA\nGuia 1:1 para continuidad de maquetacion de titulo en portada.",
+      "image_filenames": [
+        "anchors/cover-title-format.png",
+        "anchors/flow-cover-title-format.png"
+      ],
+      "status": "draft",
+      "active_id": "anchors/flow-cover-title-format.png",
+      "alternatives": [
+        {
+          "id": "anchors/flow-cover-title-format.png",
+          "slug": "flow-cover-title-format",
+          "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/flow-cover-title-format.png",
+          "mime_type": "image/png",
+          "status": "candidate",
+          "created_at": "2026-02-19T20:43:20.014962+00:00",
+          "notes": "Flujo guiado de imagenes pendientes"
+        }
+      ]
+    },
+    {
+      "id": "cover_footer_collection_tag",
+      "name": "Formato Pie de Coleccion",
+      "prompt": "OBJETIVO DE ILUSTRACION\nDefinir una guia visual para el pie de coleccion en portadas 1:1.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nLa franja inferior debe mantener limpieza visual y contraste para etiqueta editorial breve de saga/cuento.\n\nCOMPOSICION Y ENCUADRE\nReservar una zona inferior (aprox. 10-16% del alto) con lectura estable y centrada.\n\nPERSONAJES Y ACCION\nSin accion narrativa obligatoria; el foco es la respiracion visual del pie.\n\nENTORNO, PALETA E ILUMINACION\nEvitar detalle excesivo en la base y mantener fondo apto para etiqueta tipografica.\n\nREFERENCIAS (reference_ids)\ncover_footer_collection_tag, style_linea_editorial.\n\nRESTRICCIONES / NEGATIVOS\nNo incrustar textos finales, numeros de cuento, autores ni marcas de agua.\n\nFORMATO DE SALIDA\nGuia 1:1 para continuidad de maquetacion del pie de portada.",
+      "image_filenames": [
+        "anchors/cover-footer-collection-tag.png",
+        "anchors/flow-cover-footer-collection-tag.png"
+      ],
+      "status": "draft",
+      "active_id": "anchors/flow-cover-footer-collection-tag.png",
+      "alternatives": [
+        {
+          "id": "anchors/flow-cover-footer-collection-tag.png",
+          "slug": "flow-cover-footer-collection-tag",
+          "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/flow-cover-footer-collection-tag.png",
+          "mime_type": "image/png",
+          "status": "candidate",
+          "created_at": "2026-02-19T20:42:08.959986+00:00",
+          "notes": "Flujo guiado de imagenes pendientes"
+        }
+      ]
     }
   ],
-  "updated_at": "2026-02-19T10:40:23.468122+00:00",
+  "updated_at": "2026-02-19T20:43:20.029499+00:00",
   "style_rules": [
     "Uso obligatorio de línea negra definida (estilo Ligne Claire).",
     "Colores planos sin degradados ni sombreados dramaticos.",

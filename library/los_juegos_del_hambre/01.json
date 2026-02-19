@@ -4,14 +4,16 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T00:00:00Z",
-  "updated_at": "2026-02-19T13:21:06.269098+00:00",
+  "updated_at": "2026-02-19T22:20:53.501776+01:00",
   "cover": {
     "status": "draft",
-    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada emblemática para el cuento 'La Cosecha de Katniss' que capture el sacrificio heroico de la protagonista y la atmósfera opresiva del Distrito 12.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo visual de Sergio Kern: línea negra limpia y expresiva, colores planos sin degradados complejos y anatomía de cuento infantil. Katniss debe aparecer con su trenza negra, piel aceitunada y ojos grises. El entorno debe reflejar la pobreza de la Veta mediante tonos grises y ocres, respetando la estética de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio central de Katniss Everdeen mirando directamente al espectador con expresión decidida. Detrás de ella, se vislumbra la silueta del Edificio de Justicia en la Plaza de la Cosecha. Composición equilibrada con espacio para el título en la parte superior.\n\nPERSONAJES Y ACCION\nKatniss de pie, con el broche de sinsajo dorado brillando sutilmente en su pecho sobre un vestido azul sencillo. Su postura es firme, simbolizando su papel como protectora de su familia.\n\nENTORNO, PALETA E ILUMINACION\nFondo de edificios de piedra gris bajo un cielo encapotado. Paleta dominada por grises, azules cenizos y marrones, con un único punto focal dorado en el broche. Iluminación plana y uniforme característica de los álbumes ilustrados clásicos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, env_reaping_square, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni nombres de autor en la imagen. Prohibido el fotorrealismo, las texturas 3D, el sombreado dramático o el uso de degradados digitales modernos. Evitar composiciones recargadas que distraigan del personaje principal.\n\nFORMATO DE SALIDA\nIlustración digital final en relación de aspecto 1:1, lista para maquetación editorial con bordes limpios y alta definición en los contornos negros.",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada emblemática para el cuento 'La Cosecha de Katniss' que capture el sacrificio heroico de la protagonista y la atmósfera opresiva del Distrito 12.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo visual de Sergio Kern: línea negra limpia y expresiva, colores planos sin degradados complejos y anatomía de cuento infantil. Katniss debe aparecer con su trenza negra, piel aceitunada y ojos grises. El entorno debe reflejar la pobreza de la Veta mediante tonos grises y ocres, respetando la estética de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio central de Katniss Everdeen mirando directamente al espectador con expresión decidida. Detrás de ella, se vislumbra la silueta del Edificio de Justicia en la Plaza de la Cosecha. Composición equilibrada con espacio para el título en la parte superior.\n\nPERSONAJES Y ACCION\nKatniss de pie, con el broche de sinsajo dorado brillando sutilmente en su pecho sobre un vestido azul sencillo. Su postura es firme, simbolizando su papel como protectora de su familia.\n\nENTORNO, PALETA E ILUMINACION\nFondo de edificios de piedra gris bajo un cielo encapotado. Paleta dominada por grises, azules cenizos y marrones, con un único punto focal dorado en el broche. Iluminación plana y uniforme característica de los álbumes ilustrados clásicos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, env_reaping_square, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni nombres de autor en la imagen. Prohibido el fotorrealismo, las texturas 3D, el sombreado dramático o el uso de degradados digitales modernos. Evitar composiciones recargadas que distraigan del personaje principal.\n\nFORMATO DE SALIDA\nIlustración digital final en relación de aspecto 1:1, lista para maquetación editorial con bordes limpios y alta definición en los contornos negros.\n\nMAQUETACION DE PORTADA (OBLIGATORIO)\nEsta portada se regenera en ChatGPT. Reservar una zona limpia para titulo en el tercio superior y una zona limpia para etiqueta de coleccion en el pie. No incrustar texto final en la ilustracion.\n\nGUIA DE MAQUETACION (ANCLAS)\nAplicar como referencia visual: cover_title_format y cover_footer_collection_tag, priorizando contraste y legibilidad editorial.",
     "reference_ids": [
       "anchors/char-katniss.png",
       "anchors/env-reaping-square.png",
-      "anchors/prop-mockingjay-pin.png"
+      "anchors/prop-mockingjay-pin.png",
+      "anchors/cover-title-format.png",
+      "anchors/cover-footer-collection-tag.png"
     ],
     "active_id": "01/01_00_cover-cover-flow.png",
     "alternatives": [
@@ -21,8 +23,8 @@
         "asset_rel_path": "library/los_juegos_del_hambre/images/01/01_00_cover-cover-flow.png",
         "mime_type": "image/png",
         "status": "candidate",
-        "created_at": "2026-02-19T09:20:09.996636+00:00",
-        "notes": "Flujo guiado de imagenes pendientes"
+        "created_at": "2026-02-19T21:20:53.501776+00:00",
+        "notes": "Reactivada para exportacion PDF"
       }
     ]
   },
@@ -296,7 +298,7 @@
     },
     {
       "page_number": 11,
-      "text": "Entonces aparece Effie Trinket, la acompañante del Distrito 12, enviada directamente desde el Capitolio. Lleva una peluca rosa chillón y un traje verde primavera que parece una broma pesada en medio de nuestra miseria. Con su eterna sonrisa blanca, sube al escenario y saluda con su habitual alegría artificial. —¡Felices Juegos del Hambre! ¡Y que la suerte esté siempre de vuestra parte! —exclama con entusiasmo. Nadie responde. En la Veta, la suerte no es algo que se pida, es algo que se sobrevive. Ha llegado el momento del sorteo.",
+      "text": "Entonces aparece Effie Trinket, la acompañante del Distrito 12, enviada directamente desde el Capitolio. Lleva una peluca rosa chillón y un traje verde primavera que parece una broma pesada en medio de nuestra miseria. Con su eterna sonrisa blanca, sube al escenario y saluda con su habitual alegría artificial.\n—¡Felices Juegos del Hambre! ¡Y que la suerte esté siempre de vuestra parte! —exclama con entusiasmo. Nadie responde. En la Veta, la suerte no es algo que se pida, es algo que se sobrevive. Ha llegado el momento del sorteo.",
       "images": {
         "main": {
           "status": "draft",
@@ -322,7 +324,7 @@
     },
     {
       "page_number": 12,
-      "text": "Effie se dirige a la urna de cristal de las chicas. «Las damas primero», anuncia con voz cantarina. Mete la mano en el fondo del recipiente y remueve los miles de papeles antes de sacar uno. La multitud contiene el aliento. Yo cierro los ojos con fuerza y rezo para que no sea yo, para que mis veinte papeletas se queden en el fondo. Effie vuelve al podio, alisa el trozo de papel y lee el nombre con una claridad aterradora que resuena en todos los rincones de la plaza. No es mi nombre.",
+      "text": "Effie se dirige a la urna de cristal de las chicas.\n«Las damas primero», anuncia con voz cantarina. Mete la mano en el fondo del recipiente y remueve los miles de papeles antes de sacar uno. La multitud contiene el aliento. Yo cierro los ojos con fuerza y rezo para que no sea yo, para que mis veinte papeletas se queden en el fondo. Effie vuelve al podio, alisa el trozo de papel y lee el nombre con una claridad aterradora que resuena en todos los rincones de la plaza. No es mi nombre.",
       "images": {
         "main": {
           "status": "draft",
@@ -376,7 +378,7 @@
     },
     {
       "page_number": 14,
-      "text": "—¡Prim! —El grito sale de mi garganta antes de que pueda pensar. Corro desesperada, abriéndome paso entre los chicos hasta alcanzarla justo antes de que suba los escalones. La empujo detrás de mí, protegiéndola con mi cuerpo. —¡Me presento voluntaria! —grito con voz ahogada—. ¡Me presento voluntaria como tributo! En el escenario se produce una conmoción. En el Distrito 12 no hemos tenido voluntarios en décadas. Para nosotros, la palabra tributo es sinónimo de cadáver, pero no voy a dejar que se lleven a mi hermana pequeña.",
+      "text": "—¡Prim!\n—El grito sale de mi garganta antes de que pueda pensar. Corro desesperada, abriéndome paso entre los chicos hasta alcanzarla justo antes de que suba los escalones. La empujo detrás de mí, protegiéndola con mi cuerpo.\n—¡Me presento voluntaria! —grito con voz ahogada—. ¡Me presento voluntaria como tributo! En el escenario se produce una conmoción. En el Distrito 12 no hemos tenido voluntarios en décadas. Para nosotros, la palabra tributo es sinónimo de cadáver, pero no voy a dejar que se lleven a mi hermana pequeña.",
       "images": {
         "main": {
           "status": "draft",
@@ -404,7 +406,7 @@
     },
     {
       "page_number": 15,
-      "text": "Gale se apresura a apartar a Prim, que grita desconsolada mientras él la levanta en el aire para llevársela con nuestra madre. Me obligo a subir los escalones con la cabeza alta. No voy a llorar, no delante de las cámaras del Capitolio que retransmiten esto a todo el país. Effie Trinket está encantada de ver por fin algo de acción en su distrito. —¡Qué espíritu! —exclama entusiasmada—. ¿Cómo te llamas? —Katniss Everdeen —respondo tras tragar saliva. El público guarda un silencio absoluto, un gesto de respeto y protesta ante mi sacrificio.",
+      "text": "Gale se apresura a apartar a Prim, que grita desconsolada mientras él la levanta en el aire para llevársela con nuestra madre. Me obligo a subir los escalones con la cabeza alta. No voy a llorar, no delante de las cámaras del Capitolio que retransmiten esto a todo el país. Effie Trinket está encantada de ver por fin algo de acción en su distrito.\n—¡Qué espíritu! —exclama entusiasmada—. ¿Cómo te llamas?\n—Katniss Everdeen —respondo tras tragar saliva. El público guarda un silencio absoluto, un gesto de respeto y protesta ante mi sacrificio.",
       "images": {
         "main": {
           "status": "draft",

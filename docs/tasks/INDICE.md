@@ -1,6 +1,16 @@
 # índice de tareas
 
-- Proximo ID: `045`
+- Proximo ID: `046`
+
+## TAREA-045-portada-pdf-solida-y-reversion-prompts-cover
+
+- Fecha: 19/02/26 22:22
+- Estado: cerrada
+- Resumen: portada PDF redisenada con banda superior solida y texto blanco (titulo + etiqueta con numero), tipografia mas editorial y reversion de prompts de cover al bloque previo de maquetacion sin texto incrustado obligatorio.
+- Version: 2.8.5
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-045-portada-pdf-solida-y-reversion-prompts-cover.md`
 
 ## TAREA-044-ajuste-fino-portada-espaciado-numeracion-pdf
 

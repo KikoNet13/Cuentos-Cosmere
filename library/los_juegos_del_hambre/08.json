@@ -4,17 +4,19 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T12:00:00Z",
-  "updated_at": "2026-02-19T08:46:47.513148+00:00",
+  "updated_at": "2026-02-19T22:20:14.820031+01:00",
   "cover": {
     "status": "draft",
-    "prompt": "OBJETIVO DE ILUSTRACION\nCrear una portada iconica para el octavo cuento centrado en la transformacion de Katniss Everdeen en el Sinsajo dentro de la fortaleza del Distrito 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener el estilo Sergio Kern: linea negra limpia y definida, colores planos y anatomia de cuento. Katniss debe tener su trenza negra, ojos grises y piel aceitunada. Viste el uniforme tactico negro diseñado por Cinna. El fondo debe evocar la frialdad del hormigon del Distrito 13. Respetar la estetica de Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de Katniss en el centro de la imagen, mirando con una determinacion feroz. Detras de ella, la silueta azulada del emblema del Distrito 13. Composicion simetrica y poderosa que denote liderazgo y rebelion.\n\nPERSONAJES Y ACCIÓN\nKatniss de pie, sujetando su arco militar negro. Lleva el broche del sinsajo en el pecho. Su expresion es seria, marcada por la perdida pero lista para la guerra.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo de muros de hormigon gris con lineas industriales limpias. Paleta de colores: grises ceniza, azul oscuro metalico, negro profundo y el dorado sutil del broche. Iluminacion frontal plana y fria.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, env_district13_bunker, prop_bow_arrow, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto ni titulos. Sin fotorrealismo, sin degradados complejos, sin personajes adicionales. Evitar sombras dramaticas o efectos de luz cinematograficos modernos.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta claridad, lista para maquetacion editorial de cuento infantil con aire limpio en los bordes.",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear una portada iconica para el octavo cuento centrado en la transformacion de Katniss Everdeen en el Sinsajo dentro de la fortaleza del Distrito 13.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener el estilo Sergio Kern: linea negra limpia y definida, colores planos y anatomia de cuento. Katniss debe tener su trenza negra, ojos grises y piel aceitunada. Viste el uniforme tactico negro diseñado por Cinna. El fondo debe evocar la frialdad del hormigon del Distrito 13. Respetar la estetica de Ligne Claire.\n\nCOMPOSICIÓN Y ENCUADRE\nPlano medio de Katniss en el centro de la imagen, mirando con una determinacion feroz. Detras de ella, la silueta azulada del emblema del Distrito 13. Composicion simetrica y poderosa que denote liderazgo y rebelion.\n\nPERSONAJES Y ACCIÓN\nKatniss de pie, sujetando su arco militar negro. Lleva el broche del sinsajo en el pecho. Su expresion es seria, marcada por la perdida pero lista para la guerra.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo de muros de hormigon gris con lineas industriales limpias. Paleta de colores: grises ceniza, azul oscuro metalico, negro profundo y el dorado sutil del broche. Iluminacion frontal plana y fria.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, env_district13_bunker, prop_bow_arrow, prop_mockingjay_pin.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto ni titulos. Sin fotorrealismo, sin degradados complejos, sin personajes adicionales. Evitar sombras dramaticas o efectos de luz cinematograficos modernos.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta claridad, lista para maquetacion editorial de cuento infantil con aire limpio en los bordes.\n\nMAQUETACION DE PORTADA (OBLIGATORIO)\nEsta portada se regenera en ChatGPT. Reservar una zona limpia para titulo en el tercio superior y una zona limpia para etiqueta de coleccion en el pie. No incrustar texto final en la ilustracion.\n\nGUIA DE MAQUETACION (ANCLAS)\nAplicar como referencia visual: cover_title_format y cover_footer_collection_tag, priorizando contraste y legibilidad editorial.",
     "active_id": "",
     "alternatives": [],
     "reference_ids": [
       "anchors/char-katniss.png",
       "anchors/env-district13-bunker.png",
       "anchors/prop-bow-arrow.png",
-      "anchors/prop-mockingjay-pin.png"
+      "anchors/prop-mockingjay-pin.png",
+      "anchors/cover-title-format.png",
+      "anchors/cover-footer-collection-tag.png"
     ]
   },
   "pages": [
@@ -36,7 +38,7 @@
     },
     {
       "page_number": 2,
-      "text": "Entro en nuestra casa de la Aldea de los Vencedores y el frío me hiela la sangre. En mi cómoda, encuentro una rosa blanca perfecta, fresca y de olor penetrante. Es un mensaje directo del Presidente Snow: «Puedo encontrarte». Sé que no es una simple flor, sino una promesa de venganza que me recuerda que, aunque el distrito haya caído, él sigue acechándome.",
+      "text": "Entro en nuestra casa de la Aldea de los Vencedores y el frío me hiela la sangre. En mi cómoda, encuentro una rosa blanca perfecta, fresca y de olor penetrante. Es un mensaje directo del Presidente Snow:\n«Puedo encontrarte». Sé que no es una simple flor, sino una promesa de venganza que me recuerda que, aunque el distrito haya caído, él sigue acechándome.",
       "images": {
         "main": {
           "status": "draft",
@@ -87,7 +89,7 @@
     },
     {
       "page_number": 5,
-      "text": "Me paso las noches en vela, pensando en Peeta capturado por el Capitolio. Coin lo cree un traidor, pero yo sé que solo es una víctima más. De repente, tomo una decisión: aceptaré ser el Sinsajo si eso me permite salvarlo. «Voy a ser vuestro Sinsajo», les digo a los líderes rebeldes. Es mi única oportunidad para rescatar al chico que me salvó la vida.",
+      "text": "Me paso las noches en vela, pensando en Peeta capturado por el Capitolio. Coin lo cree un traidor, pero yo sé que solo es una víctima más. De repente, tomo una decisión: aceptaré ser el Sinsajo si eso me permite salvarlo.\n«Voy a ser vuestro Sinsajo», les digo a los líderes rebeldes. Es mi única oportunidad para rescatar al chico que me salvó la vida.",
       "images": {
         "main": {
           "status": "draft",
@@ -121,7 +123,7 @@
     },
     {
       "page_number": 7,
-      "text": "Plutarch me entrega un cuaderno encuadernado en cuero. Al abrirlo, el corazón me da un vuelco: son bocetos de Cinna. Él diseñó mi uniforme de Sinsajo antes de que lo detuvieran. Un uniforme negro, fuerte y hermoso, con armas ocultas y un refuerzo sobre mi corazón. En la última página, escribió: «Todavía apuesto por ti». Vuelvo a ser el Sinsajo gracias a mi amigo.",
+      "text": "Plutarch me entrega un cuaderno encuadernado en cuero. Al abrirlo, el corazón me da un vuelco: son bocetos de Cinna. Él diseñó mi uniforme de Sinsajo antes de que lo detuvieran. Un uniforme negro, fuerte y hermoso, con armas ocultas y un refuerzo sobre mi corazón. En la última página, escribió:\n«Todavía apuesto por ti». Vuelvo a ser el Sinsajo gracias a mi amigo.",
       "images": {
         "main": {
           "status": "draft",
@@ -153,7 +155,7 @@
     },
     {
       "page_number": 9,
-      "text": "El horror de ver a mi equipo de preparación encadenados me consume. Plutarch me explica que los castigaron por robar una ración extra de comida, pero para mí es otra muestra de la rigidez implacable y cruel del Distrito 13. Exijo que los liberen y los lleven al hospital de inmediato para ser curados. «Son mi gente», les grito a los soldados. Comprendo que mi papel como Sinsajo me otorga un poder que debo usar para proteger a los que no tienen voz, incluso si antes servían al Capitolio.",
+      "text": "El horror de ver a mi equipo de preparación encadenados me consume. Plutarch me explica que los castigaron por robar una ración extra de comida, pero para mí es otra muestra de la rigidez implacable y cruel del Distrito 13. Exijo que los liberen y los lleven al hospital de inmediato para ser curados.\n«Son mi gente», les grito a los soldados. Comprendo que mi papel como Sinsajo me otorga un poder que debo usar para proteger a los que no tienen voz, incluso si antes servían al Capitolio.",
       "images": {
         "main": {
           "status": "draft",
@@ -220,7 +222,7 @@
     },
     {
       "page_number": 13,
-      "text": "Haymitch organiza una reunión con las personas que mejor me conocen: Gale, Sae la Grasienta y otros refugiados. Les pide que recuerden momentos en los que el Sinsajo les hizo sentir esperanza de verdad. «Cuando se presentó voluntaria por Prim», dice uno con emoción. «Cuando decoró el cuerpo de Rue con flores», añade otro. Al ver la lista escrita en la pizarra, comprendo que mi fuerza no está en las frases ensayadas, sino en mis reacciones espontáneas ante el horror y la injusticia que Snow nos impone.",
+      "text": "Haymitch organiza una reunión con las personas que mejor me conocen: Gale, Sae la Grasienta y otros refugiados. Les pide que recuerden momentos en los que el Sinsajo les hizo sentir esperanza de verdad.\n«Cuando se presentó voluntaria por Prim», dice uno con emoción.\n«Cuando decoró el cuerpo de Rue con flores», añade otro. Al ver la lista escrita en la pizarra, comprendo que mi fuerza no está en las frases ensayadas, sino en mis reacciones espontáneas ante el horror y la injusticia que Snow nos impone.",
       "images": {
         "main": {
           "status": "draft",

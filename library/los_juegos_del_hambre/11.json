@@ -4,15 +4,17 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T16:00:00Z",
-  "updated_at": "2026-02-19T08:46:47.513148+00:00",
+  "updated_at": "2026-02-19T22:20:14.820031+01:00",
   "cover": {
     "status": "draft",
-    "prompt": "OBJETIVO DE ILUSTRACION\nCrear una portada conclusiva para el ultimo cuento de la saga que simbolice la paz alcanzada tras la guerra y el renacimiento de Panem, centrada en la figura de Katniss Everdeen.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: linea negra limpia, formas geometricas amables y colores planos. Katniss debe aparecer con su trenza negra, ojos grises y piel aceitunada, vistiendo ropas sencillas que sugieran su regreso al hogar. Respetar la estetica de Ligne Claire sin sombras complejas.\n\nCOMPOSICION Y ENCUADRE\nPlano general de Katniss de pie en una pradera verde infinita. La composicion es abierta y luminosa, con Katniss mirando hacia un horizonte despejado. En la parte superior, espacio negativo para el titulo.\n\nPERSONAJES Y ACCION\nKatniss de pie, relajada, sosteniendo una primula amarilla en la mano. Su expresion es de paz profunda y melancolia contenida. No hay armas visibles.\n\nENTORNO, PALETA E ILUMINACION\nUna pradera verde vibrante bajo un cielo azul claro con nubes blancas redondeadas. Paleta de verdes, amarillos y azules pastel. Iluminacion de mañana clara y optimista.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, cover_mockingjay_collection.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir armas, fuego, escombros ni elementos de guerra. Prohibido el fotorrealismo, degradados suaves y efectos de luz cinematograficos. Sin texto ni logotipos incrustados.\n\nFORMATO DE SALIDA\nIlustracion digital final 1:1 de alta definicion, lista para maquetacion editorial infantil con bordes limpios.",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear una portada conclusiva para el ultimo cuento de la saga que simbolice la paz alcanzada tras la guerra y el renacimiento de Panem, centrada en la figura de Katniss Everdeen.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: linea negra limpia, formas geometricas amables y colores planos. Katniss debe aparecer con su trenza negra, ojos grises y piel aceitunada, vistiendo ropas sencillas que sugieran su regreso al hogar. Respetar la estetica de Ligne Claire sin sombras complejas.\n\nCOMPOSICION Y ENCUADRE\nPlano general de Katniss de pie en una pradera verde infinita. La composicion es abierta y luminosa, con Katniss mirando hacia un horizonte despejado. En la parte superior, espacio negativo para el titulo.\n\nPERSONAJES Y ACCION\nKatniss de pie, relajada, sosteniendo una primula amarilla en la mano. Su expresion es de paz profunda y melancolia contenida. No hay armas visibles.\n\nENTORNO, PALETA E ILUMINACION\nUna pradera verde vibrante bajo un cielo azul claro con nubes blancas redondeadas. Paleta de verdes, amarillos y azules pastel. Iluminacion de mañana clara y optimista.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, cover_mockingjay_collection.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir armas, fuego, escombros ni elementos de guerra. Prohibido el fotorrealismo, degradados suaves y efectos de luz cinematograficos. Sin texto ni logotipos incrustados.\n\nFORMATO DE SALIDA\nIlustracion digital final 1:1 de alta definicion, lista para maquetacion editorial infantil con bordes limpios.\n\nMAQUETACION DE PORTADA (OBLIGATORIO)\nEsta portada se regenera en ChatGPT. Reservar una zona limpia para titulo en el tercio superior y una zona limpia para etiqueta de coleccion en el pie. No incrustar texto final en la ilustracion.\n\nGUIA DE MAQUETACION (ANCLAS)\nAplicar como referencia visual: cover_title_format y cover_footer_collection_tag, priorizando contraste y legibilidad editorial.",
     "active_id": "",
     "alternatives": [],
     "reference_ids": [
       "anchors/char-katniss.png",
-      "anchors/cover-mockingjay-collection.png"
+      "anchors/cover-mockingjay-collection.png",
+      "anchors/cover-title-format.png",
+      "anchors/cover-footer-collection-tag.png"
     ]
   },
   "pages": [
@@ -157,7 +159,7 @@
     },
     {
       "page_number": 10,
-      "text": "Un día camino por los pasillos hasta el jardín de rosas del Presidente Snow. Allí lo encuentro, débil y sentenciado. Me mira con sus ojos de serpiente y suelta una risa ahogada. Me dice que no fue él quien mató a Prim, sino que Coin soltó los paracaídas para forzar la rendición del Capitolio. «Nos han tomado a los dos por idiotas», susurra. El aroma dulce de las rosas oculta el rastro de la sangre y comprendo que el enemigo ha cambiado de rostro.",
+      "text": "Un día camino por los pasillos hasta el jardín de rosas del Presidente Snow. Allí lo encuentro, débil y sentenciado. Me mira con sus ojos de serpiente y suelta una risa ahogada. Me dice que no fue él quien mató a Prim, sino que Coin soltó los paracaídas para forzar la rendición del Capitolio.\n«Nos han tomado a los dos por idiotas», susurra. El aroma dulce de las rosas oculta el rastro de la sangre y comprendo que el enemigo ha cambiado de rostro.",
       "images": {
         "main": {
           "status": "draft",
@@ -174,7 +176,7 @@
     },
     {
       "page_number": 11,
-      "text": "La Presidenta Coin nos reúne a los últimos vencedores. Propone unos Juegos del Hambre simbólicos con los hijos de los líderes del Capitolio. Peeta se opone con horror, pero Johanna y Enobaria quieren venganza. Miro a Peeta y recuerdo a mi hermana. «Voto que sí», digo con firmeza, «por Prim». Haymitch me observa durante un largo silencio, comprende mi intención oculta y decide apoyarme. El tablero está listo para el movimiento final del Sinsajo y el destino de Coin.",
+      "text": "La Presidenta Coin nos reúne a los últimos vencedores. Propone unos Juegos del Hambre simbólicos con los hijos de los líderes del Capitolio. Peeta se opone con horror, pero Johanna y Enobaria quieren venganza. Miro a Peeta y recuerdo a mi hermana.\n«Voto que sí», digo con firmeza,\n«por Prim». Haymitch me observa durante un largo silencio, comprende mi intención oculta y decide apoyarme. El tablero está listo para el movimiento final del Sinsajo y el destino de Coin.",
       "images": {
         "main": {
           "status": "draft",
@@ -261,7 +263,7 @@
     },
     {
       "page_number": 16,
-      "text": "Han pasado veinte años. Mis hijos juegan sobre la hierba de la pradera, corriendo bajo el sol sin saber que juegan sobre un cementerio. A veces las pesadillas regresan y me despierto gritando, pero Peeta me abraza y me recuerda qué es real. Le contaré a mis hijos cómo sobrevivimos y por qué el mundo es diferente ahora. Miro el horizonte y siento paz. «¿Me amas?», pregunta él. «Real», respondo. Por fin, los Juegos del Hambre han terminado para siempre.",
+      "text": "Han pasado veinte años. Mis hijos juegan sobre la hierba de la pradera, corriendo bajo el sol sin saber que juegan sobre un cementerio. A veces las pesadillas regresan y me despierto gritando, pero Peeta me abraza y me recuerda qué es real. Le contaré a mis hijos cómo sobrevivimos y por qué el mundo es diferente ahora. Miro el horizonte y siento paz.\n«¿Me amas?», pregunta él.\n«Real», respondo. Por fin, los Juegos del Hambre han terminado para siempre.",
       "images": {
         "main": {
           "status": "draft",

@@ -4,17 +4,19 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T12:00:00Z",
-  "updated_at": "2026-02-19T08:46:47.513148+00:00",
+  "updated_at": "2026-02-19T22:20:14.820031+01:00",
   "cover": {
     "status": "draft",
-    "prompt": "OBJETIVO DE ILUSTRACION\nCrear una portada poderosa para el cuento 'La Chispa de la Rebelión' que simbolice el conflicto entre la esperanza de los distritos y el control absoluto del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener el estilo Sergio Kern de línea negra limpia y expresiva con colores planos vibrantes. Katniss Everdeen debe lucir su trenza negra, piel aceitunada y ojos grises. El Presidente Snow debe aparecer como una figura amenazante pero refinada, con su cabello blanco y su rosa blanca. Respetar la estética de Ligne Claire.\n\nCOMPOSICIÓNY ENCUADRE\nComposición dual. En el centro, Katniss de perfil mirando hacia un horizonte donde se intuye fuego. En la parte superior, el rostro gélido de Snow superpuesto sobre un cielo gris, como si observara cada movimiento. El broche de sinsajo debe brillar en el centro.\n\nPERSONAJES Y ACCIÓN\nKatniss con expresión de alerta y valentía contenida. Snow con mirada de serpiente, inexpresivo y calculador. No hay acción física, sino una tensión psicológica palpable entre el símbolo de la rebelión y el tirano.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo dividido entre el gris carbón del Distrito 12 y el rojo escarlata del Capitolio. Iluminación plana con contrastes fuertes entre los tonos fríos de Katniss y el blanco radiante de Snow. Una única rosa blanca destaca en la oscuridad.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_snow_base, prop_mockingjay_pin, prop_president_rose.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logos. Sin fotorrealismo, sin degradados suaves, sin sombreado complejo. Evitar que la imagen parezca de una película de acción moderna; debe ser ilustración de cuento infantil.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alta calidad, nítida y preparada para maquetación editorial.",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear una portada poderosa para el cuento 'La Chispa de la Rebelión' que simbolice el conflicto entre la esperanza de los distritos y el control absoluto del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener el estilo Sergio Kern de línea negra limpia y expresiva con colores planos vibrantes. Katniss Everdeen debe lucir su trenza negra, piel aceitunada y ojos grises. El Presidente Snow debe aparecer como una figura amenazante pero refinada, con su cabello blanco y su rosa blanca. Respetar la estética de Ligne Claire.\n\nCOMPOSICIÓNY ENCUADRE\nComposición dual. En el centro, Katniss de perfil mirando hacia un horizonte donde se intuye fuego. En la parte superior, el rostro gélido de Snow superpuesto sobre un cielo gris, como si observara cada movimiento. El broche de sinsajo debe brillar en el centro.\n\nPERSONAJES Y ACCIÓN\nKatniss con expresión de alerta y valentía contenida. Snow con mirada de serpiente, inexpresivo y calculador. No hay acción física, sino una tensión psicológica palpable entre el símbolo de la rebelión y el tirano.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo dividido entre el gris carbón del Distrito 12 y el rojo escarlata del Capitolio. Iluminación plana con contrastes fuertes entre los tonos fríos de Katniss y el blanco radiante de Snow. Una única rosa blanca destaca en la oscuridad.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_snow_base, prop_mockingjay_pin, prop_president_rose.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logos. Sin fotorrealismo, sin degradados suaves, sin sombreado complejo. Evitar que la imagen parezca de una película de acción moderna; debe ser ilustración de cuento infantil.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alta calidad, nítida y preparada para maquetación editorial.\n\nMAQUETACION DE PORTADA (OBLIGATORIO)\nEsta portada se regenera en ChatGPT. Reservar una zona limpia para titulo en el tercio superior y una zona limpia para etiqueta de coleccion en el pie. No incrustar texto final en la ilustracion.\n\nGUIA DE MAQUETACION (ANCLAS)\nAplicar como referencia visual: cover_title_format y cover_footer_collection_tag, priorizando contraste y legibilidad editorial.",
     "active_id": "",
     "alternatives": [],
     "reference_ids": [
       "anchors/char-katniss.png",
       "anchors/char-snow.png",
       "anchors/prop-mockingjay-pin.png",
-      "anchors/prop-president-rose.png"
+      "anchors/prop-president-rose.png",
+      "anchors/cover-title-format.png",
+      "anchors/cover-footer-collection-tag.png"
     ]
   },
   "pages": [
@@ -54,7 +56,7 @@
     },
     {
       "page_number": 3,
-      "text": "Snow me ordena que, durante la Gira de la Victoria, convenza a todo Panem de que estoy loca de amor por Peeta. «Convénceme a mí», susurra antes de marcharse. Siento un frío glacial que no tiene nada que ver con la nieve exterior. Mi vida ya no me pertenece; ahora soy una pieza más en su tablero. Debo sonreír, besar a Peeta y fingir felicidad absoluta mientras el mundo que conozco empieza a agrietarse. El peso de la seguridad de mis seres queridos recae sobre mis hombros.",
+      "text": "Snow me ordena que, durante la Gira de la Victoria, convenza a todo Panem de que estoy loca de amor por Peeta.\n«Convénceme a mí», susurra antes de marcharse. Siento un frío glacial que no tiene nada que ver con la nieve exterior. Mi vida ya no me pertenece; ahora soy una pieza más en su tablero. Debo sonreír, besar a Peeta y fingir felicidad absoluta mientras el mundo que conozco empieza a agrietarse. El peso de la seguridad de mis seres queridos recae sobre mis hombros.",
       "images": {
         "main": {
           "status": "draft",
@@ -150,7 +152,7 @@
     },
     {
       "page_number": 9,
-      "text": "Regresamos al Distrito 12 con el peso del mundo sobre los hombros. El ambiente en la estación es pesado, lleno de cámaras que esperan nuestra llegada como si fuéramos trofeos. Peeta me ofrece su mano, fría y firme. «¿Una última vez?», me pregunta con un tono que suena más a derrota que a amor artificial. Lo cojo de la mano y sonrío para Panem mientras el tren se detiene. Sé que, aunque la gira ha terminado, la verdadera batalla contra el Presidente Snow acaba de empezar en los callejones grises de mi hogar.",
+      "text": "Regresamos al Distrito 12 con el peso del mundo sobre los hombros. El ambiente en la estación es pesado, lleno de cámaras que esperan nuestra llegada como si fuéramos trofeos. Peeta me ofrece su mano, fría y firme.\n«¿Una última vez?», me pregunta con un tono que suena más a derrota que a amor artificial. Lo cojo de la mano y sonrío para Panem mientras el tren se detiene. Sé que, aunque la gira ha terminado, la verdadera batalla contra el Presidente Snow acaba de empezar en los callejones grises de mi hogar.",
       "images": {
         "main": {
           "status": "draft",
@@ -183,7 +185,7 @@
     },
     {
       "page_number": 11,
-      "text": "Aprovecho el primer domingo libre para ir al bosque. Gale me espera en nuestro lugar de reunión habitual, junto al saliente rocoso, pero su mirada es gélida. Está dolido por mi compromiso público con Peeta, aunque sepa que es estrategia pura. Le ofrezco una bolsa con comida y unos guantes de Cinna, intentando romper el hielo entre nosotros. Gale se burla de mi papel de «prometida», pero su amargura esconde un dolor profundo. Siento que el bosque, que antes era nuestro refugio secreto, ahora está lleno de muros invisibles.",
+      "text": "Aprovecho el primer domingo libre para ir al bosque. Gale me espera en nuestro lugar de reunión habitual, junto al saliente rocoso, pero su mirada es gélida. Está dolido por mi compromiso público con Peeta, aunque sepa que es estrategia pura. Le ofrezco una bolsa con comida y unos guantes de Cinna, intentando romper el hielo entre nosotros. Gale se burla de mi papel de\n«prometida», pero su amargura esconde un dolor profundo. Siento que el bosque, que antes era nuestro refugio secreto, ahora está lleno de muros invisibles.",
       "images": {
         "main": {
           "status": "draft",
@@ -234,7 +236,7 @@
     },
     {
       "page_number": 14,
-      "text": "Pero Gale no se mueve. Me habla de lo que vio en las minas: la gente está hablando, el descontento se extiende como un reguero de pólvora por toda la Veta. Me cuenta que si el Distrito 8 se ha levantado, otros distritos también pueden hacerlo. —No has hecho daño a nadie, Katniss —susurra con una pasión que me asusta—. Les has dado una oportunidad. Solo tienen que ser lo suficientemente valientes para aprovecharla. Gale ya no piensa en huir; ahora piensa en luchar, en convertir la pequeña chispa en un incendio total.",
+      "text": "Pero Gale no se mueve. Me habla de lo que vio en las minas: la gente está hablando, el descontento se extiende como un reguero de pólvora por toda la Veta. Me cuenta que si el Distrito 8 se ha levantado, otros distritos también pueden hacerlo.\n—No has hecho daño a nadie, Katniss —susurra con una pasión que me asusta—. Les has dado una oportunidad. Solo tienen que ser lo suficientemente valientes para aprovecharla. Gale ya no piensa en huir; ahora piensa en luchar, en convertir la pequeña chispa en un incendio total.",
       "images": {
         "main": {
           "status": "draft",
@@ -266,7 +268,7 @@
     },
     {
       "page_number": 16,
-      "text": "Al llegar a la Aldea, me encuentro con Peeta. Le hago la misma propuesta desesperada: ¿huirías del distrito conmigo? Él me sujeta del brazo y me mira con una tristeza infinita en sus ojos azules. —Iré si me lo pides, Katniss —responde—, pero estoy convencido de que tú no lo harás al final. Él sabe la verdad que yo intento ocultar: no puedo abandonar a Gale en medio de una revolución. Peeta me suelta, dejándome sola bajo la nieve que empieza a caer. El tablero está listo y yo estoy atrapada.",
+      "text": "Al llegar a la Aldea, me encuentro con Peeta. Le hago la misma propuesta desesperada: ¿huirías del distrito conmigo? Él me sujeta del brazo y me mira con una tristeza infinita en sus ojos azules.\n—Iré si me lo pides, Katniss —responde—, pero estoy convencido de que tú no lo harás al final. Él sabe la verdad que yo intento ocultar: no puedo abandonar a Gale en medio de una revolución. Peeta me suelta, dejándome sola bajo la nieve que empieza a caer. El tablero está listo y yo estoy atrapada.",
       "images": {
         "main": {
           "status": "draft",

@@ -4,10 +4,10 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T14:00:00Z",
-  "updated_at": "2026-02-19T08:46:47.513148+00:00",
+  "updated_at": "2026-02-19T22:20:14.820031+01:00",
   "cover": {
     "status": "draft",
-    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'Los Túneles del Capitolio', capturando la atmósfera de infiltración militar y el peligro acechante en el subsuelo del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener el estilo Sergio Kern de línea negra limpia y expresiva con colores planos. Katniss debe aparecer con su uniforme táctico de Sinsajo negro, su trenza característica y expresión de alerta máxima. Respetar la estética de Ligne Claire sin sombras realistas. El entorno debe ser un túnel de hormigón industrial con tuberías visibles.\n\nCOMPOSICION Y ENCUADRE\nPlano medio-largo de Katniss Everdeen en el centro, rodeada por la oscuridad del túnel. Ella sostiene su arco de Sinsajo. En primer plano lateral, un dispositivo holográfico (el Holo) emite un resplandor verde que ilumina parcialmente su rostro y la pared de cemento.\n\nPERSONAJES Y ACCION\nKatniss en posición de sigilo, lista para disparar. Al fondo, se sugieren las siluetas de Gale y Finnick siguiendo su rastro. La acción es tensa y sugiere una incursión secreta en territorio enemigo.\n\nENTORNO, PALETA E ILUMINACION\nUn túnel subterráneo húmedo y gris. La paleta es de tonos fríos: grises cemento, azul marino y negro, contrastando fuertemente con el verde neón del mapa holográfico. Iluminación focalizada y plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_finnick_base, char_gale_base, env_district13_bunker, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logos. Sin fotorrealismo, sin degradados suaves ni efectos de luz digital modernos que no sean planos. No mostrar a los mutos directamente para mantener el misterio.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alta claridad, lista para maquetación editorial infantil, con bordes limpios y equilibrio visual entre el personaje y el entorno oscuro.",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'Los Túneles del Capitolio', capturando la atmósfera de infiltración militar y el peligro acechante en el subsuelo del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener el estilo Sergio Kern de línea negra limpia y expresiva con colores planos. Katniss debe aparecer con su uniforme táctico de Sinsajo negro, su trenza característica y expresión de alerta máxima. Respetar la estética de Ligne Claire sin sombras realistas. El entorno debe ser un túnel de hormigón industrial con tuberías visibles.\n\nCOMPOSICION Y ENCUADRE\nPlano medio-largo de Katniss Everdeen en el centro, rodeada por la oscuridad del túnel. Ella sostiene su arco de Sinsajo. En primer plano lateral, un dispositivo holográfico (el Holo) emite un resplandor verde que ilumina parcialmente su rostro y la pared de cemento.\n\nPERSONAJES Y ACCION\nKatniss en posición de sigilo, lista para disparar. Al fondo, se sugieren las siluetas de Gale y Finnick siguiendo su rastro. La acción es tensa y sugiere una incursión secreta en territorio enemigo.\n\nENTORNO, PALETA E ILUMINACION\nUn túnel subterráneo húmedo y gris. La paleta es de tonos fríos: grises cemento, azul marino y negro, contrastando fuertemente con el verde neón del mapa holográfico. Iluminación focalizada y plana.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_finnick_base, char_gale_base, env_district13_bunker, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logos. Sin fotorrealismo, sin degradados suaves ni efectos de luz digital modernos que no sean planos. No mostrar a los mutos directamente para mantener el misterio.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alta claridad, lista para maquetación editorial infantil, con bordes limpios y equilibrio visual entre el personaje y el entorno oscuro.\n\nMAQUETACION DE PORTADA (OBLIGATORIO)\nEsta portada se regenera en ChatGPT. Reservar una zona limpia para titulo en el tercio superior y una zona limpia para etiqueta de coleccion en el pie. No incrustar texto final en la ilustracion.\n\nGUIA DE MAQUETACION (ANCLAS)\nAplicar como referencia visual: cover_title_format y cover_footer_collection_tag, priorizando contraste y legibilidad editorial.",
     "active_id": "",
     "alternatives": [],
     "reference_ids": [
@@ -15,7 +15,9 @@
       "anchors/char-finnick.png",
       "anchors/char-gale.png",
       "anchors/env-district13-bunker.png",
-      "anchors/prop-bow-arrow.png"
+      "anchors/prop-bow-arrow.png",
+      "anchors/cover-title-format.png",
+      "anchors/cover-footer-collection-tag.png"
     ]
   },
   "pages": [
@@ -187,7 +189,7 @@
     },
     {
       "page_number": 11,
-      "text": "La situación se vuelve crítica al llegar a la «picadora de carne», una vaina mortal de dientes industriales que trituran el suelo. Los mutos lagarto, con sus pieles blancas y colas de reptil, caen sobre nosotros con una furia salvaje. Jackson y Leeg 1 toman una decisión heroica: se quedan atrás para contener a las bestias mientras el resto del pelotón escapa por un conducto. Oigo sus gritos y el estruendo del metal chocando contra la carne, pero no puedo volver. El sacrificio de mis camaradas es el precio amargo para que el Sinsajo siga volando.",
+      "text": "La situación se vuelve crítica al llegar a la\n«picadora de carne», una vaina mortal de dientes industriales que trituran el suelo. Los mutos lagarto, con sus pieles blancas y colas de reptil, caen sobre nosotros con una furia salvaje. Jackson y Leeg 1 toman una decisión heroica: se quedan atrás para contener a las bestias mientras el resto del pelotón escapa por un conducto. Oigo sus gritos y el estruendo del metal chocando contra la carne, pero no puedo volver. El sacrificio de mis camaradas es el precio amargo para que el Sinsajo siga volando.",
       "images": {
         "main": {
           "status": "draft",
@@ -267,7 +269,7 @@
     },
     {
       "page_number": 16,
-      "text": "Nos refugiamos en el sótano, un espacio estrecho y cálido rodeado de pieles antiguas. Me siento al lado de Peeta, que sigue esposado para evitar un nuevo ataque. Jugamos a su juego de «real o no real» para intentar anclar sus recuerdos. Me pregunta si arriesgué mi vida por él en la cueva, y le respondo que sí, que nos protegemos el uno al otro. Él parece relajarse un poco, aunque sus ojos azules siguen nublados por el veneno. En la oscuridad, cuento nuestras bajas: ocho amigos muertos en un solo día. La deuda es inmensa.",
+      "text": "Nos refugiamos en el sótano, un espacio estrecho y cálido rodeado de pieles antiguas. Me siento al lado de Peeta, que sigue esposado para evitar un nuevo ataque. Jugamos a su juego de\n«real o no real» para intentar anclar sus recuerdos. Me pregunta si arriesgué mi vida por él en la cueva, y le respondo que sí, que nos protegemos el uno al otro. Él parece relajarse un poco, aunque sus ojos azules siguen nublados por el veneno. En la oscuridad, cuento nuestras bajas: ocho amigos muertos en un solo día. La deuda es inmensa.",
       "images": {
         "main": {
           "status": "draft",

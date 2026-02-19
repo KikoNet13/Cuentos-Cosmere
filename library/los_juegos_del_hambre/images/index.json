@@ -322,11 +322,25 @@
     "created_at": "2026-02-19T00:47:25.385132+00:00"
   },
   {
+    "filename": "anchors/flow-cover-footer-collection-tag.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/flow-cover-footer-collection-tag.png",
+    "description": "anchor cover_footer_collection_tag",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T20:42:08.981218+00:00"
+  },
+  {
     "filename": "anchors/flow-cover-mockingjay-collection.png",
     "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/flow-cover-mockingjay-collection.png",
     "description": "anchor cover_mockingjay_collection",
     "node_rel_path": "los_juegos_del_hambre",
     "created_at": "2026-02-19T09:49:33.539702+00:00"
+  },
+  {
+    "filename": "anchors/flow-cover-title-format.png",
+    "asset_rel_path": "library/los_juegos_del_hambre/images/anchors/flow-cover-title-format.png",
+    "description": "anchor cover_title_format",
+    "node_rel_path": "los_juegos_del_hambre",
+    "created_at": "2026-02-19T20:43:20.016970+00:00"
   },
   {
     "filename": "anchors/flow-prop-mockingjay-pin.png",

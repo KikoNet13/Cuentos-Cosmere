@@ -4,27 +4,19 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T12:00:00Z",
-  "updated_at": "2026-02-19T14:13:51.055786+00:00",
+  "updated_at": "2026-02-19T22:20:14.820031+01:00",
   "cover": {
     "status": "draft",
-    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada icónica para el segundo cuento de la colección, 'La Chica en Llamas', destacando el debut deslumbrante de Katniss Everdeen ante el Capitolio y el inicio de su transformación en símbolo nacional.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: línea negra limpia y expresiva, colores planos vibrantes y formas simplificadas. Katniss debe aparecer con su trenza negra característica, piel aceitunada y ojos grises. Su vestuario debe ser el mono negro ajustado con la capa de llamas sintéticas. Peeta debe estar a su lado con un traje idéntico, cabello rubio ceniza ondulado y ojos azules. Respetar la estética de Ligne Claire sin sombras complejas.\n\nCOMPOSICION Y ENCUADRE\nPlano medio-largo de Katniss y Peeta de pie sobre su carro negro de metal. Los personajes están en el centro, con sus manos entrelazadas y alzadas en señal de unidad. El encuadre es frontal y heroico, capturando el rastro de fuego naranja y rojo que sale de sus capas.\n\nPERSONAJES Y ACCION\nKatniss con expresión seria y poderosa, mirando hacia adelante. Peeta con gesto firme y protector. La acción principal es el desfile en carro, con las llamas sintéticas envolviéndolos sin quemarlos. El contraste entre el negro de los trajes y el brillo del fuego es el punto focal.\n\nENTORNO, PALETA E ILUMINACION\nFondo sugerido del Círculo de la Ciudad del Capitolio con edificios de mármol blanco y banderas rojas. Paleta de colores: negro profundo, naranjas y rojos incandescentes, blancos puros y el gris de los ojos de Katniss. Iluminación plana que resalta el brillo de las llamas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_peeta_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logos. Prohibido el fotorrealismo, degradados suaves, efectos de luz digital modernos o sombreados dramáticos. No mostrar a otros tributos en segundo plano para no saturar la composición.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alta claridad, lista para impresión de cuento infantil con bordes definidos y alta saturación de color.",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada icónica para el segundo cuento de la colección, 'La Chica en Llamas', destacando el debut deslumbrante de Katniss Everdeen ante el Capitolio y el inicio de su transformación en símbolo nacional.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: línea negra limpia y expresiva, colores planos vibrantes y formas simplificadas. Katniss debe aparecer con su trenza negra característica, piel aceitunada y ojos grises. Su vestuario debe ser el mono negro ajustado con la capa de llamas sintéticas. Peeta debe estar a su lado con un traje idéntico, cabello rubio ceniza ondulado y ojos azules. Respetar la estética de Ligne Claire sin sombras complejas.\n\nCOMPOSICION Y ENCUADRE\nPlano medio-largo de Katniss y Peeta de pie sobre su carro negro de metal. Los personajes están en el centro, con sus manos entrelazadas y alzadas en señal de unidad. El encuadre es frontal y heroico, capturando el rastro de fuego naranja y rojo que sale de sus capas.\n\nPERSONAJES Y ACCION\nKatniss con expresión seria y poderosa, mirando hacia adelante. Peeta con gesto firme y protector. La acción principal es el desfile en carro, con las llamas sintéticas envolviéndolos sin quemarlos. El contraste entre el negro de los trajes y el brillo del fuego es el punto focal.\n\nENTORNO, PALETA E ILUMINACION\nFondo sugerido del Círculo de la Ciudad del Capitolio con edificios de mármol blanco y banderas rojas. Paleta de colores: negro profundo, naranjas y rojos incandescentes, blancos puros y el gris de los ojos de Katniss. Iluminación plana que resalta el brillo de las llamas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_peeta_base, env_reaping_square.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logos. Prohibido el fotorrealismo, degradados suaves, efectos de luz digital modernos o sombreados dramáticos. No mostrar a otros tributos en segundo plano para no saturar la composición.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alta claridad, lista para impresión de cuento infantil con bordes definidos y alta saturación de color.\n\nMAQUETACION DE PORTADA (OBLIGATORIO)\nEsta portada se regenera en ChatGPT. Reservar una zona limpia para titulo en el tercio superior y una zona limpia para etiqueta de coleccion en el pie. No incrustar texto final en la ilustracion.\n\nGUIA DE MAQUETACION (ANCLAS)\nAplicar como referencia visual: cover_title_format y cover_footer_collection_tag, priorizando contraste y legibilidad editorial.",
     "reference_ids": [
       "anchors/char-katniss.png",
       "anchors/char-peeta.png",
-      "anchors/env-reaping-square.png"
+      "anchors/env-reaping-square.png",
+      "anchors/cover-title-format.png",
+      "anchors/cover-footer-collection-tag.png"
     ],
-    "active_id": "02/02_00_cover-cover-flow.png",
-    "alternatives": [
-      {
-        "id": "02/02_00_cover-cover-flow.png",
-        "slug": "cover-flow",
-        "asset_rel_path": "library/los_juegos_del_hambre/images/02/02_00_cover-cover-flow.png",
-        "mime_type": "image/png",
-        "status": "candidate",
-        "created_at": "2026-02-19T13:23:08.479730+00:00",
-        "notes": "Flujo guiado de imagenes pendientes"
-      }
-    ]
+    "active_id": "",
+    "alternatives": []
   },
   "pages": [
     {
@@ -211,7 +203,7 @@
     },
     {
       "page_number": 8,
-      "text": "A la mañana siguiente, el desayuno es otro banquete de lujo. Haymitch parece algo más despejado, aunque su cara sigue hinchada. Peeta intenta hablar de estrategia, pero Haymitch se burla de nosotros y nos ignora. De repente, Peeta le quita el vaso de la mano y lo rompe contra el suelo, harto de su desinterés. Haymitch le devuelve un puñetazo, pero yo reacciono rápido y clavo mi cuchillo en la mesa, justo entre sus dedos. Al fin, el mentor nos mira con respeto. —Bueno —dice—, parece que tengo a dos luchadores este año.",
+      "text": "A la mañana siguiente, el desayuno es otro banquete de lujo. Haymitch parece algo más despejado, aunque su cara sigue hinchada. Peeta intenta hablar de estrategia, pero Haymitch se burla de nosotros y nos ignora. De repente, Peeta le quita el vaso de la mano y lo rompe contra el suelo, harto de su desinterés. Haymitch le devuelve un puñetazo, pero yo reacciono rápido y clavo mi cuchillo en la mesa, justo entre sus dedos. Al fin, el mentor nos mira con respeto.\n—Bueno —dice—, parece que tengo a dos luchadores este año.",
       "images": {
         "main": {
           "status": "draft",
@@ -227,7 +219,7 @@
     },
     {
       "page_number": 9,
-      "text": "El tren se detiene y una luz cegadora inunda el vagón. Al asomarme a la ventana, veo por primera vez el Capitolio. Es una ciudad de edificios relucientes que parecen un arcoíris bajo el sol. La gente viste ropas extrañas de colores chillones y nos señala con entusiasmo. Me aparto, asqueada por su alegría, pero Peeta se queda y empieza a saludar a la multitud que grita emocionada. Se da cuenta de que lo miro y simplemente se encoge de hombros. —¿Quién sabe? —dice—. Puede que alguno de ellos sea rico. Entiendo que ya está luchando por su vida.",
+      "text": "El tren se detiene y una luz cegadora inunda el vagón. Al asomarme a la ventana, veo por primera vez el Capitolio. Es una ciudad de edificios relucientes que parecen un arcoíris bajo el sol. La gente viste ropas extrañas de colores chillones y nos señala con entusiasmo. Me aparto, asqueada por su alegría, pero Peeta se queda y empieza a saludar a la multitud que grita emocionada. Se da cuenta de que lo miro y simplemente se encoge de hombros.\n—¿Quién sabe? —dice—. Puede que alguno de ellos sea rico. Entiendo que ya está luchando por su vida.",
       "images": {
         "main": {
           "status": "draft",
@@ -243,7 +235,7 @@
     },
     {
       "page_number": 10,
-      "text": "Me llevan al Centro de Entrenamiento y me dejan en manos de mi estilista, Cinna. Me sorprende lo normal que parece comparado con los demás habitantes del Capitolio. Lleva el pelo castaño corto y ropa negra sencilla; su única excentricidad es un delineador de ojos dorado que resalta sus ojos verdes. Me habla con una voz suave y amable, tratándome como a una persona y no como a un trozo de carne para el espectáculo. —Hola, Katniss —me dice con calma—. He pedido expresamente el Distrito 12. Siento que, por fin, he encontrado a un aliado en este lugar.",
+      "text": "Me llevan al Centro de Entrenamiento y me dejan en manos de mi estilista, Cinna. Me sorprende lo normal que parece comparado con los demás habitantes del Capitolio. Lleva el pelo castaño corto y ropa negra sencilla; su única excentricidad es un delineador de ojos dorado que resalta sus ojos verdes. Me habla con una voz suave y amable, tratándome como a una persona y no como a un trozo de carne para el espectáculo.\n—Hola, Katniss —me dice con calma—. He pedido expresamente el Distrito 12. Siento que, por fin, he encontrado a un aliado en este lugar.",
       "images": {
         "main": {
           "status": "draft",
@@ -258,7 +250,7 @@
     },
     {
       "page_number": 11,
-      "text": "Cinna me explica su plan para la ceremonia inaugural. En lugar de los típicos trajes de minero cubiertos de polvo negro, quiere algo inolvidable. Me pone una malla negra ajustada y una capa larga con franjas naranjas y amarillas. —No tengas miedo —me asegura mientras sostiene una antorcha encendida—. Es fuego sintético, estarás completamente a salvo. Su objetivo es que todo Panem me reconozca antes de entrar en la arena. Quiere presentarme ante el mundo como la chica en llamas. Me miro al espejo y parezco una criatura poderosa y letal nacida de las mismas brasas de la Veta.",
+      "text": "Cinna me explica su plan para la ceremonia inaugural. En lugar de los típicos trajes de minero cubiertos de polvo negro, quiere algo inolvidable. Me pone una malla negra ajustada y una capa larga con franjas naranjas y amarillas.\n—No tengas miedo —me asegura mientras sostiene una antorcha encendida—. Es fuego sintético, estarás completamente a salvo. Su objetivo es que todo Panem me reconozca antes de entrar en la arena. Quiere presentarme ante el mundo como la chica en llamas. Me miro al espejo y parezco una criatura poderosa y letal nacida de las mismas brasas de la Veta.",
       "images": {
         "main": {
           "status": "draft",
@@ -325,7 +317,7 @@
     },
     {
       "page_number": 15,
-      "text": "La noche de las entrevistas es puro teatro. Effie intenta enseñarme a caminar con tacones y a sonreír, pero me siento como un perro amaestrado. Cinna me pone un vestido cubierto de piedras preciosas que brilla como si estuviera ardiendo cada vez que giro. —Sé tú misma, Katniss —me aconseja antes de salir—. Imagina que hablas conmigo. Caesar Flickerman, el presentador de pelo celeste, me recibe con risas. Logro ganarme al público siendo sincera sobre mi hermana Prim. La audiencia me adora, pero todavía me pregunto si Peeta planea matarme mientras finge ser mi mejor amigo.",
+      "text": "La noche de las entrevistas es puro teatro. Effie intenta enseñarme a caminar con tacones y a sonreír, pero me siento como un perro amaestrado. Cinna me pone un vestido cubierto de piedras preciosas que brilla como si estuviera ardiendo cada vez que giro.\n—Sé tú misma, Katniss —me aconseja antes de salir—. Imagina que hablas conmigo. Caesar Flickerman, el presentador de pelo celeste, me recibe con risas. Logro ganarme al público siendo sincera sobre mi hermana Prim. La audiencia me adora, pero todavía me pregunto si Peeta planea matarme mientras finge ser mi mejor amigo.",
       "images": {
         "main": {
           "status": "draft",

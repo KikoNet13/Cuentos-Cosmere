@@ -4,16 +4,18 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T18:00:00Z",
-  "updated_at": "2026-02-19T10:39:15.586417+00:00",
+  "updated_at": "2026-02-19T22:20:14.820031+01:00",
   "cover": {
     "status": "draft",
-    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'El Vasallaje de los Veinticinco', representando el regreso inevitable de Katniss Everdeen y Peeta Mellark a la arena de los Juegos del Hambre bajo una atmosfera de poder y tragedia.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: linea negra limpia y definida, colores planos vibrantes y formas geometricas amables. Katniss debe aparecer con su trenza negra, piel aceitunada y ojos grises. Peeta debe tener su cabello rubio ceniza ondulado y ojos azules. Ambos visten los trajes de la ceremonia inaugural: monos negros ajustados que brillan con luz de brasas de carbon. Respetar la estetica de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Katniss y Peeta de pie, espalda contra espalda, mirando hacia el espectador con expresiones de determinacion sombria. Katniss sostiene su arco de madera. La composicion es central y heroica, con un aire de desafio ante el destino.\n\nPERSONAJES Y ACCION\nKatniss con mirada de acero y barbilla alta. Peeta con gesto protector y firme. Los trajes emiten un resplandor naranja y rojo plano, simulando carbones encendidos. No hay movimiento exagerado, solo una pose estatua de vencedores.\n\nENTORNO, PALETA E ILUMINACION\nFondo oscuro con el simbolo del Capitolio en gris suave. La paleta esta dominada por el negro de los trajes, el rojo/naranja del fuego sintetico y el blanco del Edificio de Justicia sugerido al fondo. Iluminacion plana que resalta los contornos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_bow_arrow, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, titulos ni creditos. Prohibido el fotorrealismo, degradados complejos, efectos de luz digital modernos o sombras dramaticas realistas. Evitar que los personajes parezcan asustados; deben transmitir poder.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta claridad, lista para maquetacion de cuento infantil con bordes limpios y alta definicion en la linea negra.",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'El Vasallaje de los Veinticinco', representando el regreso inevitable de Katniss Everdeen y Peeta Mellark a la arena de los Juegos del Hambre bajo una atmosfera de poder y tragedia.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern: linea negra limpia y definida, colores planos vibrantes y formas geometricas amables. Katniss debe aparecer con su trenza negra, piel aceitunada y ojos grises. Peeta debe tener su cabello rubio ceniza ondulado y ojos azules. Ambos visten los trajes de la ceremonia inaugural: monos negros ajustados que brillan con luz de brasas de carbon. Respetar la estetica de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Katniss y Peeta de pie, espalda contra espalda, mirando hacia el espectador con expresiones de determinacion sombria. Katniss sostiene su arco de madera. La composicion es central y heroica, con un aire de desafio ante el destino.\n\nPERSONAJES Y ACCION\nKatniss con mirada de acero y barbilla alta. Peeta con gesto protector y firme. Los trajes emiten un resplandor naranja y rojo plano, simulando carbones encendidos. No hay movimiento exagerado, solo una pose estatua de vencedores.\n\nENTORNO, PALETA E ILUMINACION\nFondo oscuro con el simbolo del Capitolio en gris suave. La paleta esta dominada por el negro de los trajes, el rojo/naranja del fuego sintetico y el blanco del Edificio de Justicia sugerido al fondo. Iluminacion plana que resalta los contornos.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, char_katniss_base, char_peeta_base, prop_bow_arrow, style_paleta_rebelion.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, titulos ni creditos. Prohibido el fotorrealismo, degradados complejos, efectos de luz digital modernos o sombras dramaticas realistas. Evitar que los personajes parezcan asustados; deben transmitir poder.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta claridad, lista para maquetacion de cuento infantil con bordes limpios y alta definicion en la linea negra.\n\nMAQUETACION DE PORTADA (OBLIGATORIO)\nEsta portada se regenera en ChatGPT. Reservar una zona limpia para titulo en el tercio superior y una zona limpia para etiqueta de coleccion en el pie. No incrustar texto final en la ilustracion.\n\nGUIA DE MAQUETACION (ANCLAS)\nAplicar como referencia visual: cover_title_format y cover_footer_collection_tag, priorizando contraste y legibilidad editorial.",
     "active_id": "",
     "alternatives": [],
     "reference_ids": [
       "anchors/char-katniss.png",
       "anchors/char-peeta.png",
-      "anchors/prop-bow-arrow.png"
+      "anchors/prop-bow-arrow.png",
+      "anchors/cover-title-format.png",
+      "anchors/cover-footer-collection-tag.png"
     ]
   },
   "pages": [
@@ -137,7 +139,7 @@
     },
     {
       "page_number": 8,
-      "text": "Esa noche, la televisión emite un programa obligatorio. El Presidente Snow lee una tarjeta antigua para anunciar el tercer Vasallaje de los Veinticinco. Su voz resuena fría: «Como recordatorio de que nadie es más fuerte que el Capitolio, los tributos de este año saldrán del grupo de los vencedores». Se me cae el alma a los pies al comprender la trampa. Solo hay dos vencedores vivos en el Distrito 12: Peeta y yo. Debemos volver a la arena. Los Juegos nunca terminan.",
+      "text": "Esa noche, la televisión emite un programa obligatorio. El Presidente Snow lee una tarjeta antigua para anunciar el tercer Vasallaje de los Veinticinco. Su voz resuena fría:\n«Como recordatorio de que nadie es más fuerte que el Capitolio, los tributos de este año saldrán del grupo de los vencedores». Se me cae el alma a los pies al comprender la trampa. Solo hay dos vencedores vivos en el Distrito 12: Peeta y yo. Debemos volver a la arena. Los Juegos nunca terminan.",
       "images": {
         "main": {
           "status": "draft",
@@ -221,7 +223,7 @@
     },
     {
       "page_number": 13,
-      "text": "Al llegar al Capitolio, mi equipo de preparación me recibe entre lágrimas. Venia, Octavia y Flavius ya no parlotean sobre modas; están destrozados porque saben que esta vez no hay esperanza de indulto. Cinna aparece para rescatarme de su tristeza y me lleva a mi habitación. Me trata con la misma ternura de siempre, aunque sus ojos verdes están cargados de una determinación nueva. «No te rindas, Katniss», me susurra mientras empieza a trabajar en mi nuevo aspecto para la gran ceremonia de apertura.",
+      "text": "Al llegar al Capitolio, mi equipo de preparación me recibe entre lágrimas. Venia, Octavia y Flavius ya no parlotean sobre modas; están destrozados porque saben que esta vez no hay esperanza de indulto. Cinna aparece para rescatarme de su tristeza y me lleva a mi habitación. Me trata con la misma ternura de siempre, aunque sus ojos verdes están cargados de una determinación nueva.\n«No te rindas, Katniss», me susurra mientras empieza a trabajar en mi nuevo aspecto para la gran ceremonia de apertura.",
       "images": {
         "main": {
           "status": "draft",

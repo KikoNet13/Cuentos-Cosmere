@@ -4,10 +4,10 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T15:00:00Z",
-  "updated_at": "2026-02-19T08:46:47.513148+00:00",
+  "updated_at": "2026-02-19T22:20:14.820031+01:00",
   "cover": {
     "status": "draft",
-    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'El Canto de Rue' que represente la alianza más conmovedora y tragica de los Juegos del Hambre entre Katniss Everdeen y la pequeña Rue.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern de línea negra definida y colores planos vibrantes. Katniss debe tener su trenza negra, ojos grises y su arco de madera. Rue debe ser una niña pequeña de piel oscura, ojos brillantes y aspecto agil. Ambas deben vestir los uniformes de entrenamiento grises del Capitolio con el broche de sinsajo dorado visible en el pecho de Katniss. Respetar la estetica de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Katniss y Rue sentadas una junto a la otra en la rama gruesa de un arbol gigante. Rue señala hacia arriba con curiosidad. El encuadre es equilibrado y transmite una sensacion de refugio secreto en medio de la selva.\n\nPERSONAJES Y ACCION\nKatniss observa a Rue con una expresion protectora y tierna. Rue sonrie ligeramente, compartiendo un momento de paz. La acción es estatica pero cargada de emocion fraternal.\n\nENTORNO, PALETA E ILUMINACION\nFondo de bosque denso con hojas de color verde esmeralda y marron calido. La luz del sol se filtra entre las ramas creando parches amarillos planos. Paleta de verdes, marrones y el dorado del broche de sinsajo. Iluminación clara y sin sombras complejas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_rue_base, env_arena_forest, prop_mockingjay_pin, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto ni titulos. Sin fotorrealismo, sin degradados suaves, sin efectos de luz digital modernos ni sombreado dramatico. No mostrar violencia ni a otros tributos en la portada.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta claridad, lista para impresion de cuento infantil con bordes limpios y alta definicion en los contornos.",
+    "prompt": "OBJETIVO DE ILUSTRACION\nCrear la portada oficial para el cuento 'El Canto de Rue' que represente la alianza más conmovedora y tragica de los Juegos del Hambre entre Katniss Everdeen y la pequeña Rue.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener estrictamente el estilo Sergio Kern de línea negra definida y colores planos vibrantes. Katniss debe tener su trenza negra, ojos grises y su arco de madera. Rue debe ser una niña pequeña de piel oscura, ojos brillantes y aspecto agil. Ambas deben vestir los uniformes de entrenamiento grises del Capitolio con el broche de sinsajo dorado visible en el pecho de Katniss. Respetar la estetica de Ligne Claire.\n\nCOMPOSICION Y ENCUADRE\nPlano medio de Katniss y Rue sentadas una junto a la otra en la rama gruesa de un arbol gigante. Rue señala hacia arriba con curiosidad. El encuadre es equilibrado y transmite una sensacion de refugio secreto en medio de la selva.\n\nPERSONAJES Y ACCION\nKatniss observa a Rue con una expresion protectora y tierna. Rue sonrie ligeramente, compartiendo un momento de paz. La acción es estatica pero cargada de emocion fraternal.\n\nENTORNO, PALETA E ILUMINACION\nFondo de bosque denso con hojas de color verde esmeralda y marron calido. La luz del sol se filtra entre las ramas creando parches amarillos planos. Paleta de verdes, marrones y el dorado del broche de sinsajo. Iluminación clara y sin sombras complejas.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_rue_base, env_arena_forest, prop_mockingjay_pin, prop_bow_arrow.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto ni titulos. Sin fotorrealismo, sin degradados suaves, sin efectos de luz digital modernos ni sombreado dramatico. No mostrar violencia ni a otros tributos en la portada.\n\nFORMATO DE SALIDA\nIlustracion digital 1:1 de alta claridad, lista para impresion de cuento infantil con bordes limpios y alta definicion en los contornos.\n\nMAQUETACION DE PORTADA (OBLIGATORIO)\nEsta portada se regenera en ChatGPT. Reservar una zona limpia para titulo en el tercio superior y una zona limpia para etiqueta de coleccion en el pie. No incrustar texto final en la ilustracion.\n\nGUIA DE MAQUETACION (ANCLAS)\nAplicar como referencia visual: cover_title_format y cover_footer_collection_tag, priorizando contraste y legibilidad editorial.",
     "active_id": "",
     "alternatives": [],
     "reference_ids": [
@@ -15,7 +15,9 @@
       "anchors/char-rue.png",
       "anchors/env-arena-forest.png",
       "anchors/prop-mockingjay-pin.png",
-      "anchors/prop-bow-arrow.png"
+      "anchors/prop-bow-arrow.png",
+      "anchors/cover-title-format.png",
+      "anchors/cover-footer-collection-tag.png"
     ]
   },
   "pages": [
@@ -203,7 +205,7 @@
     },
     {
       "page_number": 12,
-      "text": "Rue me explica que los profesionales tienen una montaña de suministros junto al lago. Ellos no pasan hambre, y eso es lo que les da ventaja. Trazamos un plan de ataque: Rue encenderá tres fogatas para distraerlos mientras yo intento destruir su comida. Nos despedimos con un abrazo rápido, prometiendo reunirnos al anochecer. —Ten cuidado —me susurra ella. —Tú también —le respondo. Mientras me dirijo al lago, los sinsajos repiten la melodía de cuatro notas que Rue usa para decir que está a salvo.",
+      "text": "Rue me explica que los profesionales tienen una montaña de suministros junto al lago. Ellos no pasan hambre, y eso es lo que les da ventaja. Trazamos un plan de ataque: Rue encenderá tres fogatas para distraerlos mientras yo intento destruir su comida. Nos despedimos con un abrazo rápido, prometiendo reunirnos al anochecer.\n—Ten cuidado —me susurra ella.\n—Tú también —le respondo. Mientras me dirijo al lago, los sinsajos repiten la melodía de cuatro notas que Rue usa para decir que está a salvo.",
       "images": {
         "main": {
           "status": "draft",
