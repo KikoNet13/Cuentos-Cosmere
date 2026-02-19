@@ -1,57 +1,51 @@
-# Pasos operativos para generar imágenes (guia generica)
+# Pasos operativos para generar imágenes
 
-## 1) Preparacion
-1. Abre la webapp del orquestador.
-2. Entra en el flujo guiado de pendientes (si existe) o en el editor del cuento.
-3. Verifica que el Project de ChatGPT tenga cargadas las instrucciones del archivo de setup.
-4. Verifica que el bloque `STYLE PROMPT MAESTRO (CANONICO)` este activo y listo para reutilizar en cada turno.
+## 1) Preparación inicial del Project
+1. Crea/abre el Project de ChatGPT para la saga.
+2. Carga como adjuntos globales las 27 anclas con su slug exacto (una sola vez).
+3. Usa como manifiesto: `chatgpt_projects_setup/Los juegos del hambre - Adjuntos globales (27 anclas).md`.
+4. Pega las instrucciones maestras del archivo de setup del Project.
 
 ## 2) Prioridad de trabajo
 1. Genera primero todas las anclas pendientes.
 2. Cuando no queden anclas, pasa a portadas.
-3. Luego genera páginas (slot main y, si existe, slot secondary).
+3. Luego genera páginas (`main` y `secondary` solo si existe).
 
 ## 3) Gate de prompt (obligatorio)
-1. Antes de generar, válida que el prompt tenga estos 8 bloques:
-   - `OBJETIVO DE ILUSTRACION`
+1. Antes de generar, valida los 8 bloques del prompt:
+   - `OBJETIVO DE ILUSTRACIÓN`
    - `CONTINUIDAD VISUAL OBLIGATORIA`
-   - `COMPOSICION Y ENCUADRE`
-   - `PERSONAJES Y ACCION`
-   - `ENTORNO, PALETA E ILUMINACION`
+   - `COMPOSICIÓN Y ENCUADRE`
+   - `PERSONAJES Y ACCIÓN`
+   - `ENTORNO, PALETA E ILUMINACIÓN`
    - `REFERENCIAS (reference_ids)`
    - `RESTRICCIONES / NEGATIVOS`
    - `FORMATO DE SALIDA`
-2. Si falta algun bloque o el prompt es demasiado corto, no generar imagen.
-3. Solicitar delta a NotebookLM (`prompts.missing_sections` o `prompts.too_short`).
+2. Si falta un bloque o el prompt es corto, no generes imagen.
+3. Solicita delta a NotebookLM con `prompts.missing_sections` o `prompts.too_short`.
 
-## 4) Ciclo rapido por cada pendiente
+## 4) Reglas operativas de `reference_ids`
+1. `reference_ids` del slot son contexto de escena, no adjuntos globales.
+2. Máximo 6 referencias por slot.
+3. No repetir `style_linea_editorial` ni `style_paleta_rebelion` en slots si ya están como adjuntos globales.
+4. Filtrado semántico: solo personajes/props/entornos presentes en el texto/prompt de la escena (o continuidad explícita).
+
+## 5) Ciclo rápido por cada pendiente
 1. Copia el prompt del slot/ancla desde la webapp.
-2. Decide composición por intencion del slot/prompt:
-   - `full-bleed` solo para ilustracion completa solicitada.
-   - `spot art` solo para imagen suelta solicitada.
-   - no aplicar regla fija por paridad.
-3. Copia una o varias referencias necesarias.
-4. Pega prompt + referencias en ChatGPT Project (incluyendo style prompt maestro y, si aplica, modificador de composición).
-5. Genera la imagen.
-6. Copia la imagen resultante.
-7. Vuelve a la webapp y usa "Pegar y guardar".
-8. Comprueba que la alternativa quedo activa.
-9. Pasa al siguiente pendiente.
+2. Copia los `reference_ids` del slot (si aplica).
+3. Pega en ChatGPT Project y genera la imagen.
+4. Vuelve a la webapp y usa "Pegar y guardar".
+5. Verifica que la alternativa quedó activa.
+6. Continúa con el siguiente pendiente.
 
-## 5) Criterios de revisión inmediata
-1. Estilo técnico: línea limpia negra continua, color plano vibrante con gradiente sutil y sin texturas/hatching/sombreado complejo.
-2. Rasgos simplificados: ojos punto o ranura, bocas de línea simple, manos simplificadas, fondos organicos redondeados.
-3. Continuidad de personaje: cara, pelo, ropa, proporcion.
-4. Continuidad de entorno: localizacion, epoca de luz, paleta.
-5. Coherencia narrativa: la escena representa el texto de esa página.
-6. Limpieza visual: sin texto incrustado ni marcas.
-
-## 6) Si algo falla
-1. Si falla el portapapeles: vuelve a copiar y reintenta.
-2. Si la imagen sale incoherente: reintenta en ChatGPT reforzando continuidad y refs.
-3. Si falta contexto o el prompt viene incompleto: solicita delta a NotebookLM, no improvises fuera del estándar.
+## 6) QA rápido por página
+1. Coherencia de personajes (rasgos, edad, ropa, proporción).
+2. Coherencia de entorno/props entre páginas adyacentes.
+3. Acción principal clara y legible.
+4. Paleta y acabado estables en todo el bloque narrativo.
+5. Sin texto incrustado, logos ni marcas de agua.
 
 ## 7) Cierre
-1. Recorre el cuento completo y válida que no queden pendientes.
-2. Haz una pasada final de coherencia visual entre páginas consecutivas.
-3. Documenta incidencias si algun slot queda sin resolver.
+1. Revisa que no queden pendientes en `/_flow/image`.
+2. Haz pasada de continuidad por cuento completo.
+3. Registra incidencias si algún slot queda sin resolver.

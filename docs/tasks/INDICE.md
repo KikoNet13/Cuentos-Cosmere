@@ -1,6 +1,17 @@
 # índice de tareas
 
-- Proximo ID: `040`
+- Proximo ID: `041`
+
+## TAREA-040-refs-semanticas-y-naming-sin-uuid
+
+- Fecha: 19/02/26 09:05
+- Estado: cerrada
+- Resumen: limpieza semántica de `reference_ids` en `01..11`, migración de naming legible sin UUID, fallback runtime compatible y actualización de guías/skills para operar con pack global de 27 anclas.
+- Versión: 2.8.0
+- Commit: `pendiente`
+- ADR relacionadas: `0008`
+- Archivo: `docs/tasks/TAREA-040-refs-semanticas-y-naming-sin-uuid.md`
+
 ## TAREA-039-fallback-referencias-legacy
 
 - Fecha: 19/02/26 01:39

@@ -51,8 +51,9 @@ Notas:
 5. Contrato de slot de imagen (`cover` y `images.*`):
    - `status`, `prompt`, `active_id`, `alternatives[]`, `reference_ids[]` (opcional).
 6. Convencion operativa de `reference_ids`:
-   - deben referenciar filenames de `meta.anchors[].image_filenames[]`.
-   - no usar IDs opacos de assets finales como convencion principal.
+   - deben referenciar rutas relativas internas de `images/` declaradas en `meta.anchors[].image_filenames[]`.
+   - formato canonico recomendado: `anchors/<slug>.<ext>` para anclas y `NN/NN_MM_slot-slug.<ext>` para slots.
+   - no usar IDs opacos legacy (`<uuid>_<slug>.<ext>`) como convencion principal.
 7. Contrato de alternativa:
    - `id` (filename con extension),
    - `slug`,
@@ -61,7 +62,9 @@ Notas:
    - `status`,
    - `created_at`,
    - `notes`.
-8. Los assets de imagen se nombran con formato opaco `<uuid>_<slug>.<ext>`.
+8. Los assets de imagen se nombran en formato legible sin UUID:
+   - anclas: `images/anchors/<slug>.<ext>`
+   - slots de cuento: `images/<NN>/<NN>_<MM>_<slot>-<slug>.<ext>`
 9. Todos los assets de nodo viven en `library/<node>/images/`.
 10. Cada nodo mantiene `library/<node>/images/index.json` con:
    - `filename`, `asset_rel_path`, `description`, `node_rel_path`, `created_at`.

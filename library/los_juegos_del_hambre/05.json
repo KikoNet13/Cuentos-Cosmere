@@ -4,21 +4,17 @@
   "status": "definitive",
   "book_rel_path": "los_juegos_del_hambre",
   "created_at": "2026-02-18T12:00:00Z",
-  "updated_at": "2026-02-18T23:50:00Z",
+  "updated_at": "2026-02-19T08:46:47.513148+00:00",
   "cover": {
     "status": "draft",
     "prompt": "OBJETIVO DE ILUSTRACION\nCrear una portada poderosa para el cuento 'La Chispa de la Rebelión' que simbolice el conflicto entre la esperanza de los distritos y el control absoluto del Capitolio.\n\nCONTINUIDAD VISUAL OBLIGATORIA\nMantener el estilo Sergio Kern de línea negra limpia y expresiva con colores planos vibrantes. Katniss Everdeen debe lucir su trenza negra, piel aceitunada y ojos grises. El Presidente Snow debe aparecer como una figura amenazante pero refinada, con su cabello blanco y su rosa blanca. Respetar la estética de Ligne Claire.\n\nCOMPOSICIÓNY ENCUADRE\nComposición dual. En el centro, Katniss de perfil mirando hacia un horizonte donde se intuye fuego. En la parte superior, el rostro gélido de Snow superpuesto sobre un cielo gris, como si observara cada movimiento. El broche de sinsajo debe brillar en el centro.\n\nPERSONAJES Y ACCIÓN\nKatniss con expresión de alerta y valentía contenida. Snow con mirada de serpiente, inexpresivo y calculador. No hay acción física, sino una tensión psicológica palpable entre el símbolo de la rebelión y el tirano.\n\nENTORNO, PALETA E ILUMINACIÓN\nFondo dividido entre el gris carbón del Distrito 12 y el rojo escarlata del Capitolio. Iluminación plana con contrastes fuertes entre los tonos fríos de Katniss y el blanco radiante de Snow. Una única rosa blanca destaca en la oscuridad.\n\nREFERENCIAS (reference_ids)\nstyle_linea_editorial, style_paleta_rebelion, char_katniss_base, char_snow_base, prop_mockingjay_pin, prop_president_rose.\n\nRESTRICCIONES / NEGATIVOS\nNo incluir texto, títulos ni logos. Sin fotorrealismo, sin degradados suaves, sin sombreado complejo. Evitar que la imagen parezca de una película de acción moderna; debe ser ilustración de cuento infantil.\n\nFORMATO DE SALIDA\nIlustración digital 1:1 de alta calidad, nítida y preparada para maquetación editorial.",
     "active_id": "",
     "alternatives": [],
     "reference_ids": [
-      "anchor_style_editorial_v1.png",
-      "anchor_style_palette_v1.png",
-      "anchor_cover_main.png",
-      "anchor_char_katniss.png",
-      "anchor_char_prim.png",
-      "anchor_char_snow.png",
-      "anchor_char_finnick.png",
-      "anchor_prop_rose.png"
+      "anchors/char-katniss.png",
+      "anchors/char-snow.png",
+      "anchors/prop-mockingjay-pin.png",
+      "anchors/prop-president-rose.png"
     ]
   },
   "pages": [
@@ -32,17 +28,9 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_cover_main.png",
-            "anchor_char_katniss.png",
-            "anchor_char_gale.png",
-            "anchor_char_prim.png",
-            "anchor_char_effie.png",
-            "anchor_env_train.png",
-            "anchor_env_forest.png",
-            "anchor_env_clock.png",
-            "anchor_prop_berries.png"
+            "anchors/char-katniss.png",
+            "anchors/env-arena-forest.png",
+            "anchors/env-district12-seam.png"
           ]
         }
       }
@@ -57,26 +45,9 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_char_katniss.png",
-            "anchor_char_peeta.png",
-            "anchor_char_gale.png",
-            "anchor_char_prim.png",
-            "anchor_char_haymitch.png",
-            "anchor_char_effie.png",
-            "anchor_char_snow.png",
-            "anchor_char_rue.png",
-            "anchor_char_finnick.png",
-            "anchor_char_johanna.png",
-            "anchor_char_coin.png",
-            "anchor_env_seam.png",
-            "anchor_env_forest.png",
-            "anchor_env_clock.png",
-            "anchor_env_d13.png",
-            "anchor_prop_berries.png",
-            "anchor_prop_rose.png",
-            "anchor_prop_parachute.png"
+            "anchors/char-katniss.png",
+            "anchors/char-snow.png",
+            "anchors/prop-president-rose.png"
           ]
         }
       }
@@ -91,14 +62,8 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_cover_main.png",
-            "anchor_char_katniss.png",
-            "anchor_char_peeta.png",
-            "anchor_char_haymitch.png",
-            "anchor_char_snow.png",
-            "anchor_prop_rose.png"
+            "anchors/char-snow.png",
+            "anchors/prop-president-rose.png"
           ]
         }
       }
@@ -113,20 +78,9 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_char_katniss.png",
-            "anchor_char_peeta.png",
-            "anchor_char_prim.png",
-            "anchor_char_haymitch.png",
-            "anchor_char_effie.png",
-            "anchor_char_snow.png",
-            "anchor_char_rue.png",
-            "anchor_char_finnick.png",
-            "anchor_env_train.png",
-            "anchor_prop_berries.png",
-            "anchor_prop_rose.png",
-            "anchor_prop_parachute.png"
+            "anchors/char-katniss.png",
+            "anchors/char-peeta.png",
+            "anchors/env-train-capitol.png"
           ]
         }
       }
@@ -141,24 +95,9 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_char_katniss.png",
-            "anchor_char_peeta.png",
-            "anchor_char_gale.png",
-            "anchor_char_prim.png",
-            "anchor_char_haymitch.png",
-            "anchor_char_snow.png",
-            "anchor_char_rue.png",
-            "anchor_char_finnick.png",
-            "anchor_char_johanna.png",
-            "anchor_char_coin.png",
-            "anchor_env_seam.png",
-            "anchor_env_square.png",
-            "anchor_env_train.png",
-            "anchor_env_d13.png",
-            "anchor_prop_pin.png",
-            "anchor_prop_berries.png"
+            "anchors/char-katniss.png",
+            "anchors/char-peeta.png",
+            "anchors/env-reaping-square.png"
           ]
         }
       }
@@ -173,15 +112,8 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_char_effie.png",
-            "anchor_char_snow.png",
-            "anchor_env_seam.png",
-            "anchor_env_square.png",
-            "anchor_env_train.png",
-            "anchor_env_d13.png",
-            "anchor_prop_bow.png"
+            "anchors/char-katniss.png",
+            "anchors/env-reaping-square.png"
           ]
         }
       }
@@ -196,17 +128,7 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_char_katniss.png",
-            "anchor_char_peeta.png",
-            "anchor_char_prim.png",
-            "anchor_char_effie.png",
-            "anchor_char_snow.png",
-            "anchor_char_coin.png",
-            "anchor_env_square.png",
-            "anchor_env_train.png",
-            "anchor_env_clock.png"
+            "anchors/env-train-capitol.png"
           ]
         }
       }
@@ -221,15 +143,7 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_char_snow.png",
-            "anchor_char_johanna.png",
-            "anchor_char_beetee.png",
-            "anchor_env_seam.png",
-            "anchor_env_square.png",
-            "anchor_env_d13.png",
-            "anchor_prop_berries.png"
+            "anchors/char-katniss.png"
           ]
         }
       }
@@ -244,20 +158,8 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_cover_main.png",
-            "anchor_char_katniss.png",
-            "anchor_char_peeta.png",
-            "anchor_char_gale.png",
-            "anchor_char_haymitch.png",
-            "anchor_char_snow.png",
-            "anchor_char_coin.png",
-            "anchor_env_seam.png",
-            "anchor_env_square.png",
-            "anchor_env_train.png",
-            "anchor_env_d13.png",
-            "anchor_prop_rose.png"
+            "anchors/env-district12-seam.png",
+            "anchors/char-katniss.png"
           ]
         }
       }
@@ -272,19 +174,9 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_char_katniss.png",
-            "anchor_char_peeta.png",
-            "anchor_char_gale.png",
-            "anchor_char_effie.png",
-            "anchor_char_snow.png",
-            "anchor_char_finnick.png",
-            "anchor_char_beetee.png",
-            "anchor_char_coin.png",
-            "anchor_env_seam.png",
-            "anchor_env_train.png",
-            "anchor_prop_berries.png"
+            "anchors/char-katniss.png",
+            "anchors/char-peeta.png",
+            "anchors/env-district12-seam.png"
           ]
         }
       }
@@ -299,19 +191,9 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_cover_main.png",
-            "anchor_char_katniss.png",
-            "anchor_char_peeta.png",
-            "anchor_char_gale.png",
-            "anchor_char_prim.png",
-            "anchor_char_finnick.png",
-            "anchor_char_johanna.png",
-            "anchor_char_coin.png",
-            "anchor_env_train.png",
-            "anchor_env_forest.png",
-            "anchor_prop_berries.png"
+            "anchors/char-katniss.png",
+            "anchors/env-district12-seam.png",
+            "anchors/prop-bow-arrow.png"
           ]
         }
       }
@@ -326,22 +208,9 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_cover_main.png",
-            "anchor_char_katniss.png",
-            "anchor_char_peeta.png",
-            "anchor_char_gale.png",
-            "anchor_char_prim.png",
-            "anchor_char_haymitch.png",
-            "anchor_char_snow.png",
-            "anchor_char_rue.png",
-            "anchor_env_seam.png",
-            "anchor_env_d13.png",
-            "anchor_prop_pin.png",
-            "anchor_prop_berries.png",
-            "anchor_prop_rose.png",
-            "anchor_prop_parachute.png"
+            "anchors/char-katniss.png",
+            "anchors/char-gale.png",
+            "anchors/env-arena-forest.png"
           ]
         }
       }
@@ -356,27 +225,9 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_char_katniss.png",
-            "anchor_char_peeta.png",
-            "anchor_char_gale.png",
-            "anchor_char_prim.png",
-            "anchor_char_haymitch.png",
-            "anchor_char_effie.png",
-            "anchor_char_snow.png",
-            "anchor_char_rue.png",
-            "anchor_char_finnick.png",
-            "anchor_char_johanna.png",
-            "anchor_char_beetee.png",
-            "anchor_char_coin.png",
-            "anchor_env_seam.png",
-            "anchor_env_square.png",
-            "anchor_env_train.png",
-            "anchor_env_forest.png",
-            "anchor_env_clock.png",
-            "anchor_env_d13.png",
-            "anchor_prop_berries.png"
+            "anchors/char-katniss.png",
+            "anchors/char-gale.png",
+            "anchors/env-arena-forest.png"
           ]
         }
       }
@@ -391,17 +242,8 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_char_katniss.png",
-            "anchor_char_gale.png",
-            "anchor_char_prim.png",
-            "anchor_char_rue.png",
-            "anchor_env_seam.png",
-            "anchor_env_d13.png",
-            "anchor_prop_pin.png",
-            "anchor_prop_berries.png",
-            "anchor_prop_parachute.png"
+            "anchors/char-gale.png",
+            "anchors/char-katniss.png"
           ]
         }
       }
@@ -416,14 +258,8 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_cover_main.png",
-            "anchor_char_katniss.png",
-            "anchor_char_gale.png",
-            "anchor_env_seam.png",
-            "anchor_env_d13.png",
-            "anchor_prop_berries.png"
+            "anchors/char-katniss.png",
+            "anchors/env-district12-seam.png"
           ]
         }
       }
@@ -438,22 +274,9 @@
           "active_id": "",
           "alternatives": [],
           "reference_ids": [
-            "anchor_style_editorial_v1.png",
-            "anchor_style_palette_v1.png",
-            "anchor_char_katniss.png",
-            "anchor_char_peeta.png",
-            "anchor_char_gale.png",
-            "anchor_char_prim.png",
-            "anchor_char_haymitch.png",
-            "anchor_char_snow.png",
-            "anchor_char_rue.png",
-            "anchor_char_finnick.png",
-            "anchor_char_johanna.png",
-            "anchor_char_coin.png",
-            "anchor_env_seam.png",
-            "anchor_env_d13.png",
-            "anchor_prop_berries.png",
-            "anchor_prop_parachute.png"
+            "anchors/char-katniss.png",
+            "anchors/char-peeta.png",
+            "anchors/env-district12-seam.png"
           ]
         }
       }

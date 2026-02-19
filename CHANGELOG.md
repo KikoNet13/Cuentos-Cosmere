@@ -5,6 +5,23 @@ El detalle operativo vive en `docs/tasks/`.
 
 ## [Sin publicar]
 
+## [19/02/26] - Refs semánticas + naming legible sin UUID (Los juegos del hambre)
+
+- Se migra la convención de naming a formato legible sin UUID en `library/los_juegos_del_hambre/images/`:
+  - anclas: `anchors/<slug>.png`,
+  - nuevos slots: `<NN>/<NN>_<MM>_<slot>-<slug>.<ext>`.
+- Se consolidan las 27 anclas canónicas por slug en `meta.json` e `images/index.json`.
+- Se limpian `reference_ids` en `01..11.json` con filtro semántico:
+  - máximo 6 refs por slot,
+  - sin `style_linea_editorial` ni `style_paleta_rebelion` en slots,
+  - sin referencias no resolubles.
+- Se actualiza `app/story_store.py` con:
+  - soporte de subcarpetas en `images/`,
+  - colisión explícita por slug (sin sobreescritura),
+  - resolución de referencias por rutas relativas + fallback legacy (`anchor_*.png`, `char_*_base`).
+- Se actualizan guías del Project y documentación de pipeline (`AGENTS`, skills, contratos y plantilla setup).
+- Tarea: `docs/tasks/TAREA-040-refs-semanticas-y-naming-sin-uuid.md`.
+
 ## [19/02/26] - Fallback de referencias legacy a anclas activas
 
 - Se mejora `resolve_reference_assets(...)` para soportar referencias legacy sin migracion de datos.

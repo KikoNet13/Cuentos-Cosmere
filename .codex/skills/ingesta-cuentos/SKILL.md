@@ -66,10 +66,10 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
 5. Enriquecimiento preimport de `reference_ids`
    - Si existe `meta.json` válido del lote, aplicar politica hibrida:
      - respetar `reference_ids` ya presentes;
-     - autocompletar slots sin refs en `cover` y `pages[].images.main`.
+   - autocompletar slots sin refs en `cover` y `pages[].images.main`.
    - Regla de precedencia:
-     - anclas base de estilo (`style_*`) siempre primero;
-     - luego anclas semanticas detectadas desde `title`, `text`, `prompt`;
+     - anclas semanticas detectadas desde `title`, `text`, `prompt`;
+     - excluir `style_*`/paleta en slots si se manejan como adjuntos globales del Project;
      - eliminar duplicados preservando orden.
    - Politica de cierre:
      - si faltan refs y se pudieron autocompletar, warning no bloqueante;
@@ -144,7 +144,7 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
    - `status`, `prompt` (string), `active_id`, `alternatives[]`;
    - `reference_ids[]` opcional.
 5. Contrato de alternativa:
-   - `id` (filename con extension),
+   - `id` (ruta relativa dentro de `images/`, con extension),
    - `slug`,
    - `asset_rel_path`,
    - `mime_type`,
@@ -189,9 +189,9 @@ Esta skill es **100% conversacional** y **no usa scripts internos**.
    - respetar refs existentes;
    - autocompletar solo faltantes.
 4. Fuente de truth para refs:
-   - filenames de `meta.anchors[].image_filenames[]`.
+   - rutas relativas declaradas en `meta.anchors[].image_filenames[]`.
 5. No permitido en refs:
-   - IDs opacos de alternatives (`<uuid>_<slug>.<ext>`) salvo que coincidan explicitamente como anchor filename.
+   - IDs opacos legacy (`<uuid>_<slug>.<ext>`) como convenciÃ³n principal.
 
 ## Modo refresh manual del dossier (sin reimportar)
 
@@ -242,7 +242,7 @@ Formato requerido por cuento: NN.json (dos digitos)
 - images.main obligatorio (slot completo)
 - images.secondary opcional
 - slot: status, prompt, active_id, alternatives[], reference_ids[] opcional
-- alternativa: id(filename), slug, asset_rel_path, mime_type, status, created_at, notes
+- alternativa: id(ruta relativa en images/), slug, asset_rel_path, mime_type, status, created_at, notes
 
 Recomendado para flujo listo de imagen:
 - meta.json con collection.title, anchors[], style_rules, continuity_rules, updated_at.
@@ -269,8 +269,10 @@ No usar markdown, no agregar texto fuera del JSON.
 ```text
 Voy a pasarte prompts desde NN.json/meta.json.
 Genera imagenes manteniendo continuidad visual estable.
-Cuando termines cada imagen, devuelveme archivo con nombre opaco exacto <uuid>_<slug>.<ext>.
-No cambies IDs ni nombres de archivos.
+Usa naming legible sin UUID:
+- anclas: anchors/<slug>.<ext>
+- slots: <NN>/<NN>_<MM>_<slot>-<slug>.<ext>
+No cambies la convenciÃ³n de nombres.
 ```
 
 ### B2) Plantilla de `chatgpt_project_setup.md` por saga
@@ -292,7 +294,7 @@ Plantilla reusable en: `references/chatgpt_project_setup_template.md`.
 
 ## Instrucciones maestras (copiar en ChatGPT Project)
 1. Mantener continuidad estricta de personajes, vestuario, paleta y trazo.
-2. Tratar `reference_ids` como anclas visuales prioritarias del slot.
+2. Tratar `reference_ids` como contexto de escena (mÃ¡ximo 6), usando el pack global de anclas como base permanente.
 3. No inventar cambios de estilo entre paginas.
 4. Mantener encuadre y tono segun prompt del slot.
 5. Entregar una imagen por iteracion para facilitar seleccion editorial.
@@ -357,7 +359,7 @@ Plantilla reusable en: `references/chatgpt_project_setup_template.md`.
 2. Si falla leer portapapeles:
    - confirmar HTTPS/contexto seguro o navegador compatible.
 3. Si no hay refs del slot:
-   - revisar `reference_ids` en el JSON o completar con anclas de estilo.
+   - revisar `reference_ids` en el JSON (no repetir style/paleta si ya estÃ¡n en adjuntos globales).
 4. Si el prompt llega fuera de estandar:
    - detener generacion y pedir delta a NotebookLM;
    - no improvisar estilo fuera del contrato.

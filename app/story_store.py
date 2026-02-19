@@ -1,9 +1,8 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import mimetypes
 import re
-import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -38,6 +37,10 @@ def _normalize_slug(slug: str, fallback: str) -> str:
     value = re.sub(r"[^a-z0-9-]+", "-", slug.lower().strip())
     value = value.strip("-")
     return value or fallback
+
+
+def _normalize_reference_id(value: str) -> str:
+    return value.strip().replace("\\", "/").lstrip("/")
 
 
 def _coerce_string_list(raw_value: Any) -> list[str]:
@@ -506,9 +509,10 @@ def _node_images_dir(node_rel_path: str) -> Path:
 
 def _asset_rel_path_for_node(node_rel_path: str, file_name: str) -> str:
     normalized = _normalize_rel_path(node_rel_path)
+    normalized_name = _normalize_reference_id(file_name)
     if normalized:
-        return f"library/{normalized}/images/{file_name}"
-    return f"library/images/{file_name}"
+        return f"library/{normalized}/images/{normalized_name}"
+    return f"library/images/{normalized_name}"
 
 
 def _image_index_path(node_rel_path: str) -> Path:
@@ -590,7 +594,9 @@ def _upsert_image_index(*, node_rel_path: str, file_name: str, description: str)
 def _write_node_image(*, node_rel_path: str, file_name: str, image_bytes: bytes) -> Path:
     images_dir = _node_images_dir(node_rel_path)
     images_dir.mkdir(parents=True, exist_ok=True)
-    file_path = images_dir / file_name
+    normalized_name = _normalize_reference_id(file_name)
+    file_path = images_dir / normalized_name
+    file_path.parent.mkdir(parents=True, exist_ok=True)
     try:
         file_path.write_bytes(image_bytes)
     except OSError as exc:
@@ -598,13 +604,42 @@ def _write_node_image(*, node_rel_path: str, file_name: str, image_bytes: bytes)
     return file_path
 
 
-def _new_alternative(*, node_rel_path: str, slug: str, mime_type: str, notes: str) -> dict[str, Any]:
+def _assert_available_image_name(*, node_rel_path: str, file_name: str) -> None:
+    normalized_name = _normalize_reference_id(file_name)
+    target = _node_images_dir(node_rel_path) / normalized_name
+    if target.exists():
+        raise StoryStoreError(
+            f"Ya existe una imagen con id '{normalized_name}'. Usa un slug distinto para evitar colisiones."
+        )
+
+
+def _build_slot_image_name(*, story_id: str, page_number: int, slot_name: str, slug: str, mime_type: str) -> str:
     extension = _extension_for_mime(mime_type)
-    safe_slug = _normalize_slug(slug, "image")
-    file_name = f"{uuid.uuid4().hex}_{safe_slug}.{extension}"
+    safe_story_id = re.sub(r"[^0-9]+", "", story_id.strip()) or "00"
+    safe_slot = _normalize_slug(slot_name, "slot")
+    safe_slug = _normalize_slug(slug, safe_slot)
+    return f"{safe_story_id}/{safe_story_id}_{page_number:02d}_{safe_slot}-{safe_slug}.{extension}"
+
+
+def _build_cover_image_name(*, story_id: str, slug: str, mime_type: str) -> str:
+    extension = _extension_for_mime(mime_type)
+    safe_story_id = re.sub(r"[^0-9]+", "", story_id.strip()) or "00"
+    safe_slug = _normalize_slug(slug, "cover")
+    return f"{safe_story_id}/{safe_story_id}_00_cover-{safe_slug}.{extension}"
+
+
+def _build_anchor_image_name(*, slug: str, mime_type: str) -> str:
+    extension = _extension_for_mime(mime_type)
+    safe_slug = _normalize_slug(slug, "anchor")
+    return f"anchors/{safe_slug}.{extension}"
+
+
+def _new_alternative(*, node_rel_path: str, file_name: str, slug: str, mime_type: str, notes: str) -> dict[str, Any]:
+    normalized_name = _normalize_reference_id(file_name)
+    safe_slug = _normalize_slug(slug, Path(normalized_name).stem or "image")
     asset_rel_path = _asset_rel_path_for_node(node_rel_path, file_name)
     return {
-        "id": file_name,
+        "id": normalized_name,
         "slug": safe_slug,
         "asset_rel_path": asset_rel_path,
         "mime_type": mime_type or "image/png",
@@ -638,8 +673,22 @@ def add_slot_alternative(
     slot = _ensure_slot(page, normalized_slot)
     node_rel_path = _normalize_rel_path(str(payload.get("book_rel_path", "")))
     safe_slug = _normalize_slug(slug, normalized_slot)
-
-    alternative = _new_alternative(node_rel_path=node_rel_path, slug=safe_slug, mime_type=mime_type, notes=notes)
+    story_id = str(payload.get("story_id", "")).strip()
+    file_name = _build_slot_image_name(
+        story_id=story_id,
+        page_number=page_number,
+        slot_name=normalized_slot,
+        slug=safe_slug,
+        mime_type=mime_type,
+    )
+    _assert_available_image_name(node_rel_path=node_rel_path, file_name=file_name)
+    alternative = _new_alternative(
+        node_rel_path=node_rel_path,
+        file_name=file_name,
+        slug=safe_slug,
+        mime_type=mime_type,
+        notes=notes,
+    )
     _write_node_image(node_rel_path=node_rel_path, file_name=alternative["id"], image_bytes=image_bytes)
     _upsert_image_index(
         node_rel_path=node_rel_path,
@@ -702,7 +751,16 @@ def add_cover_alternative(
 
     node_rel_path = _normalize_rel_path(str(payload.get("book_rel_path", "")))
     safe_slug = _normalize_slug(slug, "cover")
-    alternative = _new_alternative(node_rel_path=node_rel_path, slug=safe_slug, mime_type=mime_type, notes=notes)
+    story_id = str(payload.get("story_id", "")).strip()
+    file_name = _build_cover_image_name(story_id=story_id, slug=safe_slug, mime_type=mime_type)
+    _assert_available_image_name(node_rel_path=node_rel_path, file_name=file_name)
+    alternative = _new_alternative(
+        node_rel_path=node_rel_path,
+        file_name=file_name,
+        slug=safe_slug,
+        mime_type=mime_type,
+        notes=notes,
+    )
 
     _write_node_image(node_rel_path=node_rel_path, file_name=alternative["id"], image_bytes=image_bytes)
     _upsert_image_index(
@@ -786,15 +844,35 @@ def _select_anchor_resolved_filename(node_level: str, anchor: dict[str, Any]) ->
 
     seen: set[str] = set()
     for candidate in candidates:
-        file_name = Path(candidate).name
+        normalized_candidate = _normalize_reference_id(candidate)
+        if not normalized_candidate or normalized_candidate in seen:
+            continue
+        seen.add(normalized_candidate)
+        candidate_path = _node_images_dir(node_level) / normalized_candidate
+        if candidate_path.exists() and candidate_path.is_file():
+            return normalized_candidate
+
+        # Compatibilidad legacy: meta con ruta, archivo en raiz de images/.
+        file_name = Path(normalized_candidate).name
         if not file_name or file_name in seen:
             continue
         seen.add(file_name)
-        candidate_path = _node_images_dir(node_level) / file_name
-        if candidate_path.exists() and candidate_path.is_file():
+        legacy_candidate = _node_images_dir(node_level) / file_name
+        if legacy_candidate.exists() and legacy_candidate.is_file():
             return file_name
 
     return ""
+
+
+def _legacy_anchor_aliases(anchor_id: str) -> list[str]:
+    aliases: list[str] = []
+    normalized = anchor_id.strip()
+    if not normalized:
+        return aliases
+    aliases.append(f"anchor_{normalized}.png")
+    if normalized.endswith("_base"):
+        aliases.append(f"anchor_{normalized[:-5]}.png")
+    return aliases
 
 
 def _build_anchor_reference_fallback_map(search_levels: list[str]) -> dict[str, tuple[str, str]]:
@@ -821,13 +899,18 @@ def _build_anchor_reference_fallback_map(search_levels: list[str]) -> dict[str, 
             anchor_id = str(anchor.get("id", "")).strip()
             if anchor_id:
                 aliases.append(anchor_id)
+                aliases.extend(_legacy_anchor_aliases(anchor_id))
 
             image_filenames = anchor.get("image_filenames", [])
             if isinstance(image_filenames, list):
                 for item in image_filenames:
-                    value = Path(str(item).strip()).name
-                    if value:
-                        aliases.append(value)
+                    value = _normalize_reference_id(str(item))
+                    if not value:
+                        continue
+                    aliases.append(value)
+                    base_name = Path(value).name
+                    if base_name and base_name != value:
+                        aliases.append(base_name)
 
             for alias in aliases:
                 if alias and alias not in fallback_map:
@@ -843,29 +926,39 @@ def resolve_reference_assets(node_rel_path: str, reference_ids: list[str]) -> li
 
     items: list[dict[str, Any]] = []
     for raw_name in reference_ids:
-        file_name = Path(str(raw_name).strip()).name
-        if not file_name:
+        reference_name = _normalize_reference_id(str(raw_name))
+        if not reference_name:
             continue
 
         found_rel_path = ""
         found_node = ""
-        for level in search_levels:
-            candidate = _node_images_dir(level) / file_name
-            if candidate.exists() and candidate.is_file():
-                found_rel_path = _asset_rel_path_for_node(level, file_name)
-                found_node = level
+        direct_candidates: list[str] = [reference_name]
+        base_name = Path(reference_name).name
+        if base_name and base_name != reference_name:
+            direct_candidates.append(base_name)
+
+        for candidate_name in direct_candidates:
+            for level in search_levels:
+                candidate = _node_images_dir(level) / candidate_name
+                if candidate.exists() and candidate.is_file():
+                    found_rel_path = _asset_rel_path_for_node(level, candidate_name)
+                    found_node = level
+                    break
+            if found_rel_path:
                 break
 
         if not found_rel_path:
-            fallback_match = fallback_map.get(file_name)
+            fallback_match = fallback_map.get(reference_name)
+            if not fallback_match and base_name:
+                fallback_match = fallback_map.get(base_name)
             if fallback_match:
-                matched_level, matched_file = fallback_match
-                found_rel_path = _asset_rel_path_for_node(matched_level, matched_file)
+                matched_level, matched_name = fallback_match
+                found_rel_path = _asset_rel_path_for_node(matched_level, matched_name)
                 found_node = matched_level
 
         items.append(
             {
-                "filename": file_name,
+                "filename": reference_name,
                 "found": bool(found_rel_path),
                 "asset_rel_path": found_rel_path,
                 "node_rel_path": found_node,
@@ -1128,7 +1221,15 @@ def add_anchor_alternative(
         raise StoryStoreError(f"No existe anchor_id {anchor_id} en {normalized_node or 'library'}.")
 
     safe_slug = _normalize_slug(slug, _normalize_slug(anchor_id, "anchor"))
-    alternative = _new_alternative(node_rel_path=normalized_node, slug=safe_slug, mime_type=mime_type, notes=notes)
+    file_name = _build_anchor_image_name(slug=safe_slug, mime_type=mime_type)
+    _assert_available_image_name(node_rel_path=normalized_node, file_name=file_name)
+    alternative = _new_alternative(
+        node_rel_path=normalized_node,
+        file_name=file_name,
+        slug=safe_slug,
+        mime_type=mime_type,
+        notes=notes,
+    )
 
     _write_node_image(node_rel_path=normalized_node, file_name=alternative["id"], image_bytes=image_bytes)
     _upsert_image_index(

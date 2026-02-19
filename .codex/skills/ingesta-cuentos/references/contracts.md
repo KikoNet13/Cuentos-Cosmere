@@ -116,7 +116,7 @@ Slot (`cover` / `images.*`):
 
 Alternativa:
 
-- `id` (filename con extension)
+- `id` (ruta relativa dentro de `images/`, con extension)
 - `slug` (string)
 - `asset_rel_path` (string)
 - `mime_type` (string)
@@ -126,12 +126,15 @@ Alternativa:
 
 ## Convencion operativa de `reference_ids`
 
-1. `reference_ids` debe apuntar a filenames declarados en `meta.anchors[].image_filenames[]`.
-2. `reference_ids` no debe usar IDs opacos de alternativas (`<uuid>_<slug>.<ext>`) como convension principal.
-3. Estrategia hibrida recomendada:
+1. `reference_ids` debe apuntar a rutas relativas declaradas en `meta.anchors[].image_filenames[]`.
+2. Formatos canonicos recomendados:
+   - anclas: `anchors/<slug>.<ext>`
+   - slots: `<NN>/<NN>_<MM>_<slot>-<slug>.<ext>`
+3. `reference_ids` no debe usar IDs opacos legacy (`<uuid>_<slug>.<ext>`) como convension principal.
+4. Estrategia hibrida recomendada:
    - NotebookLM propone refs cuando puede.
    - `ingesta-cuentos` completa faltantes antes de importar.
-4. Si un slot tiene `status = not_required`, se permite `reference_ids` vacio.
+5. Si un slot tiene `status = not_required`, se permite `reference_ids` vacio.
 
 ## Enriquecimiento automático de referencias
 
@@ -142,7 +145,8 @@ Alternativa:
    - `pages[].images.main`
 3. Regla de precedencia:
    - preservar refs existentes;
-   - completar faltantes con anchors `style_*` + anchors semanticos detectados por texto/prompt;
+   - completar faltantes solo con anchors semanticos detectados por texto/prompt;
+   - excluir `style_*`/paleta en slots si esas anclas ya se adjuntan globalmente en el Project;
    - eliminar duplicados preservando orden.
 4. Politica de validacion:
    - autocompletar + warning (no bloqueo) si hay `meta`.
